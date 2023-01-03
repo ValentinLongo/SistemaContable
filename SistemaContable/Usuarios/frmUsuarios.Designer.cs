@@ -32,14 +32,14 @@
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.tbNombreBusqueda = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbCodigo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new RJCodeAdvance.RJControls.RJButton();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBuscar = new RJCodeAdvance.RJControls.RJButton();
+            this.tbCodigo = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
@@ -70,6 +70,7 @@
             this.tbNombreBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNombreBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.tbNombreBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNombreBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbNombreBusqueda.Location = new System.Drawing.Point(251, 22);
             this.tbNombreBusqueda.Name = "tbNombreBusqueda";
             this.tbNombreBusqueda.Size = new System.Drawing.Size(212, 13);
@@ -86,16 +87,6 @@
             this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "Nombre:";
-            // 
-            // tbCodigo
-            // 
-            this.tbCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCodigo.Location = new System.Drawing.Point(65, 21);
-            this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.Size = new System.Drawing.Size(107, 13);
-            this.tbCodigo.TabIndex = 10;
             // 
             // label3
             // 
@@ -118,30 +109,18 @@
             this.dtNacimiento.Size = new System.Drawing.Size(96, 20);
             this.dtNacimiento.TabIndex = 14;
             // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(6, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 16);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Codigo:";
-            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.tbCodigo);
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tbNombreBusqueda);
             this.groupBox1.Controls.Add(this.dtNacimiento);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.tbCodigo);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Location = new System.Drawing.Point(21, 2);
             this.groupBox1.Name = "groupBox1";
@@ -149,6 +128,14 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(66, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(119, 1);
+            this.panel1.TabIndex = 51;
             // 
             // btnBuscar
             // 
@@ -172,6 +159,17 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // tbCodigo
+            // 
+            this.tbCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbCodigo.Location = new System.Drawing.Point(66, 22);
+            this.tbCodigo.Name = "tbCodigo";
+            this.tbCodigo.Size = new System.Drawing.Size(119, 13);
+            this.tbCodigo.TabIndex = 49;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -180,13 +178,17 @@
             this.panel2.Size = new System.Drawing.Size(212, 1);
             this.panel2.TabIndex = 40;
             // 
-            // panel1
+            // label2
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(65, 35);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(107, 1);
-            this.panel1.TabIndex = 39;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(6, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Codigo:";
             // 
             // pictureBox1
             // 
@@ -299,6 +301,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvUsuarios);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -318,17 +321,17 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tbNombreBusqueda;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtNacimiento;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private RJCodeAdvance.RJControls.RJButton btnBuscar;
         private RJCodeAdvance.RJControls.RJButton btnAgregar;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private RJCodeAdvance.RJControls.RJButton btnDefinirCajas;
         private RJCodeAdvance.RJControls.RJButton btnModificar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox tbCodigo;
+        private System.Windows.Forms.Label label2;
     }
 }

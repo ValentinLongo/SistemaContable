@@ -51,6 +51,7 @@ namespace SistemaContable
             }
         }
 
+        //MUESTRA MENU INICIO
         private void pbVisibilidad_Click(object sender, EventArgs e)
         {
             if (txtConstrasenia.PasswordChar == Convert.ToChar("*"))
@@ -61,6 +62,7 @@ namespace SistemaContable
             }
         }
 
+        //OCULTA MENU INICIO
         private void pbOcultar_Click(object sender, EventArgs e)
         {
             if (txtConstrasenia.PasswordChar != Convert.ToChar("*"))
@@ -80,9 +82,10 @@ namespace SistemaContable
                 int resultado = Negocio.FLogin.buscarUsuario(txtUsuario.Text, txtConstrasenia.Text);
                 if (resultado == 1)
                 {
-                    frmInicio inicio = new frmInicio();
+                    frmCarga PantallaCarga = new frmCarga();
+                    PantallaCarga.lblUsuario.Text = txtUsuario.Text;
                     this.Visible = false;
-                    inicio.ShowDialog();
+                    PantallaCarga.ShowDialog();
                 }
                 else
                 {
@@ -93,6 +96,18 @@ namespace SistemaContable
             {
                 MessageBox.Show("Debe completar todos los campos");
             }
+        }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
