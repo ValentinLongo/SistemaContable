@@ -12,6 +12,7 @@ namespace Negocio
     public class FLogin
     {
         public static int IdUsuario;
+        public static string NombreUsuario;
         //BUSCO SI EXISTE USUARIO
         public static int buscarUsuario(string usuario, string contrasenia)
         {
@@ -31,16 +32,18 @@ namespace Negocio
         public static void BuscarIdUsuario(string usuario, string contrasenia)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT usu_codigo FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contrasenia}'");
+            ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contrasenia}'");
 
             
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 MUsuario mUsuario = new MUsuario()
                 {
-                    usu_codigo = Convert.ToInt32(dr["usu_codigo"])
+                    usu_codigo = Convert.ToInt32(dr["usu_codigo"]),
+                    usu_nombre = dr["usu_nombre"].ToString()
                 };
                 IdUsuario = mUsuario.usu_codigo;
+                NombreUsuario = mUsuario.usu_nombre;
             }
         }
 

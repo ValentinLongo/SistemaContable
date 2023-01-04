@@ -79,11 +79,12 @@ namespace SistemaContable
             {
                 txtUsuario.Text = txtUsuario.Text.ToUpper();
                 txtConstrasenia.Text = txtConstrasenia.Text.ToUpper();
+                Negocio.FLogin.BuscarIdUsuario(txtUsuario.Text, txtConstrasenia.Text);
                 int resultado = Negocio.FLogin.buscarUsuario(txtUsuario.Text, txtConstrasenia.Text);
                 if (resultado == 1)
                 {
                     frmCarga PantallaCarga = new frmCarga();
-                    PantallaCarga.lblUsuario.Text = txtUsuario.Text;
+                    PantallaCarga.lblUsuario.Text = Negocio.FLogin.NombreUsuario;
                     this.Visible = false;
                     PantallaCarga.ShowDialog();
                 }
