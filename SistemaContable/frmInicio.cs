@@ -19,6 +19,7 @@ namespace SistemaContable
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            //Negocio.FGenerales.SetearFormato(this);
         }
 
         private void Cerrar(object sender, FormClosingEventArgs e)
@@ -51,7 +52,7 @@ namespace SistemaContable
         private void AbrirFormulario(Form Formulario)
         {
             Formulario.TopLevel = false;
-            PanelPrincipal.Controls.Add(Formulario);
+            PanelFondo.Controls.Add(Formulario);
             Formulario.Dock = DockStyle.Fill;
             Formulario.BringToFront();
             Formulario.FormBorderStyle = FormBorderStyle.None;
@@ -114,7 +115,7 @@ namespace SistemaContable
                 btnAyuda.Visible = false;
                 pbMaser.Visible = false;
                 btnAbrir.Visible = true;
-                pbLogo.Location = new Point(500, 330);
+                pbLogo.Location = new Point(500, 250);
 
             }
         }
@@ -132,7 +133,7 @@ namespace SistemaContable
                 btnAyuda.Visible = true;
                 pbMaser.Visible = true;
                 btnAbrir.Visible = false;
-                pbLogo.Location = new Point(586, 330);
+                pbLogo.Location = new Point(586, 250);
             }
         }
 
@@ -140,18 +141,6 @@ namespace SistemaContable
         {
             lblHora.Text = DateTime.Now.ToLongTimeString();
             lblFecha.Text = DateTime.Now.ToShortDateString();
-        }
-
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-        private void panel5_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

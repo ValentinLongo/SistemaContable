@@ -20,9 +20,11 @@ namespace SistemaContable
     public partial class frmLogin : Form
     {
         public static int NumeroTerminal;
+
         public frmLogin()
         {
             InitializeComponent();
+            //Negocio.FGenerales.SetearFormato(this);
 
             //BUSCO NOMBRE DEL EQUIPO
             string nombreEquipo = Environment.MachineName;
@@ -61,7 +63,7 @@ namespace SistemaContable
                 pbOcultar.Visible = true;
             }
         }
-        //holamundo
+
         //OCULTA MENU INICIO
         private void pbOcultar_Click(object sender, EventArgs e)
         {

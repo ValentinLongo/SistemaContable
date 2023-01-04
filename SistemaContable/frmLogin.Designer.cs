@@ -46,6 +46,7 @@
             this.pbVisibilidad = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -113,6 +115,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(366, 173);
             this.panel5.TabIndex = 16;
+            this.panel5.Tag = "3";
             // 
             // panel1
             // 
@@ -123,6 +126,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(366, 21);
             this.panel1.TabIndex = 12;
+            this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // bunifuFormControlBox1
@@ -202,7 +206,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(148, 189);
+            this.label3.Location = new System.Drawing.Point(147, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 34);
             this.label3.TabIndex = 18;
@@ -215,7 +219,7 @@
             this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(34, 226);
+            this.groupBox1.Location = new System.Drawing.Point(28, 40);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(302, 100);
             this.groupBox1.TabIndex = 26;
@@ -241,7 +245,7 @@
             this.groupBox2.Controls.Add(this.txtConstrasenia);
             this.groupBox2.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(34, 332);
+            this.groupBox2.Location = new System.Drawing.Point(28, 146);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(302, 100);
             this.groupBox2.TabIndex = 27;
@@ -292,14 +296,27 @@
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.Color.White;
-            this.btnAcceder.Location = new System.Drawing.Point(73, 438);
+            this.btnAcceder.Location = new System.Drawing.Point(62, 252);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(232, 31);
+            this.btnAcceder.Size = new System.Drawing.Size(232, 39);
             this.btnAcceder.TabIndex = 28;
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.TextColor = System.Drawing.Color.White;
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.groupBox2);
+            this.panel6.Controls.Add(this.btnAcceder);
+            this.panel6.Controls.Add(this.groupBox1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 178);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(366, 303);
+            this.panel6.TabIndex = 29;
+            this.panel6.Tag = "2";
             // 
             // frmLogin
             // 
@@ -307,11 +324,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(366, 481);
-            this.Controls.Add(this.btnAcceder);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -330,8 +344,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -354,6 +369,7 @@
         private RJCodeAdvance.RJControls.RJButton btnAcceder;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
+        private System.Windows.Forms.Panel panel6;
     }
 }
 
