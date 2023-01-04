@@ -13,6 +13,7 @@ namespace SistemaContable.Plan_de_Cuentas
 {
     public partial class frmPlanDeCuentas : Form
     {
+        //plan cta
         public frmPlanDeCuentas()
         {
             InitializeComponent();

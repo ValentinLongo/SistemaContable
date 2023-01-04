@@ -61,7 +61,7 @@ namespace SistemaContable
                 pbOcultar.Visible = true;
             }
         }
-
+        //holamundo
         //OCULTA MENU INICIO
         private void pbOcultar_Click(object sender, EventArgs e)
         {
