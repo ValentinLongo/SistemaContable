@@ -15,6 +15,7 @@ namespace SistemaContable
         public frmCarga()
         {
             InitializeComponent();
+            CircleProgress.Value = 0;
             //Negocio.FGenerales.SetearFormato(this);
         }
 
