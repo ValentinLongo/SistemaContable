@@ -56,6 +56,7 @@
             this.dgvCuentas.ReadOnly = true;
             this.dgvCuentas.Size = new System.Drawing.Size(960, 498);
             this.dgvCuentas.TabIndex = 0;
+            this.dgvCuentas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
             // 
             // btnImprimir
             // 
@@ -119,6 +120,7 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnAgregar
             // 

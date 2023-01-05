@@ -284,6 +284,12 @@
     <Compile Include="Plan de Cuentas\frmAgregarCuenta.Designer.cs">
       <DependentUpon>frmAgregarCuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plan de Cuentas\frmModificarCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan de Cuentas\frmModificarCuenta.Designer.cs">
+      <DependentUpon>frmModificarCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Plan de Cuentas\frmPlanDeCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Plan de Cuentas\frmAgregarCuenta.resx">
       <DependentUpon>frmAgregarCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan de Cuentas\frmModificarCuenta.resx">
+      <DependentUpon>frmModificarCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Plan de Cuentas\frmPlanDeCuentas.resx">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
