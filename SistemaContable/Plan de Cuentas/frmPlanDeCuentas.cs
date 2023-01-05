@@ -33,6 +33,7 @@ namespace SistemaContable.Plan_de_Cuentas
         {
             if(tbDescipcion.Text != "" && tbDescipcion.Text != null)
             {
+                btnModificar.Enabled = false;
                 DataSet ds = new DataSet();
                 ds = Negocio.FPlanDeCuentas.BusquedaCuenta(tbDescipcion.Text);
                 dgvCuentas.DataSource = ds.Tables[0];

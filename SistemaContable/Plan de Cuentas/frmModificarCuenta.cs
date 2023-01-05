@@ -15,6 +15,17 @@ namespace SistemaContable.Plan_de_Cuentas
         public frmModificarCuenta()
         {
             InitializeComponent();
+            CargarDatos();
+        }
+
+        private void CargarDatos()
+        {
+            DataSet ds = new DataSet();
+            ds = Negocio.FPlanDeCuentas.BusquedaCuentaPorCodigo(frmPlanDeCuentas.idCuenta);
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                
+            }
         }
     }
 }
