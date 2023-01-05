@@ -17,6 +17,8 @@ namespace SistemaContable.Usuarios
         public frmUsuarios()
         {
             InitializeComponent();
+            //Negocio.FGenerales.SetearFormato(this);
+
             llenarDGV();
             btnModificar.Enabled = false;
         }

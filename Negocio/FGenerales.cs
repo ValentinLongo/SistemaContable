@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -26,14 +27,40 @@ namespace Negocio
             return UltimoID;
         }
 
+        public static void AbrirFormulario(Form Formulario, Panel PanelPrincipal)
+        {
+            Formulario.TopLevel = false;
+            PanelPrincipal.Controls.Add(Formulario);
+            Formulario.Dock = DockStyle.Fill;
+            Formulario.BringToFront();
+            Formulario.FormBorderStyle = FormBorderStyle.None;
+            Formulario.Show();
+        }
+
+        public static void ManejarFormularios(Form Formulario, Panel PanelPrincipal)
+        {
+            if (Formulario.ActiveControl == null)
+            {
+                AbrirFormulario(Formulario, PanelPrincipal);
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
+        }
+
         public static void SetearFormato(Form Formulario)
         {
             Font font = new Font("Franklin Gothic Medium", 20.0f);
 
-            //Formulario.BackColor = Color.FromArgb(0, 255, 255);
+            Formulario.BackColor = Color.FromArgb(69, 69, 69);
 
             foreach (Control Ctrl in Formulario.Controls)
             {
+                //Ctrl = sobre formulario
+                //Ctrl1 = sobre contenedor
+                //Ctrl2 = sobre contenedor dentro de contenedor
+
                 //1 = Panel Barra Control
                 //2 = Panel Principal
                 //3 = Panel Secundario
@@ -55,7 +82,7 @@ namespace Negocio
                         Ctrl.BackColor = Color.Orange;
                     }
 
-                    //contenedor dentro de contenedor (fix error)
+                    //controles dentro de contenedor
                     foreach (Control Ctrl1 in Ctrl.Controls)
                     {
                         if (Ctrl1.Tag == "1")
@@ -73,49 +100,127 @@ namespace Negocio
                             Ctrl1.BackColor = Color.Orange;
                         }
 
+                        //
+                        if (Ctrl1 is Label)
+                        {
+                            Ctrl1.BackColor = Color.Black;
+                            Ctrl1.ForeColor = Color.White;
+                            Ctrl1.Font = font;
+                        }
+
+                        if (Ctrl1 is Button)
+                        {
+                            Ctrl1.BackColor = Color.Black;
+                            Ctrl1.ForeColor = Color.White;
+                            Ctrl1.Font = font;
+                        }
+
+                        if (Ctrl1 is TextBox)
+                        {
+                            Ctrl1.BackColor = Color.Black;
+                            Ctrl1.ForeColor = Color.White;
+                            Ctrl1.Font = font;
+                        }
+
+                        if (Ctrl1 is ToolStrip)
+                        {
+                            Ctrl1.BackColor = Color.Black;
+                        }
+                        //
+
+                        //contenedor dentro de contenedor
                         if (Ctrl1 is GroupBox)
                         {
                             foreach (Control Ctrl2 in Ctrl1.Controls)
                             {
+
+                                if (Ctrl2 is Label)
+                                {
+                                    Ctrl2.BackColor = Color.Black;
+                                    Ctrl2.ForeColor = Color.White;
+                                    Ctrl2.Font = font;
+                                }
+
+                                if (Ctrl2 is Button)
+                                {
+                                    Ctrl2.BackColor = Color.Black;
+                                    Ctrl2.ForeColor = Color.White;
+                                    Ctrl2.Font = font;
+                                }
+
                                 if (Ctrl2 is TextBox)
                                 {
                                     Ctrl2.BackColor = Color.Black;
                                     Ctrl2.ForeColor = Color.White;
                                     Ctrl2.Font = font;
                                 }
+
+                                if (Ctrl2 is ToolStrip)
+                                {
+                                    Ctrl2.BackColor = Color.Black;
+                                }
                             }
                         }
                     }
                 }
 
-                //control dentro de contenedor (fix error)
-                foreach (Control Ctrl2 in Ctrl.Controls)
+                if (Ctrl is GroupBox)
                 {
-                    if (Ctrl2 is Label)
+                    foreach (Control Ctrl1 in Ctrl.Controls)
                     {
-                        Ctrl2.BackColor = Color.Black;
-                        Ctrl2.ForeColor = Color.White;
-                        Ctrl2.Font = font;
-                    }
 
-                    if (Ctrl2 is Button)
-                    {
-                        Ctrl2.BackColor = Color.Black;
-                        Ctrl2.ForeColor = Color.White;
-                        Ctrl2.Font = font;
-                    }
+                        if (Ctrl1 is Label)
+                        {
+                            Ctrl1.BackColor = Color.Black;
+                            Ctrl1.ForeColor = Color.White;
+                            Ctrl1.Font = font;
+                        }
 
-                    if (Ctrl2 is TextBox)
-                    {
-                        Ctrl2.BackColor = Color.Black;
-                        Ctrl2.ForeColor = Color.White;
-                        Ctrl2.Font = font;
-                    }
+                        if (Ctrl1 is Button)
+                        {
+                            Ctrl1.BackColor = Color.Black;
+                            Ctrl1.ForeColor = Color.White;
+                            Ctrl1.Font = font;
+                        }
 
-                    if (Ctrl2 is ToolStrip)
-                    {
-                        Ctrl2.BackColor = Color.Black;
+                        if (Ctrl1 is TextBox)
+                        {
+                            Ctrl1.BackColor = Color.Black;
+                            Ctrl1.ForeColor = Color.White;
+                            Ctrl1.Font = font;
+                        }
+
+                        if (Ctrl1 is ToolStrip)
+                        {
+                            Ctrl1.BackColor = Color.Black;
+                        }
                     }
+                }
+
+                if (Ctrl is Label)
+                {
+                    Ctrl.BackColor = Color.Black;
+                    Ctrl.ForeColor = Color.White;
+                    Ctrl.Font = font;
+                }
+
+                if (Ctrl is Button)
+                {
+                    Ctrl.BackColor = Color.Black;
+                    Ctrl.ForeColor = Color.White;
+                    Ctrl.Font = font;
+                }
+
+                if (Ctrl is TextBox)
+                {
+                    Ctrl.BackColor = Color.Black;
+                    Ctrl.ForeColor = Color.White;
+                    Ctrl.Font = font;
+                }
+
+                if (Ctrl is ToolStrip)
+                {
+                    Ctrl.BackColor = Color.Black;
                 }
             }
         }

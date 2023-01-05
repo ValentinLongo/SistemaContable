@@ -20,6 +20,8 @@ namespace SistemaContable.Usuarios
         public frmSeleccionVendedores()
         {
             InitializeComponent();
+            //Negocio.FGenerales.SetearFormato(this);
+
             cargarDGV();
         }
 

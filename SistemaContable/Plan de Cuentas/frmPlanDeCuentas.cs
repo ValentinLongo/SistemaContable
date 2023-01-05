@@ -17,6 +17,8 @@ namespace SistemaContable.Plan_de_Cuentas
         public frmPlanDeCuentas()
         {
             InitializeComponent();
+            //Negocio.FGenerales.SetearFormato(this);
+
             CargarDGV();
         }
 

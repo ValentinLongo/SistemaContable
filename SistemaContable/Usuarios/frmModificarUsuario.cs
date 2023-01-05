@@ -17,6 +17,8 @@ namespace SistemaContable.Usuarios
         public frmModificarUsuario()
         {
             InitializeComponent();
+            //Negocio.FGenerales.SetearFormato(this);
+
             LlenarCB();
             traerDatos();
         }

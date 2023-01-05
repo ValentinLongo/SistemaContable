@@ -390,6 +390,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(530, 21);
             this.panel7.TabIndex = 59;
+            this.panel7.Tag = "1";
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             // 
             // bunifuFormControlBox1

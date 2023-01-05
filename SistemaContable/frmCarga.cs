@@ -15,6 +15,7 @@ namespace SistemaContable
         public frmCarga()
         {
             InitializeComponent();
+            //Negocio.FGenerales.SetearFormato(this);
         }
 
         private void tAparece_Tick(object sender, EventArgs e)

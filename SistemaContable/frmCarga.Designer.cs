@@ -76,6 +76,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 123);
             this.panel1.TabIndex = 1;
+            this.panel1.Tag = "2";
             // 
             // panel13
             // 
@@ -191,6 +192,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(600, 382);
             this.panel2.TabIndex = 18;
+            this.panel2.Tag = "1";
             // 
             // panel11
             // 
@@ -233,7 +235,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(171, 34);
+            this.label2.Location = new System.Drawing.Point(49, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(267, 61);
             this.label2.TabIndex = 2;
@@ -244,7 +246,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.lblUsuario.Location = new System.Drawing.Point(234, 95);
+            this.lblUsuario.Location = new System.Drawing.Point(322, 45);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(139, 43);
             this.lblUsuario.TabIndex = 3;
@@ -263,7 +265,7 @@
             this.CircleProgress.IsPercentage = true;
             this.CircleProgress.LineProgressThickness = 10;
             this.CircleProgress.LineThickness = 10;
-            this.CircleProgress.Location = new System.Drawing.Point(200, 156);
+            this.CircleProgress.Location = new System.Drawing.Point(189, 113);
             this.CircleProgress.Name = "CircleProgress";
             this.CircleProgress.ProgressAnimationSpeed = 200;
             this.CircleProgress.ProgressBackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -273,7 +275,7 @@
             this.CircleProgress.ProgressFillStyle = Bunifu.UI.WinForms.BunifuCircleProgress.FillStyles.Solid;
             this.CircleProgress.ProgressStartCap = Bunifu.UI.WinForms.BunifuCircleProgress.CapStyles.Round;
             this.CircleProgress.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.CircleProgress.Size = new System.Drawing.Size(200, 200);
+            this.CircleProgress.Size = new System.Drawing.Size(241, 241);
             this.CircleProgress.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.CircleProgress.SubScriptColor = System.Drawing.Color.White;
             this.CircleProgress.SubScriptMargin = new System.Windows.Forms.Padding(5, -20, 0, 0);
