@@ -40,5 +40,11 @@ namespace SistemaContable.Plan_de_Cuentas
                 CargarDGV();
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregarCuenta frmAgregarCuenta = new frmAgregarCuenta();
+            frmAgregarCuenta.Show();
+        }
     }
 }
