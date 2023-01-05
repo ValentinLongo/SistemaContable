@@ -54,7 +54,11 @@
             this.dgvCuentas.Location = new System.Drawing.Point(12, 58);
             this.dgvCuentas.Name = "dgvCuentas";
             this.dgvCuentas.ReadOnly = true;
+<<<<<<< HEAD
             this.dgvCuentas.Size = new System.Drawing.Size(960, 498);
+=======
+            this.dgvCuentas.Size = new System.Drawing.Size(863, 447);
+>>>>>>> 4ba4ea0db15e5b2a526c38f421cb83af7ab686ca
             this.dgvCuentas.TabIndex = 0;
             // 
             // btnImprimir
@@ -70,7 +74,11 @@
             this.btnImprimir.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnImprimir.Location = new System.Drawing.Point(987, 453);
+=======
+            this.btnImprimir.Location = new System.Drawing.Point(885, 407);
+>>>>>>> 4ba4ea0db15e5b2a526c38f421cb83af7ab686ca
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(130, 31);
             this.btnImprimir.TabIndex = 53;
@@ -91,7 +99,11 @@
             this.btnDefinirCajas.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDefinirCajas.ForeColor = System.Drawing.Color.White;
             this.btnDefinirCajas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnDefinirCajas.Location = new System.Drawing.Point(987, 167);
+=======
+            this.btnDefinirCajas.Location = new System.Drawing.Point(885, 179);
+>>>>>>> 4ba4ea0db15e5b2a526c38f421cb83af7ab686ca
             this.btnDefinirCajas.Name = "btnDefinirCajas";
             this.btnDefinirCajas.Size = new System.Drawing.Size(130, 31);
             this.btnDefinirCajas.TabIndex = 52;
@@ -112,7 +124,11 @@
             this.btnModificar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnModificar.Location = new System.Drawing.Point(987, 110);
+=======
+            this.btnModificar.Location = new System.Drawing.Point(885, 125);
+>>>>>>> 4ba4ea0db15e5b2a526c38f421cb83af7ab686ca
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(130, 31);
             this.btnModificar.TabIndex = 51;
@@ -133,19 +149,28 @@
             this.btnAgregar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnAgregar.Location = new System.Drawing.Point(987, 58);
+=======
+            this.btnAgregar.Location = new System.Drawing.Point(885, 73);
+>>>>>>> 4ba4ea0db15e5b2a526c38f421cb83af7ab686ca
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(130, 31);
             this.btnAgregar.TabIndex = 50;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
+<<<<<<< HEAD
             this.pictureBox1.Location = new System.Drawing.Point(987, 490);
+=======
+            this.pictureBox1.Location = new System.Drawing.Point(881, 454);
+>>>>>>> 4ba4ea0db15e5b2a526c38f421cb83af7ab686ca
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(130, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -162,7 +187,11 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 2);
             this.groupBox1.Name = "groupBox1";
+<<<<<<< HEAD
             this.groupBox1.Size = new System.Drawing.Size(960, 50);
+=======
+            this.groupBox1.Size = new System.Drawing.Size(863, 50);
+>>>>>>> 4ba4ea0db15e5b2a526c38f421cb83af7ab686ca
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
@@ -180,8 +209,12 @@
             this.tbDescipcion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbDescipcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.tbDescipcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+<<<<<<< HEAD
             this.tbDescipcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbDescipcion.Location = new System.Drawing.Point(109, 20);
+=======
+            this.tbDescipcion.Location = new System.Drawing.Point(154, 22);
+>>>>>>> 4ba4ea0db15e5b2a526c38f421cb83af7ab686ca
             this.tbDescipcion.Name = "tbDescipcion";
             this.tbDescipcion.Size = new System.Drawing.Size(212, 13);
             this.tbDescipcion.TabIndex = 45;
@@ -192,7 +225,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(15, 20);
+=======
+            this.label1.Location = new System.Drawing.Point(22, 22);
+>>>>>>> 4ba4ea0db15e5b2a526c38f421cb83af7ab686ca
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 16);
             this.label1.TabIndex = 44;
@@ -211,7 +248,11 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::SistemaContable.Properties.Resources.lupa;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnBuscar.Location = new System.Drawing.Point(810, 12);
+=======
+            this.btnBuscar.Location = new System.Drawing.Point(713, 13);
+>>>>>>> 4ba4ea0db15e5b2a526c38f421cb83af7ab686ca
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(144, 31);
             this.btnBuscar.TabIndex = 42;
@@ -225,7 +266,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1129, 568);
+=======
+            this.ClientSize = new System.Drawing.Size(1023, 528);
+>>>>>>> 4ba4ea0db15e5b2a526c38f421cb83af7ab686ca
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnDefinirCajas);
