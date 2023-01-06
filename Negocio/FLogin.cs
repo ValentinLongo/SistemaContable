@@ -34,7 +34,6 @@ namespace Negocio
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contrasenia}'");
 
-            
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 MUsuario mUsuario = new MUsuario()

@@ -17,7 +17,8 @@ namespace SistemaContable.Usuarios
         public frmAgregarCaja()
         {
             InitializeComponent();
-            //Negocio.FGenerales.SetearFormato(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+            ShapeBusqueda.SendToBack();
 
             CargarDGV();
         }

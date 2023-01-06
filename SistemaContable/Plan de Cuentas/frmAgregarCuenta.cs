@@ -16,6 +16,8 @@ namespace SistemaContable.Plan_de_Cuentas
         public frmAgregarCuenta()
         {
             InitializeComponent();
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             CargarDatos();
         }
 

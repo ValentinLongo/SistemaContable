@@ -24,7 +24,6 @@ namespace SistemaContable
         public frmLogin()
         {
             InitializeComponent();
-            //Negocio.FGenerales.SetearFormato(this);
 
             //BUSCO NOMBRE DEL EQUIPO
             string nombreEquipo = Environment.MachineName;
@@ -51,6 +50,11 @@ namespace SistemaContable
                 MessageBox.Show("Error en los datos de la conexion");
                 this.Close();
             }
+
+            //Negocio.FFormatoSistema.SetearFormato(this);
+            ShapeContra.SendToBack();
+            ShapeUsuario.SendToBack();
+
         }
 
         //MUESTRA MENU INICIO
