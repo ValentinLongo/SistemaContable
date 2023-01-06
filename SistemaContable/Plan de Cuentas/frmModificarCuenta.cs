@@ -15,6 +15,8 @@ namespace SistemaContable.Plan_de_Cuentas
         public frmModificarCuenta()
         {
             InitializeComponent();
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             CargarDatos();
         }
 

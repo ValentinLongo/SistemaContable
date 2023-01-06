@@ -223,6 +223,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FFormatoSistema.cs" />
     <Compile Include="FGenerales.cs" />
     <Compile Include="FInicio.cs" />
     <Compile Include="FLogin.cs" />

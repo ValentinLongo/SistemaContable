@@ -18,7 +18,7 @@ namespace SistemaContable
         public frmInicio()
         {
             InitializeComponent();
-            Negocio.FGenerales.SetearFormato(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
 
             this.WindowState = FormWindowState.Maximized;
         }

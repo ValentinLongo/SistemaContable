@@ -38,21 +38,21 @@
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ShapeContra = new Bunifu.UI.WinForms.BunifuShapes();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pbOcultar = new System.Windows.Forms.PictureBox();
             this.pbVisibilidad = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.ShapeUsuario = new Bunifu.UI.WinForms.BunifuShapes();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -63,11 +63,12 @@
             // 
             this.txtConstrasenia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.txtConstrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConstrasenia.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConstrasenia.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtConstrasenia.Location = new System.Drawing.Point(54, 50);
+            this.txtConstrasenia.Location = new System.Drawing.Point(85, 194);
             this.txtConstrasenia.Name = "txtConstrasenia";
             this.txtConstrasenia.PasswordChar = '*';
-            this.txtConstrasenia.Size = new System.Drawing.Size(195, 20);
+            this.txtConstrasenia.Size = new System.Drawing.Size(195, 19);
             this.txtConstrasenia.TabIndex = 1;
             // 
             // panel2
@@ -82,7 +83,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(53, 71);
+            this.panel3.Location = new System.Drawing.Point(86, 115);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(229, 1);
             this.panel3.TabIndex = 14;
@@ -90,7 +91,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(54, 72);
+            this.panel4.Location = new System.Drawing.Point(85, 216);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(195, 1);
             this.panel4.TabIndex = 15;
@@ -196,56 +197,53 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(146, 9);
+            this.label3.Location = new System.Drawing.Point(145, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 34);
             this.label3.TabIndex = 18;
             this.label3.Text = "Login";
             // 
-            // groupBox1
+            // ShapeContra
             // 
-            this.groupBox1.Controls.Add(this.txtUsuario);
-            this.groupBox1.Controls.Add(this.pictureBox2);
-            this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(28, 46);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(302, 100);
-            this.groupBox1.TabIndex = 26;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Usuario";
+            this.ShapeContra.Angle = 0F;
+            this.ShapeContra.BackColor = System.Drawing.Color.Transparent;
+            this.ShapeContra.BorderColor = System.Drawing.Color.White;
+            this.ShapeContra.BorderThickness = 1;
+            this.ShapeContra.FillColor = System.Drawing.Color.Transparent;
+            this.ShapeContra.FillShape = true;
+            this.ShapeContra.Location = new System.Drawing.Point(32, 164);
+            this.ShapeContra.Name = "ShapeContra";
+            this.ShapeContra.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.ShapeContra.Sides = 5;
+            this.ShapeContra.Size = new System.Drawing.Size(303, 75);
+            this.ShapeContra.TabIndex = 29;
+            this.ShapeContra.Text = "bunifuShapes1";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtUsuario.Location = new System.Drawing.Point(87, 93);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(228, 19);
+            this.txtUsuario.TabIndex = 15;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SistemaContable.Properties.Resources.icons8_usuario_30;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 42);
+            this.pictureBox2.Location = new System.Drawing.Point(53, 86);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.pbOcultar);
-            this.groupBox2.Controls.Add(this.pbVisibilidad);
-            this.groupBox2.Controls.Add(this.pictureBox3);
-            this.groupBox2.Controls.Add(this.panel4);
-            this.groupBox2.Controls.Add(this.txtConstrasenia);
-            this.groupBox2.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(28, 152);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(302, 100);
-            this.groupBox2.TabIndex = 27;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Contraseña";
-            // 
             // pbOcultar
             // 
             this.pbOcultar.Image = global::SistemaContable.Properties.Resources.ocultar;
-            this.pbOcultar.Location = new System.Drawing.Point(255, 43);
+            this.pbOcultar.Location = new System.Drawing.Point(286, 187);
             this.pbOcultar.Name = "pbOcultar";
             this.pbOcultar.Size = new System.Drawing.Size(27, 30);
             this.pbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -257,7 +255,7 @@
             // pbVisibilidad
             // 
             this.pbVisibilidad.Image = global::SistemaContable.Properties.Resources.visible;
-            this.pbVisibilidad.Location = new System.Drawing.Point(255, 43);
+            this.pbVisibilidad.Location = new System.Drawing.Point(286, 187);
             this.pbVisibilidad.Name = "pbVisibilidad";
             this.pbVisibilidad.Size = new System.Drawing.Size(27, 30);
             this.pbVisibilidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -268,7 +266,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::SistemaContable.Properties.Resources.icons8_candado_2_30;
-            this.pictureBox3.Location = new System.Drawing.Point(22, 41);
+            this.pictureBox3.Location = new System.Drawing.Point(53, 185);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -286,9 +284,9 @@
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.Color.White;
-            this.btnAcceder.Location = new System.Drawing.Point(62, 258);
+            this.btnAcceder.Location = new System.Drawing.Point(32, 258);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(232, 39);
+            this.btnAcceder.Size = new System.Drawing.Size(303, 39);
             this.btnAcceder.TabIndex = 28;
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.TextColor = System.Drawing.Color.White;
@@ -297,10 +295,20 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.ShapeUsuario);
+            this.panel6.Controls.Add(this.pbOcultar);
+            this.panel6.Controls.Add(this.pictureBox2);
+            this.panel6.Controls.Add(this.panel3);
+            this.panel6.Controls.Add(this.ShapeContra);
+            this.panel6.Controls.Add(this.txtUsuario);
+            this.panel6.Controls.Add(this.pbVisibilidad);
+            this.panel6.Controls.Add(this.pictureBox3);
+            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Controls.Add(this.txtConstrasenia);
             this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.groupBox2);
             this.panel6.Controls.Add(this.btnAcceder);
-            this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 172);
             this.panel6.Name = "panel6";
@@ -308,16 +316,43 @@
             this.panel6.TabIndex = 29;
             this.panel6.Tag = "2";
             // 
-            // txtUsuario
+            // ShapeUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtUsuario.Location = new System.Drawing.Point(54, 49);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.PasswordChar = '*';
-            this.txtUsuario.Size = new System.Drawing.Size(228, 20);
-            this.txtUsuario.TabIndex = 15;
+            this.ShapeUsuario.Angle = 0F;
+            this.ShapeUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.ShapeUsuario.BorderColor = System.Drawing.Color.White;
+            this.ShapeUsuario.BorderThickness = 1;
+            this.ShapeUsuario.FillColor = System.Drawing.Color.Transparent;
+            this.ShapeUsuario.FillShape = true;
+            this.ShapeUsuario.Location = new System.Drawing.Point(32, 65);
+            this.ShapeUsuario.Name = "ShapeUsuario";
+            this.ShapeUsuario.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.ShapeUsuario.Sides = 5;
+            this.ShapeUsuario.Size = new System.Drawing.Size(303, 75);
+            this.ShapeUsuario.TabIndex = 30;
+            this.ShapeUsuario.Text = "bunifuShapes1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(29, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 15);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "USUARIO";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(29, 146);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 15);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "CONTRASEÑA";
             // 
             // frmLogin
             // 
@@ -337,11 +372,7 @@
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -361,8 +392,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pbVisibilidad;
         private System.Windows.Forms.PictureBox pbOcultar;
         private RJCodeAdvance.RJControls.RJButton btnAcceder;
@@ -370,6 +399,10 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtUsuario;
+        private Bunifu.UI.WinForms.BunifuShapes ShapeContra;
+        private Bunifu.UI.WinForms.BunifuShapes ShapeUsuario;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -36,13 +36,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new RJCodeAdvance.RJControls.RJButton();
             this.btnSeleccionar = new RJCodeAdvance.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             this.dgvCajas.Name = "dgvCajas";
             this.dgvCajas.ReadOnly = true;
             this.dgvCajas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCajas.Size = new System.Drawing.Size(511, 398);
+            this.dgvCajas.Size = new System.Drawing.Size(517, 398);
             this.dgvCajas.TabIndex = 0;
             // 
             // tbCodigo
@@ -64,9 +64,9 @@
             this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCodigo.Location = new System.Drawing.Point(9, 35);
+            this.tbCodigo.Location = new System.Drawing.Point(551, 191);
             this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.Size = new System.Drawing.Size(162, 13);
+            this.tbCodigo.Size = new System.Drawing.Size(149, 13);
             this.tbCodigo.TabIndex = 3;
             // 
             // tbDescripcion
@@ -74,9 +74,9 @@
             this.tbDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescripcion.Location = new System.Drawing.Point(9, 100);
+            this.tbDescripcion.Location = new System.Drawing.Point(551, 253);
             this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(162, 13);
+            this.tbDescripcion.Size = new System.Drawing.Size(149, 13);
             this.tbDescripcion.TabIndex = 4;
             // 
             // label1
@@ -84,7 +84,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Location = new System.Drawing.Point(548, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 16);
             this.label1.TabIndex = 5;
@@ -95,7 +95,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(6, 81);
+            this.label2.Location = new System.Drawing.Point(548, 234);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 16);
             this.label2.TabIndex = 6;
@@ -104,35 +104,18 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(9, 47);
+            this.panel3.Location = new System.Drawing.Point(551, 203);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(162, 1);
+            this.panel3.Size = new System.Drawing.Size(149, 1);
             this.panel3.TabIndex = 39;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(9, 112);
+            this.panel1.Location = new System.Drawing.Point(551, 265);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(162, 1);
+            this.panel1.Size = new System.Drawing.Size(149, 1);
             this.panel1.TabIndex = 40;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Controls.Add(this.tbCodigo);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.tbDescripcion);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox1.Location = new System.Drawing.Point(529, 158);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(183, 224);
-            this.groupBox1.TabIndex = 41;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Busqueda";
             // 
             // btnBuscar
             // 
@@ -147,9 +130,9 @@
             this.btnBuscar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(9, 153);
+            this.btnBuscar.Location = new System.Drawing.Point(551, 309);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(162, 41);
+            this.btnBuscar.Size = new System.Drawing.Size(149, 41);
             this.btnBuscar.TabIndex = 45;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
@@ -171,7 +154,7 @@
             this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSeleccionar.Location = new System.Drawing.Point(538, 40);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(162, 41);
+            this.btnSeleccionar.Size = new System.Drawing.Size(168, 41);
             this.btnSeleccionar.TabIndex = 44;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.TextColor = System.Drawing.Color.White;
@@ -252,26 +235,62 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
+            // ShapeBusqueda
+            // 
+            this.ShapeBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ShapeBusqueda.Angle = 0F;
+            this.ShapeBusqueda.BackColor = System.Drawing.Color.Transparent;
+            this.ShapeBusqueda.BorderColor = System.Drawing.Color.White;
+            this.ShapeBusqueda.BorderThickness = 1;
+            this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
+            this.ShapeBusqueda.FillShape = true;
+            this.ShapeBusqueda.Location = new System.Drawing.Point(538, 155);
+            this.ShapeBusqueda.Name = "ShapeBusqueda";
+            this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.ShapeBusqueda.Sides = 5;
+            this.ShapeBusqueda.Size = new System.Drawing.Size(171, 218);
+            this.ShapeBusqueda.TabIndex = 60;
+            this.ShapeBusqueda.Text = "bunifuShapes1";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(535, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.TabIndex = 61;
+            this.label4.Text = "Busqueda";
+            // 
             // frmAgregarCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.ClientSize = new System.Drawing.Size(718, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.ShapeBusqueda);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panel7);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSeleccionar);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.dgvCajas);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbDescripcion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAgregarCaja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarCaja";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -284,10 +303,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private RJCodeAdvance.RJControls.RJButton btnBuscar;
         private RJCodeAdvance.RJControls.RJButton btnSeleccionar;
         private System.Windows.Forms.Panel panel7;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
+        private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
+        private System.Windows.Forms.Label label4;
     }
 }

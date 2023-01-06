@@ -16,7 +16,7 @@ namespace SistemaContable
         {
             InitializeComponent();
             CircleProgress.Value = 0;
-            //Negocio.FGenerales.SetearFormato(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
         private void tAparece_Tick(object sender, EventArgs e)
