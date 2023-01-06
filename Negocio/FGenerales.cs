@@ -14,7 +14,7 @@ namespace Negocio
 {
     public class FGenerales
     {
-        public static int ultimoNumeroID(string campo, string tabla) 
+        public static int ultimoNumeroID(string campo, string tabla)
         {
             DataSet ds = new DataSet();
             ds = Datos.AccesoBase.ListarDatos($"SELECT TOP 1 {campo} FROM {tabla} ORDER BY {campo} DESC");

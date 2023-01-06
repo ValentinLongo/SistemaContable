@@ -46,6 +46,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -203,6 +204,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold);
@@ -306,6 +308,17 @@
             this.panel6.TabIndex = 29;
             this.panel6.Tag = "2";
             // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtUsuario.Location = new System.Drawing.Point(54, 49);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PasswordChar = '*';
+            this.txtUsuario.Size = new System.Drawing.Size(228, 20);
+            this.txtUsuario.TabIndex = 15;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +338,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -355,6 +369,7 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox txtUsuario;
     }
 }
 
