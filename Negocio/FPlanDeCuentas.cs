@@ -24,6 +24,13 @@ namespace Negocio
             return ds;
         }
 
+        public static DataSet BusquedaCuentaPorCodigo(string codigo)
+        {
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"select pcu_codigo as Codigo, pcu_cuenta as Cuenta, pcu_descri as Descripcion, pcu_superior as Superior, pcu_hija as Hija, pcu_tabulador as Tabulador from PCuenta where pcu_codigo = '{codigo}'");
+            return ds;
+        }
+
         public static DataSet Rubros()
         {
             DataSet ds = new DataSet();

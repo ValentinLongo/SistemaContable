@@ -52,6 +52,7 @@ namespace SistemaContable.Usuarios
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            btnModificar.Enabled = false;
             string query = "SELECT usu_codigo as Codigo, usu_nombre as Nombre, usu_login as Login, Perfil.per_descri as Perfil, usu_telefono as Telefono FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo ";
             if (tbNombreBusqueda.Text != null && tbNombreBusqueda.Text != "")
             {

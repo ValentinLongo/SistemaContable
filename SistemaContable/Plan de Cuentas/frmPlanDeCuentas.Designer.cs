@@ -30,7 +30,6 @@
         {
             this.dgvCuentas = new System.Windows.Forms.DataGridView();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
-            this.btnDefinirCajas = new RJCodeAdvance.RJControls.RJButton();
             this.btnModificar = new RJCodeAdvance.RJControls.RJButton();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,6 +55,7 @@
             this.dgvCuentas.ReadOnly = true;
             this.dgvCuentas.Size = new System.Drawing.Size(960, 498);
             this.dgvCuentas.TabIndex = 0;
+            this.dgvCuentas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
             // 
             // btnImprimir
             // 
@@ -78,27 +78,6 @@
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
             // 
-            // btnDefinirCajas
-            // 
-            this.btnDefinirCajas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDefinirCajas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btnDefinirCajas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btnDefinirCajas.BorderColor = System.Drawing.Color.White;
-            this.btnDefinirCajas.BorderRadius = 10;
-            this.btnDefinirCajas.BorderSize = 1;
-            this.btnDefinirCajas.FlatAppearance.BorderSize = 0;
-            this.btnDefinirCajas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDefinirCajas.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDefinirCajas.ForeColor = System.Drawing.Color.White;
-            this.btnDefinirCajas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDefinirCajas.Location = new System.Drawing.Point(987, 167);
-            this.btnDefinirCajas.Name = "btnDefinirCajas";
-            this.btnDefinirCajas.Size = new System.Drawing.Size(130, 31);
-            this.btnDefinirCajas.TabIndex = 52;
-            this.btnDefinirCajas.Text = "Definir Cajas";
-            this.btnDefinirCajas.TextColor = System.Drawing.Color.White;
-            this.btnDefinirCajas.UseVisualStyleBackColor = false;
-            // 
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -119,6 +98,7 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnAgregar
             // 
@@ -229,7 +209,6 @@
             this.ClientSize = new System.Drawing.Size(1129, 568);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnImprimir);
-            this.Controls.Add(this.btnDefinirCajas);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pictureBox1);
@@ -249,7 +228,6 @@
 
         private System.Windows.Forms.DataGridView dgvCuentas;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
-        private RJCodeAdvance.RJControls.RJButton btnDefinirCajas;
         private RJCodeAdvance.RJControls.RJButton btnModificar;
         private RJCodeAdvance.RJControls.RJButton btnAgregar;
         private System.Windows.Forms.PictureBox pictureBox1;

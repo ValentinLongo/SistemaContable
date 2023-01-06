@@ -13,12 +13,12 @@ namespace SistemaContable.Plan_de_Cuentas
 {
     public partial class frmPlanDeCuentas : Form
     {
-        //plan cta
+        public static string idCuenta;
         public frmPlanDeCuentas()
         {
             InitializeComponent();
             //Negocio.FGenerales.SetearFormato(this);
-
+            btnModificar.Enabled = false;
             CargarDGV();
         }
 
@@ -33,6 +33,7 @@ namespace SistemaContable.Plan_de_Cuentas
         {
             if(tbDescipcion.Text != "" && tbDescipcion.Text != null)
             {
+                btnModificar.Enabled = false;
                 DataSet ds = new DataSet();
                 ds = Negocio.FPlanDeCuentas.BusquedaCuenta(tbDescipcion.Text);
                 dgvCuentas.DataSource = ds.Tables[0];
@@ -46,7 +47,29 @@ namespace SistemaContable.Plan_de_Cuentas
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAgregarCuenta frmAgregarCuenta = new frmAgregarCuenta();
-            frmAgregarCuenta.Show();
+            frmAgregarCuenta.ShowDialog();
+            CargarDGV();
+        }
+
+        private void Click(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                btnModificar.Enabled = true;
+                int indice = e.RowIndex;
+                idCuenta = dgvCuentas.Rows[indice].Cells[0].Value.ToString();
+            }
+            catch
+            {
+                btnModificar.Enabled = false;
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            frmModificarCuenta formModificarCuenta = new frmModificarCuenta();
+            formModificarCuenta.ShowDialog();
+            CargarDGV();
         }
     }
 }
