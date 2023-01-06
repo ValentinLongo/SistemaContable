@@ -125,9 +125,9 @@
             this.btnArchivos = new RJCodeAdvance.RJControls.RJButton();
             this.HoraFecha = new System.Windows.Forms.Timer(this.components);
             this.PanelPrincipal = new System.Windows.Forms.Panel();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             this.MenuArchivos.SuspendLayout();
             this.MenuVer.SuspendLayout();
@@ -914,12 +914,11 @@
             this.PanelPrincipal.Name = "PanelPrincipal";
             this.PanelPrincipal.Tag = "2";
             // 
-            // pbLogo
+            // panel7
             // 
-            resources.ApplyResources(this.pbLogo, "pbLogo");
-            this.pbLogo.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.TabStop = false;
+            this.panel7.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
             // 
             // panel6
             // 
@@ -927,11 +926,12 @@
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
-            // panel7
+            // pbLogo
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel7, "panel7");
-            this.panel7.Name = "panel7";
+            resources.ApplyResources(this.pbLogo, "pbLogo");
+            this.pbLogo.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.TabStop = false;
             // 
             // frmInicio
             // 

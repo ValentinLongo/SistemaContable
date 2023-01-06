@@ -676,7 +676,7 @@
     <value>0, 0</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1158, 75</value>
+    <value>1071, 75</value>
   </data>
   <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1698,7 +1698,7 @@
     <value>0, 75</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1158, 1</value>
+    <value>1071, 1</value>
   </data>
   <data name="panel6.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -1722,7 +1722,7 @@
     <value>NoControl</value>
   </data>
   <data name="pbLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>398, 298</value>
+    <value>354, 298</value>
   </data>
   <data name="pbLogo.Size" type="System.Drawing.Size, System.Drawing">
     <value>368, 182</value>
@@ -1745,14 +1745,11 @@
   <data name="&gt;&gt;pbLogo.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="PanelPrincipal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="PanelPrincipal.Location" type="System.Drawing.Point, System.Drawing">
     <value>212, 21</value>
   </data>
   <data name="PanelPrincipal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1158, 728</value>
+    <value>1071, 728</value>
   </data>
   <data name="PanelPrincipal.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>

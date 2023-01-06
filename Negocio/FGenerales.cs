@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -49,11 +50,30 @@ namespace Negocio
             }
         }
 
+        private static int RGB(string Cadena, int parte)
+        {
+            int Valor = 0;
+            if (parte == 1)
+            {
+                Valor = Convert.ToInt32(Cadena.Substring(0, 3));
+            }
+            if (parte == 2)
+            {
+                Valor = Convert.ToInt32(Cadena.Substring(4, 3));
+            }
+            if (parte == 3)
+            {
+                Valor = Convert.ToInt32(Cadena.Substring(8, 3));
+            }
+            return Valor;
+        }
+
         public static void SetearFormato(Form Formulario)
         {
+            
             Font font = new Font("Franklin Gothic Medium", 20.0f);
 
-            Formulario.BackColor = Color.FromArgb(69, 69, 69);
+            Formulario.BackColor = Color.FromArgb(RGB("250,036,089", 1), RGB("250,036,089", 2), RGB("250,036,089", 3));
 
             foreach (Control Ctrl in Formulario.Controls)
             {

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtConstrasenia = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -59,16 +58,6 @@
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtUsuario.Location = new System.Drawing.Point(53, 49);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(229, 20);
-            this.txtUsuario.TabIndex = 0;
-            // 
             // txtConstrasenia
             // 
             this.txtConstrasenia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
@@ -84,7 +73,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 173);
+            this.panel2.Location = new System.Drawing.Point(0, 167);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(366, 5);
             this.panel2.TabIndex = 10;
@@ -113,7 +102,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(366, 173);
+            this.panel5.Size = new System.Drawing.Size(366, 167);
             this.panel5.TabIndex = 16;
             this.panel5.Tag = "3";
             // 
@@ -206,7 +195,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(147, 3);
+            this.label3.Location = new System.Drawing.Point(146, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 34);
             this.label3.TabIndex = 18;
@@ -216,10 +205,9 @@
             // 
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(28, 40);
+            this.groupBox1.Location = new System.Drawing.Point(28, 46);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(302, 100);
             this.groupBox1.TabIndex = 26;
@@ -245,7 +233,7 @@
             this.groupBox2.Controls.Add(this.txtConstrasenia);
             this.groupBox2.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(28, 146);
+            this.groupBox2.Location = new System.Drawing.Point(28, 152);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(302, 100);
             this.groupBox2.TabIndex = 27;
@@ -296,7 +284,7 @@
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.Color.White;
-            this.btnAcceder.Location = new System.Drawing.Point(62, 252);
+            this.btnAcceder.Location = new System.Drawing.Point(62, 258);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(232, 39);
             this.btnAcceder.TabIndex = 28;
@@ -312,9 +300,9 @@
             this.panel6.Controls.Add(this.btnAcceder);
             this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 178);
+            this.panel6.Location = new System.Drawing.Point(0, 172);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(366, 303);
+            this.panel6.Size = new System.Drawing.Size(366, 309);
             this.panel6.TabIndex = 29;
             this.panel6.Tag = "2";
             // 
@@ -337,7 +325,6 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -351,8 +338,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtConstrasenia;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
