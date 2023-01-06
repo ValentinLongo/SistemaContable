@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,20 +27,46 @@ namespace SistemaContable.Plan_de_Cuentas
             cbRubro.DisplayMember = "ruc_descri";
             cbRubro.ValueMember = "ruc_codigo";
 
-            tbCodigo.Mask = "##.##.##.##.##";
+            tbCodigo.Mask = "##.##.##.##.##.##";
 
             tbCuenta.Text = Convert.ToString(Negocio.FPlanDeCuentas.UltimoNumeroCuenta());
         }
 
+
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string codigoElegido = tbCodigo.Text;
-            string[] cod = new string[codigoElegido.Length];
+            int tabulador = Negocio.FPlanDeCuentas.tabulador(codigoElegido);
 
-            for(int i = 0; i < codigoElegido.Length; i++)
+            string[] codigo = new string[codigoElegido.Length];
+            string[] nuevoCodigo = new string[codigoElegido.Length];
+            bool romper = false;
+            for (int i = 0; i < codigoElegido.Length; i++)
             {
-                cod[i] = Convert.ToString(codigoElegido[i]);
+                if (romper == false)
+                {
+                    codigo[i] = Convert.ToString(codigoElegido[i]);
+                    if (codigo[i] == ",")
+                    {
+                        nuevoCodigo[i] = ".";
+                    }
+                    else if (codigo[i] == " ")
+                    {
+                        romper = true;
+                    }
+                    else
+                    {
+                        nuevoCodigo[i] = codigo[i];
+                    }
+                }
+             }
+            string CodigoCuenta = "";
+            for (int i = 0; i < codigoElegido.Length; i++)
+            {
+                CodigoCuenta += nuevoCodigo[i];
             }
+            int cantidadHijos = Negocio.FPlanDeCuentas.cantidadHijos(CodigoCuenta);
         }
     }
 }
