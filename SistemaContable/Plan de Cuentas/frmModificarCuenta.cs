@@ -38,12 +38,14 @@ namespace SistemaContable.Plan_de_Cuentas
                 try
                 {
                     string rubrocont = dr["pcu_rubrocont"].ToString();
-                    cbRubro.SelectedItem = Convert.ToInt32(rubrocont);
+                    cbRubro.SelectedValue = Convert.ToInt32(rubrocont);
                 }
                 catch
                 {
                     cbRubro.Text = "";
                 }
+                int estado = Convert.ToInt32(dr["pcu_estado"].ToString());
+                cbEstado.SelectedIndex = estado - 1;
             }
         }
     }

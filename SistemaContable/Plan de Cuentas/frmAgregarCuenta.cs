@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,8 +40,70 @@ namespace SistemaContable.Plan_de_Cuentas
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string codigoElegido = tbCodigo.Text;
-            int tabulador = Negocio.FPlanDeCuentas.tabulador(codigoElegido);
+            int ajusta = 0;
+            if (CheckAjuste.Checked == true)
+            {
+                ajusta = 1;
+            }
+            //Datos
+            MPlanDeCuentas mPlanDeCuentas = new MPlanDeCuentas()
+            {
+                pcu_codigo = codigoCuenta(),
+                pcu_cuenta = Convert.ToInt32(tbCuenta.Text),
+                pcu_descri = tbDescripcion.Text,
+                pcu_superior = cuentaSuperior(),
+                pcu_hija = 0,
+                pcu_tabulador = Negocio.FPlanDeCuentas.tabulador(codigoElegido),
+                pcu_estado = Convert.ToInt32(cbEstado.SelectedIndex + 1),
+                pcu_rubrocont = Convert.ToInt32(cbRubro.SelectedValue),
+                pcu_ajustainf = ajusta
+            };
 
+            //Establezco los hijos de la cuenta superior
+            Negocio.FPlanDeCuentas.cantidadHijos(mPlanDeCuentas.pcu_superior);
+
+            //INSERT
+            Negocio.FPlanDeCuentas.agregarPlanDeCuentas(mPlanDeCuentas);
+        }
+
+        public string codigoCuenta()
+        {
+            string codigoElegido = tbCodigo.Text;
+            string[] codigo = new string[codigoElegido.Length];
+            string[] nuevoCodigo = new string[codigoElegido.Length];
+            for (int i = 0; i < codigoElegido.Length; i++)
+            {
+
+                codigo[i] = Convert.ToString(codigoElegido[i]);
+                if (codigo[i] == ",")
+                {
+                    nuevoCodigo[i] = ".";
+                }
+                else if (codigo[i] == " ")
+                {
+                    nuevoCodigo[i] = "0";
+                }
+                else
+                {
+                    nuevoCodigo[i] = codigo[i];
+                }
+
+            }
+            string CodigoCuenta = "";
+            for (int i = 0; i < codigoElegido.Length; i++)
+            {
+                CodigoCuenta += nuevoCodigo[i];
+            }
+            for (int i = codigoElegido.Length; i < codigoElegido.Length + 2; i++)
+            {
+                CodigoCuenta += "0";
+            }
+            return CodigoCuenta;
+        }
+
+        public string cuentaSuperior()
+        {
+            string codigoElegido = tbCodigo.Text;
             string[] codigo = new string[codigoElegido.Length];
             string[] nuevoCodigo = new string[codigoElegido.Length];
             bool romper = false;
@@ -62,13 +125,42 @@ namespace SistemaContable.Plan_de_Cuentas
                         nuevoCodigo[i] = codigo[i];
                     }
                 }
-             }
+            }
             string CodigoCuenta = "";
             for (int i = 0; i < codigoElegido.Length; i++)
             {
                 CodigoCuenta += nuevoCodigo[i];
             }
-            int cantidadHijos = Negocio.FPlanDeCuentas.cantidadHijos(CodigoCuenta);
+            string CuentaSuperior = "";
+            if (CodigoCuenta.Length > 4)
+            {
+                CuentaSuperior = CodigoCuenta.Remove(CodigoCuenta.Length - 4, 4);
+                if (CuentaSuperior.Length == 2)
+                {
+                    CuentaSuperior += ".00.00.00.00.00";
+                }
+                else if (CuentaSuperior.Length == 5)
+                {
+                    CuentaSuperior += ".00.00.00.00";
+                }
+                else if (CuentaSuperior.Length == 8)
+                {
+                    CuentaSuperior += ".00.00.00";
+                }
+                else if (CuentaSuperior.Length == 11)
+                {
+                    CuentaSuperior += ".00.00";
+                }
+                else if (CuentaSuperior.Length == 14)
+                {
+                    CuentaSuperior += ".00";
+                }
+            }
+            else
+            {
+                CuentaSuperior = "00";
+            }
+            return CuentaSuperior;
         }
     }
 }

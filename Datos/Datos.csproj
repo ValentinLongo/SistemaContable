@@ -224,6 +224,7 @@
   <ItemGroup>
     <Compile Include="AccesoBase.cs" />
     <Compile Include="Modelos\MFormatoSistema.cs" />
+    <Compile Include="Modelos\MPlanDeCuentas.cs" />
     <Compile Include="Modelos\MUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

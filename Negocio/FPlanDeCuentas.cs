@@ -1,8 +1,10 @@
 ﻿using Datos;
+using Datos.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -83,13 +85,25 @@ namespace Negocio
             return tabulador;
         }
 
-        public static int cantidadHijos(string codigo)
+        public static void cantidadHijos(string codigo)
         {
             DataSet ds = new DataSet();
-            ds = Datos.AccesoBase.ListarDatos($"select * from PCuenta where pcu_codigo LIKE '{codigo}%'");
-            int cantidad = ds.Tables[0].Rows.Count;
-            cantidad--;
-            return cantidad;
+            ds = Datos.AccesoBase.ListarDatos($"Select COUNT(pcu_codigo) as Cantidad from PCuenta where pcu_superior = '{codigo}'");
+            int cantidad = 0;
+            if(ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    cantidad++;
+                }
+            }
+            Datos.AccesoBase.InsertUpdateDatos($"UPDATE PCuenta set pcu_hija = {cantidad} where pcu_codigo = '{codigo}'");
+        }
+
+        public static void agregarPlanDeCuentas(MPlanDeCuentas mPlanDeCuentas)
+        {
+            Datos.AccesoBase.InsertUpdateDatos($"INSERT INTO PCuenta(pcu_codigo,pcu_cuenta,pcu_descri,pcu_superior,pcu_hija,pcu_tabulador,pcu_estado,pcu_rubrocont, pcu_ajustainf) " +
+                $"VALUES ('{mPlanDeCuentas.pcu_codigo}',{mPlanDeCuentas.pcu_cuenta},'{mPlanDeCuentas.pcu_descri}','{mPlanDeCuentas.pcu_superior}',{mPlanDeCuentas.pcu_hija},{mPlanDeCuentas.pcu_tabulador},{mPlanDeCuentas.pcu_estado},{mPlanDeCuentas.pcu_rubrocont},{mPlanDeCuentas.pcu_ajustainf})");
         }
     }
 }
