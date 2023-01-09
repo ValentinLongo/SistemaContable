@@ -134,13 +134,6 @@ namespace Negocio
                     FuentenameTextbox = MFormato.fmt_fuenteName.ToString();
                     FuentesizeTextbox =Convert.ToInt32(MFormato.fmt_fuenteSize);
                 }
-
-                //Toolstrip
-                if (MFormato.fmt_control == "toolstrip")
-                {
-                    RGBbackToolstrip = MFormato.fmt_rgbBack.ToString();
-                }
-
             }
             
             foreach (Control Ctrl in Formulario.Controls)

@@ -52,6 +52,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CheckVendedor = new System.Windows.Forms.CheckBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tbVendedor = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -60,10 +61,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CheckVendedor = new Bunifu.UI.WinForms.BunifuCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -141,99 +139,99 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label10.Location = new System.Drawing.Point(89, 278);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 17);
+            this.label10.Size = new System.Drawing.Size(53, 16);
             this.label10.TabIndex = 27;
             this.label10.Text = "Estado:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(97, 246);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 17);
+            this.label9.Size = new System.Drawing.Size(45, 16);
             this.label9.TabIndex = 26;
             this.label9.Text = "Perfil:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(95, 214);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 17);
+            this.label8.Size = new System.Drawing.Size(47, 16);
             this.label8.TabIndex = 25;
             this.label8.Text = "Login:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(-4, 182);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 17);
+            this.label7.Size = new System.Drawing.Size(146, 16);
             this.label7.TabIndex = 24;
             this.label7.Text = "Fecha de Nacimiento:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(76, 150);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 17);
+            this.label6.Size = new System.Drawing.Size(66, 16);
             this.label6.TabIndex = 23;
             this.label6.Text = "Telefono:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(71, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 17);
+            this.label5.Size = new System.Drawing.Size(71, 16);
             this.label5.TabIndex = 22;
             this.label5.Text = "Dirección:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(81, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 21;
             this.label4.Text = "Nombre:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(165, 30);
+            this.label3.Location = new System.Drawing.Point(151, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(198, 24);
+            this.label3.Size = new System.Drawing.Size(218, 24);
             this.label3.TabIndex = 20;
             this.label3.Text = "MODIFICAR USUARIO";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(86, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 18;
             this.label1.Text = "Codigo:";
             // 
@@ -298,6 +296,18 @@
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
             // 
+            // CheckVendedor
+            // 
+            this.CheckVendedor.AutoSize = true;
+            this.CheckVendedor.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.CheckVendedor.Location = new System.Drawing.Point(155, 396);
+            this.CheckVendedor.Name = "CheckVendedor";
+            this.CheckVendedor.Size = new System.Drawing.Size(222, 17);
+            this.CheckVendedor.TabIndex = 43;
+            this.CheckVendedor.Text = "El usuario no posee un vendedor definido";
+            this.CheckVendedor.UseVisualStyleBackColor = true;
+            this.CheckVendedor.CheckedChanged += new System.EventHandler(this.CambioCheck);
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
@@ -341,36 +351,36 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label12.Location = new System.Drawing.Point(80, 313);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 17);
+            this.label12.Size = new System.Drawing.Size(62, 16);
             this.label12.TabIndex = 51;
             this.label12.Text = "Sección:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label11.Location = new System.Drawing.Point(70, 346);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 17);
+            this.label11.Size = new System.Drawing.Size(72, 16);
             this.label11.TabIndex = 50;
             this.label11.Text = "Vendedor:";
             // 
             // btnAceptar
             // 
             this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.btnAceptar.BorderColor = System.Drawing.Color.White;
-            this.btnAceptar.BorderRadius = 0;
-            this.btnAceptar.BorderSize = 0;
+            this.btnAceptar.BorderRadius = 10;
+            this.btnAceptar.BorderSize = 1;
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.Location = new System.Drawing.Point(182, 441);
@@ -385,7 +395,6 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.bunifuFormControlBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
@@ -394,16 +403,6 @@
             this.panel7.TabIndex = 58;
             this.panel7.Tag = "1";
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(3, 5);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(160, 13);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "S.I.Gc. - MODIFICAR USUARIO";
             // 
             // bunifuFormControlBox1
             // 
@@ -467,78 +466,12 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Dotum", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(152, 402);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(248, 11);
-            this.label2.TabIndex = 104;
-            this.label2.Text = "El ususario no posee un vendedor definido";
-            // 
-            // CheckVendedor
-            // 
-            this.CheckVendedor.AllowBindingControlAnimation = true;
-            this.CheckVendedor.AllowBindingControlColorChanges = false;
-            this.CheckVendedor.AllowBindingControlLocation = true;
-            this.CheckVendedor.AllowCheckBoxAnimation = false;
-            this.CheckVendedor.AllowCheckmarkAnimation = true;
-            this.CheckVendedor.AllowOnHoverStates = true;
-            this.CheckVendedor.AutoCheck = true;
-            this.CheckVendedor.BackColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckVendedor.BackgroundImage")));
-            this.CheckVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CheckVendedor.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.CheckVendedor.BorderRadius = 12;
-            this.CheckVendedor.Checked = false;
-            this.CheckVendedor.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.CheckVendedor.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CheckVendedor.CustomCheckmarkImage = null;
-            this.CheckVendedor.Location = new System.Drawing.Point(129, 396);
-            this.CheckVendedor.MinimumSize = new System.Drawing.Size(17, 17);
-            this.CheckVendedor.Name = "CheckVendedor";
-            this.CheckVendedor.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.CheckVendedor.OnCheck.BorderRadius = 12;
-            this.CheckVendedor.OnCheck.BorderThickness = 2;
-            this.CheckVendedor.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.CheckVendedor.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.CheckVendedor.OnCheck.CheckmarkThickness = 2;
-            this.CheckVendedor.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.CheckVendedor.OnDisable.BorderRadius = 12;
-            this.CheckVendedor.OnDisable.BorderThickness = 2;
-            this.CheckVendedor.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.CheckVendedor.OnDisable.CheckmarkThickness = 2;
-            this.CheckVendedor.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckVendedor.OnHoverChecked.BorderRadius = 12;
-            this.CheckVendedor.OnHoverChecked.BorderThickness = 2;
-            this.CheckVendedor.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckVendedor.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.CheckVendedor.OnHoverChecked.CheckmarkThickness = 2;
-            this.CheckVendedor.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckVendedor.OnHoverUnchecked.BorderRadius = 12;
-            this.CheckVendedor.OnHoverUnchecked.BorderThickness = 1;
-            this.CheckVendedor.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.CheckVendedor.OnUncheck.BorderRadius = 12;
-            this.CheckVendedor.OnUncheck.BorderThickness = 1;
-            this.CheckVendedor.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.Size = new System.Drawing.Size(17, 17);
-            this.CheckVendedor.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.CheckVendedor.TabIndex = 103;
-            this.CheckVendedor.ThreeState = false;
-            this.CheckVendedor.ToolTipText = null;
-            // 
             // frmModificarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.ClientSize = new System.Drawing.Size(505, 505);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.CheckVendedor);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.panel6);
@@ -547,6 +480,7 @@
             this.Controls.Add(this.cbSeccion);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.CheckVendedor);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -606,6 +540,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox CheckVendedor;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox tbVendedor;
         private System.Windows.Forms.Button btnBuscar;
@@ -615,8 +550,5 @@
         private RJCodeAdvance.RJControls.RJButton btnAceptar;
         private System.Windows.Forms.Panel panel7;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
-        private System.Windows.Forms.Label label2;
-        private Bunifu.UI.WinForms.BunifuCheckBox CheckVendedor;
-        private System.Windows.Forms.Label label13;
     }
 }
