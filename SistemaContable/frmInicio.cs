@@ -92,8 +92,6 @@ namespace SistemaContable
                 btnAyuda.Visible = false;
                 pbMaser.Visible = false;
                 btnAbrir.Visible = true;
-                //pbLogo.Location = new Point(350, 300);
-
             }
         }
 
@@ -109,7 +107,6 @@ namespace SistemaContable
                 btnAyuda.Visible = true;
                 pbMaser.Visible = true;
                 btnAbrir.Visible = false;
-                //pbLogo.Location = new Point(400, 300);
             }
         }
 

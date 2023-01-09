@@ -15,13 +15,13 @@ namespace SistemaContable
         public frmCarga()
         {
             InitializeComponent();
-            CircleProgress.Value = 0;
+
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
         private void tAparece_Tick(object sender, EventArgs e)
         {
-            if (this.Opacity < 1) this.Opacity += 0.05;
+            if (this.Opacity < 1) this.Opacity += 0.033;
             CircleProgress.Value += 1;
             CircleProgress.Text = CircleProgress.Value.ToString();
             if (CircleProgress.Value == 100)
@@ -48,6 +48,7 @@ namespace SistemaContable
         private void frmCarga_Load(object sender, EventArgs e)
         {
             this.Opacity = 0.0;
+            CircleProgress.Value = 0;
             tAparece.Start();
         }
     }
