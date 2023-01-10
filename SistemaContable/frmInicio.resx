@@ -1208,6 +1208,30 @@
   <data name="PanelMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
+  <data name="bunifuShapes1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 448</value>
+  </data>
+  <data name="bunifuShapes1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 150</value>
+  </data>
+  <data name="bunifuShapes1.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="bunifuShapes1.Text" xml:space="preserve">
+    <value>bunifuShapes1</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.Name" xml:space="preserve">
+    <value>bunifuShapes1</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuShapes, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -1230,7 +1254,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblFecha.Font" type="System.Drawing.Font, System.Drawing">
     <value>Constantia, 15pt, style=Bold</value>
@@ -1260,7 +1284,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;lblFecha.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblHora.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Black, 20pt, style=Bold</value>
@@ -1290,7 +1314,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;lblHora.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 677</value>
@@ -1311,7 +1335,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 117</value>
@@ -1332,7 +1356,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pbMaser.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1359,7 +1383,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;pbMaser.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 624</value>
@@ -1380,7 +1404,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnAbrir.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1410,7 +1434,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;btnAbrir.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnCerrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1437,7 +1461,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 365</value>
@@ -1458,7 +1482,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btnAyuda.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1473,10 +1497,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnAyuda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, 631</value>
+    <value>3, 631</value>
   </data>
   <data name="btnAyuda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 40</value>
+    <value>206, 40</value>
   </data>
   <data name="btnAyuda.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -1494,7 +1518,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;btnAyuda.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="btnMantenimiento.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1530,7 +1554,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;btnMantenimiento.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="btnContabilidad.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1548,7 +1572,7 @@
     <value>0, 250</value>
   </data>
   <data name="btnContabilidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 40</value>
+    <value>212, 40</value>
   </data>
   <data name="btnContabilidad.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -1566,7 +1590,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;btnContabilidad.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="btnVer.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1602,7 +1626,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;btnVer.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="btnArchivos.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1638,7 +1662,7 @@
     <value>PanelMenu</value>
   </data>
   <data name="&gt;&gt;btnArchivos.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="PanelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>

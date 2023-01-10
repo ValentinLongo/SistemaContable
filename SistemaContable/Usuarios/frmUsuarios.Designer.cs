@@ -68,10 +68,10 @@
             // tbNombreBusqueda
             // 
             this.tbNombreBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbNombreBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.tbNombreBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.tbNombreBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNombreBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbNombreBusqueda.Location = new System.Drawing.Point(259, 39);
+            this.tbNombreBusqueda.Location = new System.Drawing.Point(267, 38);
             this.tbNombreBusqueda.Name = "tbNombreBusqueda";
             this.tbNombreBusqueda.Size = new System.Drawing.Size(212, 13);
             this.tbNombreBusqueda.TabIndex = 8;
@@ -82,7 +82,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(199, 38);
+            this.label1.Location = new System.Drawing.Point(207, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 9;
@@ -94,7 +94,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(477, 40);
+            this.label3.Location = new System.Drawing.Point(485, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(150, 16);
             this.label3.TabIndex = 12;
@@ -104,7 +104,7 @@
             // 
             this.dtNacimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNacimiento.Location = new System.Drawing.Point(633, 36);
+            this.dtNacimiento.Location = new System.Drawing.Point(632, 34);
             this.dtNacimiento.Name = "dtNacimiento";
             this.dtNacimiento.Size = new System.Drawing.Size(96, 20);
             this.dtNacimiento.TabIndex = 14;
@@ -113,7 +113,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(74, 52);
+            this.panel1.Location = new System.Drawing.Point(82, 51);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(119, 1);
             this.panel1.TabIndex = 51;
@@ -121,18 +121,18 @@
             // btnBuscar
             // 
             this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btnBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnBuscar.BorderColor = System.Drawing.Color.White;
-            this.btnBuscar.BorderRadius = 10;
-            this.btnBuscar.BorderSize = 1;
+            this.btnBuscar.BorderRadius = 0;
+            this.btnBuscar.BorderSize = 0;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::SistemaContable.Properties.Resources.lupa;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(829, 29);
+            this.btnBuscar.Location = new System.Drawing.Point(829, 25);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(144, 31);
             this.btnBuscar.TabIndex = 42;
@@ -144,10 +144,10 @@
             // tbCodigo
             // 
             this.tbCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCodigo.Location = new System.Drawing.Point(74, 40);
+            this.tbCodigo.Location = new System.Drawing.Point(82, 39);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(119, 13);
             this.tbCodigo.TabIndex = 49;
@@ -156,7 +156,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(259, 53);
+            this.panel2.Location = new System.Drawing.Point(267, 52);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(212, 1);
             this.panel2.TabIndex = 40;
@@ -167,7 +167,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(14, 37);
+            this.label2.Location = new System.Drawing.Point(22, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 50;
@@ -176,14 +176,14 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btnAgregar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAgregar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnAgregar.BorderColor = System.Drawing.Color.White;
-            this.btnAgregar.BorderRadius = 10;
-            this.btnAgregar.BorderSize = 1;
+            this.btnAgregar.BorderRadius = 0;
+            this.btnAgregar.BorderSize = 0;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.Location = new System.Drawing.Point(991, 68);
@@ -198,14 +198,14 @@
             // btnImprimir
             // 
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btnImprimir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnImprimir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnImprimir.BorderColor = System.Drawing.Color.White;
-            this.btnImprimir.BorderRadius = 10;
-            this.btnImprimir.BorderSize = 1;
+            this.btnImprimir.BorderRadius = 0;
+            this.btnImprimir.BorderSize = 0;
             this.btnImprimir.FlatAppearance.BorderSize = 0;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImprimir.Location = new System.Drawing.Point(991, 453);
@@ -219,14 +219,14 @@
             // btnDefinirCajas
             // 
             this.btnDefinirCajas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDefinirCajas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btnDefinirCajas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btnDefinirCajas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnDefinirCajas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnDefinirCajas.BorderColor = System.Drawing.Color.White;
-            this.btnDefinirCajas.BorderRadius = 10;
-            this.btnDefinirCajas.BorderSize = 1;
+            this.btnDefinirCajas.BorderRadius = 0;
+            this.btnDefinirCajas.BorderSize = 0;
             this.btnDefinirCajas.FlatAppearance.BorderSize = 0;
             this.btnDefinirCajas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDefinirCajas.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDefinirCajas.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDefinirCajas.ForeColor = System.Drawing.Color.White;
             this.btnDefinirCajas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDefinirCajas.Location = new System.Drawing.Point(991, 172);
@@ -241,14 +241,14 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btnModificar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnModificar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnModificar.BorderColor = System.Drawing.Color.White;
-            this.btnModificar.BorderRadius = 10;
-            this.btnModificar.BorderSize = 1;
+            this.btnModificar.BorderRadius = 0;
+            this.btnModificar.BorderSize = 0;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.Location = new System.Drawing.Point(991, 120);
@@ -280,11 +280,11 @@
             this.ShapeBusqueda.BorderThickness = 1;
             this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.FillShape = true;
-            this.ShapeBusqueda.Location = new System.Drawing.Point(12, 27);
+            this.ShapeBusqueda.Location = new System.Drawing.Point(12, 18);
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
-            this.ShapeBusqueda.Size = new System.Drawing.Size(973, 39);
+            this.ShapeBusqueda.Size = new System.Drawing.Size(973, 48);
             this.ShapeBusqueda.TabIndex = 52;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
@@ -294,7 +294,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(9, 9);
+            this.label4.Location = new System.Drawing.Point(9, -2);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 53;
@@ -304,7 +304,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(1129, 568);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ShapeBusqueda);

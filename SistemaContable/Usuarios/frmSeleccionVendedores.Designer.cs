@@ -53,14 +53,14 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btnSeleccionar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnSeleccionar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnSeleccionar.BorderColor = System.Drawing.Color.White;
-            this.btnSeleccionar.BorderRadius = 10;
-            this.btnSeleccionar.BorderSize = 1;
+            this.btnSeleccionar.BorderRadius = 0;
+            this.btnSeleccionar.BorderSize = 0;
             this.btnSeleccionar.FlatAppearance.BorderSize = 0;
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
             this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSeleccionar.Location = new System.Drawing.Point(645, 34);
@@ -150,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSeleccionar);

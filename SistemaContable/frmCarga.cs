@@ -21,7 +21,7 @@ namespace SistemaContable
 
         private void tAparece_Tick(object sender, EventArgs e)
         {
-            if (this.Opacity < 1) this.Opacity += 0.05;
+            if (this.Opacity < 1) this.Opacity += 0.033;
             CircleProgress.Value += 1;
             CircleProgress.Text = CircleProgress.Value.ToString();
             if (CircleProgress.Value == 100)

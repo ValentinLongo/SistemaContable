@@ -228,6 +228,7 @@
     <Compile Include="FInicio.cs" />
     <Compile Include="FLogin.cs" />
     <Compile Include="FPlanDeCuentas.cs" />
+    <Compile Include="FTabEnter.cs" />
     <Compile Include="FUsuarios.cs" />
     <Compile Include="Menu.cs">
       <SubType>Component</SubType>

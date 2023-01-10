@@ -37,8 +37,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.ShapeContra = new Bunifu.UI.WinForms.BunifuShapes();
+            this.ShapeUsuario = new Bunifu.UI.WinForms.BunifuShapes();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbOcultar = new System.Windows.Forms.PictureBox();
@@ -46,9 +47,10 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.ShapeUsuario = new Bunifu.UI.WinForms.BunifuShapes();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,7 +63,7 @@
             // 
             // txtConstrasenia
             // 
-            this.txtConstrasenia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.txtConstrasenia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.txtConstrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConstrasenia.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConstrasenia.ForeColor = System.Drawing.SystemColors.Window;
@@ -77,7 +79,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 167);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(366, 5);
+            this.panel2.Size = new System.Drawing.Size(366, 3);
             this.panel2.TabIndex = 10;
             // 
             // panel3
@@ -98,7 +100,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -192,17 +194,6 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(145, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 34);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Login";
-            // 
             // ShapeContra
             // 
             this.ShapeContra.Angle = 0F;
@@ -211,7 +202,7 @@
             this.ShapeContra.BorderThickness = 1;
             this.ShapeContra.FillColor = System.Drawing.Color.Transparent;
             this.ShapeContra.FillShape = true;
-            this.ShapeContra.Location = new System.Drawing.Point(32, 164);
+            this.ShapeContra.Location = new System.Drawing.Point(32, 67);
             this.ShapeContra.Name = "ShapeContra";
             this.ShapeContra.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeContra.Sides = 5;
@@ -219,16 +210,44 @@
             this.ShapeContra.TabIndex = 29;
             this.ShapeContra.Text = "bunifuShapes1";
             // 
+            // ShapeUsuario
+            // 
+            this.ShapeUsuario.Angle = 0F;
+            this.ShapeUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.ShapeUsuario.BorderColor = System.Drawing.Color.White;
+            this.ShapeUsuario.BorderThickness = 1;
+            this.ShapeUsuario.FillColor = System.Drawing.Color.Transparent;
+            this.ShapeUsuario.FillShape = true;
+            this.ShapeUsuario.Location = new System.Drawing.Point(32, 164);
+            this.ShapeUsuario.Name = "ShapeUsuario";
+            this.ShapeUsuario.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.ShapeUsuario.Sides = 5;
+            this.ShapeUsuario.Size = new System.Drawing.Size(303, 75);
+            this.ShapeUsuario.TabIndex = 30;
+            this.ShapeUsuario.Text = "bunifuShapes1";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(142, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 34);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Login";
+            // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.Window;
             this.txtUsuario.Location = new System.Drawing.Point(87, 93);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(228, 19);
-            this.txtUsuario.TabIndex = 15;
+            this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Tab_a_Enter);
             // 
             // pictureBox2
             // 
@@ -275,33 +294,36 @@
             // 
             // btnAcceder
             // 
-            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.btnAcceder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAcceder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnAcceder.BorderColor = System.Drawing.Color.White;
-            this.btnAcceder.BorderRadius = 15;
-            this.btnAcceder.BorderSize = 2;
+            this.btnAcceder.BorderRadius = 0;
+            this.btnAcceder.BorderSize = 0;
             this.btnAcceder.FlatAppearance.BorderSize = 0;
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcceder.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcceder.ForeColor = System.Drawing.Color.White;
+            this.btnAcceder.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAcceder.Location = new System.Drawing.Point(32, 258);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(303, 39);
-            this.btnAcceder.TabIndex = 28;
+            this.btnAcceder.TabIndex = 2;
             this.btnAcceder.Text = "Acceder";
-            this.btnAcceder.TextColor = System.Drawing.Color.White;
+            this.btnAcceder.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.ShapeContra);
+            this.panel6.Controls.Add(this.ShapeUsuario);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.ShapeUsuario);
             this.panel6.Controls.Add(this.pbOcultar);
             this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Controls.Add(this.panel3);
-            this.panel6.Controls.Add(this.ShapeContra);
             this.panel6.Controls.Add(this.txtUsuario);
             this.panel6.Controls.Add(this.pbVisibilidad);
             this.panel6.Controls.Add(this.pictureBox3);
@@ -310,38 +332,27 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.btnAcceder);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 172);
+            this.panel6.Location = new System.Drawing.Point(0, 170);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(366, 309);
+            this.panel6.Size = new System.Drawing.Size(366, 311);
             this.panel6.TabIndex = 29;
             this.panel6.Tag = "2";
             // 
-            // ShapeUsuario
+            // panel8
             // 
-            this.ShapeUsuario.Angle = 0F;
-            this.ShapeUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.ShapeUsuario.BorderColor = System.Drawing.Color.White;
-            this.ShapeUsuario.BorderThickness = 1;
-            this.ShapeUsuario.FillColor = System.Drawing.Color.Transparent;
-            this.ShapeUsuario.FillShape = true;
-            this.ShapeUsuario.Location = new System.Drawing.Point(32, 65);
-            this.ShapeUsuario.Name = "ShapeUsuario";
-            this.ShapeUsuario.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
-            this.ShapeUsuario.Sides = 5;
-            this.ShapeUsuario.Size = new System.Drawing.Size(303, 75);
-            this.ShapeUsuario.TabIndex = 30;
-            this.ShapeUsuario.Text = "bunifuShapes1";
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel8.Location = new System.Drawing.Point(12, 33);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(133, 1);
+            this.panel8.TabIndex = 36;
             // 
-            // label1
+            // panel7
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(29, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 15);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "USUARIO";
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel7.Location = new System.Drawing.Point(221, 33);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(133, 1);
+            this.panel7.TabIndex = 35;
             // 
             // label2
             // 
@@ -353,6 +364,17 @@
             this.label2.Size = new System.Drawing.Size(82, 15);
             this.label2.TabIndex = 32;
             this.label2.Text = "CONTRASEÑA";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(29, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 15);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "USUARIO";
             // 
             // frmLogin
             // 
@@ -403,6 +425,8 @@
         private Bunifu.UI.WinForms.BunifuShapes ShapeUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
     }
 }
 
