@@ -14,6 +14,8 @@ using System.Reflection;
 using System.Security.Policy;
 using Datos;
 using System.Net;
+using System.Collections;
+using Bunifu.UI.WinForms.Helpers.Transitions;
 
 namespace SistemaContable
 {
@@ -116,5 +118,15 @@ namespace SistemaContable
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        public void Tab_a_Enter(Object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.SelectNextControl((Control)sender, true, true, true, true);
+            }
+        }
     }
 }
+

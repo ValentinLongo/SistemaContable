@@ -55,12 +55,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tbVendedor = new System.Windows.Forms.TextBox();
-            this.CheckVendedor = new System.Windows.Forms.CheckBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.CheckVendedor = new Bunifu.UI.WinForms.BunifuCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -177,7 +178,7 @@
             // 
             // tbNombre
             // 
-            this.tbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.tbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbNombre.Location = new System.Drawing.Point(157, 88);
@@ -187,7 +188,7 @@
             // 
             // tbDireccion
             // 
-            this.tbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.tbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.tbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDireccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbDireccion.Location = new System.Drawing.Point(157, 124);
@@ -197,7 +198,7 @@
             // 
             // tbTelefono
             // 
-            this.tbTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.tbTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.tbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTelefono.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbTelefono.Location = new System.Drawing.Point(156, 160);
@@ -215,7 +216,7 @@
             // 
             // tbLogin
             // 
-            this.tbLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.tbLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.tbLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbLogin.Location = new System.Drawing.Point(157, 227);
@@ -225,7 +226,7 @@
             // 
             // cbPerfil
             // 
-            this.cbPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.cbPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.cbPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbPerfil.FormattingEnabled = true;
             this.cbPerfil.Location = new System.Drawing.Point(157, 254);
@@ -235,7 +236,7 @@
             // 
             // cbEstado
             // 
-            this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Location = new System.Drawing.Point(157, 286);
@@ -288,7 +289,7 @@
             // 
             // cbSeccion
             // 
-            this.cbSeccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.cbSeccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.cbSeccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbSeccion.FormattingEnabled = true;
             this.cbSeccion.Location = new System.Drawing.Point(157, 318);
@@ -317,25 +318,13 @@
             // 
             // tbVendedor
             // 
-            this.tbVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.tbVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.tbVendedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbVendedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbVendedor.Location = new System.Drawing.Point(154, 354);
             this.tbVendedor.Name = "tbVendedor";
             this.tbVendedor.Size = new System.Drawing.Size(252, 13);
             this.tbVendedor.TabIndex = 48;
-            // 
-            // CheckVendedor
-            // 
-            this.CheckVendedor.AutoSize = true;
-            this.CheckVendedor.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.CheckVendedor.Location = new System.Drawing.Point(154, 398);
-            this.CheckVendedor.Name = "CheckVendedor";
-            this.CheckVendedor.Size = new System.Drawing.Size(222, 17);
-            this.CheckVendedor.TabIndex = 50;
-            this.CheckVendedor.Text = "El usuario no posee un vendedor definido";
-            this.CheckVendedor.UseVisualStyleBackColor = true;
-            this.CheckVendedor.CheckedChanged += new System.EventHandler(this.CambioCheck);
             // 
             // btnBuscar
             // 
@@ -362,14 +351,14 @@
             // btnAceptar
             // 
             this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnAceptar.BorderColor = System.Drawing.Color.White;
-            this.btnAceptar.BorderRadius = 10;
-            this.btnAceptar.BorderSize = 1;
+            this.btnAceptar.BorderRadius = 0;
+            this.btnAceptar.BorderSize = 0;
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.Location = new System.Drawing.Point(191, 435);
@@ -455,15 +444,79 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.Location = new System.Drawing.Point(171, 397);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(203, 13);
+            this.label13.TabIndex = 62;
+            this.label13.Text = "El usuario no posee un vendedor definido";
+            // 
+            // CheckVendedor
+            // 
+            this.CheckVendedor.AllowBindingControlAnimation = true;
+            this.CheckVendedor.AllowBindingControlColorChanges = false;
+            this.CheckVendedor.AllowBindingControlLocation = true;
+            this.CheckVendedor.AllowCheckBoxAnimation = false;
+            this.CheckVendedor.AllowCheckmarkAnimation = true;
+            this.CheckVendedor.AllowOnHoverStates = true;
+            this.CheckVendedor.AutoCheck = true;
+            this.CheckVendedor.BackColor = System.Drawing.Color.Transparent;
+            this.CheckVendedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckVendedor.BackgroundImage")));
+            this.CheckVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CheckVendedor.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.CheckVendedor.BorderRadius = 12;
+            this.CheckVendedor.Checked = false;
+            this.CheckVendedor.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.CheckVendedor.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CheckVendedor.CustomCheckmarkImage = null;
+            this.CheckVendedor.Location = new System.Drawing.Point(151, 393);
+            this.CheckVendedor.MinimumSize = new System.Drawing.Size(17, 17);
+            this.CheckVendedor.Name = "CheckVendedor";
+            this.CheckVendedor.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckVendedor.OnCheck.BorderRadius = 12;
+            this.CheckVendedor.OnCheck.BorderThickness = 2;
+            this.CheckVendedor.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckVendedor.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckVendedor.OnCheck.CheckmarkThickness = 2;
+            this.CheckVendedor.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.CheckVendedor.OnDisable.BorderRadius = 12;
+            this.CheckVendedor.OnDisable.BorderThickness = 2;
+            this.CheckVendedor.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckVendedor.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.CheckVendedor.OnDisable.CheckmarkThickness = 2;
+            this.CheckVendedor.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckVendedor.OnHoverChecked.BorderRadius = 12;
+            this.CheckVendedor.OnHoverChecked.BorderThickness = 2;
+            this.CheckVendedor.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckVendedor.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckVendedor.OnHoverChecked.CheckmarkThickness = 2;
+            this.CheckVendedor.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckVendedor.OnHoverUnchecked.BorderRadius = 12;
+            this.CheckVendedor.OnHoverUnchecked.BorderThickness = 1;
+            this.CheckVendedor.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckVendedor.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.CheckVendedor.OnUncheck.BorderRadius = 12;
+            this.CheckVendedor.OnUncheck.BorderThickness = 1;
+            this.CheckVendedor.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckVendedor.Size = new System.Drawing.Size(17, 17);
+            this.CheckVendedor.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.CheckVendedor.TabIndex = 61;
+            this.CheckVendedor.ThreeState = false;
+            this.CheckVendedor.ToolTipText = null;
+            // 
             // frmAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(530, 489);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.CheckVendedor);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.CheckVendedor);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.tbVendedor);
             this.Controls.Add(this.btnBuscar);
@@ -533,10 +586,11 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox tbVendedor;
-        private System.Windows.Forms.CheckBox CheckVendedor;
         private System.Windows.Forms.PictureBox pictureBox2;
         private RJCodeAdvance.RJControls.RJButton btnAceptar;
         private System.Windows.Forms.Panel panel7;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
+        private System.Windows.Forms.Label label13;
+        private Bunifu.UI.WinForms.BunifuCheckBox CheckVendedor;
     }
 }

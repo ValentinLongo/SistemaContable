@@ -108,6 +108,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.PanelMenu = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
@@ -144,7 +145,7 @@
             // toolStrip1
             // 
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
@@ -708,6 +709,7 @@
             this.PanelMenu.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.PanelMenu, "PanelMenu");
             this.PanelMenu.BorderRadius = 1;
+            this.PanelMenu.Controls.Add(this.bunifuShapes1);
             this.PanelMenu.Controls.Add(this.panel4);
             this.PanelMenu.Controls.Add(this.lblFecha);
             this.PanelMenu.Controls.Add(this.lblHora);
@@ -729,6 +731,19 @@
             this.PanelMenu.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Quality = 10;
+            // 
+            // bunifuShapes1
+            // 
+            this.bunifuShapes1.Angle = 0F;
+            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.bunifuShapes1.BorderThickness = 2;
+            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes1.FillShape = true;
+            resources.ApplyResources(this.bunifuShapes1, "bunifuShapes1");
+            this.bunifuShapes1.Name = "bunifuShapes1";
+            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.bunifuShapes1.Sides = 5;
             // 
             // panel4
             // 
@@ -819,10 +834,10 @@
             this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
             this.btnAyuda.BackgroundColor = System.Drawing.Color.Transparent;
             this.btnAyuda.BorderColor = System.Drawing.Color.White;
-            this.btnAyuda.BorderRadius = 12;
+            this.btnAyuda.BorderRadius = 0;
             this.btnAyuda.BorderSize = 0;
             this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
+            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.btnAyuda, "btnAyuda");
             this.btnAyuda.ForeColor = System.Drawing.Color.White;
             this.btnAyuda.Image = global::SistemaContable.Properties.Resources.icons8_ayuda30;
@@ -836,10 +851,10 @@
             this.btnMantenimiento.BackColor = System.Drawing.Color.Transparent;
             this.btnMantenimiento.BackgroundColor = System.Drawing.Color.Transparent;
             this.btnMantenimiento.BorderColor = System.Drawing.Color.White;
-            this.btnMantenimiento.BorderRadius = 12;
+            this.btnMantenimiento.BorderRadius = 0;
             this.btnMantenimiento.BorderSize = 0;
             this.btnMantenimiento.FlatAppearance.BorderSize = 0;
-            this.btnMantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
+            this.btnMantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.btnMantenimiento, "btnMantenimiento");
             this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
             this.btnMantenimiento.Image = global::SistemaContable.Properties.Resources.icons8_llave_30;
@@ -853,10 +868,10 @@
             this.btnContabilidad.BackColor = System.Drawing.Color.Transparent;
             this.btnContabilidad.BackgroundColor = System.Drawing.Color.Transparent;
             this.btnContabilidad.BorderColor = System.Drawing.Color.White;
-            this.btnContabilidad.BorderRadius = 12;
+            this.btnContabilidad.BorderRadius = 0;
             this.btnContabilidad.BorderSize = 0;
             this.btnContabilidad.FlatAppearance.BorderSize = 0;
-            this.btnContabilidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
+            this.btnContabilidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.btnContabilidad, "btnContabilidad");
             this.btnContabilidad.ForeColor = System.Drawing.Color.White;
             this.btnContabilidad.Image = global::SistemaContable.Properties.Resources.icons8_calculadora_30;
@@ -870,10 +885,10 @@
             this.btnVer.BackColor = System.Drawing.Color.Transparent;
             this.btnVer.BackgroundColor = System.Drawing.Color.Transparent;
             this.btnVer.BorderColor = System.Drawing.Color.White;
-            this.btnVer.BorderRadius = 12;
+            this.btnVer.BorderRadius = 0;
             this.btnVer.BorderSize = 0;
             this.btnVer.FlatAppearance.BorderSize = 0;
-            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
+            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.btnVer, "btnVer");
             this.btnVer.ForeColor = System.Drawing.Color.White;
             this.btnVer.Image = global::SistemaContable.Properties.Resources.lupa;
@@ -887,10 +902,10 @@
             this.btnArchivos.BackColor = System.Drawing.Color.Transparent;
             this.btnArchivos.BackgroundColor = System.Drawing.Color.Transparent;
             this.btnArchivos.BorderColor = System.Drawing.Color.White;
-            this.btnArchivos.BorderRadius = 12;
+            this.btnArchivos.BorderRadius = 0;
             this.btnArchivos.BorderSize = 0;
             this.btnArchivos.FlatAppearance.BorderSize = 0;
-            this.btnArchivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
+            this.btnArchivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.btnArchivos, "btnArchivos");
             this.btnArchivos.ForeColor = System.Drawing.Color.White;
             this.btnArchivos.Image = global::SistemaContable.Properties.Resources.icons8_carpeta_30;
@@ -906,6 +921,7 @@
             // 
             // PanelPrincipal
             // 
+            this.PanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.PanelPrincipal.Controls.Add(this.panel7);
             this.PanelPrincipal.Controls.Add(this.panel6);
             this.PanelPrincipal.Controls.Add(this.pbLogo);
@@ -1060,5 +1076,6 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
+        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
     }
 }
