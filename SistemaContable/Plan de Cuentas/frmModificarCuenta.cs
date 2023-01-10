@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,6 +47,27 @@ namespace SistemaContable.Plan_de_Cuentas
                 }
                 int estado = Convert.ToInt32(dr["pcu_estado"].ToString());
                 cbEstado.SelectedIndex = estado - 1;
+            }
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MPlanDeCuentas mPlanDeCuentas = new MPlanDeCuentas()
+                {
+                    pcu_codigo = tbCodigo.Text,
+                    pcu_descri = tbDescripcion.Text,
+                    pcu_estado = Convert.ToInt32(cbEstado.SelectedIndex + 1),
+                    pcu_rubrocont = Convert.ToInt32(cbRubro.SelectedValue)
+                };
+                Negocio.FPlanDeCuentas.modificarPlanDeCuentas(mPlanDeCuentas);
+                MessageBox.Show("Cuenta modificada");
+                this.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Ocurrio un error");
             }
         }
     }

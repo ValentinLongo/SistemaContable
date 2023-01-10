@@ -51,6 +51,7 @@
             // 
             this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCodigo.Enabled = false;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbCodigo.Location = new System.Drawing.Point(194, 68);
             this.tbCodigo.Name = "tbCodigo";
@@ -77,10 +78,12 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // CheckAjuste
             // 
             this.CheckAjuste.AutoSize = true;
+            this.CheckAjuste.Enabled = false;
             this.CheckAjuste.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.CheckAjuste.Location = new System.Drawing.Point(266, 246);
             this.CheckAjuste.Name = "CheckAjuste";
@@ -152,6 +155,7 @@
             // 
             this.tbCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.tbCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCuenta.Enabled = false;
             this.tbCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbCuenta.Location = new System.Drawing.Point(194, 103);
             this.tbCuenta.Name = "tbCuenta";

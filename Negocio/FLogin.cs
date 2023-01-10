@@ -6,6 +6,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace Negocio
 {
@@ -62,5 +65,6 @@ namespace Negocio
             Datos.AccesoBase.datosConexion = @"Data Source = " + Servidor + ";Initial Catalog = " + BaseDeDatos + "; User ID = sa; Password=1220;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=true";
             return NumeroTerminal;
         }
+
     }
 }

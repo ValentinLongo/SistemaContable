@@ -39,31 +39,42 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            string codigoElegido = tbCodigo.Text;
-            int ajusta = 0;
-            if (CheckAjuste.Checked == true)
+            try
             {
-                ajusta = 1;
+                string codigoElegido = tbCodigo.Text;
+                int ajusta = 0;
+                if (CheckAjuste.Checked == true)
+                {
+                    ajusta = 1;
+                }
+                //Datos
+                MPlanDeCuentas mPlanDeCuentas = new MPlanDeCuentas()
+                {
+                    pcu_codigo = codigoCuenta(),
+                    pcu_cuenta = Convert.ToInt32(tbCuenta.Text),
+                    pcu_descri = tbDescripcion.Text,
+                    pcu_superior = cuentaSuperior(),
+                    pcu_hija = 0,
+                    pcu_tabulador = Negocio.FPlanDeCuentas.tabulador(codigoElegido),
+                    pcu_estado = Convert.ToInt32(cbEstado.SelectedIndex + 1),
+                    pcu_rubrocont = Convert.ToInt32(cbRubro.SelectedValue),
+                    pcu_ajustainf = ajusta
+                };
+
+                //INSERT
+                Negocio.FPlanDeCuentas.agregarPlanDeCuentas(mPlanDeCuentas);
+
+                //Establezco los hijos de la cuenta superior
+                Negocio.FPlanDeCuentas.cantidadHijos(mPlanDeCuentas.pcu_superior);
+
+                MessageBox.Show("Cargado Correctamente");
+                this.Close();
             }
-            //Datos
-            MPlanDeCuentas mPlanDeCuentas = new MPlanDeCuentas()
+            catch
             {
-                pcu_codigo = codigoCuenta(),
-                pcu_cuenta = Convert.ToInt32(tbCuenta.Text),
-                pcu_descri = tbDescripcion.Text,
-                pcu_superior = cuentaSuperior(),
-                pcu_hija = 0,
-                pcu_tabulador = Negocio.FPlanDeCuentas.tabulador(codigoElegido),
-                pcu_estado = Convert.ToInt32(cbEstado.SelectedIndex + 1),
-                pcu_rubrocont = Convert.ToInt32(cbRubro.SelectedValue),
-                pcu_ajustainf = ajusta
-            };
+                MessageBox.Show("Ocurrio un Error");
+            }
 
-            //Establezco los hijos de la cuenta superior
-            Negocio.FPlanDeCuentas.cantidadHijos(mPlanDeCuentas.pcu_superior);
-
-            //INSERT
-            Negocio.FPlanDeCuentas.agregarPlanDeCuentas(mPlanDeCuentas);
         }
 
         public string codigoCuenta()

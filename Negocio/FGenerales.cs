@@ -49,5 +49,14 @@ namespace Negocio
                 Formulario.BringToFront();
             }
         }
+
+        public static void agregarEventoKeyDown(TextBox txt)
+        {
+            txt.KeyDown += TextBox1_KeyDown;
+            void TextBox1_KeyDown(object sender, KeyEventArgs e)
+            {
+                SendKeys.Send("{TAB}");
+            }
+        }
     }
 }
