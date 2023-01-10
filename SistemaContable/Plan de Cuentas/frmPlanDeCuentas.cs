@@ -58,7 +58,7 @@ namespace SistemaContable.Plan_de_Cuentas
             {
                 btnModificar.Enabled = true;
                 int indice = e.RowIndex;
-                idCuenta = dgvCuentas.Rows[indice].Cells[0].Value.ToString();
+                idCuenta = dgvCuentas.Rows[indice].Cells[1].Value.ToString();
             }
             catch
             {
