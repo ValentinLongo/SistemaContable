@@ -45,6 +45,11 @@ namespace SistemaContable.Plan_de_Cuentas
                 {
                     cbRubro.Text = "";
                 }
+
+                if (dr["pcu_ajustainf"].ToString() != "" && dr["pcu_ajustainf"].ToString()!="0")
+                {
+                    CheckAjuste.Checked = true;
+                }
                 int estado = Convert.ToInt32(dr["pcu_estado"].ToString());
                 cbEstado.SelectedIndex = estado - 1;
             }

@@ -42,14 +42,14 @@ namespace SistemaContable.Usuarios
             cbSeccion.DisplayMember = "sec_descri";
             cbSeccion.ValueMember = "sec_codigo";
 
-            
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             frmSeleccionVendedores frmSeleccionVendedore = new frmSeleccionVendedores();
             frmSeleccionVendedore.ShowDialog();
-            if(SistemaContable.Usuarios.frmSeleccionVendedores.NombreVendedor != "")
+            if (SistemaContable.Usuarios.frmSeleccionVendedores.NombreVendedor != "")
             {
                 tbVendedor.Text = SistemaContable.Usuarios.frmSeleccionVendedores.NombreVendedor;
             }
@@ -57,7 +57,7 @@ namespace SistemaContable.Usuarios
 
         private void CambioCheck(object sender, EventArgs e)
         {
-            if(CheckVendedor.Checked == true)
+            if (CheckVendedor.Checked == true)
             {
                 tbVendedor.Enabled = false;
                 btnBuscar.Enabled = false;
@@ -65,7 +65,7 @@ namespace SistemaContable.Usuarios
                 SistemaContable.Usuarios.frmSeleccionVendedores.CodigoVendedor = 0;
                 tbVendedor.Text = "";
             }
-            else if(CheckVendedor.Checked == false)
+            else if (CheckVendedor.Checked == false)
             {
                 tbVendedor.Enabled = true;
                 btnBuscar.Enabled = true;
@@ -74,23 +74,29 @@ namespace SistemaContable.Usuarios
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            MUsuario mUsuario = new MUsuario
+            if (tbNombre.Text != "" && tbLogin.Text != "")
             {
-                usu_nombre = tbNombre.Text,
-                usu_login = tbLogin.Text,
-                usu_direccion = tbDireccion.Text,
-                usu_telefono = tbTelefono.Text,
-                usu_fecnac = Convert.ToDateTime(dtFechaNachimiento.Text),
-                usu_perfil = Convert.ToInt32(cbPerfil.SelectedValue.ToString()),
-                usu_estado = Convert.ToInt32(cbEstado.SelectedValue.ToString()),
-                usu_seccion = Convert.ToInt32(cbSeccion.SelectedValue.ToString()),
-                usu_vendedor = SistemaContable.Usuarios.frmSeleccionVendedores.CodigoVendedor
-            };
+                MUsuario mUsuario = new MUsuario
+                {
+                    usu_nombre = tbNombre.Text,
+                    usu_login = tbLogin.Text,
+                    usu_direccion = tbDireccion.Text,
+                    usu_telefono = tbTelefono.Text,
+                    usu_fecnac = Convert.ToDateTime(dtFechaNachimiento.Text),
+                    usu_perfil = Convert.ToInt32(cbPerfil.SelectedValue.ToString()),
+                    usu_estado = Convert.ToInt32(cbEstado.SelectedValue.ToString()),
+                    usu_seccion = Convert.ToInt32(cbSeccion.SelectedValue.ToString()),
+                    usu_vendedor = SistemaContable.Usuarios.frmSeleccionVendedores.CodigoVendedor
+                };
+                Negocio.FUsuarios.AgregarUsuario(mUsuario);
 
-            Negocio.FUsuarios.AgregarUsuario(mUsuario);
-
-            MessageBox.Show("Usuario agregado correctamente");
-            this.Close();
+                MessageBox.Show("Usuario agregado correctamente");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Rellenar los datos necesarios");
+            }
         }
 
         //BARRA DE CONTROL
