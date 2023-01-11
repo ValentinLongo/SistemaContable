@@ -17,6 +17,7 @@ namespace SistemaContable.Usuarios
         public frmAgregarUsuario()
         {
             InitializeComponent();
+            Negocio.FGenerales.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
             LlenarCB();

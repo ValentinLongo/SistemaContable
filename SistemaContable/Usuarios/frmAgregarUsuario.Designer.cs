@@ -184,7 +184,7 @@
             this.tbNombre.Location = new System.Drawing.Point(157, 88);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(252, 13);
-            this.tbNombre.TabIndex = 10;
+            this.tbNombre.TabIndex = 0;
             // 
             // tbDireccion
             // 
@@ -194,7 +194,7 @@
             this.tbDireccion.Location = new System.Drawing.Point(157, 124);
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(252, 13);
-            this.tbDireccion.TabIndex = 11;
+            this.tbDireccion.TabIndex = 1;
             // 
             // tbTelefono
             // 
@@ -204,7 +204,7 @@
             this.tbTelefono.Location = new System.Drawing.Point(156, 160);
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(252, 13);
-            this.tbTelefono.TabIndex = 12;
+            this.tbTelefono.TabIndex = 2;
             // 
             // dtFechaNachimiento
             // 
@@ -222,7 +222,7 @@
             this.tbLogin.Location = new System.Drawing.Point(157, 227);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(252, 13);
-            this.tbLogin.TabIndex = 14;
+            this.tbLogin.TabIndex = 3;
             // 
             // cbPerfil
             // 
@@ -324,7 +324,7 @@
             this.tbVendedor.Location = new System.Drawing.Point(154, 354);
             this.tbVendedor.Name = "tbVendedor";
             this.tbVendedor.Size = new System.Drawing.Size(252, 13);
-            this.tbVendedor.TabIndex = 48;
+            this.tbVendedor.TabIndex = 4;
             // 
             // btnBuscar
             // 
@@ -364,7 +364,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(191, 435);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(150, 31);
-            this.btnAceptar.TabIndex = 51;
+            this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;

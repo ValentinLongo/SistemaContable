@@ -98,7 +98,7 @@
             this.tbLogin.Location = new System.Drawing.Point(146, 217);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(231, 13);
-            this.tbLogin.TabIndex = 32;
+            this.tbLogin.TabIndex = 4;
             // 
             // dtFechaNachimiento
             // 
@@ -115,7 +115,7 @@
             this.tbTelefono.Location = new System.Drawing.Point(148, 153);
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(229, 13);
-            this.tbTelefono.TabIndex = 30;
+            this.tbTelefono.TabIndex = 3;
             // 
             // tbDireccion
             // 
@@ -125,7 +125,7 @@
             this.tbDireccion.Location = new System.Drawing.Point(147, 118);
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(229, 13);
-            this.tbDireccion.TabIndex = 29;
+            this.tbDireccion.TabIndex = 2;
             // 
             // tbNombre
             // 
@@ -135,7 +135,7 @@
             this.tbNombre.Location = new System.Drawing.Point(147, 85);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(229, 13);
-            this.tbNombre.TabIndex = 28;
+            this.tbNombre.TabIndex = 1;
             // 
             // label10
             // 
@@ -245,7 +245,7 @@
             this.tbCodigo.Location = new System.Drawing.Point(147, 57);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(83, 13);
-            this.tbCodigo.TabIndex = 36;
+            this.tbCodigo.TabIndex = 0;
             // 
             // panel3
             // 
@@ -313,7 +313,7 @@
             this.tbVendedor.Location = new System.Drawing.Point(146, 346);
             this.tbVendedor.Name = "tbVendedor";
             this.tbVendedor.Size = new System.Drawing.Size(252, 13);
-            this.tbVendedor.TabIndex = 54;
+            this.tbVendedor.TabIndex = 5;
             // 
             // btnBuscar
             // 
@@ -375,7 +375,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(182, 441);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(158, 40);
-            this.btnAceptar.TabIndex = 56;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;

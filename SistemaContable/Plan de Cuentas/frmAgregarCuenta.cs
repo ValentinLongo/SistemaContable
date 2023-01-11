@@ -18,6 +18,7 @@ namespace SistemaContable.Plan_de_Cuentas
         public frmAgregarCuenta()
         {
             InitializeComponent();
+            Negocio.FGenerales.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
             CargarDatos();

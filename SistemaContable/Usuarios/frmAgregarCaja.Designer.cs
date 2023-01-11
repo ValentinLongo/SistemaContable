@@ -57,7 +57,7 @@
             this.dgvCajas.ReadOnly = true;
             this.dgvCajas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCajas.Size = new System.Drawing.Size(517, 398);
-            this.dgvCajas.TabIndex = 0;
+            this.dgvCajas.TabIndex = 3;
             // 
             // tbCodigo
             // 
@@ -67,7 +67,7 @@
             this.tbCodigo.Location = new System.Drawing.Point(551, 191);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(149, 13);
-            this.tbCodigo.TabIndex = 3;
+            this.tbCodigo.TabIndex = 0;
             // 
             // tbDescripcion
             // 
@@ -77,7 +77,7 @@
             this.tbDescripcion.Location = new System.Drawing.Point(551, 253);
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(149, 13);
-            this.tbDescripcion.TabIndex = 4;
+            this.tbDescripcion.TabIndex = 1;
             // 
             // label1
             // 
@@ -133,7 +133,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(551, 309);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(149, 41);
-            this.btnBuscar.TabIndex = 45;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -271,7 +271,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(718, 450);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ShapeBusqueda);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.label1);
@@ -282,6 +281,7 @@
             this.Controls.Add(this.dgvCajas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbDescripcion);
+            this.Controls.Add(this.ShapeBusqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAgregarCaja";

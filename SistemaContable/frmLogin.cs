@@ -26,6 +26,9 @@ namespace SistemaContable
         public frmLogin()
         {
             InitializeComponent();
+            Negocio.FGenerales.EventosFormulario(this);
+
+            txtUsuario.Select();
 
             //BUSCO NOMBRE DEL EQUIPO
             string nombreEquipo = Environment.MachineName;
@@ -117,15 +120,6 @@ namespace SistemaContable
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        public void Tab_a_Enter(Object sender, KeyEventArgs e)
-        {
-
-            if (e.KeyCode == Keys.Enter)
-            {
-                this.SelectNextControl((Control)sender, true, true, true, true);
-            }
         }
     }
 }

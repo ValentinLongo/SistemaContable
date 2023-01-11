@@ -16,6 +16,7 @@ namespace SistemaContable.Usuarios
         public frmDefinirCajas()
         {
             InitializeComponent();
+            Negocio.FGenerales.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
             CargarDGV();

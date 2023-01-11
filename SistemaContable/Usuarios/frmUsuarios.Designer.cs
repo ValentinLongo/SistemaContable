@@ -62,7 +62,7 @@
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(973, 488);
-            this.dgvUsuarios.TabIndex = 0;
+            this.dgvUsuarios.TabIndex = 7;
             this.dgvUsuarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
             // 
             // tbNombreBusqueda
@@ -74,7 +74,7 @@
             this.tbNombreBusqueda.Location = new System.Drawing.Point(267, 38);
             this.tbNombreBusqueda.Name = "tbNombreBusqueda";
             this.tbNombreBusqueda.Size = new System.Drawing.Size(212, 13);
-            this.tbNombreBusqueda.TabIndex = 8;
+            this.tbNombreBusqueda.TabIndex = 1;
             // 
             // label1
             // 
@@ -128,14 +128,14 @@
             this.btnBuscar.BorderSize = 0;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::SistemaContable.Properties.Resources.lupa;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(829, 25);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(144, 31);
-            this.btnBuscar.TabIndex = 42;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -150,7 +150,7 @@
             this.tbCodigo.Location = new System.Drawing.Point(82, 39);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(119, 13);
-            this.tbCodigo.TabIndex = 49;
+            this.tbCodigo.TabIndex = 0;
             // 
             // panel2
             // 
@@ -189,7 +189,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(991, 68);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(130, 31);
-            this.btnAgregar.TabIndex = 43;
+            this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -211,7 +211,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(991, 453);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(130, 31);
-            this.btnImprimir.TabIndex = 48;
+            this.btnImprimir.TabIndex = 6;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
@@ -232,7 +232,7 @@
             this.btnDefinirCajas.Location = new System.Drawing.Point(991, 172);
             this.btnDefinirCajas.Name = "btnDefinirCajas";
             this.btnDefinirCajas.Size = new System.Drawing.Size(130, 31);
-            this.btnDefinirCajas.TabIndex = 47;
+            this.btnDefinirCajas.TabIndex = 5;
             this.btnDefinirCajas.Text = "Definir Cajas";
             this.btnDefinirCajas.TextColor = System.Drawing.Color.White;
             this.btnDefinirCajas.UseVisualStyleBackColor = false;
@@ -254,7 +254,7 @@
             this.btnModificar.Location = new System.Drawing.Point(991, 120);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(130, 31);
-            this.btnModificar.TabIndex = 46;
+            this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -307,7 +307,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(1129, 568);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ShapeBusqueda);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnImprimir);
@@ -323,6 +322,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.ShapeBusqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUsuarios";
