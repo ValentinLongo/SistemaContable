@@ -50,13 +50,46 @@ namespace Negocio
             }
         }
 
-        public static void agregarEventoKeyDown(TextBox txt)
+        public static void agregarEventoKeyDown(TextBox txt, Form formulario)
         {
-            txt.KeyDown += TextBox1_KeyDown;
+
+            txt.KeyDown += TextBox1_KeyDown;         
+
             void TextBox1_KeyDown(object sender, KeyEventArgs e)
             {
-                SendKeys.Send("{TAB}");
+                if (e.KeyCode == Keys.Enter)
+                {
+                    formulario.SelectNextControl((Control)txt, true, true, true, true);
+                    //SendKeys.Send("{TAB}");
+                }
             }
         }
+
+        public static void EventosFormulario(Form formulario)
+        {
+
+            foreach (Control Ctrl in formulario.Controls)
+            {
+                if (Ctrl is Panel)
+                {
+                    foreach (Control Ctrl1 in Ctrl.Controls)
+                    {
+
+                        if (Ctrl1 is TextBox)
+                        {
+                            agregarEventoKeyDown(Ctrl1 as TextBox, formulario);
+                        }
+
+                    }
+                }
+
+                if (Ctrl is TextBox)
+                {
+                    agregarEventoKeyDown(Ctrl as TextBox, formulario);
+                }
+
+            }
+        }
+
     }
 }

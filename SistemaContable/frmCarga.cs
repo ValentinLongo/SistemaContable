@@ -15,8 +15,9 @@ namespace SistemaContable
         public frmCarga()
         {
             InitializeComponent();
-            CircleProgress.Value = 0;
+            Negocio.FGenerales.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
+            CircleProgress.Value = 0;
         }
 
         private void tAparece_Tick(object sender, EventArgs e)

@@ -18,8 +18,9 @@ namespace SistemaContable
         public frmInicio()
         {
             InitializeComponent();
+            Negocio.FGenerales.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
-
+            
             this.WindowState = FormWindowState.Maximized;
         }
 
@@ -34,7 +35,6 @@ namespace SistemaContable
 
             }
         }
-
         frmUsuarios usuarios = new frmUsuarios();
         frmPlanDeCuentas planDeCuentas = new frmPlanDeCuentas();
         private void toolStripButton1_Click(object sender, EventArgs e)

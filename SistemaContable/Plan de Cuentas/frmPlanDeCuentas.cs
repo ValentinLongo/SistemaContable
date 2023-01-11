@@ -17,8 +17,9 @@ namespace SistemaContable.Plan_de_Cuentas
         public frmPlanDeCuentas()
         {
             InitializeComponent();
+
+            Negocio.FGenerales.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
-            ShapeBusqueda.SendToBack();
             btnModificar.Enabled = false;
             CargarDGV();
         }

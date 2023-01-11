@@ -68,7 +68,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(232, 310);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(150, 31);
-            this.btnAceptar.TabIndex = 81;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -131,7 +131,7 @@
             this.tbDescripcion.Location = new System.Drawing.Point(191, 167);
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(252, 13);
-            this.tbDescripcion.TabIndex = 64;
+            this.tbDescripcion.TabIndex = 2;
             // 
             // tbCuenta
             // 
@@ -141,7 +141,7 @@
             this.tbCuenta.Location = new System.Drawing.Point(191, 133);
             this.tbCuenta.Name = "tbCuenta";
             this.tbCuenta.Size = new System.Drawing.Size(252, 13);
-            this.tbCuenta.TabIndex = 63;
+            this.tbCuenta.TabIndex = 1;
             // 
             // label10
             // 
@@ -217,7 +217,7 @@
             this.tbCodigo.Location = new System.Drawing.Point(191, 98);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(252, 13);
-            this.tbCodigo.TabIndex = 82;
+            this.tbCodigo.TabIndex = 0;
             // 
             // panel7
             // 

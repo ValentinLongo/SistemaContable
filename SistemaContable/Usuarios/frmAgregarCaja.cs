@@ -17,6 +17,7 @@ namespace SistemaContable.Usuarios
         public frmAgregarCaja()
         {
             InitializeComponent();
+            Negocio.FGenerales.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
             ShapeBusqueda.SendToBack();
 

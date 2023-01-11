@@ -54,7 +54,7 @@
             this.dgvCuentas.Name = "dgvCuentas";
             this.dgvCuentas.ReadOnly = true;
             this.dgvCuentas.Size = new System.Drawing.Size(960, 488);
-            this.dgvCuentas.TabIndex = 0;
+            this.dgvCuentas.TabIndex = 5;
             this.dgvCuentas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
             // 
             // btnImprimir
@@ -73,7 +73,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(987, 453);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(130, 31);
-            this.btnImprimir.TabIndex = 53;
+            this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
@@ -94,7 +94,7 @@
             this.btnModificar.Location = new System.Drawing.Point(987, 129);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(130, 31);
-            this.btnModificar.TabIndex = 51;
+            this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -116,7 +116,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(987, 78);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(130, 31);
-            this.btnAgregar.TabIndex = 50;
+            this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -151,7 +151,7 @@
             this.tbDescipcion.Location = new System.Drawing.Point(115, 43);
             this.tbDescipcion.Name = "tbDescipcion";
             this.tbDescipcion.Size = new System.Drawing.Size(212, 13);
-            this.tbDescipcion.TabIndex = 45;
+            this.tbDescipcion.TabIndex = 0;
             // 
             // label1
             // 
@@ -182,7 +182,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(814, 33);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(144, 31);
-            this.btnBuscar.TabIndex = 42;
+            this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -224,7 +224,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(1129, 568);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ShapeBusqueda);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tbDescipcion);
             this.Controls.Add(this.btnImprimir);
@@ -234,6 +233,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvCuentas);
+            this.Controls.Add(this.ShapeBusqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPlanDeCuentas";
             this.Text = "frmPlanDeCuentas";
