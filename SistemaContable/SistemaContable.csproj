@@ -260,6 +260,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agenda\frmAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agenda\frmAgenda.Designer.cs">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agenda\frmAgregarAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agenda\frmAgregarAgenda.Designer.cs">
+      <DependentUpon>frmAgregarAgenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCarga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,6 +346,12 @@
     <Compile Include="Usuarios\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Agenda\frmAgenda.resx">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agenda\frmAgregarAgenda.resx">
+      <DependentUpon>frmAgregarAgenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCarga.resx">
       <DependentUpon>frmCarga.cs</DependentUpon>
     </EmbeddedResource>

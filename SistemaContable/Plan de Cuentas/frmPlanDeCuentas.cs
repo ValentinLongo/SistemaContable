@@ -73,5 +73,15 @@ namespace SistemaContable.Plan_de_Cuentas
             formModificarCuenta.ShowDialog();
             CargarDGV();
         }
+
+        private void frmPlanDeCuentas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbDescipcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using SistemaContable.Plan_de_Cuentas;
 using SistemaContable.Usuarios;
+using SistemaContable.Agenda;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +39,7 @@ namespace SistemaContable
         }
         frmUsuarios usuarios = new frmUsuarios();
         frmPlanDeCuentas planDeCuentas = new frmPlanDeCuentas();
+        frmAgenda agenda = new frmAgenda();
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Negocio.FGenerales.ManejarFormularios(usuarios, PanelPrincipal);
@@ -117,6 +120,12 @@ namespace SistemaContable
         {
             lblHora.Text = DateTime.Now.ToLongTimeString();
             lblFecha.Text = DateTime.Now.ToShortDateString();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            Negocio.FGenerales.ManejarFormularios(agenda, PanelPrincipal);
+
         }
     }
 }
