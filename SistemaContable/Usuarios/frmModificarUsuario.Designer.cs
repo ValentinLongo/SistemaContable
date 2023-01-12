@@ -63,6 +63,7 @@
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.CheckVendedor = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +100,7 @@
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(231, 13);
             this.tbLogin.TabIndex = 4;
+            this.tbLogin.Tag = "5";
             // 
             // dtFechaNachimiento
             // 
@@ -136,6 +138,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(229, 13);
             this.tbNombre.TabIndex = 1;
+            this.tbNombre.Tag = "5";
             // 
             // label10
             // 
@@ -246,6 +249,7 @@
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(83, 13);
             this.tbCodigo.TabIndex = 0;
+            this.tbCodigo.Tag = "5";
             // 
             // panel3
             // 
@@ -384,6 +388,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.bunifuFormControlBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
@@ -518,6 +523,17 @@
             this.label2.TabIndex = 60;
             this.label2.Text = "El usuario no posee un vendedor definido";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.Location = new System.Drawing.Point(3, 5);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 13);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Modificar Usuario";
+            // 
             // frmModificarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,6 +580,7 @@
             this.Text = "frmModificarUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,5 +621,6 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckVendedor;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label13;
     }
 }

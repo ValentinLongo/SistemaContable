@@ -63,6 +63,7 @@
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(973, 488);
             this.dgvUsuarios.TabIndex = 7;
+            this.dgvUsuarios.TabStop = false;
             this.dgvUsuarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
             // 
             // tbNombreBusqueda
@@ -108,6 +109,7 @@
             this.dtNacimiento.Name = "dtNacimiento";
             this.dtNacimiento.Size = new System.Drawing.Size(96, 20);
             this.dtNacimiento.TabIndex = 14;
+            this.dtNacimiento.TabStop = false;
             // 
             // panel1
             // 
@@ -147,7 +149,7 @@
             this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCodigo.Location = new System.Drawing.Point(82, 39);
+            this.tbCodigo.Location = new System.Drawing.Point(82, 37);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(119, 13);
             this.tbCodigo.TabIndex = 0;

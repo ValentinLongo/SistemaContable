@@ -42,6 +42,7 @@
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -164,6 +165,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel7.Controls.Add(this.label3);
             this.panel7.Controls.Add(this.bunifuFormControlBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
@@ -264,6 +266,17 @@
             this.label4.TabIndex = 61;
             this.label4.Text = "Busqueda";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(3, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Agregar Caja";
+            // 
             // frmAgregarCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +302,7 @@
             this.Text = "frmAgregarCaja";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).EndInit();
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,5 +323,6 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

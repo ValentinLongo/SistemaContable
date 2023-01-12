@@ -28,8 +28,6 @@ namespace SistemaContable
             InitializeComponent();
             Negocio.FGenerales.EventosFormulario(this);
 
-            txtUsuario.Select();
-
             //BUSCO NOMBRE DEL EQUIPO
             string nombreEquipo = Environment.MachineName;
             string localIP = "";
@@ -57,8 +55,6 @@ namespace SistemaContable
             }
 
             //Negocio.FFormatoSistema.SetearFormato(this);
-            ShapeContra.SendToBack();
-            ShapeUsuario.SendToBack();
 
         }
 

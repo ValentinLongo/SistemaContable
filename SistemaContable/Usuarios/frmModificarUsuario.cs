@@ -98,29 +98,34 @@ namespace SistemaContable.Usuarios
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            int seccion = 0;
-            if (cbSeccion.SelectedValue != null)
+            int validado = Negocio.FGenerales.ValidacionVacio(this);
+
+            if (validado == 0)
             {
-                seccion = Convert.ToInt32(cbSeccion.SelectedValue);
+                int seccion = 0;
+                if (cbSeccion.SelectedValue != null)
+                {
+                    seccion = Convert.ToInt32(cbSeccion.SelectedValue);
+                }
+                MUsuario mUsuario = new MUsuario
+                {
+                    usu_codigo = Convert.ToInt32(tbCodigo.Text),
+                    usu_nombre = tbNombre.Text,
+                    usu_login = tbLogin.Text,
+                    usu_direccion = tbDireccion.Text,
+                    usu_telefono = tbTelefono.Text,
+                    usu_fecnac = Convert.ToDateTime(dtFechaNachimiento.Text),
+                    usu_perfil = Convert.ToInt32(cbPerfil.SelectedValue.ToString()),
+                    usu_estado = Convert.ToInt32(cbEstado.SelectedValue.ToString()),
+                    usu_seccion = seccion,
+                    usu_vendedor = SistemaContable.Usuarios.frmSeleccionVendedores.CodigoVendedor
+                };
+
+                Negocio.FUsuarios.ModificarUsuario(mUsuario);
+
+                MessageBox.Show("Usuario modificado correctamente");
+                this.Close();
             }
-            MUsuario mUsuario = new MUsuario
-            {
-                usu_codigo = Convert.ToInt32(tbCodigo.Text),
-                usu_nombre = tbNombre.Text,
-                usu_login = tbLogin.Text,
-                usu_direccion = tbDireccion.Text,
-                usu_telefono = tbTelefono.Text,
-                usu_fecnac = Convert.ToDateTime(dtFechaNachimiento.Text),
-                usu_perfil = Convert.ToInt32(cbPerfil.SelectedValue.ToString()),
-                usu_estado = Convert.ToInt32(cbEstado.SelectedValue.ToString()),
-                usu_seccion = seccion,
-                usu_vendedor = SistemaContable.Usuarios.frmSeleccionVendedores.CodigoVendedor
-            };
-
-            Negocio.FUsuarios.ModificarUsuario(mUsuario);
-
-            MessageBox.Show("Usuario modificado correctamente");
-            this.Close();
         }
 
         //BARRA DE CONTROL

@@ -15,12 +15,15 @@ namespace SistemaContable
 {
     public partial class frmInicio : Form
     {
+        frmUsuarios usuarios = new frmUsuarios();
+        frmPlanDeCuentas planDeCuentas = new frmPlanDeCuentas();
+
         public frmInicio()
         {
             InitializeComponent();
             Negocio.FGenerales.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
-            
+
             this.WindowState = FormWindowState.Maximized;
         }
 
@@ -35,15 +38,15 @@ namespace SistemaContable
 
             }
         }
-        frmUsuarios usuarios = new frmUsuarios();
-        frmPlanDeCuentas planDeCuentas = new frmPlanDeCuentas();
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            //frmUsuarios usuarios = new frmUsuarios();
             Negocio.FGenerales.ManejarFormularios(usuarios, PanelPrincipal);
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            //frmPlanDeCuentas planDeCuentas = new frmPlanDeCuentas();
             Negocio.FGenerales.ManejarFormularios(planDeCuentas, PanelPrincipal);
         }
         private void frmInicio_Load(object sender, EventArgs e)

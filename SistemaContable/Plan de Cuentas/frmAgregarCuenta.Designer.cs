@@ -45,6 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbCodigo = new System.Windows.Forms.MaskedTextBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckAjuste = new Bunifu.UI.WinForms.BunifuCheckBox();
@@ -132,6 +133,7 @@
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(252, 13);
             this.tbDescripcion.TabIndex = 2;
+            this.tbDescripcion.Tag = "5";
             // 
             // tbCuenta
             // 
@@ -142,6 +144,7 @@
             this.tbCuenta.Name = "tbCuenta";
             this.tbCuenta.Size = new System.Drawing.Size(252, 13);
             this.tbCuenta.TabIndex = 1;
+            this.tbCuenta.Tag = "5";
             // 
             // label10
             // 
@@ -218,10 +221,12 @@
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(252, 13);
             this.tbCodigo.TabIndex = 0;
+            this.tbCodigo.Tag = "5";
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel7.Controls.Add(this.label1);
             this.panel7.Controls.Add(this.bunifuFormControlBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
@@ -230,6 +235,17 @@
             this.panel7.TabIndex = 83;
             this.panel7.Tag = "1";
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Agregar Cuenta";
             // 
             // bunifuFormControlBox1
             // 
@@ -386,6 +402,7 @@
             this.Text = "frmAgregarCuenta";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,5 +429,6 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckAjuste;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -59,22 +59,27 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            try
+            int validado = Negocio.FGenerales.ValidacionVacio(this);
+
+            if (validado == 0)
             {
-                MPlanDeCuentas mPlanDeCuentas = new MPlanDeCuentas()
+                try
                 {
-                    pcu_codigo = tbCodigo.Text,
-                    pcu_descri = tbDescripcion.Text,
-                    pcu_estado = Convert.ToInt32(cbEstado.SelectedIndex + 1),
-                    pcu_rubrocont = Convert.ToInt32(cbRubro.SelectedValue)
-                };
-                Negocio.FPlanDeCuentas.modificarPlanDeCuentas(mPlanDeCuentas);
-                MessageBox.Show("Cuenta modificada");
-                this.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Ocurrio un error");
+                    MPlanDeCuentas mPlanDeCuentas = new MPlanDeCuentas()
+                    {
+                        pcu_codigo = tbCodigo.Text,
+                        pcu_descri = tbDescripcion.Text,
+                        pcu_estado = Convert.ToInt32(cbEstado.SelectedIndex + 1),
+                        pcu_rubrocont = Convert.ToInt32(cbRubro.SelectedValue)
+                    };
+                    Negocio.FPlanDeCuentas.modificarPlanDeCuentas(mPlanDeCuentas);
+                    MessageBox.Show("Cuenta modificada");
+                    this.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Ocurrio un error");
+                }
             }
         }
 

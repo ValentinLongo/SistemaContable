@@ -75,7 +75,9 @@ namespace SistemaContable.Usuarios
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (tbNombre.Text != "" && tbLogin.Text != "")
+            int validado = Negocio.FGenerales.ValidacionVacio(this);
+
+            if (validado == 0)
             {
                 MUsuario mUsuario = new MUsuario
                 {
@@ -93,10 +95,6 @@ namespace SistemaContable.Usuarios
 
                 MessageBox.Show("Usuario agregado correctamente");
                 this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Rellenar los datos necesarios");
             }
         }
 

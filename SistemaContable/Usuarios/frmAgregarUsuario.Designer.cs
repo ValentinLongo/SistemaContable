@@ -62,6 +62,7 @@
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckVendedor = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -106,9 +107,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(85, 88);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 16);
+            this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Nombre*:";
+            this.label4.Text = "Nombre:";
             // 
             // label5
             // 
@@ -150,9 +151,9 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(99, 224);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 16);
+            this.label8.Size = new System.Drawing.Size(47, 16);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Login*:";
+            this.label8.Text = "Login:";
             // 
             // label9
             // 
@@ -161,9 +162,9 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(101, 253);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 16);
+            this.label9.Size = new System.Drawing.Size(45, 16);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Perfil*:";
+            this.label9.Text = "Perfil:";
             // 
             // label10
             // 
@@ -172,9 +173,9 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label10.Location = new System.Drawing.Point(93, 286);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 16);
+            this.label10.Size = new System.Drawing.Size(53, 16);
             this.label10.TabIndex = 9;
-            this.label10.Text = "Estado*:";
+            this.label10.Text = "Estado:";
             // 
             // tbNombre
             // 
@@ -185,6 +186,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(252, 13);
             this.tbNombre.TabIndex = 0;
+            this.tbNombre.Tag = "5";
             // 
             // tbDireccion
             // 
@@ -223,6 +225,7 @@
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(252, 13);
             this.tbLogin.TabIndex = 3;
+            this.tbLogin.Tag = "5";
             // 
             // cbPerfil
             // 
@@ -304,9 +307,9 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label12.Location = new System.Drawing.Point(84, 319);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 16);
+            this.label12.Size = new System.Drawing.Size(62, 16);
             this.label12.TabIndex = 45;
-            this.label12.Text = "Sección*:";
+            this.label12.Text = "Sección:";
             // 
             // panel5
             // 
@@ -373,6 +376,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.bunifuFormControlBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
@@ -507,6 +511,17 @@
             this.CheckVendedor.ThreeState = false;
             this.CheckVendedor.ToolTipText = null;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.Location = new System.Drawing.Point(5, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 13);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Agregar Usuario";
+            // 
             // frmAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,6 +567,7 @@
             this.Text = "Agregar Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -592,5 +608,6 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckVendedor;
+        private System.Windows.Forms.Label label14;
     }
 }

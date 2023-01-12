@@ -148,7 +148,7 @@
             this.tbDescipcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.tbDescipcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescipcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescipcion.Location = new System.Drawing.Point(115, 43);
+            this.tbDescipcion.Location = new System.Drawing.Point(115, 40);
             this.tbDescipcion.Name = "tbDescipcion";
             this.tbDescipcion.Size = new System.Drawing.Size(212, 13);
             this.tbDescipcion.TabIndex = 0;
@@ -159,7 +159,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(30, 41);
+            this.label1.Location = new System.Drawing.Point(21, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 16);
             this.label1.TabIndex = 44;
@@ -179,7 +179,7 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::SistemaContable.Properties.Resources.lupa;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(814, 33);
+            this.btnBuscar.Location = new System.Drawing.Point(819, 32);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(144, 31);
             this.btnBuscar.TabIndex = 1;
@@ -221,16 +221,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(1129, 568);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.tbDescipcion);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.tbDescipcion);
             this.Controls.Add(this.btnImprimir);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvCuentas);
             this.Controls.Add(this.ShapeBusqueda);

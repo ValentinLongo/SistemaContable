@@ -91,5 +91,26 @@ namespace Negocio
             }
         }
 
+        public static int ValidacionVacio(Form formulario) 
+        {
+            bool error = false;
+
+            foreach (Control Ctrl in formulario.Controls)
+            {
+                if (Ctrl.Tag == "5")
+                {
+                    if (Ctrl.Text == "")
+                    {
+                        error = true;
+                    }
+                }              
+            }
+            if (error) 
+            {
+                MessageBox.Show("Atención: Falta completar campos.");
+                return 1;
+            }
+            return 0;
+        }
     }
 }

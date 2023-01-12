@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
@@ -85,6 +86,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.bunifuFormControlBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -93,6 +95,17 @@
             this.panel1.TabIndex = 12;
             this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(4, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "LOGIN";
             // 
             // bunifuFormControlBox1
             // 
@@ -343,7 +356,7 @@
             this.panel6.Location = new System.Drawing.Point(0, 170);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(366, 311);
-            this.panel6.TabIndex = 29;
+            this.panel6.TabIndex = 0;
             this.panel6.Tag = "2";
             // 
             // ShapeContra
@@ -393,6 +406,7 @@
             this.Text = "Login";
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).EndInit();
@@ -427,6 +441,7 @@
         private System.Windows.Forms.Panel panel6;
         private Bunifu.UI.WinForms.BunifuShapes ShapeUsuario;
         private Bunifu.UI.WinForms.BunifuShapes ShapeContra;
+        private System.Windows.Forms.Label label4;
     }
 }
 

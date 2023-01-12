@@ -106,10 +106,12 @@
             this.MenuAyuda = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.soporteInteractivoDeContableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.PanelMenu = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -137,6 +139,7 @@
             this.MenuAyuda.SuspendLayout();
             this.panel5.SuspendLayout();
             this.PanelMenu.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaser)).BeginInit();
             this.PanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -641,10 +644,17 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.bunifuFormControlBox1);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             this.panel5.Tag = "1";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Name = "label1";
             // 
             // bunifuFormControlBox1
             // 
@@ -703,6 +713,7 @@
             this.bunifuFormControlBox1.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
             this.bunifuFormControlBox1.Name = "bunifuFormControlBox1";
             this.bunifuFormControlBox1.ShowDesignBorders = false;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // PanelMenu
             // 
@@ -748,9 +759,16 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel4.Controls.Add(this.label4);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             this.panel4.Tag = "1";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Name = "label4";
             // 
             // lblFecha
             // 
@@ -802,6 +820,7 @@
             this.btnAbrir.ForeColor = System.Drawing.Color.White;
             this.btnAbrir.Image = global::SistemaContable.Properties.Resources.mas;
             this.btnAbrir.Name = "btnAbrir";
+            this.btnAbrir.TabStop = false;
             this.btnAbrir.TextColor = System.Drawing.Color.White;
             this.btnAbrir.UseVisualStyleBackColor = false;
             this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
@@ -819,6 +838,7 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Image = global::SistemaContable.Properties.Resources.menos;
             this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.TabStop = false;
             this.btnCerrar.TextColor = System.Drawing.Color.White;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -842,6 +862,7 @@
             this.btnAyuda.ForeColor = System.Drawing.Color.White;
             this.btnAyuda.Image = global::SistemaContable.Properties.Resources.icons8_ayuda30;
             this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.TabStop = false;
             this.btnAyuda.TextColor = System.Drawing.Color.White;
             this.btnAyuda.UseVisualStyleBackColor = false;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
@@ -859,6 +880,7 @@
             this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
             this.btnMantenimiento.Image = global::SistemaContable.Properties.Resources.icons8_llave_30;
             this.btnMantenimiento.Name = "btnMantenimiento";
+            this.btnMantenimiento.TabStop = false;
             this.btnMantenimiento.TextColor = System.Drawing.Color.White;
             this.btnMantenimiento.UseVisualStyleBackColor = false;
             this.btnMantenimiento.Click += new System.EventHandler(this.btnMantenimiento_Click);
@@ -876,6 +898,7 @@
             this.btnContabilidad.ForeColor = System.Drawing.Color.White;
             this.btnContabilidad.Image = global::SistemaContable.Properties.Resources.icons8_calculadora_30;
             this.btnContabilidad.Name = "btnContabilidad";
+            this.btnContabilidad.TabStop = false;
             this.btnContabilidad.TextColor = System.Drawing.Color.White;
             this.btnContabilidad.UseVisualStyleBackColor = false;
             this.btnContabilidad.Click += new System.EventHandler(this.btnContabilidad_Click);
@@ -893,6 +916,7 @@
             this.btnVer.ForeColor = System.Drawing.Color.White;
             this.btnVer.Image = global::SistemaContable.Properties.Resources.lupa;
             this.btnVer.Name = "btnVer";
+            this.btnVer.TabStop = false;
             this.btnVer.TextColor = System.Drawing.Color.White;
             this.btnVer.UseVisualStyleBackColor = false;
             this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
@@ -910,6 +934,7 @@
             this.btnArchivos.ForeColor = System.Drawing.Color.White;
             this.btnArchivos.Image = global::SistemaContable.Properties.Resources.icons8_carpeta_30;
             this.btnArchivos.Name = "btnArchivos";
+            this.btnArchivos.TabStop = false;
             this.btnArchivos.TextColor = System.Drawing.Color.White;
             this.btnArchivos.UseVisualStyleBackColor = false;
             this.btnArchivos.Click += new System.EventHandler(this.btnArchivos_Click);
@@ -925,7 +950,6 @@
             this.PanelPrincipal.Controls.Add(this.panel7);
             this.PanelPrincipal.Controls.Add(this.panel6);
             this.PanelPrincipal.Controls.Add(this.pbLogo);
-            this.PanelPrincipal.Controls.Add(this.toolStrip1);
             resources.ApplyResources(this.PanelPrincipal, "PanelPrincipal");
             this.PanelPrincipal.Name = "PanelPrincipal";
             this.PanelPrincipal.Tag = "2";
@@ -954,6 +978,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.PanelPrincipal);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.PanelMenu);
@@ -969,7 +994,10 @@
             this.MenuMantenimiento.ResumeLayout(false);
             this.MenuAyuda.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.PanelMenu.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaser)).EndInit();
             this.PanelPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
@@ -1077,5 +1105,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }

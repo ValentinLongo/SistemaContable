@@ -39,6 +39,7 @@
             this.btnEliminar = new RJCodeAdvance.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
@@ -144,6 +145,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.bunifuFormControlBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
@@ -215,6 +217,17 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(3, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Definir Cajas";
+            // 
             // frmDefinirCajas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,6 +247,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -250,5 +264,6 @@
         private RJCodeAdvance.RJControls.RJButton btnEliminar;
         private System.Windows.Forms.Panel panel7;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
