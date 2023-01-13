@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -28,21 +29,22 @@ namespace Negocio
             return UltimoID;
         }
 
-        public static void AbrirFormulario(Form Formulario, Panel PanelPrincipal)
+        public static void AbrirFormulario(Form Formulario, Form FormPadre, PictureBox logo)
         {
+            Formulario.MdiParent = FormPadre;
             Formulario.TopLevel = false;
-            PanelPrincipal.Controls.Add(Formulario);
             Formulario.Dock = DockStyle.Fill;
+            logo.SendToBack();
             Formulario.BringToFront();
             Formulario.FormBorderStyle = FormBorderStyle.None;
             Formulario.Show();
         }
 
-        public static void ManejarFormularios(Form Formulario, Panel PanelPrincipal)
+        public static void ManejarFormularios(Form Formulario, Form FormPadre, PictureBox logo)
         {
             if (Formulario.ActiveControl == null)
             {
-                AbrirFormulario(Formulario, PanelPrincipal);
+                AbrirFormulario(Formulario, FormPadre, logo);
             }
             else
             {
@@ -52,9 +54,7 @@ namespace Negocio
 
         public static void agregarEventoKeyDown(TextBox txt, Form formulario)
         {
-
             txt.KeyDown += TextBox1_KeyDown;         
-
             void TextBox1_KeyDown(object sender, KeyEventArgs e)
             {
                 if (e.KeyCode == Keys.Enter)
@@ -67,27 +67,22 @@ namespace Negocio
 
         public static void EventosFormulario(Form formulario)
         {
-
             foreach (Control Ctrl in formulario.Controls)
             {
                 if (Ctrl is Panel)
                 {
                     foreach (Control Ctrl1 in Ctrl.Controls)
                     {
-
                         if (Ctrl1 is TextBox)
                         {
                             agregarEventoKeyDown(Ctrl1 as TextBox, formulario);
                         }
-
                     }
                 }
-
                 if (Ctrl is TextBox)
                 {
                     agregarEventoKeyDown(Ctrl as TextBox, formulario);
                 }
-
             }
         }
 

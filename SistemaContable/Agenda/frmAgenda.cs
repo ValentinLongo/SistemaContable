@@ -15,8 +15,6 @@ namespace SistemaContable.Agenda
         public frmAgenda()
         {
             InitializeComponent();
-<<<<<<< HEAD
-=======
             cargarDatos();
         }
 
@@ -61,7 +59,6 @@ namespace SistemaContable.Agenda
             DataSet ds = new DataSet();
             ds = Negocio.FAgenda.listaAgenda();
             dataAgenda.DataSource = ds.Tables[0];
->>>>>>> franco
         }
     }
 }

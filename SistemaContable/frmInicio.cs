@@ -20,7 +20,9 @@ namespace SistemaContable
         public frmInicio()
         {
             InitializeComponent();
+
             Negocio.FGenerales.EventosFormulario(this);
+            Negocio.FFormatoSistema.FondoMDI(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
             
             this.WindowState = FormWindowState.Maximized;
@@ -42,12 +44,12 @@ namespace SistemaContable
         frmAgenda agenda = new frmAgenda();
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(usuarios, PanelPrincipal);
+            Negocio.FGenerales.ManejarFormularios(usuarios,this, pbLogo);
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(planDeCuentas, PanelPrincipal);
+            Negocio.FGenerales.ManejarFormularios(planDeCuentas,this,pbLogo);
         }
         private void frmInicio_Load(object sender, EventArgs e)
         {
@@ -87,14 +89,14 @@ namespace SistemaContable
         {
             if (PanelMenu.Width == 212)
             {
-                PanelMenu.Width = 20;
-                btnArchivos.Visible = false;
-                btnVer.Visible = false;
-                btnContabilidad.Visible = false;
-                btnMantenimiento.Visible = false;
-                btnAyuda.Visible = false;
-                pbMaser.Visible = false;
-                btnAbrir.Visible = true;
+                //PanelMenu.Width = 20;
+                //btnArchivos.Visible = false;
+                //btnVer.Visible = false;
+                //btnContabilidad.Visible = false;
+                //btnMantenimiento.Visible = false;
+                //btnAyuda.Visible = false;
+                //pbMaser.Visible = false;
+                //btnAbrir.Visible = true;
                 //pbLogo.Location = new Point(350, 300);
 
             }
@@ -104,14 +106,14 @@ namespace SistemaContable
         {
             if (PanelMenu.Width != 212)
             {
-                PanelMenu.Width = 212;
-                btnArchivos.Visible = true;
-                btnVer.Visible = true;
-                btnContabilidad.Visible = true;
-                btnMantenimiento.Visible = true;
-                btnAyuda.Visible = true;
-                pbMaser.Visible = true;
-                btnAbrir.Visible = false;
+                //PanelMenu.Width = 212;
+                //btnArchivos.Visible = true;
+                //btnVer.Visible = true;
+                //btnContabilidad.Visible = true;
+                //btnMantenimiento.Visible = true;
+                //btnAyuda.Visible = true;
+                //pbMaser.Visible = true;
+                //btnAbrir.Visible = false;
                 //pbLogo.Location = new Point(400, 300);
             }
         }
@@ -124,8 +126,7 @@ namespace SistemaContable
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(agenda, PanelPrincipal);
-
+            Negocio.FGenerales.ManejarFormularios(agenda, this, pbLogo);
         }
     }
 }

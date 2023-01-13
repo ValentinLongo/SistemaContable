@@ -55,6 +55,7 @@ namespace Negocio
 
         //RGBback
         public static string RGBbackFormulario;
+        public static string RGBbackFormulariomdi;
         public static string RGBbackPanel1;
         public static string RGBbackPanel2;
         public static string RGBbackPanel3;
@@ -77,8 +78,6 @@ namespace Negocio
         public static int FuentesizeLabel;
         public static int FuentesizeButtom;
         public static int FuentesizeTextbox;
-
-        
 
         public static void SetearFormato(Form Formulario)
         {
@@ -243,6 +242,29 @@ namespace Negocio
                 }
             }
 
+        }
+        public static void FondoMDI(Form Formulario)
+        {
+            BuscarFormato();
+            foreach (MFormatoSistema MFormato in lista)
+            {
+                if (MFormato.fmt_control == "formulariomdi")
+                {
+                    RGBbackFormulariomdi = MFormato.fmt_rgbBack.ToString();
+                }
+            }
+            MdiClient oMDI;
+            foreach (Control ctl in Formulario.Controls)
+            {
+                try
+                {
+                    oMDI = (MdiClient)ctl;
+                    oMDI.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
+                }
+                catch (InvalidCastException exc)
+                {
+                }
+            }
         }
     }
 }

@@ -52,6 +52,11 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.ShapeContra = new Bunifu.UI.WinForms.BunifuShapes();
             this.ShapeUsuario = new Bunifu.UI.WinForms.BunifuShapes();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,12 +73,13 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 167);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(366, 3);
+            this.panel2.Size = new System.Drawing.Size(366, 1);
             this.panel2.TabIndex = 10;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.panel5.Controls.Add(this.panel13);
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -99,11 +105,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(4, 5);
+            this.label4.Location = new System.Drawing.Point(3, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 30;
             this.label4.Text = "LOGIN";
             // 
@@ -336,6 +342,10 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel6.Controls.Add(this.panel12);
+            this.panel6.Controls.Add(this.panel11);
+            this.panel6.Controls.Add(this.panel10);
+            this.panel6.Controls.Add(this.panel9);
             this.panel6.Controls.Add(this.txtUsuario);
             this.panel6.Controls.Add(this.txtConstrasenia);
             this.panel6.Controls.Add(this.panel8);
@@ -353,9 +363,9 @@
             this.panel6.Controls.Add(this.ShapeContra);
             this.panel6.Controls.Add(this.ShapeUsuario);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 170);
+            this.panel6.Location = new System.Drawing.Point(0, 168);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(366, 311);
+            this.panel6.Size = new System.Drawing.Size(366, 313);
             this.panel6.TabIndex = 0;
             this.panel6.Tag = "2";
             // 
@@ -388,6 +398,47 @@
             this.ShapeUsuario.Sides = 5;
             this.ShapeUsuario.Size = new System.Drawing.Size(303, 75);
             this.ShapeUsuario.TabIndex = 37;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel9.Location = new System.Drawing.Point(353, 33);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1, 248);
+            this.panel9.TabIndex = 39;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel10.Location = new System.Drawing.Point(12, 33);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1, 248);
+            this.panel10.TabIndex = 40;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel11.Location = new System.Drawing.Point(334, 280);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(20, 1);
+            this.panel11.TabIndex = 41;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel12.Location = new System.Drawing.Point(12, 280);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(20, 1);
+            this.panel12.TabIndex = 42;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 21);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(366, 1);
+            this.panel13.TabIndex = 13;
             // 
             // frmLogin
             // 
@@ -442,6 +493,11 @@
         private Bunifu.UI.WinForms.BunifuShapes ShapeUsuario;
         private Bunifu.UI.WinForms.BunifuShapes ShapeContra;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel13;
     }
 }
 
