@@ -15,7 +15,7 @@ namespace SistemaContable
         public frmCarga()
         {
             InitializeComponent();
-            //Negocio.FGenerales.EventosFormulario(this);
+            //Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
             CircleProgress.Value = 0;
         }

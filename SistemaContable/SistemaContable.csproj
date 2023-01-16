@@ -497,6 +497,24 @@
   <ItemGroup>
     <None Include="Resources\casa.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carpeta_azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carpeta_negra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa_negra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculadora_negra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llave_negra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayuda_negra.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

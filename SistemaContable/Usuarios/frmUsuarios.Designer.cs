@@ -76,6 +76,7 @@
             this.tbNombreBusqueda.Name = "tbNombreBusqueda";
             this.tbNombreBusqueda.Size = new System.Drawing.Size(212, 13);
             this.tbNombreBusqueda.TabIndex = 1;
+            this.tbNombreBusqueda.Tag = "00000";
             // 
             // label1
             // 
@@ -148,11 +149,12 @@
             this.tbCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbCodigo.ForeColor = System.Drawing.Color.White;
             this.tbCodigo.Location = new System.Drawing.Point(82, 37);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(119, 13);
             this.tbCodigo.TabIndex = 0;
+            this.tbCodigo.Tag = "00001";
             // 
             // panel2
             // 

@@ -18,7 +18,7 @@ namespace SistemaContable.Usuarios
         {
             InitializeComponent();
 
-            Negocio.FGenerales.EventosFormulario(this);
+            Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
             llenarDGV();

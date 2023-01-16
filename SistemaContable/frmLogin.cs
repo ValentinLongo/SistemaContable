@@ -26,7 +26,7 @@ namespace SistemaContable
         public frmLogin()
         {
             InitializeComponent();
-            Negocio.FGenerales.EventosFormulario(this);
+            Negocio.FValidacionesEventos.EventosFormulario(this);
 
             //BUSCO NOMBRE DEL EQUIPO
             string nombreEquipo = Environment.MachineName;

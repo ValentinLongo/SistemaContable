@@ -39,10 +39,10 @@
             this.btnBuscar = new RJCodeAdvance.RJControls.RJButton();
             this.btnSeleccionar = new RJCodeAdvance.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,7 @@
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(149, 13);
             this.tbCodigo.TabIndex = 0;
+            this.tbCodigo.Tag = "00000";
             // 
             // tbDescripcion
             // 
@@ -79,6 +80,7 @@
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(149, 13);
             this.tbDescripcion.TabIndex = 1;
+            this.tbDescripcion.Tag = "00000";
             // 
             // label1
             // 
@@ -175,6 +177,17 @@
             this.panel7.Tag = "1";
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(3, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Agregar Caja";
+            // 
             // bunifuFormControlBox1
             // 
             this.bunifuFormControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -265,17 +278,6 @@
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 61;
             this.label4.Text = "Busqueda";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(3, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Agregar Caja";
             // 
             // frmAgregarCaja
             // 

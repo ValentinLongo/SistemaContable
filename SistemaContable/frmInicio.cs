@@ -21,7 +21,7 @@ namespace SistemaContable
         {
             InitializeComponent();
 
-            Negocio.FGenerales.EventosFormulario(this);
+            Negocio.FValidacionesEventos.EventosFormulario(this);
             Negocio.FFormatoSistema.FondoMDI(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
             
@@ -63,26 +63,42 @@ namespace SistemaContable
         private void btnArchivos_Click(object sender, EventArgs e)
         {
             MenuArchivos.Show(btnArchivos, btnArchivos.Width, 0);
+            btnArchivos.Visible = false;           
+            btnArchivos2.Visible = true;
+            btnArchivos2.BringToFront();      
         }
 
         private void btnVer_Click(object sender, EventArgs e)
         {
             MenuVer.Show(btnArchivos, btnArchivos.Width, 0);
+            btnVer.Visible = false;
+            btnVer2.Visible = true;
+            btnVer2.BringToFront();
         }
 
         private void btnContabilidad_Click(object sender, EventArgs e)
         {
             MenuContabilidad.Show(btnArchivos, btnArchivos.Width, 0);
+            btnContabilidad.Visible = false;
+            btnContabilidad2.Visible = true;
+            btnContabilidad2.BringToFront();
+
         }
 
         private void btnMantenimiento_Click(object sender, EventArgs e)
         {
             MenuMantenimiento.Show(btnArchivos, btnArchivos.Width, 0);
+            btnMantenimiento.Visible = false;
+            btnMantenimiento2.Visible = true;
+            btnMantenimiento2.BringToFront();
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             MenuAyuda.Show(btnAyuda, btnAyuda.Width, 0);
+            btnAyuda.Visible = false;
+            btnAyuda2.Visible = true;
+            btnAyuda2.BringToFront();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -127,6 +143,41 @@ namespace SistemaContable
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             Negocio.FGenerales.ManejarFormularios(agenda, this, pbLogo);
+        }
+
+        private void MenuArchivos_Closed(object sender, ToolStripDropDownClosedEventArgs e)
+        {
+            btnArchivos.Visible = true;
+            btnArchivos.BringToFront();
+            btnArchivos2.Visible = false;
+        }
+
+        private void MenuVer_Closed(object sender, ToolStripDropDownClosedEventArgs e)
+        {
+            btnVer.Visible = true;
+            btnVer.BringToFront();
+            btnVer2.Visible = false;
+        }
+
+        private void MenuContabilidad_Closed(object sender, ToolStripDropDownClosedEventArgs e)
+        {
+            btnContabilidad.Visible = true;
+            btnContabilidad.BringToFront();
+            btnContabilidad2.Visible = false;
+        }
+
+        private void MenuMantenimiento_Closed(object sender, ToolStripDropDownClosedEventArgs e)
+        {
+            btnMantenimiento.Visible = true;
+            btnMantenimiento.BringToFront();
+            btnMantenimiento2.Visible = false;
+        }
+
+        private void MenuAyuda_Closed(object sender, ToolStripDropDownClosedEventArgs e)
+        {
+            btnAyuda.Visible = true;
+            btnAyuda.BringToFront();
+            btnAyuda2.Visible = false;
         }
     }
 }

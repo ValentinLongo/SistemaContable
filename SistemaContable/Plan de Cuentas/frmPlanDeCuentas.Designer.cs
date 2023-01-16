@@ -152,6 +152,7 @@
             this.tbDescipcion.Name = "tbDescipcion";
             this.tbDescipcion.Size = new System.Drawing.Size(212, 13);
             this.tbDescipcion.TabIndex = 0;
+            this.tbDescipcion.Tag = "00000";
             this.tbDescipcion.TextChanged += new System.EventHandler(this.tbDescipcion_TextChanged);
             // 
             // label1

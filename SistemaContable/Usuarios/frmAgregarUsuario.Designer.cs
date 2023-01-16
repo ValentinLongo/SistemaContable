@@ -59,10 +59,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckVendedor = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -186,7 +186,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(252, 13);
             this.tbNombre.TabIndex = 0;
-            this.tbNombre.Tag = "5";
+            this.tbNombre.Tag = "10000";
             // 
             // tbDireccion
             // 
@@ -197,6 +197,7 @@
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(252, 13);
             this.tbDireccion.TabIndex = 1;
+            this.tbDireccion.Tag = "00000";
             // 
             // tbTelefono
             // 
@@ -207,6 +208,7 @@
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(252, 13);
             this.tbTelefono.TabIndex = 2;
+            this.tbTelefono.Tag = "00000";
             // 
             // dtFechaNachimiento
             // 
@@ -225,7 +227,7 @@
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(252, 13);
             this.tbLogin.TabIndex = 3;
-            this.tbLogin.Tag = "5";
+            this.tbLogin.Tag = "10000";
             // 
             // cbPerfil
             // 
@@ -328,6 +330,7 @@
             this.tbVendedor.Name = "tbVendedor";
             this.tbVendedor.Size = new System.Drawing.Size(252, 13);
             this.tbVendedor.TabIndex = 4;
+            this.tbVendedor.Tag = "00000";
             // 
             // btnBuscar
             // 
@@ -385,6 +388,17 @@
             this.panel7.TabIndex = 59;
             this.panel7.Tag = "1";
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.Location = new System.Drawing.Point(5, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 13);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Agregar Usuario";
             // 
             // bunifuFormControlBox1
             // 
@@ -510,17 +524,6 @@
             this.CheckVendedor.TabIndex = 61;
             this.CheckVendedor.ThreeState = false;
             this.CheckVendedor.ToolTipText = null;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(5, 5);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(83, 13);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Agregar Usuario";
             // 
             // frmAgregarUsuario
             // 

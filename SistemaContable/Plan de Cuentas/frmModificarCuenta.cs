@@ -17,7 +17,7 @@ namespace SistemaContable.Plan_de_Cuentas
         public frmModificarCuenta()
         {
             InitializeComponent();
-            Negocio.FGenerales.EventosFormulario(this);
+            Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
             CargarDatos();
@@ -59,7 +59,7 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            int validado = Negocio.FGenerales.ValidacionVacio(this);
+            int validado = Negocio.FValidacionesEventos.ValidacionVacio(this);
 
             if (validado == 0)
             {

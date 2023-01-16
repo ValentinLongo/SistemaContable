@@ -60,10 +60,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.CheckVendedor = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -100,7 +100,7 @@
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(231, 13);
             this.tbLogin.TabIndex = 4;
-            this.tbLogin.Tag = "5";
+            this.tbLogin.Tag = "10000";
             // 
             // dtFechaNachimiento
             // 
@@ -118,6 +118,7 @@
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(229, 13);
             this.tbTelefono.TabIndex = 3;
+            this.tbTelefono.Tag = "00000";
             // 
             // tbDireccion
             // 
@@ -128,6 +129,7 @@
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(229, 13);
             this.tbDireccion.TabIndex = 2;
+            this.tbDireccion.Tag = "00000";
             // 
             // tbNombre
             // 
@@ -138,7 +140,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(229, 13);
             this.tbNombre.TabIndex = 1;
-            this.tbNombre.Tag = "5";
+            this.tbNombre.Tag = "10000";
             // 
             // label10
             // 
@@ -249,7 +251,7 @@
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(83, 13);
             this.tbCodigo.TabIndex = 0;
-            this.tbCodigo.Tag = "5";
+            this.tbCodigo.Tag = "10000";
             // 
             // panel3
             // 
@@ -318,6 +320,7 @@
             this.tbVendedor.Name = "tbVendedor";
             this.tbVendedor.Size = new System.Drawing.Size(252, 13);
             this.tbVendedor.TabIndex = 5;
+            this.tbVendedor.Tag = "00000";
             // 
             // btnBuscar
             // 
@@ -397,6 +400,17 @@
             this.panel7.TabIndex = 58;
             this.panel7.Tag = "1";
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.Location = new System.Drawing.Point(3, 5);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 13);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Modificar Usuario";
             // 
             // bunifuFormControlBox1
             // 
@@ -522,17 +536,6 @@
             this.label2.Size = new System.Drawing.Size(203, 13);
             this.label2.TabIndex = 60;
             this.label2.Text = "El usuario no posee un vendedor definido";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(3, 5);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 13);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "Modificar Usuario";
             // 
             // frmModificarUsuario
             // 

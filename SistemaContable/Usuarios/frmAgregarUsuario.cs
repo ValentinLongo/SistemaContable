@@ -17,7 +17,7 @@ namespace SistemaContable.Usuarios
         public frmAgregarUsuario()
         {
             InitializeComponent();
-            Negocio.FGenerales.EventosFormulario(this);
+            Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
             LlenarCB();
@@ -75,7 +75,7 @@ namespace SistemaContable.Usuarios
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            int validado = Negocio.FGenerales.ValidacionVacio(this);
+            int validado = Negocio.FValidacionesEventos.ValidacionVacio(this);
 
             if (validado == 0)
             {

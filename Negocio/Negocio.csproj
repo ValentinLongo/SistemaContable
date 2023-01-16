@@ -230,6 +230,7 @@
     <Compile Include="FLogin.cs" />
     <Compile Include="FPlanDeCuentas.cs" />
     <Compile Include="FUsuarios.cs" />
+    <Compile Include="FValidacionesEventos.cs" />
     <Compile Include="Menu.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -133,7 +133,7 @@
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(252, 13);
             this.tbDescripcion.TabIndex = 2;
-            this.tbDescripcion.Tag = "5";
+            this.tbDescripcion.Tag = "10000";
             // 
             // tbCuenta
             // 
@@ -144,7 +144,7 @@
             this.tbCuenta.Name = "tbCuenta";
             this.tbCuenta.Size = new System.Drawing.Size(252, 13);
             this.tbCuenta.TabIndex = 1;
-            this.tbCuenta.Tag = "5";
+            this.tbCuenta.Tag = "10000";
             // 
             // label10
             // 
@@ -221,7 +221,7 @@
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(252, 13);
             this.tbCodigo.TabIndex = 0;
-            this.tbCodigo.Tag = "5";
+            this.tbCodigo.Tag = "10000";
             // 
             // panel7
             // 
