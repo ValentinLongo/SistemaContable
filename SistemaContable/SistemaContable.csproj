@@ -272,6 +272,24 @@
     <Compile Include="Agenda\frmAgregarAgenda.Designer.cs">
       <DependentUpon>frmAgregarAgenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conceptos Contables\frmConceptosContables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conceptos Contables\frmConceptosContables.Designer.cs">
+      <DependentUpon>frmConceptosContables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\frmConsultaGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmConsultaGeneral.Designer.cs">
+      <DependentUpon>frmConsultaGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\frmSolicitudAutorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmSolicitudAutorizacion.Designer.cs">
+      <DependentUpon>frmSolicitudAutorizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCarga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +307,12 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrizacion Permisos\frmPermisosUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrizacion Permisos\frmPermisosUsuarios.Designer.cs">
+      <DependentUpon>frmPermisosUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Plan de Cuentas\frmAgregarCuenta.cs">
       <SubType>Form</SubType>
@@ -352,6 +376,15 @@
     <EmbeddedResource Include="Agenda\frmAgregarAgenda.resx">
       <DependentUpon>frmAgregarAgenda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Conceptos Contables\frmConceptosContables.resx">
+      <DependentUpon>frmConceptosContables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\frmConsultaGeneral.resx">
+      <DependentUpon>frmConsultaGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\frmSolicitudAutorizacion.resx">
+      <DependentUpon>frmSolicitudAutorizacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCarga.resx">
       <DependentUpon>frmCarga.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosUsuarios.resx">
+      <DependentUpon>frmPermisosUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Plan de Cuentas\frmAgregarCuenta.resx">
       <DependentUpon>frmAgregarCuenta.cs</DependentUpon>
@@ -514,6 +550,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ayuda_negra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\binocular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\binocular2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

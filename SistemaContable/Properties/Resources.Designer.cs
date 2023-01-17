@@ -83,6 +83,26 @@ namespace SistemaContable.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap binocular {
+            get {
+                object obj = ResourceManager.GetObject("binocular", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap binocular2 {
+            get {
+                object obj = ResourceManager.GetObject("binocular2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calculadora_negra {
             get {
                 object obj = ResourceManager.GetObject("calculadora_negra", resourceCulture);

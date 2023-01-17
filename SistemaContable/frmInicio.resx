@@ -176,17 +176,11 @@
   </data>
   <data name="toolStripButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
-        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
-        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
-        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
-        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
-        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
-        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
-        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
-        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
-        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVEhL7ZVBCsMwDAT9kf6noQ/uf5q+wmC3sphLYA89
+        SA40nluUReNEApfFNei9P2qt708g1m+3vhsKzQiRD8X6vlBoyKWA4oKMr/9p7tH4fzcOc6eWAoqDg9KJ
+        y0UmBRQaMimg0JBJAcV5M+bRobTEsaDQ4hm3EyWHkt/HW7R8SK3vHYUWZ2MHuOF0KOcypK21J06HVxoy
+        KaDQzFg4yYyFW/wzpXwB7TSoHSIP/BUAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="toolStripButton3.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -196,7 +190,7 @@
     <value>50, 47</value>
   </data>
   <data name="toolStripButton3.Text" xml:space="preserve">
-    <value>toolStripButton3</value>
+    <value>ConceptosContables</value>
   </data>
   <data name="toolStripButton4.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -245,17 +239,15 @@
   </data>
   <data name="toolStripButton6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
-        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
-        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
-        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
-        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
-        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
-        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
-        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
-        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
-        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGfSURBVEhL7Za9SgNRFIRXwVYro+ADiI21Rco0ikIKLSx8
+        hjRaiW9gqWivnWAl+gBio52lP42gIIKgEPO7id9kx4TExI1FquzAwL1z5py52RT3BgmGB9Vq9aoO8vn8
+        Z6FQeC+Xy09oN2EYnsHdWq22AeexjLmlCWmqySOvetSrGZqlmZqNdumWFlToBwz5YvApISui1tJcjoXj
+        WrBeZ1gKzsIFuAjX4Q4BJ5VK5Z6Q0NYmpKkmj7zuUa9maFbK1vZg9plI7nKiDjBkBuZs10Fz0lzuCduF
+        jKUg4LQPFmODf2D7v/3KstR2moEHC5aS4P5gexLcE7Y3YCkJ7g+2J8E9YXsDloY9uFQqvXKD3PFauOZ+
+        PYcHXHubUBf/lFt+BbOctmeLnkN4oVeIZmlm5I7gliCg8GItFrrWGLrnbV1rtEdvY8Fz6NmxjdNmi8Xi
+        W1QaHJyRdWwEhBE+0yScY52Ga6y3+UXHfLLbbk+eTsgjLz1H6oWryGnNhHr+jDquf9A0QfMSQ/cJ+FCQ
+        oLU01eC47YMBAcv6r0StLSf4A0HwDauCve0mqN2+AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="toolStripButton6.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -265,24 +257,19 @@
     <value>50, 47</value>
   </data>
   <data name="toolStripButton6.Text" xml:space="preserve">
-    <value>toolStripButton6</value>
+    <value>LibroDiario</value>
   </data>
   <data name="toolStripButton7.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="toolStripButton7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
-        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
-        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
-        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
-        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
-        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
-        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
-        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
-        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
-        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVFhH7ZZBDsIgFERZeSe9mEvdVQ+qnoEmgB99adQ2
+        hk9JtYSXNIEJM0zo5pvG3xJC2Djnztbaq6xnQ2w64jk9rWUgNp2+7y/R6L3fImXxuF1gmw4+vfEDYsoU
+        QFKFYamkQA7EtAJlCiCpwrBUUiAHYlqBMgWQVGFYKimQAzErLiAT0Y3lLIhNB18xiE0H3+8mopeRbIc0
+        ehXkr3BUX0Am4g7vYGY7gDzSp+BoOuKJY3kXXwJp2QJTxCD5JQf59sVCNcidR5Zv68aKMeYOnhQ30/gA
+        JlwAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="toolStripButton7.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -684,15 +671,6 @@
   <metadata name="MenuArchivos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
   </metadata>
-  <data name="MenuArchivos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 70</value>
-  </data>
-  <data name="&gt;&gt;MenuArchivos.Name" xml:space="preserve">
-    <value>MenuArchivos</value>
-  </data>
-  <data name="&gt;&gt;MenuArchivos.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJDropdownMenu, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="respaldoDeInformacionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
   </data>
@@ -711,20 +689,20 @@
   <data name="salirToolStripMenuItem.Text" xml:space="preserve">
     <value>Salir</value>
   </data>
+  <data name="MenuArchivos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 92</value>
+  </data>
+  <data name="&gt;&gt;MenuArchivos.Name" xml:space="preserve">
+    <value>MenuArchivos</value>
+  </data>
+  <data name="&gt;&gt;MenuArchivos.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJDropdownMenu, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <metadata name="MenuVer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>273, 17</value>
   </metadata>
   <data name="MenuVer.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="MenuVer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 92</value>
-  </data>
-  <data name="&gt;&gt;MenuVer.Name" xml:space="preserve">
-    <value>MenuVer</value>
-  </data>
-  <data name="&gt;&gt;MenuVer.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJDropdownMenu, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="calculadoraToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 22</value>
@@ -750,35 +728,23 @@
   <data name="calendarioToolStripMenuItem.Text" xml:space="preserve">
     <value>Calendario</value>
   </data>
+  <data name="MenuVer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 92</value>
+  </data>
+  <data name="&gt;&gt;MenuVer.Name" xml:space="preserve">
+    <value>MenuVer</value>
+  </data>
+  <data name="&gt;&gt;MenuVer.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJDropdownMenu, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <metadata name="MenuContabilidad.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>366, 18</value>
   </metadata>
-  <data name="MenuContabilidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 312</value>
-  </data>
-  <data name="&gt;&gt;MenuContabilidad.Name" xml:space="preserve">
-    <value>MenuContabilidad</value>
-  </data>
-  <data name="&gt;&gt;MenuContabilidad.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJDropdownMenu, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="contabilidadToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 22</value>
-  </data>
-  <data name="contabilidadToolStripMenuItem.Text" xml:space="preserve">
-    <value>Contabilidad</value>
-  </data>
   <data name="movimientoDeAsientosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 22</value>
   </data>
   <data name="movimientoDeAsientosToolStripMenuItem.Text" xml:space="preserve">
     <value>Movimiento de Asientos</value>
-  </data>
-  <data name="modelosDeAsientosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 22</value>
-  </data>
-  <data name="modelosDeAsientosToolStripMenuItem.Text" xml:space="preserve">
-    <value>Modelos de Asientos</value>
   </data>
   <data name="actualizaciónToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 22</value>
@@ -792,11 +758,11 @@
   <data name="detalleDeModelosToolStripMenuItem.Text" xml:space="preserve">
     <value>Detalle de Modelos</value>
   </data>
-  <data name="actualizaciónToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="modelosDeAsientosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 22</value>
   </data>
-  <data name="actualizaciónToolStripMenuItem.Text" xml:space="preserve">
-    <value>Actualización</value>
+  <data name="modelosDeAsientosToolStripMenuItem.Text" xml:space="preserve">
+    <value>Modelos de Asientos</value>
   </data>
   <data name="renumeraciónDeAsientosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 22</value>
@@ -846,12 +812,6 @@
   <data name="definiciónDeInformesToolStripMenuItem.Text" xml:space="preserve">
     <value>Balance General</value>
   </data>
-  <data name="auditoriaInternaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 22</value>
-  </data>
-  <data name="auditoriaInternaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Definición de Informes</value>
-  </data>
   <data name="actualizacionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 22</value>
   </data>
@@ -870,35 +830,35 @@
   <data name="inforrmeToolStripMenuItem.Text" xml:space="preserve">
     <value>Inforrme</value>
   </data>
+  <data name="auditoriaInternaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 22</value>
+  </data>
+  <data name="auditoriaInternaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Definición de Informes</value>
+  </data>
   <data name="auditoriaInternaToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 22</value>
   </data>
   <data name="auditoriaInternaToolStripMenuItem1.Text" xml:space="preserve">
     <value>Auditoria Interna</value>
   </data>
+  <data name="MenuContabilidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 268</value>
+  </data>
+  <data name="&gt;&gt;MenuContabilidad.Name" xml:space="preserve">
+    <value>MenuContabilidad</value>
+  </data>
+  <data name="&gt;&gt;MenuContabilidad.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJDropdownMenu, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <metadata name="MenuMantenimiento.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>508, 19</value>
   </metadata>
-  <data name="MenuMantenimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 268</value>
-  </data>
-  <data name="&gt;&gt;MenuMantenimiento.Name" xml:space="preserve">
-    <value>MenuMantenimiento</value>
-  </data>
-  <data name="&gt;&gt;MenuMantenimiento.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJDropdownMenu, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="empresaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 22</value>
   </data>
   <data name="empresaToolStripMenuItem.Text" xml:space="preserve">
     <value>Empresa</value>
-  </data>
-  <data name="usuarioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 22</value>
-  </data>
-  <data name="usuarioToolStripMenuItem.Text" xml:space="preserve">
-    <value>Usuarios</value>
   </data>
   <data name="definicionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 22</value>
@@ -929,6 +889,12 @@
   </data>
   <data name="recalcularToolStripMenuItem.Text" xml:space="preserve">
     <value>Recalcular Permisos</value>
+  </data>
+  <data name="usuarioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 22</value>
+  </data>
+  <data name="usuarioToolStripMenuItem.Text" xml:space="preserve">
+    <value>Usuarios</value>
   </data>
   <data name="ejercicioContableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 22</value>
@@ -964,7 +930,7 @@
     <value>212, 22</value>
   </data>
   <data name="centroDeCosteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Centro de Coste</value>
+    <value>Centro de Costo</value>
   </data>
   <data name="rubricacionDeSubDiariosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 22</value>
@@ -990,9 +956,24 @@
   <data name="configurarImpresorasToolStripMenuItem.Text" xml:space="preserve">
     <value>Configurar Impresoras</value>
   </data>
+  <data name="MenuMantenimiento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 268</value>
+  </data>
+  <data name="&gt;&gt;MenuMantenimiento.Name" xml:space="preserve">
+    <value>MenuMantenimiento</value>
+  </data>
+  <data name="&gt;&gt;MenuMantenimiento.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJDropdownMenu, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <metadata name="MenuAyuda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>665, 16</value>
   </metadata>
+  <data name="soporteInteractivoDeContableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="soporteInteractivoDeContableToolStripMenuItem.Text" xml:space="preserve">
+    <value>Soporte Interactivo de Contable</value>
+  </data>
   <data name="MenuAyuda.Size" type="System.Drawing.Size, System.Drawing">
     <value>242, 26</value>
   </data>
@@ -1002,67 +983,13 @@
   <data name="&gt;&gt;MenuAyuda.Type" xml:space="preserve">
     <value>RJCodeAdvance.RJControls.RJDropdownMenu, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="soporteInteractivoDeContableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 22</value>
-  </data>
-  <data name="soporteInteractivoDeContableToolStripMenuItem.Text" xml:space="preserve">
-    <value>Soporte Interactivo de Contable</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;bunifuFormControlBox1.Name" xml:space="preserve">
-    <value>bunifuFormControlBox1</value>
-  </data>
-  <data name="&gt;&gt;bunifuFormControlBox1.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuFormControlBox, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;bunifuFormControlBox1.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;bunifuFormControlBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 0</value>
-  </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1156, 21</value>
-  </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1184,6 +1111,30 @@
   </data>
   <data name="&gt;&gt;bunifuFormControlBox1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 0</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1156, 21</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <metadata name="HoraFecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>783, 16</value>
@@ -1600,6 +1551,27 @@
   </data>
   <data name="&gt;&gt;bunifuShapes1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 5</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>INICIO</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -2071,39 +2043,6 @@
   </data>
   <data name="&gt;&gt;PanelMenu.ZOrder" xml:space="preserve">
     <value>11</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 5</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 13</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>INICIO</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="pbLogo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -4196,12 +4135,6 @@
   <data name="&gt;&gt;calendarioToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;contabilidadToolStripMenuItem.Name" xml:space="preserve">
-    <value>contabilidadToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;contabilidadToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;movimientoDeAsientosToolStripMenuItem.Name" xml:space="preserve">
     <value>movimientoDeAsientosToolStripMenuItem</value>
   </data>
@@ -4224,12 +4157,6 @@
     <value>detalleDeModelosToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;detalleDeModelosToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;actualizaciónToolStripMenuItem.Name" xml:space="preserve">
-    <value>actualizaciónToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;actualizaciónToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;renumeraciónDeAsientosToolStripMenuItem.Name" xml:space="preserve">

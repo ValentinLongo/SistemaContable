@@ -66,12 +66,10 @@
             this.notasYObservacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuContabilidad = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
-            this.contabilidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimientoDeAsientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelosDeAsientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.detalleDeModelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.renumeraciónDeAsientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.libroDiarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.libroMayorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -202,6 +200,7 @@
             resources.ApplyResources(this.toolStripButton3, "toolStripButton3");
             this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -350,16 +349,22 @@
             // 
             this.respaldoDeInformacionToolStripMenuItem.Name = "respaldoDeInformacionToolStripMenuItem";
             resources.ApplyResources(this.respaldoDeInformacionToolStripMenuItem, "respaldoDeInformacionToolStripMenuItem");
+            this.respaldoDeInformacionToolStripMenuItem.Tag = "1002";
+            this.respaldoDeInformacionToolStripMenuItem.Click += new System.EventHandler(this.respaldoDeInformacionToolStripMenuItem_Click);
             // 
             // restauracionDeInformacionToolStripMenuItem
             // 
             this.restauracionDeInformacionToolStripMenuItem.Name = "restauracionDeInformacionToolStripMenuItem";
             resources.ApplyResources(this.restauracionDeInformacionToolStripMenuItem, "restauracionDeInformacionToolStripMenuItem");
+            this.restauracionDeInformacionToolStripMenuItem.Tag = "1004";
+            this.restauracionDeInformacionToolStripMenuItem.Click += new System.EventHandler(this.restauracionDeInformacionToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             resources.ApplyResources(this.salirToolStripMenuItem, "salirToolStripMenuItem");
+            this.salirToolStripMenuItem.Tag = "1006";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // MenuVer
             // 
@@ -380,30 +385,36 @@
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
             resources.ApplyResources(this.calculadoraToolStripMenuItem, "calculadoraToolStripMenuItem");
+            this.calculadoraToolStripMenuItem.Tag = "2002";
+            this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
             // 
             // comunicacionInternaToolStripMenuItem
             // 
             this.comunicacionInternaToolStripMenuItem.Name = "comunicacionInternaToolStripMenuItem";
             resources.ApplyResources(this.comunicacionInternaToolStripMenuItem, "comunicacionInternaToolStripMenuItem");
+            this.comunicacionInternaToolStripMenuItem.Tag = "2004";
+            this.comunicacionInternaToolStripMenuItem.Click += new System.EventHandler(this.comunicacionInternaToolStripMenuItem_Click);
             // 
             // notasYObservacionesToolStripMenuItem
             // 
             this.notasYObservacionesToolStripMenuItem.Name = "notasYObservacionesToolStripMenuItem";
             resources.ApplyResources(this.notasYObservacionesToolStripMenuItem, "notasYObservacionesToolStripMenuItem");
+            this.notasYObservacionesToolStripMenuItem.Tag = "2006";
+            this.notasYObservacionesToolStripMenuItem.Click += new System.EventHandler(this.notasYObservacionesToolStripMenuItem_Click);
             // 
             // calendarioToolStripMenuItem
             // 
             this.calendarioToolStripMenuItem.Name = "calendarioToolStripMenuItem";
             resources.ApplyResources(this.calendarioToolStripMenuItem, "calendarioToolStripMenuItem");
+            this.calendarioToolStripMenuItem.Tag = "2008";
+            this.calendarioToolStripMenuItem.Click += new System.EventHandler(this.calendarioToolStripMenuItem_Click);
             // 
             // MenuContabilidad
             // 
             this.MenuContabilidad.IsMainMenu = false;
             this.MenuContabilidad.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contabilidadToolStripMenuItem,
             this.movimientoDeAsientosToolStripMenuItem,
             this.modelosDeAsientosToolStripMenuItem,
-            this.actualizaciónToolStripMenuItem,
             this.renumeraciónDeAsientosToolStripMenuItem,
             this.libroDiarioToolStripMenuItem,
             this.libroMayorToolStripMenuItem,
@@ -421,15 +432,12 @@
             resources.ApplyResources(this.MenuContabilidad, "MenuContabilidad");
             this.MenuContabilidad.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.MenuContabilidad_Closed);
             // 
-            // contabilidadToolStripMenuItem
-            // 
-            this.contabilidadToolStripMenuItem.Name = "contabilidadToolStripMenuItem";
-            resources.ApplyResources(this.contabilidadToolStripMenuItem, "contabilidadToolStripMenuItem");
-            // 
             // movimientoDeAsientosToolStripMenuItem
             // 
             this.movimientoDeAsientosToolStripMenuItem.Name = "movimientoDeAsientosToolStripMenuItem";
             resources.ApplyResources(this.movimientoDeAsientosToolStripMenuItem, "movimientoDeAsientosToolStripMenuItem");
+            this.movimientoDeAsientosToolStripMenuItem.Tag = "3002";
+            this.movimientoDeAsientosToolStripMenuItem.Click += new System.EventHandler(this.movimientoDeAsientosToolStripMenuItem_Click);
             // 
             // modelosDeAsientosToolStripMenuItem
             // 
@@ -438,61 +446,77 @@
             this.detalleDeModelosToolStripMenuItem});
             this.modelosDeAsientosToolStripMenuItem.Name = "modelosDeAsientosToolStripMenuItem";
             resources.ApplyResources(this.modelosDeAsientosToolStripMenuItem, "modelosDeAsientosToolStripMenuItem");
+            this.modelosDeAsientosToolStripMenuItem.Tag = "3004";
             // 
             // actualizaciónToolStripMenuItem1
             // 
             this.actualizaciónToolStripMenuItem1.Name = "actualizaciónToolStripMenuItem1";
             resources.ApplyResources(this.actualizaciónToolStripMenuItem1, "actualizaciónToolStripMenuItem1");
+            this.actualizaciónToolStripMenuItem1.Tag = "300402";
+            this.actualizaciónToolStripMenuItem1.Click += new System.EventHandler(this.actualizaciónToolStripMenuItem1_Click);
             // 
             // detalleDeModelosToolStripMenuItem
             // 
             this.detalleDeModelosToolStripMenuItem.Name = "detalleDeModelosToolStripMenuItem";
             resources.ApplyResources(this.detalleDeModelosToolStripMenuItem, "detalleDeModelosToolStripMenuItem");
-            // 
-            // actualizaciónToolStripMenuItem
-            // 
-            this.actualizaciónToolStripMenuItem.Name = "actualizaciónToolStripMenuItem";
-            resources.ApplyResources(this.actualizaciónToolStripMenuItem, "actualizaciónToolStripMenuItem");
+            this.detalleDeModelosToolStripMenuItem.Tag = "300404";
+            this.detalleDeModelosToolStripMenuItem.Click += new System.EventHandler(this.detalleDeModelosToolStripMenuItem_Click);
             // 
             // renumeraciónDeAsientosToolStripMenuItem
             // 
             this.renumeraciónDeAsientosToolStripMenuItem.Name = "renumeraciónDeAsientosToolStripMenuItem";
             resources.ApplyResources(this.renumeraciónDeAsientosToolStripMenuItem, "renumeraciónDeAsientosToolStripMenuItem");
+            this.renumeraciónDeAsientosToolStripMenuItem.Tag = "3006";
+            this.renumeraciónDeAsientosToolStripMenuItem.Click += new System.EventHandler(this.renumeraciónDeAsientosToolStripMenuItem_Click);
             // 
             // libroDiarioToolStripMenuItem
             // 
             this.libroDiarioToolStripMenuItem.Name = "libroDiarioToolStripMenuItem";
             resources.ApplyResources(this.libroDiarioToolStripMenuItem, "libroDiarioToolStripMenuItem");
+            this.libroDiarioToolStripMenuItem.Tag = "3008";
+            this.libroDiarioToolStripMenuItem.Click += new System.EventHandler(this.libroDiarioToolStripMenuItem_Click);
             // 
             // libroMayorToolStripMenuItem
             // 
             this.libroMayorToolStripMenuItem.Name = "libroMayorToolStripMenuItem";
             resources.ApplyResources(this.libroMayorToolStripMenuItem, "libroMayorToolStripMenuItem");
+            this.libroMayorToolStripMenuItem.Tag = "3010";
+            this.libroMayorToolStripMenuItem.Click += new System.EventHandler(this.libroMayorToolStripMenuItem_Click);
             // 
             // libroMayorGrupoToolStripMenuItem
             // 
             this.libroMayorGrupoToolStripMenuItem.Name = "libroMayorGrupoToolStripMenuItem";
             resources.ApplyResources(this.libroMayorGrupoToolStripMenuItem, "libroMayorGrupoToolStripMenuItem");
+            this.libroMayorGrupoToolStripMenuItem.Tag = "3012";
+            this.libroMayorGrupoToolStripMenuItem.Click += new System.EventHandler(this.libroMayorGrupoToolStripMenuItem_Click);
             // 
             // libroMayorInformeToolStripMenuItem
             // 
             this.libroMayorInformeToolStripMenuItem.Name = "libroMayorInformeToolStripMenuItem";
             resources.ApplyResources(this.libroMayorInformeToolStripMenuItem, "libroMayorInformeToolStripMenuItem");
+            this.libroMayorInformeToolStripMenuItem.Tag = "3013";
+            this.libroMayorInformeToolStripMenuItem.Click += new System.EventHandler(this.libroMayorInformeToolStripMenuItem_Click);
             // 
             // balanceDeSumasYSaldosToolStripMenuItem
             // 
             this.balanceDeSumasYSaldosToolStripMenuItem.Name = "balanceDeSumasYSaldosToolStripMenuItem";
             resources.ApplyResources(this.balanceDeSumasYSaldosToolStripMenuItem, "balanceDeSumasYSaldosToolStripMenuItem");
+            this.balanceDeSumasYSaldosToolStripMenuItem.Tag = "3019";
+            this.balanceDeSumasYSaldosToolStripMenuItem.Click += new System.EventHandler(this.balanceDeSumasYSaldosToolStripMenuItem_Click);
             // 
             // balanceGeneralToolStripMenuItem
             // 
             this.balanceGeneralToolStripMenuItem.Name = "balanceGeneralToolStripMenuItem";
             resources.ApplyResources(this.balanceGeneralToolStripMenuItem, "balanceGeneralToolStripMenuItem");
+            this.balanceGeneralToolStripMenuItem.Tag = "3014";
+            this.balanceGeneralToolStripMenuItem.Click += new System.EventHandler(this.balanceGeneralToolStripMenuItem_Click);
             // 
             // definiciónDeInformesToolStripMenuItem
             // 
             this.definiciónDeInformesToolStripMenuItem.Name = "definiciónDeInformesToolStripMenuItem";
             resources.ApplyResources(this.definiciónDeInformesToolStripMenuItem, "definiciónDeInformesToolStripMenuItem");
+            this.definiciónDeInformesToolStripMenuItem.Tag = "3016";
+            this.definiciónDeInformesToolStripMenuItem.Click += new System.EventHandler(this.definiciónDeInformesToolStripMenuItem_Click);
             // 
             // auditoriaInternaToolStripMenuItem
             // 
@@ -502,26 +526,35 @@
             this.inforrmeToolStripMenuItem});
             this.auditoriaInternaToolStripMenuItem.Name = "auditoriaInternaToolStripMenuItem";
             resources.ApplyResources(this.auditoriaInternaToolStripMenuItem, "auditoriaInternaToolStripMenuItem");
+            this.auditoriaInternaToolStripMenuItem.Tag = "3017";
             // 
             // actualizacionToolStripMenuItem
             // 
             this.actualizacionToolStripMenuItem.Name = "actualizacionToolStripMenuItem";
             resources.ApplyResources(this.actualizacionToolStripMenuItem, "actualizacionToolStripMenuItem");
+            this.actualizacionToolStripMenuItem.Tag = "301702";
+            this.actualizacionToolStripMenuItem.Click += new System.EventHandler(this.actualizacionToolStripMenuItem_Click);
             // 
             // detalleInformeToolStripMenuItem
             // 
             this.detalleInformeToolStripMenuItem.Name = "detalleInformeToolStripMenuItem";
             resources.ApplyResources(this.detalleInformeToolStripMenuItem, "detalleInformeToolStripMenuItem");
+            this.detalleInformeToolStripMenuItem.Tag = "301704";
+            this.detalleInformeToolStripMenuItem.Click += new System.EventHandler(this.detalleInformeToolStripMenuItem_Click);
             // 
             // inforrmeToolStripMenuItem
             // 
             this.inforrmeToolStripMenuItem.Name = "inforrmeToolStripMenuItem";
             resources.ApplyResources(this.inforrmeToolStripMenuItem, "inforrmeToolStripMenuItem");
+            this.inforrmeToolStripMenuItem.Tag = "301708";
+            this.inforrmeToolStripMenuItem.Click += new System.EventHandler(this.inforrmeToolStripMenuItem_Click);
             // 
             // auditoriaInternaToolStripMenuItem1
             // 
             this.auditoriaInternaToolStripMenuItem1.Name = "auditoriaInternaToolStripMenuItem1";
             resources.ApplyResources(this.auditoriaInternaToolStripMenuItem1, "auditoriaInternaToolStripMenuItem1");
+            this.auditoriaInternaToolStripMenuItem1.Tag = "3018";
+            this.auditoriaInternaToolStripMenuItem1.Click += new System.EventHandler(this.auditoriaInternaToolStripMenuItem1_Click);
             // 
             // MenuMantenimiento
             // 
@@ -550,6 +583,8 @@
             // 
             this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
             resources.ApplyResources(this.empresaToolStripMenuItem, "empresaToolStripMenuItem");
+            this.empresaToolStripMenuItem.Tag = "4002";
+            this.empresaToolStripMenuItem.Click += new System.EventHandler(this.empresaToolStripMenuItem_Click);
             // 
             // usuarioToolStripMenuItem
             // 
@@ -561,16 +596,21 @@
             this.recalcularToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
             resources.ApplyResources(this.usuarioToolStripMenuItem, "usuarioToolStripMenuItem");
+            this.usuarioToolStripMenuItem.Tag = "4004";
             // 
             // definicionToolStripMenuItem
             // 
             this.definicionToolStripMenuItem.Name = "definicionToolStripMenuItem";
             resources.ApplyResources(this.definicionToolStripMenuItem, "definicionToolStripMenuItem");
+            this.definicionToolStripMenuItem.Tag = "400402";
+            this.definicionToolStripMenuItem.Click += new System.EventHandler(this.definicionToolStripMenuItem_Click);
             // 
             // modificaToolStripMenuItem
             // 
             this.modificaToolStripMenuItem.Name = "modificaToolStripMenuItem";
             resources.ApplyResources(this.modificaToolStripMenuItem, "modificaToolStripMenuItem");
+            this.modificaToolStripMenuItem.Tag = "400404";
+            this.modificaToolStripMenuItem.Click += new System.EventHandler(this.modificaToolStripMenuItem_Click);
             // 
             // parametrizacionDePermisosUsuariosToolStripMenuItem
             // 
@@ -591,51 +631,70 @@
             // 
             this.ejercicioContableToolStripMenuItem.Name = "ejercicioContableToolStripMenuItem";
             resources.ApplyResources(this.ejercicioContableToolStripMenuItem, "ejercicioContableToolStripMenuItem");
+            this.ejercicioContableToolStripMenuItem.Tag = "4006";
+            this.ejercicioContableToolStripMenuItem.Click += new System.EventHandler(this.ejercicioContableToolStripMenuItem_Click);
             // 
             // planDeCuentasToolStripMenuItem
             // 
             this.planDeCuentasToolStripMenuItem.Name = "planDeCuentasToolStripMenuItem";
             resources.ApplyResources(this.planDeCuentasToolStripMenuItem, "planDeCuentasToolStripMenuItem");
+            this.planDeCuentasToolStripMenuItem.Tag = "4008";
+            this.planDeCuentasToolStripMenuItem.Click += new System.EventHandler(this.planDeCuentasToolStripMenuItem_Click);
             // 
             // conceptosContablesToolStripMenuItem
             // 
             this.conceptosContablesToolStripMenuItem.Name = "conceptosContablesToolStripMenuItem";
             resources.ApplyResources(this.conceptosContablesToolStripMenuItem, "conceptosContablesToolStripMenuItem");
+            this.conceptosContablesToolStripMenuItem.Tag = "4010";
+            this.conceptosContablesToolStripMenuItem.Click += new System.EventHandler(this.conceptosContablesToolStripMenuItem_Click);
             // 
             // rubrosContablesToolStripMenuItem
             // 
             this.rubrosContablesToolStripMenuItem.Name = "rubrosContablesToolStripMenuItem";
             resources.ApplyResources(this.rubrosContablesToolStripMenuItem, "rubrosContablesToolStripMenuItem");
+            this.rubrosContablesToolStripMenuItem.Tag = "4009";
+            this.rubrosContablesToolStripMenuItem.Click += new System.EventHandler(this.rubrosContablesToolStripMenuItem_Click);
             // 
             // coeficienteDeAjusteToolStripMenuItem
             // 
             this.coeficienteDeAjusteToolStripMenuItem.Name = "coeficienteDeAjusteToolStripMenuItem";
             resources.ApplyResources(this.coeficienteDeAjusteToolStripMenuItem, "coeficienteDeAjusteToolStripMenuItem");
+            this.coeficienteDeAjusteToolStripMenuItem.Tag = "4016";
+            this.coeficienteDeAjusteToolStripMenuItem.Click += new System.EventHandler(this.coeficienteDeAjusteToolStripMenuItem_Click);
             // 
             // centroDeCosteToolStripMenuItem
             // 
             this.centroDeCosteToolStripMenuItem.Name = "centroDeCosteToolStripMenuItem";
             resources.ApplyResources(this.centroDeCosteToolStripMenuItem, "centroDeCosteToolStripMenuItem");
+            this.centroDeCosteToolStripMenuItem.Tag = "4011";
+            this.centroDeCosteToolStripMenuItem.Click += new System.EventHandler(this.centroDeCosteToolStripMenuItem_Click);
             // 
             // rubricacionDeSubDiariosToolStripMenuItem
             // 
             this.rubricacionDeSubDiariosToolStripMenuItem.Name = "rubricacionDeSubDiariosToolStripMenuItem";
             resources.ApplyResources(this.rubricacionDeSubDiariosToolStripMenuItem, "rubricacionDeSubDiariosToolStripMenuItem");
+            this.rubricacionDeSubDiariosToolStripMenuItem.Click += new System.EventHandler(this.rubricacionDeSubDiariosToolStripMenuItem_Click);
             // 
             // agendaToolStripMenuItem
             // 
             this.agendaToolStripMenuItem.Name = "agendaToolStripMenuItem";
             resources.ApplyResources(this.agendaToolStripMenuItem, "agendaToolStripMenuItem");
+            this.agendaToolStripMenuItem.Tag = "4012";
+            this.agendaToolStripMenuItem.Click += new System.EventHandler(this.agendaToolStripMenuItem_Click);
             // 
             // parametrosContablesToolStripMenuItem
             // 
             this.parametrosContablesToolStripMenuItem.Name = "parametrosContablesToolStripMenuItem";
             resources.ApplyResources(this.parametrosContablesToolStripMenuItem, "parametrosContablesToolStripMenuItem");
+            this.parametrosContablesToolStripMenuItem.Tag = "4013";
+            this.parametrosContablesToolStripMenuItem.Click += new System.EventHandler(this.parametrosContablesToolStripMenuItem_Click);
             // 
             // configurarImpresorasToolStripMenuItem
             // 
             this.configurarImpresorasToolStripMenuItem.Name = "configurarImpresorasToolStripMenuItem";
             resources.ApplyResources(this.configurarImpresorasToolStripMenuItem, "configurarImpresorasToolStripMenuItem");
+            this.configurarImpresorasToolStripMenuItem.Tag = "4014";
+            this.configurarImpresorasToolStripMenuItem.Click += new System.EventHandler(this.configurarImpresorasToolStripMenuItem_Click);
             // 
             // MenuAyuda
             // 
@@ -653,6 +712,8 @@
             // 
             this.soporteInteractivoDeContableToolStripMenuItem.Name = "soporteInteractivoDeContableToolStripMenuItem";
             resources.ApplyResources(this.soporteInteractivoDeContableToolStripMenuItem, "soporteInteractivoDeContableToolStripMenuItem");
+            this.soporteInteractivoDeContableToolStripMenuItem.Tag = "5002";
+            this.soporteInteractivoDeContableToolStripMenuItem.Click += new System.EventHandler(this.soporteInteractivoDeContableToolStripMenuItem_Click);
             // 
             // panel5
             // 
@@ -997,6 +1058,7 @@
             this.btnAyuda.Image = global::SistemaContable.Properties.Resources.icons8_ayuda30;
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.TabStop = false;
+            this.btnAyuda.Tag = "50";
             this.btnAyuda.TextColor = System.Drawing.Color.White;
             this.btnAyuda.UseVisualStyleBackColor = false;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
@@ -1015,6 +1077,7 @@
             this.btnMantenimiento.Image = global::SistemaContable.Properties.Resources.icons8_llave_30;
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.TabStop = false;
+            this.btnMantenimiento.Tag = "40";
             this.btnMantenimiento.TextColor = System.Drawing.Color.White;
             this.btnMantenimiento.UseVisualStyleBackColor = false;
             this.btnMantenimiento.Click += new System.EventHandler(this.btnMantenimiento_Click);
@@ -1033,6 +1096,7 @@
             this.btnContabilidad.Image = global::SistemaContable.Properties.Resources.icons8_calculadora_30;
             this.btnContabilidad.Name = "btnContabilidad";
             this.btnContabilidad.TabStop = false;
+            this.btnContabilidad.Tag = "30";
             this.btnContabilidad.TextColor = System.Drawing.Color.White;
             this.btnContabilidad.UseVisualStyleBackColor = false;
             this.btnContabilidad.Click += new System.EventHandler(this.btnContabilidad_Click);
@@ -1051,6 +1115,7 @@
             this.btnVer.Image = global::SistemaContable.Properties.Resources.lupa;
             this.btnVer.Name = "btnVer";
             this.btnVer.TabStop = false;
+            this.btnVer.Tag = "20";
             this.btnVer.TextColor = System.Drawing.Color.White;
             this.btnVer.UseVisualStyleBackColor = false;
             this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
@@ -1069,6 +1134,7 @@
             this.btnArchivos.Image = global::SistemaContable.Properties.Resources.icons8_carpeta_30;
             this.btnArchivos.Name = "btnArchivos";
             this.btnArchivos.TabStop = false;
+            this.btnArchivos.Tag = "10";
             this.btnArchivos.TextColor = System.Drawing.Color.White;
             this.btnArchivos.UseVisualStyleBackColor = false;
             this.btnArchivos.Click += new System.EventHandler(this.btnArchivos_Click);
@@ -1103,6 +1169,7 @@
             this.IsMdiContainer = true;
             this.Name = "frmInicio";
             this.Opacity = 0.99D;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Cerrar);
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -1160,12 +1227,10 @@
         private System.Windows.Forms.ToolStripMenuItem notasYObservacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calendarioToolStripMenuItem;
         private RJCodeAdvance.RJControls.RJDropdownMenu MenuContabilidad;
-        private System.Windows.Forms.ToolStripMenuItem contabilidadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movimientoDeAsientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modelosDeAsientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizaciónToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem detalleDeModelosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actualizaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem renumeraciónDeAsientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem libroDiarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem libroMayorToolStripMenuItem;

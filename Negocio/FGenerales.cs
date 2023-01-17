@@ -1,4 +1,6 @@
-﻿using Datos.Modelos;
+﻿using Datos;
+using Datos.Modelos;
+using RJCodeAdvance.RJControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +52,35 @@ namespace Negocio
             {
                 Formulario.BringToFront();
             }
+        }
+
+        public static bool Permiso(string tag) 
+        {
+            DataSet ds = new DataSet();
+            int usuario = FLogin.IdUsuario;
+            int resultado = 0;
+            if (tag != "")
+            {
+                ds = AccesoBase.ListarDatos($"SELECT mxu_activo FROM MenuxUsu WHERE mxu_sistema = 'CO' AND mxu_usuario = {usuario} AND mxu_codigo = '{tag}'");
+                foreach (DataRow dr in ds.Tables[0].Rows) 
+                {
+                    resultado = Convert.ToInt32(dr["mxu_activo"]);
+                }  
+                if (resultado == 1)
+                {
+                    return true;
+                }
+                else if (resultado == 0)
+                {
+                    MessageBox.Show("Atención: Acceso denegado.");
+                    return false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return false;
         }
     }
 }

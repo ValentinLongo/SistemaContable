@@ -154,7 +154,7 @@
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(119, 13);
             this.tbCodigo.TabIndex = 0;
-            this.tbCodigo.Tag = "00001";
+            this.tbCodigo.Tag = "00000";
             // 
             // panel2
             // 
