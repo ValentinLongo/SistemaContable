@@ -32,6 +32,7 @@ namespace Negocio
             if (Tag2 == "1")
             {
                 txt.CharacterCasing = CharacterCasing.Upper;
+                txt.KeyPress -= TextBox_KeyPress_numeros;
             }
 
             //tb solo numeros
@@ -39,6 +40,7 @@ namespace Negocio
             if (Tag3 == "1") 
             {
                 txt.KeyPress += TextBox_KeyPress_numeros;
+                txt.KeyPress -= TextBox_KeyPress_letras;
             }
 
             //tb solo letras
@@ -46,6 +48,7 @@ namespace Negocio
             if (Tag4 == "1") 
             {
                 txt.KeyPress += TextBox_KeyPress_letras;
+                txt.KeyPress -= TextBox_KeyPress_numeros;
             }
 
             //tb numeros y coma
@@ -64,7 +67,7 @@ namespace Negocio
                 }
             }
 
-            void TextBox_KeyPress_numeros(object sender, KeyPressEventArgs e) 
+            void TextBox_KeyPress_numeros(object sender, KeyPressEventArgs e)
             {
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 {

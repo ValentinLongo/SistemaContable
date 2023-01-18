@@ -254,6 +254,7 @@
             this.Controls.Add(this.bunifuShapes1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCambiarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCambiarUsuario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

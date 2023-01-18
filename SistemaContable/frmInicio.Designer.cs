@@ -621,6 +621,7 @@
             // 
             this.parametrizacionDePermisosPerfilesToolStripMenuItem.Name = "parametrizacionDePermisosPerfilesToolStripMenuItem";
             resources.ApplyResources(this.parametrizacionDePermisosPerfilesToolStripMenuItem, "parametrizacionDePermisosPerfilesToolStripMenuItem");
+            this.parametrizacionDePermisosPerfilesToolStripMenuItem.Click += new System.EventHandler(this.parametrizacionDePermisosPerfilesToolStripMenuItem_Click);
             // 
             // recalcularToolStripMenuItem
             // 

@@ -13,6 +13,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaContable.Conceptos_Contables;
+using SistemaContable.Parametrizacion_Permisos;
+using SistemaContable.General;
 
 namespace SistemaContable
 {
@@ -336,6 +338,13 @@ namespace SistemaContable
         private void soporteInteractivoDeContableToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Negocio.FGenerales.Permiso(soporteInteractivoDeContableToolStripMenuItem.Tag.ToString());
+        }
+
+        //SIN CODIGO
+        private void parametrizacionDePermisosPerfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPermisosUsuarios permisosusuarios = new frmPermisosUsuarios();
+            permisosusuarios.ShowDialog();
         }
         //
     }

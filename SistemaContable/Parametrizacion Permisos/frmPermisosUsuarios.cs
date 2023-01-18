@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaContable.General;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,27 @@ namespace SistemaContable.Parametrizacion_Permisos
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            frmConsultaGeneral consultageneral = new frmConsultaGeneral();
+            consultageneral.ArmarDGV("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo");
+            consultageneral.ShowDialog();
+
+            int cod = frmConsultaGeneral.codigo;
+            string descri = frmConsultaGeneral.descripcion;
+
+            if (cod != null && descri != "")
+            {
+                txtNroUsuario.Text = cod.ToString();
+                txtDescriUsuario.Text = descri;
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

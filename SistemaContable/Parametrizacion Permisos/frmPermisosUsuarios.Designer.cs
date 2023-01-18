@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
+            this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
@@ -41,12 +41,12 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtNroUsuario = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtDescriUsuario = new System.Windows.Forms.TextBox();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,25 +136,26 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
-            // btnAcceder
+            // btnConfirmar
             // 
-            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnAcceder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnAcceder.BorderColor = System.Drawing.Color.White;
-            this.btnAcceder.BorderRadius = 0;
-            this.btnAcceder.BorderSize = 0;
-            this.btnAcceder.FlatAppearance.BorderSize = 0;
-            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcceder.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcceder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAcceder.Location = new System.Drawing.Point(406, 85);
-            this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(120, 26);
-            this.btnAcceder.TabIndex = 18;
-            this.btnAcceder.Tag = "";
-            this.btnAcceder.Text = "Confirmar";
-            this.btnAcceder.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnConfirmar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnConfirmar.BorderColor = System.Drawing.Color.White;
+            this.btnConfirmar.BorderRadius = 0;
+            this.btnConfirmar.BorderSize = 0;
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnConfirmar.Location = new System.Drawing.Point(406, 85);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(120, 26);
+            this.btnConfirmar.TabIndex = 18;
+            this.btnConfirmar.Tag = "";
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // rjButton1
             // 
@@ -290,17 +291,17 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Usuario:";
             // 
-            // txtUsuario
+            // txtNroUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtUsuario.Location = new System.Drawing.Point(82, 47);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(56, 19);
-            this.txtUsuario.TabIndex = 27;
-            this.txtUsuario.Tag = "00000";
+            this.txtNroUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtNroUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNroUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNroUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtNroUsuario.Location = new System.Drawing.Point(82, 47);
+            this.txtNroUsuario.Name = "txtNroUsuario";
+            this.txtNroUsuario.Size = new System.Drawing.Size(56, 19);
+            this.txtNroUsuario.TabIndex = 27;
+            this.txtNroUsuario.Tag = "00000";
             // 
             // panel4
             // 
@@ -326,43 +327,44 @@
             this.panel3.Size = new System.Drawing.Size(163, 1);
             this.panel3.TabIndex = 31;
             // 
-            // textBox1
+            // txtDescriUsuario
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(183, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 19);
-            this.textBox1.TabIndex = 30;
-            this.textBox1.Tag = "00000";
+            this.txtDescriUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtDescriUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescriUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescriUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtDescriUsuario.Location = new System.Drawing.Point(183, 47);
+            this.txtDescriUsuario.Name = "txtDescriUsuario";
+            this.txtDescriUsuario.Size = new System.Drawing.Size(163, 19);
+            this.txtDescriUsuario.TabIndex = 30;
+            this.txtDescriUsuario.Tag = "00000";
             // 
-            // button1
+            // btnConsulta
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Image = global::SistemaContable.Properties.Resources.binocular2;
-            this.button1.Location = new System.Drawing.Point(352, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 36);
-            this.button1.TabIndex = 32;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnConsulta.FlatAppearance.BorderSize = 0;
+            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsulta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnConsulta.Image = global::SistemaContable.Properties.Resources.binocular2;
+            this.btnConsulta.Location = new System.Drawing.Point(362, 42);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(23, 26);
+            this.btnConsulta.TabIndex = 32;
+            this.btnConsulta.UseVisualStyleBackColor = false;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // frmPermisosUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(534, 505);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDescriUsuario);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtNroUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuShapes1);
             this.Controls.Add(this.treeView1);
@@ -371,10 +373,11 @@
             this.Controls.Add(this.rjButton3);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.btnAcceder);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPermisosUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUsuarios";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -388,7 +391,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
-        private RJCodeAdvance.RJControls.RJButton btnAcceder;
+        private RJCodeAdvance.RJControls.RJButton btnConfirmar;
         private RJCodeAdvance.RJControls.RJButton rjButton1;
         private RJCodeAdvance.RJControls.RJButton rjButton2;
         private RJCodeAdvance.RJControls.RJButton rjButton3;
@@ -397,11 +400,11 @@
         private System.Windows.Forms.TreeView treeView1;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtNroUsuario;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtDescriUsuario;
+        private System.Windows.Forms.Button btnConsulta;
     }
 }

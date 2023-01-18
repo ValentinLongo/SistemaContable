@@ -240,14 +240,14 @@
   <data name="toolStripButton6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGfSURBVEhL7Za9SgNRFIRXwVYro+ADiI21Rco0ikIKLSx8
-        hjRaiW9gqWivnWAl+gBio52lP42gIIKgEPO7id9kx4TExI1FquzAwL1z5py52RT3BgmGB9Vq9aoO8vn8
-        Z6FQeC+Xy09oN2EYnsHdWq22AeexjLmlCWmqySOvetSrGZqlmZqNdumWFlToBwz5YvApISui1tJcjoXj
-        WrBeZ1gKzsIFuAjX4Q4BJ5VK5Z6Q0NYmpKkmj7zuUa9maFbK1vZg9plI7nKiDjBkBuZs10Fz0lzuCduF
-        jKUg4LQPFmODf2D7v/3KstR2moEHC5aS4P5gexLcE7Y3YCkJ7g+2J8E9YXsDloY9uFQqvXKD3PFauOZ+
-        PYcHXHubUBf/lFt+BbOctmeLnkN4oVeIZmlm5I7gliCg8GItFrrWGLrnbV1rtEdvY8Fz6NmxjdNmi8Xi
-        W1QaHJyRdWwEhBE+0yScY52Ga6y3+UXHfLLbbk+eTsgjLz1H6oWryGnNhHr+jDquf9A0QfMSQ/cJ+FCQ
-        oLU01eC47YMBAcv6r0StLSf4A0HwDauCve0mqN2+AAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVEhL7Va9SgNBGFwFW62Mgg8gNtYWKdMoCim0sPAZ
+        0mglvoGlor12gpXoA4iNdpb+NIKCCIJy8f7vnLkbExJz3llclRsY2J1vvm82l2LXVBgeBEFwFQPtdvvT
+        tu13z/OeoN2EYXgG7kZRtAHOwzKmlg6osUYPvexhL2dwFmdyNrRLtXTBQhFYlvWFwacIWSG5pqZyLhTX
+        hfQYw2rgLLgALoLr4A4CTnzfv0dIKGsH1Fijh171sJczOKsma28w9o1UHnCiPmDIDNiSnQdtUVM5E7IT
+        DUnG4LQPEnODfyD7v/3MktRzmtKDCUlVcDHIXgVnQvYEkqrgYpC9Cs6E7AkkDXuw67qvuEHu8Fq4xv16
+        Dh7g2tsEefFPqeVXMJbT8myh5xC84CuEszgzdadQizEovEjLBa81DN3TNuYa2qO2ucBz6FmxyWmbjuO8
+        paXyoIymYlNAGMFnmgTnsK6Da1hv4xcd45PdDnry9IMeetFzxF5wFXKdM0E+f0YVVxxomkDzEobu49X4
+        wSCCa2qsgeOylwMELPO/IrmWXOEPGPMNFpa9215KxXwAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="toolStripButton6.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -690,7 +690,7 @@
     <value>Salir</value>
   </data>
   <data name="MenuArchivos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 92</value>
+    <value>227, 70</value>
   </data>
   <data name="&gt;&gt;MenuArchivos.Name" xml:space="preserve">
     <value>MenuArchivos</value>
@@ -957,7 +957,7 @@
     <value>Configurar Impresoras</value>
   </data>
   <data name="MenuMantenimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 268</value>
+    <value>213, 290</value>
   </data>
   <data name="&gt;&gt;MenuMantenimiento.Name" xml:space="preserve">
     <value>MenuMantenimiento</value>
