@@ -15,8 +15,8 @@ namespace SistemaContable.General
 {
     public partial class frmConsultaGeneral : Form
     {
-        public static int codigo;
-        public static string descripcion;
+        public static string codigoCG;
+        public static string descripcionCG;
         public frmConsultaGeneral()
         {
             InitializeComponent();
@@ -66,7 +66,14 @@ namespace SistemaContable.General
                 }
                 else if (cbBusqueda.SelectedIndex == 1)
                 {
-                    ArmarDGV($"usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "WHERE usu_nombre LIKE" + "'%" + txtBusqueda.Text + "%'", "");
+                    if (CheckInicio.Checked)
+                    {
+                        ArmarDGV($"usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "WHERE usu_nombre LIKE" + "'" + txtBusqueda.Text + "%'", "");
+                    }
+                    else
+                    {
+                        ArmarDGV($"usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "WHERE usu_nombre LIKE" + "'%" + txtBusqueda.Text + "%'", "");
+                    }
                 }
             }
             else
@@ -77,9 +84,15 @@ namespace SistemaContable.General
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            codigo = Convert.ToInt32(dgvUsuarios.Rows[dgvUsuarios.CurrentRow.Index].Cells[0].Value);
-            descripcion = dgvUsuarios.Rows[dgvUsuarios.CurrentRow.Index].Cells[1].Value.ToString();
+            codigoCG = dgvUsuarios.Rows[dgvUsuarios.CurrentRow.Index].Cells[0].Value.ToString();
+            descripcionCG = dgvUsuarios.Rows[dgvUsuarios.CurrentRow.Index].Cells[1].Value.ToString();
             Close();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ArmarDGV("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo");
+            txtBusqueda.Clear();
         }
 
         //BARRA DE CONTROL
@@ -91,6 +104,13 @@ namespace SistemaContable.General
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnCerrar_CloseClicked(object sender, EventArgs e)
+        {
+            codigoCG = null;
+            descripcionCG = null;
+            Close();
         }
     }
 }

@@ -38,15 +38,16 @@
             this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton4 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton5 = new RJCodeAdvance.RJControls.RJButton();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.Tpermisos = new System.Windows.Forms.TreeView();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNroUsuario = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtDescriUsuario = new System.Windows.Forms.TextBox();
             this.btnConsulta = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,7 +148,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(406, 85);
+            this.btnConfirmar.Location = new System.Drawing.Point(406, 100);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(120, 26);
             this.btnConfirmar.TabIndex = 18;
@@ -168,7 +169,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton1.Location = new System.Drawing.Point(406, 126);
+            this.rjButton1.Location = new System.Drawing.Point(406, 141);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(120, 26);
             this.rjButton1.TabIndex = 19;
@@ -188,7 +189,7 @@
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton2.Location = new System.Drawing.Point(406, 167);
+            this.rjButton2.Location = new System.Drawing.Point(406, 182);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(120, 26);
             this.rjButton2.TabIndex = 20;
@@ -208,7 +209,7 @@
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton3.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton3.Location = new System.Drawing.Point(406, 209);
+            this.rjButton3.Location = new System.Drawing.Point(406, 224);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(120, 26);
             this.rjButton3.TabIndex = 21;
@@ -228,7 +229,7 @@
             this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton4.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton4.Location = new System.Drawing.Point(406, 252);
+            this.rjButton4.Location = new System.Drawing.Point(406, 267);
             this.rjButton4.Name = "rjButton4";
             this.rjButton4.Size = new System.Drawing.Size(120, 26);
             this.rjButton4.TabIndex = 22;
@@ -257,12 +258,19 @@
             this.rjButton5.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.rjButton5.UseVisualStyleBackColor = false;
             // 
-            // treeView1
+            // Tpermisos
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 85);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(388, 408);
-            this.treeView1.TabIndex = 24;
+            this.Tpermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Tpermisos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Tpermisos.CheckBoxes = true;
+            this.Tpermisos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tpermisos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Tpermisos.LineColor = System.Drawing.Color.White;
+            this.Tpermisos.Location = new System.Drawing.Point(12, 100);
+            this.Tpermisos.Name = "Tpermisos";
+            this.Tpermisos.Size = new System.Drawing.Size(388, 393);
+            this.Tpermisos.TabIndex = 24;
+            this.Tpermisos.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.Tpermisos_AfterCheck);
             // 
             // bunifuShapes1
             // 
@@ -272,7 +280,7 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(13, 28);
+            this.bunifuShapes1.Location = new System.Drawing.Point(13, 43);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
@@ -285,46 +293,38 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(23, 47);
+            this.label1.Location = new System.Drawing.Point(12, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
+            this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 26;
-            this.label1.Text = "Usuario:";
+            this.label1.Text = "Usuario";
             // 
             // txtNroUsuario
             // 
             this.txtNroUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.txtNroUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNroUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNroUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNroUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtNroUsuario.Location = new System.Drawing.Point(82, 47);
+            this.txtNroUsuario.Location = new System.Drawing.Point(79, 63);
             this.txtNroUsuario.Name = "txtNroUsuario";
-            this.txtNroUsuario.Size = new System.Drawing.Size(56, 19);
+            this.txtNroUsuario.Size = new System.Drawing.Size(56, 15);
             this.txtNroUsuario.TabIndex = 27;
             this.txtNroUsuario.Tag = "00000";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(82, 65);
+            this.panel4.Location = new System.Drawing.Point(79, 80);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(59, 1);
             this.panel4.TabIndex = 28;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(162, 28);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 51);
-            this.panel2.TabIndex = 29;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(183, 65);
+            this.panel3.Location = new System.Drawing.Point(202, 80);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(163, 1);
+            this.panel3.Size = new System.Drawing.Size(147, 1);
             this.panel3.TabIndex = 31;
             // 
             // txtDescriUsuario
@@ -333,9 +333,9 @@
             this.txtDescriUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescriUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescriUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtDescriUsuario.Location = new System.Drawing.Point(183, 47);
+            this.txtDescriUsuario.Location = new System.Drawing.Point(202, 62);
             this.txtDescriUsuario.Name = "txtDescriUsuario";
-            this.txtDescriUsuario.Size = new System.Drawing.Size(163, 19);
+            this.txtDescriUsuario.Size = new System.Drawing.Size(147, 19);
             this.txtDescriUsuario.TabIndex = 30;
             this.txtDescriUsuario.Tag = "00000";
             // 
@@ -346,12 +346,34 @@
             this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsulta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConsulta.Image = global::SistemaContable.Properties.Resources.binocular2;
-            this.btnConsulta.Location = new System.Drawing.Point(362, 42);
+            this.btnConsulta.Location = new System.Drawing.Point(362, 57);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(23, 26);
             this.btnConsulta.TabIndex = 32;
             this.btnConsulta.UseVisualStyleBackColor = false;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(21, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 16);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Numero:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(144, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 16);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Nombre:";
             // 
             // frmPermisosUsuarios
             // 
@@ -359,15 +381,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(534, 505);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtDescriUsuario);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.txtNroUsuario);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bunifuShapes1);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.Tpermisos);
             this.Controls.Add(this.rjButton5);
             this.Controls.Add(this.rjButton4);
             this.Controls.Add(this.rjButton3);
@@ -375,6 +397,7 @@
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.bunifuShapes1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPermisosUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -397,14 +420,15 @@
         private RJCodeAdvance.RJControls.RJButton rjButton3;
         private RJCodeAdvance.RJControls.RJButton rjButton4;
         private RJCodeAdvance.RJControls.RJButton rjButton5;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView Tpermisos;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNroUsuario;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtDescriUsuario;
         private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
