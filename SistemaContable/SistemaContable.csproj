@@ -314,6 +314,12 @@
     <Compile Include="Parametrizacion Permisos\frmPermisosUsuarios.Designer.cs">
       <DependentUpon>frmPermisosUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Parametrizacion Permisos\frmPermisosEspecialesUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrizacion Permisos\frmPermisosEspecialesUsu.Designer.cs">
+      <DependentUpon>frmPermisosEspecialesUsu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Plan de Cuentas\frmAgregarCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,6 +405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosUsuarios.resx">
       <DependentUpon>frmPermisosUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosEspecialesUsu.resx">
+      <DependentUpon>frmPermisosEspecialesUsu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Plan de Cuentas\frmAgregarCuenta.resx">
       <DependentUpon>frmAgregarCuenta.cs</DependentUpon>

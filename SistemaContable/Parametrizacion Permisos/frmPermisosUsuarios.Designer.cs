@@ -33,10 +33,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnAbrirArbol = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton4 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnEspeciales = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton5 = new RJCodeAdvance.RJControls.RJButton();
             this.Tpermisos = new System.Windows.Forms.TreeView();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
@@ -45,9 +44,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtDescriUsuario = new System.Windows.Forms.TextBox();
-            this.btnConsulta = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,45 +157,26 @@
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // rjButton1
+            // btnAbrirArbol
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.White;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton1.Location = new System.Drawing.Point(406, 141);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(120, 26);
-            this.rjButton1.TabIndex = 19;
-            this.rjButton1.Tag = "";
-            this.rjButton1.Text = "Abrir Todo";
-            this.rjButton1.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.White;
-            this.rjButton2.BorderRadius = 0;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton2.Location = new System.Drawing.Point(406, 182);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(120, 26);
-            this.rjButton2.TabIndex = 20;
-            this.rjButton2.Tag = "";
-            this.rjButton2.Text = "Cerrar Todo";
-            this.rjButton2.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.btnAbrirArbol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAbrirArbol.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAbrirArbol.BorderColor = System.Drawing.Color.White;
+            this.btnAbrirArbol.BorderRadius = 0;
+            this.btnAbrirArbol.BorderSize = 0;
+            this.btnAbrirArbol.FlatAppearance.BorderSize = 0;
+            this.btnAbrirArbol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbrirArbol.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrirArbol.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAbrirArbol.Location = new System.Drawing.Point(406, 141);
+            this.btnAbrirArbol.Name = "btnAbrirArbol";
+            this.btnAbrirArbol.Size = new System.Drawing.Size(120, 26);
+            this.btnAbrirArbol.TabIndex = 19;
+            this.btnAbrirArbol.Tag = "";
+            this.btnAbrirArbol.Text = "Abrir Todo";
+            this.btnAbrirArbol.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAbrirArbol.UseVisualStyleBackColor = false;
+            this.btnAbrirArbol.Click += new System.EventHandler(this.btnAbrirArbol_Click);
             // 
             // rjButton3
             // 
@@ -209,7 +189,7 @@
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton3.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton3.Location = new System.Drawing.Point(406, 224);
+            this.rjButton3.Location = new System.Drawing.Point(406, 182);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(120, 26);
             this.rjButton3.TabIndex = 21;
@@ -218,25 +198,26 @@
             this.rjButton3.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.rjButton3.UseVisualStyleBackColor = false;
             // 
-            // rjButton4
+            // btnEspeciales
             // 
-            this.rjButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton4.BorderColor = System.Drawing.Color.White;
-            this.rjButton4.BorderRadius = 0;
-            this.rjButton4.BorderSize = 0;
-            this.rjButton4.FlatAppearance.BorderSize = 0;
-            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton4.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton4.Location = new System.Drawing.Point(406, 267);
-            this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(120, 26);
-            this.rjButton4.TabIndex = 22;
-            this.rjButton4.Tag = "";
-            this.rjButton4.Text = "Especiales";
-            this.rjButton4.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton4.UseVisualStyleBackColor = false;
+            this.btnEspeciales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnEspeciales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnEspeciales.BorderColor = System.Drawing.Color.White;
+            this.btnEspeciales.BorderRadius = 0;
+            this.btnEspeciales.BorderSize = 0;
+            this.btnEspeciales.FlatAppearance.BorderSize = 0;
+            this.btnEspeciales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEspeciales.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEspeciales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEspeciales.Location = new System.Drawing.Point(406, 223);
+            this.btnEspeciales.Name = "btnEspeciales";
+            this.btnEspeciales.Size = new System.Drawing.Size(120, 26);
+            this.btnEspeciales.TabIndex = 22;
+            this.btnEspeciales.Tag = "";
+            this.btnEspeciales.Text = "Especiales";
+            this.btnEspeciales.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEspeciales.UseVisualStyleBackColor = false;
+            this.btnEspeciales.Click += new System.EventHandler(this.btnEspeciales_Click);
             // 
             // rjButton5
             // 
@@ -260,7 +241,7 @@
             // 
             // Tpermisos
             // 
-            this.Tpermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Tpermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.Tpermisos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Tpermisos.CheckBoxes = true;
             this.Tpermisos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -339,6 +320,28 @@
             this.txtDescriUsuario.TabIndex = 30;
             this.txtDescriUsuario.Tag = "00000";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(16, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Numero:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(141, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 17);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Nombre:";
+            // 
             // btnConsulta
             // 
             this.btnConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -352,28 +355,6 @@
             this.btnConsulta.TabIndex = 32;
             this.btnConsulta.UseVisualStyleBackColor = false;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(21, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 16);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Numero:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(144, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 16);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Nombre:";
             // 
             // frmPermisosUsuarios
             // 
@@ -391,10 +372,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Tpermisos);
             this.Controls.Add(this.rjButton5);
-            this.Controls.Add(this.rjButton4);
+            this.Controls.Add(this.btnEspeciales);
             this.Controls.Add(this.rjButton3);
-            this.Controls.Add(this.rjButton2);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.btnAbrirArbol);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuShapes1);
@@ -415,10 +395,9 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
+        private RJCodeAdvance.RJControls.RJButton btnAbrirArbol;
         private RJCodeAdvance.RJControls.RJButton rjButton3;
-        private RJCodeAdvance.RJControls.RJButton rjButton4;
+        private RJCodeAdvance.RJControls.RJButton btnEspeciales;
         private RJCodeAdvance.RJControls.RJButton rjButton5;
         private System.Windows.Forms.TreeView Tpermisos;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;

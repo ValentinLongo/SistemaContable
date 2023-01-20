@@ -32,7 +32,6 @@ namespace SistemaContable.Parametrizacion_Permisos
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             frmConsultaGeneral consultageneral = new frmConsultaGeneral();
@@ -54,7 +53,7 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             DataSet ds = new DataSet();
 
-            int terminal = Negocio.FLogin.completarConexion();
+            int terminal = frmLogin.NumeroTerminal;
 
             ds = AccesoBase.ListarDatos($"DELETE FROM Aux_MenuxUsu WHERE mxu_terminal = {terminal}");
 
@@ -112,7 +111,7 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            int terminal = Negocio.FLogin.completarConexion();
+            int terminal = frmLogin.NumeroTerminal;
             DataSet ds = new DataSet();
 
             ds = AccesoBase.ListarDatos($"DELETE FROM MenuxUsu WHERE mxu_sistema = 'CO' AND mxu_usuario = {txtNroUsuario.Text}");
@@ -122,7 +121,7 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void Tpermisos_AfterCheck(object sender, TreeViewEventArgs e)
         {
-            int terminal = Negocio.FLogin.completarConexion();
+            int terminal = frmLogin.NumeroTerminal;
             var codigo = e.Node.Tag;
             if (e.Node.Checked)
             {
@@ -131,6 +130,33 @@ namespace SistemaContable.Parametrizacion_Permisos
             else
             {
                 AccesoBase.InsertUpdateDatos($"UPDATE aux_MenuxUsu SET mxu_activo = '0' WHERE mxu_terminal = {terminal} AND mxu_codigo = {codigo}");
+            }
+        }
+
+        private void btnAbrirArbol_Click(object sender, EventArgs e)
+        {
+            if (btnAbrirArbol.Text == "Abrir Todo")
+            {
+                Tpermisos.ExpandAll();
+                btnAbrirArbol.Text = "Cerrar Todo";
+            }
+            else
+            {
+                Tpermisos.CollapseAll();
+                btnAbrirArbol.Text = "Abrir Todo";
+            }
+        }
+
+        private void btnEspeciales_Click(object sender, EventArgs e)
+        {
+            if (txtNroUsuario.Text != "" && txtDescriUsuario.Text != "")
+            {
+                frmPermisosEspecialesUsu especialusuario = new frmPermisosEspecialesUsu();
+                especialusuario.Show();
+            }
+            else
+            {
+                MessageBox.Show("Atención: Debera indicar un usuario.");
             }
         }
     }
