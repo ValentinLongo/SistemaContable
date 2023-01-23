@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using SistemaContable.Conceptos_Contables;
 using SistemaContable.Parametrizacion_Permisos;
 using SistemaContable.General;
+using SistemaContable.Empresa;
 
 namespace SistemaContable
 {
@@ -279,7 +280,12 @@ namespace SistemaContable
         //40
         private void empresaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(empresaToolStripMenuItem.Tag.ToString());
+            frmEmpresa frmEmpresa = new frmEmpresa();
+            permiso = Negocio.FGenerales.Permiso(empresaToolStripMenuItem.Tag.ToString());
+            if (permiso)
+            {
+                frmEmpresa.ShowDialog();
+            }
         }
         private void definicionToolStripMenuItem_Click(object sender, EventArgs e)
         {

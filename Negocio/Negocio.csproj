@@ -224,6 +224,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FAgenda.cs" />
+    <Compile Include="FEmpresa.cs" />
     <Compile Include="FFormatoSistema.cs" />
     <Compile Include="FGenerales.cs" />
     <Compile Include="FInicio.cs" />
