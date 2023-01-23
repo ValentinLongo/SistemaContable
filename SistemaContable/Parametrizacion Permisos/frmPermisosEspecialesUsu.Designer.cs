@@ -49,13 +49,17 @@
             this.cbModulo = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.btnAgregarTodo = new RJCodeAdvance.RJControls.RJButton();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnSacarTodos = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
             this.label13 = new System.Windows.Forms.Label();
-            this.CheckVendedor = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.dgvPEspeciales = new System.Windows.Forms.DataGridView();
+            this.Caja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Predef = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPEspeciales)).BeginInit();
             this.SuspendLayout();
@@ -304,6 +308,8 @@
             // 
             this.cbModulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.cbModulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbModulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbModulo.FormattingEnabled = true;
             this.cbModulo.Items.AddRange(new object[] {
             "TODOS",
@@ -316,6 +322,7 @@
             this.cbModulo.Name = "cbModulo";
             this.cbModulo.Size = new System.Drawing.Size(181, 21);
             this.cbModulo.TabIndex = 49;
+            this.cbModulo.SelectedIndexChanged += new System.EventHandler(this.cbModulo_SelectedIndexChanged);
             // 
             // panel6
             // 
@@ -336,6 +343,28 @@
             this.txtDescripcion.Size = new System.Drawing.Size(321, 19);
             this.txtDescripcion.TabIndex = 50;
             this.txtDescripcion.Tag = "00000";
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
+            // 
+            // btnAgregarTodo
+            // 
+            this.btnAgregarTodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAgregarTodo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAgregarTodo.BorderColor = System.Drawing.Color.White;
+            this.btnAgregarTodo.BorderRadius = 0;
+            this.btnAgregarTodo.BorderSize = 0;
+            this.btnAgregarTodo.FlatAppearance.BorderSize = 0;
+            this.btnAgregarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarTodo.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarTodo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAgregarTodo.Location = new System.Drawing.Point(668, 168);
+            this.btnAgregarTodo.Name = "btnAgregarTodo";
+            this.btnAgregarTodo.Size = new System.Drawing.Size(125, 26);
+            this.btnAgregarTodo.TabIndex = 52;
+            this.btnAgregarTodo.Tag = "";
+            this.btnAgregarTodo.Text = "Agregar Todos";
+            this.btnAgregarTodo.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAgregarTodo.UseVisualStyleBackColor = false;
+            this.btnAgregarTodo.Click += new System.EventHandler(this.btnAgregarTodo_Click);
             // 
             // btnConfirmar
             // 
@@ -348,54 +377,36 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(668, 168);
+            this.btnConfirmar.Location = new System.Drawing.Point(668, 127);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(125, 26);
-            this.btnConfirmar.TabIndex = 52;
+            this.btnConfirmar.TabIndex = 53;
             this.btnConfirmar.Tag = "";
-            this.btnConfirmar.Text = "Agregar Todos";
+            this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // rjButton1
+            // btnSacarTodos
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.White;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton1.Location = new System.Drawing.Point(668, 127);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(125, 26);
-            this.rjButton1.TabIndex = 53;
-            this.rjButton1.Tag = "";
-            this.rjButton1.Text = "Confirmar";
-            this.rjButton1.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.White;
-            this.rjButton2.BorderRadius = 0;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton2.Location = new System.Drawing.Point(668, 209);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(125, 26);
-            this.rjButton2.TabIndex = 54;
-            this.rjButton2.Tag = "";
-            this.rjButton2.Text = "Sacar Todos";
-            this.rjButton2.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.btnSacarTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnSacarTodos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnSacarTodos.BorderColor = System.Drawing.Color.White;
+            this.btnSacarTodos.BorderRadius = 0;
+            this.btnSacarTodos.BorderSize = 0;
+            this.btnSacarTodos.FlatAppearance.BorderSize = 0;
+            this.btnSacarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSacarTodos.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSacarTodos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSacarTodos.Location = new System.Drawing.Point(668, 209);
+            this.btnSacarTodos.Name = "btnSacarTodos";
+            this.btnSacarTodos.Size = new System.Drawing.Size(125, 26);
+            this.btnSacarTodos.TabIndex = 54;
+            this.btnSacarTodos.Tag = "";
+            this.btnSacarTodos.Text = "Sacar Todos";
+            this.btnSacarTodos.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSacarTodos.UseVisualStyleBackColor = false;
+            this.btnSacarTodos.Click += new System.EventHandler(this.btnSacarTodos_Click);
             // 
             // rjButton3
             // 
@@ -427,70 +438,103 @@
             this.label13.TabIndex = 64;
             this.label13.Text = "Inicio";
             // 
-            // CheckVendedor
+            // CheckInicio
             // 
-            this.CheckVendedor.AllowBindingControlAnimation = true;
-            this.CheckVendedor.AllowBindingControlColorChanges = false;
-            this.CheckVendedor.AllowBindingControlLocation = true;
-            this.CheckVendedor.AllowCheckBoxAnimation = false;
-            this.CheckVendedor.AllowCheckmarkAnimation = true;
-            this.CheckVendedor.AllowOnHoverStates = true;
-            this.CheckVendedor.AutoCheck = true;
-            this.CheckVendedor.BackColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckVendedor.BackgroundImage")));
-            this.CheckVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CheckVendedor.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.CheckVendedor.BorderRadius = 12;
-            this.CheckVendedor.Checked = false;
-            this.CheckVendedor.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.CheckVendedor.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CheckVendedor.CustomCheckmarkImage = null;
-            this.CheckVendedor.Location = new System.Drawing.Point(449, 399);
-            this.CheckVendedor.MinimumSize = new System.Drawing.Size(17, 17);
-            this.CheckVendedor.Name = "CheckVendedor";
-            this.CheckVendedor.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.CheckVendedor.OnCheck.BorderRadius = 12;
-            this.CheckVendedor.OnCheck.BorderThickness = 2;
-            this.CheckVendedor.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.CheckVendedor.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.CheckVendedor.OnCheck.CheckmarkThickness = 2;
-            this.CheckVendedor.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.CheckVendedor.OnDisable.BorderRadius = 12;
-            this.CheckVendedor.OnDisable.BorderThickness = 2;
-            this.CheckVendedor.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.CheckVendedor.OnDisable.CheckmarkThickness = 2;
-            this.CheckVendedor.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckVendedor.OnHoverChecked.BorderRadius = 12;
-            this.CheckVendedor.OnHoverChecked.BorderThickness = 2;
-            this.CheckVendedor.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckVendedor.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.CheckVendedor.OnHoverChecked.CheckmarkThickness = 2;
-            this.CheckVendedor.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckVendedor.OnHoverUnchecked.BorderRadius = 12;
-            this.CheckVendedor.OnHoverUnchecked.BorderThickness = 1;
-            this.CheckVendedor.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.CheckVendedor.OnUncheck.BorderRadius = 12;
-            this.CheckVendedor.OnUncheck.BorderThickness = 1;
-            this.CheckVendedor.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.Size = new System.Drawing.Size(17, 17);
-            this.CheckVendedor.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.CheckVendedor.TabIndex = 63;
-            this.CheckVendedor.ThreeState = false;
-            this.CheckVendedor.ToolTipText = null;
+            this.CheckInicio.AllowBindingControlAnimation = true;
+            this.CheckInicio.AllowBindingControlColorChanges = false;
+            this.CheckInicio.AllowBindingControlLocation = true;
+            this.CheckInicio.AllowCheckBoxAnimation = false;
+            this.CheckInicio.AllowCheckmarkAnimation = true;
+            this.CheckInicio.AllowOnHoverStates = true;
+            this.CheckInicio.AutoCheck = true;
+            this.CheckInicio.BackColor = System.Drawing.Color.Transparent;
+            this.CheckInicio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckInicio.BackgroundImage")));
+            this.CheckInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CheckInicio.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.CheckInicio.BorderRadius = 12;
+            this.CheckInicio.Checked = false;
+            this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CheckInicio.CustomCheckmarkImage = null;
+            this.CheckInicio.Location = new System.Drawing.Point(449, 399);
+            this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
+            this.CheckInicio.Name = "CheckInicio";
+            this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckInicio.OnCheck.BorderRadius = 12;
+            this.CheckInicio.OnCheck.BorderThickness = 2;
+            this.CheckInicio.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckInicio.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckInicio.OnCheck.CheckmarkThickness = 2;
+            this.CheckInicio.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.CheckInicio.OnDisable.BorderRadius = 12;
+            this.CheckInicio.OnDisable.BorderThickness = 2;
+            this.CheckInicio.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckInicio.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.CheckInicio.OnDisable.CheckmarkThickness = 2;
+            this.CheckInicio.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckInicio.OnHoverChecked.BorderRadius = 12;
+            this.CheckInicio.OnHoverChecked.BorderThickness = 2;
+            this.CheckInicio.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckInicio.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckInicio.OnHoverChecked.CheckmarkThickness = 2;
+            this.CheckInicio.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckInicio.OnHoverUnchecked.BorderRadius = 12;
+            this.CheckInicio.OnHoverUnchecked.BorderThickness = 1;
+            this.CheckInicio.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckInicio.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.CheckInicio.OnUncheck.BorderRadius = 12;
+            this.CheckInicio.OnUncheck.BorderThickness = 1;
+            this.CheckInicio.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckInicio.Size = new System.Drawing.Size(17, 17);
+            this.CheckInicio.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.CheckInicio.TabIndex = 63;
+            this.CheckInicio.ThreeState = false;
+            this.CheckInicio.ToolTipText = null;
             // 
             // dgvPEspeciales
             // 
-            this.dgvPEspeciales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvPEspeciales.AllowUserToAddRows = false;
+            this.dgvPEspeciales.AllowUserToDeleteRows = false;
+            this.dgvPEspeciales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPEspeciales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPEspeciales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Caja,
+            this.Codigo2,
+            this.Descripcion,
+            this.Predef});
             this.dgvPEspeciales.Location = new System.Drawing.Point(15, 127);
             this.dgvPEspeciales.Name = "dgvPEspeciales";
+            this.dgvPEspeciales.ReadOnly = true;
             this.dgvPEspeciales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPEspeciales.Size = new System.Drawing.Size(646, 254);
-            this.dgvPEspeciales.TabIndex = 16;
-            this.dgvPEspeciales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPEspeciales_CellContentClick);
-            this.dgvPEspeciales.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvPEspeciales_CurrentCellDirtyStateChanged);
+            this.dgvPEspeciales.TabIndex = 65;
+            this.dgvPEspeciales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPEspeciales_CellContentClick_1);
+            this.dgvPEspeciales.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvPEspeciales_CurrentCellDirtyStateChanged_1);
+            // 
+            // Caja
+            // 
+            this.Caja.HeaderText = "...";
+            this.Caja.Name = "Caja";
+            this.Caja.ReadOnly = true;
+            this.Caja.Visible = false;
+            // 
+            // Codigo2
+            // 
+            this.Codigo2.HeaderText = "Modulo";
+            this.Codigo2.Name = "Codigo2";
+            this.Codigo2.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // Predef
+            // 
+            this.Predef.HeaderText = "Activo";
+            this.Predef.Name = "Predef";
+            this.Predef.ReadOnly = true;
             // 
             // frmPermisosEspecialesUsu
             // 
@@ -498,12 +542,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvPEspeciales);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.CheckVendedor);
+            this.Controls.Add(this.CheckInicio);
             this.Controls.Add(this.rjButton3);
-            this.Controls.Add(this.rjButton2);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.btnSacarTodos);
             this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.btnAgregarTodo);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.cbModulo);
@@ -520,7 +565,6 @@
             this.Controls.Add(this.txtNroUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuShapes1);
-            this.Controls.Add(this.dgvPEspeciales);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuShapes2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -556,12 +600,16 @@
         private System.Windows.Forms.ComboBox cbModulo;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtDescripcion;
+        private RJCodeAdvance.RJControls.RJButton btnAgregarTodo;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
+        private RJCodeAdvance.RJControls.RJButton btnSacarTodos;
         private RJCodeAdvance.RJControls.RJButton rjButton3;
         private System.Windows.Forms.Label label13;
-        private Bunifu.UI.WinForms.BunifuCheckBox CheckVendedor;
+        private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
         private System.Windows.Forms.DataGridView dgvPEspeciales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Caja;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Predef;
     }
 }

@@ -241,13 +241,13 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVEhL7Va9SgNBGFwFW62Mgg8gNtYWKdMoCim0sPAZ
-        0mglvoGlor12gpXoA4iNdpb+NIKCCIJy8f7vnLkbExJz3llclRsY2J1vvm82l2LXVBgeBEFwFQPtdvvT
-        tu13z/OeoN2EYXgG7kZRtAHOwzKmlg6osUYPvexhL2dwFmdyNrRLtXTBQhFYlvWFwacIWSG5pqZyLhTX
-        hfQYw2rgLLgALoLr4A4CTnzfv0dIKGsH1Fijh171sJczOKsma28w9o1UHnCiPmDIDNiSnQdtUVM5E7IT
-        DUnG4LQPEnODfyD7v/3MktRzmtKDCUlVcDHIXgVnQvYEkqrgYpC9Cs6E7AkkDXuw67qvuEHu8Fq4xv16
-        Dh7g2tsEefFPqeVXMJbT8myh5xC84CuEszgzdadQizEovEjLBa81DN3TNuYa2qO2ucBz6FmxyWmbjuO8
-        paXyoIymYlNAGMFnmgTnsK6Da1hv4xcd45PdDnry9IMeetFzxF5wFXKdM0E+f0YVVxxomkDzEobu49X4
-        wSCCa2qsgeOylwMELPO/IrmWXOEPGPMNFpa9215KxXwAAAAASUVORK5CYII=
+        0mglvkFKRXvtBCvRBxAb7Sz9aQQFEQQPztz/OXM3JiTmvLO4KjcwsDvffN9sLsWuqTA6CILgOgZs27Y6
+        nc6H53nP0G7DMDwH21EUbYGLsEyopQtqrNFDL3vYyxmcxZmcDe1KLT2wUASWZX1h8BlC1kiuqamcC8X1
+        ID3GsBo4Dy6By+AmuIeAU9/3HxASytoFNdbooVc97OUMzqrJ2h+MfSOVh5xoABgyB7Zk50Fb1FTOhOxE
+        Q5IxOO2jxNzgH8j+bz+zJPWdpvRgQlIVXAyyV8GZkD2BpCq4GGSvgjMhewJJox7suu4bbpB7vBZucL9e
+        gIe49rZBXvwzavkVjOWsPDvoOQIv+QrhLM5M3SnUYgwKr9JywWsNQ/e1jbmG9qRtLvAcelFsctqm4zjv
+        aak8KKOp2BQQxvCZpsEFrOvgBta7+EUn+GR3w548g6CHXvQcsxdch1znTJDPn3HFFQeaptC8gqEHeDV+
+        Mojgmhpr4KTs5QABq/yvSK4lV/gDxnwD7KC9t6Cvb2kAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="toolStripButton6.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -957,7 +957,7 @@
     <value>Configurar Impresoras</value>
   </data>
   <data name="MenuMantenimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 290</value>
+    <value>213, 268</value>
   </data>
   <data name="&gt;&gt;MenuMantenimiento.Name" xml:space="preserve">
     <value>MenuMantenimiento</value>
@@ -1017,10 +1017,10 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="bunifuFormControlBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="controlboxInicio.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="bunifuFormControlBox1.CloseBoxOptions.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="controlboxInicio.CloseBoxOptions.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAWBJREFUeF7t
         ml1KA0EQBvdAgofxUS/go3oN9cAi0e6QgjBMQjbZ6ZnpfAVN2LxsV+3PQ8gihBBCCCGEWMvj4XMEwnf5
@@ -1032,7 +1032,7 @@
         RK5CYII=
 </value>
   </data>
-  <data name="bunifuFormControlBox1.HelpBoxOptions.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="controlboxInicio.HelpBoxOptions.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAABQxJREFUeF7t
         Wt9rFFcUDv3daltEWypWRAiFdkt0k5nZ2U2kC61CS2MIEvoflFqt1PqQPvapJVBoC8Wo4I8HoSD0SZTk
@@ -1059,13 +1059,13 @@
         bHz8wMZInYB7pDJkyJAhQ4YMGZaJjo7/AOdjBQ5XrtoGAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuFormControlBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="controlboxInicio.Location" type="System.Drawing.Point, System.Drawing">
     <value>1101, 0</value>
   </data>
-  <data name="bunifuFormControlBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="controlboxInicio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="bunifuFormControlBox1.MaximizeBoxOptions.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="controlboxInicio.MaximizeBoxOptions.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAPhJREFUeF7t
         zjFqBDEURME52AR7/0vZiaJFOHkqkOEXdNzvGWOMMcYY42+f9/35T1vZ5+xObt7KPmd3cvNW9jm7k5u3
@@ -1075,7 +1075,7 @@
         C7YiSb2gIuVpAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuFormControlBox1.MaximizeBoxOptions.IconAlt" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="controlboxInicio.MaximizeBoxOptions.IconAlt" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAAVJJREFUeF7t0DGKBEEMQ9E+2AR7/0vtJo7sEghvqzSBHlTSGL7oJyIiIiLiHT+f
@@ -1087,29 +1087,29 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuFormControlBox1.MinimizeBoxOptions.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="controlboxInicio.MinimizeBoxOptions.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAEFJREFUaEPt
         zqERADAIBEEKi0j/TSUGicCB2J05+/MBAAAAsMs9520qb/VVI5Plrb5qZLK81VeNTJa3AAAAAFaI+I9U
         9vF/bLpBAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuFormControlBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="controlboxInicio.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 21</value>
   </data>
-  <data name="bunifuFormControlBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="controlboxInicio.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="&gt;&gt;bunifuFormControlBox1.Name" xml:space="preserve">
-    <value>bunifuFormControlBox1</value>
+  <data name="&gt;&gt;controlboxInicio.Name" xml:space="preserve">
+    <value>controlboxInicio</value>
   </data>
-  <data name="&gt;&gt;bunifuFormControlBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;controlboxInicio.Type" xml:space="preserve">
     <value>Bunifu.UI.WinForms.BunifuFormControlBox, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
-  <data name="&gt;&gt;bunifuFormControlBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;controlboxInicio.Parent" xml:space="preserve">
     <value>panel5</value>
   </data>
-  <data name="&gt;&gt;bunifuFormControlBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;controlboxInicio.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
