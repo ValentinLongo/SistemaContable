@@ -15,6 +15,8 @@ using System.Windows.Forms;
 using SistemaContable.Conceptos_Contables;
 using SistemaContable.Parametrizacion_Permisos;
 using SistemaContable.General;
+using System.Collections;
+using System.Web.Services.Description;
 
 namespace SistemaContable
 {
@@ -31,15 +33,34 @@ namespace SistemaContable
             Negocio.FFormatoSistema.FondoMDI(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
-        private void Cerrar(object sender, FormClosingEventArgs e)
+        private void controlboxInicio_CloseClicked(object sender, EventArgs e)
         {
-            try
-            {
-                Application.Exit();
-            }
-            catch
-            {
+            List<Form> formlist = new List<Form>();
+            int cant = Application.OpenForms.Count;
 
+            DialogResult boton = MessageBox.Show("¿Realmente desea salir?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            if (boton == DialogResult.OK)
+            {
+                if (cant > 0)
+                {
+                    foreach (Form frm in Application.OpenForms)
+                    {
+                        if (frm != this)
+                        {
+                            formlist.Add(frm);
+                        }
+                    }
+                    foreach (Form frm in formlist)
+                    {
+                        frm.Close();
+                    }
+                    Application.Exit();
+                }
+            }
+            else
+            {
+                frmInicio frmInicio = new frmInicio();
+                frmInicio.ShowDialog();
             }
         }
         private void frmInicio_Load(object sender, EventArgs e)
@@ -344,7 +365,7 @@ namespace SistemaContable
         private void parametrizacionDePermisosPerfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPermisosUsuarios permisosusuarios = new frmPermisosUsuarios();
-            permisosusuarios.ShowDialog();
+            permisosusuarios.Show();
         }
         //
     }

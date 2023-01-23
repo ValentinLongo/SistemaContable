@@ -47,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnConsulta = new System.Windows.Forms.Button();
+            this.btnCerrarTodo = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -189,7 +190,7 @@
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton3.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton3.Location = new System.Drawing.Point(406, 182);
+            this.rjButton3.Location = new System.Drawing.Point(406, 224);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(120, 26);
             this.rjButton3.TabIndex = 21;
@@ -209,7 +210,7 @@
             this.btnEspeciales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEspeciales.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEspeciales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEspeciales.Location = new System.Drawing.Point(406, 223);
+            this.btnEspeciales.Location = new System.Drawing.Point(406, 266);
             this.btnEspeciales.Name = "btnEspeciales";
             this.btnEspeciales.Size = new System.Drawing.Size(120, 26);
             this.btnEspeciales.TabIndex = 22;
@@ -291,6 +292,7 @@
             this.txtNroUsuario.Size = new System.Drawing.Size(56, 15);
             this.txtNroUsuario.TabIndex = 27;
             this.txtNroUsuario.Tag = "00000";
+            this.txtNroUsuario.TextChanged += new System.EventHandler(this.txtNroUsuario_TextChanged);
             // 
             // panel4
             // 
@@ -316,6 +318,7 @@
             this.txtDescriUsuario.ForeColor = System.Drawing.SystemColors.Window;
             this.txtDescriUsuario.Location = new System.Drawing.Point(202, 62);
             this.txtDescriUsuario.Name = "txtDescriUsuario";
+            this.txtDescriUsuario.ReadOnly = true;
             this.txtDescriUsuario.Size = new System.Drawing.Size(147, 19);
             this.txtDescriUsuario.TabIndex = 30;
             this.txtDescriUsuario.Tag = "00000";
@@ -356,12 +359,34 @@
             this.btnConsulta.UseVisualStyleBackColor = false;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
+            // btnCerrarTodo
+            // 
+            this.btnCerrarTodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnCerrarTodo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnCerrarTodo.BorderColor = System.Drawing.Color.White;
+            this.btnCerrarTodo.BorderRadius = 0;
+            this.btnCerrarTodo.BorderSize = 0;
+            this.btnCerrarTodo.FlatAppearance.BorderSize = 0;
+            this.btnCerrarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarTodo.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarTodo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarTodo.Location = new System.Drawing.Point(406, 182);
+            this.btnCerrarTodo.Name = "btnCerrarTodo";
+            this.btnCerrarTodo.Size = new System.Drawing.Size(120, 26);
+            this.btnCerrarTodo.TabIndex = 35;
+            this.btnCerrarTodo.Tag = "";
+            this.btnCerrarTodo.Text = "Cerrar Todo";
+            this.btnCerrarTodo.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarTodo.UseVisualStyleBackColor = false;
+            this.btnCerrarTodo.Click += new System.EventHandler(this.btnCerrarTodo_Click);
+            // 
             // frmPermisosUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(534, 505);
+            this.Controls.Add(this.btnCerrarTodo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnConsulta);
@@ -409,5 +434,6 @@
         private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private RJCodeAdvance.RJControls.RJButton btnCerrarTodo;
     }
 }

@@ -49,6 +49,11 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             //
 
+            ArmarArbol(txtNroUsuario.Text,"");
+        }
+
+        private void ArmarArbol(string nrousu, string descriusu)
+        {
             lista.Clear();
 
             DataSet ds = new DataSet();
@@ -57,9 +62,9 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             ds = AccesoBase.ListarDatos($"DELETE FROM Aux_MenuxUsu WHERE mxu_terminal = {terminal}");
 
-            AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MenuxUsu ( mxu_terminal, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT  {terminal}, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From MenuxUsu Where MenuxUsu.mxu_sistema = 'CO' And MenuxUsu.mxu_usuario = {txtNroUsuario.Text}");
+            AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MenuxUsu ( mxu_terminal, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT  {terminal}, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From MenuxUsu Where MenuxUsu.mxu_sistema = 'CO' And MenuxUsu.mxu_usuario = {nrousu}");
 
-            ds = AccesoBase.ListarDatos($"select mxu_codigo, mxu_activo, mnu_descri from aux_MenuxUsu left join Menu on mxu_codigo = mnu_codigo and mxu_sistema = mnu_sistema where mxu_usuario = '{txtNroUsuario.Text}' and mxu_sistema = 'CO' order by mnu_codigo");
+            ds = AccesoBase.ListarDatos($"select mxu_codigo, mxu_activo, mnu_descri from aux_MenuxUsu left join Menu on mxu_codigo = mnu_codigo and mxu_sistema = mnu_sistema where mxu_usuario = '{nrousu}' and mxu_sistema = 'CO' order by mnu_codigo");
 
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
@@ -117,6 +122,8 @@ namespace SistemaContable.Parametrizacion_Permisos
             ds = AccesoBase.ListarDatos($"DELETE FROM MenuxUsu WHERE mxu_sistema = 'CO' AND mxu_usuario = {txtNroUsuario.Text}");
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu ( mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From aux_MenuxUsu Where aux_MenuxUsu.mxu_sistema = 'CO' AND mxu_terminal = '{terminal}' AND aux_MenuxUsu.mxu_usuario = {txtNroUsuario.Text}");
+
+            MessageBox.Show("Cambios realizados correctamente!", "Mensaje");
         }
 
         private void Tpermisos_AfterCheck(object sender, TreeViewEventArgs e)
@@ -134,17 +141,8 @@ namespace SistemaContable.Parametrizacion_Permisos
         }
 
         private void btnAbrirArbol_Click(object sender, EventArgs e)
-        {
-            if (btnAbrirArbol.Text == "Abrir Todo")
-            {
-                Tpermisos.ExpandAll();
-                btnAbrirArbol.Text = "Cerrar Todo";
-            }
-            else
-            {
-                Tpermisos.CollapseAll();
-                btnAbrirArbol.Text = "Abrir Todo";
-            }
+        { 
+            Tpermisos.ExpandAll();
         }
 
         private void btnEspeciales_Click(object sender, EventArgs e)
@@ -158,6 +156,16 @@ namespace SistemaContable.Parametrizacion_Permisos
             {
                 MessageBox.Show("Atención: Debera indicar un usuario.");
             }
+        }
+
+        private void btnCerrarTodo_Click(object sender, EventArgs e)
+        {
+            Tpermisos.CollapseAll();
+        }
+
+        private void txtNroUsuario_TextChanged(object sender, EventArgs e)
+        {
+            ArmarArbol(txtNroUsuario.Text,"");
         }
     }
 }
