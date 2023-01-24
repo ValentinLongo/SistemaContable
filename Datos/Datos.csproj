@@ -225,6 +225,7 @@
     <Compile Include="AccesoBase.cs" />
     <Compile Include="Modelos\MAgenda.cs" />
     <Compile Include="Modelos\MFormatoSistema.cs" />
+    <Compile Include="Modelos\MPermisoPerfil.cs" />
     <Compile Include="Modelos\MPermisoUsuario.cs" />
     <Compile Include="Modelos\MPlanDeCuentas.cs" />
     <Compile Include="Modelos\MUsuario.cs" />

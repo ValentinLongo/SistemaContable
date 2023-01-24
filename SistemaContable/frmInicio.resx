@@ -241,13 +241,13 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVEhL7Va9SgNBGFwFW62Mgg8gNtYWKdMoCim0sPAZ
-        0mglvkFKRXvtBCvRBxAb7Sz9aQQFEQQPztz/OXM3JiTmvLO4KjcwsDvffN9sLsWuqTA6CILgOgZs27Y6
-        nc6H53nP0G7DMDwH21EUbYGLsEyopQtqrNFDL3vYyxmcxZmcDe1KLT2wUASWZX1h8BlC1kiuqamcC8X1
-        ID3GsBo4Dy6By+AmuIeAU9/3HxASytoFNdbooVc97OUMzqrJ2h+MfSOVh5xoABgyB7Zk50Fb1FTOhOxE
-        Q5IxOO2jxNzgH8j+bz+zJPWdpvRgQlIVXAyyV8GZkD2BpCq4GGSvgjMhewJJox7suu4bbpB7vBZucL9e
-        gIe49rZBXvwzavkVjOWsPDvoOQIv+QrhLM5M3SnUYgwKr9JywWsNQ/e1jbmG9qRtLvAcelFsctqm4zjv
-        aak8KKOp2BQQxvCZpsEFrOvgBta7+EUn+GR3w548g6CHXvQcsxdch1znTJDPn3HFFQeaptC8gqEHeDV+
-        Mojgmhpr4KTs5QABq/yvSK4lV/gDxnwD7KC9t6Cvb2kAAAAASUVORK5CYII=
+        0mglvkFKRXvtBCvRBxAb7Sz9aQQFEYQTztz/OXM3JiTmvLO4KjcwsDvffN9sLsWuqTA6CILgOgZs2/7s
+        dDofnuc9Q7sNw/AcbEdRtAUuwjKhli6osUYPvexhL2dwFmdyNrQrtfTAQhFYlvWFwWcIWSO5pqZyLhTX
+        g/QYw2rgPLgELoOb4B4CTn3ff0BIKGsX1Fijh171sJczOKsma38w9o1UHnKiAWDIHNiSnQdtUVM5E7IT
+        DUnG4LSPEnODfyD7v/3MktR3mtKDCUlVcDHIXgVnQvYEkqrgYpC9Cs6E7AkkjXqw67pvuEHu8Vq4wf16
+        AR7i2tsGefHPqOVXMJaz8uyg5wi85CuEszgzdadQizEovErLBa81DN3XNuYa2pO2ucBz6EWxyWmbjuO8
+        p6XyoIymYlNAGMNnmgYXsK6DG1jv4hed4JPdDXvyDIIeetFzzF5wHXKdM0E+f8YVVxxomkLzCoYe4NVo
+        MYjgmhpr4KTs5QABq/yvSK4lV/gDxnwDV7S9pT31/DcAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="toolStripButton6.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -957,7 +957,7 @@
     <value>Configurar Impresoras</value>
   </data>
   <data name="MenuMantenimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 268</value>
+    <value>213, 290</value>
   </data>
   <data name="&gt;&gt;MenuMantenimiento.Name" xml:space="preserve">
     <value>MenuMantenimiento</value>

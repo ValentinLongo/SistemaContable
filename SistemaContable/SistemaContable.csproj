@@ -320,6 +320,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Parametrizacion Permisos\frmPermisosPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrizacion Permisos\frmPermisosPerfil.Designer.cs">
+      <DependentUpon>frmPermisosPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Parametrizacion Permisos\frmPermisosUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -420,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosPerfil.resx">
+      <DependentUpon>frmPermisosPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosUsuarios.resx">
       <DependentUpon>frmPermisosUsuarios.cs</DependentUpon>

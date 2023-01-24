@@ -17,26 +17,37 @@ namespace SistemaContable.General
     {
         public static string codigoCG;
         public static string descripcionCG;
+        private static string formulario;
+        private static string ast; //asterisco
+        private static string tab; //tabla
+        private static string whe; //where
+        private static string ord; //orden
         public frmConsultaGeneral()
         {
             InitializeComponent();
             cbBusqueda.SelectedIndex = 0;
         }
 
-        public void ArmarDGV(string asterisco, string tabla, string where, string orden)
+        public void ArmarDGV(string asterisco, string tabla, string where, string orden, string frm) //frm = desde que formulario fue llamado
         {
             DataSet data = new DataSet();
 
             if (cbBusqueda.SelectedIndex == 0)
             {
                 data = Datos.AccesoBase.ListarDatos($"SELECT {asterisco} FROM {tabla} {where} {orden}");
-                dgvUsuarios.DataSource = data.Tables[0];
+                dgvConsulta.DataSource = data.Tables[0];
             }
             else if (cbBusqueda.SelectedIndex == 1)
             {
                 data = Datos.AccesoBase.ListarDatos($"SELECT {asterisco} FROM {tabla} {where} {orden}");
-                dgvUsuarios.DataSource = data.Tables[0];
+                dgvConsulta.DataSource = data.Tables[0];
             }
+
+            formulario = frm;
+            ast = asterisco;
+            tab = tabla;
+            whe = where;
+            ord = orden;
         }
 
         private void cbBusqueda_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,37 +73,47 @@ namespace SistemaContable.General
             {
                 if (cbBusqueda.SelectedIndex == 0)
                 {
-                    ArmarDGV("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "WHERE usu_codigo LIKE " + "'%" + txtBusqueda.Text + "%'", "");
+                    whe = "WHERE usu_codigo LIKE" + "'%" + txtBusqueda.Text + "%'";
+                    ArmarDGV(ast, tab, whe, "", "");
                 }
                 else if (cbBusqueda.SelectedIndex == 1)
                 {
                     if (CheckInicio.Checked)
                     {
-                        ArmarDGV($"usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "WHERE usu_nombre LIKE" + "'" + txtBusqueda.Text + "%'", "");
+                        whe = "WHERE usu_nombre LIKE" + "'" + txtBusqueda.Text + "%'";
+                        ArmarDGV(ast, tab, whe, "", "");
                     }
                     else
                     {
-                        ArmarDGV($"usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "WHERE usu_nombre LIKE" + "'%" + txtBusqueda.Text + "%'", "");
+                        whe = "WHERE usu_nombre LIKE" + "'%" + txtBusqueda.Text + "%'";
+                        ArmarDGV(ast, tab, whe, "", "");
                     }
                 }
             }
             else
             {
-                ArmarDGV("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo");
+                ArmarDGV(ast, tab, "", ord, "");
             }
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            codigoCG = dgvUsuarios.Rows[dgvUsuarios.CurrentRow.Index].Cells[0].Value.ToString();
-            descripcionCG = dgvUsuarios.Rows[dgvUsuarios.CurrentRow.Index].Cells[1].Value.ToString();
+            codigoCG = dgvConsulta.Rows[dgvConsulta.CurrentRow.Index].Cells[0].Value.ToString();
+            descripcionCG = dgvConsulta.Rows[dgvConsulta.CurrentRow.Index].Cells[1].Value.ToString();
             Close();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            ArmarDGV("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo");
+            ArmarDGV(ast, tab, "", ord, "");
             txtBusqueda.Clear();
+        }
+
+        private void btnCerrar_CloseClicked(object sender, EventArgs e)
+        {
+            codigoCG = null;
+            descripcionCG = null;
+            Close();
         }
 
         //BARRA DE CONTROL
@@ -104,13 +125,6 @@ namespace SistemaContable.General
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnCerrar_CloseClicked(object sender, EventArgs e)
-        {
-            codigoCG = null;
-            descripcionCG = null;
-            Close();
         }
     }
 }

@@ -367,12 +367,20 @@ namespace SistemaContable
         {
             Negocio.FGenerales.Permiso(soporteInteractivoDeContableToolStripMenuItem.Tag.ToString());
         }
-
         //SIN CODIGO
         private void parametrizacionDePermisosPerfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPermisosUsuarios permisosusuarios = new frmPermisosUsuarios();
             permisosusuarios.Show();
+        }
+        private void parametrizacionDePermisosUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPermisosPerfil permisosperfil = new frmPermisosPerfil();
+            permiso = Negocio.FGenerales.Permiso(soporteInteractivoDeContableToolStripMenuItem.Tag.ToString());
+            if (permiso)
+            {
+                permisosperfil.Show();
+            }
         }
         //
     }

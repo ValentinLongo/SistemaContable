@@ -35,7 +35,7 @@ namespace SistemaContable.Parametrizacion_Permisos
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             frmConsultaGeneral consultageneral = new frmConsultaGeneral();
-            consultageneral.ArmarDGV("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo");
+            consultageneral.ArmarDGV("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo", "frmPermisosUsuarios");
             consultageneral.ShowDialog();
 
             string cod = frmConsultaGeneral.codigoCG;
@@ -49,10 +49,10 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             //
 
-            ArmarArbol(txtNroUsuario.Text,"");
+            ArmarArbol(txtNroUsuario.Text);
         }
 
-        private void ArmarArbol(string nrousu, string descriusu)
+        private void ArmarArbol(string nrousu)
         {
             lista.Clear();
 
@@ -165,7 +165,7 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void txtNroUsuario_TextChanged(object sender, EventArgs e)
         {
-            ArmarArbol(txtNroUsuario.Text,"");
+            ArmarArbol(txtNroUsuario.Text);
         }
     }
 }

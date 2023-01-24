@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCerrar = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new RJCodeAdvance.RJControls.RJButton();
             this.btnActualizar = new RJCodeAdvance.RJControls.RJButton();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
@@ -42,7 +42,7 @@
             this.lblInicio = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -132,15 +132,15 @@
             this.btnCerrar.TabIndex = 29;
             this.btnCerrar.CloseClicked += new System.EventHandler(this.btnCerrar_CloseClicked);
             // 
-            // dgvUsuarios
+            // dgvConsulta
             // 
-            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(6, 85);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(576, 353);
-            this.dgvUsuarios.TabIndex = 15;
+            this.dgvConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsulta.Location = new System.Drawing.Point(6, 85);
+            this.dgvConsulta.Name = "dgvConsulta";
+            this.dgvConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvConsulta.Size = new System.Drawing.Size(576, 353);
+            this.dgvConsulta.TabIndex = 15;
             // 
             // btnSeleccionar
             // 
@@ -316,7 +316,7 @@
             this.Controls.Add(this.bunifuShapes1);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnSeleccionar);
-            this.Controls.Add(this.dgvUsuarios);
+            this.Controls.Add(this.dgvConsulta);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConsultaGeneral";
@@ -324,7 +324,7 @@
             this.Text = "frmConsultaGeneral";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,7 +335,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuFormControlBox btnCerrar;
-        private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.DataGridView dgvConsulta;
         private RJCodeAdvance.RJControls.RJButton btnSeleccionar;
         private RJCodeAdvance.RJControls.RJButton btnActualizar;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
