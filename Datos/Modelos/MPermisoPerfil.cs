@@ -8,5 +8,8 @@ namespace Datos.Modelos
 {
     public class MPermisoPerfil
     {
+        public string mxp_codigo { get; set; }
+        public string mxp_activo { get; set; }
+        public string mnu_descri { get; set; }
     }
 }

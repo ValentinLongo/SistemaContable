@@ -57,64 +57,118 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void ArmarArbol(string nroperfil) 
         {
-            //lista.Clear();
+            lista.Clear();
 
-            //DataSet ds = new DataSet();
+            DataSet ds = new DataSet();
 
-            //int terminal = frmLogin.NumeroTerminal;
+            int terminal = frmLogin.NumeroTerminal;
 
-            //ds = AccesoBase.ListarDatos($"DELETE FROM Aux_MenuxUsu WHERE mxu_terminal = {terminal}");
+            ds = AccesoBase.ListarDatos($"DELETE FROM Aux_MenuxPerfil WHERE mxp_terminal = {terminal}");
 
-            //AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MenuxUsu ( mxu_terminal, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT  {terminal}, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From MenuxUsu Where MenuxUsu.mxu_sistema = 'CO' And MenuxUsu.mxu_usuario = {nrousu}");
+            AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MenuxPerfil ( mxp_terminal, mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema) SELECT  {terminal}, mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema From MenuxPerfil Where MenuxPerfil.mxp_sistema = 'CO' And MenuxPerfil.mxp_perfil = {nroperfil}");
 
-            //ds = AccesoBase.ListarDatos($"select mxu_codigo, mxu_activo, mnu_descri from aux_MenuxUsu left join Menu on mxu_codigo = mnu_codigo and mxu_sistema = mnu_sistema where mxu_usuario = '{nrousu}' and mxu_sistema = 'CO' order by mnu_codigo");
+            ds = AccesoBase.ListarDatos($"select mxp_codigo, mxp_activo, mnu_descri from aux_MenuxPerfil left join Menu on mxp_codigo = mnu_codigo and mxp_sistema = mnu_sistema where mxp_perfil = '{nroperfil}' and mxp_sistema = 'CO' order by mnu_codigo");
 
-            //foreach (DataRow dr in ds.Tables[0].Rows)
-            //{
-            //    MPermisoUsuario mPermiso = new MPermisoUsuario()
-            //    {
-            //        mxu_codigo = dr["mxu_codigo"].ToString(),
-            //        mxu_activo = dr["mxu_activo"].ToString(),
-            //        mnu_descri = dr["mnu_descri"].ToString()
-            //    };
-            //    lista.Add(mPermiso);
-            //}
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                MPermisoPerfil mPermiso = new MPermisoPerfil()
+                {
+                    mxp_codigo = dr["mxp_codigo"].ToString(),
+                    mxp_activo = dr["mxp_activo"].ToString(),
+                    mnu_descri = dr["mnu_descri"].ToString()
+                };
+                lista.Add(mPermiso);
+            }
 
-            //var raiz = Tpermisos.Nodes.Add("");
-            //var subgrupo1 = Tpermisos.Nodes.Add("");
-            //var subgrupo2 = Tpermisos.Nodes.Add("");
-            //Tpermisos.Nodes.Clear();
+            var raiz = Tpermisos.Nodes.Add("");
+            var subgrupo1 = Tpermisos.Nodes.Add("");
+            var subgrupo2 = Tpermisos.Nodes.Add("");
+            Tpermisos.Nodes.Clear();
 
-            //foreach (var i in lista)
-            //{
-            //    if (i.mxu_codigo.Length == 2)
-            //    {
-            //        raiz = Tpermisos.Nodes.Add(i.mnu_descri);
-            //        if (i.mxu_activo == "1")
-            //        {
-            //            raiz.Checked = true;
-            //        }
-            //        raiz.Tag = i.mxu_codigo;
-            //    }
-            //    if (i.mxu_codigo.Length == 4)
-            //    {
-            //        subgrupo1 = raiz.Nodes.Add(i.mnu_descri);
-            //        if (i.mxu_activo == "1")
-            //        {
-            //            subgrupo1.Checked = true;
-            //        }
-            //        subgrupo1.Tag = i.mxu_codigo;
-            //    }
-            //    if (i.mxu_codigo.Length == 6)
-            //    {
-            //        subgrupo2 = subgrupo1.Nodes.Add(i.mnu_descri);
-            //        if (i.mxu_activo == "1")
-            //        {
-            //            subgrupo2.Checked = true;
-            //        }
-            //        subgrupo2.Tag = i.mxu_codigo;
-            //    }
-            //}
+            foreach (var i in lista)
+            {
+                if (i.mxp_codigo.Length == 2)
+                {
+                    raiz = Tpermisos.Nodes.Add(i.mnu_descri);
+                    if (i.mxp_activo == "1")
+                    {
+                        raiz.Checked = true;
+                    }
+                    raiz.Tag = i.mxp_codigo;
+                }
+                if (i.mxp_codigo.Length == 4)
+                {
+                    subgrupo1 = raiz.Nodes.Add(i.mnu_descri);
+                    if (i.mxp_activo == "1")
+                    {
+                        subgrupo1.Checked = true;
+                    }
+                    subgrupo1.Tag = i.mxp_codigo;
+                }
+                if (i.mxp_codigo.Length == 6)
+                {
+                    subgrupo2 = subgrupo1.Nodes.Add(i.mnu_descri);
+                    if (i.mxp_activo == "1")
+                    {
+                        subgrupo2.Checked = true;
+                    }
+                    subgrupo2.Tag = i.mxp_codigo;
+                }
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            int terminal = frmLogin.NumeroTerminal;
+            DataSet ds = new DataSet();
+
+            ds = AccesoBase.ListarDatos($"DELETE FROM MenuxPerfil WHERE mxp_sistema = 'CO' AND mxp_perfil = {txtNroPerfil.Text}");
+
+            AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxPerfil ( mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema) SELECT mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema From aux_MenuxPerfil Where aux_MenuxPerfil.mxp_sistema = 'CO' AND mxp_terminal = '{terminal}' AND aux_MenuxPerfil.mxp_perfil = {txtNroPerfil.Text}");
+
+            MessageBox.Show("Cambios realizados correctamente!", "Mensaje");
+        }
+
+        private void Tpermisos_AfterCheck(object sender, TreeViewEventArgs e)
+        {
+            int terminal = frmLogin.NumeroTerminal;
+            var codigo = e.Node.Tag;
+            if (e.Node.Checked)
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE aux_MenuxPerfil SET mxp_activo = '1' WHERE mxp_terminal = {terminal} AND mxp_codigo = {codigo}");
+            }
+            else
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE aux_MenuxPerfil SET mxp_activo = '0' WHERE mxp_terminal = {terminal} AND mxp_codigo = {codigo}");
+            }
+        }
+
+        private void btnAbrirArbol_Click(object sender, EventArgs e)
+        {
+            Tpermisos.ExpandAll();
+        }
+
+        private void btnCerrarArbol_Click(object sender, EventArgs e)
+        {
+            Tpermisos.CollapseAll();
+        }
+
+        private void btnEspeciales_Click(object sender, EventArgs e)
+        {
+            if (txtNroPerfil.Text != "" && txtDescriPerfil.Text != "")
+            {
+                frmPermisosEspecialesUsu especialusuario = new frmPermisosEspecialesUsu();
+                especialusuario.Show();
+            }
+            else
+            {
+                MessageBox.Show("Atención: Debera indicar un usuario.");
+            }
+        }
+
+        private void txtNroPerfil_TextChanged(object sender, EventArgs e)
+        {
+            ArmarArbol(txtNroPerfil.Text);
         }
     }
 }

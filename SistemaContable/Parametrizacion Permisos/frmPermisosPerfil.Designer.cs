@@ -33,7 +33,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.Tpermisos = new System.Windows.Forms.TreeView();
-            this.btnCerrarTodo = new RJCodeAdvance.RJControls.RJButton();
+            this.btnCerrarArbol = new RJCodeAdvance.RJControls.RJButton();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.btnEspeciales = new RJCodeAdvance.RJControls.RJButton();
             this.btnAbrirArbol = new RJCodeAdvance.RJControls.RJButton();
@@ -148,26 +148,28 @@
             this.Tpermisos.Name = "Tpermisos";
             this.Tpermisos.Size = new System.Drawing.Size(388, 393);
             this.Tpermisos.TabIndex = 25;
+            this.Tpermisos.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.Tpermisos_AfterCheck);
             // 
-            // btnCerrarTodo
+            // btnCerrarArbol
             // 
-            this.btnCerrarTodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnCerrarTodo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnCerrarTodo.BorderColor = System.Drawing.Color.White;
-            this.btnCerrarTodo.BorderRadius = 0;
-            this.btnCerrarTodo.BorderSize = 0;
-            this.btnCerrarTodo.FlatAppearance.BorderSize = 0;
-            this.btnCerrarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarTodo.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarTodo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCerrarTodo.Location = new System.Drawing.Point(406, 182);
-            this.btnCerrarTodo.Name = "btnCerrarTodo";
-            this.btnCerrarTodo.Size = new System.Drawing.Size(120, 26);
-            this.btnCerrarTodo.TabIndex = 41;
-            this.btnCerrarTodo.Tag = "";
-            this.btnCerrarTodo.Text = "Cerrar Todo";
-            this.btnCerrarTodo.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCerrarTodo.UseVisualStyleBackColor = false;
+            this.btnCerrarArbol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnCerrarArbol.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnCerrarArbol.BorderColor = System.Drawing.Color.White;
+            this.btnCerrarArbol.BorderRadius = 0;
+            this.btnCerrarArbol.BorderSize = 0;
+            this.btnCerrarArbol.FlatAppearance.BorderSize = 0;
+            this.btnCerrarArbol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarArbol.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarArbol.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarArbol.Location = new System.Drawing.Point(406, 182);
+            this.btnCerrarArbol.Name = "btnCerrarArbol";
+            this.btnCerrarArbol.Size = new System.Drawing.Size(120, 26);
+            this.btnCerrarArbol.TabIndex = 41;
+            this.btnCerrarArbol.Tag = "";
+            this.btnCerrarArbol.Text = "Cerrar Todo";
+            this.btnCerrarArbol.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarArbol.UseVisualStyleBackColor = false;
+            this.btnCerrarArbol.Click += new System.EventHandler(this.btnCerrarArbol_Click);
             // 
             // btnImprimir
             // 
@@ -208,6 +210,7 @@
             this.btnEspeciales.Text = "Especiales";
             this.btnEspeciales.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEspeciales.UseVisualStyleBackColor = false;
+            this.btnEspeciales.Click += new System.EventHandler(this.btnEspeciales_Click);
             // 
             // btnAbrirArbol
             // 
@@ -228,6 +231,7 @@
             this.btnAbrirArbol.Text = "Abrir Todo";
             this.btnAbrirArbol.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAbrirArbol.UseVisualStyleBackColor = false;
+            this.btnAbrirArbol.Click += new System.EventHandler(this.btnAbrirArbol_Click);
             // 
             // btnConfirmar
             // 
@@ -248,6 +252,7 @@
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // label3
             // 
@@ -325,6 +330,7 @@
             this.txtNroPerfil.Size = new System.Drawing.Size(56, 15);
             this.txtNroPerfil.TabIndex = 44;
             this.txtNroPerfil.Tag = "00000";
+            this.txtNroPerfil.TextChanged += new System.EventHandler(this.txtNroPerfil_TextChanged);
             // 
             // label1
             // 
@@ -345,7 +351,7 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(13, 43);
+            this.bunifuShapes1.Location = new System.Drawing.Point(12, 43);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
@@ -353,7 +359,7 @@
             this.bunifuShapes1.TabIndex = 42;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
-            // fmrPermisosPerfil
+            // frmPermisosPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -368,7 +374,7 @@
             this.Controls.Add(this.txtNroPerfil);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuShapes1);
-            this.Controls.Add(this.btnCerrarTodo);
+            this.Controls.Add(this.btnCerrarArbol);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnEspeciales);
             this.Controls.Add(this.btnAbrirArbol);
@@ -376,7 +382,8 @@
             this.Controls.Add(this.Tpermisos);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "fmrPermisosPerfil";
+            this.Name = "frmPermisosPerfil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmrPermisosPerfil";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -391,7 +398,7 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.TreeView Tpermisos;
-        private RJCodeAdvance.RJControls.RJButton btnCerrarTodo;
+        private RJCodeAdvance.RJControls.RJButton btnCerrarArbol;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private RJCodeAdvance.RJControls.RJButton btnEspeciales;
         private RJCodeAdvance.RJControls.RJButton btnAbrirArbol;

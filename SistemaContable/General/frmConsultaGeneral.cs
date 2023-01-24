@@ -22,6 +22,7 @@ namespace SistemaContable.General
         private static string tab; //tabla
         private static string whe; //where
         private static string ord; //orden
+        private static string columna;
         public frmConsultaGeneral()
         {
             InitializeComponent();
@@ -48,7 +49,7 @@ namespace SistemaContable.General
             tab = tabla;
             whe = where;
             ord = orden;
-        }
+        }       
 
         private void cbBusqueda_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -67,25 +68,51 @@ namespace SistemaContable.General
             Negocio.FValidacionesEventos.EventosFormulario(this);
         }
 
+        string frm1 = "frmPermisosUsuarios";
+        string frm2 = "frmPermisosPerfil";
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
+            if (formulario == frm1)
+            {
+                frm1 = "";
+                if (cbBusqueda.SelectedIndex == 0)
+                {
+                    columna = "usu_codigo";
+                }
+                else if (cbBusqueda.SelectedIndex == 1)
+                {
+                    columna = "usu_nombre";
+                }
+            }
+            else if (formulario == frm2) 
+            {
+                frm2 = "";
+                if (cbBusqueda.SelectedIndex == 0)
+                {
+                    columna = "per_codigo";
+                }
+                else if (cbBusqueda.SelectedIndex == 1)
+                {
+                    columna = "per_descri";
+                }
+            }
             if (txtBusqueda.Text != "")
             {
                 if (cbBusqueda.SelectedIndex == 0)
                 {
-                    whe = "WHERE usu_codigo LIKE" + "'%" + txtBusqueda.Text + "%'";
+                    whe = "WHERE " + columna + " LIKE " + "'%" + txtBusqueda.Text + "%'";
                     ArmarDGV(ast, tab, whe, "", "");
                 }
                 else if (cbBusqueda.SelectedIndex == 1)
                 {
                     if (CheckInicio.Checked)
                     {
-                        whe = "WHERE usu_nombre LIKE" + "'" + txtBusqueda.Text + "%'";
+                        whe = "WHERE " + columna +  " LIKE " + "'" + txtBusqueda.Text + "%'";
                         ArmarDGV(ast, tab, whe, "", "");
                     }
                     else
                     {
-                        whe = "WHERE usu_nombre LIKE" + "'%" + txtBusqueda.Text + "%'";
+                        whe = "WHERE " + columna + " LIKE " + "'%" + txtBusqueda.Text + "%'";
                         ArmarDGV(ast, tab, whe, "", "");
                     }
                 }
