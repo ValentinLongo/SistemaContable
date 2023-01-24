@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbCodigo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -44,14 +44,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código:";
             // 
-            // label2
+            // lbCodigo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ALTA DE CONCEPTO";
+            this.lbCodigo.AutoSize = true;
+            this.lbCodigo.Location = new System.Drawing.Point(75, 40);
+            this.lbCodigo.Name = "lbCodigo";
+            this.lbCodigo.Size = new System.Drawing.Size(114, 13);
+            this.lbCodigo.TabIndex = 1;
+            this.lbCodigo.Text = "ALTA DE CONCEPTO";
             // 
             // label3
             // 
@@ -87,9 +87,10 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.label1);
             this.Name = "frmAgregarSucursal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sucursales";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -99,7 +100,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbDescripcion;
         private System.Windows.Forms.Button btnAceptar;

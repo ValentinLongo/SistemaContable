@@ -60,6 +60,7 @@
             this.dgvSucursales.ReadOnly = true;
             this.dgvSucursales.Size = new System.Drawing.Size(682, 381);
             this.dgvSucursales.TabIndex = 1;
+            this.dgvSucursales.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
             // 
             // label1
             // 
@@ -88,6 +89,7 @@
             this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -97,6 +99,7 @@
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmEmpresa
             // 
@@ -110,6 +113,7 @@
             this.Controls.Add(this.dgvSucursales);
             this.Controls.Add(this.dgvEmpresa);
             this.Name = "frmEmpresa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEmpresa";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSucursales)).EndInit();

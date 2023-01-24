@@ -12,20 +12,37 @@ namespace SistemaContable.Empresa
 {
     public partial class frmAgregarSucursal : Form
     {
-        public frmAgregarSucursal()
+        string TipoDeOperacion;
+        int IdSucursal;
+        public frmAgregarSucursal(string tipoOperacion)
         {
             InitializeComponent();
+            TipoDeOperacion = tipoOperacion;
+            if (tipoOperacion == "Modificar")
+            {
+                IdSucursal = frmEmpresa.codigoSucursal;
+                lbCodigo.Text = IdSucursal.ToString();
+                tbDescripcion.Text = frmEmpresa.descripcionSucursal;
+            }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (tbDescripcion.Text != "")
             {
-                int id = Negocio.FGenerales.ultimoNumeroID("suc_codigo", "Sucursal");
-                id = id + 1;
-                Datos.AccesoBase.InsertUpdateDatos($"insert into Sucursal(suc_codigo,suc_descri) VALUES({id},'{tbDescripcion.Text}')");
-                MessageBox.Show("Agregado Correctamente");
-                this.Close();
+                if (TipoDeOperacion == "Agregar")
+                {
+                    int id = Negocio.FGenerales.ultimoNumeroID("suc_codigo", "Sucursal");
+                    Datos.AccesoBase.InsertUpdateDatos($"insert into Sucursal(suc_codigo,suc_descri) VALUES({id},'{tbDescripcion.Text}')");
+                    MessageBox.Show("Agregado Correctamente");
+                    this.Close();
+                }
+                else if(TipoDeOperacion == "Modificar")
+                {
+                    Datos.AccesoBase.InsertUpdateDatos($"UPDATE Sucursal SET suc_descri = '{tbDescripcion.Text}' WHERE suc_codigo = {IdSucursal}");
+                    MessageBox.Show("Modificado Correctamente");
+                    this.Close();
+                }
             }
             else
             {

@@ -18,8 +18,13 @@ namespace Negocio
         public static DataSet listaSucursales()
         {
             DataSet ds = new DataSet();
-            ds = Datos.AccesoBase.ListarDatos("select suc_codigo as Código, suc_descri as Descripción from Sucursal");
+            ds = Datos.AccesoBase.ListarDatos("select suc_codigo as Código, suc_descri as Descripción from Sucursal ORDER BY suc_codigo");
             return ds;
+        }
+
+        public static void eliminarSucursal(int idSucursal)
+        {
+            Datos.AccesoBase.InsertUpdateDatos($"delete from Sucursal where suc_codigo = {idSucursal}");
         }
     }
 }
