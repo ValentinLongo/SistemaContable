@@ -157,12 +157,12 @@ namespace SistemaContable.Parametrizacion_Permisos
         {
             if (txtNroPerfil.Text != "" && txtDescriPerfil.Text != "")
             {
-                frmPermisosEspecialesUsu especialusuario = new frmPermisosEspecialesUsu();
-                especialusuario.Show();
+                frmPermisosEspecialesPerfil especialperfil = new frmPermisosEspecialesPerfil();
+                especialperfil.Show();
             }
             else
             {
-                MessageBox.Show("Atención: Debera indicar un usuario.");
+                MessageBox.Show("Atención: Debera indicar un perfil.");
             }
         }
 

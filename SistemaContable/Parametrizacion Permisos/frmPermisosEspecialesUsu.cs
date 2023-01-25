@@ -133,7 +133,7 @@ namespace SistemaContable.Parametrizacion_Permisos
         private void btnSacarTodos_Click(object sender, EventArgs e)
         {
             dgvPEspeciales.Rows.Clear();
-            cargarDGV("", "", "0");
+            cargarDGV("", "","0");
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
