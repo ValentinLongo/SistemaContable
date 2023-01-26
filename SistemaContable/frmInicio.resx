@@ -241,13 +241,13 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVEhL7Va9SgNBGFwFW62Mgg8gNtYWKdMoCim0sPAZ
-        0mglvkFKRXvtBCvRBxAb7Sz9aQQFEYQTztz/OXM3JiTmvLO4KjcwsDvffN9sLsWuqTA6CILgOgZs2/7s
-        dDofnuc9Q7sNw/AcbEdRtAUuwjKhli6osUYPvexhL2dwFmdyNrQrtfTAQhFYlvWFwWcIWSO5pqZyLhTX
-        g/QYw2rgPLgELoOb4B4CTn3ff0BIKGsX1Fijh171sJczOKsma38w9o1UHnKiAWDIHNiSnQdtUVM5E7IT
-        DUnG4LSPEnODfyD7v/3MktR3mtKDCUlVcDHIXgVnQvYEkqrgYpC9Cs6E7AkkjXqw67pvuEHu8Vq4wf16
-        AR7i2tsGefHPqOVXMJaz8uyg5wi85CuEszgzdadQizEovErLBa81DN3XNuYa2pO2ucBz6EWxyWmbjuO8
-        p6XyoIymYlNAGMNnmgYXsK6DG1jv4hed4JPdDXvyDIIeetFzzF5wHXKdM0E+f8YVVxxomkLzCoYe4NVo
-        MYjgmhpr4KTs5QABq/yvSK4lV/gDxnwDV7S9pT31/DcAAAAASUVORK5CYII=
+        0mglvoGlor12gpXoA4iNdpb+NIKCCHIK8f7vnLkbExJz3llclRsY2J1vvm82l2LXVBgeBEFwFQPtdvvT
+        tu13z/OeoN2EYXgG7kZRtAHOwzKmlg6osUYPvexhL2dwFmdyNrRLtXTBQhFYlvWFwacIWSG5pqZyLhTX
+        hfQYw2rgLLgALoLr4A4CTnzfv0dIKGsH1Fijh171sJczOKsma28w9o1UHnCiPmDIDNiSnQdtUVM5E7IT
+        DUnG4LQPEnODfyD7v/3MktRzmtKDCUlVcDHIXgVnQvYEkqrgYpC9Cs6E7AkkDXuw67qvuEHu8Fq4xv16
+        Dh7g2tsEefFPqeVXMJbT8myh5xC84CuEszgzdadQizEovEjLBa81DN3TNuYa2qO2ucBz6FmxyWmbjuO8
+        paXyoIymYlNAGMFnmgTnsK6Da1hv4xcd45PdDnry9IMeetFzxF5wFXKdM0E+f0YVVxxomkDzEobu49X4
+        wSCCa2qsgeOylwMELPO/IrmWXOEPGPMNwrm9kwJEcx8AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="toolStripButton6.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -957,7 +957,7 @@
     <value>Configurar Impresoras</value>
   </data>
   <data name="MenuMantenimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 290</value>
+    <value>213, 268</value>
   </data>
   <data name="&gt;&gt;MenuMantenimiento.Name" xml:space="preserve">
     <value>MenuMantenimiento</value>
@@ -1556,7 +1556,7 @@
     <value>True</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1565,7 +1565,7 @@
     <value>3, 5</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 13</value>
+    <value>39, 13</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>

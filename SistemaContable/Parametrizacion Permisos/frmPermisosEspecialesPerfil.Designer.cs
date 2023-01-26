@@ -40,7 +40,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
-            this.btnSacarTodos = new RJCodeAdvance.RJControls.RJButton();
+            this.btnSacarTodo = new RJCodeAdvance.RJControls.RJButton();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
             this.btnAgregarTodo = new RJCodeAdvance.RJControls.RJButton();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -278,26 +278,26 @@
             this.rjButton3.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.rjButton3.UseVisualStyleBackColor = false;
             // 
-            // btnSacarTodos
+            // btnSacarTodo
             // 
-            this.btnSacarTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnSacarTodos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnSacarTodos.BorderColor = System.Drawing.Color.White;
-            this.btnSacarTodos.BorderRadius = 0;
-            this.btnSacarTodos.BorderSize = 0;
-            this.btnSacarTodos.FlatAppearance.BorderSize = 0;
-            this.btnSacarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSacarTodos.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSacarTodos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSacarTodos.Location = new System.Drawing.Point(664, 206);
-            this.btnSacarTodos.Name = "btnSacarTodos";
-            this.btnSacarTodos.Size = new System.Drawing.Size(125, 26);
-            this.btnSacarTodos.TabIndex = 85;
-            this.btnSacarTodos.Tag = "";
-            this.btnSacarTodos.Text = "Sacar Todos";
-            this.btnSacarTodos.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSacarTodos.UseVisualStyleBackColor = false;
-            this.btnSacarTodos.Click += new System.EventHandler(this.btnSacarTodos_Click);
+            this.btnSacarTodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnSacarTodo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnSacarTodo.BorderColor = System.Drawing.Color.White;
+            this.btnSacarTodo.BorderRadius = 0;
+            this.btnSacarTodo.BorderSize = 0;
+            this.btnSacarTodo.FlatAppearance.BorderSize = 0;
+            this.btnSacarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSacarTodo.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSacarTodo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSacarTodo.Location = new System.Drawing.Point(664, 206);
+            this.btnSacarTodo.Name = "btnSacarTodo";
+            this.btnSacarTodo.Size = new System.Drawing.Size(125, 26);
+            this.btnSacarTodo.TabIndex = 85;
+            this.btnSacarTodo.Tag = "";
+            this.btnSacarTodo.Text = "Sacar Todos";
+            this.btnSacarTodo.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSacarTodo.UseVisualStyleBackColor = false;
+            this.btnSacarTodo.Click += new System.EventHandler(this.btnSacarTodo_Click);
             // 
             // btnConfirmar
             // 
@@ -546,7 +546,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.CheckInicio);
             this.Controls.Add(this.rjButton3);
-            this.Controls.Add(this.btnSacarTodos);
+            this.Controls.Add(this.btnSacarTodo);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.btnAgregarTodo);
             this.Controls.Add(this.panel6);
@@ -591,7 +591,7 @@
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
         private RJCodeAdvance.RJControls.RJButton rjButton3;
-        private RJCodeAdvance.RJControls.RJButton btnSacarTodos;
+        private RJCodeAdvance.RJControls.RJButton btnSacarTodo;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
         private RJCodeAdvance.RJControls.RJButton btnAgregarTodo;
         private System.Windows.Forms.Panel panel6;

@@ -28,11 +28,12 @@ namespace SistemaContable.Parametrizacion_Permisos
                 txtDescriPerfil.ReadOnly = true;
                 cbModulo.SelectedIndex = 0;
             }
-            cargarDGV("", "", "");
+            cargarDGV("","","");
         }
 
         public void cargarDGV(string modulobusqueda, string txtdescri, string estado)
         {
+            dgvPEspeciales.Rows.Clear();
             DataSet data = new DataSet();
             data = Datos.AccesoBase.ListarDatos($"SELECT pef_codigo as Codigo, pef_modulo as Modulo, pef_descri as Descripcion, pxp_activo as Activo FROM PermisosxPerfil LEFT JOIN Permisos ON pef_codigo = pxp_codigo AND pef_sistema = pxp_sistema  WHERE pef_sistema = 'CO' AND pxp_perfil = {codigo} {modulobusqueda} {txtdescri} ORDER BY pef_codigo");
             foreach (DataRow dr in data.Tables[0].Rows)
@@ -63,37 +64,78 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void dgvPEspeciales_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string codigo2 = (string)dgvPEspeciales.Rows[e.RowIndex].Cells[0].Value; //codigo2 = pxu_usuario de la tabla permisosxusu
+            bool isCellChecked = (bool)dgvPEspeciales.Rows[e.RowIndex].Cells[3].Value;
+            if (isCellChecked)
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE PermisosxPerfil SET pxp_activo = '0' WHERE pxp_perfil = '{codigo}' AND pxp_codigo = '{codigo2}'  AND pxp_sistema = 'CO'");
+            }
+            else
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE PermisosxPerfil SET pxp_activo = '1' WHERE pxp_perfil = '{codigo}' AND pxp_codigo = '{codigo2}' AND pxp_sistema = 'CO'");
+            }
+            dgvPEspeciales.Rows.Clear();
+            cargarDGV("","","");
         }
 
         private void dgvPEspeciales_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
-
+            if (dgvPEspeciales.IsCurrentCellDirty)
+            {
+                dgvPEspeciales.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
         }
 
         private void cbModulo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string modulobusqueda = cbModulo.Text;
+            if (modulobusqueda == "TODOS")
+            {
+                modulobusqueda = "";
+            }
+            else
+            {
+                modulobusqueda = "AND pef_modulo = " + "'" + modulobusqueda + "'";
+            }
 
+            dgvPEspeciales.Rows.Clear();
+            cargarDGV(modulobusqueda,"", "");
         }
 
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
+            if (txtDescripcion.Text != "")
+            {
+                string txtdescri;
 
+                if (CheckInicio.Checked)
+                {
+                    txtdescri = "AND pef_descri LIKE " + "'" + txtDescripcion.Text + "%'";
+                }
+                else
+                {
+                    txtdescri = "AND pef_descri LIKE " + "'%" + txtDescripcion.Text + "%'";
+                }
+                dgvPEspeciales.Rows.Clear();
+                cargarDGV("", txtdescri, "");
+            }
         }
 
         private void btnAgregarTodo_Click(object sender, EventArgs e)
         {
-
+            dgvPEspeciales.Rows.Clear();
+            cargarDGV("", "", "1");
         }
-
-        private void btnSacarTodos_Click(object sender, EventArgs e)
+        private void btnSacarTodo_Click(object sender, EventArgs e)
         {
-
+            dgvPEspeciales.Rows.Clear();
+            cargarDGV("", "", "0");
         }
+
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)

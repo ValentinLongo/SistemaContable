@@ -1,6 +1,6 @@
-﻿namespace SistemaContable
+﻿namespace SistemaContable.General
 {
-    partial class frmCambiarUsuario
+    partial class frmCodigoBarra
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCambiarUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCodigoBarra));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtCodigoBarra = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +46,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 21);
+            this.panel1.Size = new System.Drawing.Size(499, 21);
             this.panel1.TabIndex = 13;
             this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -64,9 +58,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(3, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 13);
+            this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 30;
-            this.label4.Text = "Solicitud de Autorizacion";
+            this.label4.Text = "Codigo de Barra";
             // 
             // bunifuFormControlBox1
             // 
@@ -97,7 +91,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(259, 0);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(475, 0);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = false;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -135,129 +129,46 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(56, 46);
+            this.label1.Location = new System.Drawing.Point(12, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Usuario:";
+            this.label1.Size = new System.Drawing.Size(209, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Ingrese el código de barra:";
             // 
-            // label2
+            // txtCodigoBarra
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(28, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 20);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Contraseña:";
-            // 
-            // bunifuShapes1
-            // 
-            this.bunifuShapes1.Angle = 0F;
-            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.BorderColor = System.Drawing.Color.White;
-            this.bunifuShapes1.BorderThickness = 1;
-            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(12, 27);
-            this.bunifuShapes1.Name = "bunifuShapes1";
-            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
-            this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(259, 141);
-            this.bunifuShapes1.TabIndex = 16;
-            this.bunifuShapes1.Text = "bunifuShapes1";
-            // 
-            // btnAcceder
-            // 
-            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnAcceder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnAcceder.BorderColor = System.Drawing.Color.White;
-            this.btnAcceder.BorderRadius = 0;
-            this.btnAcceder.BorderSize = 0;
-            this.btnAcceder.FlatAppearance.BorderSize = 0;
-            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcceder.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcceder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAcceder.Location = new System.Drawing.Point(32, 129);
-            this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(222, 26);
-            this.btnAcceder.TabIndex = 17;
-            this.btnAcceder.Tag = "";
-            this.btnAcceder.Text = "Acceder";
-            this.btnAcceder.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAcceder.UseVisualStyleBackColor = false;
-            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtUsuario.Location = new System.Drawing.Point(123, 45);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(131, 19);
-            this.txtUsuario.TabIndex = 18;
-            this.txtUsuario.Tag = "00000";
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtContraseña.Location = new System.Drawing.Point(123, 75);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(131, 19);
-            this.txtContraseña.TabIndex = 19;
-            this.txtContraseña.Tag = "00000";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel7.Location = new System.Drawing.Point(32, 113);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(222, 1);
-            this.panel7.TabIndex = 36;
+            this.txtCodigoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtCodigoBarra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigoBarra.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoBarra.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtCodigoBarra.Location = new System.Drawing.Point(227, 47);
+            this.txtCodigoBarra.Name = "txtCodigoBarra";
+            this.txtCodigoBarra.Size = new System.Drawing.Size(260, 19);
+            this.txtCodigoBarra.TabIndex = 19;
+            this.txtCodigoBarra.Tag = "00000";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(123, 63);
+            this.panel3.Location = new System.Drawing.Point(227, 65);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(131, 1);
-            this.panel3.TabIndex = 37;
+            this.panel3.Size = new System.Drawing.Size(260, 1);
+            this.panel3.TabIndex = 38;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(123, 93);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(131, 1);
-            this.panel2.TabIndex = 38;
-            // 
-            // frmCambiarUsuario
+            // frmCodigoBarra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(283, 176);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(499, 92);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.btnAcceder);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtCodigoBarra);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.bunifuShapes1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCambiarUsuario";
+            this.Name = "frmCodigoBarra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCambiarUsuario";
-            this.Load += new System.EventHandler(this.frmCambiarUsuario_Load);
+            this.Text = "frmCodigoBarra";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -271,13 +182,7 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
-        private RJCodeAdvance.RJControls.RJButton btnAcceder;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox txtCodigoBarra;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
     }
 }

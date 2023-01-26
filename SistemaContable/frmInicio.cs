@@ -378,7 +378,15 @@ namespace SistemaContable
         private void parametrizacionDePermisosPerfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPermisosUsuarios permisosusuarios = new frmPermisosUsuarios();
-            permisosusuarios.Show();
+            frmCambiarUsuario frmSA = new frmCambiarUsuario();
+            permiso = Negocio.FGenerales.Permiso(soporteInteractivoDeContableToolStripMenuItem.Tag.ToString());
+            if (permiso)
+            {               
+                //permisosusuarios.Show();
+                frmSA.Show();
+                frmCambiarUsuario.perfil = 1;
+                frmCambiarUsuario.cambia = 0;
+            }
         }
         private void parametrizacionDePermisosUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {

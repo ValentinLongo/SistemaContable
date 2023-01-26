@@ -223,15 +223,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FAgenda.cs" />
-    <Compile Include="FEmpresa.cs" />
-    <Compile Include="FFormatoSistema.cs" />
-    <Compile Include="FGenerales.cs" />
-    <Compile Include="FInicio.cs" />
-    <Compile Include="FLogin.cs" />
-    <Compile Include="FPlanDeCuentas.cs" />
-    <Compile Include="FUsuarios.cs" />
-    <Compile Include="FValidacionesEventos.cs" />
+    <Compile Include="Funciones\FAgenda.cs" />
+    <Compile Include="Funciones\FEmpresa.cs" />
+    <Compile Include="Funciones\FFormatoSistema.cs" />
+    <Compile Include="Funciones\FGenerales.cs" />
+    <Compile Include="Funciones\FInicio.cs" />
+    <Compile Include="Funciones\FLogin.cs" />
+    <Compile Include="Funciones\FPlanDeCuentas.cs" />
+    <Compile Include="Funciones\FUsuarios.cs" />
+    <Compile Include="Funciones\FValidacionesEventos.cs" />
     <Compile Include="Menu.cs">
       <SubType>Component</SubType>
     </Compile>
