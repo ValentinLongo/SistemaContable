@@ -382,6 +382,12 @@
     <Compile Include="Usuarios\frmDefinirCajas.Designer.cs">
       <DependentUpon>frmDefinirCajas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\frmModificarContra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmModificarContra.Designer.cs">
+      <DependentUpon>frmModificarContra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\frmModificarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -473,6 +479,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmDefinirCajas.resx">
       <DependentUpon>frmDefinirCajas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmModificarContra.resx">
+      <DependentUpon>frmModificarContra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmModificarUsuario.resx">
       <DependentUpon>frmModificarUsuario.cs</DependentUpon>

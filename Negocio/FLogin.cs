@@ -16,6 +16,7 @@ namespace Negocio
     {
         public static int IdUsuario;
         public static string NombreUsuario;
+        public static string ContraUsuario;
         //BUSCO SI EXISTE USUARIO
         public static int buscarUsuario(string usuario, string contrasenia)
         {
@@ -42,10 +43,12 @@ namespace Negocio
                 MUsuario mUsuario = new MUsuario()
                 {
                     usu_codigo = Convert.ToInt32(dr["usu_codigo"]),
-                    usu_nombre = dr["usu_nombre"].ToString()
+                    usu_nombre = dr["usu_nombre"].ToString(),
+                    usu_contrasenia = dr["usu_contraseña"].ToString()
                 };
                 IdUsuario = mUsuario.usu_codigo;
                 NombreUsuario = mUsuario.usu_nombre;
+                ContraUsuario = mUsuario.usu_contrasenia;
             }
         }
 

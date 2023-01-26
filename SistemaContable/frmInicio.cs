@@ -18,6 +18,7 @@ using SistemaContable.General;
 using System.Collections;
 using System.Web.Services.Description;
 using SistemaContable.Empresa;
+using Negocio;
 
 namespace SistemaContable
 {
@@ -316,6 +317,12 @@ namespace SistemaContable
         private void modificaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Negocio.FGenerales.Permiso(modificaToolStripMenuItem.Tag.ToString());
+            frmModificarContra frmModificar = new frmModificarContra();
+            permiso = Negocio.FGenerales.Permiso(empresaToolStripMenuItem.Tag.ToString());
+            if (permiso)
+            {
+                frmModificar.ShowDialog();
+            }
         }
         private void ejercicioContableToolStripMenuItem_Click(object sender, EventArgs e)
         {

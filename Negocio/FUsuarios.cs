@@ -90,5 +90,10 @@ namespace Negocio
             Datos.AccesoBase.InsertUpdateDatos($"UPDATE CajaxUsuario SET cxu_predef = 0 where cxu_usuario = {Negocio.FLogin.IdUsuario}");
             Datos.AccesoBase.InsertUpdateDatos($"UPDATE CajaxUsuario SET cxu_predef = 1 where cxu_usuario = {Negocio.FLogin.IdUsuario} and cxu_caja = {idCaja}");
         }
+
+        public static void ModificarContra(string nuevaContra)
+        {
+            Datos.AccesoBase.InsertUpdateDatos($"UPDATE Usuario SET usu_contraseña = '{nuevaContra}' WHERE usu_codigo = {FLogin.IdUsuario}");
+        }
     }
 }

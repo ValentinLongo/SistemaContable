@@ -10,6 +10,7 @@ namespace Datos.Modelos
     {
         public int usu_codigo { get; set;}
         public string usu_nombre { get; set;}
+        public string usu_contrasenia { get; set;}
         public string usu_login { get; set;}
         public string per_descri { get; set;}
         public string usu_direccion { get; set; }
