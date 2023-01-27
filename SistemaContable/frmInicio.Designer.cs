@@ -88,8 +88,8 @@
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.definicionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parametrizacionDePermisosUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrizacionDePermisosPerfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parametrizacionDePermisosUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recalcularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ejercicioContableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planDeCuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -591,8 +591,8 @@
             this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.definicionToolStripMenuItem,
             this.modificaToolStripMenuItem,
-            this.parametrizacionDePermisosUsuariosToolStripMenuItem,
             this.parametrizacionDePermisosPerfilesToolStripMenuItem,
+            this.parametrizacionDePermisosUsuariosToolStripMenuItem,
             this.recalcularToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
             resources.ApplyResources(this.usuarioToolStripMenuItem, "usuarioToolStripMenuItem");
@@ -612,17 +612,17 @@
             this.modificaToolStripMenuItem.Tag = "400404";
             this.modificaToolStripMenuItem.Click += new System.EventHandler(this.modificaToolStripMenuItem_Click);
             // 
-            // parametrizacionDePermisosUsuariosToolStripMenuItem
-            // 
-            this.parametrizacionDePermisosUsuariosToolStripMenuItem.Name = "parametrizacionDePermisosUsuariosToolStripMenuItem";
-            resources.ApplyResources(this.parametrizacionDePermisosUsuariosToolStripMenuItem, "parametrizacionDePermisosUsuariosToolStripMenuItem");
-            this.parametrizacionDePermisosUsuariosToolStripMenuItem.Click += new System.EventHandler(this.parametrizacionDePermisosUsuariosToolStripMenuItem_Click);
-            // 
             // parametrizacionDePermisosPerfilesToolStripMenuItem
             // 
             this.parametrizacionDePermisosPerfilesToolStripMenuItem.Name = "parametrizacionDePermisosPerfilesToolStripMenuItem";
             resources.ApplyResources(this.parametrizacionDePermisosPerfilesToolStripMenuItem, "parametrizacionDePermisosPerfilesToolStripMenuItem");
             this.parametrizacionDePermisosPerfilesToolStripMenuItem.Click += new System.EventHandler(this.parametrizacionDePermisosPerfilesToolStripMenuItem_Click);
+            // 
+            // parametrizacionDePermisosUsuariosToolStripMenuItem
+            // 
+            this.parametrizacionDePermisosUsuariosToolStripMenuItem.Name = "parametrizacionDePermisosUsuariosToolStripMenuItem";
+            resources.ApplyResources(this.parametrizacionDePermisosUsuariosToolStripMenuItem, "parametrizacionDePermisosUsuariosToolStripMenuItem");
+            this.parametrizacionDePermisosUsuariosToolStripMenuItem.Click += new System.EventHandler(this.parametrizacionDePermisosUsuariosToolStripMenuItem_Click);
             // 
             // recalcularToolStripMenuItem
             // 
@@ -1251,8 +1251,8 @@
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem definicionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem parametrizacionDePermisosUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parametrizacionDePermisosPerfilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parametrizacionDePermisosUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recalcularToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ejercicioContableToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planDeCuentasToolStripMenuItem;

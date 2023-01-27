@@ -60,7 +60,7 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             int terminal = frmLogin.NumeroTerminal;
 
-            ds = AccesoBase.ListarDatos($"DELETE FROM Aux_MenuxUsu WHERE mxu_terminal = {terminal}");
+            AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_MenuxUsu WHERE mxu_terminal = {terminal}");
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MenuxUsu ( mxu_terminal, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT  {terminal}, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From MenuxUsu Where MenuxUsu.mxu_sistema = 'CO' And MenuxUsu.mxu_usuario = {nrousu}");
 
@@ -119,7 +119,7 @@ namespace SistemaContable.Parametrizacion_Permisos
             int terminal = frmLogin.NumeroTerminal;
             DataSet ds = new DataSet();
 
-            ds = AccesoBase.ListarDatos($"DELETE FROM MenuxUsu WHERE mxu_sistema = 'CO' AND mxu_usuario = {txtNroUsuario.Text}");
+            AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_sistema = 'CO' AND mxu_usuario = {txtNroUsuario.Text}");
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu ( mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From aux_MenuxUsu Where aux_MenuxUsu.mxu_sistema = 'CO' AND mxu_terminal = '{terminal}' AND aux_MenuxUsu.mxu_usuario = {txtNroUsuario.Text}");
 

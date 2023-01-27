@@ -63,7 +63,7 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             int terminal = frmLogin.NumeroTerminal;
 
-            ds = AccesoBase.ListarDatos($"DELETE FROM Aux_MenuxPerfil WHERE mxp_terminal = {terminal}");
+            AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_MenuxPerfil WHERE mxp_terminal = {terminal}");
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MenuxPerfil ( mxp_terminal, mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema) SELECT  {terminal}, mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema From MenuxPerfil Where MenuxPerfil.mxp_sistema = 'CO' And MenuxPerfil.mxp_perfil = {nroperfil}");
 
@@ -122,7 +122,7 @@ namespace SistemaContable.Parametrizacion_Permisos
             int terminal = frmLogin.NumeroTerminal;
             DataSet ds = new DataSet();
 
-            ds = AccesoBase.ListarDatos($"DELETE FROM MenuxPerfil WHERE mxp_sistema = 'CO' AND mxp_perfil = {txtNroPerfil.Text}");
+            AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxPerfil WHERE mxp_sistema = 'CO' AND mxp_perfil = {txtNroPerfil.Text}");
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxPerfil ( mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema) SELECT mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema From aux_MenuxPerfil Where aux_MenuxPerfil.mxp_sistema = 'CO' AND mxp_terminal = '{terminal}' AND aux_MenuxPerfil.mxp_perfil = {txtNroPerfil.Text}");
 

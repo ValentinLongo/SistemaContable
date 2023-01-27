@@ -377,26 +377,39 @@ namespace SistemaContable
         //SIN CODIGO
         private void parametrizacionDePermisosPerfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPermisosUsuarios permisosusuarios = new frmPermisosUsuarios();
-            frmCambiarUsuario frmSA = new frmCambiarUsuario();
-            permiso = Negocio.FGenerales.Permiso(soporteInteractivoDeContableToolStripMenuItem.Tag.ToString());
-            if (permiso)
-            {               
-                //permisosusuarios.Show();
-                frmSA.Show();
-                frmCambiarUsuario.perfil = 1;
-                frmCambiarUsuario.cambia = 0;
-            }
-        }
-        private void parametrizacionDePermisosUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmPermisosPerfil permisosperfil = new frmPermisosPerfil();
-            permiso = Negocio.FGenerales.Permiso(soporteInteractivoDeContableToolStripMenuItem.Tag.ToString());
-            if (permiso)
+            frmAutorización frmSA = new frmAutorización();
+            bool autorizado = frmAutorización.Autoriza(1, false);
+            frmSA.Show();
+            if (frmAutorización.visibilidad == true)
             {
+                frmSA.SendToBack();
+            }
+            if (autorizado)
+            {
+                frmPermisosPerfil permisosperfil = new frmPermisosPerfil();
                 permisosperfil.Show();
+                frmSA.Close();
+                frmAutorización.usuario = "";
+                frmAutorización.contraseña = "";
             }
         }
-        //
+        public void parametrizacionDePermisosUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAutorización frmSA = new frmAutorización();
+            bool autorizado = frmAutorización.Autoriza(1,false);
+            frmSA.Show();
+            if (frmAutorización.visibilidad == true)
+            {
+                frmSA.SendToBack();
+            }
+            if (autorizado)
+            {
+                frmPermisosUsuarios permisosusuario = new frmPermisosUsuarios();
+                permisosusuario.Show();
+                frmSA.Close();
+                frmAutorización.usuario = "";
+                frmAutorización.contraseña = "";
+            }
+        }
     }
 }

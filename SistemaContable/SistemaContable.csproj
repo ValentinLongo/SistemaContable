@@ -302,11 +302,11 @@
     <Compile Include="General\frmConsultaGeneral.Designer.cs">
       <DependentUpon>frmConsultaGeneral.cs</DependentUpon>
     </Compile>
-    <Compile Include="General\frmSolicitudAutorizacion.cs">
+    <Compile Include="General\frmAutorización.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="General\frmSolicitudAutorizacion.Designer.cs">
-      <DependentUpon>frmSolicitudAutorizacion.cs</DependentUpon>
+    <Compile Include="General\frmAutorización.Designer.cs">
+      <DependentUpon>frmAutorización.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCarga.cs">
       <SubType>Form</SubType>
@@ -433,8 +433,8 @@
     <EmbeddedResource Include="General\frmConsultaGeneral.resx">
       <DependentUpon>frmConsultaGeneral.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="General\frmSolicitudAutorizacion.resx">
-      <DependentUpon>frmSolicitudAutorizacion.cs</DependentUpon>
+    <EmbeddedResource Include="General\frmAutorización.resx">
+      <DependentUpon>frmAutorización.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarga.resx">
       <DependentUpon>frmCarga.cs</DependentUpon>

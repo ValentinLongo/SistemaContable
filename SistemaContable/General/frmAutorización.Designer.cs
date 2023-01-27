@@ -1,6 +1,6 @@
 ﻿namespace SistemaContable
 {
-    partial class frmCambiarUsuario
+    partial class frmAutorización
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCambiarUsuario));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAutorización));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelcontrolbox = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,13 +42,14 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.labelcontrolbox);
             this.panel1.Controls.Add(this.bunifuFormControlBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -57,16 +59,16 @@
             this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // label4
+            // labelcontrolbox
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(3, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 13);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Solicitud de Autorizacion";
+            this.labelcontrolbox.AutoSize = true;
+            this.labelcontrolbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelcontrolbox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelcontrolbox.Location = new System.Drawing.Point(3, 5);
+            this.labelcontrolbox.Name = "labelcontrolbox";
+            this.labelcontrolbox.Size = new System.Drawing.Size(123, 13);
+            this.labelcontrolbox.TabIndex = 30;
+            this.labelcontrolbox.Text = "Solicitud de Autorizacion";
             // 
             // bunifuFormControlBox1
             // 
@@ -160,11 +162,11 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(12, 27);
+            this.bunifuShapes1.Location = new System.Drawing.Point(12, 28);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(259, 141);
+            this.bunifuShapes1.Size = new System.Drawing.Size(259, 140);
             this.bunifuShapes1.TabIndex = 16;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
@@ -237,7 +239,7 @@
             this.panel2.Size = new System.Drawing.Size(131, 1);
             this.panel2.TabIndex = 38;
             // 
-            // frmCambiarUsuario
+            // frmAutorización
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,10 +256,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuShapes1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCambiarUsuario";
+            this.Name = "frmAutorización";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCambiarUsuario";
-            this.Load += new System.EventHandler(this.frmCambiarUsuario_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAutorización_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -268,7 +270,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelcontrolbox;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -279,5 +281,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

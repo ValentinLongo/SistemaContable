@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCodigoBarra));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigoBarra = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tCodigoBarra = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,6 +125,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.CloseClicked += new System.EventHandler(this.bunifuFormControlBox1_CloseClicked);
             // 
             // label1
             // 
@@ -144,8 +147,9 @@
             this.txtCodigoBarra.Location = new System.Drawing.Point(227, 47);
             this.txtCodigoBarra.Name = "txtCodigoBarra";
             this.txtCodigoBarra.Size = new System.Drawing.Size(260, 19);
-            this.txtCodigoBarra.TabIndex = 19;
+            this.txtCodigoBarra.TabIndex = 0;
             this.txtCodigoBarra.Tag = "00000";
+            this.txtCodigoBarra.TextChanged += new System.EventHandler(this.txtCodigoBarra_TextChanged);
             // 
             // panel3
             // 
@@ -154,6 +158,11 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(260, 1);
             this.panel3.TabIndex = 38;
+            // 
+            // tCodigoBarra
+            // 
+            this.tCodigoBarra.Interval = 250;
+            this.tCodigoBarra.Tick += new System.EventHandler(this.tCodigoBarra_Tick);
             // 
             // frmCodigoBarra
             // 
@@ -184,5 +193,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCodigoBarra;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Timer tCodigoBarra;
     }
 }
