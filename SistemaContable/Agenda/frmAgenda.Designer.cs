@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmAgenda";
-        
-        #endregion
-
             this.dataAgenda = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -51,10 +44,13 @@
             // 
             // dataAgenda
             // 
+            this.dataAgenda.AllowUserToAddRows = false;
+            this.dataAgenda.AllowUserToDeleteRows = false;
             this.dataAgenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataAgenda.Location = new System.Drawing.Point(0, 1);
             this.dataAgenda.Name = "dataAgenda";
+            this.dataAgenda.ReadOnly = true;
             this.dataAgenda.Size = new System.Drawing.Size(680, 338);
             this.dataAgenda.TabIndex = 0;
             // 
