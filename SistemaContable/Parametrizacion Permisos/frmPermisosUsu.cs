@@ -14,10 +14,10 @@ using System.Windows.Forms;
 
 namespace SistemaContable.Parametrizacion_Permisos
 {
-    public partial class frmPermisosUsuarios : Form
+    public partial class frmPermisosUsu : Form
     {
         public static List<MPermisoUsuario> lista = new List<MPermisoUsuario>();
-        public frmPermisosUsuarios()
+        public frmPermisosUsu()
         {
             InitializeComponent();
         }

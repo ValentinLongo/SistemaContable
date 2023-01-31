@@ -326,17 +326,23 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="General\frmEstandar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmEstandar.Designer.cs">
+      <DependentUpon>frmEstandar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Parametrizacion Permisos\frmPermisosPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Parametrizacion Permisos\frmPermisosPerfil.Designer.cs">
       <DependentUpon>frmPermisosPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parametrizacion Permisos\frmPermisosUsuarios.cs">
+    <Compile Include="Parametrizacion Permisos\frmPermisosUsu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Parametrizacion Permisos\frmPermisosUsuarios.Designer.cs">
-      <DependentUpon>frmPermisosUsuarios.cs</DependentUpon>
+    <Compile Include="Parametrizacion Permisos\frmPermisosUsu.Designer.cs">
+      <DependentUpon>frmPermisosUsu.cs</DependentUpon>
     </Compile>
     <Compile Include="Parametrizacion Permisos\frmPermisosEspecialesUsu.cs">
       <SubType>Form</SubType>
@@ -448,14 +454,17 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="General\frmEstandar.resx">
+      <DependentUpon>frmEstandar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosEspecialesPerfil.resx">
       <DependentUpon>frmPermisosEspecialesPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosPerfil.resx">
       <DependentUpon>frmPermisosPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosUsuarios.resx">
-      <DependentUpon>frmPermisosUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosUsu.resx">
+      <DependentUpon>frmPermisosUsu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosEspecialesUsu.resx">
       <DependentUpon>frmPermisosEspecialesUsu.cs</DependentUpon>

@@ -19,12 +19,15 @@ using System.Collections;
 using System.Web.Services.Description;
 using SistemaContable.Empresa;
 using Negocio;
+using RJCodeAdvance.RJControls;
+using System.Runtime.CompilerServices;
 
 namespace SistemaContable
 {
     public partial class frmInicio : Form
     {
         public static bool permiso;
+        public static string frm;
 
         //
         public frmInicio()
@@ -207,6 +210,19 @@ namespace SistemaContable
         //
 
         //
+        public void ponernombrexd() 
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is RJDropdownMenu)
+                {
+                    MessageBox.Show(ctrl.Tag.ToString());
+                }
+            }
+        }
+        //
+
+        //
         //PERMISOS PARA CADA BOTON
         //10
         private void respaldoDeInformacionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -312,13 +328,16 @@ namespace SistemaContable
         }
         private void definicionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(definicionToolStripMenuItem.Tag.ToString());
+            permiso = Negocio.FGenerales.Permiso(definicionToolStripMenuItem.Tag.ToString());
+            if (permiso)
+            {
+                Negocio.FGenerales.ManejarFormularios(usuarios, this, pbLogo);
+            }
         }
         private void modificaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(modificaToolStripMenuItem.Tag.ToString());
             frmModificarContra frmModificar = new frmModificarContra();
-            permiso = Negocio.FGenerales.Permiso(empresaToolStripMenuItem.Tag.ToString());
+            permiso = Negocio.FGenerales.Permiso(modificaToolStripMenuItem.Tag.ToString());
             if (permiso)
             {
                 frmModificar.ShowDialog();
@@ -377,8 +396,9 @@ namespace SistemaContable
         //SIN CODIGO
         private void parametrizacionDePermisosPerfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frm = "perfiles";
             frmAutorización frmSA = new frmAutorización();
-            bool autorizado = frmAutorización.Autoriza(1, false);
+            bool autorizado = frmAutorización.Autoriza(1, false); //cambiar
             frmSA.Show();
             if (frmAutorización.visibilidad == true)
             {
@@ -395,8 +415,9 @@ namespace SistemaContable
         }
         public void parametrizacionDePermisosUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frm = "usuarios";
             frmAutorización frmSA = new frmAutorización();
-            bool autorizado = frmAutorización.Autoriza(1,false);
+            bool autorizado = frmAutorización.Autoriza(1,false); //cambiar
             frmSA.Show();
             if (frmAutorización.visibilidad == true)
             {
@@ -404,11 +425,40 @@ namespace SistemaContable
             }
             if (autorizado)
             {
-                frmPermisosUsuarios permisosusuario = new frmPermisosUsuarios();
+                frmPermisosUsu permisosusuario = new frmPermisosUsu();
                 permisosusuario.Show();
                 frmSA.Close();
                 frmAutorización.usuario = "";
                 frmAutorización.contraseña = "";
+            }
+        }
+
+        private void recalcularToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm = "estandar";
+            frmAutorización frmSA = new frmAutorización();
+            bool autorizado = frmAutorización.Autoriza(1, false); //cambiar
+            frmSA.Show();
+            if (frmAutorización.visibilidad == true)
+            {
+                frmSA.SendToBack();
+            }
+            if (autorizado)
+            {
+                frmSA.Close();
+                frmAutorización.usuario = "";
+                frmAutorización.contraseña = "";
+                DialogResult boton = MessageBox.Show("Atención: ¿desea recalcular los permisos del menu?", "Contable", MessageBoxButtons.OKCancel);
+                if (boton == DialogResult.OK)
+                {
+                    ponernombrexd();
+
+                    frmEstandar.proceso = 1;
+                    frmEstandar.mensaje1 = "Mensaje";
+                    frmEstandar.mensaje2 = "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...";
+                    frmEstandar estandar = new frmEstandar();
+                    estandar.ShowDialog();
+                }
             }
         }
     }

@@ -22,12 +22,12 @@ namespace SistemaContable
         public static string usuario;
         public static string contraseña;
         public static bool visibilidad = false;
-        private static bool CBI = false; //codigo de barra incorrecto
+        private static bool CBI = false; //codigo de barra incorrecto.
         private static int PERFIL;
         private static bool CAMBIA;
-        private static string TIPO;
-        private static string COD1;
-        private static string COD2;
+        private static int TIPO; 
+        private static int COD1; 
+        private static int COD2; 
         private static string COD3;
         private static string DESCRI1;
         private static string DESCRI2;
@@ -38,14 +38,14 @@ namespace SistemaContable
         public frmAutorización()
         {
             InitializeComponent();
-            this.Select(); // con esto funciona el evento keydown
+            this.Select(); //con esto funciona el evento keydown.
             frmCodigoBarra codigobarra = new frmCodigoBarra();
 
             int resultado = 0;
             int terminal = frmLogin.NumeroTerminal;
 
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"select ter_pideautcod from terminal where ter_codigo = {terminal}"); 
+            ds = AccesoBase.ListarDatos($"select ter_pideautcod from terminal where ter_codigo = {terminal}");
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 if (dr["ter_pideautcod"] != DBNull.Value)
@@ -76,10 +76,40 @@ namespace SistemaContable
         {
             usuario = txtUsuario.Text;
             contraseña = txtContraseña.Text;
-            bool autorizado = Autoriza(PERFIL, CAMBIA, TIPO, COD1, COD2, COD3, DESCRI1, DESCRI2, DESCRI3, OBSERVA, REFERENCIA);
+            bool autorizado = Autoriza(PERFIL, CAMBIA, TIPO.ToString(), COD1.ToString(), COD2.ToString(), COD3, DESCRI1, DESCRI2, DESCRI3, OBSERVA, REFERENCIA);
             if (autorizado)
             {
-                //terminar
+                if (frmInicio.frm == "perfiles")
+                {
+                    frmPermisosPerfil permisosperfil = new frmPermisosPerfil();
+                    permisosperfil.Show();
+                    this.Close();
+                    frmAutorización.usuario = "";
+                    frmAutorización.contraseña = "";
+                }
+                else if (frmInicio.frm == "usuarios")
+                {
+                    frmPermisosUsu permisosusuario = new frmPermisosUsu();
+                    permisosusuario.Show();
+                    this.Close();
+                    frmAutorización.usuario = "";
+                    frmAutorización.contraseña = "";
+                }
+                else if (frmInicio.frm == "estandar")
+                {
+                    this.Close();
+                    frmAutorización.usuario = "";
+                    frmAutorización.contraseña = "";
+                    DialogResult boton = MessageBox.Show("Atención: ¿desea recalcular los permisos del menu?", "Contable", MessageBoxButtons.OKCancel);
+                    if (boton == DialogResult.OK)
+                    {
+                        frmEstandar.proceso = 1;
+                        frmEstandar.mensaje1 = "Mensaje";
+                        frmEstandar.mensaje2 = "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...";
+                        frmEstandar estandar = new frmEstandar();
+                        estandar.ShowDialog();
+                    }
+                }
             }
         }
 
@@ -87,9 +117,16 @@ namespace SistemaContable
         {
             PERFIL = perfil;
             CAMBIA = cambia;
-            TIPO = tipo;
-            COD1 = cod1;
-            COD2 = cod2;
+            if (tipo == null || tipo == "")
+            {
+                TIPO = 0;
+            }
+            else
+            {
+                TIPO = Convert.ToInt32(tipo);
+            }
+            COD1 = Convert.ToInt32(cod1);
+            COD2 = Convert.ToInt32(cod2);
             COD3 = cod3;
             DESCRI1 = descri1;
             DESCRI2 = descri2;
@@ -115,6 +152,11 @@ namespace SistemaContable
                 }
                 int resultado = AccesoBase.ValidarDatos($"SELECT usu_login, usu_contraseña FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contraseña}'");
 
+                if(cambia)
+                {
+                    Negocio.FLogin.NombreUsuario = usuario;
+                    Negocio.FLogin.ContraUsuario = contraseña;
+                }
                 if (perfilautorizacion <= perfil && estado == 1 && resultado == 1)
                 {
                     return true;
@@ -123,11 +165,6 @@ namespace SistemaContable
                 {
                     MessageBox.Show("Error: Datos ingresados invalidos", "Mensaje");
                     return false;
-                }
-                if (cambia)
-                {
-                    Negocio.FLogin.NombreUsuario = usuario;
-                    Negocio.FLogin.ContraUsuario = contraseña;
                 }
             }
             else
@@ -139,11 +176,14 @@ namespace SistemaContable
             }
             return false;
         }
+
         private void frmAutorización_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F12)
             {
-                if (TIPO == "")
+                int codigo = Negocio.FGenerales.ultimoNumeroID("aut_codigo", "Autoriza");
+
+                if (TIPO == 0)
                 {
                     MessageBox.Show("No se puede solicitar autorizacion remota en este caso.","Atencion!");
                 }
@@ -153,7 +193,7 @@ namespace SistemaContable
                     string fecha = DateTime.Now.ToShortDateString();
                     int terminal = frmLogin.NumeroTerminal;
 
-                    if (timer1.Enabled = false)
+                    if (timer1.Enabled == false)
                     {
                         timer1.Enabled = true;
                         txtUsuario.Enabled = false;
@@ -161,33 +201,43 @@ namespace SistemaContable
                         btnAcceder.Enabled = false;
                         labelcontrolbox.Text = "ESPERANDO AUTORIZACIÓN...";
 
-                        var codigo = ""; // terminar
-
                         switch (TIPO)
                         {
-                            case "1":
-                                AccesoBase.InsertUpdateDatos($"INSERT INTO Autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ( {codigo}, '{COD1}', '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', {terminal},'{TIPO}','{REFERENCIA}'");
+                            case 1:
+                                AccesoBase.InsertUpdateDatos($"INSERT INTO Autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', {terminal}, {TIPO}, '{REFERENCIA}')");
                                 break;
 
-                            case "2":
-                                AccesoBase.InsertUpdateDatos($"INSERT INTO Autoriza (aut_codigo, aut_cod1, aut_descri1, aut_descri2, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ( {codigo}, '{COD1}', '{DESCRI1}', '{DESCRI2}', '{usuario}', '{fecha}', '{hora}', {terminal},'{TIPO}','{REFERENCIA}'");
+                            case 2:
+                                AccesoBase.InsertUpdateDatos($"INSERT INTO Autoriza (aut_codigo, aut_cod1, aut_descri1, aut_descri2, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{DESCRI2}', '{usuario}', '{fecha}', '{hora}', {terminal},{TIPO},'{REFERENCIA}')");
                                 break;
 
-                            case "3":
+                            case 3:
+                                AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_descri2, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_observa, aut_cod3, aut_descri3, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{DESCRI2}', '{usuario}', '{fecha}', '{hora}', '{terminal}', {TIPO}, '{OBSERVA}', '{COD3}', '{DESCRI3}', '{REFERENCIA}')");
                                 break;
 
-                            case "4":
+                            case 4:
+                                AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', '{terminal}', {TIPO}, '{REFERENCIA}')");
                                 break;
 
-                            case "5":
+                            case 5:                              
+                                AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', '{terminal}', {TIPO}, '{REFERENCIA}')");
                                 break;
 
-                            case "6":
-                                break;
-
-                           default:
+                            case 6:
+                                AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', '{terminal}', {TIPO}, '{REFERENCIA}')");
                                 break;
                         }
+                    }
+                    else
+                    {
+                        labelcontrolbox.Text = "Solicitud de Autorización";
+                        timer1.Enabled = false;
+                        txtUsuario.Enabled = true;
+                        txtContraseña.Enabled = true;
+                        btnAcceder.Enabled = true;
+                        txtUsuario.Text = "";
+                        txtContraseña.Text = "";
+                        AccesoBase.InsertUpdateDatos($"DELETE * FROM autoriza where aut_codigo = {codigo}");
                     }
                 }
             }
