@@ -11,7 +11,6 @@ namespace Negocio
 {
     public class Menu : ContextMenuStrip
     {
-
         //Fields
         private bool isMainMenu;
         private int menuItemHeight = 25;
@@ -89,6 +88,5 @@ namespace Negocio
                 LoadMenuItemHeight();
             }
         }
-
     }
 }

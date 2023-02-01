@@ -30,15 +30,8 @@ namespace SistemaContable.General
 
         private void PermisosMenu() 
         {
-            DataSet ds = new DataSet();
-            ds = Datos.AccesoBase.ListarDatos($"SELECT par_permiso FROM Parametro");
-            foreach (DataRow dr in ds.Tables[0].Rows) 
-            {
-                int permiso = Convert.ToInt32(dr["par_permiso"]);
-            }
-            
-            
-
+            frmInicio inicio = new frmInicio();
+            inicio.RecalculaPermisos();
         }
     }
 }
