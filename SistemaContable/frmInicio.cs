@@ -25,6 +25,7 @@ using Bunifu.UI.WinForms.Helpers.Transitions;
 using Datos;
 using Datos.Modelos;
 using SistemaContable.Rubos_Contables;
+using Negocio.Funciones;
 
 namespace SistemaContable
 {
@@ -69,7 +70,7 @@ namespace SistemaContable
             else
             {
                 frmInicio frmInicio = new frmInicio();
-                frmInicio.ShowDialog();
+                frmInicio.Show();
             }
         }
         private void frmInicio_Load(object sender, EventArgs e)
@@ -82,30 +83,30 @@ namespace SistemaContable
         }
         //
 
-        //
+        //ACCESOS DIRECTOS
         frmUsuarios usuarios = new frmUsuarios();
         frmPlanDeCuentas planDeCuentas = new frmPlanDeCuentas();
         frmConceptosContables conceptoscontables = new frmConceptosContables();
         frmAgenda agenda = new frmAgenda();
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(usuarios, this, pbLogo);
+            Negocio.FGenerales.ManejarFormularios(usuarios, this, pbLogo, toolStripButton1.Tag.ToString());
         }
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(planDeCuentas, this, pbLogo);
+            Negocio.FGenerales.ManejarFormularios(planDeCuentas, this, pbLogo, toolStripButton2.Tag.ToString());
         }
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(conceptoscontables, this, pbLogo);
+            Negocio.FGenerales.ManejarFormularios(conceptoscontables, this, pbLogo, toolStripButton3.Tag.ToString());
         }
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(agenda, this, pbLogo);
+            Negocio.FGenerales.ManejarFormularios(agenda, this, pbLogo, toolStripButton4.Tag.ToString());
         }
         //
 
-        //
+        //BOTONES INICIO (ABREN LOS MENUS)
         private void btnArchivos_Click(object sender, EventArgs e)
         {
             MenuArchivos.Show(btnArchivos, btnArchivos.Width, 0);
@@ -372,6 +373,7 @@ namespace SistemaContable
                     }
                     if (bandera)
                     {
+                        //terminar
                         //AccesoBase.InsertUpdateDatos($"DELETE FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' AND mnu_descri = '{i.mnu_descri}' AND mnu_sistema = 'CO'");
                         //AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_usuario = {codigo} AND mxu_codigo = '{i.mnu_codigo}' AND mxu_activo = {permiso} AND mxu_sistema = 'CO'");
                         //AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxPerfil WHERE mxup_perfil = {perfil} AND mxp_codigo = '{i.mnu_codigo}' AND mxp_activo = {permiso} AND mxp_sistema = 'CO'");
@@ -385,177 +387,157 @@ namespace SistemaContable
         //10
         private void respaldoDeInformacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(respaldoDeInformacionToolStripMenuItem.Tag.ToString());
+
         }
         private void restauracionDeInformacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(restauracionDeInformacionToolStripMenuItem.Tag.ToString());
+
         }
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(salirToolStripMenuItem.Tag.ToString());
+
         }
         //20
         private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(calculadoraToolStripMenuItem.Tag.ToString());
+
         }
         private void comunicacionInternaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(comunicacionInternaToolStripMenuItem.Tag.ToString());
+
         }
         private void notasYObservacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(notasYObservacionesToolStripMenuItem.Tag.ToString());
+
         }
         private void calendarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(calendarioToolStripMenuItem.Tag.ToString());
+
         }
         //30
         private void movimientoDeAsientosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(movimientoDeAsientosToolStripMenuItem.Tag.ToString());
+
         }
         private void actualizaciónToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(actualizaciónToolStripMenuItem1.Tag.ToString());
+
         }
         private void detalleDeModelosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(detalleDeModelosToolStripMenuItem.Tag.ToString());
+
         }
         private void renumeraciónDeAsientosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(renumeraciónDeAsientosToolStripMenuItem.Tag.ToString());
+
         }
         private void libroDiarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(libroDiarioToolStripMenuItem.Tag.ToString());
+
         }
         private void libroMayorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(libroMayorToolStripMenuItem.Tag.ToString());
+
         }
         private void libroMayorGrupoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(libroMayorGrupoToolStripMenuItem.Tag.ToString());
+
         }
         private void libroMayorInformeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(libroMayorInformeToolStripMenuItem.Tag.ToString());
+
         }
         private void balanceDeSumasYSaldosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(balanceDeSumasYSaldosToolStripMenuItem.Tag.ToString());
+
         }
         private void balanceGeneralToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(balanceGeneralToolStripMenuItem.Tag.ToString());
+
         }
         private void definiciónDeInformesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(definiciónDeInformesToolStripMenuItem.Tag.ToString());
+
         }
         private void actualizacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(actualizacionToolStripMenuItem.Tag.ToString());
+
         }
         private void detalleInformeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(detalleInformeToolStripMenuItem.Tag.ToString());
+
         }
         private void inforrmeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(inforrmeToolStripMenuItem.Tag.ToString());
+
         }
         private void auditoriaInternaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(auditoriaInternaToolStripMenuItem1.Tag.ToString());
+
         }
         //40 
         private void empresaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmEmpresa empresa = new frmEmpresa();
-            permiso = Negocio.FGenerales.Permiso(empresaToolStripMenuItem.Tag.ToString());
-            if (permiso)
-            {
-                empresa.ShowDialog();
-            }
-
+            Negocio.FGenerales.Mostrarfrm(empresa, empresaToolStripMenuItem.Tag.ToString());
         }
         private void definicionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            permiso = Negocio.FGenerales.Permiso(definicionToolStripMenuItem.Tag.ToString());
-            if (permiso)
-            {
-                Negocio.FGenerales.ManejarFormularios(usuarios, this, pbLogo);
-            }
+            Negocio.FGenerales.ManejarFormularios(usuarios, this, pbLogo, definicionToolStripMenuItem.Tag.ToString());
         }
         private void modificaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmModificarContra frmModificar = new frmModificarContra();
-            permiso = Negocio.FGenerales.Permiso(modificaToolStripMenuItem.Tag.ToString());
-            if (permiso)
-            {
-                frmModificar.ShowDialog();
-            }
+            Negocio.FGenerales.Mostrarfrm(frmModificar, modificaToolStripMenuItem.Tag.ToString());
         }
         private void ejercicioContableToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(ejercicioContableToolStripMenuItem.Tag.ToString());
+
         }
         private void planDeCuentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPlanDeCuentas plandecuenta = new frmPlanDeCuentas();
-            permiso = Negocio.FGenerales.Permiso(planDeCuentasToolStripMenuItem.Tag.ToString());
-            if (permiso)
-            {
-                Negocio.FGenerales.ManejarFormularios(planDeCuentas, this, pbLogo);
-            }
+
+            Negocio.FGenerales.ManejarFormularios(planDeCuentas, this, pbLogo, planDeCuentasToolStripMenuItem.Tag.ToString());
+
         }
         private void conceptosContablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(conceptosContablesToolStripMenuItem.Tag.ToString());
+            Negocio.FGenerales.ManejarFormularios(conceptoscontables, this, pbLogo, conceptosContablesToolStripMenuItem.Tag.ToString());
         }
         private void rubrosContablesToolStripMenuItem_Click(object sender, EventArgs e)
-        { 
+        {
             frmRubrosContables rubroContables = new frmRubrosContables();
-            permiso = Negocio.FGenerales.Permiso(rubrosContablesToolStripMenuItem.Tag.ToString());
-            if (permiso)
-            {
-                rubroContables.ShowDialog();
-            }
+            Negocio.FGenerales.Mostrarfrm(rubroContables, rubrosContablesToolStripMenuItem.Tag.ToString());
 
         }
         private void coeficienteDeAjusteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(coeficienteDeAjusteToolStripMenuItem.Tag.ToString());
+
         }
         private void centroDeCosteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(centroDeCosteToolStripMenuItem.Tag.ToString());
+
         }
         private void rubricacionDeSubDiariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(rubricacionDeSubDiariosToolStripMenuItem.Tag.ToString());
+
         }
         private void agendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(agendaToolStripMenuItem.Tag.ToString());
+            Negocio.FGenerales.ManejarFormularios(agenda, this, pbLogo, agendaToolStripMenuItem.Tag.ToString());
         }
         private void parametrosContablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(parametrosContablesToolStripMenuItem.Tag.ToString());
+
         }
         private void configurarImpresorasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(configurarImpresorasToolStripMenuItem.Tag.ToString());
+
         }
         //50
         private void soporteInteractivoDeContableToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.Permiso(soporteInteractivoDeContableToolStripMenuItem.Tag.ToString());
+
         }
         //SIN CODIGO
         private void parametrizacionDePermisosPerfilesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -612,8 +594,8 @@ namespace SistemaContable
                 frmSA.Close();
                 frmAutorización.usuario = "";
                 frmAutorización.contraseña = "";
-                DialogResult boton = MessageBox.Show("Atención: ¿desea recalcular los permisos del menu?", "Contable", MessageBoxButtons.OKCancel);
-                if (boton == DialogResult.OK)
+                DialogResult boton1 = MessageBox.Show("Atención: ¿desea recalcular los permisos del menu?", "Contable", MessageBoxButtons.OKCancel);
+                if (boton1 == DialogResult.OK)
                 {
                     frmEstandar.proceso = 1;
                     frmEstandar.mensaje1 = "Mensaje";
@@ -623,6 +605,19 @@ namespace SistemaContable
                     Application.DoEvents();
                     RecalculaPermisos();
                     estandar.Close();
+                }
+                DialogResult boton2 = MessageBox.Show("Atención: ¿desea recalcular los permisos especiales?", "Contable", MessageBoxButtons.OKCancel);
+                if (boton2 == DialogResult.OK)
+                {
+                    frmEstandar.proceso = 2;
+                    frmEstandar.mensaje1 = "Mensaje";
+                    frmEstandar.mensaje2 = "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...";
+                    frmEstandar estandar = new frmEstandar();
+                    estandar.Show();
+                    Application.DoEvents();
+                    Negocio.Funciones.FRecalcularPermisos.RecalculaPermisosEspeciales();
+                    estandar.Close();
+                    //FALTA CUANDO SE AGREGA UN USUARIO PONERLE LOS PERFILES
                 }
             }
         }
