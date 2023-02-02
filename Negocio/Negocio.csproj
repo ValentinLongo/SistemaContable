@@ -223,17 +223,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Funciones\FAgenda.cs" />
-    <Compile Include="Funciones\FEmpresa.cs" />
-    <Compile Include="Funciones\FFormatoSistema.cs" />
-    <Compile Include="Funciones\FGenerales.cs" />
-    <Compile Include="Funciones\FInicio.cs" />
-    <Compile Include="Funciones\FLogin.cs" />
-    <Compile Include="Funciones\FPlanDeCuentas.cs" />
-    <Compile Include="Funciones\FRecalcularPermisos.cs" />
-    <Compile Include="Funciones\FRubrosContables.cs" />
-    <Compile Include="Funciones\FUsuarios.cs" />
-    <Compile Include="Funciones\FValidacionesEventos.cs" />
+    <Compile Include="Funciones\Mantenimiento\FAgenda.cs" />
+    <Compile Include="Funciones\Mantenimiento\FEmpresa.cs" />
+    <Compile Include="Funciones\Generales\FFormatoSistema.cs" />
+    <Compile Include="Funciones\Generales\FGenerales.cs" />
+    <Compile Include="Funciones\Generales\FInicio.cs" />
+    <Compile Include="Funciones\Generales\FLogin.cs" />
+    <Compile Include="Funciones\Mantenimiento\FPlanDeCuentas.cs" />
+    <Compile Include="Funciones\Mantenimiento\FRecalcularPermisos.cs" />
+    <Compile Include="Funciones\Mantenimiento\FRubrosContables.cs" />
+    <Compile Include="Funciones\Mantenimiento\FUsuarios.cs" />
+    <Compile Include="Funciones\Generales\FValidacionesEventos.cs" />
     <Compile Include="Menu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -250,6 +250,12 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Funciones\Archivos\" />
+    <Folder Include="Funciones\Ayuda\" />
+    <Folder Include="Funciones\Contabilidad\" />
+    <Folder Include="Funciones\Ver\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

@@ -260,34 +260,34 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agenda\frmAgenda.cs">
+    <Compile Include="Inicio\Mantenimiento\Agenda\frmAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agenda\frmAgenda.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Agenda\frmAgenda.Designer.cs">
       <DependentUpon>frmAgenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Agenda\frmAgregarAgenda.cs">
+    <Compile Include="Inicio\Mantenimiento\Agenda\frmAgregarAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agenda\frmAgregarAgenda.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Agenda\frmAgregarAgenda.Designer.cs">
       <DependentUpon>frmAgregarAgenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Conceptos Contables\frmConceptosContables.cs">
+    <Compile Include="Inicio\Mantenimiento\Conceptos Contables\frmConceptosContables.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Conceptos Contables\frmConceptosContables.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Conceptos Contables\frmConceptosContables.Designer.cs">
       <DependentUpon>frmConceptosContables.cs</DependentUpon>
     </Compile>
-    <Compile Include="Empresa\frmAgregarSucursal.cs">
+    <Compile Include="Inicio\Mantenimiento\Empresa\frmAgregarSucursal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empresa\frmAgregarSucursal.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Empresa\frmAgregarSucursal.Designer.cs">
       <DependentUpon>frmAgregarSucursal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Empresa\frmEmpresa.cs">
+    <Compile Include="Inicio\Mantenimiento\Empresa\frmEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empresa\frmEmpresa.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Empresa\frmEmpresa.Designer.cs">
       <DependentUpon>frmEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="General\frmCodigoBarra.cs">
@@ -308,22 +308,22 @@
     <Compile Include="General\frmAutorización.Designer.cs">
       <DependentUpon>frmAutorización.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCarga.cs">
+    <Compile Include="Inicio\frmCarga.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCarga.Designer.cs">
+    <Compile Include="Inicio\frmCarga.Designer.cs">
       <DependentUpon>frmCarga.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInicio.cs">
+    <Compile Include="Inicio\frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInicio.Designer.cs">
+    <Compile Include="Inicio\frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Inicio\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Inicio\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="General\frmEstandar.cs">
@@ -332,117 +332,117 @@
     <Compile Include="General\frmEstandar.Designer.cs">
       <DependentUpon>frmEstandar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parametrizacion Permisos\frmPermisosPerfil.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Parametrizacion Permisos\frmPermisosPerfil.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosPerfil.Designer.cs">
       <DependentUpon>frmPermisosPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parametrizacion Permisos\frmPermisosUsu.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosUsu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Parametrizacion Permisos\frmPermisosUsu.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosUsu.Designer.cs">
       <DependentUpon>frmPermisosUsu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parametrizacion Permisos\frmPermisosEspecialesUsu.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosEspecialesUsu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Parametrizacion Permisos\frmPermisosEspecialesUsu.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosEspecialesUsu.Designer.cs">
       <DependentUpon>frmPermisosEspecialesUsu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parametrizacion Permisos\frmPermisosEspecialesPerfil.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosEspecialesPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Parametrizacion Permisos\frmPermisosEspecialesPerfil.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosEspecialesPerfil.Designer.cs">
       <DependentUpon>frmPermisosEspecialesPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plan de Cuentas\frmAgregarCuenta.cs">
+    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmAgregarCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Plan de Cuentas\frmAgregarCuenta.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmAgregarCuenta.Designer.cs">
       <DependentUpon>frmAgregarCuenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plan de Cuentas\frmModificarCuenta.cs">
+    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmModificarCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Plan de Cuentas\frmModificarCuenta.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmModificarCuenta.Designer.cs">
       <DependentUpon>frmModificarCuenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plan de Cuentas\frmPlanDeCuentas.cs">
+    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Plan de Cuentas\frmPlanDeCuentas.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.Designer.cs">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rubros Contables\frmAgregarRubroContable.cs">
+    <Compile Include="Inicio\Mantenimiento\Rubros Contables\frmAgregarRubroContable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Rubros Contables\frmAgregarRubroContable.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Rubros Contables\frmAgregarRubroContable.Designer.cs">
       <DependentUpon>frmAgregarRubroContable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rubros Contables\frmRubrosContables.cs">
+    <Compile Include="Inicio\Mantenimiento\Rubros Contables\frmRubrosContables.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Rubros Contables\frmRubrosContables.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Rubros Contables\frmRubrosContables.Designer.cs">
       <DependentUpon>frmRubrosContables.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmAgregarCaja.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAgregarCaja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios\frmAgregarCaja.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAgregarCaja.Designer.cs">
       <DependentUpon>frmAgregarCaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmAgregarUsuario.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios\frmAgregarUsuario.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAgregarUsuario.Designer.cs">
       <DependentUpon>frmAgregarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmDefinirCajas.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmDefinirCajas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios\frmDefinirCajas.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmDefinirCajas.Designer.cs">
       <DependentUpon>frmDefinirCajas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmModificarContra.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmModificarContra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios\frmModificarContra.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmModificarContra.Designer.cs">
       <DependentUpon>frmModificarContra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmModificarUsuario.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmModificarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios\frmModificarUsuario.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmModificarUsuario.Designer.cs">
       <DependentUpon>frmModificarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmSeleccionVendedores.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmSeleccionVendedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios\frmSeleccionVendedores.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmSeleccionVendedores.Designer.cs">
       <DependentUpon>frmSeleccionVendedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmUsuarios.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios\frmUsuarios.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Agenda\frmAgenda.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Agenda\frmAgenda.resx">
       <DependentUpon>frmAgenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Agenda\frmAgregarAgenda.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Agenda\frmAgregarAgenda.resx">
       <DependentUpon>frmAgregarAgenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Conceptos Contables\frmConceptosContables.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Conceptos Contables\frmConceptosContables.resx">
       <DependentUpon>frmConceptosContables.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empresa\frmAgregarSucursal.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Empresa\frmAgregarSucursal.resx">
       <DependentUpon>frmAgregarSucursal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empresa\frmEmpresa.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Empresa\frmEmpresa.resx">
       <DependentUpon>frmEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmCodigoBarra.resx">
@@ -454,40 +454,40 @@
     <EmbeddedResource Include="General\frmAutorización.resx">
       <DependentUpon>frmAutorización.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCarga.resx">
+    <EmbeddedResource Include="Inicio\frmCarga.resx">
       <DependentUpon>frmCarga.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInicio.aa-ER.resx">
+    <EmbeddedResource Include="Inicio\frmInicio.aa-ER.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInicio.resx">
+    <EmbeddedResource Include="Inicio\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Inicio\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmEstandar.resx">
       <DependentUpon>frmEstandar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosEspecialesPerfil.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosEspecialesPerfil.resx">
       <DependentUpon>frmPermisosEspecialesPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosPerfil.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosPerfil.resx">
       <DependentUpon>frmPermisosPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosUsu.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosUsu.resx">
       <DependentUpon>frmPermisosUsu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parametrizacion Permisos\frmPermisosEspecialesUsu.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosEspecialesUsu.resx">
       <DependentUpon>frmPermisosEspecialesUsu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Plan de Cuentas\frmAgregarCuenta.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Plan de Cuentas\frmAgregarCuenta.resx">
       <DependentUpon>frmAgregarCuenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Plan de Cuentas\frmModificarCuenta.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Plan de Cuentas\frmModificarCuenta.resx">
       <DependentUpon>frmModificarCuenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Plan de Cuentas\frmPlanDeCuentas.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.resx">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -501,31 +501,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Rubros Contables\frmAgregarRubroContable.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Rubros Contables\frmAgregarRubroContable.resx">
       <DependentUpon>frmAgregarRubroContable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Rubros Contables\frmRubrosContables.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Rubros Contables\frmRubrosContables.resx">
       <DependentUpon>frmRubrosContables.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\frmAgregarCaja.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAgregarCaja.resx">
       <DependentUpon>frmAgregarCaja.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\frmAgregarUsuario.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAgregarUsuario.resx">
       <DependentUpon>frmAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\frmDefinirCajas.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmDefinirCajas.resx">
       <DependentUpon>frmDefinirCajas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\frmModificarContra.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmModificarContra.resx">
       <DependentUpon>frmModificarContra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\frmModificarUsuario.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmModificarUsuario.resx">
       <DependentUpon>frmModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\frmSeleccionVendedores.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmSeleccionVendedores.resx">
       <DependentUpon>frmSeleccionVendedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\frmUsuarios.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -646,6 +646,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\binocular2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Inicio\Archivos\" />
+    <Folder Include="Inicio\Ayuda\" />
+    <Folder Include="Inicio\Contabilidad\" />
+    <Folder Include="Inicio\Ver\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
