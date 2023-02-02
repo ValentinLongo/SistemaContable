@@ -24,6 +24,7 @@ using System.Runtime.CompilerServices;
 using Bunifu.UI.WinForms.Helpers.Transitions;
 using Datos;
 using Datos.Modelos;
+using SistemaContable.Rubos_Contables;
 
 namespace SistemaContable
 {
@@ -371,9 +372,9 @@ namespace SistemaContable
                     }
                     if (bandera)
                     {
-                        AccesoBase.InsertUpdateDatos($"DELETE FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' AND mnu_descri = '{i.mnu_descri}' AND mnu_sistema = 'CO'");
-                        AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_usuario = {codigo} AND mxu_codigo = '{i.mnu_codigo}' AND mxu_activo = {permiso} AND mxu_sistema = 'CO'");
-                        AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxPerfil WHERE mxup_perfil = {perfil} AND mxp_codigo = '{i.mnu_codigo}' AND mxp_activo = {permiso} AND mxp_sistema = 'CO'");
+                        //AccesoBase.InsertUpdateDatos($"DELETE FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' AND mnu_descri = '{i.mnu_descri}' AND mnu_sistema = 'CO'");
+                        //AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_usuario = {codigo} AND mxu_codigo = '{i.mnu_codigo}' AND mxu_activo = {permiso} AND mxu_sistema = 'CO'");
+                        //AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxPerfil WHERE mxup_perfil = {perfil} AND mxp_codigo = '{i.mnu_codigo}' AND mxp_activo = {permiso} AND mxp_sistema = 'CO'");
                     }
                 }
             }
@@ -518,8 +519,14 @@ namespace SistemaContable
             Negocio.FGenerales.Permiso(conceptosContablesToolStripMenuItem.Tag.ToString());
         }
         private void rubrosContablesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Negocio.FGenerales.Permiso(rubrosContablesToolStripMenuItem.Tag.ToString());
+        { 
+            frmRubrosContables rubroContables = new frmRubrosContables();
+            permiso = Negocio.FGenerales.Permiso(rubrosContablesToolStripMenuItem.Tag.ToString());
+            if (permiso)
+            {
+                rubroContables.ShowDialog();
+            }
+
         }
         private void coeficienteDeAjusteToolStripMenuItem_Click(object sender, EventArgs e)
         {
