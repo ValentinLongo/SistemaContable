@@ -16,5 +16,21 @@ namespace Negocio.Funciones
             ds = AccesoBase.ListarDatos($"select * from RubroCont where ruc_codigo = {idRubro}");
             return ds;
         }
+
+        public void ModificarRubroContable(int codigo, string nombre,int vigencia, string desde, string hasta)
+        {
+            AccesoBase.InsertUpdateDatos($"update RubroCont set ruc_descri = '{nombre}', ruc_vigencia = {vigencia}, ruc_desde = '{desde}', ruc_hasta = '{hasta}' where ruc_codigo = {codigo}");
+        }
+
+        public void AgregarRubroContable(string nombre, int vigencia, string desde, string hasta)
+        {
+            int codigo = FGenerales.ultimoNumeroID("ruc_codigo", "RubroCont");
+            AccesoBase.InsertUpdateDatos($"INSERT INTO RubroCont(ruc_codigo,ruc_descri,ruc_vigencia,ruc_desde,ruc_hasta) VALUES({codigo},'{nombre}',{vigencia},'{desde}','{hasta}')");
+        }
+
+        public void EliminarRubroContable(int codigo)
+        {
+            AccesoBase.InsertUpdateDatos($"DELETE FROM RubroCont WHERE ruc_codigo = {codigo}");
+        }
     }
 }
