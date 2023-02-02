@@ -376,6 +376,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rubros Contables\frmRubrosContables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rubros Contables\frmRubrosContables.Designer.cs">
+      <DependentUpon>frmRubrosContables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\frmAgregarCaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -489,6 +495,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Rubros Contables\frmRubrosContables.resx">
+      <DependentUpon>frmRubrosContables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmAgregarCaja.resx">
       <DependentUpon>frmAgregarCaja.cs</DependentUpon>
     </EmbeddedResource>
