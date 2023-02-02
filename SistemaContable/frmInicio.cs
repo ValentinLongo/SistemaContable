@@ -305,6 +305,11 @@ namespace SistemaContable
                 lista.Add(mrecalcular1);
             }
 
+            int resultado;
+            int codigo;
+            int perfil;
+            bool bandera;
+
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT par_permiso FROM Parametro");
             foreach (DataRow dr in ds.Tables[0].Rows)
@@ -313,7 +318,7 @@ namespace SistemaContable
             }
             foreach (var i in lista)
             {
-                int resultado = 0;
+                resultado = 0;
                 resultado = AccesoBase.ValidarDatos($"SELECT mnu_codigo FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' and mnu_sistema = 'CO'");
 
                 if (resultado == 1)
@@ -322,13 +327,13 @@ namespace SistemaContable
                 }
                 else
                 {
-                    AccesoBase.InsertUpdateDatos($"INSERT INTO Menu ( mnu_codigo, mnu_descri ) VALUES ( '{i.mnu_codigo}', '{i.mnu_descri}' ) WHERE mnu_sistema = 'CO'");
+                    AccesoBase.InsertUpdateDatos($"INSERT INTO Menu ( mnu_codigo, mnu_descri, mnu_sistema ) VALUES ( '{i.mnu_codigo}', '{i.mnu_descri}', 'CO' )");
                 }
 
                 ds = AccesoBase.ListarDatos($"SELECT usu_codigo FROM Usuario");
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    int codigo = Convert.ToInt32(dr["usu_codigo"]);
+                    codigo = Convert.ToInt32(dr["usu_codigo"]);
 
                     resultado = 0;
                     resultado = AccesoBase.ValidarDatos($"SELECT mxu_usuario,mxu_codigo,mxu_sistema FROM MenuxUsu WHERE mxu_usuario = {codigo} AND mxu_codigo = '{i.mnu_codigo}' AND mxu_sistema = 'CO'");
@@ -337,16 +342,15 @@ namespace SistemaContable
                     {
                         AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu ( mxu_usuario,mxu_codigo,mxu_activo,mxu_sistema ) VALUES ( {codigo}, '{i.mnu_codigo}', {permiso}, 'CO' )");
                     }
-                    
                 }
 
                 ds = AccesoBase.ListarDatos($"SELECT per_codigo FROM Perfil");
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    int perfil = Convert.ToInt32(dr["per_codigo"]);
+                    perfil = Convert.ToInt32(dr["per_codigo"]);
 
                     resultado = 0;
-                    resultado = AccesoBase.ValidarDatos($"SELECT mxp_perfil,mxp_codigo,mxp_sistema FROM MenuxPerfil WHERE mxp_perfil = {perfil} AND mxp_codigo = {i.mnu_codigo} AND mxp_sistema = 'CO'");
+                    resultado = AccesoBase.ValidarDatos($"SELECT mxp_perfil,mxp_codigo,mxp_sistema FROM MenuxPerfil WHERE mxp_perfil = {perfil} AND mxp_codigo = '{i.mnu_codigo}' AND mxp_sistema = 'CO'");
 
                     if (resultado == 0)
                     {
@@ -354,21 +358,22 @@ namespace SistemaContable
                     }
                 }
 
-                bool bandera = true;
+                bandera = true;
 
                 ds = AccesoBase.ListarDatos($"SELECT mnu_codigo FROM menu WHERE mnu_sistema = 'CO'");
-                foreach (DataRow dr in ds.Tables[0].Rows) 
+                foreach (DataRow dr in ds.Tables[0].Rows)
                 {
                     int tag = Convert.ToInt32(dr["mnu_codigo"]);
 
-                    if (tag == Convert.ToInt32(i.mnu_codigo)) 
+                    if (tag == Convert.ToInt32(i.mnu_codigo))
                     {
                         bandera = false;
                     }
-
                     if (bandera)
                     {
-                        //hacer deletes
+                        AccesoBase.InsertUpdateDatos($"DELETE FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' AND mnu_descri = '{i.mnu_descri}' AND mnu_sistema = 'CO'");
+                        AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_usuario = {codigo} AND mxu_codigo = '{i.mnu_codigo}' AND mxu_activo = {permiso} AND mxu_sistema = 'CO'");
+                        AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxPerfil WHERE mxup_perfil = {perfil} AND mxp_codigo = '{i.mnu_codigo}' AND mxp_activo = {permiso} AND mxp_sistema = 'CO'");
                     }
                 }
             }
@@ -607,7 +612,10 @@ namespace SistemaContable
                     frmEstandar.mensaje1 = "Mensaje";
                     frmEstandar.mensaje2 = "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...";
                     frmEstandar estandar = new frmEstandar();
-                    estandar.ShowDialog();
+                    estandar.Show();
+                    Application.DoEvents();
+                    RecalculaPermisos();
+                    estandar.Close();
                 }
             }
         }

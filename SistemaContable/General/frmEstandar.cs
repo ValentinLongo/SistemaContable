@@ -19,19 +19,12 @@ namespace SistemaContable.General
         public frmEstandar()
         {
             InitializeComponent();
-            MensajeControlBar.Text = mensaje1;
-            MensajePrincipal.Text = mensaje2;
-
             if (proceso == 1)
             {
-                PermisosMenu();
+                MensajeControlBar.Text = mensaje1;
+                MensajePrincipal.Text = mensaje2;
             }
-        }
 
-        private void PermisosMenu() 
-        {
-            frmInicio inicio = new frmInicio();
-            inicio.RecalculaPermisos();
         }
     }
 }
