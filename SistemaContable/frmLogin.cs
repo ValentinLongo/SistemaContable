@@ -22,7 +22,7 @@ namespace SistemaContable
     public partial class frmLogin : Form
     {
         public static int NumeroTerminal;
-
+        //HOLA
         public frmLogin()
         {
             InitializeComponent();
