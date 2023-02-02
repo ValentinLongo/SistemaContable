@@ -31,7 +31,7 @@ namespace Negocio
             return UltimoID;
         }
 
-        public static void AbrirFormulario(Form Formulario, Form FormPadre, PictureBox logo)
+        public static void AbrirEnfrmPadre(Form Formulario, Form FormPadre, PictureBox logo)
         {
             Formulario.MdiParent = FormPadre;
             Formulario.TopLevel = false;
@@ -42,19 +42,22 @@ namespace Negocio
             Formulario.Show();
         }
 
-        public static void ManejarFormularios(Form Formulario, Form FormPadre, PictureBox logo)
+        public static void ManejarFormularios(Form Formulario, Form FormPadre, PictureBox logo, string tag)
         {
-            if (Formulario.ActiveControl == null)
+            if (Permiso(tag))
             {
-                AbrirFormulario(Formulario, FormPadre, logo);
-            }
-            else
-            {
-                Formulario.BringToFront();
+                if (Formulario.ActiveControl == null)
+                {
+                    AbrirEnfrmPadre(Formulario, FormPadre, logo);
+                }
+                else
+                {
+                    Formulario.BringToFront();
+                }
             }
         }
 
-        public static bool Permiso(string tag) 
+        private static bool Permiso(string tag)
         {
             DataSet ds = new DataSet();
             int usuario = FLogin.IdUsuario;
@@ -81,6 +84,15 @@ namespace Negocio
                 }
             }
             return false;
+        }
+
+        public static void Mostrarfrm(Form Formulario, string tag) 
+        {
+            bool permiso = Permiso(tag);
+            if (permiso)
+            {
+                Formulario.Show();
+            }
         }
     }
 }

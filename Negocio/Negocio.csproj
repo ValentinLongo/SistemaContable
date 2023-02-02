@@ -230,6 +230,7 @@
     <Compile Include="Funciones\FInicio.cs" />
     <Compile Include="Funciones\FLogin.cs" />
     <Compile Include="Funciones\FPlanDeCuentas.cs" />
+    <Compile Include="Funciones\FRecalcularPermisos.cs" />
     <Compile Include="Funciones\FRubrosContables.cs" />
     <Compile Include="Funciones\FUsuarios.cs" />
     <Compile Include="Funciones\FValidacionesEventos.cs" />

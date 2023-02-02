@@ -24,6 +24,11 @@ namespace SistemaContable.General
                 MensajeControlBar.Text = mensaje1;
                 MensajePrincipal.Text = mensaje2;
             }
+            if (proceso == 2)
+            {
+                MensajeControlBar.Text = mensaje1;
+                MensajePrincipal.Text = mensaje2;
+            }
 
         }
     }
