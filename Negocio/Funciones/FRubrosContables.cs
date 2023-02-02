@@ -10,10 +10,10 @@ namespace Negocio.Funciones
 {
     public class FRubrosContables
     {
-        public static DataSet ListaRubrosContables()
+        public DataSet RubroContableParticular(int idRubro)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"select * from RubroCont");
+            ds = AccesoBase.ListarDatos($"select * from RubroCont where ruc_codigo = {idRubro}");
             return ds;
         }
     }

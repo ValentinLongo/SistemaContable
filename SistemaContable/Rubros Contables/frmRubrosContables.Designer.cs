@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.dgvRubrosContables = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vigencia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vigencia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRubrosContables)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +57,25 @@
             this.dgvRubrosContables.ReadOnly = true;
             this.dgvRubrosContables.Size = new System.Drawing.Size(675, 425);
             this.dgvRubrosContables.TabIndex = 0;
+            this.dgvRubrosContables.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // Vigencia
+            // 
+            this.Vigencia.HeaderText = "Vigencia";
+            this.Vigencia.Name = "Vigencia";
+            this.Vigencia.ReadOnly = true;
             // 
             // btnAgregar
             // 
@@ -66,15 +85,17 @@
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(693, 117);
+            this.btnModificar.Location = new System.Drawing.Point(693, 114);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(93, 23);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -102,13 +123,14 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // textBox1
+            // tbDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(603, 20);
-            this.textBox1.TabIndex = 5;
+            this.tbDescripcion.Location = new System.Drawing.Point(84, 12);
+            this.tbDescripcion.Name = "tbDescripcion";
+            this.tbDescripcion.Size = new System.Drawing.Size(603, 20);
+            this.tbDescripcion.TabIndex = 5;
             // 
             // label1
             // 
@@ -119,31 +141,13 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Descripción:";
             // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Vigencia
-            // 
-            this.Vigencia.HeaderText = "Vigencia";
-            this.Vigencia.Name = "Vigencia";
-            this.Vigencia.ReadOnly = true;
-            // 
             // frmRubrosContables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 482);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnEliminar);
@@ -167,7 +171,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbDescripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
