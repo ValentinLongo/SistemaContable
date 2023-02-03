@@ -104,8 +104,7 @@ namespace SistemaContable
                     if (boton == DialogResult.OK)
                     {
                         frmEstandar.proceso = 1;
-                        frmEstandar.mensaje1 = "Mensaje";
-                        frmEstandar.mensaje2 = "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...";
+                        frmEstandar.mensaje = "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...";
                         frmEstandar estandar = new frmEstandar();
                         estandar.ShowDialog();
                     }
