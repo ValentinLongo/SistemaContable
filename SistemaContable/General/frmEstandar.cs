@@ -14,20 +14,17 @@ namespace SistemaContable.General
     public partial class frmEstandar : Form
     {
         public static int proceso; //indica la parte del codigo que se va a ejecutar.
-        public static string mensaje1;
-        public static string mensaje2;
+        public static string mensaje;
         public frmEstandar()
         {
             InitializeComponent();
             if (proceso == 1)
             {
-                MensajeControlBar.Text = mensaje1;
-                MensajePrincipal.Text = mensaje2;
+                Mensaje.Text = mensaje;
             }
             if (proceso == 2)
             {
-                MensajeControlBar.Text = mensaje1;
-                MensajePrincipal.Text = mensaje2;
+                Mensaje.Text = mensaje;
             }
 
         }
