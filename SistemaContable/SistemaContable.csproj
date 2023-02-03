@@ -442,6 +442,9 @@
     <EmbeddedResource Include="Inicio\Mantenimiento\Agenda\frmAgregarAgenda.resx">
       <DependentUpon>frmAgregarAgenda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Coeficiente de ajuste\frmCoeficienteDeAjuste.resx">
+      <DependentUpon>frmCoeficienteDeAjuste.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Conceptos Contables\frmConceptosContables.resx">
       <DependentUpon>frmConceptosContables.cs</DependentUpon>
     </EmbeddedResource>
