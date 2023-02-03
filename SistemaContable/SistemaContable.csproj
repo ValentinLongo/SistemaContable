@@ -651,6 +651,7 @@
     <Folder Include="Inicio\Archivos\" />
     <Folder Include="Inicio\Ayuda\" />
     <Folder Include="Inicio\Contabilidad\" />
+    <Folder Include="Inicio\Mantenimiento\Ejercicio Contable\" />
     <Folder Include="Inicio\Ver\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

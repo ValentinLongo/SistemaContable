@@ -374,7 +374,7 @@ namespace SistemaContable
                     if (bandera)
                     {
                         //terminar
-                        //AccesoBase.InsertUpdateDatos($"DELETE FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' AND mnu_descri = '{i.mnu_descri}' AND mnu_sistema = 'CO'");
+                        AccesoBase.InsertUpdateDatos($"DELETE FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' AND mnu_descri = '{i.mnu_descri}' AND mnu_sistema = 'CO'");
                         //AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_usuario = {codigo} AND mxu_codigo = '{i.mnu_codigo}' AND mxu_activo = {permiso} AND mxu_sistema = 'CO'");
                         //AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxPerfil WHERE mxup_perfil = {perfil} AND mxp_codigo = '{i.mnu_codigo}' AND mxp_activo = {permiso} AND mxp_sistema = 'CO'");
                     }
@@ -598,8 +598,7 @@ namespace SistemaContable
                 if (boton1 == DialogResult.OK)
                 {
                     frmEstandar.proceso = 1;
-                    frmEstandar.mensaje1 = "Mensaje";
-                    frmEstandar.mensaje2 = "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...";
+                    frmEstandar.mensaje = "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...";
                     frmEstandar estandar = new frmEstandar();
                     estandar.Show();
                     Application.DoEvents();
@@ -610,15 +609,14 @@ namespace SistemaContable
                 if (boton2 == DialogResult.OK)
                 {
                     frmEstandar.proceso = 2;
-                    frmEstandar.mensaje1 = "Mensaje";
-                    frmEstandar.mensaje2 = "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...";
+                    frmEstandar.mensaje = "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...";
                     frmEstandar estandar = new frmEstandar();
                     estandar.Show();
                     Application.DoEvents();
                     Negocio.Funciones.FRecalcularPermisos.RecalculaPermisosEspeciales();
                     estandar.Close();
-                    //FALTA CUANDO SE AGREGA UN USUARIO PONERLE LOS PERFILES
                 }
+                //FALTA CUANDO SE AGREGA UN USUARIO PONERLE LOS PERFILES
             }
         }
     }

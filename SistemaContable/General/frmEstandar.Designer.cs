@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstandar));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.MensajeControlBar = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnCerrar = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.MensajePrincipal = new System.Windows.Forms.Label();
+            this.Mensaje = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel1.Controls.Add(this.MensajeControlBar);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -49,16 +49,16 @@
             this.panel1.TabIndex = 15;
             this.panel1.Tag = "1";
             // 
-            // MensajeControlBar
+            // label1
             // 
-            this.MensajeControlBar.AutoSize = true;
-            this.MensajeControlBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensajeControlBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MensajeControlBar.Location = new System.Drawing.Point(3, 5);
-            this.MensajeControlBar.Name = "MensajeControlBar";
-            this.MensajeControlBar.Size = new System.Drawing.Size(53, 13);
-            this.MensajeControlBar.TabIndex = 30;
-            this.MensajeControlBar.Text = "Mensaje1";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Mensaje";
             // 
             // btnCerrar
             // 
@@ -138,16 +138,16 @@
             this.bunifuShapes1.TabIndex = 16;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
-            // MensajePrincipal
+            // Mensaje
             // 
-            this.MensajePrincipal.AutoSize = true;
-            this.MensajePrincipal.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensajePrincipal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MensajePrincipal.Location = new System.Drawing.Point(21, 56);
-            this.MensajePrincipal.Name = "MensajePrincipal";
-            this.MensajePrincipal.Size = new System.Drawing.Size(63, 17);
-            this.MensajePrincipal.TabIndex = 17;
-            this.MensajePrincipal.Text = "Mensaje2";
+            this.Mensaje.AutoSize = true;
+            this.Mensaje.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Mensaje.Location = new System.Drawing.Point(21, 56);
+            this.Mensaje.Name = "Mensaje";
+            this.Mensaje.Size = new System.Drawing.Size(103, 17);
+            this.Mensaje.TabIndex = 17;
+            this.Mensaje.Text = "MensajePrincipal";
             // 
             // frmEstandar
             // 
@@ -155,7 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(563, 105);
-            this.Controls.Add(this.MensajePrincipal);
+            this.Controls.Add(this.Mensaje);
             this.Controls.Add(this.bunifuShapes1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -172,9 +172,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label MensajeControlBar;
+        private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuFormControlBox btnCerrar;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
-        private System.Windows.Forms.Label MensajePrincipal;
+        private System.Windows.Forms.Label Mensaje;
     }
 }
