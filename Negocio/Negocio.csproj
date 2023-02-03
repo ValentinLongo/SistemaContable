@@ -224,6 +224,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Funciones\Mantenimiento\FAgenda.cs" />
+    <Compile Include="Funciones\Mantenimiento\FCoeficienteDeAjuste.cs" />
     <Compile Include="Funciones\Mantenimiento\FEmpresa.cs" />
     <Compile Include="Funciones\Generales\FFormatoSistema.cs" />
     <Compile Include="Funciones\Generales\FGenerales.cs" />

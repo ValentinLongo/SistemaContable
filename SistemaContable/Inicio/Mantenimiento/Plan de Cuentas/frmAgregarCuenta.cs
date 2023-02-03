@@ -124,7 +124,7 @@ namespace SistemaContable.Plan_de_Cuentas
             {
                 CodigoCuenta += nuevoCodigo[i];
             }
-            for (int i = codigoElegido.Length; i < codigoElegido.Length + 2; i++)
+            for (int i = codigoElegido.Length; i < 17; i++)
             {
                 CodigoCuenta += "0";
             }
