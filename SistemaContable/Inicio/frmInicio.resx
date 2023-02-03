@@ -241,13 +241,13 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGjSURBVEhL7Va9SgNBGFwFW62Mgg8gNtYWKdMoCim0sPAZ
-        0mglvoGlor12gpXoA4iNdpb+NIKCGOQUzvu/c+ZuTEhMvLNIlRsY2J1vvm82l2LXlBgehGF4lQC2bX86
-        jvPu+/4TtJsois7A3TiON8B5WMbU0gI11uihlz3s5QzO4kzOhnapljZYKALLsr4w+BQhKyTX1FTOheLa
-        kJ5gWAWcBRfARXAd3EHASRAE981mM5K1BWqs0UOvetjLGZxVkbUzGPtaJvc4URcwZAZsyM6DNqip3Bey
-        EzVJxuC0DxJzg38g+7/9zJLUcZqBBxOSyuBikL0M7gvZU0gqg4tB9jK4L2RPIWnYgz3Pe8UNcofXwjXu
-        13PwANfeJsiLf0otv4KxnJZnCz2H4AVfIZzFmZk7g1qMQeFFWi54rWHonrYJ19Aetc0FnkPPik1PW3dd
-        9y0rDQ7KqCs2A4QRfKZJcA7rKriG9TZ+0TE+2W2vJ0836KEXPUfsBVchVzkT5PNnVHHFgaYJNC9h6D5e
-        jR8MIrimxho4LvtggIBl/lck15JL/AFjvgGE8r1j2pLNNgAAAABJRU5ErkJggg==
+        0mglvkFKRXvtBCvRBxAb7Sz9aQQFOZBTiPeXuzhzNyYk5ryzuCo3MLA733zfbC7FrikxOmi329cdoNVq
+        fTqO8+77/jO02zAMz8FmFEVb4CIsE2rpghpr9NDLHvZyBmdxJmdDu1JLDyzkgW3bXxh8hpA1kmtqKmdC
+        cT1I72BYBZwHl8BlcBPcQ8BpEAQPlmWFsnZBjTV66FUPezmDsyqy9gdjX0vkIScaAIbMgQ3ZedAGNZVT
+        ITtRk2QMTvsoMTP4B7L/288sSX2nKTyYkFQG54PsZXAqZI8hqQzOB9nL4FTIHkPSqAd7nveGG+Qer4Ub
+        3K8X4CGuvW2QF/+MWn4FYzkrzw56jsBLvkI4izMTdwK1GIPCq7RM8FrD0H1tO1xDe9I2E3gOvSg2Pm3d
+        dV0rKRUHZdQVmwDCGD7TNLiAdRXcwHoXv+gEn+xu2JNnEPTQi55j9oLrkKucCfL5M664/EDTFJpXMPQA
+        r8YPBhFcU2MNnJS9GCBglf8VybXkEn/AmG81hL1XWXvEKQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="toolStripButton6.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -983,40 +983,7 @@
   <data name="&gt;&gt;MenuAyuda.Type" xml:space="preserve">
     <value>RJCodeAdvance.RJControls.RJDropdownMenu, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 5</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 13</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>S.I.Gc. - Sistema Integral de Gestion Contable </value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="controlboxInicio.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -1110,7 +1077,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;controlboxInicio.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1135,6 +1102,39 @@
   </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 4</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Sistema Integral de Gestion Contable </value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="HoraFecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>783, 16</value>
@@ -1505,16 +1505,16 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 519</value>
+    <value>59, 519</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 16</value>
+    <value>101, 16</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Datos Usuario</value>
+    <value>(Datos Usuario)</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -1551,39 +1551,6 @@
   </data>
   <data name="&gt;&gt;bunifuShapes1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 5</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>INICIO</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -2051,10 +2018,10 @@
     <value>NoControl</value>
   </data>
   <data name="pbLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>668, 358</value>
+    <value>577, 288</value>
   </data>
   <data name="pbLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 129</value>
+    <value>429, 247</value>
   </data>
   <data name="pbLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>

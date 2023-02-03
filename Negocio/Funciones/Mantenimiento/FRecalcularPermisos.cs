@@ -57,6 +57,8 @@ namespace Negocio.Funciones
                         AccesoBase.InsertUpdateDatos($"INSERT INTO PermisosxPerfil ( pxp_perfil, pxp_codigo, pxp_activo, pxp_sistema ) VALUES ( {perfil}, {codigo}, {permiso}, 'CO' )");
                     }
                 }
+
+                //falta deletes
             }
         }
     }

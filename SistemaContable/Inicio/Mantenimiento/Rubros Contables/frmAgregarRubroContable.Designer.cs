@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarRubroContable));
-            this.checkVigente = new System.Windows.Forms.CheckBox();
-            this.maskDesde = new System.Windows.Forms.MaskedTextBox();
-            this.maskHasta = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
@@ -44,34 +41,14 @@
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbNombre = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkVigente = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.maskDesde = new System.Windows.Forms.MaskedTextBox();
+            this.maskHasta = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // checkVigente
-            // 
-            this.checkVigente.AutoSize = true;
-            this.checkVigente.Location = new System.Drawing.Point(181, 202);
-            this.checkVigente.Name = "checkVigente";
-            this.checkVigente.Size = new System.Drawing.Size(94, 17);
-            this.checkVigente.TabIndex = 4;
-            this.checkVigente.Text = "Rubro Vigente";
-            this.checkVigente.UseVisualStyleBackColor = true;
-            // 
-            // maskDesde
-            // 
-            this.maskDesde.Location = new System.Drawing.Point(56, 123);
-            this.maskDesde.Name = "maskDesde";
-            this.maskDesde.Size = new System.Drawing.Size(219, 20);
-            this.maskDesde.TabIndex = 9;
-            // 
-            // maskHasta
-            // 
-            this.maskHasta.Location = new System.Drawing.Point(56, 158);
-            this.maskHasta.Name = "maskHasta";
-            this.maskHasta.Size = new System.Drawing.Size(219, 20);
-            this.maskHasta.TabIndex = 10;
             // 
             // panel1
             // 
@@ -84,6 +61,7 @@
             this.panel1.Size = new System.Drawing.Size(435, 21);
             this.panel1.TabIndex = 46;
             this.panel1.Tag = "1";
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label5
             // 
@@ -92,9 +70,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(3, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 13);
+            this.label5.Size = new System.Drawing.Size(120, 13);
             this.label5.TabIndex = 30;
-            this.label5.Text = "Empresa / Sucursales";
+            this.label5.Text = "Agregar Rublo Contable";
             // 
             // bunifuFormControlBox1
             // 
@@ -209,7 +187,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(295, 96);
+            this.btnConfirmar.Location = new System.Drawing.Point(295, 105);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(128, 26);
             this.btnConfirmar.TabIndex = 51;
@@ -258,26 +236,102 @@
             this.tbNombre.TabIndex = 54;
             this.tbNombre.Tag = "00000";
             // 
-            // panel4
+            // label2
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(152, 45);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(219, 1);
-            this.panel4.TabIndex = 57;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(190, 199);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 16);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Rubro Vigente";
             // 
-            // textBox1
+            // checkVigente
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(152, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(219, 19);
-            this.textBox1.TabIndex = 56;
-            this.textBox1.Tag = "00000";
+            this.checkVigente.AllowBindingControlAnimation = true;
+            this.checkVigente.AllowBindingControlColorChanges = false;
+            this.checkVigente.AllowBindingControlLocation = true;
+            this.checkVigente.AllowCheckBoxAnimation = false;
+            this.checkVigente.AllowCheckmarkAnimation = true;
+            this.checkVigente.AllowOnHoverStates = true;
+            this.checkVigente.AutoCheck = true;
+            this.checkVigente.BackColor = System.Drawing.Color.Transparent;
+            this.checkVigente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkVigente.BackgroundImage")));
+            this.checkVigente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.checkVigente.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.checkVigente.BorderRadius = 12;
+            this.checkVigente.Checked = false;
+            this.checkVigente.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.checkVigente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.checkVigente.CustomCheckmarkImage = null;
+            this.checkVigente.Location = new System.Drawing.Point(167, 198);
+            this.checkVigente.MinimumSize = new System.Drawing.Size(17, 17);
+            this.checkVigente.Name = "checkVigente";
+            this.checkVigente.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.checkVigente.OnCheck.BorderRadius = 12;
+            this.checkVigente.OnCheck.BorderThickness = 2;
+            this.checkVigente.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.checkVigente.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.checkVigente.OnCheck.CheckmarkThickness = 2;
+            this.checkVigente.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.checkVigente.OnDisable.BorderRadius = 12;
+            this.checkVigente.OnDisable.BorderThickness = 2;
+            this.checkVigente.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkVigente.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.checkVigente.OnDisable.CheckmarkThickness = 2;
+            this.checkVigente.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkVigente.OnHoverChecked.BorderRadius = 12;
+            this.checkVigente.OnHoverChecked.BorderThickness = 2;
+            this.checkVigente.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkVigente.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.checkVigente.OnHoverChecked.CheckmarkThickness = 2;
+            this.checkVigente.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkVigente.OnHoverUnchecked.BorderRadius = 12;
+            this.checkVigente.OnHoverUnchecked.BorderThickness = 1;
+            this.checkVigente.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkVigente.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.checkVigente.OnUncheck.BorderRadius = 12;
+            this.checkVigente.OnUncheck.BorderThickness = 1;
+            this.checkVigente.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkVigente.Size = new System.Drawing.Size(17, 17);
+            this.checkVigente.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.checkVigente.TabIndex = 62;
+            this.checkVigente.ThreeState = false;
+            this.checkVigente.ToolTipText = null;
+            // 
+            // maskDesde
+            // 
+            this.maskDesde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.maskDesde.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskDesde.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.maskDesde.Location = new System.Drawing.Point(56, 130);
+            this.maskDesde.Name = "maskDesde";
+            this.maskDesde.Size = new System.Drawing.Size(219, 13);
+            this.maskDesde.TabIndex = 63;
+            this.maskDesde.Tag = "10000";
+            // 
+            // maskHasta
+            // 
+            this.maskHasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.maskHasta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskHasta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.maskHasta.Location = new System.Drawing.Point(56, 162);
+            this.maskHasta.Name = "maskHasta";
+            this.maskHasta.Size = new System.Drawing.Size(219, 13);
+            this.maskHasta.TabIndex = 64;
+            this.maskHasta.Tag = "10000";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
+            this.pictureBox1.Location = new System.Drawing.Point(307, 170);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(130, 66);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 65;
+            this.pictureBox1.TabStop = false;
             // 
             // frmAgregarRubroContable
             // 
@@ -285,8 +339,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(435, 231);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.maskHasta);
+            this.Controls.Add(this.maskDesde);
+            this.Controls.Add(this.checkVigente);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.panel3);
@@ -297,24 +354,19 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.maskHasta);
-            this.Controls.Add(this.maskDesde);
-            this.Controls.Add(this.checkVigente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAgregarRubroContable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarRubroContable";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.CheckBox checkVigente;
-        private System.Windows.Forms.MaskedTextBox maskDesde;
-        private System.Windows.Forms.MaskedTextBox maskHasta;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
@@ -327,7 +379,10 @@
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tbNombre;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.UI.WinForms.BunifuCheckBox checkVigente;
+        private System.Windows.Forms.MaskedTextBox maskDesde;
+        private System.Windows.Forms.MaskedTextBox maskHasta;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

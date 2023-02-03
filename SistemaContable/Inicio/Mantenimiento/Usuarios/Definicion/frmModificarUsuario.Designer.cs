@@ -70,7 +70,7 @@
             // 
             // cbEstado
             // 
-            this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
@@ -83,7 +83,7 @@
             // 
             // cbPerfil
             // 
-            this.cbPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.cbPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.cbPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbPerfil.FormattingEnabled = true;
             this.cbPerfil.Location = new System.Drawing.Point(147, 246);
@@ -93,7 +93,7 @@
             // 
             // tbLogin
             // 
-            this.tbLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.tbLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbLogin.Location = new System.Drawing.Point(146, 217);
@@ -111,7 +111,7 @@
             // 
             // tbTelefono
             // 
-            this.tbTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.tbTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTelefono.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbTelefono.Location = new System.Drawing.Point(148, 153);
@@ -122,7 +122,7 @@
             // 
             // tbDireccion
             // 
-            this.tbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.tbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDireccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbDireccion.Location = new System.Drawing.Point(147, 118);
@@ -133,7 +133,7 @@
             // 
             // tbNombre
             // 
-            this.tbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.tbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbNombre.Location = new System.Drawing.Point(147, 85);
@@ -243,7 +243,7 @@
             // 
             // tbCodigo
             // 
-            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.Enabled = false;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -313,10 +313,10 @@
             // 
             // tbVendedor
             // 
-            this.tbVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.tbVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbVendedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbVendedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbVendedor.Location = new System.Drawing.Point(146, 346);
+            this.tbVendedor.Location = new System.Drawing.Point(146, 349);
             this.tbVendedor.Name = "tbVendedor";
             this.tbVendedor.Size = new System.Drawing.Size(252, 13);
             this.tbVendedor.TabIndex = 5;
@@ -336,7 +336,7 @@
             // 
             // cbSeccion
             // 
-            this.cbSeccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.cbSeccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.cbSeccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbSeccion.FormattingEnabled = true;
             this.cbSeccion.Location = new System.Drawing.Point(147, 312);
@@ -541,7 +541,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(505, 505);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CheckVendedor);

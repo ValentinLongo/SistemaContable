@@ -120,7 +120,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -725,7 +724,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.controlboxInicio);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
@@ -951,7 +949,7 @@
             this.bunifuShapes1.Angle = 0F;
             this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.bunifuShapes1.BorderThickness = 2;
+            this.bunifuShapes1.BorderThickness = 3;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
             resources.ApplyResources(this.bunifuShapes1, "bunifuShapes1");
@@ -962,16 +960,10 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label1);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             this.panel4.Tag = "1";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Name = "label4";
             // 
             // lblFecha
             // 
@@ -1187,7 +1179,6 @@
             this.MenuMantenimiento.ResumeLayout(false);
             this.MenuAyuda.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenu.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -1299,7 +1290,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
         private RJCodeAdvance.RJControls.RJButton btnArchivos2;
         private RJCodeAdvance.RJControls.RJButton btnVer2;
         private RJCodeAdvance.RJControls.RJButton btnContabilidad2;

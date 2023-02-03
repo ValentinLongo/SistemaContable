@@ -138,7 +138,7 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel7.Location = new System.Drawing.Point(428, 12);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(2, 100);
+            this.panel7.Size = new System.Drawing.Size(1, 100);
             this.panel7.TabIndex = 19;
             // 
             // panel6
@@ -146,7 +146,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel6.Location = new System.Drawing.Point(436, 12);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(2, 100);
+            this.panel6.Size = new System.Drawing.Size(1, 100);
             this.panel6.TabIndex = 18;
             // 
             // panel5
@@ -154,7 +154,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel5.Location = new System.Drawing.Point(173, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(2, 100);
+            this.panel5.Size = new System.Drawing.Size(1, 100);
             this.panel5.TabIndex = 2;
             // 
             // panel4
@@ -162,7 +162,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel4.Location = new System.Drawing.Point(165, 12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2, 100);
+            this.panel4.Size = new System.Drawing.Size(1, 100);
             this.panel4.TabIndex = 1;
             // 
             // label1
@@ -242,7 +242,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(24, 228);
+            this.label8.Location = new System.Drawing.Point(24, 236);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 16);
             this.label8.TabIndex = 41;
@@ -253,7 +253,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(24, 202);
+            this.label7.Location = new System.Drawing.Point(24, 208);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(175, 16);
             this.label7.TabIndex = 40;
@@ -264,7 +264,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(24, 173);
+            this.label6.Location = new System.Drawing.Point(24, 178);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(258, 16);
             this.label6.TabIndex = 39;
@@ -275,7 +275,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(24, 147);
+            this.label5.Location = new System.Drawing.Point(24, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(148, 16);
             this.label5.TabIndex = 38;
@@ -382,9 +382,10 @@
             this.CircleProgress.SuperScriptMargin = new System.Windows.Forms.Padding(5, 50, 0, 0);
             this.CircleProgress.SuperScriptText = "%";
             this.CircleProgress.TabIndex = 16;
-            this.CircleProgress.Text = "0";
+            this.CircleProgress.Text = "30";
             this.CircleProgress.TextMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.CircleProgress.ValueByTransition = 0;
+            this.CircleProgress.Value = 30;
+            this.CircleProgress.ValueByTransition = 30;
             this.CircleProgress.ValueMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             // 
             // tAparece

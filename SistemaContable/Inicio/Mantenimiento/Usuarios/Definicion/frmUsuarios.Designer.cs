@@ -69,7 +69,7 @@
             // tbNombreBusqueda
             // 
             this.tbNombreBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbNombreBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.tbNombreBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbNombreBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNombreBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbNombreBusqueda.Location = new System.Drawing.Point(267, 38);
@@ -147,7 +147,7 @@
             // tbCodigo
             // 
             this.tbCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.ForeColor = System.Drawing.Color.White;
             this.tbCodigo.Location = new System.Drawing.Point(82, 37);
@@ -308,7 +308,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1129, 568);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
