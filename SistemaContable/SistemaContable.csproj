@@ -290,6 +290,18 @@
     <Compile Include="Inicio\Mantenimiento\Conceptos Contables\frmConceptosContables.Designer.cs">
       <DependentUpon>frmConceptosContables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Mantenimiento\Ejercicio Contable\frmAggEjercicioContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Ejercicio Contable\frmAggEjercicioContable.Designer.cs">
+      <DependentUpon>frmAggEjercicioContable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Ejercicio Contable\frmEjercicioContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Ejercicio Contable\frmEjercicioContable.Designer.cs">
+      <DependentUpon>frmEjercicioContable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Mantenimiento\Empresa\frmAgregarSucursal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -456,6 +468,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Conceptos Contables\frmConceptosContables.resx">
       <DependentUpon>frmConceptosContables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Ejercicio Contable\frmAggEjercicioContable.resx">
+      <DependentUpon>frmAggEjercicioContable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Ejercicio Contable\frmEjercicioContable.resx">
+      <DependentUpon>frmEjercicioContable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Empresa\frmAgregarSucursal.resx">
       <DependentUpon>frmAgregarSucursal.cs</DependentUpon>
@@ -669,7 +687,6 @@
     <Folder Include="Inicio\Archivos\" />
     <Folder Include="Inicio\Ayuda\" />
     <Folder Include="Inicio\Contabilidad\" />
-    <Folder Include="Inicio\Mantenimiento\Ejercicio Contable\" />
     <Folder Include="Inicio\Ver\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

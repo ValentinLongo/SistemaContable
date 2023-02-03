@@ -65,8 +65,8 @@ namespace SistemaContable.Parametrizacion_Permisos
         private void dgvPEspeciales_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string codigo2 = (string)dgvPEspeciales.Rows[e.RowIndex].Cells[0].Value; //codigo2 = pxu_usuario de la tabla permisosxusu
-            bool isCellChecked = (bool)dgvPEspeciales.Rows[e.RowIndex].Cells[3].Value;
-            if (isCellChecked)
+            bool estado = (bool)dgvPEspeciales.Rows[e.RowIndex].Cells[3].Value;
+            if (estado)
             {
                 AccesoBase.InsertUpdateDatos($"UPDATE PermisosxPerfil SET pxp_activo = '0' WHERE pxp_perfil = '{codigo}' AND pxp_codigo = '{codigo2}'  AND pxp_sistema = 'CO'");
             }
@@ -118,6 +118,11 @@ namespace SistemaContable.Parametrizacion_Permisos
                 }
                 dgvPEspeciales.Rows.Clear();
                 cargarDGV("", txtdescri, "");
+            }
+            else
+            {
+                dgvPEspeciales.Rows.Clear();
+                cargarDGV("", "", "");
             }
         }
 

@@ -26,7 +26,7 @@ using Datos;
 using Datos.Modelos;
 using SistemaContable.Rubos_Contables;
 using Negocio.Funciones;
-using SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste;
+using SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable;
 
 namespace SistemaContable
 {
@@ -374,8 +374,8 @@ namespace SistemaContable
                     }
                     if (bandera)
                     {
-                        //terminar
-                        AccesoBase.InsertUpdateDatos($"DELETE FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' AND mnu_descri = '{i.mnu_descri}' AND mnu_sistema = 'CO'");
+                        //terminar deletes
+                        //AccesoBase.InsertUpdateDatos($"DELETE FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' AND mnu_descri = '{i.mnu_descri}' AND mnu_sistema = 'CO'");
                         //AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_usuario = {codigo} AND mxu_codigo = '{i.mnu_codigo}' AND mxu_activo = {permiso} AND mxu_sistema = 'CO'");
                         //AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxPerfil WHERE mxup_perfil = {perfil} AND mxp_codigo = '{i.mnu_codigo}' AND mxp_activo = {permiso} AND mxp_sistema = 'CO'");
                     }
@@ -493,7 +493,8 @@ namespace SistemaContable
         }
         private void ejercicioContableToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmEjercicioContable ejerciciocontable = new frmEjercicioContable();
+            Negocio.FGenerales.Mostrarfrm(ejerciciocontable, ejercicioContableToolStripMenuItem.Tag.ToString());
         }
         private void planDeCuentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -513,8 +514,7 @@ namespace SistemaContable
         }
         private void coeficienteDeAjusteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCoeficienteDeAjuste coeficienteDeAjuste = new frmCoeficienteDeAjuste();
-            Negocio.FGenerales.Mostrarfrm(coeficienteDeAjuste, coeficienteDeAjusteToolStripMenuItem.Tag.ToString());
+
         }
         private void centroDeCosteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -618,7 +618,6 @@ namespace SistemaContable
                     Negocio.Funciones.FRecalcularPermisos.RecalculaPermisosEspeciales();
                     estandar.Close();
                 }
-                //FALTA CUANDO SE AGREGA UN USUARIO PONERLE LOS PERFILES
             }
         }
     }
