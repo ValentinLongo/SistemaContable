@@ -27,6 +27,7 @@ using Datos.Modelos;
 using SistemaContable.Rubos_Contables;
 using Negocio.Funciones;
 using SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable;
+using SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste;
 
 namespace SistemaContable
 {
@@ -514,7 +515,8 @@ namespace SistemaContable
         }
         private void coeficienteDeAjusteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmCoeficienteDeAjuste coeficienteDeAjuste = new frmCoeficienteDeAjuste();
+            Negocio.FGenerales.Mostrarfrm(coeficienteDeAjuste, coeficienteDeAjusteToolStripMenuItem.Tag.ToString());
         }
         private void centroDeCosteToolStripMenuItem_Click(object sender, EventArgs e)
         {

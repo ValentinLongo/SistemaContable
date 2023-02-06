@@ -63,7 +63,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
 
         private void Click(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int codigoEjercicio;
             int indice = e.RowIndex;
             if(indice >= 0)
             {
@@ -113,8 +112,10 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            
             frmAgregarCoeficienteAjuste agregarCoeficienteAjuste = new frmAgregarCoeficienteAjuste("Modificar");
             agregarCoeficienteAjuste.ShowDialog();
         }
+
     }
 }
