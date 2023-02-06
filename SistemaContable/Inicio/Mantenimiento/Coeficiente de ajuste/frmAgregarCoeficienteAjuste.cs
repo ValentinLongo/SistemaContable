@@ -29,6 +29,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             {
                 maskPeriodo.Text = frmCoeficienteDeAjuste.periodoModificar;
                 tbCoeficiente.Text = frmCoeficienteDeAjuste.coeficienteModificar.ToString();
+                maskPeriodo.Enabled = false;
             }
         }
 
@@ -40,7 +41,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
                 try
                 {
                     AccesoBase.InsertUpdateDatos($"INSERT INTO DetAjusteInf(aji_ejercicio, aji_periodo,aji_coef,aji_usualta,aji_fecalta,aji_horaalta) values({frmCoeficienteDeAjuste.codigoEjercicio},'{maskPeriodo.Text}',{tbCoeficiente.Text},{FLogin.IdUsuario},'{DateTime.Now.ToString("d")}','{DateTime.Now.ToString("T")}')");
-                    MessageBox.Show("Modificado con éxito");
+                    MessageBox.Show("Agregado con éxito");
                     this.Close();
                 }
                 catch
@@ -53,7 +54,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             {
                 try
                 {
-                    AccesoBase.InsertUpdateDatos($"UPDATE DetAjusteInf SET aji_periodo = '{maskPeriodo.Text}', aji_coef = {tbCoeficiente.Text}, aji_usumodi = {FLogin.IdUsuario}, aji_fecmodi = '{DateTime.Now.ToString("d")}', aji_horamodi = '{DateTime.Now.ToString("T")}' WHERE aji_ejercicio = {frmCoeficienteDeAjuste.codigoEjercicio}");
+                    AccesoBase.InsertUpdateDatos($"UPDATE DetAjusteInf SET aji_coef = {tbCoeficiente.Text}, aji_usumodi = {FLogin.IdUsuario}, aji_fecmodi = '{DateTime.Now.ToString("d")}', aji_horamodi = '{DateTime.Now.ToString("T")}' WHERE aji_ejercicio = {frmCoeficienteDeAjuste.codigoEjercicio} and aji_periodo = '{maskPeriodo.Text}'");
                     MessageBox.Show("Modificado con éxito");
                     this.Close();
                 }
