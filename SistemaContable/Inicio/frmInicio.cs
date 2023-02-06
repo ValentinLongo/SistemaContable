@@ -28,6 +28,7 @@ using SistemaContable.Rubos_Contables;
 using Negocio.Funciones;
 using SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable;
 using SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste;
+using SistemaContable.Inicio.Mantenimiento;
 
 namespace SistemaContable
 {
@@ -520,7 +521,8 @@ namespace SistemaContable
         }
         private void centroDeCosteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmCentrodeCostos centrodecostos = new frmCentrodeCostos();
+            Negocio.FGenerales.Mostrarfrm(centrodecostos, centroDeCosteToolStripMenuItem.Tag.ToString());
         }
         private void rubricacionDeSubDiariosToolStripMenuItem_Click(object sender, EventArgs e)
         {

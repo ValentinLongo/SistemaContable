@@ -272,6 +272,12 @@
     <Compile Include="Inicio\Mantenimiento\Agenda\frmAgregarAgenda.Designer.cs">
       <DependentUpon>frmAgregarAgenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Mantenimiento\Centro de Costos\frmAggModEjercicioContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Centro de Costos\frmAggModEjercicioContable.Designer.cs">
+      <DependentUpon>frmAggModEjercicioContable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Mantenimiento\Coeficiente de ajuste\frmAgregarCoeficienteAjuste.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +361,12 @@
     </Compile>
     <Compile Include="General\frmEstandar.Designer.cs">
       <DependentUpon>frmEstandar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Centro de Costos\frmCentrodeCostos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Centro de Costos\frmCentrodeCostos.Designer.cs">
+      <DependentUpon>frmCentrodeCostos.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosPerfil.cs">
       <SubType>Form</SubType>
@@ -460,6 +472,9 @@
     <EmbeddedResource Include="Inicio\Mantenimiento\Agenda\frmAgregarAgenda.resx">
       <DependentUpon>frmAgregarAgenda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Centro de Costos\frmAggModEjercicioContable.resx">
+      <DependentUpon>frmAggModEjercicioContable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Coeficiente de ajuste\frmAgregarCoeficienteAjuste.resx">
       <DependentUpon>frmAgregarCoeficienteAjuste.cs</DependentUpon>
     </EmbeddedResource>
@@ -504,6 +519,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmEstandar.resx">
       <DependentUpon>frmEstandar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Centro de Costos\frmCentrodeCostos.resx">
+      <DependentUpon>frmCentrodeCostos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosEspecialesPerfil.resx">
       <DependentUpon>frmPermisosEspecialesPerfil.cs</DependentUpon>

@@ -17,8 +17,25 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
         public frmAggEjercicioContable()
         {
             InitializeComponent();
-        }
 
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+        }
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string fechadesde = dtdesde.Value.ToString();
+            fechadesde = fechadesde.Substring(0, 10);
+            string fechahasta = dthasta.Value.ToString();
+            fechahasta = fechahasta.Substring(0, 10);
+
+            int validado = Negocio.FValidacionesEventos.ValidacionVacio(this);
+            if (validado == 0)
+            {
+                AccesoBase.InsertUpdateDatos($"INSERT INTO Ejercicio ( eje_codigo, eje_descri, eje_desde, eje_hasta, eje_renumera, eje_asiento, eje_cerrado ) VALUES ( '{txtCodigo.Text}', '{txtDescri.Text}', '{fechadesde}', '{fechahasta}', '{txtRenumeracion.Text}', {txtAsiento.Text}, '0' )");
+                MessageBox.Show("Agregado Correctamente!", "Mensaje");
+                this.Close();
+            }
+        }
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -28,18 +45,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            string fechadesde = dtdesde.Value.ToString();
-            fechadesde = fechadesde.Substring(0, 10);
-            string fechahasta = dthasta.Value.ToString();
-            fechahasta = fechahasta.Substring(0, 10);
-
-            AccesoBase.InsertUpdateDatos($"INSERT INTO Ejercicio ( eje_codigo, eje_descri, eje_desde, eje_hasta, eje_renumera, eje_asiento, eje_cerrado ) VALUES ( '{txtCodigo.Text}', '{txtDescri.Text}', '{fechadesde}', '{fechahasta}', '{txtRenumeracion.Text}', {txtAsiento.Text}, '0' )");
-            MessageBox.Show("Agregado Correctamente!","Mensaje");
-            this.Close();
         }
     }
 }

@@ -89,7 +89,6 @@ namespace Negocio
                 {
                     e.Handled = true;                    
                 }
-
                 // solo 1 coma decimal
                 //if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
                 //{
@@ -129,13 +128,14 @@ namespace Negocio
                 if (Ctrl is TextBox)
                 {
                     Tag1 = Tags(Ctrl.Tag.ToString(), 1);
-                }
-                if(Tag1 == "1")
-                {
-                    if (Ctrl.Text == "")
+
+                    if (Tag1 == "1")
                     {
-                        error = true;
-                    }                  
+                        if (Ctrl.Text == "" || Ctrl.Text == null)
+                        {
+                            error = true;
+                        }
+                    }
                 }
             }
             if (error)

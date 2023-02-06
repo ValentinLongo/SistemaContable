@@ -154,7 +154,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(147, 246);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(156, 35);
-            this.btnConfirmar.TabIndex = 54;
+            this.btnConfirmar.TabIndex = 4;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -255,8 +255,8 @@
             this.txtCodigo.Location = new System.Drawing.Point(129, 32);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(61, 19);
-            this.txtCodigo.TabIndex = 65;
-            this.txtCodigo.Tag = "00000";
+            this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.Tag = "10100";
             // 
             // panel2
             // 
@@ -275,8 +275,8 @@
             this.txtDescri.Location = new System.Drawing.Point(129, 64);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(208, 19);
-            this.txtDescri.TabIndex = 67;
-            this.txtDescri.Tag = "00000";
+            this.txtDescri.TabIndex = 1;
+            this.txtDescri.Tag = "11010";
             // 
             // panel4
             // 
@@ -295,8 +295,8 @@
             this.txtRenumeracion.Location = new System.Drawing.Point(129, 168);
             this.txtRenumeracion.Name = "txtRenumeracion";
             this.txtRenumeracion.Size = new System.Drawing.Size(129, 19);
-            this.txtRenumeracion.TabIndex = 69;
-            this.txtRenumeracion.Tag = "00000";
+            this.txtRenumeracion.TabIndex = 2;
+            this.txtRenumeracion.Tag = "10100";
             // 
             // panel5
             // 
@@ -315,8 +315,8 @@
             this.txtAsiento.Location = new System.Drawing.Point(129, 202);
             this.txtAsiento.Name = "txtAsiento";
             this.txtAsiento.Size = new System.Drawing.Size(129, 19);
-            this.txtAsiento.TabIndex = 71;
-            this.txtAsiento.Tag = "00000";
+            this.txtAsiento.TabIndex = 3;
+            this.txtAsiento.Tag = "10100";
             // 
             // dtdesde
             // 
