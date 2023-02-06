@@ -74,5 +74,9 @@ namespace Negocio.Funciones.Mantenimiento
             return ds;
         }
 
+        public void eliminarCoeficiente(string Periodo)
+        {
+            AccesoBase.InsertUpdateDatos($"DELETE FROM DetAjusteInf WHERE aji_periodo = '{Periodo}'");
+        }
     }
 }

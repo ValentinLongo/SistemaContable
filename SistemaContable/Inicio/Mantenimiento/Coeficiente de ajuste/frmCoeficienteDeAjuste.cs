@@ -117,5 +117,18 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             agregarCoeficienteAjuste.ShowDialog();
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                data.eliminarCoeficiente(periodoModificar);
+                MessageBox.Show("Eliminador correctamente");
+                CargarDGV();
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+        }
     }
 }

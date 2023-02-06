@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvEjercicios = new System.Windows.Forms.DataGridView();
+            this.Ejercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Desde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cerrado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.checkEjercicio = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCoeficientes = new System.Windows.Forms.DataGridView();
@@ -38,11 +43,6 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.Ejercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desde = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cerrado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjercicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCoeficientes)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +66,36 @@
             this.dgvEjercicios.Size = new System.Drawing.Size(637, 164);
             this.dgvEjercicios.TabIndex = 0;
             this.dgvEjercicios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
+            // 
+            // Ejercicio
+            // 
+            this.Ejercicio.HeaderText = "Ejercicio";
+            this.Ejercicio.Name = "Ejercicio";
+            this.Ejercicio.ReadOnly = true;
+            // 
+            // Descripción
+            // 
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.Name = "Descripción";
+            this.Descripción.ReadOnly = true;
+            // 
+            // Desde
+            // 
+            this.Desde.HeaderText = "Desde";
+            this.Desde.Name = "Desde";
+            this.Desde.ReadOnly = true;
+            // 
+            // Hasta
+            // 
+            this.Hasta.HeaderText = "Hasta";
+            this.Hasta.Name = "Hasta";
+            this.Hasta.ReadOnly = true;
+            // 
+            // Cerrado
+            // 
+            this.Cerrado.HeaderText = "Cerrado";
+            this.Cerrado.Name = "Cerrado";
+            this.Cerrado.ReadOnly = true;
             // 
             // checkEjercicio
             // 
@@ -156,36 +186,7 @@
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // Ejercicio
-            // 
-            this.Ejercicio.HeaderText = "Ejercicio";
-            this.Ejercicio.Name = "Ejercicio";
-            this.Ejercicio.ReadOnly = true;
-            // 
-            // Descripción
-            // 
-            this.Descripción.HeaderText = "Descripción";
-            this.Descripción.Name = "Descripción";
-            this.Descripción.ReadOnly = true;
-            // 
-            // Desde
-            // 
-            this.Desde.HeaderText = "Desde";
-            this.Desde.Name = "Desde";
-            this.Desde.ReadOnly = true;
-            // 
-            // Hasta
-            // 
-            this.Hasta.HeaderText = "Hasta";
-            this.Hasta.Name = "Hasta";
-            this.Hasta.ReadOnly = true;
-            // 
-            // Cerrado
-            // 
-            this.Cerrado.HeaderText = "Cerrado";
-            this.Cerrado.Name = "Cerrado";
-            this.Cerrado.ReadOnly = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmCoeficienteDeAjuste
             // 
