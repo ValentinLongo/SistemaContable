@@ -262,7 +262,7 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(25, 39);
+            this.bunifuShapes1.Location = new System.Drawing.Point(25, 40);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;

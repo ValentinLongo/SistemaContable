@@ -278,16 +278,16 @@
     <Compile Include="Inicio\Mantenimiento\Centro de Costos\frmAggModEjercicioContable.Designer.cs">
       <DependentUpon>frmAggModEjercicioContable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Mantenimiento\Coeficiente de ajuste\frmAgregarCoeficienteAjuste.cs">
+    <Compile Include="Inicio\Mantenimiento\Coeficiente de Ajuste\frmAgregarCoeficienteAjuste.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio\Mantenimiento\Coeficiente de ajuste\frmAgregarCoeficienteAjuste.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Coeficiente de Ajuste\frmAgregarCoeficienteAjuste.Designer.cs">
       <DependentUpon>frmAgregarCoeficienteAjuste.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Mantenimiento\Coeficiente de ajuste\frmCoeficienteDeAjuste.cs">
+    <Compile Include="Inicio\Mantenimiento\Coeficiente de Ajuste\frmCoeficienteDeAjuste.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio\Mantenimiento\Coeficiente de ajuste\frmCoeficienteDeAjuste.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Coeficiente de Ajuste\frmCoeficienteDeAjuste.Designer.cs">
       <DependentUpon>frmCoeficienteDeAjuste.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Mantenimiento\Conceptos Contables\frmConceptosContables.cs">
@@ -475,10 +475,10 @@
     <EmbeddedResource Include="Inicio\Mantenimiento\Centro de Costos\frmAggModEjercicioContable.resx">
       <DependentUpon>frmAggModEjercicioContable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Mantenimiento\Coeficiente de ajuste\frmAgregarCoeficienteAjuste.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Coeficiente de Ajuste\frmAgregarCoeficienteAjuste.resx">
       <DependentUpon>frmAgregarCoeficienteAjuste.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Mantenimiento\Coeficiente de ajuste\frmCoeficienteDeAjuste.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Coeficiente de Ajuste\frmCoeficienteDeAjuste.resx">
       <DependentUpon>frmCoeficienteDeAjuste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Conceptos Contables\frmConceptosContables.resx">

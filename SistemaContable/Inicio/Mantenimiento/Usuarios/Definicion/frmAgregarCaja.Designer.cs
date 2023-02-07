@@ -261,7 +261,7 @@
             this.ShapeBusqueda.BorderThickness = 1;
             this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.FillShape = true;
-            this.ShapeBusqueda.Location = new System.Drawing.Point(538, 155);
+            this.ShapeBusqueda.Location = new System.Drawing.Point(539, 155);
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
