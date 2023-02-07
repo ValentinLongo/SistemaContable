@@ -27,13 +27,15 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
         public void cargarDGV(string txt)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT eje_codigo as codigo, eje_descri as Descripción ,eje_desde as Desde, eje_hasta as Hasta, eje_cerrado as Cerrado FROM Ejercicio '{txt}' ORDER BY eje_codigo");
+
+            ds = AccesoBase.ListarDatos($"SELECT eje_codigo as codigo, eje_descri as Descripción ,eje_desde as Desde, eje_hasta as Hasta, eje_cerrado as Cerrado FROM Ejercicio {txt} ORDER BY eje_codigo");
+
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 bool estado = false;
                 string codigo = dr[0].ToString();
                 string descri = dr[1].ToString();
-                string desde =  dr[2].ToString();
+                string desde = dr[2].ToString();
                 desde = desde.Substring(0, 10);
                 string hasta = dr[3].ToString();
                 hasta = hasta.Substring(0, 10);
@@ -48,8 +50,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
         }
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
-           string txtbusqueda = Negocio.Funciones.Mantenimiento.FEjercicioContable.Busqueda(dgvEjercicioContable,txtBusqueda, cbBusqueda, CheckInicio);
-           cargarDGV(txtbusqueda);
+            string txtbusqueda = Negocio.Funciones.Mantenimiento.FEjercicioContable.Busqueda(dgvEjercicioContable, txtBusqueda, cbBusqueda, CheckInicio);
+            cargarDGV(txtbusqueda);
         }
         private void dgvEjercicioContable_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
