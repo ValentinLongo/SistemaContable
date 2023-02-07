@@ -226,6 +226,7 @@
     <Compile Include="Funciones\Mantenimiento\FAgenda.cs" />
     <Compile Include="Funciones\Mantenimiento\FCentrodeCostos.cs" />
     <Compile Include="Funciones\Mantenimiento\FCoeficienteDeAjuste.cs" />
+    <Compile Include="Funciones\Mantenimiento\FConceptosContables.cs" />
     <Compile Include="Funciones\Mantenimiento\FEjercicioContable.cs" />
     <Compile Include="Funciones\Mantenimiento\FEmpresa.cs" />
     <Compile Include="Funciones\Generales\FFormatoSistema.cs" />

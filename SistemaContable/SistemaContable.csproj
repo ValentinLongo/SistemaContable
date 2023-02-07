@@ -290,6 +290,18 @@
     <Compile Include="Inicio\Mantenimiento\Coeficiente de Ajuste\frmCoeficienteDeAjuste.Designer.cs">
       <DependentUpon>frmCoeficienteDeAjuste.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Mantenimiento\Conceptos Contables\frmAgregarConceptoContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Conceptos Contables\frmAgregarConceptoContable.Designer.cs">
+      <DependentUpon>frmAgregarConceptoContable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\frmBuscarCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmBuscarCuenta.Designer.cs">
+      <DependentUpon>frmBuscarCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Mantenimiento\Conceptos Contables\frmConceptosContables.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -480,6 +492,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Coeficiente de Ajuste\frmCoeficienteDeAjuste.resx">
       <DependentUpon>frmCoeficienteDeAjuste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Conceptos Contables\frmAgregarConceptoContable.resx">
+      <DependentUpon>frmAgregarConceptoContable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\frmBuscarCuenta.resx">
+      <DependentUpon>frmBuscarCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Conceptos Contables\frmConceptosContables.resx">
       <DependentUpon>frmConceptosContables.cs</DependentUpon>

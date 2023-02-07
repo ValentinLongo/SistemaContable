@@ -33,7 +33,7 @@ namespace Negocio.Funciones.Mantenimiento
         {
             if (estado)
             {
-                DialogResult boton2 = MessageBox.Show("Atención: El ejercicio contable se encuentra cerrado. ¿Desea abierto?", "Contable", MessageBoxButtons.OKCancel);
+                DialogResult boton2 = MessageBox.Show("Atención: El ejercicio contable se encuentra cerrado. ¿Desea abrirlo?", "Contable", MessageBoxButtons.OKCancel);
                 if (boton2 == DialogResult.OK)
                 {
                     AccesoBase.InsertUpdateDatos($"UPDATE Ejercicio SET eje_cerrado = '0' WHERE eje_codigo = '{codigo}'");
