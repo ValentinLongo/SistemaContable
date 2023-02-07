@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Datos.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -41,6 +42,31 @@ namespace Negocio.Funciones.Mantenimiento
                 Descripcion = dr["pcu_descri"].ToString();
             }
             return Descripcion;
+        }
+
+        public MConceptoContable conceptoContableParticular(int codigo)
+        {
+            MConceptoContable concepto = new MConceptoContable();
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT * FROM ConceptoCont WHERE coc_codigo = {codigo}");
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                MConceptoContable mConceptoContable = new MConceptoContable()
+                {
+                    coc_codigo = codigo,
+                    coc_descri = dr["coc_descri"].ToString(),
+                    coc_vta = Convert.ToInt32(dr["coc_vta"].ToString()),
+                    coc_cpa = Convert.ToInt32(dr["coc_cpa"].ToString()),
+                    coc_caja = Convert.ToInt32(dr["coc_caja"].ToString()),
+                    coc_banco = Convert.ToInt32(dr["coc_banco"].ToString()),
+                    coc_ctacont = Convert.ToInt32(dr["coc_ctacont"].ToString()),
+                    pcu_descriCuenta = descripcionCuenta(Convert.ToInt32(dr["coc_ctacont"].ToString())),
+                    coc_contrap = Convert.ToInt32(dr["coc_contrap"].ToString()),
+                    pcu_descriContrap = descripcionCuenta(Convert.ToInt32(dr["coc_contrap"].ToString()))
+                };
+                concepto = mConceptoContable;
+            }
+            return concepto;
         }
     }
 }

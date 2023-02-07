@@ -12,7 +12,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemaContable.Conceptos_Contables;
 using SistemaContable.Parametrizacion_Permisos;
 using SistemaContable.General;
 using System.Collections;
@@ -32,6 +31,7 @@ using SistemaContable.Inicio.Mantenimiento;
 using SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion;
 using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizacion;
 using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_Modelos;
+using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
 
 namespace SistemaContable
 {
