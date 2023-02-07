@@ -260,6 +260,36 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmAggModDefdeInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmAggModDefdeInf.Designer.cs">
+      <DependentUpon>frmAggModDefdeInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmDefiniciondeInformes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmDefiniciondeInformes.Designer.cs">
+      <DependentUpon>frmDefiniciondeInformes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmDetalledeModelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmDetalledeModelos.Designer.cs">
+      <DependentUpon>frmDetalledeModelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmAggModEncabdeMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmAggModEncabdeMod.Designer.cs">
+      <DependentUpon>frmAggModEncabdeMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmEncabezadodeModelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmEncabezadodeModelos.Designer.cs">
+      <DependentUpon>frmEncabezadodeModelos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Mantenimiento\Agenda\frmAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -466,6 +496,21 @@
     <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmAggModDefdeInf.resx">
+      <DependentUpon>frmAggModDefdeInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmDefiniciondeInformes.resx">
+      <DependentUpon>frmDefiniciondeInformes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmDetalledeModelos.resx">
+      <DependentUpon>frmDetalledeModelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmAggModEncabdeMod.resx">
+      <DependentUpon>frmAggModEncabdeMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmEncabezadodeModelos.resx">
+      <DependentUpon>frmEncabezadodeModelos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Agenda\frmAgenda.resx">
       <DependentUpon>frmAgenda.cs</DependentUpon>
     </EmbeddedResource>
@@ -704,7 +749,6 @@
   <ItemGroup>
     <Folder Include="Inicio\Archivos\" />
     <Folder Include="Inicio\Ayuda\" />
-    <Folder Include="Inicio\Contabilidad\" />
     <Folder Include="Inicio\Ver\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

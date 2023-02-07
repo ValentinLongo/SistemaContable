@@ -25,10 +25,12 @@ namespace SistemaContable.Inicio.Mantenimiento.Centro_de_Costos
 
             if (agg_o_mod == 0)
             {
+                lblControlBar.Text = "Agregar Ejercicio Contable";
                 txtmsg.Text = "ALTA EN CONCEPTO";
             }
             if (agg_o_mod == 1)
             {
+                lblControlBar.Text = "Modificar Ejercicio Contable";
                 int seleccionado = DGV.CurrentCell.RowIndex;
                 txtmsg.Text = DGV.Rows[seleccionado].Cells[0].Value.ToString();
                 txtDescripcion.Text = DGV.Rows[seleccionado].Cells[1].Value.ToString();
