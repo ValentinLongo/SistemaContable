@@ -1,6 +1,6 @@
-﻿namespace SistemaContable.Inicio.Mantenimiento.Centro_de_Costos
+﻿namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
 {
-    partial class frmAggModEjercicioContable
+    partial class frmAggModEncabdeMod
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAggModEjercicioContable));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAggModEncabdeMod));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtmsg = new System.Windows.Forms.Label();
+            this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
+            this.txtmsg = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(412, 21);
-            this.panel1.TabIndex = 47;
+            this.panel1.TabIndex = 48;
             this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -61,9 +61,9 @@
             this.lblControlBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblControlBar.Location = new System.Drawing.Point(3, 4);
             this.lblControlBar.Name = "lblControlBar";
-            this.lblControlBar.Size = new System.Drawing.Size(132, 13);
+            this.lblControlBar.Size = new System.Drawing.Size(160, 13);
             this.lblControlBar.TabIndex = 30;
-            this.lblControlBar.Text = "Agregar Ejercicio Contable";
+            this.lblControlBar.Text = "Agregar Encabezado de Modelo";
             // 
             // bunifuFormControlBox1
             // 
@@ -127,62 +127,6 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(56, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "Codigo:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(52, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Nombre:";
-            // 
-            // txtmsg
-            // 
-            this.txtmsg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtmsg.AutoSize = true;
-            this.txtmsg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmsg.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtmsg.Location = new System.Drawing.Point(117, 45);
-            this.txtmsg.Name = "txtmsg";
-            this.txtmsg.Size = new System.Drawing.Size(135, 16);
-            this.txtmsg.TabIndex = 53;
-            this.txtmsg.Text = "ALTA DE CONCEPTO";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(120, 98);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(229, 1);
-            this.panel3.TabIndex = 71;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtDescripcion.Location = new System.Drawing.Point(120, 80);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(229, 19);
-            this.txtDescripcion.TabIndex = 0;
-            this.txtDescripcion.Tag = "00000";
-            // 
             // btnConfirmar
             // 
             this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -194,17 +138,73 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(132, 121);
+            this.btnConfirmar.Location = new System.Drawing.Point(133, 120);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(149, 26);
-            this.btnConfirmar.TabIndex = 1;
+            this.btnConfirmar.TabIndex = 73;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // frmAggModEjercicioContable
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(110, 96);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(229, 1);
+            this.panel3.TabIndex = 77;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtDescripcion.Location = new System.Drawing.Point(110, 78);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(229, 19);
+            this.txtDescripcion.TabIndex = 72;
+            this.txtDescripcion.Tag = "11000";
+            // 
+            // txtmsg
+            // 
+            this.txtmsg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtmsg.AutoSize = true;
+            this.txtmsg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmsg.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtmsg.Location = new System.Drawing.Point(107, 43);
+            this.txtmsg.Name = "txtmsg";
+            this.txtmsg.Size = new System.Drawing.Size(135, 16);
+            this.txtmsg.TabIndex = 76;
+            this.txtmsg.Text = "ALTA DE CONCEPTO";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(42, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 75;
+            this.label1.Text = "Nombre:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(46, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "Codigo:";
+            // 
+            // frmAggModEncabdeMod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,9 +218,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmAggModEjercicioContable";
+            this.Name = "frmAggModEncabdeMod";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAggModEjercicioContable";
+            this.Text = "frmAggMod";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -233,11 +233,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblControlBar;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label txtmsg;
+        private RJCodeAdvance.RJControls.RJButton btnConfirmar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private RJCodeAdvance.RJControls.RJButton btnConfirmar;
+        private System.Windows.Forms.Label txtmsg;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

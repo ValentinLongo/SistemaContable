@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaContable.Conceptos_Contables;
 using SistemaContable.Parametrizacion_Permisos;
 using SistemaContable.General;
 using System.Collections;
@@ -28,7 +29,9 @@ using Negocio.Funciones;
 using SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable;
 using SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste;
 using SistemaContable.Inicio.Mantenimiento;
-using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
+using SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion;
+using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizacion;
+using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_Modelos;
 
 namespace SistemaContable
 {
@@ -424,11 +427,13 @@ namespace SistemaContable
         }
         private void actualizaciónToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            frmEncabezadodeModelos encabezadodemodelos = new frmEncabezadodeModelos();
+            Negocio.FGenerales.Mostrarfrm(encabezadodemodelos, actualizaciónToolStripMenuItem1.Tag.ToString());
         }
         private void detalleDeModelosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmDetalledeModelos detalledemodelos = new frmDetalledeModelos();
+            Negocio.FGenerales.Mostrarfrm(detalledemodelos, detalleDeModelosToolStripMenuItem.Tag.ToString());
         }
         private void renumeraciónDeAsientosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -464,6 +469,8 @@ namespace SistemaContable
         }
         private void actualizacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmDefiniciondeInformes definiciondeinformes = new frmDefiniciondeInformes();
+            Negocio.FGenerales.Mostrarfrm(definiciondeinformes, actualizacionToolStripMenuItem.Tag.ToString());
 
         }
         private void detalleInformeToolStripMenuItem_Click(object sender, EventArgs e)
