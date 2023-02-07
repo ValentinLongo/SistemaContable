@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbCoeficiente = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -81,11 +82,21 @@
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(105, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "SOLO NUMERICO (MATI)";
+            // 
             // frmAgregarCoeficienteAjuste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(327, 165);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.tbCoeficiente);
             this.Controls.Add(this.label2);
@@ -106,5 +117,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbCoeficiente;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Label label3;
     }
 }
