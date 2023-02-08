@@ -24,17 +24,17 @@ namespace Negocio.Funciones.Mantenimiento
             return ds;
         }
 
-        public DataSet listaCuentas()
+        public DataSet listaCuentas(string txtbusqueda)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos("SELECT pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri as Descripción FROM PCuenta");
+            ds = AccesoBase.ListarDatos($"SELECT pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri as Descripción FROM PCuenta { txtbusqueda }");
             return ds;
         }
 
-        public DataSet listaCuentasActivas()
+        public DataSet listaCuentasActivas(string txtbusqueda)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos("SELECT pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri as Descripción FROM PCuenta WHERE pcu_estado = 1");
+            ds = AccesoBase.ListarDatos($"SELECT pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri as Descripción FROM PCuenta WHERE pcu_estado = 1 { txtbusqueda }");
             return ds;
         }
 

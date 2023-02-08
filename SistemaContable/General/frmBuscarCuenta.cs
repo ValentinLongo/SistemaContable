@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,31 +21,47 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         private string Accion;
         public static int IdCuenta;
         public static int IdContrapartida;
+        public static string txt = "";
+        public static string txt2 = "";
 
         public frmBuscarCuenta(string accion) 
         {
             InitializeComponent();
             cargarDGV();
+            cbBusqueda.SelectedIndex = 0;
             Accion = accion;
         }
 
         private void cargarDGV()
         {
             DataSet ds = new DataSet();
+
             if (checkActivas.Checked == true)
             {
-                ds = data.listaCuentasActivas();
+                ds = data.listaCuentasActivas(txt2);
                 dgvCuentas.DataSource = ds.Tables[0];
             }
             else
             {
-                ds = data.listaCuentas();
+                ds = data.listaCuentas(txt);
                 dgvCuentas.DataSource = ds.Tables[0];
             }
 
         }
 
-        private void CambioCheck(object sender, EventArgs e)
+        private void btnSeleccionar_Click_1(object sender, EventArgs e)
+        {
+            if (IdCuenta > -1)
+            {
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una cuenta");
+            }
+        }
+
+        private void checkActivas_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
             cargarDGV();
         }
@@ -61,52 +78,60 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             }       
         }
 
-        private void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-            if(IdCuenta > -1)
-            {
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar una cuenta");
-            }
-        }
-
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             if (txtBusqueda.Text != "")
             {
-                string txt;
                 if (cbBusqueda.SelectedIndex == 0)
                 {
                     if (CheckInicio.Checked)
                     {
                         txt = "WHERE pcu_cuenta LIKE " + "'" + txtBusqueda.Text + "%'";
+                        txt2 = "AND pcu_cuenta LIKE " + "'" + txtBusqueda.Text + "%'";
                     }
                     else
                     {
-                        txt = "WHERE pcu_descri LIKE " + "'%" + txtBusqueda.Text + "%'";
+                        txt = "WHERE pcu_cuenta LIKE " + "'%" + txtBusqueda.Text + "%'";
+                        txt2 = "AND pcu_cuenta LIKE " + "'%" + txtBusqueda.Text + "%'";
                     }
                 }
                 else if (cbBusqueda.SelectedIndex == 1)
                 {
                     if (CheckInicio.Checked)
                     {
-                        txt = "WHERE pcu_cuenta LIKE " + "'" + txtBusqueda.Text + "%'";
+                        txt = "WHERE pcu_descri LIKE " + "'" + txtBusqueda.Text + "%'";
+                        txt2 = "AND pcu_descri LIKE " + "'" + txtBusqueda.Text + "%'";
                     }
                     else
                     {
                         txt = "WHERE pcu_descri LIKE " + "'%" + txtBusqueda.Text + "%'";
+                        txt2 = "AND pcu_descri LIKE " + "'%" + txtBusqueda.Text + "%'";
                     }
                 }
             }
             else
             {
-                txtBusqueda.Text = "";
+                txt = "";
+                txt2 = "";
             }
-            DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos("SELECT pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri as Descripción FROM PCuenta");
+            cargarDGV();
+        }
+
+        private void bunifuFormControlBox1_CloseClicked(object sender, EventArgs e)
+        {
+            IdCuenta = 0;
+            IdContrapartida = 0;
+        }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel7_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

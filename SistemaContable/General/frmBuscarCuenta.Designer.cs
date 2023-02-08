@@ -42,8 +42,10 @@
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.label1 = new System.Windows.Forms.Label();
             this.checkActivas = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCuentas
@@ -56,7 +58,7 @@
             this.dgvCuentas.Name = "dgvCuentas";
             this.dgvCuentas.ReadOnly = true;
             this.dgvCuentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCuentas.Size = new System.Drawing.Size(522, 278);
+            this.dgvCuentas.Size = new System.Drawing.Size(672, 367);
             this.dgvCuentas.TabIndex = 0;
             this.dgvCuentas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
             // 
@@ -68,9 +70,10 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(657, 21);
+            this.panel7.Size = new System.Drawing.Size(844, 21);
             this.panel7.TabIndex = 63;
             this.panel7.Tag = "1";
+            this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             // 
             // lblControlBar
             // 
@@ -112,7 +115,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(543, 0);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(730, 0);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = true;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -144,6 +147,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.CloseClicked += new System.EventHandler(this.bunifuFormControlBox1_CloseClicked);
             // 
             // btnSeleccionar
             // 
@@ -156,14 +160,15 @@
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSeleccionar.Location = new System.Drawing.Point(545, 68);
+            this.btnSeleccionar.Location = new System.Drawing.Point(694, 68);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(102, 30);
+            this.btnSeleccionar.Size = new System.Drawing.Size(142, 44);
             this.btnSeleccionar.TabIndex = 86;
             this.btnSeleccionar.Tag = "";
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click_1);
             // 
             // cbBusqueda
             // 
@@ -175,16 +180,16 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Cuenta",
             "Descripción"});
-            this.cbBusqueda.Location = new System.Drawing.Point(27, 364);
+            this.cbBusqueda.Location = new System.Drawing.Point(28, 459);
             this.cbBusqueda.Name = "cbBusqueda";
-            this.cbBusqueda.Size = new System.Drawing.Size(133, 25);
+            this.cbBusqueda.Size = new System.Drawing.Size(190, 25);
             this.cbBusqueda.TabIndex = 92;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(466, 372);
+            this.label13.Location = new System.Drawing.Point(633, 466);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(32, 13);
             this.label13.TabIndex = 91;
@@ -208,7 +213,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(446, 369);
+            this.CheckInicio.Location = new System.Drawing.Point(610, 463);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -246,9 +251,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(179, 388);
+            this.panel3.Location = new System.Drawing.Point(224, 483);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(228, 1);
+            this.panel3.Size = new System.Drawing.Size(370, 1);
             this.panel3.TabIndex = 89;
             // 
             // txtBusqueda
@@ -257,9 +262,9 @@
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBusqueda.Location = new System.Drawing.Point(182, 370);
+            this.txtBusqueda.Location = new System.Drawing.Point(227, 465);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(225, 19);
+            this.txtBusqueda.Size = new System.Drawing.Size(367, 19);
             this.txtBusqueda.TabIndex = 87;
             this.txtBusqueda.Tag = "00000";
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
@@ -272,11 +277,11 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(12, 356);
+            this.bunifuShapes1.Location = new System.Drawing.Point(13, 443);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(522, 42);
+            this.bunifuShapes1.Size = new System.Drawing.Size(671, 55);
             this.bunifuShapes1.TabIndex = 88;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
@@ -342,13 +347,26 @@
             this.checkActivas.TabIndex = 94;
             this.checkActivas.ThreeState = false;
             this.checkActivas.ToolTipText = null;
+            this.checkActivas.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkActivas_CheckedChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
+            this.pictureBox1.Location = new System.Drawing.Point(702, 446);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(130, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 102;
+            this.pictureBox1.TabStop = false;
             // 
             // frmBuscarCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(657, 408);
+            this.ClientSize = new System.Drawing.Size(844, 505);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.checkActivas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbBusqueda);
@@ -367,6 +385,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,5 +406,6 @@
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuCheckBox checkActivas;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
