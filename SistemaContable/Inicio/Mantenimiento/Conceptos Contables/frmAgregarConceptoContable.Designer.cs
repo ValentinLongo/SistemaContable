@@ -44,11 +44,11 @@
             this.tbDescriContrapartida = new System.Windows.Forms.TextBox();
             this.tbNumContrapartida = new System.Windows.Forms.TextBox();
             this.cbCentroCostos2 = new System.Windows.Forms.ComboBox();
-            this.checkVentas = new System.Windows.Forms.CheckBox();
-            this.CheckCompras = new System.Windows.Forms.CheckBox();
-            this.checkTesoreria = new System.Windows.Forms.CheckBox();
-            this.checkBancos = new System.Windows.Forms.CheckBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.checkVentas = new System.Windows.Forms.RadioButton();
+            this.checkCompras = new System.Windows.Forms.RadioButton();
+            this.checkTesoreria = new System.Windows.Forms.RadioButton();
+            this.checkBancos = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -188,46 +188,6 @@
             this.cbCentroCostos2.Size = new System.Drawing.Size(339, 21);
             this.cbCentroCostos2.TabIndex = 15;
             // 
-            // checkVentas
-            // 
-            this.checkVentas.AutoSize = true;
-            this.checkVentas.Location = new System.Drawing.Point(84, 215);
-            this.checkVentas.Name = "checkVentas";
-            this.checkVentas.Size = new System.Drawing.Size(191, 17);
-            this.checkVentas.TabIndex = 16;
-            this.checkVentas.Text = "Se utiliza para el módulo de Ventas";
-            this.checkVentas.UseVisualStyleBackColor = true;
-            // 
-            // CheckCompras
-            // 
-            this.CheckCompras.AutoSize = true;
-            this.CheckCompras.Location = new System.Drawing.Point(84, 247);
-            this.CheckCompras.Name = "CheckCompras";
-            this.CheckCompras.Size = new System.Drawing.Size(199, 17);
-            this.CheckCompras.TabIndex = 17;
-            this.CheckCompras.Text = "Se utiliza para el módulo de Compras";
-            this.CheckCompras.UseVisualStyleBackColor = true;
-            // 
-            // checkTesoreria
-            // 
-            this.checkTesoreria.AutoSize = true;
-            this.checkTesoreria.Location = new System.Drawing.Point(84, 281);
-            this.checkTesoreria.Name = "checkTesoreria";
-            this.checkTesoreria.Size = new System.Drawing.Size(204, 17);
-            this.checkTesoreria.TabIndex = 18;
-            this.checkTesoreria.Text = "Se utiliza para el módulo de Tesorería";
-            this.checkTesoreria.UseVisualStyleBackColor = true;
-            // 
-            // checkBancos
-            // 
-            this.checkBancos.AutoSize = true;
-            this.checkBancos.Location = new System.Drawing.Point(84, 316);
-            this.checkBancos.Name = "checkBancos";
-            this.checkBancos.Size = new System.Drawing.Size(194, 17);
-            this.checkBancos.TabIndex = 19;
-            this.checkBancos.Text = "Se utiliza para el módulo de Bancos";
-            this.checkBancos.UseVisualStyleBackColor = true;
-            // 
             // btnConfirmar
             // 
             this.btnConfirmar.Location = new System.Drawing.Point(193, 362);
@@ -238,16 +198,60 @@
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
+            // checkVentas
+            // 
+            this.checkVentas.AutoSize = true;
+            this.checkVentas.Location = new System.Drawing.Point(84, 221);
+            this.checkVentas.Name = "checkVentas";
+            this.checkVentas.Size = new System.Drawing.Size(190, 17);
+            this.checkVentas.TabIndex = 21;
+            this.checkVentas.TabStop = true;
+            this.checkVentas.Text = "Se utiliza para el módulo de Ventas";
+            this.checkVentas.UseVisualStyleBackColor = true;
+            // 
+            // checkCompras
+            // 
+            this.checkCompras.AutoSize = true;
+            this.checkCompras.Location = new System.Drawing.Point(84, 254);
+            this.checkCompras.Name = "checkCompras";
+            this.checkCompras.Size = new System.Drawing.Size(198, 17);
+            this.checkCompras.TabIndex = 22;
+            this.checkCompras.TabStop = true;
+            this.checkCompras.Text = "Se utiliza para el módulo de Compras";
+            this.checkCompras.UseVisualStyleBackColor = true;
+            // 
+            // checkTesoreria
+            // 
+            this.checkTesoreria.AutoSize = true;
+            this.checkTesoreria.Location = new System.Drawing.Point(84, 286);
+            this.checkTesoreria.Name = "checkTesoreria";
+            this.checkTesoreria.Size = new System.Drawing.Size(203, 17);
+            this.checkTesoreria.TabIndex = 23;
+            this.checkTesoreria.TabStop = true;
+            this.checkTesoreria.Text = "Se utiliza para el módulo de Tesorería";
+            this.checkTesoreria.UseVisualStyleBackColor = true;
+            // 
+            // checkBancos
+            // 
+            this.checkBancos.AutoSize = true;
+            this.checkBancos.Location = new System.Drawing.Point(84, 322);
+            this.checkBancos.Name = "checkBancos";
+            this.checkBancos.Size = new System.Drawing.Size(193, 17);
+            this.checkBancos.TabIndex = 24;
+            this.checkBancos.TabStop = true;
+            this.checkBancos.Text = "Se utiliza para el módulo de Bancos";
+            this.checkBancos.UseVisualStyleBackColor = true;
+            // 
             // frmAgregarConceptoContable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 411);
-            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.checkBancos);
             this.Controls.Add(this.checkTesoreria);
-            this.Controls.Add(this.CheckCompras);
+            this.Controls.Add(this.checkCompras);
             this.Controls.Add(this.checkVentas);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.cbCentroCostos2);
             this.Controls.Add(this.btnBuscar2);
             this.Controls.Add(this.tbDescriContrapartida);
@@ -290,10 +294,10 @@
         private System.Windows.Forms.TextBox tbDescriContrapartida;
         private System.Windows.Forms.TextBox tbNumContrapartida;
         private System.Windows.Forms.ComboBox cbCentroCostos2;
-        private System.Windows.Forms.CheckBox checkVentas;
-        private System.Windows.Forms.CheckBox CheckCompras;
-        private System.Windows.Forms.CheckBox checkTesoreria;
-        private System.Windows.Forms.CheckBox checkBancos;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.RadioButton checkVentas;
+        private System.Windows.Forms.RadioButton checkCompras;
+        private System.Windows.Forms.RadioButton checkTesoreria;
+        private System.Windows.Forms.RadioButton checkBancos;
     }
 }

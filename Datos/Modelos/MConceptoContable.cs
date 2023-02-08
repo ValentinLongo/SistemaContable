@@ -16,6 +16,8 @@ namespace Datos.Modelos
         public int coc_banco { get; set; }
         public int coc_ctacont { get; set; }
         public int coc_contrap { get; set; }
+        public int coc_cccta { get; set; }
+        public int coc_cccontrap { get; set; }
         public string pcu_descriCuenta { get; set; }
         public string pcu_descriContrap { get; set; }
     }

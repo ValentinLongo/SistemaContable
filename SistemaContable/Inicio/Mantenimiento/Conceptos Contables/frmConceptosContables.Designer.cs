@@ -104,6 +104,7 @@
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(739, 20);
             this.tbDescripcion.TabIndex = 6;
+            this.tbDescripcion.TextChanged += new System.EventHandler(this.tbDescripcion_TextChanged);
             // 
             // frmConceptosContables
             // 
