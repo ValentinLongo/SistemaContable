@@ -51,10 +51,9 @@ namespace Negocio.Funciones.Contabilidad
             }
             return "";
         }
-
         public static void Agregar(Form frm, string asiento, string cuenta, string codigo, string debe, string haber, string concepto, [Optional] string centrodecosto) 
         {
-            centrodecosto = "0";
+            centrodecosto = "0"; //falta (despues quitar opcional)
             string fecha = DateTime.Now.ToString();
             if (codigo == "1") 
             {
@@ -68,5 +67,24 @@ namespace Negocio.Funciones.Contabilidad
             frm.Close();
 
         }
+        public static void Modificar(Form frm, string asiento, string cuenta, string codigo, string debe, string haber, string concepto, [Optional] string centrodecosto) 
+        {
+            centrodecosto = "0"; //falta (despues quitar opcional)
+            string fecha = DateTime.Now.ToString();
+
+            if (codigo == "1")
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE ModeloDet SET det_fecha = '{fecha}', det_cuenta = '{cuenta}', det_codigo = '{codigo}', det_importe = '{debe}', det_comenta = '{concepto}', det_cc = '{centrodecosto}' WHERE det_asiento = '{asiento}' AND det_cuenta = '{cuenta}' AND det_codigo = '{codigo}' ");
+            }
+            else if (codigo == "2")
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE ModeloDet SET det_fecha = '{fecha}', det_cuenta = '{cuenta}', det_codigo = '{codigo}', det_importe = '{haber}', det_comenta = '{concepto}', det_cc = '{centrodecosto}' WHERE det_asiento = '{asiento}' AND det_cuenta = '{cuenta}' AND det_codigo = '{codigo}' ");
+            }
+            MessageBox.Show("Modificado Correctamente!", "Mensaje");
+            frm.Close();
+
+            //terminar
+        }
+
     }
 }

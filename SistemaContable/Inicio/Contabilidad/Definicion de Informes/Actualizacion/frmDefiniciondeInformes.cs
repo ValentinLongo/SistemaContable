@@ -38,18 +38,16 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizaci
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAggModDefdeInf.agg_o_mod = 0;
             frmAggModDefdeInf.DGV = dgvDefiniciondeInformes;
-            frmAggModDefdeInf defdeinf = new frmAggModDefdeInf();
+            frmAggModDefdeInf defdeinf = new frmAggModDefdeInf(0);
             defdeinf.ShowDialog();
             CargarDGV("");
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            frmAggModDefdeInf.agg_o_mod = 1;
             frmAggModDefdeInf.DGV = dgvDefiniciondeInformes;
-            frmAggModDefdeInf defdeinf = new frmAggModDefdeInf();
+            frmAggModDefdeInf defdeinf = new frmAggModDefdeInf(1);
             defdeinf.ShowDialog();
             CargarDGV("");
         }

@@ -15,6 +15,12 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 {
     public partial class frmDetalledeModelos : Form
     {
+        private static string cuenta;
+        private static string descri;
+        private static string debe;
+        private static string haber;
+        private static string concepto;
+        private static string centrodecosto;
         public frmDetalledeModelos()
         {
             InitializeComponent();
@@ -42,8 +48,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                     $"LEFT JOIN PCuenta on Modelodet.det_cuenta = PCuenta.pcu_cuenta WHERE det_asiento = '{codigo}'");
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    string debe;
-                    string haber;
+                    string debe = "0,00"; 
+                    string haber = "0,00"; 
                     string cuenta = dr[0].ToString();
                     string descripcion = dr[1].ToString();
                     string concepto = dr[4].ToString();
@@ -51,12 +57,10 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                     if (Convert.ToInt32(dr[5]) == 1)
                     {
                         debe = dr[2].ToString();
-                        haber = "0,00";
                         dgvDetDeMod2.Rows.Add(cuenta, descripcion, debe, haber, concepto, centrodecosto);
                     }
                     else if (Convert.ToInt32(dr[5]) == 2)
                     {
-                        debe = "0,00";
                         haber = dr[3].ToString();
                         dgvDetDeMod2.Rows.Add(cuenta, descripcion, debe, haber, concepto, centrodecosto);
                     }
@@ -79,17 +83,24 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos();
-            frmAddModDetdeModelos.agg_o_mod = 0;
+            frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos(0,"","","","","","");
+
             frmAddModDetdeModelos.DGV1 = dgvDetDeMod1;
             frmAddModDetdeModelos.DGV2 = dgvDetDeMod2; 
             frmAddModDetdeModelos.ShowDialog();
+            dgvDetDeMod2.Rows.Clear();
             CargarDGV2();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos(1,cuenta,descri,debe,haber,concepto,centrodecosto);
 
+            frmAddModDetdeModelos.DGV1 = dgvDetDeMod1;
+            frmAddModDetdeModelos.DGV2 = dgvDetDeMod2;
+            frmAddModDetdeModelos.ShowDialog();
+            dgvDetDeMod2.Rows.Clear();
+            CargarDGV2();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -106,6 +117,30 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void dgvDetDeMod2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int seleccionado = dgvDetDeMod2.CurrentCell.RowIndex;
+            if (seleccionado != -1)
+            {
+                frmAddModDetdeModelos.seleccionado = dgvDetDeMod2.CurrentCell.RowIndex;
+            }
+        }
+
+        private void dgvDetDeMod2_SelectionChanged(object sender, EventArgs e)
+        {
+            int seleccionado = dgvDetDeMod2.CurrentCell.RowIndex;
+            if (seleccionado != -1)
+            {
+                frmAddModDetdeModelos.seleccionado = dgvDetDeMod2.CurrentCell.RowIndex;
+                cuenta = dgvDetDeMod2.Rows[seleccionado].Cells[0].Value.ToString();
+                descri = dgvDetDeMod2.Rows[seleccionado].Cells[1].Value.ToString();
+                debe = dgvDetDeMod2.Rows[seleccionado].Cells[2].Value.ToString();
+                haber = dgvDetDeMod2.Rows[seleccionado].Cells[3].Value.ToString();
+                concepto = dgvDetDeMod2.Rows[seleccionado].Cells[4].Value.ToString();
+                centrodecosto = "NINGUNO"; //falta
+            }
         }
     }
 }

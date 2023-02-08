@@ -91,6 +91,8 @@
             this.dgvDetDeMod2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetDeMod2.Size = new System.Drawing.Size(630, 272);
             this.dgvDetDeMod2.TabIndex = 64;
+            this.dgvDetDeMod2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDetDeMod2_CellMouseClick);
+            this.dgvDetDeMod2.SelectionChanged += new System.EventHandler(this.dgvDetDeMod2_SelectionChanged);
             // 
             // Column1
             // 

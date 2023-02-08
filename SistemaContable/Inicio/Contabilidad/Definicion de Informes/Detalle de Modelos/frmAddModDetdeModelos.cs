@@ -14,48 +14,63 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 {
     public partial class frmAddModDetdeModelos : Form
     {
-        public static int agg_o_mod;
+        private int agg_o_mod;
         public static DataGridView DGV1;
         public static DataGridView DGV2;
         public static string codigo;
-        public frmAddModDetdeModelos()
+        public static int seleccionado;
+
+        public frmAddModDetdeModelos(int algo,string cuenta,string descri,string debe,string haber,string concepto,string centrodecosto)
         {
             InitializeComponent();
-
+            agg_o_mod = algo;
             txtDebe.Text = "0,00";
             txtHaber.Text = "0,00";
 
             if (agg_o_mod == 0)
             {
-                lblControlBar.Text = "Agregar Definición de Informe";
-            }
-            if (agg_o_mod == 1)
-            {
-                lblControlBar.Text = "Modificar Definición de Informe";
-                //int seleccionado = DGV.CurrentCell.RowIndex;
-                //txtmsg.Text = DGV.Rows[seleccionado].Cells[0].Value.ToString();
-                //txtDescripcion.Text = DGV.Rows[seleccionado].Cells[1].Value.ToString();
-            }
-        }
-
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            if (agg_o_mod == 0)
-            {
-                int seleccionado = DGV1.CurrentCell.RowIndex;
-                string asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
-
-                Negocio.Funciones.Contabilidad.FDetalledeModelos.Agregar(this,asiento,txtCuenta.Text,codigo,txtDebe.Text,txtHaber.Text,txtConcepto.Text,cbCentrodeCosto.SelectedText);
+                lblControlBar.Text = "Agregar Detalle de Modelo";
             }
             else if (agg_o_mod == 1)
             {
-                //string debe = DGV2.Rows[seleccionado].Cells[2].Value.ToString();
-                //string haber = DGV2.Rows[seleccionado].Cells[3].Value.ToString();
-
-                //int seleccionado = DGV.CurrentCell.RowIndex;
-                //txtmsg.Text = DGV.Rows[seleccionado].Cells[0].Value.ToString();
-                //Negocio.Funciones.Contabilidad.FActualizacionDDI.Modificar(this, txtmsg.Text, txtDescripcion.Text);
+                lblControlBar.Text = "Modificar Detalle de Modelo";
+                txtCuenta.Text = cuenta;
+                txtDescri.Text = descri;
+                txtDebe.Text = debe;
+                txtHaber.Text = haber;
+                txtConcepto.Text = concepto;
+                cbCentrodeCosto.Text = "NINGUNO"; //falta
             }
+        }
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string asiento;
+            int seleccionado;
+            if (agg_o_mod == 0)
+            {
+                seleccionado = DGV1.CurrentCell.RowIndex;
+                asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
+
+                Negocio.Funciones.Contabilidad.FDetalledeModelos.Agregar(this, asiento, txtCuenta.Text, codigo, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText);
+            }
+            else if (agg_o_mod == 1)
+            {
+                seleccionado = DGV1.CurrentCell.RowIndex;
+                asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
+
+                Negocio.Funciones.Contabilidad.FDetalledeModelos.Modificar(this, asiento, txtCuenta.Text, codigo, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText);
+            }
+        }
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            frmBuscarCuenta buscarcuenta = new frmBuscarCuenta("Cuenta");
+            buscarcuenta.ShowDialog();
+            int cuenta = frmBuscarCuenta.IdCuenta;
+            if (cuenta != 0)
+            {
+                txtCuenta.Text = cuenta.ToString();
+            }
+            frmBuscarCuenta.IdCuenta = 0;
         }
 
         //BARRA DE CONTROL
@@ -67,13 +82,6 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnConsulta_Click(object sender, EventArgs e)
-        {
-            frmBuscarCuenta buscarcuenta = new frmBuscarCuenta("Cuenta");
-            buscarcuenta.ShowDialog();
-            txtCuenta.Text = frmBuscarCuenta.IdCuenta.ToString();
         }
     }
 }

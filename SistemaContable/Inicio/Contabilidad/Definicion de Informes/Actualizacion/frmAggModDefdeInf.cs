@@ -13,11 +13,12 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizaci
 {
     public partial class frmAggModDefdeInf : Form
     {
-        public static int agg_o_mod; // 0 = agregar y 1 = modificar
+        private static int agg_o_mod; // 0 = agregar y 1 = modificar
         public static DataGridView DGV;
-        public frmAggModDefdeInf()
+        public frmAggModDefdeInf(int agg_mod)
         {
             InitializeComponent();
+            agg_o_mod = agg_mod;
             if (agg_o_mod == 0)
             {
                 lblControlBar.Text = "Agregar Definición de Informe";
