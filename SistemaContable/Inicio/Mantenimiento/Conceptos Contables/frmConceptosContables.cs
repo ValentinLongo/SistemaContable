@@ -34,6 +34,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         {
             frmAgregarConceptoContable frm = new frmAgregarConceptoContable("Agregar");
             frm.ShowDialog();
+            CargarDGV();
         }
 
         private void Click(object sender, DataGridViewCellMouseEventArgs e)
@@ -47,6 +48,21 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         {
             frmAgregarConceptoContable frm = new frmAgregarConceptoContable("Modificar");
             frm.ShowDialog();
+            CargarDGV();
+        }
+
+        private void tbDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+            ds = data.busquedaConceptosContables(tbDescripcion.Text);
+            dgvConceptosContables.DataSource = ds.Tables[0];
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            data.eliminarConceptoCont(Codigo);
+            MessageBox.Show("Eliminado correctamente");
+            CargarDGV();
         }
     }
 }
