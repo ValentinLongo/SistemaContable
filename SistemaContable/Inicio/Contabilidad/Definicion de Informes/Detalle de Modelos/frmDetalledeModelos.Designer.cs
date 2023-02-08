@@ -31,11 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDetalledeModelos));
             this.dgvDetDeMod1 = new System.Windows.Forms.DataGridView();
             this.dgvDetDeMod2 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
             this.btnEliminar = new RJCodeAdvance.RJControls.RJButton();
             this.btnModificar = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
+            this.btnResumen = new RJCodeAdvance.RJControls.RJButton();
             this.cbBusqueda = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
@@ -46,12 +52,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetDeMod1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetDeMod2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,6 +92,42 @@
             this.dgvDetDeMod2.Size = new System.Drawing.Size(630, 272);
             this.dgvDetDeMod2.TabIndex = 64;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Cuenta";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Debe";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Hasta";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Concepto";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "CentrodeCosto";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -112,6 +148,7 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -133,6 +170,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -154,48 +192,49 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // rjButton1
+            // btnImprimir
             // 
-            this.rjButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.White;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rjButton1.Location = new System.Drawing.Point(654, 436);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(134, 30);
-            this.rjButton1.TabIndex = 80;
-            this.rjButton1.Text = "Imprimir";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnImprimir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnImprimir.BorderColor = System.Drawing.Color.White;
+            this.btnImprimir.BorderRadius = 0;
+            this.btnImprimir.BorderSize = 0;
+            this.btnImprimir.FlatAppearance.BorderSize = 0;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.Color.White;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(654, 446);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(134, 30);
+            this.btnImprimir.TabIndex = 80;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextColor = System.Drawing.Color.White;
+            this.btnImprimir.UseVisualStyleBackColor = false;
             // 
-            // rjButton2
+            // btnResumen
             // 
-            this.rjButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.White;
-            this.rjButton2.BorderRadius = 0;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rjButton2.Location = new System.Drawing.Point(654, 387);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(134, 30);
-            this.rjButton2.TabIndex = 79;
-            this.rjButton2.Text = "Resumen";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.btnResumen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnResumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnResumen.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnResumen.BorderColor = System.Drawing.Color.White;
+            this.btnResumen.BorderRadius = 0;
+            this.btnResumen.BorderSize = 0;
+            this.btnResumen.FlatAppearance.BorderSize = 0;
+            this.btnResumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResumen.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResumen.ForeColor = System.Drawing.Color.White;
+            this.btnResumen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResumen.Location = new System.Drawing.Point(654, 397);
+            this.btnResumen.Name = "btnResumen";
+            this.btnResumen.Size = new System.Drawing.Size(134, 30);
+            this.btnResumen.TabIndex = 79;
+            this.btnResumen.Text = "Resumen";
+            this.btnResumen.TextColor = System.Drawing.Color.White;
+            this.btnResumen.UseVisualStyleBackColor = false;
             // 
             // cbBusqueda
             // 
@@ -294,6 +333,7 @@
             this.txtBusqueda.Size = new System.Drawing.Size(362, 19);
             this.txtBusqueda.TabIndex = 87;
             this.txtBusqueda.Tag = "11000";
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // bunifuShapes1
             // 
@@ -315,7 +355,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(656, 474);
+            this.pictureBox1.Location = new System.Drawing.Point(656, 481);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(130, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -408,42 +448,6 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Cuenta";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descripción";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Debe";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Hasta";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Concepto";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "CentrodeCosto";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
             // frmDetalledeModelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,8 +462,8 @@
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.bunifuShapes1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.rjButton2);
+            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnResumen);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -486,8 +490,8 @@
         private RJCodeAdvance.RJControls.RJButton btnAgregar;
         private RJCodeAdvance.RJControls.RJButton btnEliminar;
         private RJCodeAdvance.RJControls.RJButton btnModificar;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
+        private RJCodeAdvance.RJControls.RJButton btnImprimir;
+        private RJCodeAdvance.RJControls.RJButton btnResumen;
         private System.Windows.Forms.ComboBox cbBusqueda;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;

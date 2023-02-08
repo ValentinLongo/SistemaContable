@@ -272,6 +272,12 @@
     <Compile Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmDefiniciondeInformes.Designer.cs">
       <DependentUpon>frmDefiniciondeInformes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmAddModDetdeModelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmAddModDetdeModelos.Designer.cs">
+      <DependentUpon>frmAddModDetdeModelos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmDetalledeModelos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -513,6 +519,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmDefiniciondeInformes.resx">
       <DependentUpon>frmDefiniciondeInformes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmAddModDetdeModelos.resx">
+      <DependentUpon>frmAddModDetdeModelos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmDetalledeModelos.resx">
       <DependentUpon>frmDetalledeModelos.cs</DependentUpon>

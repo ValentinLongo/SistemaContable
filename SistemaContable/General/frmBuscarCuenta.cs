@@ -1,4 +1,6 @@
-﻿using Negocio.Funciones.Mantenimiento;
+﻿using Datos;
+using Negocio;
+using Negocio.Funciones.Mantenimiento;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 {
@@ -17,7 +20,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         private string Accion;
         public static int IdCuenta;
         public static int IdContrapartida;
-        public frmBuscarCuenta(string accion)
+
+        public frmBuscarCuenta(string accion) 
         {
             InitializeComponent();
             cargarDGV();
@@ -54,8 +58,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             else if(Accion == "Contrapartida")
             {
                 IdContrapartida = (int)dgvCuentas.Rows[e.RowIndex].Cells[1].Value;
-            }
-            
+            }       
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
@@ -68,6 +71,42 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             {
                 MessageBox.Show("Debe seleccionar una cuenta");
             }
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBusqueda.Text != "")
+            {
+                string txt;
+                if (cbBusqueda.SelectedIndex == 0)
+                {
+                    if (CheckInicio.Checked)
+                    {
+                        txt = "WHERE pcu_cuenta LIKE " + "'" + txtBusqueda.Text + "%'";
+                    }
+                    else
+                    {
+                        txt = "WHERE pcu_descri LIKE " + "'%" + txtBusqueda.Text + "%'";
+                    }
+                }
+                else if (cbBusqueda.SelectedIndex == 1)
+                {
+                    if (CheckInicio.Checked)
+                    {
+                        txt = "WHERE pcu_cuenta LIKE " + "'" + txtBusqueda.Text + "%'";
+                    }
+                    else
+                    {
+                        txt = "WHERE pcu_descri LIKE " + "'%" + txtBusqueda.Text + "%'";
+                    }
+                }
+            }
+            else
+            {
+                txtBusqueda.Text = "";
+            }
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos("SELECT pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri as Descripción FROM PCuenta");
         }
     }
 }

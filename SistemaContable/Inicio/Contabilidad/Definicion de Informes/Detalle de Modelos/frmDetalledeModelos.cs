@@ -20,6 +20,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             InitializeComponent();
 
             CargarDGV1("");
+            cbBusqueda.SelectedIndex = 0;
         }
 
         public void CargarDGV1(string txt) 
@@ -59,8 +60,41 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                         haber = dr[3].ToString();
                         dgvDetDeMod2.Rows.Add(cuenta, descripcion, debe, haber, concepto, centrodecosto);
                     }
+                    frmAddModDetdeModelos.codigo = dr[5].ToString();
                 }
             }
+        }
+
+        private void dgvDetDeMod1_SelectionChanged(object sender, EventArgs e)
+        {
+            dgvDetDeMod2.Rows.Clear();
+            CargarDGV2();
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string txtbusqueda = Negocio.Funciones.Contabilidad.FDetalledeModelos.Busqueda(dgvDetDeMod1,txtBusqueda,cbBusqueda,CheckInicio);
+            CargarDGV1(txtbusqueda);
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos();
+            frmAddModDetdeModelos.agg_o_mod = 0;
+            frmAddModDetdeModelos.DGV1 = dgvDetDeMod1;
+            frmAddModDetdeModelos.DGV2 = dgvDetDeMod2; 
+            frmAddModDetdeModelos.ShowDialog();
+            CargarDGV2();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
         }
 
         //BARRA DE CONTROL
@@ -72,12 +106,6 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void dgvDetDeMod1_SelectionChanged(object sender, EventArgs e)
-        {
-            dgvDetDeMod2.Rows.Clear();
-            CargarDGV2();
         }
     }
 }
