@@ -93,5 +93,9 @@ namespace Negocio.Funciones.Mantenimiento
         {
             AccesoBase.InsertUpdateDatos($"UPDATE ConceptoCont SET coc_descri = '{mConceptoContable.coc_descri}', coc_vta = {mConceptoContable.coc_vta}, coc_cpa = {mConceptoContable.coc_cpa}, coc_caja = {mConceptoContable.coc_caja}, coc_banco = {mConceptoContable.coc_banco}, coc_ctacont = {mConceptoContable.coc_ctacont}, coc_contrap = {mConceptoContable.coc_contrap}, coc_cccta = {mConceptoContable.coc_cccta}, coc_cccontrap = {mConceptoContable.coc_cccontrap} WHERE coc_codigo = {mConceptoContable.coc_codigo}");
         }
+        public void eliminarConceptoCont(int cocCodigo)
+        {
+            AccesoBase.InsertUpdateDatos($"DELETE FROM ConceptoCont WHERE coc_codigo = {cocCodigo}");
+        }
     }
 }

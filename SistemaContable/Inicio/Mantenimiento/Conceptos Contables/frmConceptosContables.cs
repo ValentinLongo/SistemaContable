@@ -57,5 +57,12 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             ds = data.busquedaConceptosContables(tbDescripcion.Text);
             dgvConceptosContables.DataSource = ds.Tables[0];
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            data.eliminarConceptoCont(Codigo);
+            MessageBox.Show("Eliminado correctamente");
+            CargarDGV();
+        }
     }
 }
