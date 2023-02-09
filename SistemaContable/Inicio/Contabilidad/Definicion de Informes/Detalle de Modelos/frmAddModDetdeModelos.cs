@@ -15,17 +15,17 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
     public partial class frmAddModDetdeModelos : Form
     {
         private int agg_o_mod;
+        private string Cuenta;
         public static DataGridView DGV1;
         public static DataGridView DGV2;
-        public static string codigo;
-        public static int seleccionado;
 
-        public frmAddModDetdeModelos(int algo,string cuenta,string descri,string debe,string haber,string concepto,string centrodecosto)
+        public frmAddModDetdeModelos(int aggmod,string cuenta,string descri,string debe,string haber,string concepto,string centrodecosto)
         {
             InitializeComponent();
-            agg_o_mod = algo;
-            txtDebe.Text = "0,00";
-            txtHaber.Text = "0,00";
+            agg_o_mod = aggmod;
+
+            txtDebe.Text = "0,0000";
+            txtHaber.Text = "0,0000";
 
             if (agg_o_mod == 0)
             {
@@ -34,6 +34,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             else if (agg_o_mod == 1)
             {
                 lblControlBar.Text = "Modificar Detalle de Modelo";
+
+                Cuenta = cuenta;
                 txtCuenta.Text = cuenta;
                 txtDescri.Text = descri;
                 txtDebe.Text = debe;
@@ -46,20 +48,51 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         {
             string asiento;
             int seleccionado;
-            if (agg_o_mod == 0)
-            {
-                seleccionado = DGV1.CurrentCell.RowIndex;
-                asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
+            int contador = 0;
 
-                Negocio.Funciones.Contabilidad.FDetalledeModelos.Agregar(this, asiento, txtCuenta.Text, codigo, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText);
-            }
-            else if (agg_o_mod == 1)
-            {
-                seleccionado = DGV1.CurrentCell.RowIndex;
-                asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
+            //int debe = Convert.ToInt32(txtDebe.Text);
+            //int haber = Convert.ToInt32(txtHaber.Text);
 
-                Negocio.Funciones.Contabilidad.FDetalledeModelos.Modificar(this, asiento, txtCuenta.Text, codigo, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText);
+            if (Convert.ToDecimal(txtDebe.Text) > 0)
+            {
+                contador++;
             }
+            else
+            {
+                txtDebe.Text = "0,0000";
+            }
+            if (Convert.ToDecimal(txtHaber.Text) > 0)
+            {
+                contador++;
+            }
+            else
+            {
+                txtHaber.Text = "0,0000";
+            }
+
+            if (contador != 2)
+            {
+                if (agg_o_mod == 0)
+                {
+                    seleccionado = DGV1.CurrentCell.RowIndex;
+                    asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
+
+                    Negocio.Funciones.Contabilidad.FDetalledeModelos.Agregar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText);
+                }
+                else if (agg_o_mod == 1)
+                {
+                    seleccionado = DGV1.CurrentCell.RowIndex;
+                    asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
+
+                    Negocio.Funciones.Contabilidad.FDetalledeModelos.Modificar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText, Cuenta, frmDetalledeModelos.Codigo);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Atención: Ingrese datos en debe o en haber!","Mensaje");
+                this.Close();
+            }
+
         }
         private void btnConsulta_Click(object sender, EventArgs e)
         {
@@ -71,6 +104,34 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 txtCuenta.Text = cuenta.ToString();
             }
             frmBuscarCuenta.IdCuenta = 0;
+        }
+        private void txtHaber_Click(object sender, EventArgs e)
+        {
+            if (txtHaber.Text == "0,0000")
+            {
+                txtHaber.Text = "";
+            }
+        }
+        private void txtHaber_Leave(object sender, EventArgs e)
+        {
+            if (txtHaber.Text == "")
+            {
+                txtHaber.Text = "0,0000";
+            }
+        }
+        private void txtDebe_Click(object sender, EventArgs e)
+        {
+            if (txtDebe.Text == "0,0000")
+            {
+                txtDebe.Text = "";
+            }
+        }
+        private void txtDebe_Leave(object sender, EventArgs e)
+        {
+            if (txtDebe.Text == "")
+            {
+                txtDebe.Text = "0,0000";
+            }
         }
 
         //BARRA DE CONTROL

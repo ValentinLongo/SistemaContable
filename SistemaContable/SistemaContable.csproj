@@ -290,6 +290,18 @@
     <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmDetalledeModelos.Designer.cs">
       <DependentUpon>frmDetalledeModelos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmAggDetalledeInformes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmAggDetalledeInformes.Designer.cs">
+      <DependentUpon>frmAggDetalledeInformes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmDetalledeInformes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmDetalledeInformes.Designer.cs">
+      <DependentUpon>frmDetalledeInformes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmAggModEncabdeMod.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -534,6 +546,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmDetalledeModelos.resx">
       <DependentUpon>frmDetalledeModelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmAggDetalledeInformes.resx">
+      <DependentUpon>frmAggDetalledeInformes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmDetalledeInformes.resx">
+      <DependentUpon>frmDetalledeInformes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmAggModEncabdeMod.resx">
       <DependentUpon>frmAggModEncabdeMod.cs</DependentUpon>
