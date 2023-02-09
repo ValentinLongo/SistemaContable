@@ -56,7 +56,6 @@
             this.lblAct = new System.Windows.Forms.Label();
             this.lblFecNac = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -220,7 +219,6 @@
             this.tbLocalidad2.Name = "tbLocalidad2";
             this.tbLocalidad2.Size = new System.Drawing.Size(24, 20);
             this.tbLocalidad2.TabIndex = 19;
-            this.tbLocalidad2.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // btnBusLoc
             // 
@@ -269,7 +267,6 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.btnConfirmar);
-            this.splitContainer1.Panel2.Controls.Add(this.btnCancelar);
             this.splitContainer1.Size = new System.Drawing.Size(685, 376);
             this.splitContainer1.SplitterDistance = 551;
             this.splitContainer1.TabIndex = 21;
@@ -319,7 +316,7 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(30, 12);
+            this.btnConfirmar.Location = new System.Drawing.Point(28, 30);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
             this.btnConfirmar.TabIndex = 22;
@@ -327,20 +324,11 @@
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(30, 46);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 23;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
             // frmAgregarAgenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 450);
+            this.ClientSize = new System.Drawing.Size(683, 391);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmAgregarAgenda";
             this.Text = "frmAgregarAgenda";
@@ -378,7 +366,6 @@
         private System.Windows.Forms.Button btnBusLoc;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button btnConfirmar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblAct;
         private System.Windows.Forms.Label lblFecNac;
