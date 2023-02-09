@@ -51,7 +51,7 @@
             this.btnBusLoc = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cbActividad = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.lblAct = new System.Windows.Forms.Label();
             this.lblFecNac = new System.Windows.Forms.Label();
@@ -71,7 +71,6 @@
             this.lblCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
-            this.lblCodigo.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblNombre
             // 
@@ -126,7 +125,6 @@
             this.lblMail.Size = new System.Drawing.Size(36, 13);
             this.lblMail.TabIndex = 6;
             this.lblMail.Text = "E-Mail";
-            this.lblMail.Click += new System.EventHandler(this.label7_Click);
             // 
             // lblWeb
             // 
@@ -232,6 +230,7 @@
             this.btnBusLoc.Size = new System.Drawing.Size(21, 21);
             this.btnBusLoc.TabIndex = 20;
             this.btnBusLoc.UseVisualStyleBackColor = true;
+            this.btnBusLoc.Click += new System.EventHandler(this.btnBusLoc_Click);
             // 
             // splitContainer1
             // 
@@ -241,7 +240,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.cbActividad);
-            this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker1);
+            this.splitContainer1.Panel1.Controls.Add(this.dtFechaNacimiento);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.lblAct);
             this.splitContainer1.Panel1.Controls.Add(this.lblFecNac);
@@ -271,7 +270,6 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.btnConfirmar);
             this.splitContainer1.Panel2.Controls.Add(this.btnCancelar);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(685, 376);
             this.splitContainer1.SplitterDistance = 551;
             this.splitContainer1.TabIndex = 21;
@@ -284,12 +282,12 @@
             this.cbActividad.Size = new System.Drawing.Size(237, 21);
             this.cbActividad.TabIndex = 26;
             // 
-            // dateTimePicker1
+            // dtFechaNacimiento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(147, 307);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(218, 20);
-            this.dateTimePicker1.TabIndex = 24;
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(147, 307);
+            this.dtFechaNacimiento.Name = "dtFechaNacimiento";
+            this.dtFechaNacimiento.Size = new System.Drawing.Size(218, 20);
+            this.dtFechaNacimiento.TabIndex = 24;
             // 
             // label3
             // 
@@ -300,7 +298,6 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "----------------------------------------------- pone una linea mejor ------------" +
     "--------------------------";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblAct
             // 
@@ -319,7 +316,6 @@
             this.lblFecNac.Size = new System.Drawing.Size(93, 13);
             this.lblFecNac.TabIndex = 21;
             this.lblFecNac.Text = "Fecha Nacimiento";
-            this.lblFecNac.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // btnConfirmar
             // 
@@ -329,7 +325,7 @@
             this.btnConfirmar.TabIndex = 22;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
-            this.btnConfirmar.Click += new System.EventHandler(this.button1_Click);
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnCancelar
             // 
@@ -348,7 +344,6 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmAgregarAgenda";
             this.Text = "frmAgregarAgenda";
-            this.Load += new System.EventHandler(this.frmAgregarAgenda_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -388,6 +383,6 @@
         private System.Windows.Forms.Label lblAct;
         private System.Windows.Forms.Label lblFecNac;
         private System.Windows.Forms.ComboBox cbActividad;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
     }
 }

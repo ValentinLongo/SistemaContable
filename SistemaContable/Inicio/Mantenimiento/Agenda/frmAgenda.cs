@@ -18,47 +18,33 @@ namespace SistemaContable.Agenda
             cargarDatos();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmAgregarAgenda frmAgregarAgenda = new frmAgregarAgenda();
-            frmAgregarAgenda.ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmAgenda_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void cargarDatos()
         {
             DataSet ds = new DataSet();
             ds = Negocio.FAgenda.listaAgenda();
             dataAgenda.DataSource = ds.Tables[0];
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregarAgenda frmAgregarAgenda = new frmAgregarAgenda();
+            frmAgregarAgenda.ShowDialog();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnImprimir_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
