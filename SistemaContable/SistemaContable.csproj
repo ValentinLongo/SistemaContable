@@ -260,6 +260,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="General\frmLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmLocalidades.Designer.cs">
+      <DependentUpon>frmLocalidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmAggModDefdeInf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -514,6 +520,9 @@
     <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="General\frmLocalidades.resx">
+      <DependentUpon>frmLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmAggModDefdeInf.resx">
       <DependentUpon>frmAggModDefdeInf.cs</DependentUpon>
     </EmbeddedResource>

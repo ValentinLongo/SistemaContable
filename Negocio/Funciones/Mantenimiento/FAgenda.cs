@@ -11,10 +11,10 @@ namespace Negocio
 {
     public class FAgenda
     {
-        public static DataSet listaAgenda()
+        public static DataSet listaAgenda(string Nombre)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"select age_codigo as 'Codigo', age_nombre as 'Nombre', age_telefono as 'Teléfono', age_direccion as 'Dirección' from Agenda");
+            ds = AccesoBase.ListarDatos($"select age_codigo as 'Codigo', age_nombre as 'Nombre', age_telefono as 'Teléfono', age_direccion as 'Dirección' from Agenda WHERE age_nombre LIKE'%{Nombre}%'");
             return ds;
         }
 
@@ -54,8 +54,19 @@ namespace Negocio
                     age_web = dr["age_web"].ToString(),
                     age_observa = dr["age_observa"].ToString(),
                     age_fecnac = dr["age_fecnac"].ToString(),
-                    //age_actividad = Convert.ToInt32(dr["age_direccion"].ToString())
+                    age_actividad = dr["age_actividad"].ToString()
                 };
+                if(agenda.age_codpos1.ToString() != "")
+                {
+                    DataSet ds2 = AccesoBase.ListarDatos($"SELECT * FROM Localidad WHERE loc_cod1 = {agenda.age_codpos1} and loc_cod2 = {agenda.age_codpos2}");
+                    if(ds2.Tables[0].Rows.Count > 0)
+                    {
+                        foreach(DataRow dr2 in ds2.Tables[0].Rows)
+                        {
+                            agenda.localidad = dr2["loc_nombre"].ToString();
+                        }
+                    }
+                }
                 mAgenda = agenda;
             }
             return mAgenda;

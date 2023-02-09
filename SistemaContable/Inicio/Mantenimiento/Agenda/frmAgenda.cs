@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,16 +17,16 @@ namespace SistemaContable.Agenda
         public frmAgenda()
         {
             InitializeComponent();
-            cargarDatos();
+            cargarDatos("");
         }
 
 
-        private void cargarDatos()
+        private void cargarDatos(string Nombre)
         {
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
             DataSet ds = new DataSet();
-            ds = Negocio.FAgenda.listaAgenda();
+            ds = Negocio.FAgenda.listaAgenda(Nombre);
             dgvAgenda.DataSource = ds.Tables[0];
         }
 
@@ -33,19 +34,28 @@ namespace SistemaContable.Agenda
         {
             frmAgregarAgenda frmAgregarAgenda = new frmAgregarAgenda("Agregar");
             frmAgregarAgenda.ShowDialog();
-            cargarDatos();
+            cargarDatos("");
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             frmAgregarAgenda frmAgregarAgenda = new frmAgregarAgenda("Modificar");
             frmAgregarAgenda.ShowDialog();
-            cargarDatos();
+            cargarDatos("");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                AccesoBase.InsertUpdateDatos($"DELETE FROM Agenda WHERE age_codigo = {IdModificar}");
+                MessageBox.Show("Eliminado Correctamente");
+                cargarDatos("");
+            }
+            catch
+            {
+                MessageBox.Show("Ocurrio un error");
+            }
         }
 
         private void btnImprimir_Click_1(object sender, EventArgs e)
@@ -67,6 +77,11 @@ namespace SistemaContable.Agenda
                 btnModificar.Enabled = false;
                 btnEliminar.Enabled = false;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            cargarDatos(textBox1.Text);
         }
     }
 }

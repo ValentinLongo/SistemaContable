@@ -147,6 +147,7 @@
             // 
             this.tbCodigo.Location = new System.Drawing.Point(128, 27);
             this.tbCodigo.Name = "tbCodigo";
+            this.tbCodigo.ReadOnly = true;
             this.tbCodigo.Size = new System.Drawing.Size(237, 20);
             this.tbCodigo.TabIndex = 9;
             // 

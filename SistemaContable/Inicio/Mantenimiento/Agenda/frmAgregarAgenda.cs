@@ -1,5 +1,6 @@
 ﻿using Datos.Modelos;
 using Negocio;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,33 +32,51 @@ namespace SistemaContable.Agenda
             cbActividad.DisplayMember = "act_descri";
             cbActividad.ValueMember = "act_codigo";
 
-            if(Accion == "Agregar")
+            if (Accion == "Agregar")
             {
                 tbCodigo.Text = "ALTA DE CONCEPTO";
             }
             if (Accion == "Modificar")
             {
-                tbCodigo.Text = frmAgenda.IdModificar.ToString();
-                MAgenda mAgenda = new MAgenda(); 
-                mAgenda = data.agendaAModificar(frmAgenda.IdModificar);
-                tbNombre.Text = mAgenda.age_nombre;
-                tbDireccion.Text = mAgenda.age_direccion;
-                tbLocalidad1.Text = mAgenda.age_codpos1.ToString();
-                tbLocalidad2.Text = mAgenda.age_codpos2.ToString();
-                tbTel.Text = mAgenda.age_telefono;
-                tbCel.Text = mAgenda.age_celular;
-                tbMail.Text = mAgenda.age_email;
-                tbWeb.Text = mAgenda.age_web;
-                tbObserv.Text = mAgenda.age_observa;
-                dtFechaNacimiento.Value = Convert.ToDateTime(mAgenda.age_fecnac);
-                cbActividad.SelectedItem = mAgenda.age_actividad;
+                try
+                {
+                    tbCodigo.Text = frmAgenda.IdModificar.ToString();
+                    MAgenda mAgenda = new MAgenda();
+                    mAgenda = data.agendaAModificar(frmAgenda.IdModificar);
+                    tbNombre.Text = mAgenda.age_nombre;
+                    tbDireccion.Text = mAgenda.age_direccion;
+                    tbLocalidad1.Text = mAgenda.age_codpos1.ToString();
+                    tbLocalidad2.Text = mAgenda.age_codpos2.ToString();
+                    tbLocalidad3.Text = mAgenda.localidad.ToString();
+                    tbTel.Text = mAgenda.age_telefono;
+                    tbCel.Text = mAgenda.age_celular;
+                    tbMail.Text = mAgenda.age_email;
+                    tbWeb.Text = mAgenda.age_web;
+                    tbObserv.Text = mAgenda.age_observa;
+                    if (mAgenda.age_fecnac != "")
+                    {
+                        dtFechaNacimiento.Value = Convert.ToDateTime(mAgenda.age_fecnac);
+                    }
+                    if (mAgenda.age_actividad != "")
+                    {
+                        cbActividad.SelectedValue = mAgenda.age_actividad;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Error en el Usuario Seleccionado");
+                }
             }
         }
 
 
         private void btnBusLoc_Click(object sender, EventArgs e)
         {
-
+            frmLocalidades frmLocalidades = new frmLocalidades();
+            frmLocalidades.ShowDialog();
+            tbLocalidad1.Text = frmLocalidades.CodigoLocalidad.ToString();
+            tbLocalidad2.Text = frmLocalidades.SubCodigoLocalidad.ToString();
+            tbLocalidad3.Text = frmLocalidades.NombreLocalidad;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -75,18 +94,19 @@ namespace SistemaContable.Agenda
                 age_web = tbWeb.Text,
                 age_observa = tbObserv.Text,
                 //age_fecnac = Convert.ToDateTime(dtFechaNacimiento.Value),
-                age_fecnac = dtFechaNacimiento.Text,
-                age_actividad = Convert.ToInt32(cbActividad.SelectedValue)
+                age_fecnac = dtFechaNacimiento.Value.ToString(),
+                age_actividad = cbActividad.SelectedValue.ToString(),
             };
-            if(Accion == "Agregar")
+            if (Accion == "Agregar")
             {
-                data.Equals(mAgenda);
+                data.agregarAgenda(mAgenda);
                 MessageBox.Show("Agregado Correctamente");
                 this.Close();
             }
-            if(Accion == "Modificar")
+            if (Accion == "Modificar")
             {
                 mAgenda.age_codigo = Convert.ToInt32(tbCodigo.Text);
+                data.modificarAgenda(mAgenda);
                 MessageBox.Show("Modificado Correctamente");
                 this.Close();
             }

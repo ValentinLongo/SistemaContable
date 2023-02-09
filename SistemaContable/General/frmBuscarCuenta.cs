@@ -34,6 +34,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
         private void cargarDGV()
         {
+            btnSeleccionar.Enabled = false;
             DataSet ds = new DataSet();
 
             if (checkActivas.Checked == true)
@@ -68,6 +69,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
         private void Click(object sender, DataGridViewCellMouseEventArgs e)
         {
+            btnSeleccionar.Enabled = true;
             if(Accion == "Cuenta")
             {
                 IdCuenta = (int)dgvCuentas.Rows[e.RowIndex].Cells[1].Value;
