@@ -67,5 +67,12 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             }
             Cargar(txtbusqueda);
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAggDetalledeInformes frmAggDetalledeInformes = new frmAggDetalledeInformes(0);
+            frmAggDetalledeInformes.ShowDialog();
+            Cargar("");
+        }
     }
 }
