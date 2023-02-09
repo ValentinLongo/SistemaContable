@@ -294,6 +294,8 @@
             this.txtDebe.Size = new System.Drawing.Size(107, 19);
             this.txtDebe.TabIndex = 94;
             this.txtDebe.Tag = "11000";
+            this.txtDebe.Click += new System.EventHandler(this.txtDebe_Click);
+            this.txtDebe.Leave += new System.EventHandler(this.txtDebe_Leave);
             // 
             // panel4
             // 
@@ -314,6 +316,8 @@
             this.txtHaber.Size = new System.Drawing.Size(107, 19);
             this.txtHaber.TabIndex = 96;
             this.txtHaber.Tag = "11000";
+            this.txtHaber.Click += new System.EventHandler(this.txtHaber_Click);
+            this.txtHaber.Leave += new System.EventHandler(this.txtHaber_Leave);
             // 
             // panel5
             // 
