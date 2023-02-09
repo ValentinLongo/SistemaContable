@@ -32,6 +32,7 @@ using SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion;
 using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizacion;
 using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_Modelos;
 using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
+using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeInformes;
 
 namespace SistemaContable
 {
@@ -475,7 +476,8 @@ namespace SistemaContable
         }
         private void detalleInformeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmDetalledeInformes detalledeInformes = new frmDetalledeInformes();
+            Negocio.FGenerales.Mostrarfrm(detalledeInformes, detalleInformeToolStripMenuItem.Tag.ToString());
         }
         private void inforrmeToolStripMenuItem_Click(object sender, EventArgs e)
         {

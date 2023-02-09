@@ -14,9 +14,12 @@ namespace SistemaContable.Agenda
 {
     public partial class frmAgregarAgenda : Form
     {
-        public frmAgregarAgenda()
+        private string Accion;
+        FAgenda data = new FAgenda();
+        public frmAgregarAgenda(string accion)
         {
             InitializeComponent();
+            Accion = accion;
             llenarCombo();
         }
 
@@ -27,17 +30,30 @@ namespace SistemaContable.Agenda
             cbActividad.DataSource = ds.Tables[0];
             cbActividad.DisplayMember = "act_descri";
             cbActividad.ValueMember = "act_codigo";
+
+            if(Accion == "Agregar")
+            {
+                tbCodigo.Text = "ALTA DE CONCEPTO";
+            }
+            if (Accion == "Modificar")
+            {
+                tbCodigo.Text = frmAgenda.IdModificar.ToString();
+                MAgenda mAgenda = new MAgenda(); 
+                mAgenda = data.agendaAModificar(frmAgenda.IdModificar);
+                tbNombre.Text = mAgenda.age_nombre;
+                tbDireccion.Text = mAgenda.age_direccion;
+                tbLocalidad1.Text = mAgenda.age_codpos1.ToString();
+                tbLocalidad2.Text = mAgenda.age_codpos2.ToString();
+                tbTel.Text = mAgenda.age_telefono;
+                tbCel.Text = mAgenda.age_celular;
+                tbMail.Text = mAgenda.age_email;
+                tbWeb.Text = mAgenda.age_web;
+                tbObserv.Text = mAgenda.age_observa;
+                dtFechaNacimiento.Value = Convert.ToDateTime(mAgenda.age_fecnac);
+                cbActividad.SelectedItem = mAgenda.age_actividad;
+            }
         }
 
-        private void textBox11_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnBusLoc_Click(object sender, EventArgs e)
         {
@@ -48,10 +64,32 @@ namespace SistemaContable.Agenda
         {
             MAgenda mAgenda = new MAgenda()
             {
-                age_codigo = FGenerales.ultimoNumeroID("age_codigi", "Agenda"),
+                age_codigo = FGenerales.ultimoNumeroID("age_codigo", "Agenda"),
                 age_nombre = tbNombre.Text,
-                age_direccion = tbDireccion.Text
+                age_direccion = tbDireccion.Text,
+                age_codpos1 = Convert.ToInt32(tbLocalidad1.Text),
+                age_codpos2 = Convert.ToInt32(tbLocalidad2.Text),
+                age_telefono = tbTel.Text,
+                age_celular = tbCel.Text,
+                age_email = tbMail.Text,
+                age_web = tbWeb.Text,
+                age_observa = tbObserv.Text,
+                //age_fecnac = Convert.ToDateTime(dtFechaNacimiento.Value),
+                age_fecnac = dtFechaNacimiento.Text,
+                age_actividad = Convert.ToInt32(cbActividad.SelectedValue)
             };
+            if(Accion == "Agregar")
+            {
+                data.Equals(mAgenda);
+                MessageBox.Show("Agregado Correctamente");
+                this.Close();
+            }
+            if(Accion == "Modificar")
+            {
+                mAgenda.age_codigo = Convert.ToInt32(tbCodigo.Text);
+                MessageBox.Show("Modificado Correctamente");
+                this.Close();
+            }
         }
     }
 }

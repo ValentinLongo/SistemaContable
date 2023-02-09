@@ -18,7 +18,7 @@ namespace Datos.Modelos
         public string age_email { get; set; }
         public string age_web { get; set; }
         public string age_observa { get; set; }
-        public DateTime age_fecnac { get; set; }
+        public string age_fecnac { get; set; }
         public int age_actividad { get; set; }
     }
 }
