@@ -50,9 +50,6 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             int seleccionado;
             int contador = 0;
 
-            //int debe = Convert.ToInt32(txtDebe.Text);
-            //int haber = Convert.ToInt32(txtHaber.Text);
-
             if (Convert.ToDecimal(txtDebe.Text) > 0)
             {
                 contador++;

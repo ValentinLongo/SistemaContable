@@ -88,7 +88,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos(0,"","","","","","");
 
             frmAddModDetdeModelos.DGV1 = dgvDetDeMod1;
-            frmAddModDetdeModelos.DGV2 = dgvDetDeMod2; 
+            frmAddModDetdeModelos.DGV2 = dgvDetDeMod2;
             frmAddModDetdeModelos.ShowDialog();
             dgvDetDeMod2.Rows.Clear();
             CargarDGV2();
