@@ -278,28 +278,28 @@
     <Compile Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmDefiniciondeInformes.Designer.cs">
       <DependentUpon>frmDefiniciondeInformes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmAddModDetdeModelos.cs">
+    <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Detalle de Modelos\frmAddModDetdeModelos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmAddModDetdeModelos.Designer.cs">
+    <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Detalle de Modelos\frmAddModDetdeModelos.Designer.cs">
       <DependentUpon>frmAddModDetdeModelos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmDetalledeModelos.cs">
+    <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Detalle de Modelos\frmDetalledeModelos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmDetalledeModelos.Designer.cs">
+    <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Detalle de Modelos\frmDetalledeModelos.Designer.cs">
       <DependentUpon>frmDetalledeModelos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmAggDetalledeInformes.cs">
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Informes\frmAggDetalledeInformes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmAggDetalledeInformes.Designer.cs">
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Informes\frmAggDetalledeInformes.Designer.cs">
       <DependentUpon>frmAggDetalledeInformes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmDetalledeInformes.cs">
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Informes\frmDetalledeInformes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmDetalledeInformes.Designer.cs">
+    <Compile Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Informes\frmDetalledeInformes.Designer.cs">
       <DependentUpon>frmDetalledeInformes.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmAggModEncabdeMod.cs">
@@ -313,6 +313,18 @@
     </Compile>
     <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmEncabezadodeModelos.Designer.cs">
       <DependentUpon>frmEncabezadodeModelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\frmAggModVisAsientoContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\frmAggModVisAsientoContable.Designer.cs">
+      <DependentUpon>frmAggModVisAsientoContable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\frmAsientosContables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\frmAsientosContables.Designer.cs">
+      <DependentUpon>frmAsientosContables.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Mantenimiento\Agenda\frmAgenda.cs">
       <SubType>Form</SubType>
@@ -541,16 +553,16 @@
     <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmDefiniciondeInformes.resx">
       <DependentUpon>frmDefiniciondeInformes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmAddModDetdeModelos.resx">
+    <EmbeddedResource Include="Inicio\Contabilidad\Modelos de Asientos\Detalle de Modelos\frmAddModDetdeModelos.resx">
       <DependentUpon>frmAddModDetdeModelos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Modelos\frmDetalledeModelos.resx">
+    <EmbeddedResource Include="Inicio\Contabilidad\Modelos de Asientos\Detalle de Modelos\frmDetalledeModelos.resx">
       <DependentUpon>frmDetalledeModelos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmAggDetalledeInformes.resx">
+    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Informes\frmAggDetalledeInformes.resx">
       <DependentUpon>frmAggDetalledeInformes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\DetalledeInformes\frmDetalledeInformes.resx">
+    <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Detalle de Informes\frmDetalledeInformes.resx">
       <DependentUpon>frmDetalledeInformes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmAggModEncabdeMod.resx">
@@ -558,6 +570,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Modelos de Asientos\Actualizacion\frmEncabezadodeModelos.resx">
       <DependentUpon>frmEncabezadodeModelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Movimiento de Asientos\frmAggModVisAsientoContable.resx">
+      <DependentUpon>frmAggModVisAsientoContable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Movimiento de Asientos\frmAsientosContables.resx">
+      <DependentUpon>frmAsientosContables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Agenda\frmAgenda.resx">
       <DependentUpon>frmAgenda.cs</DependentUpon>
