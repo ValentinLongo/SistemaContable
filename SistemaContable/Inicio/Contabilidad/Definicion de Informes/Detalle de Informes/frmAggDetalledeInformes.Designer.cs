@@ -36,6 +36,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cbDescripcion = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -172,12 +182,139 @@
             this.label4.TabIndex = 84;
             this.label4.Text = "Orden:";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(76, 70);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(229, 1);
+            this.panel3.TabIndex = 86;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtDescripcion.Location = new System.Drawing.Point(76, 52);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(229, 19);
+            this.txtDescripcion.TabIndex = 85;
+            this.txtDescripcion.Tag = "11000";
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnConfirmar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnConfirmar.BorderColor = System.Drawing.Color.White;
+            this.btnConfirmar.BorderRadius = 0;
+            this.btnConfirmar.BorderSize = 0;
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnConfirmar.Location = new System.Drawing.Point(176, 204);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(149, 26);
+            this.btnConfirmar.TabIndex = 87;
+            this.btnConfirmar.Tag = "";
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(106, 82);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(229, 19);
+            this.textBox1.TabIndex = 88;
+            this.textBox1.Tag = "11000";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(106, 98);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(229, 1);
+            this.panel4.TabIndex = 91;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(70, 165);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(74, 1);
+            this.panel5.TabIndex = 93;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox3.Location = new System.Drawing.Point(70, 147);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(74, 19);
+            this.textBox3.TabIndex = 92;
+            this.textBox3.Tag = "11000";
+            // 
+            // cbDescripcion
+            // 
+            this.cbDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbDescripcion.BackColor = System.Drawing.SystemColors.Window;
+            this.cbDescripcion.FormattingEnabled = true;
+            this.cbDescripcion.Location = new System.Drawing.Point(139, 110);
+            this.cbDescripcion.Name = "cbDescripcion";
+            this.cbDescripcion.Size = new System.Drawing.Size(229, 21);
+            this.cbDescripcion.TabIndex = 95;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox2.Location = new System.Drawing.Point(106, 77);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(229, 19);
+            this.textBox2.TabIndex = 96;
+            this.textBox2.Tag = "11000";
+            // 
+            // btnConsulta
+            // 
+            this.btnConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnConsulta.FlatAppearance.BorderSize = 0;
+            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsulta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnConsulta.Image = global::SistemaContable.Properties.Resources.binocular2;
+            this.btnConsulta.Location = new System.Drawing.Point(312, 45);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(23, 26);
+            this.btnConsulta.TabIndex = 97;
+            this.btnConsulta.UseVisualStyleBackColor = false;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
             // frmAggDetalledeInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(479, 242);
+            this.Controls.Add(this.btnConsulta);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cbDescripcion);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -202,5 +339,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private RJCodeAdvance.RJControls.RJButton btnConfirmar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cbDescripcion;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnConsulta;
     }
 }
