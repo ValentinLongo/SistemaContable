@@ -33,6 +33,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.dgvAsientosContables = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,17 +64,8 @@
             this.CheckModificados = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.CheckManuales = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.CheckDiferencia = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDerecha = new RJCodeAdvance.RJControls.RJButton();
+            this.btnIzquierda = new RJCodeAdvance.RJControls.RJButton();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -180,6 +182,83 @@
             this.dgvAsientosContables.Size = new System.Drawing.Size(696, 337);
             this.dgvAsientosContables.TabIndex = 95;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Asiento";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 67;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Fecha";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 62;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Comentario";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 85;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Debe";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 58;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Haber";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 61;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Creó";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 54;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Fecha";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 62;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Hora";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 55;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Modificó";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 72;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Fecha";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 62;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Hora";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 55;
+            // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -193,7 +272,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(716, 102);
+            this.btnAgregar.Location = new System.Drawing.Point(716, 126);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(124, 30);
             this.btnAgregar.TabIndex = 96;
@@ -273,7 +352,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(714, 148);
+            this.btnModificar.Location = new System.Drawing.Point(714, 172);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(124, 30);
             this.btnModificar.TabIndex = 105;
@@ -295,7 +374,7 @@
             this.btnAnular.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnular.ForeColor = System.Drawing.Color.White;
             this.btnAnular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnular.Location = new System.Drawing.Point(716, 194);
+            this.btnAnular.Location = new System.Drawing.Point(716, 218);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(124, 30);
             this.btnAnular.TabIndex = 106;
@@ -316,7 +395,7 @@
             this.btnVisualizar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisualizar.ForeColor = System.Drawing.Color.White;
             this.btnVisualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizar.Location = new System.Drawing.Point(716, 242);
+            this.btnVisualizar.Location = new System.Drawing.Point(716, 266);
             this.btnVisualizar.Name = "btnVisualizar";
             this.btnVisualizar.Size = new System.Drawing.Size(124, 30);
             this.btnVisualizar.TabIndex = 107;
@@ -399,7 +478,7 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(716, 408);
+            this.btnImprimir.Location = new System.Drawing.Point(716, 432);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(124, 30);
             this.btnImprimir.TabIndex = 115;
@@ -411,7 +490,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(712, 445);
+            this.pictureBox1.Location = new System.Drawing.Point(712, 469);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(130, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -630,89 +709,58 @@
             this.CheckDiferencia.ThreeState = false;
             this.CheckDiferencia.ToolTipText = null;
             // 
-            // Column1
+            // btnDerecha
             // 
-            this.Column1.HeaderText = "Asiento";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 67;
+            this.btnDerecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDerecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnDerecha.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnDerecha.BorderColor = System.Drawing.Color.White;
+            this.btnDerecha.BorderRadius = 0;
+            this.btnDerecha.BorderSize = 0;
+            this.btnDerecha.FlatAppearance.BorderSize = 0;
+            this.btnDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDerecha.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDerecha.ForeColor = System.Drawing.Color.White;
+            this.btnDerecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDerecha.Location = new System.Drawing.Point(432, 513);
+            this.btnDerecha.Name = "btnDerecha";
+            this.btnDerecha.Size = new System.Drawing.Size(124, 30);
+            this.btnDerecha.TabIndex = 116;
+            this.btnDerecha.Text = ">";
+            this.btnDerecha.TextColor = System.Drawing.Color.White;
+            this.btnDerecha.UseVisualStyleBackColor = false;
+            this.btnDerecha.Click += new System.EventHandler(this.btnDerecha_Click);
             // 
-            // Column2
+            // btnIzquierda
             // 
-            this.Column2.HeaderText = "Fecha";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 62;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Comentario";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 85;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Debe";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 58;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Haber";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 61;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Creó";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 54;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Fecha";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 62;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Hora";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 55;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Modificó";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 72;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Fecha";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 62;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Hora";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 55;
+            this.btnIzquierda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnIzquierda.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnIzquierda.BorderColor = System.Drawing.Color.White;
+            this.btnIzquierda.BorderRadius = 0;
+            this.btnIzquierda.BorderSize = 0;
+            this.btnIzquierda.FlatAppearance.BorderSize = 0;
+            this.btnIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzquierda.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIzquierda.ForeColor = System.Drawing.Color.White;
+            this.btnIzquierda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIzquierda.Location = new System.Drawing.Point(264, 513);
+            this.btnIzquierda.Name = "btnIzquierda";
+            this.btnIzquierda.Size = new System.Drawing.Size(124, 30);
+            this.btnIzquierda.TabIndex = 117;
+            this.btnIzquierda.Text = "<";
+            this.btnIzquierda.TextColor = System.Drawing.Color.White;
+            this.btnIzquierda.UseVisualStyleBackColor = false;
+            this.btnIzquierda.Click += new System.EventHandler(this.btnIzquierda_Click);
             // 
             // frmAsientosContables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(848, 507);
+            this.ClientSize = new System.Drawing.Size(848, 555);
+            this.Controls.Add(this.btnIzquierda);
+            this.Controls.Add(this.btnDerecha);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cbBusqueda);
@@ -786,5 +834,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private RJCodeAdvance.RJControls.RJButton btnDerecha;
+        private RJCodeAdvance.RJControls.RJButton btnIzquierda;
     }
 }
