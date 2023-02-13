@@ -32,7 +32,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.dgvAsientosContables = new System.Windows.Forms.DataGridView();
+            this.dgvAddModVisASIENTO = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,11 +42,11 @@
             this.txtCodEjercicio = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtDescriEjercicio = new System.Windows.Forms.TextBox();
-            this.cbSeleccion = new System.Windows.Forms.ComboBox();
+            this.cbTipoAsiento = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtComentario = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNroAsiento = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnCancelar = new RJCodeAdvance.RJControls.RJButton();
@@ -54,10 +54,16 @@
             this.btnPlandeCta = new RJCodeAdvance.RJControls.RJButton();
             this.btnModelo = new RJCodeAdvance.RJControls.RJButton();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
-            this.dtNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddModVisASIENTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,18 +153,25 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
-            // dgvAsientosContables
+            // dgvAddModVisASIENTO
             // 
-            this.dgvAsientosContables.AllowUserToAddRows = false;
-            this.dgvAsientosContables.AllowUserToDeleteRows = false;
-            this.dgvAsientosContables.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAsientosContables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsientosContables.Location = new System.Drawing.Point(12, 213);
-            this.dgvAsientosContables.Name = "dgvAsientosContables";
-            this.dgvAsientosContables.ReadOnly = true;
-            this.dgvAsientosContables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAsientosContables.Size = new System.Drawing.Size(624, 267);
-            this.dgvAsientosContables.TabIndex = 96;
+            this.dgvAddModVisASIENTO.AllowUserToAddRows = false;
+            this.dgvAddModVisASIENTO.AllowUserToDeleteRows = false;
+            this.dgvAddModVisASIENTO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAddModVisASIENTO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAddModVisASIENTO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dgvAddModVisASIENTO.Location = new System.Drawing.Point(12, 213);
+            this.dgvAddModVisASIENTO.Name = "dgvAddModVisASIENTO";
+            this.dgvAddModVisASIENTO.ReadOnly = true;
+            this.dgvAddModVisASIENTO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAddModVisASIENTO.Size = new System.Drawing.Size(624, 267);
+            this.dgvAddModVisASIENTO.TabIndex = 96;
             // 
             // label3
             // 
@@ -257,17 +270,17 @@
             this.txtDescriEjercicio.TabIndex = 113;
             this.txtDescriEjercicio.Tag = "11000";
             // 
-            // cbSeleccion
+            // cbTipoAsiento
             // 
-            this.cbSeleccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.cbSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbSeleccion.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSeleccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbSeleccion.FormattingEnabled = true;
-            this.cbSeleccion.Location = new System.Drawing.Point(94, 73);
-            this.cbSeleccion.Name = "cbSeleccion";
-            this.cbSeleccion.Size = new System.Drawing.Size(134, 25);
-            this.cbSeleccion.TabIndex = 115;
+            this.cbTipoAsiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.cbTipoAsiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbTipoAsiento.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoAsiento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cbTipoAsiento.FormattingEnabled = true;
+            this.cbTipoAsiento.Location = new System.Drawing.Point(94, 73);
+            this.cbTipoAsiento.Name = "cbTipoAsiento";
+            this.cbTipoAsiento.Size = new System.Drawing.Size(134, 25);
+            this.cbTipoAsiento.TabIndex = 115;
             // 
             // panel2
             // 
@@ -277,17 +290,17 @@
             this.panel2.Size = new System.Drawing.Size(542, 1);
             this.panel2.TabIndex = 117;
             // 
-            // textBox2
+            // txtComentario
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(94, 181);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(542, 19);
-            this.textBox2.TabIndex = 116;
-            this.textBox2.Tag = "11000";
+            this.txtComentario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtComentario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtComentario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComentario.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtComentario.Location = new System.Drawing.Point(94, 181);
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(542, 19);
+            this.txtComentario.TabIndex = 116;
+            this.txtComentario.Tag = "11000";
             // 
             // panel4
             // 
@@ -297,17 +310,17 @@
             this.panel4.Size = new System.Drawing.Size(140, 1);
             this.panel4.TabIndex = 119;
             // 
-            // textBox3
+            // txtNroAsiento
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(88, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 19);
-            this.textBox3.TabIndex = 118;
-            this.textBox3.Tag = "11000";
+            this.txtNroAsiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtNroAsiento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNroAsiento.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNroAsiento.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtNroAsiento.Location = new System.Drawing.Point(88, 114);
+            this.txtNroAsiento.Name = "txtNroAsiento";
+            this.txtNroAsiento.Size = new System.Drawing.Size(140, 19);
+            this.txtNroAsiento.TabIndex = 118;
+            this.txtNroAsiento.Tag = "11000";
             // 
             // btnConfirmar
             // 
@@ -443,15 +456,15 @@
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
             // 
-            // dtNacimiento
+            // dtFecha
             // 
-            this.dtNacimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNacimiento.Location = new System.Drawing.Point(64, 152);
-            this.dtNacimiento.Name = "dtNacimiento";
-            this.dtNacimiento.Size = new System.Drawing.Size(97, 20);
-            this.dtNacimiento.TabIndex = 129;
-            this.dtNacimiento.TabStop = false;
+            this.dtFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFecha.Location = new System.Drawing.Point(64, 152);
+            this.dtFecha.Name = "dtFecha";
+            this.dtFecha.Size = new System.Drawing.Size(97, 20);
+            this.dtFecha.TabIndex = 129;
+            this.dtFecha.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -464,6 +477,42 @@
             this.pictureBox1.TabIndex = 130;
             this.pictureBox1.TabStop = false;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Cuenta";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Debe";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Haber";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Concepto";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "CentrodeCostos";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
             // frmAggModVisAsientoContable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,7 +520,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(800, 492);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dtNacimiento);
+            this.Controls.Add(this.dtFecha);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnModelo);
             this.Controls.Add(this.btnPlandeCta);
@@ -480,10 +529,10 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtNroAsiento);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.cbSeleccion);
+            this.Controls.Add(this.txtComentario);
+            this.Controls.Add(this.cbTipoAsiento);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtDescriEjercicio);
             this.Controls.Add(this.panel3);
@@ -493,7 +542,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dgvAsientosContables);
+            this.Controls.Add(this.dgvAddModVisASIENTO);
             this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAggModVisAsientoContable";
@@ -501,7 +550,7 @@
             this.Text = "frmAggModVisAsientoContable";
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddModVisASIENTO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -513,7 +562,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lblControlBar;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
-        private System.Windows.Forms.DataGridView dgvAsientosContables;
+        private System.Windows.Forms.DataGridView dgvAddModVisASIENTO;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -523,11 +572,11 @@
         private System.Windows.Forms.TextBox txtCodEjercicio;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtDescriEjercicio;
-        private System.Windows.Forms.ComboBox cbSeleccion;
+        private System.Windows.Forms.ComboBox cbTipoAsiento;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtComentario;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNroAsiento;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
         private System.Windows.Forms.Panel panel6;
         private RJCodeAdvance.RJControls.RJButton btnCancelar;
@@ -535,7 +584,13 @@
         private RJCodeAdvance.RJControls.RJButton btnPlandeCta;
         private RJCodeAdvance.RJControls.RJButton btnModelo;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
-        private System.Windows.Forms.DateTimePicker dtNacimiento;
+        private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

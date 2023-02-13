@@ -40,8 +40,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void Inicializar()
         {
-            List<DataRow> lista = new List<DataRow>();
-
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT eje_codigo,eje_descri FROM Ejercicio");
             cbSeleccion.DataSource = ds.Tables[0];
@@ -49,6 +47,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             cbSeleccion.ValueMember = "eje_codigo";
             cbSeleccion.SelectedIndex = -1;
         }
+
         //private void CargarDGV()
         //{
         //    if (cbSeleccion.SelectedIndex > -1)
@@ -150,7 +149,11 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     string fechacreo = dr[4].ToString().Substring(0,10);
                     string horacreo = dr[5].ToString();
                     string modifico = dr[6].ToString();
-                    string fechamod = dr[7].ToString().Substring(0, 10);
+                    string fechamod = "";
+                    if (dr[7].ToString().Length > 9) 
+                    {
+                        fechamod = dr[7].ToString().Substring(0, 10);
+                    }
                     string horamod = dr[8].ToString();
 
                     dgvAsientosContables.Rows.Add(asiento, fecha, comentario, debe, haber, creo, fechacreo, horacreo, modifico, fechamod, horamod);
@@ -162,7 +165,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
-                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(1, cbSeleccion);
+                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(1, cbSeleccion, "", "", "");
                 frm.ShowDialog();
             }
             else
@@ -175,7 +178,12 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
-                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(2, cbSeleccion);
+                int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
+                string asiento = dgvAsientosContables.Rows[seleccionado].Cells[0].Value.ToString();
+                string fecha = dgvAsientosContables.Rows[seleccionado].Cells[1].Value.ToString();
+                string comentario = dgvAsientosContables.Rows[seleccionado].Cells[2].Value.ToString();
+
+                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(2, cbSeleccion, asiento, fecha, comentario);
                 frm.ShowDialog();
             }
             else
@@ -188,8 +196,14 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
-                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(3, cbSeleccion);
+                int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
+                string asiento = dgvAsientosContables.Rows[seleccionado].Cells[0].Value.ToString();
+                string fecha = dgvAsientosContables.Rows[seleccionado].Cells[1].Value.ToString();
+                string comentario = dgvAsientosContables.Rows[seleccionado].Cells[2].Value.ToString();
+
+                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(3, cbSeleccion, asiento, fecha, comentario);
                 frm.ShowDialog();
+                
             }
             else
             {
@@ -212,17 +226,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
         }
 
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void panel7_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void btnDerecha_Click(object sender, EventArgs e)
         {
             dgvAsientosContables.Rows.Clear();
@@ -239,6 +242,17 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 CargarDGV(valorDgv);
             }
 
+        }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel7_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
