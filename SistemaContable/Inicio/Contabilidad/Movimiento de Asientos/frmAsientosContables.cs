@@ -64,7 +64,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     decimal HABER = 0;
 
                     string asiento = dr[0].ToString();
-                    string fecha = dr[1].ToString();
+                    string fecha = dr[1].ToString().Substring(0,10);
                     string comentario = dr[2].ToString();
 
                     DataSet ds2 = new DataSet();
@@ -91,10 +91,10 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     }
                     string creo = nombreusuario;
 
-                    string fechacreo = dr[4].ToString();
+                    string fechacreo = dr[4].ToString().Substring(0,10);
                     string horacreo = dr[5].ToString();
                     string modifico = dr[6].ToString();
-                    string fechamod = dr[7].ToString();
+                    string fechamod = dr[7].ToString().Substring(0, 10);
                     string horamod = dr[8].ToString();
 
                     Application.DoEvents();
