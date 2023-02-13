@@ -37,14 +37,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtCuenta = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.cbDescripcion = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtOrden = new System.Windows.Forms.TextBox();
+            this.cbCentroCostos = new System.Windows.Forms.ComboBox();
+            this.txtDescri = new System.Windows.Forms.TextBox();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -190,17 +190,17 @@
             this.panel3.Size = new System.Drawing.Size(229, 1);
             this.panel3.TabIndex = 86;
             // 
-            // txtDescripcion
+            // txtCuenta
             // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtDescripcion.Location = new System.Drawing.Point(76, 52);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(229, 19);
-            this.txtDescripcion.TabIndex = 85;
-            this.txtDescripcion.Tag = "11000";
+            this.txtCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCuenta.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuenta.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtCuenta.Location = new System.Drawing.Point(76, 52);
+            this.txtCuenta.Name = "txtCuenta";
+            this.txtCuenta.Size = new System.Drawing.Size(229, 19);
+            this.txtCuenta.TabIndex = 85;
+            this.txtCuenta.Tag = "11000";
             // 
             // btnConfirmar
             // 
@@ -251,39 +251,39 @@
             this.panel5.Size = new System.Drawing.Size(74, 1);
             this.panel5.TabIndex = 93;
             // 
-            // textBox3
+            // txtOrden
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(70, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(74, 19);
-            this.textBox3.TabIndex = 92;
-            this.textBox3.Tag = "11000";
+            this.txtOrden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtOrden.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOrden.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrden.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtOrden.Location = new System.Drawing.Point(70, 147);
+            this.txtOrden.Name = "txtOrden";
+            this.txtOrden.Size = new System.Drawing.Size(74, 19);
+            this.txtOrden.TabIndex = 92;
+            this.txtOrden.Tag = "11000";
             // 
-            // cbDescripcion
+            // cbCentroCostos
             // 
-            this.cbDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbDescripcion.BackColor = System.Drawing.SystemColors.Window;
-            this.cbDescripcion.FormattingEnabled = true;
-            this.cbDescripcion.Location = new System.Drawing.Point(139, 110);
-            this.cbDescripcion.Name = "cbDescripcion";
-            this.cbDescripcion.Size = new System.Drawing.Size(229, 21);
-            this.cbDescripcion.TabIndex = 95;
+            this.cbCentroCostos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbCentroCostos.BackColor = System.Drawing.SystemColors.Window;
+            this.cbCentroCostos.FormattingEnabled = true;
+            this.cbCentroCostos.Location = new System.Drawing.Point(139, 110);
+            this.cbCentroCostos.Name = "cbCentroCostos";
+            this.cbCentroCostos.Size = new System.Drawing.Size(229, 21);
+            this.cbCentroCostos.TabIndex = 95;
             // 
-            // textBox2
+            // txtDescri
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(106, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(229, 19);
-            this.textBox2.TabIndex = 96;
-            this.textBox2.Tag = "11000";
+            this.txtDescri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtDescri.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescri.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescri.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtDescri.Location = new System.Drawing.Point(106, 77);
+            this.txtDescri.Name = "txtDescri";
+            this.txtDescri.Size = new System.Drawing.Size(229, 19);
+            this.txtDescri.TabIndex = 96;
+            this.txtDescri.Tag = "11000";
             // 
             // btnConsulta
             // 
@@ -306,15 +306,15 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(479, 242);
             this.Controls.Add(this.btnConsulta);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.cbDescripcion);
+            this.Controls.Add(this.txtDescri);
+            this.Controls.Add(this.cbCentroCostos);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtOrden);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtCuenta);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -322,6 +322,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAggDetalledeInformes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAggDetalledeInformes";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -340,14 +341,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtCuenta;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox cbDescripcion;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtOrden;
+        private System.Windows.Forms.ComboBox cbCentroCostos;
+        private System.Windows.Forms.TextBox txtDescri;
         private System.Windows.Forms.Button btnConsulta;
     }
 }

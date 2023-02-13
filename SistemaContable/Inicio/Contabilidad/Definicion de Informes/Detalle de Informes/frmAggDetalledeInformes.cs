@@ -16,6 +16,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
     public partial class frmAggDetalledeInformes : Form
     {
         private int opcion;
+        private int idCuenta;
         public frmAggDetalledeInformes(int opcion)
         {
             InitializeComponent();
@@ -28,20 +29,28 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            if(txtCuenta.Text != string.Empty && txtDescri.Text != string.Empty && txtOrden.Text != string.Empty && cbCentroCostos.Text != string.Empty)
+            {
 
+            }
+            else
+            {
+                MessageBox.Show("Faltan completar campos", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             frmBuscarCuenta frmBuscarCuenta = new frmBuscarCuenta("Cuenta");
             frmBuscarCuenta.ShowDialog();
-            int idCuenta = frmBuscarCuenta.IdCuenta;
+            int Cuenta = frmBuscarCuenta.IdCuenta;
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT pcu_descri from PCuenta WHERE pcu_cuenta = {idCuenta}");
+            ds = AccesoBase.ListarDatos($"SELECT pcu_descri from PCuenta WHERE pcu_cuenta = {Cuenta}");
             foreach(DataRow ds2 in ds.Tables[0].Rows)
             {
-                txtDescripcion.Text = ds2.ItemArray[0].ToString();
+                txtCuenta.Text = ds2.ItemArray[0].ToString();
             }
+            this.idCuenta = Cuenta;
         }
         
     }
