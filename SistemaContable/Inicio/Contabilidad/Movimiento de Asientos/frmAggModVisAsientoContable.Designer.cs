@@ -33,6 +33,12 @@
             this.lblControlBar = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.dgvAddModVisASIENTO = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,12 +62,6 @@
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddModVisASIENTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -172,6 +172,43 @@
             this.dgvAddModVisASIENTO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAddModVisASIENTO.Size = new System.Drawing.Size(624, 267);
             this.dgvAddModVisASIENTO.TabIndex = 96;
+            this.dgvAddModVisASIENTO.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAddModVisASIENTO_CellDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Cuenta";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Debe";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Haber";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Concepto";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "CentrodeCostos";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // label3
             // 
@@ -342,6 +379,7 @@
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // panel6
             // 
@@ -413,6 +451,7 @@
             this.btnPlandeCta.Text = "Plan de Cta";
             this.btnPlandeCta.TextColor = System.Drawing.Color.White;
             this.btnPlandeCta.UseVisualStyleBackColor = false;
+            this.btnPlandeCta.Click += new System.EventHandler(this.btnPlandeCta_Click);
             // 
             // btnModelo
             // 
@@ -476,42 +515,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 130;
             this.pictureBox1.TabStop = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Cuenta";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descripción";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Debe";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Haber";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Concepto";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "CentrodeCostos";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // frmAggModVisAsientoContable
             // 

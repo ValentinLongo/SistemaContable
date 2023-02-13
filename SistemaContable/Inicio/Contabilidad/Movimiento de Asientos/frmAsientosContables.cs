@@ -55,9 +55,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             if (cbSeleccion.SelectedIndex > -1)
             {
                 DataSet ds = new DataSet();
-
                 ds = AccesoBase.ListarDatosPaginado($"SELECT ast_asiento as Asiento, ast_fecha as Fecha, ast_comenta as Comentario, Debe as Debe, Debe as Haber, usu_nombre as 'Creó', ast_fecalta as Fecha, ast_hora as Hora, ast_usumodi as 'Modificó', ast_fecmodi as Fecha, ast_horamodi as Hora FROM Asiento as A LEFT JOIN Usuario ON A.ast_user = Usuario.usu_codigo Left Join (SELECT mva_asiento, SUM(mva_importe) / 2 as Debe FROM MovAsto group by mva_asiento) as B on A.ast_asiento = B.mva_asiento where ast_ejercicio = '{cbSeleccion.SelectedValue}' group by ast_asiento, ast_fecha, ast_comenta, ast_user, Debe, usu_nombre,ast_fecalta,ast_hora,ast_usumodi,ast_fecmodi,ast_horamodi order by ast_fecha", valorData);
-                dgvAsientosContables.DataSource = ds.Tables[0];
+                dgvAsientosContables.DataSource = ds.Tables[0];       
             }
         }
 
@@ -112,8 +111,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void cbSeleccion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgvAsientosContables.Rows.Clear();
-
             if (cbSeleccion.Tag.ToString() != "0")
             {
                 valorDgv = 0;
@@ -149,7 +146,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 valorDgv -= 150;
                 CargarDGV(valorDgv);
             }
-
         }
     }
 }

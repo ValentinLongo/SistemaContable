@@ -1,4 +1,6 @@
 ﻿using Datos;
+using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_Modelos;
+using SistemaContable.Plan_de_Cuentas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +39,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
             if (addmodvis == 1) // agregar
             {
+                lblControlBar.Text = "Agregar Asiento Contable";
                 txtNroAsiento.Text = "ALTA EN CONCEPTO";
                 txtNroAsiento.Enabled = false;
                 
@@ -44,38 +47,57 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
             else if(addmodvis == 2) // modificar
             {
+                lblControlBar.Text = "Modificar Asiento Contable";
                 txtNroAsiento.Text = asiento;
                 dtFecha.Value = Convert.ToDateTime(fecha);
                 txtComentario.Text = comentario;
+
+                //carga de datos
                 txtNroAsiento.Enabled = false;
                 dtFecha.Enabled = false;
-                
-                //consulta (terminar)
+
+                //botones
+                btnGenerar.Enabled = false;
+
+                CargarDGV(asiento);
+
+                AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET");
             }
             else if(addmodvis == 3) // visualizar
             {
+                lblControlBar.Text = "Visualizar Asiento Contable";
                 txtNroAsiento.Text = asiento;
                 dtFecha.Value = Convert.ToDateTime(fecha);
                 txtComentario.Text = comentario;
+
+                //carga de datos
                 cbTipoAsiento.Enabled = false;
                 txtNroAsiento.Enabled = false;
                 dtFecha.Enabled = false;
                 txtComentario.Enabled = false;
 
-                CargarDGV(asiento);
+                //botones
+                btnConfirmar.Enabled = false;
+                btnCancelar.Enabled = false;
+                btnGenerar.Enabled = false;
+                btnModelo.Enabled = false;
 
-                //consulta (termminar)
+                //dgv
+                dgvAddModVisASIENTO.Enabled = false;
+
+                CargarDGV(asiento);
             }
         }
 
         private void CargarDGV(string asiento) 
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc FROM MovAsto WHERE mva_asiento = {asiento} ");
+            ds = AccesoBase.ListarDatos($"SELECT mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc FROM MovAsto WHERE mva_asiento = {asiento}");
             foreach (DataRow dr in ds.Tables[0].Rows) 
             {
                 string debe = "0,0000";
                 string haber = "0,0000";
+                string descri = "";
 
                 string cuenta = dr[0].ToString();
 
@@ -92,9 +114,13 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 string cc = dr[4].ToString();
 
                 DataSet ds2 = new DataSet();
-                ds2 = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta =");
+                ds2 = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta = {cuenta}");
+                foreach (DataRow dr2 in ds2.Tables[0].Rows) 
+                {
+                    descri = dr2[0].ToString();
+                }
 
-                dgvAddModVisASIENTO.Rows.Add(cuenta);
+                dgvAddModVisASIENTO.Rows.Add(cuenta,descri,debe,haber,concepto,cc);
             }
         }
 
@@ -108,5 +134,35 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void btnPlandeCta_Click(object sender, EventArgs e)
+        {
+            frmPlanDeCuentas frm = new frmPlanDeCuentas();
+            frm.Show();
+            //ponerle barra de control
+        }
+
+        private void dgvAddModVisASIENTO_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int seleccionado = dgvAddModVisASIENTO.CurrentCell.RowIndex;
+
+            if (seleccionado != -1)
+            {
+                string cuenta = dgvAddModVisASIENTO.Rows[seleccionado].Cells[0].Value.ToString();
+                string descri = dgvAddModVisASIENTO.Rows[seleccionado].Cells[1].Value.ToString();
+                string debe = dgvAddModVisASIENTO.Rows[seleccionado].Cells[2].Value.ToString();
+                string haber = dgvAddModVisASIENTO.Rows[seleccionado].Cells[3].Value.ToString();
+                string concepto = dgvAddModVisASIENTO.Rows[seleccionado].Cells[4].Value.ToString();
+                string cc = dgvAddModVisASIENTO.Rows[seleccionado].Cells[5].Value.ToString();
+
+                frmAddModDetdeModelos frm = new frmAddModDetdeModelos(1, cuenta, descri, debe, haber, concepto, cc);
+                frm.Show();
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
