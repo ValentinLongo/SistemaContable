@@ -67,7 +67,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
-                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(1, cbSeleccion);
+                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(1, cbSeleccion,"","","");
                 frm.ShowDialog();
             }
             else
@@ -80,7 +80,12 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
-                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(2, cbSeleccion);
+                int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
+                string asiento = dgvAsientosContables.Rows[seleccionado].Cells[0].Value.ToString();
+                string fecha = dgvAsientosContables.Rows[seleccionado].Cells[1].Value.ToString();
+                string comentario = dgvAsientosContables.Rows[seleccionado].Cells[2].Value.ToString();
+
+                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(2, cbSeleccion, asiento, fecha, comentario);
                 frm.ShowDialog();
             }
             else
@@ -93,7 +98,12 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
-                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(3, cbSeleccion);
+                int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
+                string asiento = dgvAsientosContables.Rows[seleccionado].Cells[0].Value.ToString();
+                string fecha = dgvAsientosContables.Rows[seleccionado].Cells[1].Value.ToString();
+                string comentario = dgvAsientosContables.Rows[seleccionado].Cells[2].Value.ToString();
+
+                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(3, cbSeleccion, asiento, fecha, comentario);
                 frm.ShowDialog();
             }
             else

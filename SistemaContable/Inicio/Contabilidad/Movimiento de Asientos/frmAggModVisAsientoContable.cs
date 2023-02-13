@@ -92,8 +92,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 string cc = dr[4].ToString();
 
                 DataSet ds2 = new DataSet();
-                ds2 = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta");
-
+                ds2 = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta =");
 
                 dgvAddModVisASIENTO.Rows.Add(cuenta);
             }
