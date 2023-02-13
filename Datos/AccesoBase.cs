@@ -50,7 +50,7 @@ namespace Datos
                 DataSet oData = new DataSet();
                 AbrirBD();
                 SqlDataAdapter oAdap = new SqlDataAdapter(strSQL, sqlConec);
-                oAdap.Fill(oData,scollVal,100, "Registros");
+                oAdap.Fill(oData,scollVal,150, "Registros");
                 return oData;
             }
             catch (Exception ex)

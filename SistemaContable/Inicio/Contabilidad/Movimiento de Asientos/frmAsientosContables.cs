@@ -40,6 +40,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void Inicializar()
         {
+            List<DataRow> lista = new List<DataRow>();
+
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT eje_codigo,eje_descri FROM Ejercicio");
             cbSeleccion.DataSource = ds.Tables[0];
@@ -48,116 +50,16 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             cbSeleccion.SelectedIndex = -1;
         }
 
-        //private void CargarDGV()
-        //{
-        //    if (cbSeleccion.SelectedIndex > -1)
-        //    {
-        //        string WHERE = "WHERE ast_ejercicio = " + cbSeleccion.SelectedValue;
-
-        //        DataSet ds = new DataSet();
-        //        ds = AccesoBase.ListarDatos($"SELECT ast_asiento, ast_fecha, ast_comenta, ast_user, ast_fecalta, ast_hora, ast_usumodi, ast_fecmodi, ast_horamodi FROM Asiento {WHERE} ORDER BY ast_fecha");
-
-        //        foreach (DataRow dr in ds.Tables[0].Rows)
-        //        {
-        //            string nombreusuario = "";
-        //            decimal DEBE = 0;
-        //            decimal HABER = 0;
-
-        //            string asiento = dr[0].ToString();
-        //            string fecha = dr[1].ToString();
-        //            string comentario = dr[2].ToString();
-
-        //            DataSet ds2 = new DataSet();
-        //            ds2 = AccesoBase.ListarDatos($"SELECT mva_codigo, mva_importe FROM MovAsto WHERE mva_asiento = '{asiento}'");
-        //            foreach (DataRow dr2 in ds2.Tables[0].Rows)
-        //            {
-        //                if (dr2[0].ToString() == "1")
-        //                {
-        //                    DEBE = DEBE + Convert.ToDecimal(dr2[1]);
-        //                }
-        //                if (dr2[0].ToString() == "2")
-        //                {
-        //                    HABER = HABER + Convert.ToDecimal(dr2[1]);
-        //                }
-        //            }
-        //            string debe = DEBE.ToString();
-        //            string haber = HABER.ToString();
-
-        //            DataSet ds3 = new DataSet();
-        //            ds3 = AccesoBase.ListarDatos($"SELECT usu_nombre FROM Usuario WHERE usu_codigo = '{dr[3].ToString()}'");
-        //            foreach (DataRow dr3 in ds3.Tables[0].Rows)
-        //            {
-        //                nombreusuario = dr3[0].ToString();
-        //            }
-        //            string creo = nombreusuario;
-
-        //            string fechacreo = dr[4].ToString();
-        //            string horacreo = dr[5].ToString();
-        //            string modifico = dr[6].ToString();
-        //            string fechamod = dr[7].ToString();
-        //            string horamod = dr[8].ToString();
-
-        //            Application.DoEvents();
-        //            dgvAsientosContables.Rows.Add(asiento,fecha,comentario,debe,haber,creo,fechacreo,horacreo,modifico,fechamod,horamod);
-        //        }
-        //    }
-        //}
-
         private void CargarDGV(int valorData)
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
-                string WHERE = "WHERE ast_ejercicio = " + cbSeleccion.SelectedValue;
-
                 DataSet ds = new DataSet();
-                ds = AccesoBase.ListarDatosPaginado($"SELECT ast_asiento, ast_fecha, ast_comenta, ast_user, ast_fecalta, ast_hora, ast_usumodi, ast_fecmodi, ast_horamodi FROM Asiento {WHERE} ORDER BY ast_fecha", valorData);
 
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    string nombreusuario = "";
-                    decimal DEBE = 0;
-                    decimal HABER = 0;
+                ds = AccesoBase.ListarDatosPaginado($"SELECT ast_asiento as Asiento, ast_fecha as Fecha, ast_comenta as Comentario, Debe as Debe, Debe as Haber, usu_nombre as 'Creó', ast_fecalta as Fecha, ast_hora as Hora, ast_usumodi as 'Modificó', ast_fecmodi as Fecha, ast_horamodi as Hora FROM Asiento as A LEFT JOIN Usuario ON A.ast_user = Usuario.usu_codigo Left Join (SELECT mva_asiento, SUM(mva_importe) / 2 as Debe FROM MovAsto group by mva_asiento) as B on A.ast_asiento = B.mva_asiento where ast_ejercicio = '{cbSeleccion.SelectedValue}' group by ast_asiento, ast_fecha, ast_comenta, ast_user, Debe, usu_nombre,ast_fecalta,ast_hora,ast_usumodi,ast_fecmodi,ast_horamodi order by ast_fecha", valorData);
+                dgvAsientosContables.DataSource = ds.Tables[0];
 
-                    string asiento = dr[0].ToString();
-                    string fecha = dr[1].ToString().Substring(0,10);
-                    string comentario = dr[2].ToString();
-
-                    DataSet ds2 = new DataSet();
-                    ds2 = AccesoBase.ListarDatos($"SELECT mva_codigo, mva_importe FROM MovAsto WHERE mva_asiento = '{asiento}'");
-                    foreach (DataRow dr2 in ds2.Tables[0].Rows)
-                    {
-                        if (dr2[0].ToString() == "1")
-                        {
-                            DEBE = DEBE + Convert.ToDecimal(dr2[1]);
-                        }
-                        if (dr2[0].ToString() == "2")
-                        {
-                            HABER = HABER + Convert.ToDecimal(dr2[1]);
-                        }
-                    }
-                    string debe = DEBE.ToString();
-                    string haber = HABER.ToString();
-
-                    DataSet ds3 = new DataSet();
-                    ds3 = AccesoBase.ListarDatos($"SELECT usu_nombre FROM Usuario WHERE usu_codigo = '{dr[3].ToString()}'");
-                    foreach (DataRow dr3 in ds3.Tables[0].Rows)
-                    {
-                        nombreusuario = dr3[0].ToString();
-                    }
-                    string creo = nombreusuario;
-
-                    string fechacreo = dr[4].ToString().Substring(0,10);
-                    string horacreo = dr[5].ToString();
-                    string modifico = dr[6].ToString();
-                    string fechamod = "";
-                    if (dr[7].ToString().Length > 9) 
-                    {
-                        fechamod = dr[7].ToString().Substring(0, 10);
-                    }
-                    string horamod = dr[8].ToString();
-
-                    dgvAsientosContables.Rows.Add(asiento, fecha, comentario, debe, haber, creo, fechacreo, horacreo, modifico, fechamod, horamod);
-                }
+               
             }
         }
 
@@ -165,7 +67,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
-                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(1, cbSeleccion, "", "", "");
+                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(1, cbSeleccion);
                 frm.ShowDialog();
             }
             else
@@ -178,12 +80,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
-                int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
-                string asiento = dgvAsientosContables.Rows[seleccionado].Cells[0].Value.ToString();
-                string fecha = dgvAsientosContables.Rows[seleccionado].Cells[1].Value.ToString();
-                string comentario = dgvAsientosContables.Rows[seleccionado].Cells[2].Value.ToString();
-
-                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(2, cbSeleccion, asiento, fecha, comentario);
+                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(2, cbSeleccion);
                 frm.ShowDialog();
             }
             else
@@ -196,14 +93,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
-                int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
-                string asiento = dgvAsientosContables.Rows[seleccionado].Cells[0].Value.ToString();
-                string fecha = dgvAsientosContables.Rows[seleccionado].Cells[1].Value.ToString();
-                string comentario = dgvAsientosContables.Rows[seleccionado].Cells[2].Value.ToString();
-
-                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(3, cbSeleccion, asiento, fecha, comentario);
+                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(3, cbSeleccion);
                 frm.ShowDialog();
-                
             }
             else
             {
@@ -226,24 +117,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
         }
 
-        private void btnDerecha_Click(object sender, EventArgs e)
-        {
-            dgvAsientosContables.Rows.Clear();
-            valorDgv += 150;
-            CargarDGV(valorDgv);
-        }
-
-        private void btnIzquierda_Click(object sender, EventArgs e)
-        {
-            dgvAsientosContables.Rows.Clear();
-            if (valorDgv >= 150)
-            {
-                valorDgv -= 150;
-                CargarDGV(valorDgv);
-            }
-
-        }
-
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -253,6 +126,22 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnDerecha_Click(object sender, EventArgs e)
+        {
+            valorDgv += 150;
+            CargarDGV(valorDgv);
+        }
+
+        private void btnIzquierda_Click(object sender, EventArgs e)
+        {
+            if (valorDgv >= 150)
+            {
+                valorDgv -= 150;
+                CargarDGV(valorDgv);
+            }
+
         }
     }
 }
