@@ -60,7 +60,8 @@ namespace SistemaContable.Agenda
 
         private void btnImprimir_Click_1(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process calc = new System.Diagnostics.Process { StartInfo = { FileName = @"calc.exe" } };
+            calc.Start();
         }
 
         private void dataAgenda_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

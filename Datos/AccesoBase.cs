@@ -43,6 +43,26 @@ namespace Datos
             }
         }
 
+        public static DataSet ListarDatosPaginado(string strSQL,int scollVal)
+        {
+            try
+            {
+                DataSet oData = new DataSet();
+                AbrirBD();
+                SqlDataAdapter oAdap = new SqlDataAdapter(strSQL, sqlConec);
+                oAdap.Fill(oData,scollVal,100, "Registros");
+                return oData;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                CerrarBD();
+            }
+        }
+
         // ESTA FUNCION LA USAMOS PARA VERIFICAR SI EXISTE UN DATO EN LA BASE
         // POR EJEMPLO PARA HACER UN LOGIN, O VERIFICAR SI EXISTE UN REGISTRO ANTES DE INSERTARLO
         // SI EL REGISTRO A VALIDAR EXISTE DEVUELVE INT = 1 SINO INT = -1
