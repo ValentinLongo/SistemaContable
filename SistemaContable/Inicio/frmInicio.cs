@@ -408,7 +408,8 @@ namespace SistemaContable
         //20
         private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process calc = new System.Diagnostics.Process { StartInfo = { FileName = @"calc.exe" } };
+            calc.Start();
         }
         private void comunicacionInternaToolStripMenuItem_Click(object sender, EventArgs e)
         {

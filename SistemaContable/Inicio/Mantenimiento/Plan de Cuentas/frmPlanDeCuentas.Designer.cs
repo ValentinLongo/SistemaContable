@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.dgvCuentas = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Superior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hija = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tabulador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AjustaInf = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.btnModificar = new RJCodeAdvance.RJControls.RJButton();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
@@ -39,13 +46,7 @@
             this.btnBuscar = new RJCodeAdvance.RJControls.RJButton();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.label4 = new System.Windows.Forms.Label();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Superior = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hija = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tabulador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AjustaInf = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnEliminar = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +73,48 @@
             this.dgvCuentas.Size = new System.Drawing.Size(973, 488);
             this.dgvCuentas.TabIndex = 5;
             this.dgvCuentas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Cuenta
+            // 
+            this.Cuenta.HeaderText = "Cuenta";
+            this.Cuenta.Name = "Cuenta";
+            this.Cuenta.ReadOnly = true;
+            // 
+            // Descripción
+            // 
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.Name = "Descripción";
+            this.Descripción.ReadOnly = true;
+            // 
+            // Superior
+            // 
+            this.Superior.HeaderText = "Superior";
+            this.Superior.Name = "Superior";
+            this.Superior.ReadOnly = true;
+            // 
+            // Hija
+            // 
+            this.Hija.HeaderText = "Hija";
+            this.Hija.Name = "Hija";
+            this.Hija.ReadOnly = true;
+            // 
+            // Tabulador
+            // 
+            this.Tabulador.HeaderText = "Tabulador";
+            this.Tabulador.Name = "Tabulador";
+            this.Tabulador.ReadOnly = true;
+            // 
+            // AjustaInf
+            // 
+            this.AjustaInf.HeaderText = "AjustaInf";
+            this.AjustaInf.Name = "AjustaInf";
+            this.AjustaInf.ReadOnly = true;
             // 
             // btnImprimir
             // 
@@ -235,47 +278,27 @@
             this.label4.TabIndex = 56;
             this.label4.Text = "Busqueda";
             // 
-            // Codigo
+            // btnEliminar
             // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Cuenta
-            // 
-            this.Cuenta.HeaderText = "Cuenta";
-            this.Cuenta.Name = "Cuenta";
-            this.Cuenta.ReadOnly = true;
-            // 
-            // Descripción
-            // 
-            this.Descripción.HeaderText = "Descripción";
-            this.Descripción.Name = "Descripción";
-            this.Descripción.ReadOnly = true;
-            // 
-            // Superior
-            // 
-            this.Superior.HeaderText = "Superior";
-            this.Superior.Name = "Superior";
-            this.Superior.ReadOnly = true;
-            // 
-            // Hija
-            // 
-            this.Hija.HeaderText = "Hija";
-            this.Hija.Name = "Hija";
-            this.Hija.ReadOnly = true;
-            // 
-            // Tabulador
-            // 
-            this.Tabulador.HeaderText = "Tabulador";
-            this.Tabulador.Name = "Tabulador";
-            this.Tabulador.ReadOnly = true;
-            // 
-            // AjustaInf
-            // 
-            this.AjustaInf.HeaderText = "AjustaInf";
-            this.AjustaInf.Name = "AjustaInf";
-            this.AjustaInf.ReadOnly = true;
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnEliminar.BorderColor = System.Drawing.Color.White;
+            this.btnEliminar.BorderRadius = 0;
+            this.btnEliminar.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(991, 169);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(130, 31);
+            this.btnEliminar.TabIndex = 57;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextColor = System.Drawing.Color.White;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmPlanDeCuentas
             // 
@@ -284,6 +307,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1129, 568);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.tbDescipcion);
             this.Controls.Add(this.label1);
@@ -298,7 +322,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPlanDeCuentas";
             this.Text = "frmPlanDeCuentas";
-            this.Load += new System.EventHandler(this.frmPlanDeCuentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -326,5 +349,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Hija;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tabulador;
         private System.Windows.Forms.DataGridViewCheckBoxColumn AjustaInf;
+        private RJCodeAdvance.RJControls.RJButton btnEliminar;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,29 +22,30 @@ namespace SistemaContable.Plan_de_Cuentas
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
             btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
             CargarDGV();
         }
 
-        //private void CargarDGV()
-        //{
-        //    DataSet ds = new DataSet();
-        //    ds = Negocio.FPlanDeCuentas.ListaCuentas();
-        //    dgvCuentas.DataSource = ds.Tables[0];
-        //}
         private void CargarDGV()
         {
+            dgvCuentas.Rows.Clear();
             DataSet ds = new DataSet();
             ds = Negocio.FPlanDeCuentas.ListaCuentas();
+            string codigo = "";
+            int cuenta = 0;
+            string descripcion = "";
+            string superior = "";
+            int hija = 0;
+            int tabulador = 0;
+            bool ajusta = false;
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                dgvCuentas.Rows.Clear();
-                string codigo = dr["pcu_codigo"].ToString();
-                int cuenta = Convert.ToInt32(dr["pcu_cuenta"].ToString());
-                string descripcion = dr["pcu_descri"].ToString();
-                string superior = dr["pcu_superior"].ToString();
-                int hija = Convert.ToInt32(dr["pcu_hija"].ToString());
-                int tabulador = Convert.ToInt32(dr["pcu_tabulador"].ToString());
-                bool ajusta = false;
+                codigo = dr["pcu_codigo"].ToString();
+                cuenta = Convert.ToInt32(dr["pcu_cuenta"].ToString());
+                descripcion = dr["pcu_descri"].ToString();
+                superior = dr["pcu_superior"].ToString();
+                hija = Convert.ToInt32(dr["pcu_hija"].ToString());
+                tabulador = Convert.ToInt32(dr["pcu_tabulador"].ToString());
                 try
                 {
                     if (Convert.ToInt32(dr["pcu_ajustainf"].ToString()) == 1)
@@ -55,7 +57,7 @@ namespace SistemaContable.Plan_de_Cuentas
                 {
 
                 }
-                dgvCuentas.Rows.Add(codigo,cuenta,descripcion,superior,hija,tabulador,ajusta);
+                dgvCuentas.Rows.Add(codigo, cuenta, descripcion, superior, hija, tabulador, ajusta);
             }
         }
 
@@ -65,6 +67,7 @@ namespace SistemaContable.Plan_de_Cuentas
             if (tbDescipcion.Text != "" && tbDescipcion.Text != null)
             {
                 btnModificar.Enabled = false;
+                btnEliminar.Enabled = false;
                 DataSet ds = new DataSet();
                 ds = Negocio.FPlanDeCuentas.BusquedaCuenta(tbDescipcion.Text);
                 dgvCuentas.DataSource = ds.Tables[0];
@@ -87,12 +90,14 @@ namespace SistemaContable.Plan_de_Cuentas
             try
             {
                 btnModificar.Enabled = true;
+                btnEliminar.Enabled = true;
                 int indice = e.RowIndex;
                 idCuenta = dgvCuentas.Rows[indice].Cells[1].Value.ToString();
             }
             catch
             {
                 btnModificar.Enabled = false;
+                btnEliminar.Enabled = true;
             }
         }
 
@@ -103,14 +108,16 @@ namespace SistemaContable.Plan_de_Cuentas
             CargarDGV();
         }
 
-        private void frmPlanDeCuentas_Load(object sender, EventArgs e)
+        private void tbDescipcion_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void tbDescipcion_TextChanged(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            FPlanDeCuentas.eliminarCuenta(idCuenta);
+            MessageBox.Show("Eliminado Correctamente");
+            CargarDGV();
         }
     }
 }

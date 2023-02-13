@@ -110,5 +110,10 @@ namespace Negocio
         {
             Datos.AccesoBase.InsertUpdateDatos($"UPDATE PCuenta SET pcu_descri = '{mPlanDeCuentas.pcu_descri}', pcu_estado = {mPlanDeCuentas.pcu_estado}, pcu_rubrocont = {mPlanDeCuentas.pcu_rubrocont}, pcu_ajustainf = {mPlanDeCuentas.pcu_ajustainf} where pcu_codigo = '{mPlanDeCuentas.pcu_codigo}'");
         }
+
+        public static void eliminarCuenta(string idCuenta)
+        {
+            Datos.AccesoBase.InsertUpdateDatos($"DELETE PCuenta WHERE pcu_cuenta = {idCuenta}");
+        }
     }
 }
