@@ -65,12 +65,18 @@ namespace SistemaContable.Plan_de_Cuentas
             {
                 try
                 {
+                    int check = 0;
+                    if (CheckAjuste.Checked)
+                    {
+                        check = 1;
+                    }
                     MPlanDeCuentas mPlanDeCuentas = new MPlanDeCuentas()
                     {
                         pcu_codigo = tbCodigo.Text,
                         pcu_descri = tbDescripcion.Text,
                         pcu_estado = Convert.ToInt32(cbEstado.SelectedIndex + 1),
-                        pcu_rubrocont = Convert.ToInt32(cbRubro.SelectedValue)
+                        pcu_rubrocont = Convert.ToInt32(cbRubro.SelectedValue),
+                        pcu_ajustainf = check
                     };
                     Negocio.FPlanDeCuentas.modificarPlanDeCuentas(mPlanDeCuentas);
                     MessageBox.Show("Cuenta modificada");

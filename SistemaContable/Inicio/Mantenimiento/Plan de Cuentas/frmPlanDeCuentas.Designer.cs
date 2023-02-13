@@ -39,6 +39,13 @@
             this.btnBuscar = new RJCodeAdvance.RJControls.RJButton();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.label4 = new System.Windows.Forms.Label();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Superior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hija = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tabulador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AjustaInf = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,9 +57,18 @@
             this.dgvCuentas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvCuentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCuentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Cuenta,
+            this.Descripción,
+            this.Superior,
+            this.Hija,
+            this.Tabulador,
+            this.AjustaInf});
             this.dgvCuentas.Location = new System.Drawing.Point(12, 68);
             this.dgvCuentas.Name = "dgvCuentas";
             this.dgvCuentas.ReadOnly = true;
+            this.dgvCuentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCuentas.Size = new System.Drawing.Size(973, 488);
             this.dgvCuentas.TabIndex = 5;
             this.dgvCuentas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
@@ -219,6 +235,48 @@
             this.label4.TabIndex = 56;
             this.label4.Text = "Busqueda";
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Cuenta
+            // 
+            this.Cuenta.HeaderText = "Cuenta";
+            this.Cuenta.Name = "Cuenta";
+            this.Cuenta.ReadOnly = true;
+            // 
+            // Descripción
+            // 
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.Name = "Descripción";
+            this.Descripción.ReadOnly = true;
+            // 
+            // Superior
+            // 
+            this.Superior.HeaderText = "Superior";
+            this.Superior.Name = "Superior";
+            this.Superior.ReadOnly = true;
+            // 
+            // Hija
+            // 
+            this.Hija.HeaderText = "Hija";
+            this.Hija.Name = "Hija";
+            this.Hija.ReadOnly = true;
+            // 
+            // Tabulador
+            // 
+            this.Tabulador.HeaderText = "Tabulador";
+            this.Tabulador.Name = "Tabulador";
+            this.Tabulador.ReadOnly = true;
+            // 
+            // AjustaInf
+            // 
+            this.AjustaInf.HeaderText = "AjustaInf";
+            this.AjustaInf.Name = "AjustaInf";
+            this.AjustaInf.ReadOnly = true;
+            // 
             // frmPlanDeCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,5 +319,12 @@
         private System.Windows.Forms.TextBox tbDescipcion;
         private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cuenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Superior;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hija;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tabulador;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn AjustaInf;
     }
 }

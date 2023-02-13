@@ -15,7 +15,7 @@ namespace Negocio
         public static DataSet ListaCuentas()
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"select pcu_codigo as Codigo, pcu_cuenta as Cuenta, pcu_descri as Descripcion, pcu_superior as Superior, pcu_hija as Hija, pcu_tabulador as Tabulador from PCuenta");
+            ds = AccesoBase.ListarDatos($"select pcu_codigo, pcu_cuenta, pcu_descri, pcu_superior, pcu_hija, pcu_tabulador, pcu_ajustainf from PCuenta");
             return ds;
         }
 
@@ -108,7 +108,7 @@ namespace Negocio
 
         public static void modificarPlanDeCuentas(MPlanDeCuentas mPlanDeCuentas)
         {
-            Datos.AccesoBase.InsertUpdateDatos($"UPDATE PCuenta SET pcu_descri = '{mPlanDeCuentas.pcu_descri}', pcu_estado = {mPlanDeCuentas.pcu_estado}, pcu_rubrocont = {mPlanDeCuentas.pcu_rubrocont} where pcu_codigo = '{mPlanDeCuentas.pcu_codigo}'");
+            Datos.AccesoBase.InsertUpdateDatos($"UPDATE PCuenta SET pcu_descri = '{mPlanDeCuentas.pcu_descri}', pcu_estado = {mPlanDeCuentas.pcu_estado}, pcu_rubrocont = {mPlanDeCuentas.pcu_rubrocont}, pcu_ajustainf = {mPlanDeCuentas.pcu_ajustainf} where pcu_codigo = '{mPlanDeCuentas.pcu_codigo}'");
         }
     }
 }

@@ -24,16 +24,45 @@ namespace SistemaContable.Plan_de_Cuentas
             CargarDGV();
         }
 
+        //private void CargarDGV()
+        //{
+        //    DataSet ds = new DataSet();
+        //    ds = Negocio.FPlanDeCuentas.ListaCuentas();
+        //    dgvCuentas.DataSource = ds.Tables[0];
+        //}
         private void CargarDGV()
         {
             DataSet ds = new DataSet();
             ds = Negocio.FPlanDeCuentas.ListaCuentas();
-            dgvCuentas.DataSource = ds.Tables[0];
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                dgvCuentas.Rows.Clear();
+                string codigo = dr["pcu_codigo"].ToString();
+                int cuenta = Convert.ToInt32(dr["pcu_cuenta"].ToString());
+                string descripcion = dr["pcu_descri"].ToString();
+                string superior = dr["pcu_superior"].ToString();
+                int hija = Convert.ToInt32(dr["pcu_hija"].ToString());
+                int tabulador = Convert.ToInt32(dr["pcu_tabulador"].ToString());
+                bool ajusta = false;
+                try
+                {
+                    if (Convert.ToInt32(dr["pcu_ajustainf"].ToString()) == 1)
+                    {
+                        ajusta = true;
+                    }
+                }
+                catch
+                {
+
+                }
+                dgvCuentas.Rows.Add(codigo,cuenta,descripcion,superior,hija,tabulador,ajusta);
+            }
         }
+
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if(tbDescipcion.Text != "" && tbDescipcion.Text != null)
+            if (tbDescipcion.Text != "" && tbDescipcion.Text != null)
             {
                 btnModificar.Enabled = false;
                 DataSet ds = new DataSet();
