@@ -104,8 +104,8 @@
             this.MenuAyuda = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.soporteInteractivoDeContableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.controlboxInicio = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.HoraFecha = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -322,6 +322,7 @@
             resources.ApplyResources(this.toolStripButton22, "toolStripButton22");
             this.toolStripButton22.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton22.Name = "toolStripButton22";
+            this.toolStripButton22.Click += new System.EventHandler(this.toolStripButton22_Click);
             // 
             // toolStripButton23
             // 
@@ -729,12 +730,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Tag = "1";
             // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Name = "label1";
-            // 
             // controlboxInicio
             // 
             resources.ApplyResources(this.controlboxInicio, "controlboxInicio");
@@ -794,6 +789,12 @@
             this.controlboxInicio.ShowDesignBorders = false;
             this.controlboxInicio.TabStop = false;
             this.controlboxInicio.CloseClicked += new System.EventHandler(this.controlboxInicio_CloseClicked);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Name = "label1";
             // 
             // HoraFecha
             // 

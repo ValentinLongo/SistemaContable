@@ -112,6 +112,11 @@ namespace SistemaContable
         {
             Negocio.FGenerales.ManejarFormularios(agenda, this, pbLogo, toolStripButton4.Tag.ToString());
         }
+        private void toolStripButton22_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process calc = new System.Diagnostics.Process { StartInfo = { FileName = @"calc.exe" } };
+            calc.Start();
+        }
         //
 
         //BOTONES INICIO (ABREN LOS MENUS)

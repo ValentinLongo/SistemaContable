@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace SistemaContable.Plan_de_Cuentas
     public partial class frmPlanDeCuentas : Form
     {
         public static string idCuenta;
+        public static bool MostrarControlBar = false;
         public frmPlanDeCuentas()
         {
             InitializeComponent();
@@ -23,6 +25,11 @@ namespace SistemaContable.Plan_de_Cuentas
             //Negocio.FFormatoSistema.SetearFormato(this);
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
+
+            if (MostrarControlBar)
+            {
+                frmConControlBar();
+            }
             CargarDGV();
         }
 
@@ -61,6 +68,23 @@ namespace SistemaContable.Plan_de_Cuentas
             }
         }
 
+        private void frmConControlBar()
+        {
+            ControlBar.Visible = true;
+            dgvCuentas.Size = new Size(973, 464);
+            dgvCuentas.Location = new Point(12, 92);
+            btnAgregar.Location = new Point(992, 92);
+            btnModificar.Location = new Point(992, 143);
+            btnEliminar.Location = new Point(992, 193);
+            btnImprimir.Location = new Point(992, 453);
+            btnBuscar.Location = new Point(827, 47);
+            ShapeBusqueda.Location = new Point(12, 38);
+            lblBusqueda.Location = new Point(21, 29);
+            txtDescri.Location = new Point(21, 57);
+            tbDescipcion.Location = new Point(212, 13);
+            panel2.Location = new Point(115, 72);
+            MostrarControlBar = false;
+        }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -119,5 +143,16 @@ namespace SistemaContable.Plan_de_Cuentas
             MessageBox.Show("Eliminado Correctamente");
             CargarDGV();
         }
+
+        private void panel7_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
     }
 }

@@ -1,4 +1,5 @@
-﻿using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
+﻿using SistemaContable.General;
+using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,12 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         private string Cuenta;
         public static DataGridView DGV1;
         public static DataGridView DGV2;
+
+        //Para utilizar el frm desde otro (sin seleccionar nada en dgv)
+        public static bool desdeotrofrm = false;
+        public static string asientofrm;
+        public static string cuentafrm;
+        public static string codigofrm;
 
         public frmAddModDetdeModelos(int aggmod,string cuenta,string descri,string debe,string haber,string concepto,string centrodecosto)
         {
@@ -44,6 +51,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 cbCentrodeCosto.Text = "NINGUNO"; //falta
             }
         }
+
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             string asiento;
@@ -78,10 +86,18 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 }
                 else if (agg_o_mod == 1)
                 {
-                    seleccionado = DGV1.CurrentCell.RowIndex;
-                    asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
+                    if (desdeotrofrm)
+                    {
+                        Negocio.Funciones.Contabilidad.FDetalledeModelos.ModificarMovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText, cuentafrm, codigofrm);
+                        desdeotrofrm = false;
+                    }
+                    else
+                    {
+                        seleccionado = DGV1.CurrentCell.RowIndex;
+                        asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
 
-                    Negocio.Funciones.Contabilidad.FDetalledeModelos.Modificar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText, Cuenta, frmDetalledeModelos.Codigo);
+                        Negocio.Funciones.Contabilidad.FDetalledeModelos.Modificar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText, Cuenta, frmDetalledeModelos.Codigo);
+                    }
                 }
             }
             else
@@ -89,8 +105,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 MessageBox.Show("Atención: Ingrese datos en debe o en haber!","Mensaje");
                 this.Close();
             }
-
         }
+
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             frmBuscarCuenta buscarcuenta = new frmBuscarCuenta("Cuenta");
@@ -102,6 +118,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             }
             frmBuscarCuenta.IdCuenta = 0;
         }
+
         private void txtHaber_Click(object sender, EventArgs e)
         {
             if (txtHaber.Text == "0,0000")

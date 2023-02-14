@@ -18,10 +18,12 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 {
     public partial class frmAggModVisAsientoContable : Form
     {
+        private static int add_mod_vis;
         //addmodvis = proceso que realiza el frm
         public frmAggModVisAsientoContable(int addmodvis, ComboBox cbSeleccion, string asiento, string fecha, string comentario)
         {
             InitializeComponent();
+            add_mod_vis = addmodvis;
             Setear(addmodvis,cbSeleccion.SelectedValue.ToString(),cbSeleccion.Text, asiento, fecha, comentario);
         }
 
@@ -110,6 +112,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     haber = dr[2].ToString();
                 }
 
+                string codigo = dr[1].ToString(); //no se muestra en el dgv
+
                 string concepto = dr[3].ToString();
                 string cc = dr[4].ToString();
 
@@ -120,26 +124,15 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     descri = dr2[0].ToString();
                 }
 
-                dgvAddModVisASIENTO.Rows.Add(cuenta,descri,debe,haber,concepto,cc);
+                dgvAddModVisASIENTO.Rows.Add(cuenta,descri,debe,haber,concepto,cc,codigo);
             }
         }
 
-        private void panel7_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void btnPlandeCta_Click(object sender, EventArgs e)
         {
+            frmPlanDeCuentas.MostrarControlBar = true;
             frmPlanDeCuentas frm = new frmPlanDeCuentas();
             frm.Show();
-            //ponerle barra de control
         }
 
         private void dgvAddModVisASIENTO_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -154,15 +147,53 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 string haber = dgvAddModVisASIENTO.Rows[seleccionado].Cells[3].Value.ToString();
                 string concepto = dgvAddModVisASIENTO.Rows[seleccionado].Cells[4].Value.ToString();
                 string cc = dgvAddModVisASIENTO.Rows[seleccionado].Cells[5].Value.ToString();
+                string codigo = dgvAddModVisASIENTO.Rows[seleccionado].Cells[6].Value.ToString();
 
+                frmAddModDetdeModelos.desdeotrofrm = true;
+                frmAddModDetdeModelos.asientofrm = txtNroAsiento.Text;
+                frmAddModDetdeModelos.cuentafrm = cuenta;
+                frmAddModDetdeModelos.codigofrm = codigo;
                 frmAddModDetdeModelos frm = new frmAddModDetdeModelos(1, cuenta, descri, debe, haber, concepto, cc);
-                frm.Show();
+                frm.ShowDialog();
+                dgvAddModVisASIENTO.Rows.Clear();
+                CargarDGV(txtNroAsiento.Text);
+
+                //terminar
             }
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            // (hacer validaciones)
 
+            if (add_mod_vis == 1)
+            {
+                //terminar agregar
+            }
+            else if (add_mod_vis == 2)
+            {
+                string hora = DateTime.Now.ToLongTimeString();
+                string fecha = DateTime.Now.ToShortDateString();
+
+                DialogResult boton = MessageBox.Show("Desea Finalizar la Modificación?", "Mensaje", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                if (boton == DialogResult.OK) 
+                {
+                    AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET ast_usumodi = '{Negocio.FLogin.IdUsuario}', ast_fecmodi = '{fecha}', ast_horamodi = '{hora}', ast_tipo = {cbTipoAsiento.SelectedValue}, ast_comenta = '{txtComentario.Text}' WHERE ast_Asiento = '{txtNroAsiento.Text}'");
+                    MessageBox.Show("Modificado Correctamente!", "Mensaje");
+                    this.Close();
+                }
+            }
         }
+
+        private void panel7_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
     }
 }
