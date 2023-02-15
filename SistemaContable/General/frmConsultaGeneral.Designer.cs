@@ -34,7 +34,6 @@
             this.btnCerrar = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new RJCodeAdvance.RJControls.RJButton();
-            this.btnActualizar = new RJCodeAdvance.RJControls.RJButton();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.cbBusqueda = new System.Windows.Forms.ComboBox();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -165,27 +164,6 @@
             this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnActualizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnActualizar.BorderColor = System.Drawing.Color.White;
-            this.btnActualizar.BorderRadius = 0;
-            this.btnActualizar.BorderSize = 0;
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnActualizar.Location = new System.Drawing.Point(595, 128);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(120, 26);
-            this.btnActualizar.TabIndex = 20;
-            this.btnActualizar.Tag = "";
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
             // bunifuShapes1
             // 
             this.bunifuShapes1.Angle = 0F;
@@ -212,7 +190,7 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Código",
             "Descripción"});
-            this.cbBusqueda.Location = new System.Drawing.Point(12, 44);
+            this.cbBusqueda.Location = new System.Drawing.Point(25, 42);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(116, 24);
             this.cbBusqueda.TabIndex = 34;
@@ -224,9 +202,9 @@
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBusqueda.Location = new System.Drawing.Point(134, 46);
+            this.txtBusqueda.Location = new System.Drawing.Point(159, 46);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(163, 19);
+            this.txtBusqueda.Size = new System.Drawing.Size(325, 19);
             this.txtBusqueda.TabIndex = 35;
             this.txtBusqueda.Tag = "";
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
@@ -234,16 +212,16 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(134, 64);
+            this.panel3.Location = new System.Drawing.Point(159, 64);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(163, 1);
+            this.panel3.Size = new System.Drawing.Size(325, 1);
             this.panel3.TabIndex = 36;
             // 
             // lblInicio
             // 
             this.lblInicio.AutoSize = true;
             this.lblInicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblInicio.Location = new System.Drawing.Point(326, 51);
+            this.lblInicio.Location = new System.Drawing.Point(525, 52);
             this.lblInicio.Name = "lblInicio";
             this.lblInicio.Size = new System.Drawing.Size(32, 13);
             this.lblInicio.TabIndex = 64;
@@ -268,7 +246,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(303, 47);
+            this.CheckInicio.Location = new System.Drawing.Point(502, 48);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -328,7 +306,6 @@
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.cbBusqueda);
             this.Controls.Add(this.bunifuShapes1);
-            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvConsulta);
             this.Controls.Add(this.panel1);
@@ -352,7 +329,6 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox btnCerrar;
         private System.Windows.Forms.DataGridView dgvConsulta;
         private RJCodeAdvance.RJControls.RJButton btnSeleccionar;
-        private RJCodeAdvance.RJControls.RJButton btnActualizar;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.ComboBox cbBusqueda;
         private System.Windows.Forms.TextBox txtBusqueda;

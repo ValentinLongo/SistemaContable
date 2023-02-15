@@ -20,7 +20,6 @@ namespace SistemaContable.Agenda
             cargarDatos("");
         }
 
-
         private void cargarDatos(string Nombre)
         {
             btnModificar.Enabled = false;

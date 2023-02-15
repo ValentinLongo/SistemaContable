@@ -21,6 +21,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
+
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             string fechadesde = dtdesde.Value.ToString();
@@ -36,6 +37,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
                 this.Close();
             }
         }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

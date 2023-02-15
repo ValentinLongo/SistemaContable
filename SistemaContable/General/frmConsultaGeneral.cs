@@ -70,6 +70,7 @@ namespace SistemaContable.General
 
         string frm1 = "frmPermisosUsuarios";
         string frm2 = "frmPermisosPerfil";
+        string frm3 = "frmAggModVisAsientoContable";
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             if (formulario == frm1)
@@ -94,6 +95,18 @@ namespace SistemaContable.General
                 else if (cbBusqueda.SelectedIndex == 1)
                 {
                     columna = "per_descri";
+                }
+            }
+            else if (formulario == frm3)
+            {
+                frm3 = "";
+                if (cbBusqueda.SelectedIndex == 0)
+                {
+                    columna = "mod_codigo";
+                }
+                else if (cbBusqueda.SelectedIndex == 1)
+                {
+                    columna = "mod_descri";
                 }
             }
             if (txtBusqueda.Text != "")
@@ -128,12 +141,6 @@ namespace SistemaContable.General
             codigoCG = dgvConsulta.Rows[dgvConsulta.CurrentRow.Index].Cells[0].Value.ToString();
             descripcionCG = dgvConsulta.Rows[dgvConsulta.CurrentRow.Index].Cells[1].Value.ToString();
             Close();
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            ArmarDGV(ast, tab, "", ord, "");
-            txtBusqueda.Clear();
         }
 
         private void btnCerrar_CloseClicked(object sender, EventArgs e)

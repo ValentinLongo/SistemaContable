@@ -37,8 +37,6 @@ namespace SistemaContable.Plan_de_Cuentas
             tbCuenta.Text = Convert.ToString(Negocio.FPlanDeCuentas.UltimoNumeroCuenta());
         }
 
-
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             int validado = Negocio.FValidacionesEventos.ValidacionVacio(this);

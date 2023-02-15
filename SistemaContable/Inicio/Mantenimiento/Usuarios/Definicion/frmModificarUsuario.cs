@@ -40,7 +40,7 @@ namespace SistemaContable.Usuarios
             cbSeccion.SelectedValue = oUsuario.usu_seccion;
             if(oUsuario.usu_vendedor == 0)
             {
-                CheckVendedor.Checked = true;
+                Check.Checked = true;
             }
             else
             {
@@ -79,9 +79,9 @@ namespace SistemaContable.Usuarios
             }
         }
 
-        private void CambioCheck(object sender, EventArgs e)
+        private void Check_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
-            if (CheckVendedor.Checked == true)
+            if (Check.Checked == true)
             {
                 tbVendedor.Enabled = false;
                 btnBuscar.Enabled = false;
@@ -89,7 +89,7 @@ namespace SistemaContable.Usuarios
                 SistemaContable.Usuarios.frmSeleccionVendedores.CodigoVendedor = 0;
                 tbVendedor.Text = "";
             }
-            else if (CheckVendedor.Checked == false)
+            else if (Check.Checked == false)
             {
                 tbVendedor.Enabled = true;
                 btnBuscar.Enabled = true;

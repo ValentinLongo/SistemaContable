@@ -1,4 +1,5 @@
 ﻿using Datos;
+using SistemaContable.General;
 using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_Modelos;
 using SistemaContable.Plan_de_Cuentas;
 using System;
@@ -44,8 +45,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 lblControlBar.Text = "Agregar Asiento Contable";
                 txtNroAsiento.Text = "ALTA EN CONCEPTO";
                 txtNroAsiento.Enabled = false;
-                
-                //consulta (terminar)
             }
             else if(addmodvis == 2) // modificar
             {
@@ -62,8 +61,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 btnGenerar.Enabled = false;
 
                 CargarDGV(asiento);
-
-                AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET");
             }
             else if(addmodvis == 3) // visualizar
             {
@@ -112,7 +109,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     haber = dr[2].ToString();
                 }
 
-                string codigo = dr[1].ToString(); //no se muestra en el dgv
+                string codigo = dr[1].ToString(); //visible = false
 
                 string concepto = dr[3].ToString();
                 string cc = dr[4].ToString();
@@ -158,13 +155,13 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 dgvAddModVisASIENTO.Rows.Clear();
                 CargarDGV(txtNroAsiento.Text);
 
-                //terminar
+                //terminar modificar (preguntar jp)
             }
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            // (hacer validaciones)
+            //hacer validaciones (preguntar jp)
 
             if (add_mod_vis == 1)
             {
@@ -183,6 +180,17 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     this.Close();
                 }
             }
+        }
+
+        private void btnModelo_Click(object sender, EventArgs e)
+        {
+            frmConsultaGeneral frm = new frmConsultaGeneral();
+            frm.ArmarDGV("mod_codigo, mod_descri", "ModeloEncab","","ORDER BY mod_codigo", "frmAggModVisAsientoContable");
+            frm.ShowDialog();
+            string codigo = frmConsultaGeneral.codigoCG;
+            string descri = frmConsultaGeneral.descripcionCG;
+
+            //terminar (preguntar jp)
         }
 
         private void panel7_MouseDown(object sender, MouseEventArgs e)

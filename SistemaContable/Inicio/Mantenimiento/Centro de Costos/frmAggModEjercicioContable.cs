@@ -61,6 +61,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Centro_de_Costos
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

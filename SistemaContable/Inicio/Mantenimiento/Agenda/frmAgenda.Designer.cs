@@ -47,6 +47,7 @@
             // 
             this.dgvAgenda.AllowUserToAddRows = false;
             this.dgvAgenda.AllowUserToDeleteRows = false;
+            this.dgvAgenda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvAgenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAgenda.Location = new System.Drawing.Point(15, 72);
@@ -179,11 +180,11 @@
             this.ShapeBusqueda.BorderThickness = 1;
             this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.FillShape = true;
-            this.ShapeBusqueda.Location = new System.Drawing.Point(12, 18);
+            this.ShapeBusqueda.Location = new System.Drawing.Point(15, 18);
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
-            this.ShapeBusqueda.Size = new System.Drawing.Size(973, 48);
+            this.ShapeBusqueda.Size = new System.Drawing.Size(970, 48);
             this.ShapeBusqueda.TabIndex = 58;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 

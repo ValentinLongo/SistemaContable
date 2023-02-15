@@ -42,7 +42,6 @@ namespace SistemaContable
         public static bool permiso;
         public static string frm;
 
-        //
         public frmInicio()
         {
             InitializeComponent();
@@ -51,11 +50,12 @@ namespace SistemaContable
             Negocio.FFormatoSistema.FondoMDI(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
-        private void controlboxInicio_CloseClicked(object sender, EventArgs e)
+
+        //CONTROLBAR
+        private void controlbarCerrar_Click(object sender, EventArgs e)
         {
             List<Form> formlist = new List<Form>();
             int cant = Application.OpenForms.Count;
-
             DialogResult boton = MessageBox.Show("¿Realmente desea salir?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
             if (boton == DialogResult.OK)
             {
@@ -75,12 +75,20 @@ namespace SistemaContable
                     Application.Exit();
                 }
             }
-            else
-            {
-                frmInicio frmInicio = new frmInicio();
-                frmInicio.Show();
-            }
         }
+
+        private void controlbarCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            controlbarCerrar.BackColor = Color.Red;
+        }
+
+        private void controlbarCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            controlbarCerrar.BackColor = Color.Transparent;
+        }
+        //
+
+        //
         private void frmInicio_Load(object sender, EventArgs e)
         {
             MenuArchivos.IsMainMenu = false;
@@ -96,27 +104,39 @@ namespace SistemaContable
         frmPlanDeCuentas planDeCuentas = new frmPlanDeCuentas();
         frmConceptosContables conceptoscontables = new frmConceptosContables();
         frmAgenda agenda = new frmAgenda();
+        frmAsientosContables asientocontable = new frmAsientosContables();
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Negocio.FGenerales.ManejarFormularios(usuarios, this, pbLogo, toolStripButton1.Tag.ToString());
         }
+
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Negocio.FGenerales.ManejarFormularios(planDeCuentas, this, pbLogo, toolStripButton2.Tag.ToString());
         }
+
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             Negocio.FGenerales.ManejarFormularios(conceptoscontables, this, pbLogo, toolStripButton3.Tag.ToString());
         }
+
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             Negocio.FGenerales.ManejarFormularios(agenda, this, pbLogo, toolStripButton4.Tag.ToString());
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            Negocio.FGenerales.ManejarFormularios(asientocontable, this, pbLogo, toolStripButton5.Tag.ToString());
+        }
+
         private void toolStripButton22_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process calc = new System.Diagnostics.Process { StartInfo = { FileName = @"calc.exe" } };
             calc.Start();
         }
+
         //
 
         //BOTONES INICIO (ABREN LOS MENUS)
@@ -127,6 +147,7 @@ namespace SistemaContable
             btnArchivos2.Visible = true;
             btnArchivos2.BringToFront();
         }
+
         private void btnVer_Click(object sender, EventArgs e)
         {
             MenuVer.Show(btnArchivos, btnArchivos.Width, 0);
@@ -134,6 +155,7 @@ namespace SistemaContable
             btnVer2.Visible = true;
             btnVer2.BringToFront();
         }
+
         private void btnContabilidad_Click(object sender, EventArgs e)
         {
             MenuContabilidad.Show(btnArchivos, btnArchivos.Width, 0);
@@ -142,6 +164,7 @@ namespace SistemaContable
             btnContabilidad2.BringToFront();
 
         }
+
         private void btnMantenimiento_Click(object sender, EventArgs e)
         {
             MenuMantenimiento.Show(btnArchivos, btnArchivos.Width, 0);
@@ -149,6 +172,7 @@ namespace SistemaContable
             btnMantenimiento2.Visible = true;
             btnMantenimiento2.BringToFront();
         }
+
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             MenuAyuda.Show(btnAyuda, btnAyuda.Width, 0);
@@ -156,6 +180,7 @@ namespace SistemaContable
             btnAyuda2.Visible = true;
             btnAyuda2.BringToFront();
         }
+
         //
 
         //
@@ -175,6 +200,7 @@ namespace SistemaContable
 
             }
         }
+
         private void btnAbrir_Click(object sender, EventArgs e)
         {
             if (PanelMenu.Width != 212)
@@ -190,41 +216,48 @@ namespace SistemaContable
                 //pbLogo.Location = new Point(400, 300);
             }
         }
+
         private void HoraFecha_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToLongTimeString();
             lblFecha.Text = DateTime.Now.ToShortDateString();
         }
+
         private void MenuArchivos_Closed(object sender, ToolStripDropDownClosedEventArgs e)
         {
             btnArchivos.Visible = true;
             btnArchivos.BringToFront();
             btnArchivos2.Visible = false;
         }
+
         private void MenuVer_Closed(object sender, ToolStripDropDownClosedEventArgs e)
         {
             btnVer.Visible = true;
             btnVer.BringToFront();
             btnVer2.Visible = false;
         }
+
         private void MenuContabilidad_Closed(object sender, ToolStripDropDownClosedEventArgs e)
         {
             btnContabilidad.Visible = true;
             btnContabilidad.BringToFront();
             btnContabilidad2.Visible = false;
         }
+
         private void MenuMantenimiento_Closed(object sender, ToolStripDropDownClosedEventArgs e)
         {
             btnMantenimiento.Visible = true;
             btnMantenimiento.BringToFront();
             btnMantenimiento2.Visible = false;
         }
+
         private void MenuAyuda_Closed(object sender, ToolStripDropDownClosedEventArgs e)
         {
             btnAyuda.Visible = true;
             btnAyuda.BringToFront();
             btnAyuda2.Visible = false;
         }
+
         //
 
         //
@@ -394,6 +427,7 @@ namespace SistemaContable
                 }
             }
         }
+
         //
 
         //PERMISOS PARA CADA BOTON
@@ -431,8 +465,7 @@ namespace SistemaContable
         //30
         private void movimientoDeAsientosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAsientosContables asientoscontables = new frmAsientosContables();
-            Negocio.FGenerales.Mostrarfrm(asientoscontables, movimientoDeAsientosToolStripMenuItem.Tag.ToString());
+            Negocio.FGenerales.ManejarFormularios(asientocontable, this, pbLogo, movimientoDeAsientosToolStripMenuItem.Tag.ToString());
         }
         private void actualizaciónToolStripMenuItem1_Click(object sender, EventArgs e)
         {

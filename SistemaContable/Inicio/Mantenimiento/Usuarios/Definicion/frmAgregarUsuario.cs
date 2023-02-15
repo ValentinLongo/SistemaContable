@@ -56,9 +56,9 @@ namespace SistemaContable.Usuarios
             }
         }
 
-        private void CambioCheck(object sender, EventArgs e)
+        private void CambioCheck_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
-            if (CheckVendedor.Checked == true)
+            if (CambioCheck.Checked == true)
             {
                 tbVendedor.Enabled = false;
                 btnBuscar.Enabled = false;
@@ -66,7 +66,7 @@ namespace SistemaContable.Usuarios
                 SistemaContable.Usuarios.frmSeleccionVendedores.CodigoVendedor = 0;
                 tbVendedor.Text = "";
             }
-            else if (CheckVendedor.Checked == false)
+            else if (CambioCheck.Checked == false)
             {
                 tbVendedor.Enabled = true;
                 btnBuscar.Enabled = true;

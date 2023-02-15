@@ -39,6 +39,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddModVisASIENTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -211,6 +211,13 @@
             this.Column6.HeaderText = "CentrodeCostos";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Codigo";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Visible = false;
             // 
             // label3
             // 
@@ -475,6 +482,7 @@
             this.btnModelo.Text = "Modelo";
             this.btnModelo.TextColor = System.Drawing.Color.White;
             this.btnModelo.UseVisualStyleBackColor = false;
+            this.btnModelo.Click += new System.EventHandler(this.btnModelo_Click);
             // 
             // btnImprimir
             // 
@@ -517,13 +525,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 130;
             this.pictureBox1.TabStop = false;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Codigo";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Visible = false;
             // 
             // frmAggModVisAsientoContable
             // 

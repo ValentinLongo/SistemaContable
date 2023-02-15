@@ -24,6 +24,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
         public static int codigoCoeficiente;
         public static string periodoModificar;
         public static double coeficienteModificar;
+
         public frmCoeficienteDeAjuste()
         {
             InitializeComponent();
@@ -49,9 +50,9 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             }
         }
 
-        private void cambioEjercicioAbierto(object sender, EventArgs e)
+        private void checkEjerciciosAbiertos_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
-            if (checkEjercicio.Checked)
+            if (checkEjerciciosAbiertos.Checked)
             {
                 check = 0;
             }
@@ -93,7 +94,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             dgvCoeficientes.Rows.Clear();
             dgvEjercicios.Rows.Clear();
             List<MCoeficienteDeAjuste> mCoeficienteDeAjuste = new List<MCoeficienteDeAjuste>();
-            mCoeficienteDeAjuste = data.ejercicioParticular(check,tbDescripcion.Text);
+            mCoeficienteDeAjuste = data.ejercicioParticular(check, tbDescripcion.Text);
             foreach (var datos in mCoeficienteDeAjuste)
             {
                 bool cerrado = false;
@@ -113,7 +114,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            
             frmAgregarCoeficienteAjuste agregarCoeficienteAjuste = new frmAgregarCoeficienteAjuste("Modificar");
             agregarCoeficienteAjuste.ShowDialog();
         }

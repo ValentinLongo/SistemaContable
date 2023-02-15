@@ -28,7 +28,7 @@ namespace SistemaContable.Usuarios
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if(tbNuevaContra.Text == tbConfNuevaContra.Text)
+            if (tbNuevaContra.Text == tbConfNuevaContra.Text)
             {
                 Negocio.FUsuarios.ModificarContra(tbNuevaContra.Text);
                 MessageBox.Show("Contraseña modificada correctamente");

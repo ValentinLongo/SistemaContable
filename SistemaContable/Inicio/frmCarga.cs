@@ -17,7 +17,6 @@ namespace SistemaContable
             InitializeComponent();
             //Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
-            CircleProgress.Value = 0;
         }
 
         private void tAparece_Tick(object sender, EventArgs e)
@@ -48,6 +47,7 @@ namespace SistemaContable
 
         private void frmCarga_Load(object sender, EventArgs e)
         {
+            CircleProgress.Value = 0;
             this.Opacity = 0.0;
             tAparece.Start();
         }

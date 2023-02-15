@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -65,15 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 167);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(366, 1);
-            this.panel2.TabIndex = 10;
             // 
             // panel5
             // 
@@ -103,13 +94,13 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(3, 5);
+            this.label4.Location = new System.Drawing.Point(3, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(148, 17);
             this.label4.TabIndex = 30;
-            this.label4.Text = "LOGIN";
+            this.label4.Text = "Sistema Contable - LOGIN";
             // 
             // bunifuFormControlBox1
             // 
@@ -140,7 +131,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(342, 0);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(342, 1);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = false;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -207,13 +198,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Dotum", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(141, 17);
+            this.label3.Location = new System.Drawing.Point(93, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 27);
+            this.label3.Size = new System.Drawing.Size(191, 24);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Login";
+            this.label3.Text = "Inicio de Sesión";
             // 
             // txtConstrasenia
             // 
@@ -325,22 +316,23 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel7.Location = new System.Drawing.Point(221, 33);
+            this.panel7.Location = new System.Drawing.Point(283, 33);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(133, 1);
+            this.panel7.Size = new System.Drawing.Size(70, 1);
             this.panel7.TabIndex = 35;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel8.Location = new System.Drawing.Point(12, 33);
+            this.panel8.Location = new System.Drawing.Point(12, 32);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(133, 1);
+            this.panel8.Size = new System.Drawing.Size(80, 1);
             this.panel8.TabIndex = 36;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel6.Controls.Add(this.panel2);
             this.panel6.Controls.Add(this.panel12);
             this.panel6.Controls.Add(this.panel11);
             this.panel6.Controls.Add(this.panel10);
@@ -362,11 +354,20 @@
             this.panel6.Controls.Add(this.ShapeContra);
             this.panel6.Controls.Add(this.ShapeUsuario);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 168);
+            this.panel6.Location = new System.Drawing.Point(0, 167);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(366, 313);
+            this.panel6.Size = new System.Drawing.Size(366, 314);
             this.panel6.TabIndex = 0;
             this.panel6.Tag = "2";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(366, 1);
+            this.panel2.TabIndex = 43;
             // 
             // panel12
             // 
@@ -437,7 +438,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(366, 481);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -461,7 +461,6 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
@@ -487,6 +486,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

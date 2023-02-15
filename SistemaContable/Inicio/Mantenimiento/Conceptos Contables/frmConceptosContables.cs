@@ -30,10 +30,24 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             dgvConceptosContables.DataSource = ds.Tables[0];
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            frmAgregarConceptoContable frm = new frmAgregarConceptoContable("Modificar");
+            frm.ShowDialog();
+            CargarDGV();
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAgregarConceptoContable frm = new frmAgregarConceptoContable("Agregar");
             frm.ShowDialog();
+            CargarDGV();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            data.eliminarConceptoCont(Codigo);
+            MessageBox.Show("Eliminado correctamente");
             CargarDGV();
         }
 
@@ -44,25 +58,11 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             Codigo = (int)dgvConceptosContables.Rows[e.RowIndex].Cells[0].Value;
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            frmAgregarConceptoContable frm = new frmAgregarConceptoContable("Modificar");
-            frm.ShowDialog();
-            CargarDGV();
-        }
-
         private void tbDescripcion_TextChanged(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
             ds = data.busquedaConceptosContables(tbDescripcion.Text);
             dgvConceptosContables.DataSource = ds.Tables[0];
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            data.eliminarConceptoCont(Codigo);
-            MessageBox.Show("Eliminado correctamente");
-            CargarDGV();
         }
     }
 }

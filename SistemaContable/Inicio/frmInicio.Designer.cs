@@ -104,13 +104,10 @@
             this.MenuAyuda = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.soporteInteractivoDeContableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.controlboxInicio = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.controlbarCerrar = new System.Windows.Forms.Button();
+            this.controlboxMinimizar = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.HoraFecha = new System.Windows.Forms.Timer(this.components);
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.btnAyuda2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnMantenimiento2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnContabilidad2 = new RJCodeAdvance.RJControls.RJButton();
@@ -126,8 +123,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.pbMaser = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnAbrir = new RJCodeAdvance.RJControls.RJButton();
-            this.btnCerrar = new RJCodeAdvance.RJControls.RJButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAyuda = new RJCodeAdvance.RJControls.RJButton();
             this.btnMantenimiento = new RJCodeAdvance.RJControls.RJButton();
@@ -152,6 +147,8 @@
             // 
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
@@ -178,6 +175,7 @@
             this.toolStripButton22,
             this.toolStripButton23,
             this.toolStripSeparator5});
+            this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStrip1.Name = "toolStrip1";
             // 
             // toolStripButton1
@@ -223,6 +221,8 @@
             resources.ApplyResources(this.toolStripButton5, "toolStripButton5");
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Tag = "3002";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripButton6
             // 
@@ -725,70 +725,81 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel5.Controls.Add(this.controlboxInicio);
+            this.panel5.Controls.Add(this.controlbarCerrar);
+            this.panel5.Controls.Add(this.controlboxMinimizar);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             this.panel5.Tag = "1";
             // 
-            // controlboxInicio
+            // controlbarCerrar
             // 
-            resources.ApplyResources(this.controlboxInicio, "controlboxInicio");
-            this.controlboxInicio.BunifuFormDrag = null;
-            this.controlboxInicio.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlboxInicio.CloseBoxOptions.BorderRadius = 0;
-            this.controlboxInicio.CloseBoxOptions.Enabled = true;
-            this.controlboxInicio.CloseBoxOptions.EnableDefaultAction = true;
-            this.controlboxInicio.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.controlboxInicio.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxInicio.CloseBoxOptions.Icon")));
-            this.controlboxInicio.CloseBoxOptions.IconAlt = null;
-            this.controlboxInicio.CloseBoxOptions.IconColor = System.Drawing.Color.White;
-            this.controlboxInicio.CloseBoxOptions.IconHoverColor = System.Drawing.Color.White;
-            this.controlboxInicio.CloseBoxOptions.IconPressedColor = System.Drawing.Color.White;
-            this.controlboxInicio.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
-            this.controlboxInicio.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.controlboxInicio.HelpBox = false;
-            this.controlboxInicio.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlboxInicio.HelpBoxOptions.BorderRadius = 0;
-            this.controlboxInicio.HelpBoxOptions.Enabled = true;
-            this.controlboxInicio.HelpBoxOptions.EnableDefaultAction = true;
-            this.controlboxInicio.HelpBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.controlboxInicio.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxInicio.HelpBoxOptions.Icon")));
-            this.controlboxInicio.HelpBoxOptions.IconAlt = null;
-            this.controlboxInicio.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
-            this.controlboxInicio.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.controlboxInicio.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.controlboxInicio.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
-            this.controlboxInicio.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.controlboxInicio.MaximizeBox = false;
-            this.controlboxInicio.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlboxInicio.MaximizeBoxOptions.BorderRadius = 0;
-            this.controlboxInicio.MaximizeBoxOptions.Enabled = true;
-            this.controlboxInicio.MaximizeBoxOptions.EnableDefaultAction = true;
-            this.controlboxInicio.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.controlboxInicio.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxInicio.MaximizeBoxOptions.Icon")));
-            this.controlboxInicio.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("controlboxInicio.MaximizeBoxOptions.IconAlt")));
-            this.controlboxInicio.MaximizeBoxOptions.IconColor = System.Drawing.Color.White;
-            this.controlboxInicio.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.controlboxInicio.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.controlboxInicio.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
-            this.controlboxInicio.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.controlboxInicio.MinimizeBox = true;
-            this.controlboxInicio.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlboxInicio.MinimizeBoxOptions.BorderRadius = 0;
-            this.controlboxInicio.MinimizeBoxOptions.Enabled = true;
-            this.controlboxInicio.MinimizeBoxOptions.EnableDefaultAction = true;
-            this.controlboxInicio.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.controlboxInicio.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxInicio.MinimizeBoxOptions.Icon")));
-            this.controlboxInicio.MinimizeBoxOptions.IconAlt = null;
-            this.controlboxInicio.MinimizeBoxOptions.IconColor = System.Drawing.Color.White;
-            this.controlboxInicio.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.controlboxInicio.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.controlboxInicio.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
-            this.controlboxInicio.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.controlboxInicio.Name = "controlboxInicio";
-            this.controlboxInicio.ShowDesignBorders = false;
-            this.controlboxInicio.TabStop = false;
-            this.controlboxInicio.CloseClicked += new System.EventHandler(this.controlboxInicio_CloseClicked);
+            this.controlbarCerrar.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.controlbarCerrar, "controlbarCerrar");
+            this.controlbarCerrar.ForeColor = System.Drawing.Color.Transparent;
+            this.controlbarCerrar.Name = "controlbarCerrar";
+            this.controlbarCerrar.UseVisualStyleBackColor = true;
+            this.controlbarCerrar.Click += new System.EventHandler(this.controlbarCerrar_Click);
+            this.controlbarCerrar.MouseEnter += new System.EventHandler(this.controlbarCerrar_MouseEnter);
+            this.controlbarCerrar.MouseLeave += new System.EventHandler(this.controlbarCerrar_MouseLeave);
+            // 
+            // controlboxMinimizar
+            // 
+            resources.ApplyResources(this.controlboxMinimizar, "controlboxMinimizar");
+            this.controlboxMinimizar.BunifuFormDrag = null;
+            this.controlboxMinimizar.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlboxMinimizar.CloseBoxOptions.BorderRadius = 0;
+            this.controlboxMinimizar.CloseBoxOptions.Enabled = true;
+            this.controlboxMinimizar.CloseBoxOptions.EnableDefaultAction = true;
+            this.controlboxMinimizar.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.controlboxMinimizar.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxMinimizar.CloseBoxOptions.Icon")));
+            this.controlboxMinimizar.CloseBoxOptions.IconAlt = null;
+            this.controlboxMinimizar.CloseBoxOptions.IconColor = System.Drawing.Color.White;
+            this.controlboxMinimizar.CloseBoxOptions.IconHoverColor = System.Drawing.Color.White;
+            this.controlboxMinimizar.CloseBoxOptions.IconPressedColor = System.Drawing.Color.White;
+            this.controlboxMinimizar.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
+            this.controlboxMinimizar.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.controlboxMinimizar.HelpBox = false;
+            this.controlboxMinimizar.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlboxMinimizar.HelpBoxOptions.BorderRadius = 0;
+            this.controlboxMinimizar.HelpBoxOptions.Enabled = true;
+            this.controlboxMinimizar.HelpBoxOptions.EnableDefaultAction = true;
+            this.controlboxMinimizar.HelpBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.controlboxMinimizar.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxMinimizar.HelpBoxOptions.Icon")));
+            this.controlboxMinimizar.HelpBoxOptions.IconAlt = null;
+            this.controlboxMinimizar.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
+            this.controlboxMinimizar.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.controlboxMinimizar.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.controlboxMinimizar.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
+            this.controlboxMinimizar.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.controlboxMinimizar.MaximizeBox = false;
+            this.controlboxMinimizar.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlboxMinimizar.MaximizeBoxOptions.BorderRadius = 0;
+            this.controlboxMinimizar.MaximizeBoxOptions.Enabled = true;
+            this.controlboxMinimizar.MaximizeBoxOptions.EnableDefaultAction = true;
+            this.controlboxMinimizar.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.controlboxMinimizar.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxMinimizar.MaximizeBoxOptions.Icon")));
+            this.controlboxMinimizar.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("controlboxMinimizar.MaximizeBoxOptions.IconAlt")));
+            this.controlboxMinimizar.MaximizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.controlboxMinimizar.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.controlboxMinimizar.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.controlboxMinimizar.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
+            this.controlboxMinimizar.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.controlboxMinimizar.MinimizeBox = true;
+            this.controlboxMinimizar.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlboxMinimizar.MinimizeBoxOptions.BorderRadius = 0;
+            this.controlboxMinimizar.MinimizeBoxOptions.Enabled = true;
+            this.controlboxMinimizar.MinimizeBoxOptions.EnableDefaultAction = true;
+            this.controlboxMinimizar.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.controlboxMinimizar.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxMinimizar.MinimizeBoxOptions.Icon")));
+            this.controlboxMinimizar.MinimizeBoxOptions.IconAlt = null;
+            this.controlboxMinimizar.MinimizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.controlboxMinimizar.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.controlboxMinimizar.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.controlboxMinimizar.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
+            this.controlboxMinimizar.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.controlboxMinimizar.Name = "controlboxMinimizar";
+            this.controlboxMinimizar.ShowDesignBorders = false;
+            this.controlboxMinimizar.TabStop = false;
             // 
             // label1
             // 
@@ -800,30 +811,6 @@
             // 
             this.HoraFecha.Enabled = true;
             this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel7, "panel7");
-            this.panel7.Name = "panel7";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel6, "panel6");
-            this.panel6.Name = "panel6";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel9, "panel9");
-            this.panel9.Name = "panel9";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel10, "panel10");
-            this.panel10.Name = "panel10";
             // 
             // btnAyuda2
             // 
@@ -914,7 +901,7 @@
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.PanelMenu, "PanelMenu");
-            this.PanelMenu.BorderRadius = 1;
+            this.PanelMenu.BorderRadius = 0;
             this.PanelMenu.Controls.Add(this.label2);
             this.PanelMenu.Controls.Add(this.bunifuShapes1);
             this.PanelMenu.Controls.Add(this.panel4);
@@ -924,8 +911,6 @@
             this.PanelMenu.Controls.Add(this.panel8);
             this.PanelMenu.Controls.Add(this.pbMaser);
             this.PanelMenu.Controls.Add(this.panel3);
-            this.PanelMenu.Controls.Add(this.btnAbrir);
-            this.PanelMenu.Controls.Add(this.btnCerrar);
             this.PanelMenu.Controls.Add(this.panel1);
             this.PanelMenu.Controls.Add(this.btnAyuda);
             this.PanelMenu.Controls.Add(this.btnMantenimiento);
@@ -950,7 +935,7 @@
             this.bunifuShapes1.Angle = 0F;
             this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.bunifuShapes1.BorderThickness = 3;
+            this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
             resources.ApplyResources(this.bunifuShapes1, "bunifuShapes1");
@@ -1002,42 +987,6 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            // 
-            // btnAbrir
-            // 
-            this.btnAbrir.BackColor = System.Drawing.Color.Transparent;
-            this.btnAbrir.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnAbrir.BorderColor = System.Drawing.Color.White;
-            this.btnAbrir.BorderRadius = 3;
-            this.btnAbrir.BorderSize = 1;
-            this.btnAbrir.FlatAppearance.BorderSize = 0;
-            this.btnAbrir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
-            resources.ApplyResources(this.btnAbrir, "btnAbrir");
-            this.btnAbrir.ForeColor = System.Drawing.Color.White;
-            this.btnAbrir.Image = global::SistemaContable.Properties.Resources.mas;
-            this.btnAbrir.Name = "btnAbrir";
-            this.btnAbrir.TabStop = false;
-            this.btnAbrir.TextColor = System.Drawing.Color.White;
-            this.btnAbrir.UseVisualStyleBackColor = false;
-            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BorderColor = System.Drawing.Color.White;
-            this.btnCerrar.BorderRadius = 3;
-            this.btnCerrar.BorderSize = 1;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
-            resources.ApplyResources(this.btnCerrar, "btnCerrar");
-            this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Image = global::SistemaContable.Properties.Resources.menos;
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.TextColor = System.Drawing.Color.White;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // panel1
             // 
@@ -1152,11 +1101,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.Controls.Add(this.panel10);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel7);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.PanelMenu);
@@ -1169,7 +1114,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "frmInicio";
-            this.Opacity = 0.99D;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -1272,8 +1216,6 @@
         private RJCodeAdvance.RJControls.RJButton btnContabilidad;
         private RJCodeAdvance.RJControls.RJButton btnVer;
         private System.Windows.Forms.Panel panel8;
-        private RJCodeAdvance.RJControls.RJButton btnAbrir;
-        private RJCodeAdvance.RJControls.RJButton btnCerrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
@@ -1281,20 +1223,17 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Timer HoraFecha;
         private System.Windows.Forms.Panel panel5;
-        private Bunifu.UI.WinForms.BunifuFormControlBox controlboxInicio;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label1;
         private RJCodeAdvance.RJControls.RJButton btnArchivos2;
         private RJCodeAdvance.RJControls.RJButton btnVer2;
         private RJCodeAdvance.RJControls.RJButton btnContabilidad2;
         private RJCodeAdvance.RJControls.RJButton btnMantenimiento2;
         private RJCodeAdvance.RJControls.RJButton btnAyuda2;
+        private Bunifu.UI.WinForms.BunifuFormControlBox controlboxMinimizar;
+        private System.Windows.Forms.Button controlbarCerrar;
     }
 }

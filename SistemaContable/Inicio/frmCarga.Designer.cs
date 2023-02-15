@@ -382,10 +382,9 @@
             this.CircleProgress.SuperScriptMargin = new System.Windows.Forms.Padding(5, 50, 0, 0);
             this.CircleProgress.SuperScriptText = "%";
             this.CircleProgress.TabIndex = 16;
-            this.CircleProgress.Text = "30";
+            this.CircleProgress.Text = "0";
             this.CircleProgress.TextMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.CircleProgress.Value = 30;
-            this.CircleProgress.ValueByTransition = 30;
+            this.CircleProgress.ValueByTransition = 0;
             this.CircleProgress.ValueMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             // 
             // tAparece

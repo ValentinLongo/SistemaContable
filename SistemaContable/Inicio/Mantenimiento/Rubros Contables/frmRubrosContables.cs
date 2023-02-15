@@ -78,6 +78,13 @@ namespace SistemaContable.Rubos_Contables
             CargarDGV();
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            rubrosContables.EliminarRubroContable(codigoRubro);
+            MessageBox.Show("Registro borrado correctamente");
+            CargarDGV();
+        }
+
         private void Click(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
@@ -94,12 +101,6 @@ namespace SistemaContable.Rubos_Contables
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            rubrosContables.EliminarRubroContable(codigoRubro);
-            MessageBox.Show("Registro borrado correctamente");
-            CargarDGV();
-        }
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

@@ -82,6 +82,7 @@ namespace SistemaContable.Rubros_Contables
                 MessageBox.Show("Debe completar los campos correctamente antes de continuar");
             }
         }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

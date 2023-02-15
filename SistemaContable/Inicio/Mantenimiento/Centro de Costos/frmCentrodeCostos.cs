@@ -43,11 +43,13 @@ namespace SistemaContable.Inicio.Mantenimiento
                 dgvCentrodeCosto.Rows.Add(codigo, descri, estado);
             }
         }
+
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             string txtdescri = Negocio.Funciones.Mantenimiento.FCentrodeCostos.Busqueda(dgvCentrodeCosto, txtBusqueda, cbBusqueda, CheckInicio);
             CargarDGV(txtdescri);
         }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAggModEjercicioContable.agg_o_mod = 0;
@@ -57,6 +59,7 @@ namespace SistemaContable.Inicio.Mantenimiento
             CargarDGV("");
 
         }
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
             frmAggModEjercicioContable.agg_o_mod = 1;
@@ -66,11 +69,13 @@ namespace SistemaContable.Inicio.Mantenimiento
             dgvCentrodeCosto.Rows.Clear();
             CargarDGV("");
         }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Negocio.Funciones.Mantenimiento.FCentrodeCostos.Eliminar(dgvCentrodeCosto);
             CargarDGV("");
         }
+
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             dgvCentrodeCosto.Rows.Clear();
@@ -82,6 +87,7 @@ namespace SistemaContable.Inicio.Mantenimiento
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

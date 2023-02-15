@@ -70,7 +70,6 @@ namespace SistemaContable.Agenda
             }
         }
 
-
         private void btnBusLoc_Click(object sender, EventArgs e)
         {
             frmLocalidades frmLocalidades = new frmLocalidades();

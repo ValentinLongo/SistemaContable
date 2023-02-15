@@ -31,12 +31,14 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             CargarDGV1("");
             cbBusqueda.SelectedIndex = 0;
         }
+
         public void CargarDGV1(string txt) 
         {
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT mod_codigo as Codigo, mod_descri as Descripción FROM ModeloEncab {txt} ORDER BY mod_codigo");
             dgvDetDeMod1.DataSource = ds.Tables[0];
         }
+
         public void CargarDGV2() 
         {
             int seleccion = dgvDetDeMod1.CurrentCell.RowIndex;
@@ -78,11 +80,13 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             dgvDetDeMod2.Rows.Clear();
             CargarDGV2();
         }
+
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             string txtbusqueda = Negocio.Funciones.Contabilidad.FDetalledeModelos.Busqueda(dgvDetDeMod1,txtBusqueda,cbBusqueda,CheckInicio);
             CargarDGV1(txtbusqueda);
         }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos(0,"","","","","","");
@@ -93,6 +97,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             dgvDetDeMod2.Rows.Clear();
             CargarDGV2();
         }
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
             frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos(1,cuenta,descri,debe,haber,concepto,centrodecosto);
@@ -103,6 +108,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             dgvDetDeMod2.Rows.Clear();
             CargarDGV2();
         }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             int seleccionado = dgvDetDeMod2.CurrentCell.RowIndex;
@@ -117,6 +123,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 CargarDGV2();
             }
         }
+
         private void dgvDetDeMod2_SelectionChanged(object sender, EventArgs e)
         {
             int seleccionado = dgvDetDeMod2.CurrentCell.RowIndex;

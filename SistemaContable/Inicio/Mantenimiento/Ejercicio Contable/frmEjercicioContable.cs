@@ -24,6 +24,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             cargarDGV("");
             cbBusqueda.SelectedIndex = 0;
         }
+
         public void cargarDGV(string txt)
         {
             DataSet ds = new DataSet();
@@ -48,11 +49,13 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
                 dgvEjercicioContable.Rows.Add(codigo, descri, desde, hasta, estado);
             }
         }
+
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
             string txtbusqueda = Negocio.Funciones.Mantenimiento.FEjercicioContable.Busqueda(dgvEjercicioContable, txtBusqueda, cbBusqueda, CheckInicio);
             cargarDGV(txtbusqueda);
         }
+
         private void dgvEjercicioContable_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             string codigo = (string)dgvEjercicioContable.Rows[e.RowIndex].Cells[0].Value;
@@ -60,6 +63,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             Negocio.Funciones.Mantenimiento.FEjercicioContable.EstadoCheckBox(dgvEjercicioContable, codigo, estado);
             cargarDGV("");
         }
+
         private void dgvEjercicioContable_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
             if (dgvEjercicioContable.IsCurrentCellDirty)
@@ -67,6 +71,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
                 dgvEjercicioContable.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
         }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAggEjercicioContable aggejerciciocontable = new frmAggEjercicioContable();
@@ -74,16 +79,19 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             dgvEjercicioContable.Rows.Clear();
             cargarDGV("");
         }
+
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             dgvEjercicioContable.Rows.Clear();
             cargarDGV("");
         }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Negocio.Funciones.Mantenimiento.FEjercicioContable.Eliminar(dgvEjercicioContable);
             cargarDGV("");
         }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

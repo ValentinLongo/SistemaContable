@@ -48,7 +48,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkEjercicio = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.checkEjerciciosAbiertos = new Bunifu.UI.WinForms.BunifuCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjercicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCoeficientes)).BeginInit();
             this.panel7.SuspendLayout();
@@ -245,6 +245,7 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -266,6 +267,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -287,6 +289,7 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnBuscar
             // 
@@ -308,6 +311,7 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // panel2
             // 
@@ -338,58 +342,59 @@
             this.label4.TabIndex = 70;
             this.label4.Text = "Visualizar unicamente Ejercicicos Abiertos";
             // 
-            // checkEjercicio
+            // checkEjerciciosAbiertos
             // 
-            this.checkEjercicio.AllowBindingControlAnimation = true;
-            this.checkEjercicio.AllowBindingControlColorChanges = false;
-            this.checkEjercicio.AllowBindingControlLocation = true;
-            this.checkEjercicio.AllowCheckBoxAnimation = false;
-            this.checkEjercicio.AllowCheckmarkAnimation = true;
-            this.checkEjercicio.AllowOnHoverStates = true;
-            this.checkEjercicio.AutoCheck = true;
-            this.checkEjercicio.BackColor = System.Drawing.Color.Transparent;
-            this.checkEjercicio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkEjercicio.BackgroundImage")));
-            this.checkEjercicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.checkEjercicio.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.checkEjercicio.BorderRadius = 12;
-            this.checkEjercicio.Checked = false;
-            this.checkEjercicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.checkEjercicio.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkEjercicio.CustomCheckmarkImage = null;
-            this.checkEjercicio.Location = new System.Drawing.Point(569, 36);
-            this.checkEjercicio.MinimumSize = new System.Drawing.Size(17, 17);
-            this.checkEjercicio.Name = "checkEjercicio";
-            this.checkEjercicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.checkEjercicio.OnCheck.BorderRadius = 12;
-            this.checkEjercicio.OnCheck.BorderThickness = 2;
-            this.checkEjercicio.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.checkEjercicio.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.checkEjercicio.OnCheck.CheckmarkThickness = 2;
-            this.checkEjercicio.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.checkEjercicio.OnDisable.BorderRadius = 12;
-            this.checkEjercicio.OnDisable.BorderThickness = 2;
-            this.checkEjercicio.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.checkEjercicio.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.checkEjercicio.OnDisable.CheckmarkThickness = 2;
-            this.checkEjercicio.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.checkEjercicio.OnHoverChecked.BorderRadius = 12;
-            this.checkEjercicio.OnHoverChecked.BorderThickness = 2;
-            this.checkEjercicio.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.checkEjercicio.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.checkEjercicio.OnHoverChecked.CheckmarkThickness = 2;
-            this.checkEjercicio.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.checkEjercicio.OnHoverUnchecked.BorderRadius = 12;
-            this.checkEjercicio.OnHoverUnchecked.BorderThickness = 1;
-            this.checkEjercicio.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.checkEjercicio.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.checkEjercicio.OnUncheck.BorderRadius = 12;
-            this.checkEjercicio.OnUncheck.BorderThickness = 1;
-            this.checkEjercicio.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.checkEjercicio.Size = new System.Drawing.Size(17, 17);
-            this.checkEjercicio.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.checkEjercicio.TabIndex = 69;
-            this.checkEjercicio.ThreeState = false;
-            this.checkEjercicio.ToolTipText = null;
+            this.checkEjerciciosAbiertos.AllowBindingControlAnimation = true;
+            this.checkEjerciciosAbiertos.AllowBindingControlColorChanges = false;
+            this.checkEjerciciosAbiertos.AllowBindingControlLocation = true;
+            this.checkEjerciciosAbiertos.AllowCheckBoxAnimation = false;
+            this.checkEjerciciosAbiertos.AllowCheckmarkAnimation = true;
+            this.checkEjerciciosAbiertos.AllowOnHoverStates = true;
+            this.checkEjerciciosAbiertos.AutoCheck = true;
+            this.checkEjerciciosAbiertos.BackColor = System.Drawing.Color.Transparent;
+            this.checkEjerciciosAbiertos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkEjerciciosAbiertos.BackgroundImage")));
+            this.checkEjerciciosAbiertos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.checkEjerciciosAbiertos.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.checkEjerciciosAbiertos.BorderRadius = 12;
+            this.checkEjerciciosAbiertos.Checked = false;
+            this.checkEjerciciosAbiertos.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.checkEjerciciosAbiertos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.checkEjerciciosAbiertos.CustomCheckmarkImage = null;
+            this.checkEjerciciosAbiertos.Location = new System.Drawing.Point(569, 36);
+            this.checkEjerciciosAbiertos.MinimumSize = new System.Drawing.Size(17, 17);
+            this.checkEjerciciosAbiertos.Name = "checkEjerciciosAbiertos";
+            this.checkEjerciciosAbiertos.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.checkEjerciciosAbiertos.OnCheck.BorderRadius = 12;
+            this.checkEjerciciosAbiertos.OnCheck.BorderThickness = 2;
+            this.checkEjerciciosAbiertos.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.checkEjerciciosAbiertos.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.checkEjerciciosAbiertos.OnCheck.CheckmarkThickness = 2;
+            this.checkEjerciciosAbiertos.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.checkEjerciciosAbiertos.OnDisable.BorderRadius = 12;
+            this.checkEjerciciosAbiertos.OnDisable.BorderThickness = 2;
+            this.checkEjerciciosAbiertos.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkEjerciciosAbiertos.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.checkEjerciciosAbiertos.OnDisable.CheckmarkThickness = 2;
+            this.checkEjerciciosAbiertos.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkEjerciciosAbiertos.OnHoverChecked.BorderRadius = 12;
+            this.checkEjerciciosAbiertos.OnHoverChecked.BorderThickness = 2;
+            this.checkEjerciciosAbiertos.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkEjerciciosAbiertos.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.checkEjerciciosAbiertos.OnHoverChecked.CheckmarkThickness = 2;
+            this.checkEjerciciosAbiertos.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkEjerciciosAbiertos.OnHoverUnchecked.BorderRadius = 12;
+            this.checkEjerciciosAbiertos.OnHoverUnchecked.BorderThickness = 1;
+            this.checkEjerciciosAbiertos.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkEjerciciosAbiertos.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.checkEjerciciosAbiertos.OnUncheck.BorderRadius = 12;
+            this.checkEjerciciosAbiertos.OnUncheck.BorderThickness = 1;
+            this.checkEjerciciosAbiertos.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkEjerciciosAbiertos.Size = new System.Drawing.Size(17, 17);
+            this.checkEjerciciosAbiertos.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.checkEjerciciosAbiertos.TabIndex = 69;
+            this.checkEjerciciosAbiertos.ThreeState = false;
+            this.checkEjerciciosAbiertos.ToolTipText = null;
+            this.checkEjerciciosAbiertos.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkEjerciciosAbiertos_CheckedChanged);
             // 
             // frmCoeficienteDeAjuste
             // 
@@ -398,7 +403,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(800, 532);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.checkEjercicio);
+            this.Controls.Add(this.checkEjerciciosAbiertos);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.btnBuscar);
@@ -443,6 +448,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tbDescripcion;
         private System.Windows.Forms.Label label4;
-        private Bunifu.UI.WinForms.BunifuCheckBox checkEjercicio;
+        private Bunifu.UI.WinForms.BunifuCheckBox checkEjerciciosAbiertos;
     }
 }

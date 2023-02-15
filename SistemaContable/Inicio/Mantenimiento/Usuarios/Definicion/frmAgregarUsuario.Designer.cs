@@ -62,7 +62,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.CheckVendedor = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.CambioCheck = new Bunifu.UI.WinForms.BunifuCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -472,58 +472,59 @@
             this.label13.TabIndex = 62;
             this.label13.Text = "El usuario no posee un vendedor definido";
             // 
-            // CheckVendedor
+            // CambioCheck
             // 
-            this.CheckVendedor.AllowBindingControlAnimation = true;
-            this.CheckVendedor.AllowBindingControlColorChanges = false;
-            this.CheckVendedor.AllowBindingControlLocation = true;
-            this.CheckVendedor.AllowCheckBoxAnimation = false;
-            this.CheckVendedor.AllowCheckmarkAnimation = true;
-            this.CheckVendedor.AllowOnHoverStates = true;
-            this.CheckVendedor.AutoCheck = true;
-            this.CheckVendedor.BackColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckVendedor.BackgroundImage")));
-            this.CheckVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CheckVendedor.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.CheckVendedor.BorderRadius = 12;
-            this.CheckVendedor.Checked = false;
-            this.CheckVendedor.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.CheckVendedor.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CheckVendedor.CustomCheckmarkImage = null;
-            this.CheckVendedor.Location = new System.Drawing.Point(151, 393);
-            this.CheckVendedor.MinimumSize = new System.Drawing.Size(17, 17);
-            this.CheckVendedor.Name = "CheckVendedor";
-            this.CheckVendedor.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.CheckVendedor.OnCheck.BorderRadius = 12;
-            this.CheckVendedor.OnCheck.BorderThickness = 2;
-            this.CheckVendedor.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.CheckVendedor.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.CheckVendedor.OnCheck.CheckmarkThickness = 2;
-            this.CheckVendedor.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.CheckVendedor.OnDisable.BorderRadius = 12;
-            this.CheckVendedor.OnDisable.BorderThickness = 2;
-            this.CheckVendedor.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.CheckVendedor.OnDisable.CheckmarkThickness = 2;
-            this.CheckVendedor.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckVendedor.OnHoverChecked.BorderRadius = 12;
-            this.CheckVendedor.OnHoverChecked.BorderThickness = 2;
-            this.CheckVendedor.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckVendedor.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.CheckVendedor.OnHoverChecked.CheckmarkThickness = 2;
-            this.CheckVendedor.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckVendedor.OnHoverUnchecked.BorderRadius = 12;
-            this.CheckVendedor.OnHoverUnchecked.BorderThickness = 1;
-            this.CheckVendedor.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.CheckVendedor.OnUncheck.BorderRadius = 12;
-            this.CheckVendedor.OnUncheck.BorderThickness = 1;
-            this.CheckVendedor.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckVendedor.Size = new System.Drawing.Size(17, 17);
-            this.CheckVendedor.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.CheckVendedor.TabIndex = 61;
-            this.CheckVendedor.ThreeState = false;
-            this.CheckVendedor.ToolTipText = null;
+            this.CambioCheck.AllowBindingControlAnimation = true;
+            this.CambioCheck.AllowBindingControlColorChanges = false;
+            this.CambioCheck.AllowBindingControlLocation = true;
+            this.CambioCheck.AllowCheckBoxAnimation = false;
+            this.CambioCheck.AllowCheckmarkAnimation = true;
+            this.CambioCheck.AllowOnHoverStates = true;
+            this.CambioCheck.AutoCheck = true;
+            this.CambioCheck.BackColor = System.Drawing.Color.Transparent;
+            this.CambioCheck.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CambioCheck.BackgroundImage")));
+            this.CambioCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CambioCheck.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.CambioCheck.BorderRadius = 12;
+            this.CambioCheck.Checked = false;
+            this.CambioCheck.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.CambioCheck.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CambioCheck.CustomCheckmarkImage = null;
+            this.CambioCheck.Location = new System.Drawing.Point(151, 393);
+            this.CambioCheck.MinimumSize = new System.Drawing.Size(17, 17);
+            this.CambioCheck.Name = "CambioCheck";
+            this.CambioCheck.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CambioCheck.OnCheck.BorderRadius = 12;
+            this.CambioCheck.OnCheck.BorderThickness = 2;
+            this.CambioCheck.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CambioCheck.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.CambioCheck.OnCheck.CheckmarkThickness = 2;
+            this.CambioCheck.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.CambioCheck.OnDisable.BorderRadius = 12;
+            this.CambioCheck.OnDisable.BorderThickness = 2;
+            this.CambioCheck.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CambioCheck.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.CambioCheck.OnDisable.CheckmarkThickness = 2;
+            this.CambioCheck.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CambioCheck.OnHoverChecked.BorderRadius = 12;
+            this.CambioCheck.OnHoverChecked.BorderThickness = 2;
+            this.CambioCheck.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CambioCheck.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.CambioCheck.OnHoverChecked.CheckmarkThickness = 2;
+            this.CambioCheck.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CambioCheck.OnHoverUnchecked.BorderRadius = 12;
+            this.CambioCheck.OnHoverUnchecked.BorderThickness = 1;
+            this.CambioCheck.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CambioCheck.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.CambioCheck.OnUncheck.BorderRadius = 12;
+            this.CambioCheck.OnUncheck.BorderThickness = 1;
+            this.CambioCheck.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CambioCheck.Size = new System.Drawing.Size(17, 17);
+            this.CambioCheck.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.CambioCheck.TabIndex = 61;
+            this.CambioCheck.ThreeState = false;
+            this.CambioCheck.ToolTipText = null;
+            this.CambioCheck.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CambioCheck_CheckedChanged);
             // 
             // frmAgregarUsuario
             // 
@@ -532,7 +533,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(530, 489);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.CheckVendedor);
+            this.Controls.Add(this.CambioCheck);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.panel5);
@@ -610,7 +611,7 @@
         private System.Windows.Forms.Panel panel7;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Label label13;
-        private Bunifu.UI.WinForms.BunifuCheckBox CheckVendedor;
+        private Bunifu.UI.WinForms.BunifuCheckBox CambioCheck;
         private System.Windows.Forms.Label label14;
     }
 }
