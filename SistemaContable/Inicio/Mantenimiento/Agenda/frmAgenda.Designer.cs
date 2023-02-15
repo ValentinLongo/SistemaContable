@@ -197,7 +197,7 @@
             this.textBox1.Location = new System.Drawing.Point(115, 33);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(484, 20);
+            this.textBox1.Size = new System.Drawing.Size(495, 20);
             this.textBox1.TabIndex = 56;
             this.textBox1.Tag = "00000";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
