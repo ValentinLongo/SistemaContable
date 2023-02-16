@@ -47,11 +47,9 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbBusqueda = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjercicioContable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,11 +68,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(3, 4);
+            this.label5.Location = new System.Drawing.Point(3, 2);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.Size = new System.Drawing.Size(107, 17);
             this.label5.TabIndex = 30;
             this.label5.Text = "Ejercicio Contable";
             // 
@@ -376,17 +374,6 @@
             this.CheckInicio.ThreeState = false;
             this.CheckInicio.ToolTipText = null;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(654, 392);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
-            // 
             // cbBusqueda
             // 
             this.cbBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
@@ -414,7 +401,6 @@
             this.Controls.Add(this.CheckInicio);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtBusqueda);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rjButton5);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEliminar);
@@ -429,7 +415,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjercicioContable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,7 +430,6 @@
         private RJCodeAdvance.RJControls.RJButton btnEliminar;
         private RJCodeAdvance.RJControls.RJButton btnActualizar;
         private RJCodeAdvance.RJControls.RJButton rjButton5;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtBusqueda;

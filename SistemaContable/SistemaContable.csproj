@@ -823,6 +823,30 @@
     <Folder Include="Inicio\Ayuda\" />
     <Folder Include="Inicio\Ver\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contabilidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contabilidad1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contabilidad2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contabilidad3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contabilidad4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculadora2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

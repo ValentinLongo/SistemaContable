@@ -44,10 +44,9 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRubrosContables)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvRubrosContables
@@ -60,10 +59,10 @@
             this.Codigo,
             this.Descripcion,
             this.Vigencia});
-            this.dgvRubrosContables.Location = new System.Drawing.Point(12, 68);
+            this.dgvRubrosContables.Location = new System.Drawing.Point(12, 89);
             this.dgvRubrosContables.Name = "dgvRubrosContables";
             this.dgvRubrosContables.ReadOnly = true;
-            this.dgvRubrosContables.Size = new System.Drawing.Size(646, 399);
+            this.dgvRubrosContables.Size = new System.Drawing.Size(646, 381);
             this.dgvRubrosContables.TabIndex = 0;
             this.dgvRubrosContables.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
             // 
@@ -90,7 +89,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(11, 44);
+            this.label1.Location = new System.Drawing.Point(19, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 15);
             this.label1.TabIndex = 6;
@@ -112,11 +111,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(3, 5);
+            this.label5.Location = new System.Drawing.Point(3, 2);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.Size = new System.Drawing.Size(93, 17);
             this.label5.TabIndex = 30;
             this.label5.Text = "Rublo Contable";
             // 
@@ -185,9 +184,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(83, 57);
+            this.panel3.Location = new System.Drawing.Point(93, 65);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(435, 1);
+            this.panel3.Size = new System.Drawing.Size(413, 1);
             this.panel3.TabIndex = 55;
             // 
             // tbDescripcion
@@ -196,10 +195,10 @@
             this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescripcion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDescripcion.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbDescripcion.Location = new System.Drawing.Point(83, 39);
+            this.tbDescripcion.Location = new System.Drawing.Point(93, 47);
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.ReadOnly = true;
-            this.tbDescripcion.Size = new System.Drawing.Size(435, 19);
+            this.tbDescripcion.Size = new System.Drawing.Size(413, 19);
             this.tbDescripcion.TabIndex = 54;
             this.tbDescripcion.Tag = "00000";
             // 
@@ -210,7 +209,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBuscar.Location = new System.Drawing.Point(534, 32);
+            this.btnBuscar.Location = new System.Drawing.Point(523, 46);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(124, 26);
             this.btnBuscar.TabIndex = 56;
@@ -225,7 +224,7 @@
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnImprimir.Location = new System.Drawing.Point(664, 369);
+            this.btnImprimir.Location = new System.Drawing.Point(664, 441);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(124, 26);
             this.btnImprimir.TabIndex = 57;
@@ -277,16 +276,22 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // pictureBox1
+            // ShapeBusqueda
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(662, 401);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 61;
-            this.pictureBox1.TabStop = false;
+            this.ShapeBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ShapeBusqueda.Angle = 0F;
+            this.ShapeBusqueda.BackColor = System.Drawing.Color.Transparent;
+            this.ShapeBusqueda.BorderColor = System.Drawing.Color.White;
+            this.ShapeBusqueda.BorderThickness = 1;
+            this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
+            this.ShapeBusqueda.FillShape = true;
+            this.ShapeBusqueda.Location = new System.Drawing.Point(12, 35);
+            this.ShapeBusqueda.Name = "ShapeBusqueda";
+            this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.ShapeBusqueda.Sides = 5;
+            this.ShapeBusqueda.Size = new System.Drawing.Size(646, 48);
+            this.ShapeBusqueda.TabIndex = 61;
+            this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
             // frmRubrosContables
             // 
@@ -294,7 +299,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(797, 482);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
@@ -305,6 +309,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvRubrosContables);
+            this.Controls.Add(this.ShapeBusqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRubrosContables";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -312,7 +317,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvRubrosContables)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,6 +339,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
     }
 }

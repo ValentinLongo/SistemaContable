@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarCuenta));
             this.tbCodigo = new System.Windows.Forms.MaskedTextBox();
             this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbEstado = new System.Windows.Forms.ComboBox();
@@ -49,7 +48,6 @@
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckAjuste = new Bunifu.UI.WinForms.BunifuCheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +57,7 @@
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.Enabled = false;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCodigo.Location = new System.Drawing.Point(194, 68);
+            this.tbCodigo.Location = new System.Drawing.Point(122, 71);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(252, 13);
             this.tbCodigo.TabIndex = 0;
@@ -78,7 +76,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(235, 280);
+            this.btnAceptar.Location = new System.Drawing.Point(135, 301);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(150, 31);
             this.btnAceptar.TabIndex = 3;
@@ -87,20 +85,10 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox2.Location = new System.Drawing.Point(460, 297);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(130, 66);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 95;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(194, 152);
+            this.panel2.Location = new System.Drawing.Point(122, 155);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(252, 1);
             this.panel2.TabIndex = 94;
@@ -108,7 +96,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(194, 116);
+            this.panel1.Location = new System.Drawing.Point(122, 119);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 1);
             this.panel1.TabIndex = 93;
@@ -121,7 +109,7 @@
             this.cbEstado.Items.AddRange(new object[] {
             "ACTIVO",
             "INACTIVO"});
-            this.cbEstado.Location = new System.Drawing.Point(194, 205);
+            this.cbEstado.Location = new System.Drawing.Point(122, 208);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(252, 21);
             this.cbEstado.TabIndex = 92;
@@ -131,7 +119,7 @@
             this.cbRubro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.cbRubro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbRubro.FormattingEnabled = true;
-            this.cbRubro.Location = new System.Drawing.Point(194, 173);
+            this.cbRubro.Location = new System.Drawing.Point(122, 176);
             this.cbRubro.Name = "cbRubro";
             this.cbRubro.Size = new System.Drawing.Size(252, 21);
             this.cbRubro.TabIndex = 91;
@@ -141,7 +129,7 @@
             this.tbDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescripcion.Location = new System.Drawing.Point(194, 137);
+            this.tbDescripcion.Location = new System.Drawing.Point(122, 140);
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(252, 13);
             this.tbDescripcion.TabIndex = 2;
@@ -153,7 +141,7 @@
             this.tbCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCuenta.Enabled = false;
             this.tbCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCuenta.Location = new System.Drawing.Point(194, 103);
+            this.tbCuenta.Location = new System.Drawing.Point(122, 106);
             this.tbCuenta.Name = "tbCuenta";
             this.tbCuenta.Size = new System.Drawing.Size(252, 13);
             this.tbCuenta.TabIndex = 1;
@@ -164,7 +152,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(135, 205);
+            this.label10.Location = new System.Drawing.Point(63, 208);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 16);
             this.label10.TabIndex = 88;
@@ -175,7 +163,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(139, 173);
+            this.label9.Location = new System.Drawing.Point(67, 176);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 16);
             this.label9.TabIndex = 87;
@@ -186,7 +174,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(103, 137);
+            this.label6.Location = new System.Drawing.Point(31, 140);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 16);
             this.label6.TabIndex = 86;
@@ -197,7 +185,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(132, 101);
+            this.label5.Location = new System.Drawing.Point(60, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 85;
@@ -208,7 +196,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(132, 65);
+            this.label4.Location = new System.Drawing.Point(60, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
             this.label4.TabIndex = 84;
@@ -219,7 +207,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(213, 30);
+            this.label3.Location = new System.Drawing.Point(118, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(212, 24);
             this.label3.TabIndex = 83;
@@ -233,7 +221,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(592, 21);
+            this.panel7.Size = new System.Drawing.Size(418, 21);
             this.panel7.TabIndex = 97;
             this.panel7.Tag = "1";
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
@@ -241,11 +229,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 31;
             this.label1.Text = "Modificar Cuenta";
             // 
@@ -278,7 +266,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(478, 0);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(304, 0);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = true;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -315,7 +303,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(287, 246);
+            this.label13.Location = new System.Drawing.Point(215, 249);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(68, 13);
             this.label13.TabIndex = 105;
@@ -339,7 +327,7 @@
             this.CheckAjuste.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckAjuste.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckAjuste.CustomCheckmarkImage = null;
-            this.CheckAjuste.Location = new System.Drawing.Point(267, 242);
+            this.CheckAjuste.Location = new System.Drawing.Point(195, 245);
             this.CheckAjuste.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckAjuste.Name = "CheckAjuste";
             this.CheckAjuste.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -379,13 +367,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(592, 364);
+            this.ClientSize = new System.Drawing.Size(418, 364);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.CheckAjuste);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cbEstado);
@@ -402,7 +389,6 @@
             this.Name = "frmModificarCuenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmModificarCuenta";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);
@@ -414,7 +400,6 @@
 
         private System.Windows.Forms.MaskedTextBox tbCodigo;
         private RJCodeAdvance.RJControls.RJButton btnAceptar;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbEstado;

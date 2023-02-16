@@ -40,14 +40,12 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.dgvDetalledeInformesAux = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleDeInformes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalledeInformesAux)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,11 +65,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(3, 5);
+            this.label4.Location = new System.Drawing.Point(3, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 13);
+            this.label4.Size = new System.Drawing.Size(117, 17);
             this.label4.TabIndex = 31;
             this.label4.Text = "Detalle de Informes";
             // 
@@ -216,9 +214,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(97, 388);
+            this.panel3.Location = new System.Drawing.Point(97, 378);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(365, 1);
+            this.panel3.Size = new System.Drawing.Size(425, 1);
             this.panel3.TabIndex = 84;
             // 
             // txtBusqueda
@@ -227,9 +225,9 @@
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBusqueda.Location = new System.Drawing.Point(100, 370);
+            this.txtBusqueda.Location = new System.Drawing.Point(100, 360);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(362, 19);
+            this.txtBusqueda.Size = new System.Drawing.Size(422, 19);
             this.txtBusqueda.TabIndex = 83;
             this.txtBusqueda.Tag = "11000";
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
@@ -242,11 +240,11 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(12, 357);
+            this.bunifuShapes1.Location = new System.Drawing.Point(12, 340);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(557, 42);
+            this.bunifuShapes1.Size = new System.Drawing.Size(620, 59);
             this.bunifuShapes1.TabIndex = 85;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
@@ -254,22 +252,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(25, 375);
+            this.label1.Location = new System.Drawing.Point(25, 365);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 86;
             this.label1.Text = "Descripción:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(642, 357);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 87;
-            this.pictureBox1.TabStop = false;
             // 
             // btnImprimir
             // 
@@ -284,7 +271,7 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(638, 321);
+            this.btnImprimir.Location = new System.Drawing.Point(638, 304);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(136, 30);
             this.btnImprimir.TabIndex = 88;
@@ -307,7 +294,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(524, 376);
+            this.label13.Location = new System.Drawing.Point(563, 365);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(32, 13);
             this.label13.TabIndex = 92;
@@ -331,7 +318,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(506, 374);
+            this.CheckInicio.Location = new System.Drawing.Point(541, 362);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -376,7 +363,6 @@
             this.Controls.Add(this.CheckInicio);
             this.Controls.Add(this.dgvDetalledeInformesAux);
             this.Controls.Add(this.btnImprimir);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtBusqueda);
@@ -393,7 +379,6 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleDeInformes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalledeInformesAux)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -413,7 +398,6 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private System.Windows.Forms.DataGridView dgvDetalledeInformesAux;
         private System.Windows.Forms.Label label13;

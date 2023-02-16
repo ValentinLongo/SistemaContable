@@ -40,7 +40,6 @@
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.btnModificar = new RJCodeAdvance.RJControls.RJButton();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbDescipcion = new System.Windows.Forms.TextBox();
             this.txtDescri = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             this.lblControlBar = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ControlBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,11 +69,11 @@
             this.Hija,
             this.Tabulador,
             this.AjustaInf});
-            this.dgvCuentas.Location = new System.Drawing.Point(12, 109);
+            this.dgvCuentas.Location = new System.Drawing.Point(12, 92);
             this.dgvCuentas.Name = "dgvCuentas";
             this.dgvCuentas.ReadOnly = true;
             this.dgvCuentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCuentas.Size = new System.Drawing.Size(973, 488);
+            this.dgvCuentas.Size = new System.Drawing.Size(973, 505);
             this.dgvCuentas.TabIndex = 5;
             this.dgvCuentas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
             // 
@@ -134,7 +132,7 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(992, 473);
+            this.btnImprimir.Location = new System.Drawing.Point(992, 566);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(130, 31);
             this.btnImprimir.TabIndex = 4;
@@ -155,7 +153,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(991, 161);
+            this.btnModificar.Location = new System.Drawing.Point(992, 144);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(130, 31);
             this.btnModificar.TabIndex = 3;
@@ -177,7 +175,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(991, 109);
+            this.btnAgregar.Location = new System.Drawing.Point(992, 92);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(130, 31);
             this.btnAgregar.TabIndex = 2;
@@ -185,17 +183,6 @@
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(991, 531);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -296,7 +283,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(991, 215);
+            this.btnEliminar.Location = new System.Drawing.Point(992, 198);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(130, 31);
             this.btnEliminar.TabIndex = 57;
@@ -322,11 +309,11 @@
             // lblControlBar
             // 
             this.lblControlBar.AutoSize = true;
-            this.lblControlBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControlBar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.lblControlBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblControlBar.Location = new System.Drawing.Point(3, 4);
+            this.lblControlBar.Location = new System.Drawing.Point(3, 2);
             this.lblControlBar.Name = "lblControlBar";
-            this.lblControlBar.Size = new System.Drawing.Size(85, 13);
+            this.lblControlBar.Size = new System.Drawing.Size(99, 17);
             this.lblControlBar.TabIndex = 31;
             this.lblControlBar.Text = "Plan de Cuentas";
             // 
@@ -409,14 +396,12 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvCuentas);
             this.Controls.Add(this.ShapeBusqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPlanDeCuentas";
             this.Text = "frmPlanDeCuentas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ControlBar.ResumeLayout(false);
             this.ControlBar.PerformLayout();
             this.ResumeLayout(false);
@@ -430,7 +415,6 @@
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private RJCodeAdvance.RJControls.RJButton btnModificar;
         private RJCodeAdvance.RJControls.RJButton btnAgregar;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private RJCodeAdvance.RJControls.RJButton btnBuscar;
         private System.Windows.Forms.Label txtDescri;
         private System.Windows.Forms.Panel panel2;

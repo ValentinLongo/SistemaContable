@@ -243,14 +243,14 @@ namespace Negocio
             }
 
         }
-        public static void FondoMDI(Form Formulario)
+        public static void FondoMDI(Form Formulario, Panel borde1, Panel borde2, Panel borde3, PictureBox logo)
         {
             BuscarFormato();
             foreach (MFormatoSistema MFormato in lista)
             {
                 if (MFormato.fmt_control == "formulariomdi")
                 {
-                    RGBbackFormulariomdi = MFormato.fmt_rgbBack.ToString();
+                    RGBbackFormulariomdi = MFormato.fmt_rgbBack.ToString();                 
                 }
             }
             MdiClient oMDI;
@@ -260,6 +260,10 @@ namespace Negocio
                 {
                     oMDI = (MdiClient)ctl;
                     oMDI.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
+                    borde1.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
+                    borde2.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
+                    borde3.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
+                    logo.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
                 }
                 catch (InvalidCastException exc)
                 {

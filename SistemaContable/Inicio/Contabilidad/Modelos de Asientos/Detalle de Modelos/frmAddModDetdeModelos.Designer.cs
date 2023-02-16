@@ -50,10 +50,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtConcepto = new System.Windows.Forms.TextBox();
             this.cbCentrodeCosto = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -72,11 +70,11 @@
             // lblControlBar
             // 
             this.lblControlBar.AutoSize = true;
-            this.lblControlBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControlBar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.lblControlBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblControlBar.Location = new System.Drawing.Point(3, 4);
+            this.lblControlBar.Location = new System.Drawing.Point(3, 2);
             this.lblControlBar.Name = "lblControlBar";
-            this.lblControlBar.Size = new System.Drawing.Size(133, 13);
+            this.lblControlBar.Size = new System.Drawing.Size(156, 17);
             this.lblControlBar.TabIndex = 31;
             this.lblControlBar.Text = "Agregar Detalle de Modelo";
             // 
@@ -351,17 +349,6 @@
             this.cbCentrodeCosto.Size = new System.Drawing.Size(188, 25);
             this.cbCentrodeCosto.TabIndex = 100;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(352, 285);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 101;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnConsulta
             // 
             this.btnConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -383,7 +370,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(482, 340);
             this.Controls.Add(this.btnConsulta);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cbCentrodeCosto);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.txtConcepto);
@@ -409,7 +395,6 @@
             this.Text = "frmAddModDetdeModelos";
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,7 +423,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtConcepto;
         private System.Windows.Forms.ComboBox cbCentrodeCosto;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnConsulta;
     }
 }

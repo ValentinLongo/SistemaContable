@@ -45,7 +45,6 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCheckBox3 = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.CheckModificados = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.CheckManuales = new Bunifu.UI.WinForms.BunifuCheckBox();
@@ -53,7 +52,6 @@
             this.btnDerecha = new RJCodeAdvance.RJControls.RJButton();
             this.btnIzquierda = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAsientosContables
@@ -63,11 +61,11 @@
             this.dgvAsientosContables.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvAsientosContables.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvAsientosContables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsientosContables.Location = new System.Drawing.Point(12, 79);
+            this.dgvAsientosContables.Location = new System.Drawing.Point(12, 88);
             this.dgvAsientosContables.Name = "dgvAsientosContables";
             this.dgvAsientosContables.ReadOnly = true;
             this.dgvAsientosContables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAsientosContables.Size = new System.Drawing.Size(973, 416);
+            this.dgvAsientosContables.Size = new System.Drawing.Size(964, 448);
             this.dgvAsientosContables.TabIndex = 95;
             // 
             // btnAgregar
@@ -83,9 +81,9 @@
             this.btnAgregar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(994, 79);
+            this.btnAgregar.Location = new System.Drawing.Point(985, 88);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(126, 30);
+            this.btnAgregar.Size = new System.Drawing.Size(135, 38);
             this.btnAgregar.TabIndex = 96;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
@@ -98,7 +96,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(34, 9);
+            this.label13.Location = new System.Drawing.Point(34, 18);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(232, 15);
             this.label13.TabIndex = 97;
@@ -110,7 +108,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(33, 33);
+            this.label1.Location = new System.Drawing.Point(33, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 15);
             this.label1.TabIndex = 98;
@@ -122,7 +120,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(33, 57);
+            this.label2.Location = new System.Drawing.Point(33, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(221, 15);
             this.label2.TabIndex = 99;
@@ -136,7 +134,7 @@
             this.cbSeleccion.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSeleccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbSeleccion.FormattingEnabled = true;
-            this.cbSeleccion.Location = new System.Drawing.Point(794, 47);
+            this.cbSeleccion.Location = new System.Drawing.Point(786, 56);
             this.cbSeleccion.Name = "cbSeleccion";
             this.cbSeleccion.Size = new System.Drawing.Size(190, 25);
             this.cbSeleccion.TabIndex = 103;
@@ -149,7 +147,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(718, 52);
+            this.label3.Location = new System.Drawing.Point(710, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 104;
@@ -168,9 +166,9 @@
             this.btnModificar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(994, 125);
+            this.btnModificar.Location = new System.Drawing.Point(985, 152);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(126, 30);
+            this.btnModificar.Size = new System.Drawing.Size(135, 38);
             this.btnModificar.TabIndex = 105;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
@@ -190,9 +188,9 @@
             this.btnAnular.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnular.ForeColor = System.Drawing.Color.White;
             this.btnAnular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnular.Location = new System.Drawing.Point(994, 171);
+            this.btnAnular.Location = new System.Drawing.Point(985, 216);
             this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(126, 30);
+            this.btnAnular.Size = new System.Drawing.Size(135, 38);
             this.btnAnular.TabIndex = 106;
             this.btnAnular.Text = "Anular";
             this.btnAnular.TextColor = System.Drawing.Color.White;
@@ -211,9 +209,9 @@
             this.btnVisualizar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisualizar.ForeColor = System.Drawing.Color.White;
             this.btnVisualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizar.Location = new System.Drawing.Point(994, 219);
+            this.btnVisualizar.Location = new System.Drawing.Point(985, 280);
             this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.Size = new System.Drawing.Size(126, 30);
+            this.btnVisualizar.Size = new System.Drawing.Size(135, 38);
             this.btnVisualizar.TabIndex = 107;
             this.btnVisualizar.Text = "Visualizar";
             this.btnVisualizar.TextColor = System.Drawing.Color.White;
@@ -231,7 +229,7 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Codigo",
             "Descripcion"});
-            this.cbBusqueda.Location = new System.Drawing.Point(27, 518);
+            this.cbBusqueda.Location = new System.Drawing.Point(27, 576);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(154, 25);
             this.cbBusqueda.TabIndex = 113;
@@ -241,7 +239,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(934, 526);
+            this.label5.Location = new System.Drawing.Point(934, 583);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 112;
@@ -251,7 +249,7 @@
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(195, 538);
+            this.panel3.Location = new System.Drawing.Point(195, 597);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(700, 1);
             this.panel3.TabIndex = 110;
@@ -263,7 +261,7 @@
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBusqueda.Location = new System.Drawing.Point(198, 520);
+            this.txtBusqueda.Location = new System.Drawing.Point(198, 579);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(697, 19);
             this.txtBusqueda.TabIndex = 108;
@@ -278,11 +276,11 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(12, 506);
+            this.bunifuShapes1.Location = new System.Drawing.Point(12, 542);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(972, 51);
+            this.bunifuShapes1.Size = new System.Drawing.Size(964, 85);
             this.bunifuShapes1.TabIndex = 109;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
@@ -299,24 +297,13 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(994, 465);
+            this.btnImprimir.Location = new System.Drawing.Point(985, 498);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(126, 30);
+            this.btnImprimir.Size = new System.Drawing.Size(135, 38);
             this.btnImprimir.TabIndex = 115;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(991, 504);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 114;
-            this.pictureBox1.TabStop = false;
             // 
             // bunifuCheckBox3
             // 
@@ -337,7 +324,7 @@
             this.bunifuCheckBox3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.bunifuCheckBox3.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox3.CustomCheckmarkImage = null;
-            this.bunifuCheckBox3.Location = new System.Drawing.Point(912, 523);
+            this.bunifuCheckBox3.Location = new System.Drawing.Point(912, 581);
             this.bunifuCheckBox3.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox3.Name = "bunifuCheckBox3";
             this.bunifuCheckBox3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -391,7 +378,7 @@
             this.CheckModificados.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckModificados.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckModificados.CustomCheckmarkImage = null;
-            this.CheckModificados.Location = new System.Drawing.Point(13, 56);
+            this.CheckModificados.Location = new System.Drawing.Point(13, 65);
             this.CheckModificados.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckModificados.Name = "CheckModificados";
             this.CheckModificados.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -445,7 +432,7 @@
             this.CheckManuales.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckManuales.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckManuales.CustomCheckmarkImage = null;
-            this.CheckManuales.Location = new System.Drawing.Point(13, 32);
+            this.CheckManuales.Location = new System.Drawing.Point(13, 41);
             this.CheckManuales.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckManuales.Name = "CheckManuales";
             this.CheckManuales.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -499,7 +486,7 @@
             this.CheckDiferencia.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckDiferencia.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckDiferencia.CustomCheckmarkImage = null;
-            this.CheckDiferencia.Location = new System.Drawing.Point(14, 8);
+            this.CheckDiferencia.Location = new System.Drawing.Point(14, 17);
             this.CheckDiferencia.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckDiferencia.Name = "CheckDiferencia";
             this.CheckDiferencia.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -547,7 +534,7 @@
             this.btnDerecha.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDerecha.ForeColor = System.Drawing.Color.White;
             this.btnDerecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDerecha.Location = new System.Drawing.Point(1078, 264);
+            this.btnDerecha.Location = new System.Drawing.Point(512, 59);
             this.btnDerecha.Name = "btnDerecha";
             this.btnDerecha.Size = new System.Drawing.Size(42, 22);
             this.btnDerecha.TabIndex = 116;
@@ -569,7 +556,7 @@
             this.btnIzquierda.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIzquierda.ForeColor = System.Drawing.Color.White;
             this.btnIzquierda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIzquierda.Location = new System.Drawing.Point(994, 264);
+            this.btnIzquierda.Location = new System.Drawing.Point(428, 59);
             this.btnIzquierda.Name = "btnIzquierda";
             this.btnIzquierda.Size = new System.Drawing.Size(42, 22);
             this.btnIzquierda.TabIndex = 117;
@@ -583,11 +570,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1129, 568);
+            this.ClientSize = new System.Drawing.Size(1129, 650);
             this.Controls.Add(this.btnIzquierda);
             this.Controls.Add(this.btnDerecha);
             this.Controls.Add(this.btnImprimir);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cbBusqueda);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.bunifuCheckBox3);
@@ -613,7 +599,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAsientosContables";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -639,7 +624,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtBusqueda;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private RJCodeAdvance.RJControls.RJButton btnDerecha;
         private RJCodeAdvance.RJControls.RJButton btnIzquierda;

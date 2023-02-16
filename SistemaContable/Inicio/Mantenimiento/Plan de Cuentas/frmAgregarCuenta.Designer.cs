@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarCuenta));
             this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbEstado = new System.Windows.Forms.ComboBox();
@@ -49,7 +48,6 @@
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckAjuste = new Bunifu.UI.WinForms.BunifuCheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +64,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(232, 310);
+            this.btnAceptar.Location = new System.Drawing.Point(117, 328);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(150, 31);
             this.btnAceptar.TabIndex = 3;
@@ -75,20 +73,10 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox2.Location = new System.Drawing.Point(457, 327);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(130, 66);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 73;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(191, 182);
+            this.panel2.Location = new System.Drawing.Point(104, 182);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(252, 1);
             this.panel2.TabIndex = 71;
@@ -96,7 +84,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(191, 146);
+            this.panel1.Location = new System.Drawing.Point(104, 146);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 1);
             this.panel1.TabIndex = 70;
@@ -109,7 +97,7 @@
             this.cbEstado.Items.AddRange(new object[] {
             "ACTIVO",
             "INACTIVO"});
-            this.cbEstado.Location = new System.Drawing.Point(191, 235);
+            this.cbEstado.Location = new System.Drawing.Point(104, 235);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(252, 21);
             this.cbEstado.TabIndex = 68;
@@ -119,7 +107,7 @@
             this.cbRubro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.cbRubro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbRubro.FormattingEnabled = true;
-            this.cbRubro.Location = new System.Drawing.Point(191, 203);
+            this.cbRubro.Location = new System.Drawing.Point(104, 203);
             this.cbRubro.Name = "cbRubro";
             this.cbRubro.Size = new System.Drawing.Size(252, 21);
             this.cbRubro.TabIndex = 67;
@@ -129,7 +117,7 @@
             this.tbDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescripcion.Location = new System.Drawing.Point(191, 170);
+            this.tbDescripcion.Location = new System.Drawing.Point(104, 170);
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(252, 13);
             this.tbDescripcion.TabIndex = 2;
@@ -140,7 +128,7 @@
             this.tbCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCuenta.Location = new System.Drawing.Point(191, 133);
+            this.tbCuenta.Location = new System.Drawing.Point(104, 133);
             this.tbCuenta.Name = "tbCuenta";
             this.tbCuenta.Size = new System.Drawing.Size(252, 13);
             this.tbCuenta.TabIndex = 1;
@@ -151,7 +139,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(132, 235);
+            this.label10.Location = new System.Drawing.Point(45, 235);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 16);
             this.label10.TabIndex = 61;
@@ -162,7 +150,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(136, 203);
+            this.label9.Location = new System.Drawing.Point(49, 203);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 16);
             this.label9.TabIndex = 60;
@@ -173,7 +161,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(100, 167);
+            this.label6.Location = new System.Drawing.Point(13, 167);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 16);
             this.label6.TabIndex = 57;
@@ -184,7 +172,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(129, 131);
+            this.label5.Location = new System.Drawing.Point(42, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 56;
@@ -195,7 +183,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(129, 95);
+            this.label4.Location = new System.Drawing.Point(42, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
             this.label4.TabIndex = 55;
@@ -206,7 +194,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(210, 39);
+            this.label3.Location = new System.Drawing.Point(89, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 24);
             this.label3.TabIndex = 54;
@@ -217,7 +205,7 @@
             this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCodigo.Location = new System.Drawing.Point(191, 98);
+            this.tbCodigo.Location = new System.Drawing.Point(104, 98);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(252, 13);
             this.tbCodigo.TabIndex = 0;
@@ -231,7 +219,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(585, 21);
+            this.panel7.Size = new System.Drawing.Size(379, 21);
             this.panel7.TabIndex = 83;
             this.panel7.Tag = "1";
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
@@ -239,11 +227,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Location = new System.Drawing.Point(3, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.Size = new System.Drawing.Size(95, 17);
             this.label1.TabIndex = 31;
             this.label1.Text = "Agregar Cuenta";
             // 
@@ -276,7 +264,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(471, 0);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(265, 0);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = true;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -313,7 +301,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(280, 278);
+            this.label13.Location = new System.Drawing.Point(193, 278);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(68, 13);
             this.label13.TabIndex = 103;
@@ -337,7 +325,7 @@
             this.CheckAjuste.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckAjuste.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckAjuste.CustomCheckmarkImage = null;
-            this.CheckAjuste.Location = new System.Drawing.Point(260, 274);
+            this.CheckAjuste.Location = new System.Drawing.Point(173, 274);
             this.CheckAjuste.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckAjuste.Name = "CheckAjuste";
             this.CheckAjuste.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -377,13 +365,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(585, 393);
+            this.ClientSize = new System.Drawing.Size(379, 393);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.CheckAjuste);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cbEstado);
@@ -400,7 +387,6 @@
             this.Name = "frmAgregarCuenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarCuenta";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);
@@ -411,7 +397,6 @@
         #endregion
 
         private RJCodeAdvance.RJControls.RJButton btnAceptar;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbEstado;
