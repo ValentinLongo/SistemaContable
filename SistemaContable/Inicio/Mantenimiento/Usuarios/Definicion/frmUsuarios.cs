@@ -119,7 +119,7 @@ namespace SistemaContable.Usuarios
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            frmReporte freporte = new frmReporte("Usuarios","Select * from Usuario");
+            frmReporte freporte = new frmReporte("Usuarios", "SELECT * FROM Usuario Left Join Perfil on usu_perfil = per_codigo WHERE usu_codigo = 1","Titulo","Param1","Param2");
             freporte.ShowDialog();
         }
     }

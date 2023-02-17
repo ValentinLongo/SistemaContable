@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ActiveReportsLayout 
+	GUIDLIB="{00000000-0000-0000-0000-000000000000}" GUIDREP="{00000000-0000-0000-0000-000000000000}" 
+	LICENSE="10000000"
+	PrintWidth="11904"
+	ScriptLang="VBScript"
+>
+<Watermark
+		>
+</Watermark>
+<Script>
+<![CDATA[Option Explicit 
+
+
+' parameters(mp) and special varfields (msv)
+Dim msvPageNumber
+' /parameters...
+
+
+' Properties that cannot be converted with this wizard
+
+' Report.CaseInsensitiveSQLData = Verdadero
+' Report.ConvertDateTimeType = 1
+' Report.ConvertNullFieldToDefault = Verdadero
+' Report.DriverName = winspool
+' Report.PortName = FPR4:
+' Report.PrinterName = Epson Stylus COLOR 850 ESC/P 2
+' Report.TranslateDosMemos = Verdadero
+' Report.TranslateDosStrings = Verdadero
+' Campo1.CloseAtPageBreak = Verdadero
+' Sección1.MinimumHeight = 295
+' Sección1.MinimumHeight = 295
+' Area1.NewPageBefore = Verdadero
+' Texto1.CloseAtPageBreak = Verdadero
+' Texto2.CloseAtPageBreak = Verdadero
+' Texto3.CloseAtPageBreak = Verdadero
+' Texto4.CloseAtPageBreak = Verdadero
+' Texto5.CloseAtPageBreak = Verdadero
+' Texto6.CloseAtPageBreak = Verdadero
+' Texto7.CloseAtPageBreak = Verdadero
+' Texto8.CloseAtPageBreak = Verdadero
+' Línea1.EndSection = 'Sección2'
+' Texto9.CloseAtPageBreak = Verdadero
+' Línea2.EndSection = 'Sección2'
+' Campo2.CloseAtPageBreak = Verdadero
+' Campo3.CloseAtPageBreak = Verdadero
+' Campo4.CloseAtPageBreak = Verdadero
+' Campo5.CloseAtPageBreak = Verdadero
+' Texto10.CloseAtPageBreak = Verdadero
+' Texto11.CloseAtPageBreak = Verdadero
+' Texto12.CloseAtPageBreak = Verdadero
+' Texto13.CloseAtPageBreak = Verdadero
+' Campo6.CloseAtPageBreak = Verdadero
+' Campo7.CloseAtPageBreak = Verdadero
+' Campo8.CloseAtPageBreak = Verdadero
+' Texto14.CloseAtPageBreak = Verdadero
+' Campo9.CloseAtPageBreak = Verdadero
+' Campo10.CloseAtPageBreak = Verdadero
+' Campo11.CloseAtPageBreak = Verdadero
+' Campo12.CloseAtPageBreak = Verdadero
+' Texto15.CloseAtPageBreak = Verdadero
+' Texto16.CloseAtPageBreak = Verdadero
+' Texto17.CloseAtPageBreak = Verdadero
+' Texto18.CloseAtPageBreak = Verdadero
+' Texto19.CloseAtPageBreak = Verdadero
+' Texto20.CloseAtPageBreak = Verdadero
+' Texto21.CloseAtPageBreak = Verdadero
+' Texto22.CloseAtPageBreak = Verdadero
+' Línea3.EndSection = 'Sección2'
+' Campo13.CloseAtPageBreak = Verdadero
+' Campo14.CloseAtPageBreak = Verdadero
+' Campo15.CloseAtPageBreak = Verdadero
+' Campo16.CloseAtPageBreak = Verdadero
+' Campo17.CloseAtPageBreak = Verdadero
+' Sección2.MinimumHeight = 4230
+' Sección2.MinimumHeight = 4230
+' Area2.KeepTogether = Verdadero
+' Campo18.CloseAtPageBreak = Verdadero
+' Campo19.CloseAtPageBreak = Verdadero
+' Campo20.CloseAtPageBreak = Verdadero
+' Campo21.CloseAtPageBreak = Verdadero
+' Campo22.CloseAtPageBreak = Verdadero
+' Campo23.CloseAtPageBreak = Verdadero
+' Campo24.CloseAtPageBreak = Verdadero
+' Sección3.MinimumHeight = 214
+' Sección3.MinimumHeight = 214
+' Campo30.CloseAtPageBreak = Verdadero
+' Sección5.MinimumHeight = 388
+' Sección5.MinimumHeight = 388
+' Area4.PrintAtBottomOfPage = Verdadero
+' Area4.NewPageAfter = Verdadero
+' Area4.KeepTogether = Verdadero
+' Texto23.CloseAtPageBreak = Verdadero
+' Texto24.CloseAtPageBreak = Verdadero
+' Texto25.CloseAtPageBreak = Verdadero
+' Texto26.CloseAtPageBreak = Verdadero
+' Texto27.CloseAtPageBreak = Verdadero
+' Línea4.EndSection = 'Sección4'
+' Campo25.CloseAtPageBreak = Verdadero
+' Campo26.CloseAtPageBreak = Verdadero
+' Campo27.CloseAtPageBreak = Verdadero
+' Campo28.CloseAtPageBreak = Verdadero
+' Campo29.CloseAtPageBreak = Verdadero
+' Sección4.MinimumHeight = 1626
+' Sección4.MinimumHeight = 1626
+' Area5.NewPageAfter = Verdadero
+' /Properties that cannot be converted]]></Script>
+<PageSettings	LeftMargin="168"
+	RightMargin="168"
+	TopMargin="168"
+	BottomMargin="792"
+	PaperSize="9"
+	Orientation="1"
+>
+</PageSettings>
+<StyleSheet>
+	<Style Name="Normal"
+	Value="font-family: &apos;Arial&apos;; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-color: rgb(255,255,255); background-image: inherit; background-repeat: inherit; background-attachment: inherit; background-x-position: inherit; background-y-position: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-can-grow: inherit; ddo-can-shrink: inherit; ddo-char-set: 0; "
+	/>
+	<Style Name="Heading1"
+	Value="font-family: &apos;inherit&apos;; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit; "
+	/>
+	<Style Name="Heading2"
+	Value="font-family: &apos;Times New Roman&apos;; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit; "
+	/>
+	<Style Name="Heading3"
+	Value="font-family: &apos;inherit&apos;; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit; "
+	/>
+	<Style Name="Heading4"
+	/>
+</StyleSheet>
+<Sections>
+	<Section Type="ReportHeader" Name="ReportHeader"
+		Height="355"
+	>
+		<Control 
+		Type="AR.Field"
+		Name="Campo1"
+		DataField="&apos;= &apos;&apos;
+"
+		Left="86"
+		Top="75"
+		Width="11033"
+		Height="220"
+		Text="&apos;= &apos;&apos;
+"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 12pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+	</Section>
+	<Section Type="PageHeader" Name="PageHeader"
+		Height="4250"
+	>
+		<Control 
+		Type="AR.Label"
+		Name="Texto1"
+		Left="10122"
+		Top="3946"
+		Width="893"
+		Height="216"
+		Caption="Total"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto2"
+		Left="8385"
+		Top="3945"
+		Width="1305"
+		Height="216"
+		Caption="P.Unitario"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto3"
+		Left="7636"
+		Top="3946"
+		Width="654"
+		Height="216"
+		Caption="%IVA"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto4"
+		Left="6450"
+		Top="3945"
+		Width="1020"
+		Height="216"
+		Caption="Cantidad"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto5"
+		Left="2238"
+		Top="3946"
+		Width="1349"
+		Height="216"
+		Caption="Artículo"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto6"
+		Left="60"
+		Top="3946"
+		Width="1350"
+		Height="216"
+		Caption="Código"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto7"
+		Left="6165"
+		Top="2845"
+		Width="1340"
+		Height="216"
+		Caption="CUIT :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto8"
+		Left="60"
+		Top="3640"
+		Width="1425"
+		Height="212"
+		Caption="DETALLE"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Line"
+		Name="Línea1"
+		X1="0"
+		Y1="3890"
+		X2="11552"
+		Y2="3890"
+		LineWeight="2"
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto9"
+		Left="60"
+		Top="1465"
+		Width="1425"
+		Height="212"
+		Caption="DATOS CLIENTE"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Line"
+		Name="Línea2"
+		X1="0"
+		Y1="1695"
+		X2="11565"
+		Y2="1695"
+		LineWeight="2"
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo2"
+		DataField="&apos;= &apos;&apos;
+"
+		Left="2655"
+		Top="1140"
+		Width="6015"
+		Height="390"
+		Text="&apos;= &apos;&apos;
+"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 15pt; font-weight: bold; color: rgb(0,0,0); text-align: center; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo3"
+		DataField="&apos;= &apos;&apos;
+"
+		Left="8388"
+		Top="385"
+		Width="2240"
+		Height="212"
+		Text="&apos;= &apos;&apos;
+"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo4"
+		DataField="&apos;= &apos;&apos;
+"
+		Left="8380"
+		Top="85"
+		Width="2240"
+		Height="212"
+		Text="&apos;= &apos;&apos;
+"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo5"
+		DataField="&apos;= &apos;&apos;
+"
+		Left="7068"
+		Top="690"
+		Width="3620"
+		Height="212"
+		Text="&apos;= &apos;&apos;
+"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto10"
+		Left="7130"
+		Top="390"
+		Width="1120"
+		Height="212"
+		Caption="IIBB Nro :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto11"
+		Left="7015"
+		Top="90"
+		Width="1290"
+		Height="225"
+		Caption="CUIT Nro  :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto12"
+		Left="60"
+		Top="690"
+		Width="1315"
+		Height="212"
+		Caption="Localidad :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto13"
+		Left="60"
+		Top="390"
+		Width="1320"
+		Height="212"
+		Caption="Teléfono :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo6"
+		DataField="&apos;= &apos;&apos;
+"
+		Left="1460"
+		Top="695"
+		Width="5135"
+		Height="212"
+		Text="&apos;= &apos;&apos;
+"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo7"
+		DataField="&apos;= &apos;&apos;
+"
+		Left="1475"
+		Top="375"
+		Width="4100"
+		Height="212"
+		Text="&apos;= &apos;&apos;
+"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo8"
+		DataField="&apos;= &apos;&apos;
+"
+		Left="1465"
+		Top="75"
+		Width="4100"
+		Height="212"
+		Text="&apos;= &apos;&apos;
+"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto14"
+		Left="60"
+		Top="75"
+		Width="1320"
+		Height="212"
+		Caption="Domicilio :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo9"
+		DataField="&apos;= [MovVtaPed.vta_cuit1] + &quot;-&quot; + [MovVtaPed.vta_cuit2]  + &quot;-&quot; + [MovVtaPed.vta_cuit3]
+"
+		Left="7725"
+		Top="2832"
+		Width="1365"
+		Height="216"
+		Text="&apos;= [MovVtaPed.vta_cuit1] + &quot;-&quot; + [MovVtaPed.vta_cuit2]  + &quot;-&quot; + [MovVtaPed.vta_cuit3]
+"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo10"
+		DataField="CondIva.iva_condicion"
+		Left="1497"
+		Top="2847"
+		Width="4593"
+		Height="216"
+		Text="iva_condicion"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo11"
+		DataField="Localidad.loc_nombre"
+		Left="1488"
+		Top="2547"
+		Width="4572"
+		Height="216"
+		Text="loc_nombre"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo12"
+		DataField="Provincia.pro_descri"
+		Left="7710"
+		Top="2537"
+		Width="2940"
+		Height="216"
+		Text="pro_descri"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto15"
+		Left="6338"
+		Top="2220"
+		Width="1187"
+		Height="216"
+		Caption="C.P. :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto16"
+		Left="6482"
+		Top="1890"
+		Width="1108"
+		Height="216"
+		Caption="Telefono :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto17"
+		Left="60"
+		Top="3175"
+		Width="1329"
+		Height="216"
+		Caption="Atención :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto18"
+		Left="60"
+		Top="2845"
+		Width="1335"
+		Height="216"
+		Caption="Condición :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto19"
+		Left="6170"
+		Top="2530"
+		Width="1340"
+		Height="216"
+		Caption="Provincia :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto20"
+		Left="60"
+		Top="2540"
+		Width="1350"
+		Height="216"
+		Caption="Localidad :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto21"
+		Left="60"
+		Top="2235"
+		Width="1349"
+		Height="216"
+		Caption="Dirección :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto22"
+		Left="60"
+		Top="1915"
+		Width="1349"
+		Height="216"
+		Caption="R. Social :"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Line"
+		Name="Línea3"
+		X1="0"
+		Y1="4230"
+		X2="11567"
+		Y2="4230"
+		LineWeight="2"
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo13"
+		DataField="MovVtaPed.vta_cliente"
+		Left="1515"
+		Top="1920"
+		Width="4095"
+		Height="212"
+		Text="vta_cliente"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo14"
+		DataField="MovVtaPed.vta_domicilio"
+		Left="1530"
+		Top="2235"
+		Width="4095"
+		Height="212"
+		Text="vta_domicilio"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo15"
+		DataField="MovVtaPed.vta_usuario1"
+		Left="1515"
+		Top="3180"
+		Width="4095"
+		Height="212"
+		Text="vta_usuario1"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo16"
+		DataField="MovVtaPed.vta_telefono"
+		Left="7680"
+		Top="1890"
+		Width="3795"
+		Height="212"
+		Text="vta_telefono"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo17"
+		DataField="MovVtaPed.vta_codpos1"
+		Left="7665"
+		Top="2205"
+		Width="1050"
+		Height="212"
+		Text="vta_codpos1"
+		OutputFormat="#,##0"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+	</Section>
+	<Section Type="Detail" Name="Detail"
+		Height="220"
+		KeepTogether="-1"
+	>
+		<Control 
+		Type="AR.Field"
+		Name="Campo18"
+		DataField="MovArticPed.his_codtex"
+		Left="60"
+		Top="2"
+		Width="420"
+		Height="212"
+		Text="his_codtex"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo19"
+		DataField="MovArticPed.his_codnum"
+		Left="525"
+		Top="2"
+		Width="1620"
+		Height="212"
+		Text="his_codnum"
+		OutputFormat="0"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo20"
+		DataField="MovArticPed.his_articulo"
+		Left="2235"
+		Top="2"
+		Width="4230"
+		Height="212"
+		Text="his_articulo"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo21"
+		DataField="MovArticPed.his_aliva"
+		Left="7665"
+		Top="2"
+		Width="705"
+		Height="212"
+		Text="his_aliva"
+		OutputFormat="#,##0.00"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo22"
+		DataField="MovArticPed.his_punitario"
+		Left="8475"
+		Top="2"
+		Width="1200"
+		Height="212"
+		Text="his_punitario"
+		OutputFormat="#,##0.00"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo23"
+		DataField="MovArticPed.his_total"
+		Left="9750"
+		Top="2"
+		Width="1275"
+		Height="212"
+		Text="his_total"
+		OutputFormat="#,##0.00"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo24"
+		DataField="MovArticPed.his_cantidad"
+		Left="6645"
+		Top="2"
+		Width="810"
+		Height="212"
+		Text="his_cantidad"
+		OutputFormat="#,##0.00"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+	</Section>
+	<Section Type="PageFooter" Name="PageFooter"
+		Height="388"
+	>
+		<Control 
+		Type="AR.Field"
+		Name="Campo30"
+		DataField="&apos;= rpt.msvPageNumber"
+		Left="15165"
+		Top="172"
+		Width="765"
+		Height="216"
+		Text="&apos;= rpt.msvPageNumber"
+		OutputFormat="#,##0"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; color: rgb(0,0,0); "
+		>
+		</Control>
+	</Section>
+	<Section Type="ReportFooter" Name="ReportFooter"
+		Height="1810"
+	>
+		<Control 
+		Type="AR.Label"
+		Name="Texto23"
+		Left="8280"
+		Top="165"
+		Width="1340"
+		Height="216"
+		Caption="Neto 21%:"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto24"
+		Left="8280"
+		Top="480"
+		Width="1340"
+		Height="216"
+		Caption="Neto 10,5%:"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto25"
+		Left="8280"
+		Top="810"
+		Width="1340"
+		Height="216"
+		Caption="IVA 21%:"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto26"
+		Left="8280"
+		Top="1110"
+		Width="1340"
+		Height="216"
+		Caption="IVA 10,5%:"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Label"
+		Name="Texto27"
+		Left="8280"
+		Top="1410"
+		Width="1340"
+		Height="216"
+		Caption="Total:"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 238; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); text-align: right; "
+		>
+		</Control>
+		<Control 
+		Type="AR.Line"
+		Name="Línea4"
+		X1="0"
+		Y1="60"
+		X2="11567"
+		Y2="60"
+		LineWeight="2"
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo25"
+		DataField="MovVtaPed.vta_neto21"
+		Left="9765"
+		Top="165"
+		Width="1230"
+		Height="224"
+		Text="vta_neto21"
+		OutputFormat="#,##0.00"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo26"
+		DataField="MovVtaPed.vta_neto10"
+		Left="9765"
+		Top="480"
+		Width="1230"
+		Height="224"
+		Text="vta_neto10"
+		OutputFormat="#,##0.00"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo27"
+		DataField="MovVtaPed.vta_iva21"
+		Left="9765"
+		Top="825"
+		Width="1230"
+		Height="224"
+		Text="vta_iva21"
+		OutputFormat="#,##0.00"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo28"
+		DataField="MovVtaPed.vta_iva10"
+		Left="9765"
+		Top="1110"
+		Width="1230"
+		Height="224"
+		Text="vta_iva10"
+		OutputFormat="#,##0.00"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+		<Control 
+		Type="AR.Field"
+		Name="Campo29"
+		DataField="MovVtaPed.vta_total"
+		Left="9765"
+		Top="1395"
+		Width="1230"
+		Height="224"
+		Text="vta_total"
+		OutputFormat="#,##0.00"
+		CanGrow="0"
+		ClassName="Normal"
+		Style="font-family: &apos;Courier New&apos;; ddo-char-set: 0; font-size: 9.75pt; font-weight: bold; color: rgb(0,0,0); "
+		>
+		</Control>
+	</Section>
+</Sections>
+</ActiveReportsLayout>
