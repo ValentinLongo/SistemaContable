@@ -46,10 +46,10 @@
             this.dgvConceptosContables.AllowUserToDeleteRows = false;
             this.dgvConceptosContables.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConceptosContables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConceptosContables.Location = new System.Drawing.Point(8, 23);
+            this.dgvConceptosContables.Location = new System.Drawing.Point(26, 23);
             this.dgvConceptosContables.Name = "dgvConceptosContables";
             this.dgvConceptosContables.ReadOnly = true;
-            this.dgvConceptosContables.Size = new System.Drawing.Size(949, 540);
+            this.dgvConceptosContables.Size = new System.Drawing.Size(931, 522);
             this.dgvConceptosContables.TabIndex = 0;
             this.dgvConceptosContables.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
             // 
@@ -58,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(32, 598);
+            this.label1.Location = new System.Drawing.Point(50, 580);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 5;
@@ -77,7 +77,7 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(967, 519);
+            this.btnImprimir.Location = new System.Drawing.Point(967, 501);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(154, 44);
             this.btnImprimir.TabIndex = 7;
@@ -160,11 +160,11 @@
             this.ShapeBusqueda.BorderThickness = 1;
             this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.FillShape = true;
-            this.ShapeBusqueda.Location = new System.Drawing.Point(8, 569);
+            this.ShapeBusqueda.Location = new System.Drawing.Point(26, 551);
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
-            this.ShapeBusqueda.Size = new System.Drawing.Size(949, 69);
+            this.ShapeBusqueda.Size = new System.Drawing.Size(931, 69);
             this.ShapeBusqueda.TabIndex = 53;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
@@ -172,9 +172,9 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(114, 612);
+            this.panel2.Location = new System.Drawing.Point(132, 594);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(812, 1);
+            this.panel2.Size = new System.Drawing.Size(794, 1);
             this.panel2.TabIndex = 55;
             // 
             // tbDescripcion
@@ -183,9 +183,9 @@
             this.tbDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescripcion.Location = new System.Drawing.Point(114, 598);
+            this.tbDescripcion.Location = new System.Drawing.Point(132, 580);
             this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(812, 13);
+            this.tbDescripcion.Size = new System.Drawing.Size(794, 13);
             this.tbDescripcion.TabIndex = 54;
             this.tbDescripcion.Tag = "00000";
             // 

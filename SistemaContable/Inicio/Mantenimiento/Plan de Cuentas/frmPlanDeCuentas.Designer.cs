@@ -69,11 +69,11 @@
             this.Hija,
             this.Tabulador,
             this.AjustaInf});
-            this.dgvCuentas.Location = new System.Drawing.Point(12, 92);
+            this.dgvCuentas.Location = new System.Drawing.Point(12, 113);
             this.dgvCuentas.Name = "dgvCuentas";
             this.dgvCuentas.ReadOnly = true;
             this.dgvCuentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCuentas.Size = new System.Drawing.Size(973, 505);
+            this.dgvCuentas.Size = new System.Drawing.Size(945, 512);
             this.dgvCuentas.TabIndex = 5;
             this.dgvCuentas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
             // 
@@ -132,9 +132,9 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(992, 566);
+            this.btnImprimir.Location = new System.Drawing.Point(966, 581);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(130, 31);
+            this.btnImprimir.Size = new System.Drawing.Size(154, 44);
             this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
@@ -153,9 +153,9 @@
             this.btnModificar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(992, 144);
+            this.btnModificar.Location = new System.Drawing.Point(966, 188);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(130, 31);
+            this.btnModificar.Size = new System.Drawing.Size(154, 44);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
@@ -175,9 +175,9 @@
             this.btnAgregar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(992, 92);
+            this.btnAgregar.Location = new System.Drawing.Point(966, 115);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(130, 31);
+            this.btnAgregar.Size = new System.Drawing.Size(154, 44);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
@@ -188,7 +188,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(115, 67);
+            this.panel2.Location = new System.Drawing.Point(115, 75);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(212, 1);
             this.panel2.TabIndex = 46;
@@ -199,7 +199,7 @@
             this.tbDescipcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbDescipcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescipcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescipcion.Location = new System.Drawing.Point(115, 54);
+            this.tbDescipcion.Location = new System.Drawing.Point(115, 62);
             this.tbDescipcion.Name = "tbDescipcion";
             this.tbDescipcion.Size = new System.Drawing.Size(212, 13);
             this.tbDescipcion.TabIndex = 0;
@@ -212,7 +212,7 @@
             this.txtDescri.AutoSize = true;
             this.txtDescri.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescri.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtDescri.Location = new System.Drawing.Point(21, 53);
+            this.txtDescri.Location = new System.Drawing.Point(21, 60);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(88, 16);
             this.txtDescri.TabIndex = 44;
@@ -232,9 +232,9 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::SistemaContable.Properties.Resources.lupa;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(827, 46);
+            this.btnBuscar.Location = new System.Drawing.Point(784, 45);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(144, 31);
+            this.btnBuscar.Size = new System.Drawing.Size(154, 44);
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
@@ -250,11 +250,11 @@
             this.ShapeBusqueda.BorderThickness = 1;
             this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.FillShape = true;
-            this.ShapeBusqueda.Location = new System.Drawing.Point(12, 38);
+            this.ShapeBusqueda.Location = new System.Drawing.Point(12, 27);
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
-            this.ShapeBusqueda.Size = new System.Drawing.Size(973, 48);
+            this.ShapeBusqueda.Size = new System.Drawing.Size(945, 80);
             this.ShapeBusqueda.TabIndex = 55;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
@@ -264,7 +264,7 @@
             this.lblBusqueda.AutoSize = true;
             this.lblBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBusqueda.Location = new System.Drawing.Point(21, 29);
+            this.lblBusqueda.Location = new System.Drawing.Point(21, 19);
             this.lblBusqueda.Name = "lblBusqueda";
             this.lblBusqueda.Size = new System.Drawing.Size(72, 17);
             this.lblBusqueda.TabIndex = 56;
@@ -283,9 +283,9 @@
             this.btnEliminar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(992, 198);
+            this.btnEliminar.Location = new System.Drawing.Point(966, 264);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(130, 31);
+            this.btnEliminar.Size = new System.Drawing.Size(154, 44);
             this.btnEliminar.TabIndex = 57;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
@@ -385,7 +385,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1129, 609);
+            this.ClientSize = new System.Drawing.Size(1129, 650);
             this.Controls.Add(this.ControlBar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblBusqueda);

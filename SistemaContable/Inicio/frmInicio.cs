@@ -46,6 +46,8 @@ namespace SistemaContable
         {
             InitializeComponent();
 
+            lblUsu.Text = "Usuario: " + FLogin.NombreUsuario;
+
             Negocio.FValidacionesEventos.EventosFormulario(this);
             Negocio.FFormatoSistema.FondoMDI(this,borde1,borde2,borde3,pbLogo);
             //Negocio.FFormatoSistema.SetearFormato(this);
@@ -53,6 +55,7 @@ namespace SistemaContable
 
         private void frmInicio_MdiChildActivate(object sender, EventArgs e)
         {
+            //cambiar
             borde1.BackColor = Color.FromArgb(255, 45, 45, 45);
             borde2.BackColor = Color.FromArgb(255, 45, 45, 45);
             borde3.BackColor = Color.FromArgb(255, 45, 45, 45);
@@ -107,43 +110,60 @@ namespace SistemaContable
         //
 
         //ACCESOS DIRECTOS
-        frmUsuarios usuarios = new frmUsuarios();
-        frmPlanDeCuentas planDeCuentas = new frmPlanDeCuentas();
-        frmConceptosContables conceptoscontables = new frmConceptosContables();
-        frmAgenda agenda = new frmAgenda();
-        frmAsientosContables asientocontable = new frmAsientosContables();
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void tsbUsuario_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(usuarios, this, pbLogo, toolStripButton1.Tag.ToString());
+            frmUsuarios usuarios = new frmUsuarios();
+            Negocio.FGenerales.ManejarFormularios(usuarios, this, pbLogo, tsbUsuario.Tag.ToString());
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void tsbPlandeCuenta_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(planDeCuentas, this, pbLogo, toolStripButton2.Tag.ToString());
+            frmPlanDeCuentas planDeCuentas = new frmPlanDeCuentas();
+            Negocio.FGenerales.ManejarFormularios(planDeCuentas, this, pbLogo, tsbPlandeCuenta.Tag.ToString());
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void tsbConceptoContable_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(conceptoscontables, this, pbLogo, toolStripButton3.Tag.ToString());
+            frmConceptosContables conceptoscontables = new frmConceptosContables();
+            Negocio.FGenerales.ManejarFormularios(conceptoscontables, this, pbLogo, tsbConceptoContable.Tag.ToString());
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
+        private void tsbAgenda_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(agenda, this, pbLogo, toolStripButton4.Tag.ToString());
+            frmAgenda agenda = new frmAgenda();
+            Negocio.FGenerales.ManejarFormularios(agenda, this, pbLogo, tsbAgenda.Tag.ToString());
         }
 
-        private void toolStripButton5_Click(object sender, EventArgs e)
+        private void tsbMovimientodeAsientos_Click(object sender, EventArgs e)
         {
-            Negocio.FGenerales.ManejarFormularios(asientocontable, this, pbLogo, toolStripButton5.Tag.ToString());
+            frmAsientosContables asientocontable = new frmAsientosContables();
+            Negocio.FGenerales.ManejarFormularios(asientocontable, this, pbLogo, tsbMovimientodeAsientos.Tag.ToString());
         }
 
-        private void toolStripButton22_Click(object sender, EventArgs e)
+        private void tsbCalculadora_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process calc = new System.Diagnostics.Process { StartInfo = { FileName = @"calc.exe" } };
             calc.Start();
         }
 
+        private void tsbCerrarSesion_Click(object sender, EventArgs e)
+        {
+            tsbCerrarSesion.Visible = false;
+            Negocio.FGenerales.Sesion(this, 1);
+            tsbAbrirSesion.Visible = true;
+        }
+
+        private void tsbAbrirSesion_Click(object sender, EventArgs e)
+        {
+            tsbAbrirSesion.Visible = false;
+            Negocio.FGenerales.Sesion(this, 2);
+            tsbCerrarSesion.Visible = true;
+        }
+
+        private void tsbConfigImpresora_Click(object sender, EventArgs e)
+        {
+
+        }
         //
 
         //BOTONES INICIO (ABREN LOS MENUS)
@@ -476,6 +496,7 @@ namespace SistemaContable
         //30
         private void movimientoDeAsientosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmAsientosContables asientocontable = new frmAsientosContables();
             Negocio.FGenerales.ManejarFormularios(asientocontable, this, pbLogo, movimientoDeAsientosToolStripMenuItem.Tag.ToString());
         }
         private void actualizaciónToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -547,6 +568,7 @@ namespace SistemaContable
         }
         private void definicionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmUsuarios usuarios = new frmUsuarios();
             Negocio.FGenerales.ManejarFormularios(usuarios, this, pbLogo, definicionToolStripMenuItem.Tag.ToString());
         }
         private void modificaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -561,12 +583,12 @@ namespace SistemaContable
         }
         private void planDeCuentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            Negocio.FGenerales.ManejarFormularios(planDeCuentas, this, pbLogo, planDeCuentasToolStripMenuItem.Tag.ToString());
-
+            frmPlanDeCuentas plandecuentas = new frmPlanDeCuentas();
+            Negocio.FGenerales.ManejarFormularios(plandecuentas, this, pbLogo, planDeCuentasToolStripMenuItem.Tag.ToString());
         }
         private void conceptosContablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmConceptosContables conceptoscontables = new frmConceptosContables();
             Negocio.FGenerales.ManejarFormularios(conceptoscontables, this, pbLogo, conceptosContablesToolStripMenuItem.Tag.ToString());
         }
         private void rubrosContablesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -591,6 +613,7 @@ namespace SistemaContable
         }
         private void agendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmAgenda agenda = new frmAgenda();
             Negocio.FGenerales.ManejarFormularios(agenda, this, pbLogo, agendaToolStripMenuItem.Tag.ToString());
         }
         private void parametrosContablesToolStripMenuItem_Click(object sender, EventArgs e)

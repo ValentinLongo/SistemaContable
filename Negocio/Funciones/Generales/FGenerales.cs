@@ -94,5 +94,29 @@ namespace Negocio
                 Formulario.Show();
             }
         }
+
+        public static void Sesion(Form Inicio, int proceso) //proceso 1 = cierra sesion, 2 = abre sesion
+        {
+            if (proceso == 1)
+            {
+                foreach (Control Ctrl in Inicio.Controls)
+                {
+                    if (Ctrl.Name != "controlbarMinimizar" || Ctrl.Name != "controlbarCerrar")
+                    {
+                        Ctrl.Enabled = false;
+                    }
+                }
+            }
+            else if (proceso == 2)
+            {
+                foreach (Control Ctrl in Inicio.Controls)
+                {
+                    if (Ctrl.Name != "controlbarMinimizar" || Ctrl.Name != "controlbarCerrar")
+                    {
+                        Ctrl.Enabled = true;
+                    }
+                }
+            }
+        }
     }
 }

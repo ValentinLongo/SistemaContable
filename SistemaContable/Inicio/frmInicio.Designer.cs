@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.tsbUsuario = new System.Windows.Forms.ToolStripButton();
+            this.tsbPlandeCuenta = new System.Windows.Forms.ToolStripButton();
+            this.tsbConceptoContable = new System.Windows.Forms.ToolStripButton();
+            this.tsbAgenda = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.tsbMovimientodeAsientos = new System.Windows.Forms.ToolStripButton();
+            this.tsbLibroDiario = new System.Windows.Forms.ToolStripButton();
+            this.tsbLibroMayor = new System.Windows.Forms.ToolStripButton();
+            this.tsbBalanceDeSumasySaldos = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
@@ -51,11 +51,13 @@
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton21 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton22 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton23 = new System.Windows.Forms.ToolStripButton();
+            this.tsbBlockdeNotas = new System.Windows.Forms.ToolStripButton();
+            this.tsbMensajesInternos = new System.Windows.Forms.ToolStripButton();
+            this.tsbCalculadora = new System.Windows.Forms.ToolStripButton();
+            this.tsbNotas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbCerrarSesion = new System.Windows.Forms.ToolStripButton();
+            this.tsbConfigImpresora = new System.Windows.Forms.ToolStripButton();
             this.MenuArchivos = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.respaldoDeInformacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restauracionDeInformacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,11 +106,11 @@
             this.MenuAyuda = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.soporteInteractivoDeContableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.controlbarCerrar = new System.Windows.Forms.Button();
-            this.controlboxMinimizar = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.HoraFecha = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.controlbarCerrar = new System.Windows.Forms.Button();
+            this.controlbarMinimizar = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.lblUsu = new System.Windows.Forms.Label();
+            this.HoraFecha = new System.Windows.Forms.Timer(this.components);
             this.btnAyuda2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnMantenimiento2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnContabilidad2 = new RJCodeAdvance.RJControls.RJButton();
@@ -132,6 +134,7 @@
             this.borde2 = new System.Windows.Forms.Panel();
             this.borde3 = new System.Windows.Forms.Panel();
             this.borde1 = new System.Windows.Forms.Panel();
+            this.tsbAbrirSesion = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.MenuArchivos.SuspendLayout();
             this.MenuVer.SuspendLayout();
@@ -148,19 +151,19 @@
             // toolStrip1
             // 
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
-            this.toolStrip1.BackColor = System.Drawing.Color.Black;
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4,
+            this.tsbUsuario,
+            this.tsbPlandeCuenta,
+            this.tsbConceptoContable,
+            this.tsbAgenda,
             this.toolStripSeparator1,
-            this.toolStripButton5,
-            this.toolStripButton6,
-            this.toolStripButton7,
-            this.toolStripButton8,
+            this.tsbMovimientodeAsientos,
+            this.tsbLibroDiario,
+            this.tsbLibroMayor,
+            this.tsbBalanceDeSumasySaldos,
             this.toolStripSeparator2,
             this.toolStripButton9,
             this.toolStripButton10,
@@ -172,46 +175,49 @@
             this.toolStripButton15,
             this.toolStripButton16,
             this.toolStripSeparator4,
-            this.toolStripButton20,
-            this.toolStripButton21,
-            this.toolStripButton22,
-            this.toolStripButton23,
-            this.toolStripSeparator5});
+            this.tsbBlockdeNotas,
+            this.tsbMensajesInternos,
+            this.tsbCalculadora,
+            this.tsbNotas,
+            this.toolStripSeparator5,
+            this.tsbCerrarSesion,
+            this.tsbAbrirSesion,
+            this.tsbConfigImpresora});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStrip1.Name = "toolStrip1";
             // 
-            // toolStripButton1
+            // tsbUsuario
             // 
-            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Tag = "400402";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            resources.ApplyResources(this.tsbUsuario, "tsbUsuario");
+            this.tsbUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbUsuario.Name = "tsbUsuario";
+            this.tsbUsuario.Tag = "400402";
+            this.tsbUsuario.Click += new System.EventHandler(this.tsbUsuario_Click);
             // 
-            // toolStripButton2
+            // tsbPlandeCuenta
             // 
-            resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Tag = "4008";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            resources.ApplyResources(this.tsbPlandeCuenta, "tsbPlandeCuenta");
+            this.tsbPlandeCuenta.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPlandeCuenta.Name = "tsbPlandeCuenta";
+            this.tsbPlandeCuenta.Tag = "4008";
+            this.tsbPlandeCuenta.Click += new System.EventHandler(this.tsbPlandeCuenta_Click);
             // 
-            // toolStripButton3
+            // tsbConceptoContable
             // 
-            resources.ApplyResources(this.toolStripButton3, "toolStripButton3");
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Tag = "4010";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            resources.ApplyResources(this.tsbConceptoContable, "tsbConceptoContable");
+            this.tsbConceptoContable.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbConceptoContable.Name = "tsbConceptoContable";
+            this.tsbConceptoContable.Tag = "4010";
+            this.tsbConceptoContable.Click += new System.EventHandler(this.tsbConceptoContable_Click);
             // 
-            // toolStripButton4
+            // tsbAgenda
             // 
-            resources.ApplyResources(this.toolStripButton4, "toolStripButton4");
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::SistemaContable.Properties.Resources.ajustes;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Tag = "4012";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            resources.ApplyResources(this.tsbAgenda, "tsbAgenda");
+            this.tsbAgenda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAgenda.Image = global::SistemaContable.Properties.Resources.ajustes;
+            this.tsbAgenda.Name = "tsbAgenda";
+            this.tsbAgenda.Tag = "4012";
+            this.tsbAgenda.Click += new System.EventHandler(this.tsbAgenda_Click);
             // 
             // toolStripSeparator1
             // 
@@ -219,31 +225,31 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
-            // toolStripButton5
+            // tsbMovimientodeAsientos
             // 
-            resources.ApplyResources(this.toolStripButton5, "toolStripButton5");
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Tag = "3002";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            resources.ApplyResources(this.tsbMovimientodeAsientos, "tsbMovimientodeAsientos");
+            this.tsbMovimientodeAsientos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbMovimientodeAsientos.Name = "tsbMovimientodeAsientos";
+            this.tsbMovimientodeAsientos.Tag = "3002";
+            this.tsbMovimientodeAsientos.Click += new System.EventHandler(this.tsbMovimientodeAsientos_Click);
             // 
-            // toolStripButton6
+            // tsbLibroDiario
             // 
-            resources.ApplyResources(this.toolStripButton6, "toolStripButton6");
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Name = "toolStripButton6";
+            resources.ApplyResources(this.tsbLibroDiario, "tsbLibroDiario");
+            this.tsbLibroDiario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbLibroDiario.Name = "tsbLibroDiario";
             // 
-            // toolStripButton7
+            // tsbLibroMayor
             // 
-            resources.ApplyResources(this.toolStripButton7, "toolStripButton7");
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Name = "toolStripButton7";
+            resources.ApplyResources(this.tsbLibroMayor, "tsbLibroMayor");
+            this.tsbLibroMayor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbLibroMayor.Name = "tsbLibroMayor";
             // 
-            // toolStripButton8
+            // tsbBalanceDeSumasySaldos
             // 
-            resources.ApplyResources(this.toolStripButton8, "toolStripButton8");
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Name = "toolStripButton8";
+            resources.ApplyResources(this.tsbBalanceDeSumasySaldos, "tsbBalanceDeSumasySaldos");
+            this.tsbBalanceDeSumasySaldos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbBalanceDeSumasySaldos.Name = "tsbBalanceDeSumasySaldos";
             // 
             // toolStripSeparator2
             // 
@@ -308,35 +314,49 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             // 
-            // toolStripButton20
+            // tsbBlockdeNotas
             // 
-            resources.ApplyResources(this.toolStripButton20, "toolStripButton20");
-            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton20.Name = "toolStripButton20";
+            resources.ApplyResources(this.tsbBlockdeNotas, "tsbBlockdeNotas");
+            this.tsbBlockdeNotas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbBlockdeNotas.Name = "tsbBlockdeNotas";
             // 
-            // toolStripButton21
+            // tsbMensajesInternos
             // 
-            resources.ApplyResources(this.toolStripButton21, "toolStripButton21");
-            this.toolStripButton21.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton21.Name = "toolStripButton21";
+            resources.ApplyResources(this.tsbMensajesInternos, "tsbMensajesInternos");
+            this.tsbMensajesInternos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbMensajesInternos.Name = "tsbMensajesInternos";
             // 
-            // toolStripButton22
+            // tsbCalculadora
             // 
-            resources.ApplyResources(this.toolStripButton22, "toolStripButton22");
-            this.toolStripButton22.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton22.Name = "toolStripButton22";
-            this.toolStripButton22.Click += new System.EventHandler(this.toolStripButton22_Click);
+            resources.ApplyResources(this.tsbCalculadora, "tsbCalculadora");
+            this.tsbCalculadora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbCalculadora.Name = "tsbCalculadora";
+            this.tsbCalculadora.Click += new System.EventHandler(this.tsbCalculadora_Click);
             // 
-            // toolStripButton23
+            // tsbNotas
             // 
-            resources.ApplyResources(this.toolStripButton23, "toolStripButton23");
-            this.toolStripButton23.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton23.Name = "toolStripButton23";
+            resources.ApplyResources(this.tsbNotas, "tsbNotas");
+            this.tsbNotas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbNotas.Name = "tsbNotas";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+            // 
+            // tsbCerrarSesion
+            // 
+            resources.ApplyResources(this.tsbCerrarSesion, "tsbCerrarSesion");
+            this.tsbCerrarSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbCerrarSesion.Name = "tsbCerrarSesion";
+            this.tsbCerrarSesion.Click += new System.EventHandler(this.tsbCerrarSesion_Click);
+            // 
+            // tsbConfigImpresora
+            // 
+            resources.ApplyResources(this.tsbConfigImpresora, "tsbConfigImpresora");
+            this.tsbConfigImpresora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbConfigImpresora.Name = "tsbConfigImpresora";
+            this.tsbConfigImpresora.Click += new System.EventHandler(this.tsbConfigImpresora_Click);
             // 
             // MenuArchivos
             // 
@@ -728,18 +748,18 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.controlbarCerrar);
-            this.panel5.Controls.Add(this.controlboxMinimizar);
+            this.panel5.Controls.Add(this.controlbarMinimizar);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             this.panel5.Tag = "1";
             // 
-            // label3
+            // label1
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Name = "label1";
             // 
             // controlbarCerrar
             // 
@@ -752,75 +772,75 @@
             this.controlbarCerrar.MouseEnter += new System.EventHandler(this.controlbarCerrar_MouseEnter);
             this.controlbarCerrar.MouseLeave += new System.EventHandler(this.controlbarCerrar_MouseLeave);
             // 
-            // controlboxMinimizar
+            // controlbarMinimizar
             // 
-            resources.ApplyResources(this.controlboxMinimizar, "controlboxMinimizar");
-            this.controlboxMinimizar.BunifuFormDrag = null;
-            this.controlboxMinimizar.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlboxMinimizar.CloseBoxOptions.BorderRadius = 0;
-            this.controlboxMinimizar.CloseBoxOptions.Enabled = true;
-            this.controlboxMinimizar.CloseBoxOptions.EnableDefaultAction = true;
-            this.controlboxMinimizar.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.controlboxMinimizar.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxMinimizar.CloseBoxOptions.Icon")));
-            this.controlboxMinimizar.CloseBoxOptions.IconAlt = null;
-            this.controlboxMinimizar.CloseBoxOptions.IconColor = System.Drawing.Color.White;
-            this.controlboxMinimizar.CloseBoxOptions.IconHoverColor = System.Drawing.Color.White;
-            this.controlboxMinimizar.CloseBoxOptions.IconPressedColor = System.Drawing.Color.White;
-            this.controlboxMinimizar.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
-            this.controlboxMinimizar.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.controlboxMinimizar.HelpBox = false;
-            this.controlboxMinimizar.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlboxMinimizar.HelpBoxOptions.BorderRadius = 0;
-            this.controlboxMinimizar.HelpBoxOptions.Enabled = true;
-            this.controlboxMinimizar.HelpBoxOptions.EnableDefaultAction = true;
-            this.controlboxMinimizar.HelpBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.controlboxMinimizar.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxMinimizar.HelpBoxOptions.Icon")));
-            this.controlboxMinimizar.HelpBoxOptions.IconAlt = null;
-            this.controlboxMinimizar.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
-            this.controlboxMinimizar.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.controlboxMinimizar.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.controlboxMinimizar.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
-            this.controlboxMinimizar.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.controlboxMinimizar.MaximizeBox = false;
-            this.controlboxMinimizar.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlboxMinimizar.MaximizeBoxOptions.BorderRadius = 0;
-            this.controlboxMinimizar.MaximizeBoxOptions.Enabled = true;
-            this.controlboxMinimizar.MaximizeBoxOptions.EnableDefaultAction = true;
-            this.controlboxMinimizar.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.controlboxMinimizar.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxMinimizar.MaximizeBoxOptions.Icon")));
-            this.controlboxMinimizar.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("controlboxMinimizar.MaximizeBoxOptions.IconAlt")));
-            this.controlboxMinimizar.MaximizeBoxOptions.IconColor = System.Drawing.Color.White;
-            this.controlboxMinimizar.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.controlboxMinimizar.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.controlboxMinimizar.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
-            this.controlboxMinimizar.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.controlboxMinimizar.MinimizeBox = true;
-            this.controlboxMinimizar.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlboxMinimizar.MinimizeBoxOptions.BorderRadius = 0;
-            this.controlboxMinimizar.MinimizeBoxOptions.Enabled = true;
-            this.controlboxMinimizar.MinimizeBoxOptions.EnableDefaultAction = true;
-            this.controlboxMinimizar.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.controlboxMinimizar.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlboxMinimizar.MinimizeBoxOptions.Icon")));
-            this.controlboxMinimizar.MinimizeBoxOptions.IconAlt = null;
-            this.controlboxMinimizar.MinimizeBoxOptions.IconColor = System.Drawing.Color.White;
-            this.controlboxMinimizar.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.controlboxMinimizar.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.controlboxMinimizar.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
-            this.controlboxMinimizar.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.controlboxMinimizar.Name = "controlboxMinimizar";
-            this.controlboxMinimizar.ShowDesignBorders = false;
-            this.controlboxMinimizar.TabStop = false;
+            resources.ApplyResources(this.controlbarMinimizar, "controlbarMinimizar");
+            this.controlbarMinimizar.BunifuFormDrag = null;
+            this.controlbarMinimizar.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlbarMinimizar.CloseBoxOptions.BorderRadius = 0;
+            this.controlbarMinimizar.CloseBoxOptions.Enabled = true;
+            this.controlbarMinimizar.CloseBoxOptions.EnableDefaultAction = true;
+            this.controlbarMinimizar.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.controlbarMinimizar.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.CloseBoxOptions.Icon")));
+            this.controlbarMinimizar.CloseBoxOptions.IconAlt = null;
+            this.controlbarMinimizar.CloseBoxOptions.IconColor = System.Drawing.Color.White;
+            this.controlbarMinimizar.CloseBoxOptions.IconHoverColor = System.Drawing.Color.White;
+            this.controlbarMinimizar.CloseBoxOptions.IconPressedColor = System.Drawing.Color.White;
+            this.controlbarMinimizar.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
+            this.controlbarMinimizar.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.controlbarMinimizar.HelpBox = false;
+            this.controlbarMinimizar.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlbarMinimizar.HelpBoxOptions.BorderRadius = 0;
+            this.controlbarMinimizar.HelpBoxOptions.Enabled = true;
+            this.controlbarMinimizar.HelpBoxOptions.EnableDefaultAction = true;
+            this.controlbarMinimizar.HelpBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.controlbarMinimizar.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.HelpBoxOptions.Icon")));
+            this.controlbarMinimizar.HelpBoxOptions.IconAlt = null;
+            this.controlbarMinimizar.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
+            this.controlbarMinimizar.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.controlbarMinimizar.MaximizeBox = false;
+            this.controlbarMinimizar.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlbarMinimizar.MaximizeBoxOptions.BorderRadius = 0;
+            this.controlbarMinimizar.MaximizeBoxOptions.Enabled = true;
+            this.controlbarMinimizar.MaximizeBoxOptions.EnableDefaultAction = true;
+            this.controlbarMinimizar.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.controlbarMinimizar.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.MaximizeBoxOptions.Icon")));
+            this.controlbarMinimizar.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.MaximizeBoxOptions.IconAlt")));
+            this.controlbarMinimizar.MaximizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.controlbarMinimizar.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
+            this.controlbarMinimizar.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.controlbarMinimizar.MinimizeBox = true;
+            this.controlbarMinimizar.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlbarMinimizar.MinimizeBoxOptions.BorderRadius = 0;
+            this.controlbarMinimizar.MinimizeBoxOptions.Enabled = true;
+            this.controlbarMinimizar.MinimizeBoxOptions.EnableDefaultAction = true;
+            this.controlbarMinimizar.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.controlbarMinimizar.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.MinimizeBoxOptions.Icon")));
+            this.controlbarMinimizar.MinimizeBoxOptions.IconAlt = null;
+            this.controlbarMinimizar.MinimizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.controlbarMinimizar.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
+            this.controlbarMinimizar.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.controlbarMinimizar.Name = "controlbarMinimizar";
+            this.controlbarMinimizar.ShowDesignBorders = false;
+            this.controlbarMinimizar.TabStop = false;
+            // 
+            // lblUsu
+            // 
+            resources.ApplyResources(this.lblUsu, "lblUsu");
+            this.lblUsu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblUsu.Name = "lblUsu";
             // 
             // HoraFecha
             // 
             this.HoraFecha.Enabled = true;
             this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Name = "label1";
             // 
             // btnAyuda2
             // 
@@ -935,7 +955,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.lblUsu);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             this.panel4.Tag = "1";
@@ -1104,6 +1124,13 @@
             resources.ApplyResources(this.borde1, "borde1");
             this.borde1.Name = "borde1";
             // 
+            // tsbAbrirSesion
+            // 
+            resources.ApplyResources(this.tsbAbrirSesion, "tsbAbrirSesion");
+            this.tsbAbrirSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAbrirSesion.Name = "tsbAbrirSesion";
+            this.tsbAbrirSesion.Click += new System.EventHandler(this.tsbAbrirSesion_Click);
+            // 
             // frmInicio
             // 
             resources.ApplyResources(this, "$this");
@@ -1147,15 +1174,15 @@
 
         #endregion
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton tsbUsuario;
+        private System.Windows.Forms.ToolStripButton tsbPlandeCuenta;
+        private System.Windows.Forms.ToolStripButton tsbConceptoContable;
+        private System.Windows.Forms.ToolStripButton tsbAgenda;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton tsbMovimientodeAsientos;
+        private System.Windows.Forms.ToolStripButton tsbLibroDiario;
+        private System.Windows.Forms.ToolStripButton tsbLibroMayor;
+        private System.Windows.Forms.ToolStripButton tsbBalanceDeSumasySaldos;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
         private System.Windows.Forms.ToolStripButton toolStripButton10;
@@ -1167,10 +1194,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButton15;
         private System.Windows.Forms.ToolStripButton toolStripButton16;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton20;
-        private System.Windows.Forms.ToolStripButton toolStripButton21;
-        private System.Windows.Forms.ToolStripButton toolStripButton22;
-        private System.Windows.Forms.ToolStripButton toolStripButton23;
+        private System.Windows.Forms.ToolStripButton tsbBlockdeNotas;
+        private System.Windows.Forms.ToolStripButton tsbMensajesInternos;
+        private System.Windows.Forms.ToolStripButton tsbCalculadora;
+        private System.Windows.Forms.ToolStripButton tsbNotas;
         private RJCodeAdvance.RJControls.RJDropdownMenu MenuArchivos;
         private System.Windows.Forms.ToolStripMenuItem respaldoDeInformacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restauracionDeInformacionToolStripMenuItem;
@@ -1242,11 +1269,14 @@
         private RJCodeAdvance.RJControls.RJButton btnContabilidad2;
         private RJCodeAdvance.RJControls.RJButton btnMantenimiento2;
         private RJCodeAdvance.RJControls.RJButton btnAyuda2;
-        private Bunifu.UI.WinForms.BunifuFormControlBox controlboxMinimizar;
+        private Bunifu.UI.WinForms.BunifuFormControlBox controlbarMinimizar;
         private System.Windows.Forms.Button controlbarCerrar;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUsu;
         private System.Windows.Forms.Panel borde2;
         private System.Windows.Forms.Panel borde3;
         private System.Windows.Forms.Panel borde1;
+        private System.Windows.Forms.ToolStripButton tsbCerrarSesion;
+        private System.Windows.Forms.ToolStripButton tsbConfigImpresora;
+        private System.Windows.Forms.ToolStripButton tsbAbrirSesion;
     }
 }
