@@ -131,11 +131,27 @@ namespace Negocio
             {
                 foreach (Control Ctrl in Inicio.Controls)
                 {
-                    if (Ctrl is RJButton || Ctrl is ToolStripButton)
+                    if (Ctrl is BunifuGradientPanel)
                     {
-                        if (Ctrl.Tag.ToString() != "12345")
+                        foreach (Control Ctrl2 in Ctrl.Controls)
                         {
-                            Ctrl.Enabled = true;
+                            if (Ctrl2 is RJButton)
+                            {
+                                Ctrl2.Enabled = true;
+                            }
+                        }
+                    }
+                    if (Ctrl is ToolStrip)
+                    {
+                        foreach (ToolStripItem botones in tsAccesosDirectos.Items)
+                        {
+                            if (botones is ToolStripButton)
+                            {
+                                if (botones.Tag.ToString() != "12345")
+                                {
+                                    botones.Enabled = true;
+                                }
+                            }
                         }
                     }
                 }

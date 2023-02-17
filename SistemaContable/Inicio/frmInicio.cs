@@ -49,7 +49,7 @@ namespace SistemaContable
             lblUsu.Text = "Usuario: " + FLogin.NombreUsuario;
 
             Negocio.FValidacionesEventos.EventosFormulario(this);
-            Negocio.FFormatoSistema.FondoMDI(this,borde1,borde2,borde3,pbLogo);
+            Negocio.FFormatoSistema.FondoMDI(this, borde1, borde2, borde3, pbLogo);
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
@@ -62,11 +62,11 @@ namespace SistemaContable
         }
 
         //CONTROLBAR
-        private void controlbarCerrar_Click(object sender, EventArgs e)
+        public void controlbarCerrar_Click(object sender, EventArgs e)
         {
             List<Form> formlist = new List<Form>();
             int cant = Application.OpenForms.Count;
-            DialogResult boton = MessageBox.Show("¿Realmente desea salir?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            DialogResult boton = MessageBox.Show("¿Realmente desea salir?", "Atención!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
             if (boton == DialogResult.OK)
             {
                 if (cant > 0)
@@ -149,20 +149,19 @@ namespace SistemaContable
         private void tsbCerrarSesion_Click(object sender, EventArgs e)
         {
             tsbCerrarSesion.Visible = false;
-            Negocio.FGenerales.Sesion(this,toolStrip1, 1);
+            Negocio.FGenerales.Sesion(this, toolStrip1, 1);
             tsbAbrirSesion.Visible = true;
+            lblUsu.Text = "Sesión Cerrada";
         }
 
         private void tsbAbrirSesion_Click(object sender, EventArgs e)
         {
             tsbAbrirSesion.Visible = false;
-            frmAutorización frm = new frmAutorización();
-            bool autorizado = frmAutorización.Autoriza(1, true); //cambiar
-            if (autorizado)
-            {
-                Negocio.FGenerales.Sesion(this,toolStrip1, 2);
-                tsbCerrarSesion.Visible = true;
-            }
+            Negocio.FGenerales.Sesion(this, toolStrip1, 2);
+            tsbCerrarSesion.Visible = true;
+            tsbAbrirSesion.Visible = false;
+            lblUsu.Text = "Usuario: " + FLogin.NombreUsuario;
+            //terminar
         }
 
         private void tsbConfigImpresora_Click(object sender, EventArgs e)
@@ -478,7 +477,7 @@ namespace SistemaContable
         }
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            controlbarCerrar_Click(sender,e);
         }
         //20
         private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
