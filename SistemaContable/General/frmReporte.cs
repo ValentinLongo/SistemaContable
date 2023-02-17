@@ -1,6 +1,7 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using Datos;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace SistemaContable.General
         public frmReporte(string NombreReporte, string Consulta)
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             cargarReporte(NombreReporte,Consulta);
         }
         //Nombre Reporte = nombre reporte en la carpeta
@@ -28,12 +30,13 @@ namespace SistemaContable.General
             ReportDocument report = new ReportDocument();
 
             // Carga el informe externo en el objeto de informe de Crystal Reports
-            report.Load($@"C:\Pedidos\REPORTES\{NombreReporte}.rpt");
+            //report.Load($@"C:\Pedidos\REPORTES\{NombreReporte}.rpt");
+            report.Load($@"..\REPORTES\{NombreReporte}.rpt");
 
             // Configura la conexión de datos de Crystal Reports
             ConnectionInfo connectionInfo = new ConnectionInfo();
-            connectionInfo.ServerName = @"SERVERMASER\MASER_INF";
-            connectionInfo.DatabaseName = "CoronelApp";
+            connectionInfo.ServerName = $@"{FLogin.Servidor}";
+            connectionInfo.DatabaseName = $"{FLogin.}";
             connectionInfo.UserID = "sa";
             connectionInfo.Password = "1220";
             TableLogOnInfo tableLogOnInfo = new TableLogOnInfo();
@@ -50,9 +53,15 @@ namespace SistemaContable.General
             DataTable dt = new DataTable();
             dt = ds.Tables[0];
 
-
             // Asigna el conjunto de datos al informe de Crystal Reports
             report.SetDataSource(dt);
+
+            report.SetParameterValue("Empresa", "Empresa");
+            report.SetParameterValue("Titulo", "Titulo");
+            report.SetParameterValue("Param1", "Param1");
+            report.SetParameterValue("Param2", "Param2");
+            report.SetParameterValue("Usuario", $"{FLogin.NombreUsuario}");
+            report.SetParameterValue("Hora", $"{DateTime.Now.ToString("t")}");
 
             // Actualiza el informe de Crystal Reports para que muestre los datos del conjunto de datos asignado
             crystalReportViewer1.ReportSource = report;

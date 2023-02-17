@@ -17,6 +17,9 @@ namespace Negocio
         public static int IdUsuario;
         public static string NombreUsuario;
         public static string ContraUsuario;
+
+        public static string Servidor;
+        public static string BaseDeDatos;
         //BUSCO SI EXISTE USUARIO
         public static int buscarUsuario(string usuario, string contrasenia)
         {
@@ -62,8 +65,8 @@ namespace Negocio
                 argumentos.Add(s);
             }
 
-            string Servidor = argumentos[1];
-            string BaseDeDatos = argumentos[2];
+            Servidor = argumentos[1];
+            BaseDeDatos = argumentos[2];
             int NumeroTerminal = Convert.ToInt32(argumentos[3]);
             Datos.AccesoBase.datosConexion = @"Data Source = " + Servidor + ";Initial Catalog = " + BaseDeDatos + "; User ID = sa; Password=1220;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=true";
             return NumeroTerminal;
