@@ -62,10 +62,8 @@
             this.btnModelo = new RJCodeAdvance.RJControls.RJButton();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddModVisASIENTO)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -84,11 +82,11 @@
             // lblControlBar
             // 
             this.lblControlBar.AutoSize = true;
-            this.lblControlBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControlBar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.lblControlBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblControlBar.Location = new System.Drawing.Point(3, 4);
+            this.lblControlBar.Location = new System.Drawing.Point(3, 2);
             this.lblControlBar.Name = "lblControlBar";
-            this.lblControlBar.Size = new System.Drawing.Size(83, 13);
+            this.lblControlBar.Size = new System.Drawing.Size(95, 17);
             this.lblControlBar.TabIndex = 31;
             this.lblControlBar.Text = "MSG ControlBar";
             // 
@@ -515,24 +513,12 @@
             this.dtFecha.TabIndex = 129;
             this.dtFecha.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(661, 428);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 130;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmAggModVisAsientoContable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(800, 492);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dtFecha);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnModelo);
@@ -564,7 +550,6 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddModVisASIENTO)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -598,7 +583,6 @@
         private RJCodeAdvance.RJControls.RJButton btnModelo;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private System.Windows.Forms.DateTimePicker dtFecha;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

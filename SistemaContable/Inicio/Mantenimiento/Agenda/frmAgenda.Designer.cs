@@ -37,10 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAgenda
@@ -50,10 +48,10 @@
             this.dgvAgenda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvAgenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAgenda.Location = new System.Drawing.Point(15, 72);
+            this.dgvAgenda.Location = new System.Drawing.Point(12, 88);
             this.dgvAgenda.Name = "dgvAgenda";
             this.dgvAgenda.ReadOnly = true;
-            this.dgvAgenda.Size = new System.Drawing.Size(970, 484);
+            this.dgvAgenda.Size = new System.Drawing.Size(949, 540);
             this.dgvAgenda.TabIndex = 0;
             this.dgvAgenda.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataAgenda_CellMouseClick);
             // 
@@ -70,9 +68,9 @@
             this.btnAgregar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(992, 72);
+            this.btnAgregar.Location = new System.Drawing.Point(968, 88);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(130, 31);
+            this.btnAgregar.Size = new System.Drawing.Size(154, 44);
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
@@ -92,9 +90,9 @@
             this.btnModificar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(992, 122);
+            this.btnModificar.Location = new System.Drawing.Point(968, 156);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(130, 31);
+            this.btnModificar.Size = new System.Drawing.Size(154, 44);
             this.btnModificar.TabIndex = 12;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
@@ -114,9 +112,9 @@
             this.btnEliminar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(992, 174);
+            this.btnEliminar.Location = new System.Drawing.Point(968, 225);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(130, 31);
+            this.btnEliminar.Size = new System.Drawing.Size(154, 44);
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
@@ -136,9 +134,9 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(992, 453);
+            this.btnImprimir.Location = new System.Drawing.Point(968, 584);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(130, 31);
+            this.btnImprimir.Size = new System.Drawing.Size(154, 44);
             this.btnImprimir.TabIndex = 14;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
@@ -151,10 +149,10 @@
             this.tbDescipcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbDescipcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescipcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescipcion.Location = new System.Drawing.Point(115, 33);
+            this.tbDescipcion.Location = new System.Drawing.Point(115, 38);
             this.tbDescipcion.Multiline = true;
             this.tbDescipcion.Name = "tbDescipcion";
-            this.tbDescipcion.Size = new System.Drawing.Size(484, 20);
+            this.tbDescipcion.Size = new System.Drawing.Size(808, 20);
             this.tbDescipcion.TabIndex = 56;
             this.tbDescipcion.Tag = "00000";
             this.tbDescipcion.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -165,7 +163,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(21, 36);
+            this.label1.Location = new System.Drawing.Point(21, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 16);
             this.label1.TabIndex = 57;
@@ -180,11 +178,11 @@
             this.ShapeBusqueda.BorderThickness = 1;
             this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.FillShape = true;
-            this.ShapeBusqueda.Location = new System.Drawing.Point(15, 18);
+            this.ShapeBusqueda.Location = new System.Drawing.Point(15, 12);
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
-            this.ShapeBusqueda.Size = new System.Drawing.Size(970, 48);
+            this.ShapeBusqueda.Size = new System.Drawing.Size(946, 70);
             this.ShapeBusqueda.TabIndex = 58;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
@@ -194,32 +192,21 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox1.Location = new System.Drawing.Point(115, 33);
+            this.textBox1.Location = new System.Drawing.Point(115, 38);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(495, 20);
+            this.textBox1.Size = new System.Drawing.Size(808, 20);
             this.textBox1.TabIndex = 56;
             this.textBox1.Tag = "00000";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(992, 490);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 59;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(115, 52);
+            this.panel2.Location = new System.Drawing.Point(115, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(484, 1);
+            this.panel2.Size = new System.Drawing.Size(808, 1);
             this.panel2.TabIndex = 60;
             // 
             // frmAgenda
@@ -227,9 +214,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1129, 568);
+            this.ClientSize = new System.Drawing.Size(1129, 650);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tbDescipcion);
             this.Controls.Add(this.label1);
@@ -244,7 +230,6 @@
             this.Name = "frmAgenda";
             this.Text = "frmAgenda";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,7 +244,6 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
     }
     #endregion

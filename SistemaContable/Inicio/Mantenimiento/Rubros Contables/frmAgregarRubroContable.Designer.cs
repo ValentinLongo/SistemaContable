@@ -45,9 +45,7 @@
             this.checkVigente = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.maskDesde = new System.Windows.Forms.MaskedTextBox();
             this.maskHasta = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,11 +64,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(3, 5);
+            this.label5.Location = new System.Drawing.Point(3, 2);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 13);
+            this.label5.Size = new System.Drawing.Size(140, 17);
             this.label5.TabIndex = 30;
             this.label5.Text = "Agregar Rublo Contable";
             // 
@@ -323,24 +321,12 @@
             this.maskHasta.TabIndex = 64;
             this.maskHasta.Tag = "10000";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(307, 170);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 65;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmAgregarRubroContable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(435, 231);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.maskHasta);
             this.Controls.Add(this.maskDesde);
             this.Controls.Add(this.checkVigente);
@@ -361,7 +347,6 @@
             this.Text = "frmAgregarRubroContable";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,6 +369,5 @@
         private Bunifu.UI.WinForms.BunifuCheckBox checkVigente;
         private System.Windows.Forms.MaskedTextBox maskDesde;
         private System.Windows.Forms.MaskedTextBox maskHasta;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

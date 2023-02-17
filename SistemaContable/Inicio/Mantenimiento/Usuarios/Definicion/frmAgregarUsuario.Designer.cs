@@ -56,14 +56,12 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.tbVendedor = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CambioCheck = new Bunifu.UI.WinForms.BunifuCheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -344,16 +342,6 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox2.Location = new System.Drawing.Point(399, 424);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(130, 66);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 42;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnAceptar
             // 
             this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -392,11 +380,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(5, 5);
+            this.label14.Location = new System.Drawing.Point(5, 2);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(83, 13);
+            this.label14.Size = new System.Drawing.Size(97, 17);
             this.label14.TabIndex = 31;
             this.label14.Text = "Agregar Usuario";
             // 
@@ -542,7 +530,6 @@
             this.Controls.Add(this.cbSeccion);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -569,7 +556,6 @@
             this.Name = "frmAgregarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Usuario";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);
@@ -606,7 +592,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox tbVendedor;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private RJCodeAdvance.RJControls.RJButton btnAceptar;
         private System.Windows.Forms.Panel panel7;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;

@@ -48,9 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.btnCerrarTodo = new RJCodeAdvance.RJControls.RJButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,11 +67,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(3, 5);
+            this.label4.Location = new System.Drawing.Point(3, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 13);
+            this.label4.Size = new System.Drawing.Size(223, 17);
             this.label4.TabIndex = 30;
             this.label4.Text = "Configuración de Permisos por Usuario";
             // 
@@ -233,7 +231,7 @@
             this.rjButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton5.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton5.Location = new System.Drawing.Point(406, 404);
+            this.rjButton5.Location = new System.Drawing.Point(406, 467);
             this.rjButton5.Name = "rjButton5";
             this.rjButton5.Size = new System.Drawing.Size(120, 26);
             this.rjButton5.TabIndex = 23;
@@ -382,24 +380,12 @@
             this.btnCerrarTodo.UseVisualStyleBackColor = false;
             this.btnCerrarTodo.Click += new System.EventHandler(this.btnCerrarTodo_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(403, 435);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmPermisosUsu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(534, 505);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCerrarTodo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -423,7 +409,6 @@
             this.Text = "frmUsuarios";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,6 +435,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private RJCodeAdvance.RJControls.RJButton btnCerrarTodo;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

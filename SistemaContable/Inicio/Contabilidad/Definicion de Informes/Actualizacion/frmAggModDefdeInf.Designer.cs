@@ -57,11 +57,11 @@
             // lblControlBar
             // 
             this.lblControlBar.AutoSize = true;
-            this.lblControlBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControlBar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.lblControlBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblControlBar.Location = new System.Drawing.Point(3, 4);
+            this.lblControlBar.Location = new System.Drawing.Point(3, 2);
             this.lblControlBar.Name = "lblControlBar";
-            this.lblControlBar.Size = new System.Drawing.Size(147, 13);
+            this.lblControlBar.Size = new System.Drawing.Size(174, 17);
             this.lblControlBar.TabIndex = 30;
             this.lblControlBar.Text = "Agregar Definición de Informe";
             // 
@@ -138,7 +138,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(131, 120);
+            this.btnConfirmar.Location = new System.Drawing.Point(133, 120);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(149, 26);
             this.btnConfirmar.TabIndex = 79;

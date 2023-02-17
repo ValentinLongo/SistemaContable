@@ -60,10 +60,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.bunifuShapes2 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPEspeciales)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,11 +80,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(3, 5);
+            this.label4.Location = new System.Drawing.Point(3, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(230, 13);
+            this.label4.Size = new System.Drawing.Size(272, 17);
             this.label4.TabIndex = 30;
             this.label4.Text = "Configuración de Permisos Especiales por Perfil";
             // 
@@ -538,24 +536,12 @@
             this.bunifuShapes2.TabIndex = 77;
             this.bunifuShapes2.Text = "bunifuShapes2";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(672, 388);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 90;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmPermisosEspecialesPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvPEspeciales);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.CheckInicio);
@@ -587,7 +573,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPEspeciales)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,6 +611,5 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes2;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

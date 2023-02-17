@@ -34,14 +34,12 @@
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Predef = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
             this.btnEliminar = new RJCodeAdvance.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,16 +85,6 @@
             this.Predef.HeaderText = "Predef";
             this.Predef.Name = "Predef";
             this.Predef.ReadOnly = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(681, 402);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 82);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // btnAgregar
             // 
@@ -158,11 +146,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(3, 5);
+            this.label4.Location = new System.Drawing.Point(3, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.Size = new System.Drawing.Size(79, 17);
             this.label4.TabIndex = 31;
             this.label4.Text = "Definir Cajas";
             // 
@@ -237,7 +225,6 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvCajas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -245,7 +232,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDefinirCajas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);
@@ -255,7 +241,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvCajas;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Caja;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;

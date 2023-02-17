@@ -47,8 +47,15 @@ namespace SistemaContable
             InitializeComponent();
 
             Negocio.FValidacionesEventos.EventosFormulario(this);
-            Negocio.FFormatoSistema.FondoMDI(this);
+            Negocio.FFormatoSistema.FondoMDI(this,borde1,borde2,borde3,pbLogo);
             //Negocio.FFormatoSistema.SetearFormato(this);
+        }
+
+        private void frmInicio_MdiChildActivate(object sender, EventArgs e)
+        {
+            borde1.BackColor = Color.FromArgb(255, 45, 45, 45);
+            borde2.BackColor = Color.FromArgb(255, 45, 45, 45);
+            borde3.BackColor = Color.FromArgb(255, 45, 45, 45);
         }
 
         //CONTROLBAR
@@ -144,6 +151,7 @@ namespace SistemaContable
         {
             MenuArchivos.Show(btnArchivos, btnArchivos.Width, 0);
             btnArchivos.Visible = false;
+            btnArchivos2.Location = new Point(0, 144);
             btnArchivos2.Visible = true;
             btnArchivos2.BringToFront();
         }
@@ -152,6 +160,7 @@ namespace SistemaContable
         {
             MenuVer.Show(btnArchivos, btnArchivos.Width, 0);
             btnVer.Visible = false;
+            btnVer2.Location = new Point(0, 217);
             btnVer2.Visible = true;
             btnVer2.BringToFront();
         }
@@ -160,6 +169,7 @@ namespace SistemaContable
         {
             MenuContabilidad.Show(btnArchivos, btnArchivos.Width, 0);
             btnContabilidad.Visible = false;
+            btnContabilidad2.Location = new Point(-3, 292);
             btnContabilidad2.Visible = true;
             btnContabilidad2.BringToFront();
 
@@ -169,6 +179,7 @@ namespace SistemaContable
         {
             MenuMantenimiento.Show(btnArchivos, btnArchivos.Width, 0);
             btnMantenimiento.Visible = false;
+            btnMantenimiento2.Location = new Point(1, 365);
             btnMantenimiento2.Visible = true;
             btnMantenimiento2.BringToFront();
         }

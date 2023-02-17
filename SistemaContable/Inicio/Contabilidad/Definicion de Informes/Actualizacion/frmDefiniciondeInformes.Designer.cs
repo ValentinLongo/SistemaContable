@@ -33,7 +33,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.dgvDefiniciondeInformes = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.btnActualizar = new RJCodeAdvance.RJControls.RJButton();
             this.btnEliminar = new RJCodeAdvance.RJControls.RJButton();
@@ -47,7 +46,6 @@
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDefiniciondeInformes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -66,11 +64,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(3, 5);
+            this.label4.Location = new System.Drawing.Point(3, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 13);
+            this.label4.Size = new System.Drawing.Size(133, 17);
             this.label4.TabIndex = 31;
             this.label4.Text = "Definicion de Informes";
             // 
@@ -148,17 +146,6 @@
             this.dgvDefiniciondeInformes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDefiniciondeInformes.Size = new System.Drawing.Size(621, 357);
             this.dgvDefiniciondeInformes.TabIndex = 62;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(655, 393);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 79;
-            this.pictureBox1.TabStop = false;
             // 
             // btnImprimir
             // 
@@ -396,7 +383,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.bunifuShapes1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEliminar);
@@ -411,7 +397,6 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDefiniciondeInformes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,7 +408,6 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.DataGridView dgvDefiniciondeInformes;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private RJCodeAdvance.RJControls.RJButton btnActualizar;
         private RJCodeAdvance.RJControls.RJButton btnEliminar;

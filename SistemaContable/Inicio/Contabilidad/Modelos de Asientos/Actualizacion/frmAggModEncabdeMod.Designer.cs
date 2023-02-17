@@ -57,11 +57,11 @@
             // lblControlBar
             // 
             this.lblControlBar.AutoSize = true;
-            this.lblControlBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControlBar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.lblControlBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblControlBar.Location = new System.Drawing.Point(3, 4);
+            this.lblControlBar.Location = new System.Drawing.Point(3, 2);
             this.lblControlBar.Name = "lblControlBar";
-            this.lblControlBar.Size = new System.Drawing.Size(160, 13);
+            this.lblControlBar.Size = new System.Drawing.Size(183, 17);
             this.lblControlBar.TabIndex = 30;
             this.lblControlBar.Text = "Agregar Encabezado de Modelo";
             // 

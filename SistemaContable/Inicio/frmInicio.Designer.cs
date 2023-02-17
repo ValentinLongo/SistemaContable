@@ -104,18 +104,17 @@
             this.MenuAyuda = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.soporteInteractivoDeContableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.controlbarCerrar = new System.Windows.Forms.Button();
             this.controlboxMinimizar = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.HoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAyuda2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnMantenimiento2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnContabilidad2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnVer2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnArchivos2 = new RJCodeAdvance.RJControls.RJButton();
             this.PanelMenu = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
@@ -130,6 +129,9 @@
             this.btnVer = new RJCodeAdvance.RJControls.RJButton();
             this.btnArchivos = new RJCodeAdvance.RJControls.RJButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.borde2 = new System.Windows.Forms.Panel();
+            this.borde3 = new System.Windows.Forms.Panel();
+            this.borde1 = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.MenuArchivos.SuspendLayout();
             this.MenuVer.SuspendLayout();
@@ -146,7 +148,7 @@
             // toolStrip1
             // 
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.toolStrip1.BackColor = System.Drawing.Color.Black;
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -213,6 +215,7 @@
             // 
             // toolStripSeparator1
             // 
+            this.toolStripSeparator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
@@ -725,11 +728,18 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.controlbarCerrar);
             this.panel5.Controls.Add(this.controlboxMinimizar);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             this.panel5.Tag = "1";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Name = "label3";
             // 
             // controlbarCerrar
             // 
@@ -801,16 +811,16 @@
             this.controlboxMinimizar.ShowDesignBorders = false;
             this.controlboxMinimizar.TabStop = false;
             // 
+            // HoraFecha
+            // 
+            this.HoraFecha.Enabled = true;
+            this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
+            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Name = "label1";
-            // 
-            // HoraFecha
-            // 
-            this.HoraFecha.Enabled = true;
-            this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
             // 
             // btnAyuda2
             // 
@@ -902,8 +912,6 @@
             this.PanelMenu.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.PanelMenu, "PanelMenu");
             this.PanelMenu.BorderRadius = 0;
-            this.PanelMenu.Controls.Add(this.label2);
-            this.PanelMenu.Controls.Add(this.bunifuShapes1);
             this.PanelMenu.Controls.Add(this.panel4);
             this.PanelMenu.Controls.Add(this.lblFecha);
             this.PanelMenu.Controls.Add(this.lblHora);
@@ -923,25 +931,6 @@
             this.PanelMenu.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Quality = 10;
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Name = "label2";
-            // 
-            // bunifuShapes1
-            // 
-            this.bunifuShapes1.Angle = 0F;
-            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.bunifuShapes1.BorderThickness = 1;
-            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.FillShape = true;
-            resources.ApplyResources(this.bunifuShapes1, "bunifuShapes1");
-            this.bunifuShapes1.Name = "bunifuShapes1";
-            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
-            this.bunifuShapes1.Sides = 5;
             // 
             // panel4
             // 
@@ -1005,7 +994,7 @@
             this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.btnAyuda, "btnAyuda");
             this.btnAyuda.ForeColor = System.Drawing.Color.White;
-            this.btnAyuda.Image = global::SistemaContable.Properties.Resources.icons8_ayuda30;
+            this.btnAyuda.Image = global::SistemaContable.Properties.Resources.ayuda;
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.TabStop = false;
             this.btnAyuda.Tag = "50";
@@ -1024,7 +1013,7 @@
             this.btnMantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.btnMantenimiento, "btnMantenimiento");
             this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
-            this.btnMantenimiento.Image = global::SistemaContable.Properties.Resources.icons8_llave_30;
+            this.btnMantenimiento.Image = global::SistemaContable.Properties.Resources.llave;
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.TabStop = false;
             this.btnMantenimiento.Tag = "40";
@@ -1043,7 +1032,7 @@
             this.btnContabilidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.btnContabilidad, "btnContabilidad");
             this.btnContabilidad.ForeColor = System.Drawing.Color.White;
-            this.btnContabilidad.Image = global::SistemaContable.Properties.Resources.icons8_calculadora_30;
+            this.btnContabilidad.Image = global::SistemaContable.Properties.Resources.calculadora2;
             this.btnContabilidad.Name = "btnContabilidad";
             this.btnContabilidad.TabStop = false;
             this.btnContabilidad.Tag = "30";
@@ -1081,7 +1070,7 @@
             this.btnArchivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.btnArchivos, "btnArchivos");
             this.btnArchivos.ForeColor = System.Drawing.Color.White;
-            this.btnArchivos.Image = global::SistemaContable.Properties.Resources.icons8_carpeta_30;
+            this.btnArchivos.Image = global::SistemaContable.Properties.Resources.carpeta4;
             this.btnArchivos.Name = "btnArchivos";
             this.btnArchivos.TabStop = false;
             this.btnArchivos.Tag = "10";
@@ -1092,16 +1081,37 @@
             // pbLogo
             // 
             resources.ApplyResources(this.pbLogo, "pbLogo");
-            this.pbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.pbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
             this.pbLogo.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.TabStop = false;
+            // 
+            // borde2
+            // 
+            this.borde2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            resources.ApplyResources(this.borde2, "borde2");
+            this.borde2.Name = "borde2";
+            // 
+            // borde3
+            // 
+            this.borde3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            resources.ApplyResources(this.borde3, "borde3");
+            this.borde3.Name = "borde3";
+            // 
+            // borde1
+            // 
+            this.borde1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            resources.ApplyResources(this.borde1, "borde1");
+            this.borde1.Name = "borde1";
             // 
             // frmInicio
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.Controls.Add(this.borde1);
+            this.Controls.Add(this.borde3);
+            this.Controls.Add(this.borde2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.PanelMenu);
@@ -1116,6 +1126,7 @@
             this.Name = "frmInicio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmInicio_Load);
+            this.MdiChildActivate += new System.EventHandler(this.frmInicio_MdiChildActivate);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.MenuArchivos.ResumeLayout(false);
@@ -1124,8 +1135,8 @@
             this.MenuMantenimiento.ResumeLayout(false);
             this.MenuAyuda.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.PanelMenu.ResumeLayout(false);
-            this.PanelMenu.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaser)).EndInit();
@@ -1225,8 +1236,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pbLogo;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private RJCodeAdvance.RJControls.RJButton btnArchivos2;
         private RJCodeAdvance.RJControls.RJButton btnVer2;
@@ -1235,5 +1244,9 @@
         private RJCodeAdvance.RJControls.RJButton btnAyuda2;
         private Bunifu.UI.WinForms.BunifuFormControlBox controlboxMinimizar;
         private System.Windows.Forms.Button controlbarCerrar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel borde2;
+        private System.Windows.Forms.Panel borde3;
+        private System.Windows.Forms.Panel borde1;
     }
 }
