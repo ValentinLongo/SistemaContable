@@ -238,21 +238,21 @@
             resources.ApplyResources(this.tsbLibroDiario, "tsbLibroDiario");
             this.tsbLibroDiario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbLibroDiario.Name = "tsbLibroDiario";
-            this.tsbLibroDiario.Tag = "0";
+            this.tsbLibroDiario.Tag = "3008";
             // 
             // tsbLibroMayor
             // 
             resources.ApplyResources(this.tsbLibroMayor, "tsbLibroMayor");
             this.tsbLibroMayor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbLibroMayor.Name = "tsbLibroMayor";
-            this.tsbLibroMayor.Tag = "0";
+            this.tsbLibroMayor.Tag = "3010";
             // 
             // tsbBalanceDeSumasySaldos
             // 
             resources.ApplyResources(this.tsbBalanceDeSumasySaldos, "tsbBalanceDeSumasySaldos");
             this.tsbBalanceDeSumasySaldos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbBalanceDeSumasySaldos.Name = "tsbBalanceDeSumasySaldos";
-            this.tsbBalanceDeSumasySaldos.Tag = "0";
+            this.tsbBalanceDeSumasySaldos.Tag = "3014";
             // 
             // toolStripSeparator2
             // 
@@ -337,14 +337,14 @@
             resources.ApplyResources(this.tsbMensajesInternos, "tsbMensajesInternos");
             this.tsbMensajesInternos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbMensajesInternos.Name = "tsbMensajesInternos";
-            this.tsbMensajesInternos.Tag = "0";
+            this.tsbMensajesInternos.Tag = "2004";
             // 
             // tsbCalculadora
             // 
             resources.ApplyResources(this.tsbCalculadora, "tsbCalculadora");
             this.tsbCalculadora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbCalculadora.Name = "tsbCalculadora";
-            this.tsbCalculadora.Tag = "0";
+            this.tsbCalculadora.Tag = "2002";
             this.tsbCalculadora.Click += new System.EventHandler(this.tsbCalculadora_Click);
             // 
             // tsbNotas
@@ -352,7 +352,7 @@
             resources.ApplyResources(this.tsbNotas, "tsbNotas");
             this.tsbNotas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbNotas.Name = "tsbNotas";
-            this.tsbNotas.Tag = "0";
+            this.tsbNotas.Tag = "2006";
             // 
             // toolStripSeparator5
             // 
