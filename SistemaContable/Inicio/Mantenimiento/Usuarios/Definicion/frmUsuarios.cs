@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaContable.General;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -114,6 +115,12 @@ namespace SistemaContable.Usuarios
         {
             frmDefinirCajas definirCajas = new frmDefinirCajas();
             definirCajas.Show();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte freporte = new frmReporte("Usuarios","Select * from Usuario");
+            freporte.ShowDialog();
         }
     }
 }
