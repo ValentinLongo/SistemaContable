@@ -22,6 +22,7 @@ namespace SistemaContable.General
             this.WindowState = FormWindowState.Maximized;
             cargarReporte(NombreReporte,Consulta, Titulo,Param1,Param2);
         }
+
         //Nombre Reporte = nombre reporte en la carpeta
         //Consulta = Query
         private void cargarReporte(string NombreReporte, string Consulta, string Titulo, string Param1, string Param2)
@@ -52,7 +53,7 @@ namespace SistemaContable.General
 
             DataTable dt = new DataTable();
             dt = ds.Tables[0];
-
+            
             // Asigna el conjunto de datos al informe de Crystal Reports
             report.SetDataSource(dt);
 

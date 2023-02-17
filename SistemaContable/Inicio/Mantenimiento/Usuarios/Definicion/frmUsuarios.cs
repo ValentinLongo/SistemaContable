@@ -25,7 +25,7 @@ namespace SistemaContable.Usuarios
             llenarDGV();
             btnModificar.Enabled = false;
         }
-
+        
         private void Cerrar(object sender, FormClosingEventArgs e)
         {
             frmInicio frmInicio = new frmInicio();
