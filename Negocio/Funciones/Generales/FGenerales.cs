@@ -1,4 +1,5 @@
-﻿using Datos;
+﻿using Bunifu.UI.WinForms;
+using Datos;
 using Datos.Modelos;
 using RJCodeAdvance.RJControls;
 using System;
@@ -23,7 +24,7 @@ namespace Negocio
             ds = Datos.AccesoBase.ListarDatos($"SELECT TOP 1 {campo} FROM {tabla} ORDER BY {campo} DESC");
             int UltimoID = 0;
 
-            foreach(DataRow dr in ds.Tables[0].Rows)
+            foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 UltimoID = Convert.ToInt32(dr[$"{campo}"]);
             }
@@ -65,10 +66,10 @@ namespace Negocio
             if (tag != "")
             {
                 ds = AccesoBase.ListarDatos($"SELECT mxu_activo FROM MenuxUsu WHERE mxu_sistema = 'CO' AND mxu_usuario = {usuario} AND mxu_codigo = '{tag}'");
-                foreach (DataRow dr in ds.Tables[0].Rows) 
+                foreach (DataRow dr in ds.Tables[0].Rows)
                 {
                     resultado = Convert.ToInt32(dr["mxu_activo"]);
-                }  
+                }
                 if (resultado == 1)
                 {
                     return true;
@@ -86,7 +87,7 @@ namespace Negocio
             return false;
         }
 
-        public static void Mostrarfrm(Form Formulario, string tag) 
+        public static void Mostrarfrm(Form Formulario, string tag)
         {
             bool permiso = Permiso(tag);
             if (permiso)
@@ -95,15 +96,34 @@ namespace Negocio
             }
         }
 
-        public static void Sesion(Form Inicio, int proceso) //proceso 1 = cierra sesion, 2 = abre sesion
+        public static void Sesion(Form Inicio, ToolStrip tsAccesosDirectos, int proceso) //proceso 1 = cierra sesion, 2 = abre sesion
         {
             if (proceso == 1)
             {
                 foreach (Control Ctrl in Inicio.Controls)
                 {
-                    if (Ctrl.Name != "controlbarMinimizar" || Ctrl.Name != "controlbarCerrar")
+                    if (Ctrl is BunifuGradientPanel)
                     {
-                        Ctrl.Enabled = false;
+                        foreach (Control Ctrl2 in Ctrl.Controls)
+                        {
+                            if (Ctrl2 is RJButton)
+                            {
+                                Ctrl2.Enabled = false;
+                            }
+                        }
+                    }
+                    if (Ctrl is ToolStrip)
+                    {
+                        foreach (ToolStripItem botones in tsAccesosDirectos.Items)
+                        {
+                            if (botones is ToolStripButton)
+                            {
+                                if (botones.Tag.ToString() != "12345")
+                                {
+                                    botones.Enabled = false;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -111,9 +131,12 @@ namespace Negocio
             {
                 foreach (Control Ctrl in Inicio.Controls)
                 {
-                    if (Ctrl.Name != "controlbarMinimizar" || Ctrl.Name != "controlbarCerrar")
+                    if (Ctrl is RJButton || Ctrl is ToolStripButton)
                     {
-                        Ctrl.Enabled = true;
+                        if (Ctrl.Tag.ToString() != "12345")
+                        {
+                            Ctrl.Enabled = true;
+                        }
                     }
                 }
             }
