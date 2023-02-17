@@ -57,6 +57,7 @@
             this.tsbNotas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbCerrarSesion = new System.Windows.Forms.ToolStripButton();
+            this.tsbAbrirSesion = new System.Windows.Forms.ToolStripButton();
             this.tsbConfigImpresora = new System.Windows.Forms.ToolStripButton();
             this.MenuArchivos = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.respaldoDeInformacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,7 +135,6 @@
             this.borde2 = new System.Windows.Forms.Panel();
             this.borde3 = new System.Windows.Forms.Panel();
             this.borde1 = new System.Windows.Forms.Panel();
-            this.tsbAbrirSesion = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.MenuArchivos.SuspendLayout();
             this.MenuVer.SuspendLayout();
@@ -238,18 +238,21 @@
             resources.ApplyResources(this.tsbLibroDiario, "tsbLibroDiario");
             this.tsbLibroDiario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbLibroDiario.Name = "tsbLibroDiario";
+            this.tsbLibroDiario.Tag = "0";
             // 
             // tsbLibroMayor
             // 
             resources.ApplyResources(this.tsbLibroMayor, "tsbLibroMayor");
             this.tsbLibroMayor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbLibroMayor.Name = "tsbLibroMayor";
+            this.tsbLibroMayor.Tag = "0";
             // 
             // tsbBalanceDeSumasySaldos
             // 
             resources.ApplyResources(this.tsbBalanceDeSumasySaldos, "tsbBalanceDeSumasySaldos");
             this.tsbBalanceDeSumasySaldos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbBalanceDeSumasySaldos.Name = "tsbBalanceDeSumasySaldos";
+            this.tsbBalanceDeSumasySaldos.Tag = "0";
             // 
             // toolStripSeparator2
             // 
@@ -261,24 +264,28 @@
             resources.ApplyResources(this.toolStripButton9, "toolStripButton9");
             this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Tag = "0";
             // 
             // toolStripButton10
             // 
             resources.ApplyResources(this.toolStripButton10, "toolStripButton10");
             this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Tag = "0";
             // 
             // toolStripButton11
             // 
             resources.ApplyResources(this.toolStripButton11, "toolStripButton11");
             this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.Tag = "0";
             // 
             // toolStripButton12
             // 
             resources.ApplyResources(this.toolStripButton12, "toolStripButton12");
             this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.Tag = "0";
             // 
             // toolStripSeparator3
             // 
@@ -290,24 +297,28 @@
             resources.ApplyResources(this.toolStripButton13, "toolStripButton13");
             this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.Tag = "0";
             // 
             // toolStripButton14
             // 
             resources.ApplyResources(this.toolStripButton14, "toolStripButton14");
             this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton14.Name = "toolStripButton14";
+            this.toolStripButton14.Tag = "0";
             // 
             // toolStripButton15
             // 
             resources.ApplyResources(this.toolStripButton15, "toolStripButton15");
             this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton15.Name = "toolStripButton15";
+            this.toolStripButton15.Tag = "0";
             // 
             // toolStripButton16
             // 
             resources.ApplyResources(this.toolStripButton16, "toolStripButton16");
             this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton16.Name = "toolStripButton16";
+            this.toolStripButton16.Tag = "0";
             // 
             // toolStripSeparator4
             // 
@@ -319,18 +330,21 @@
             resources.ApplyResources(this.tsbBlockdeNotas, "tsbBlockdeNotas");
             this.tsbBlockdeNotas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbBlockdeNotas.Name = "tsbBlockdeNotas";
+            this.tsbBlockdeNotas.Tag = "0";
             // 
             // tsbMensajesInternos
             // 
             resources.ApplyResources(this.tsbMensajesInternos, "tsbMensajesInternos");
             this.tsbMensajesInternos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbMensajesInternos.Name = "tsbMensajesInternos";
+            this.tsbMensajesInternos.Tag = "0";
             // 
             // tsbCalculadora
             // 
             resources.ApplyResources(this.tsbCalculadora, "tsbCalculadora");
             this.tsbCalculadora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbCalculadora.Name = "tsbCalculadora";
+            this.tsbCalculadora.Tag = "0";
             this.tsbCalculadora.Click += new System.EventHandler(this.tsbCalculadora_Click);
             // 
             // tsbNotas
@@ -338,6 +352,7 @@
             resources.ApplyResources(this.tsbNotas, "tsbNotas");
             this.tsbNotas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbNotas.Name = "tsbNotas";
+            this.tsbNotas.Tag = "0";
             // 
             // toolStripSeparator5
             // 
@@ -349,13 +364,23 @@
             resources.ApplyResources(this.tsbCerrarSesion, "tsbCerrarSesion");
             this.tsbCerrarSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbCerrarSesion.Name = "tsbCerrarSesion";
+            this.tsbCerrarSesion.Tag = "12345";
             this.tsbCerrarSesion.Click += new System.EventHandler(this.tsbCerrarSesion_Click);
+            // 
+            // tsbAbrirSesion
+            // 
+            resources.ApplyResources(this.tsbAbrirSesion, "tsbAbrirSesion");
+            this.tsbAbrirSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAbrirSesion.Name = "tsbAbrirSesion";
+            this.tsbAbrirSesion.Tag = "12345";
+            this.tsbAbrirSesion.Click += new System.EventHandler(this.tsbAbrirSesion_Click);
             // 
             // tsbConfigImpresora
             // 
             resources.ApplyResources(this.tsbConfigImpresora, "tsbConfigImpresora");
             this.tsbConfigImpresora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbConfigImpresora.Name = "tsbConfigImpresora";
+            this.tsbConfigImpresora.Tag = "0";
             this.tsbConfigImpresora.Click += new System.EventHandler(this.tsbConfigImpresora_Click);
             // 
             // MenuArchivos
@@ -767,6 +792,7 @@
             resources.ApplyResources(this.controlbarCerrar, "controlbarCerrar");
             this.controlbarCerrar.ForeColor = System.Drawing.Color.Transparent;
             this.controlbarCerrar.Name = "controlbarCerrar";
+            this.controlbarCerrar.Tag = "12345";
             this.controlbarCerrar.UseVisualStyleBackColor = true;
             this.controlbarCerrar.Click += new System.EventHandler(this.controlbarCerrar_Click);
             this.controlbarCerrar.MouseEnter += new System.EventHandler(this.controlbarCerrar_MouseEnter);
@@ -830,6 +856,7 @@
             this.controlbarMinimizar.Name = "controlbarMinimizar";
             this.controlbarMinimizar.ShowDesignBorders = false;
             this.controlbarMinimizar.TabStop = false;
+            this.controlbarMinimizar.Tag = "12345";
             // 
             // lblUsu
             // 
@@ -856,6 +883,7 @@
             this.btnAyuda2.Image = global::SistemaContable.Properties.Resources.ayuda_negra;
             this.btnAyuda2.Name = "btnAyuda2";
             this.btnAyuda2.TabStop = false;
+            this.btnAyuda2.Tag = "50";
             this.btnAyuda2.TextColor = System.Drawing.Color.Black;
             this.btnAyuda2.UseVisualStyleBackColor = false;
             // 
@@ -873,6 +901,7 @@
             this.btnMantenimiento2.Image = global::SistemaContable.Properties.Resources.llave_negra;
             this.btnMantenimiento2.Name = "btnMantenimiento2";
             this.btnMantenimiento2.TabStop = false;
+            this.btnMantenimiento2.Tag = "40";
             this.btnMantenimiento2.TextColor = System.Drawing.Color.Black;
             this.btnMantenimiento2.UseVisualStyleBackColor = false;
             // 
@@ -890,6 +919,7 @@
             this.btnContabilidad2.Image = global::SistemaContable.Properties.Resources.calculadora_negra;
             this.btnContabilidad2.Name = "btnContabilidad2";
             this.btnContabilidad2.TabStop = false;
+            this.btnContabilidad2.Tag = "30";
             this.btnContabilidad2.TextColor = System.Drawing.Color.Black;
             this.btnContabilidad2.UseVisualStyleBackColor = false;
             // 
@@ -907,6 +937,7 @@
             this.btnVer2.Image = global::SistemaContable.Properties.Resources.lupa_negra;
             this.btnVer2.Name = "btnVer2";
             this.btnVer2.TabStop = false;
+            this.btnVer2.Tag = "20";
             this.btnVer2.TextColor = System.Drawing.Color.Black;
             this.btnVer2.UseVisualStyleBackColor = false;
             // 
@@ -924,6 +955,7 @@
             this.btnArchivos2.Image = global::SistemaContable.Properties.Resources.carpeta_negra;
             this.btnArchivos2.Name = "btnArchivos2";
             this.btnArchivos2.TabStop = false;
+            this.btnArchivos2.Tag = "10";
             this.btnArchivos2.TextColor = System.Drawing.Color.Black;
             this.btnArchivos2.UseVisualStyleBackColor = false;
             // 
@@ -1123,13 +1155,6 @@
             this.borde1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
             resources.ApplyResources(this.borde1, "borde1");
             this.borde1.Name = "borde1";
-            // 
-            // tsbAbrirSesion
-            // 
-            resources.ApplyResources(this.tsbAbrirSesion, "tsbAbrirSesion");
-            this.tsbAbrirSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbAbrirSesion.Name = "tsbAbrirSesion";
-            this.tsbAbrirSesion.Click += new System.EventHandler(this.tsbAbrirSesion_Click);
             // 
             // frmInicio
             // 

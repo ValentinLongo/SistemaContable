@@ -149,15 +149,20 @@ namespace SistemaContable
         private void tsbCerrarSesion_Click(object sender, EventArgs e)
         {
             tsbCerrarSesion.Visible = false;
-            Negocio.FGenerales.Sesion(this, 1);
+            Negocio.FGenerales.Sesion(this,toolStrip1, 1);
             tsbAbrirSesion.Visible = true;
         }
 
         private void tsbAbrirSesion_Click(object sender, EventArgs e)
         {
             tsbAbrirSesion.Visible = false;
-            Negocio.FGenerales.Sesion(this, 2);
-            tsbCerrarSesion.Visible = true;
+            frmAutorización frm = new frmAutorización();
+            bool autorizado = frmAutorización.Autoriza(1, true); //cambiar
+            if (autorizado)
+            {
+                Negocio.FGenerales.Sesion(this,toolStrip1, 2);
+                tsbCerrarSesion.Visible = true;
+            }
         }
 
         private void tsbConfigImpresora_Click(object sender, EventArgs e)
