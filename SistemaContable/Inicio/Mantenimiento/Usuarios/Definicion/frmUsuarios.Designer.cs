@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbNombreBusqueda = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +50,8 @@
             this.btnModificar = new RJCodeAdvance.RJControls.RJButton();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CheckUsuario = new Bunifu.UI.WinForms.BunifuCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +62,12 @@
             this.dgvUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Nombre,
+            this.Login,
+            this.Perfil,
+            this.Telefono});
             this.dgvUsuarios.Location = new System.Drawing.Point(12, 89);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
@@ -63,6 +76,36 @@
             this.dgvUsuarios.TabIndex = 7;
             this.dgvUsuarios.TabStop = false;
             this.dgvUsuarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Login
+            // 
+            this.Login.HeaderText = "Login";
+            this.Login.Name = "Login";
+            this.Login.ReadOnly = true;
+            // 
+            // Perfil
+            // 
+            this.Perfil.HeaderText = "Perfil";
+            this.Perfil.Name = "Perfil";
+            this.Perfil.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
             // 
             // tbNombreBusqueda
             // 
@@ -133,7 +176,7 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::SistemaContable.Properties.Resources.lupa;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(782, 35);
+            this.btnBuscar.Location = new System.Drawing.Point(775, 37);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(144, 31);
             this.btnBuscar.TabIndex = 2;
@@ -292,12 +335,78 @@
             this.label4.TabIndex = 53;
             this.label4.Text = "Busqueda";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(1004, 44);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 13);
+            this.label5.TabIndex = 62;
+            this.label5.Text = "Visualizar usuarios Activos";
+            // 
+            // CheckUsuario
+            // 
+            this.CheckUsuario.AllowBindingControlAnimation = true;
+            this.CheckUsuario.AllowBindingControlColorChanges = false;
+            this.CheckUsuario.AllowBindingControlLocation = true;
+            this.CheckUsuario.AllowCheckBoxAnimation = false;
+            this.CheckUsuario.AllowCheckmarkAnimation = true;
+            this.CheckUsuario.AllowOnHoverStates = true;
+            this.CheckUsuario.AutoCheck = true;
+            this.CheckUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.CheckUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckUsuario.BackgroundImage")));
+            this.CheckUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CheckUsuario.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.CheckUsuario.BorderRadius = 12;
+            this.CheckUsuario.Checked = false;
+            this.CheckUsuario.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.CheckUsuario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CheckUsuario.CustomCheckmarkImage = null;
+            this.CheckUsuario.Location = new System.Drawing.Point(984, 40);
+            this.CheckUsuario.MinimumSize = new System.Drawing.Size(17, 17);
+            this.CheckUsuario.Name = "CheckUsuario";
+            this.CheckUsuario.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckUsuario.OnCheck.BorderRadius = 12;
+            this.CheckUsuario.OnCheck.BorderThickness = 2;
+            this.CheckUsuario.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckUsuario.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckUsuario.OnCheck.CheckmarkThickness = 2;
+            this.CheckUsuario.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.CheckUsuario.OnDisable.BorderRadius = 12;
+            this.CheckUsuario.OnDisable.BorderThickness = 2;
+            this.CheckUsuario.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckUsuario.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.CheckUsuario.OnDisable.CheckmarkThickness = 2;
+            this.CheckUsuario.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckUsuario.OnHoverChecked.BorderRadius = 12;
+            this.CheckUsuario.OnHoverChecked.BorderThickness = 2;
+            this.CheckUsuario.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckUsuario.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckUsuario.OnHoverChecked.CheckmarkThickness = 2;
+            this.CheckUsuario.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckUsuario.OnHoverUnchecked.BorderRadius = 12;
+            this.CheckUsuario.OnHoverUnchecked.BorderThickness = 1;
+            this.CheckUsuario.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckUsuario.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.CheckUsuario.OnUncheck.BorderRadius = 12;
+            this.CheckUsuario.OnUncheck.BorderThickness = 1;
+            this.CheckUsuario.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckUsuario.Size = new System.Drawing.Size(17, 17);
+            this.CheckUsuario.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.CheckUsuario.TabIndex = 61;
+            this.CheckUsuario.ThreeState = false;
+            this.CheckUsuario.ToolTipText = null;
+            this.CheckUsuario.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckUsuario_CheckedChanged);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1129, 650);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.CheckUsuario);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBuscar);
@@ -344,5 +453,12 @@
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Login;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Perfil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.Label label5;
+        private Bunifu.UI.WinForms.BunifuCheckBox CheckUsuario;
     }
 }

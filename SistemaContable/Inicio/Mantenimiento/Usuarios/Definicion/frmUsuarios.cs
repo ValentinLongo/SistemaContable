@@ -15,6 +15,8 @@ namespace SistemaContable.Usuarios
     public partial class frmUsuarios : Form
     {
         public static int codigoUsuario;
+        string query;
+        string orderBy = "ORDER BY usu_codigo";
         public frmUsuarios()
         {
             InitializeComponent();
@@ -25,7 +27,7 @@ namespace SistemaContable.Usuarios
             llenarDGV();
             btnModificar.Enabled = false;
         }
-        
+
         private void Cerrar(object sender, FormClosingEventArgs e)
         {
             frmInicio frmInicio = new frmInicio();
@@ -35,8 +37,19 @@ namespace SistemaContable.Usuarios
         public void llenarDGV()
         {
             DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos("SELECT usu_codigo as Codigo, usu_nombre as Nombre, usu_login as Login, Perfil.per_descri as Perfil, usu_telefono as Telefono FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo ORDER BY usu_codigo");
-            dgvUsuarios.DataSource = data.Tables[0];
+            //query = "SELECT usu_codigo as Codigo, usu_nombre as Nombre, usu_login as Login, Perfil.per_descri as Perfil, usu_telefono as Telefono FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo ORDER BY usu_codigo";
+            query = "SELECT * FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo ";
+            data = Datos.AccesoBase.ListarDatos($"{query + orderBy}");
+
+            foreach (DataRow dr in data.Tables[0].Rows)
+            {
+                string codigo = dr["usu_codigo"].ToString();
+                string nombre = dr["usu_nombre"].ToString();
+                string login = dr["usu_login"].ToString();
+                string perfil = dr["per_descri"].ToString();
+                string telefono = dr["usu_telefono"].ToString();
+                dgvUsuarios.Rows.Add(codigo, nombre, login, perfil, telefono);
+            }
         }
 
         private void Click(object sender, DataGridViewCellMouseEventArgs e)
@@ -56,7 +69,7 @@ namespace SistemaContable.Usuarios
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             btnModificar.Enabled = false;
-            string query = "SELECT usu_codigo as Codigo, usu_nombre as Nombre, usu_login as Login, Perfil.per_descri as Perfil, usu_telefono as Telefono FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo ";
+            query = "SELECT * FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo ";
             if (tbNombreBusqueda.Text != null && tbNombreBusqueda.Text != "")
             {
                 if (query.Contains("WHERE"))
@@ -92,9 +105,17 @@ namespace SistemaContable.Usuarios
             }
 
             DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos(query);
-
-            dgvUsuarios.DataSource = data.Tables[0];
+            data = Datos.AccesoBase.ListarDatos($"{query + orderBy}");
+            dgvUsuarios.Rows.Clear();
+            foreach (DataRow dr in data.Tables[0].Rows)
+            {
+                string codigo = dr["usu_codigo"].ToString();
+                string nombre = dr["usu_nombre"].ToString();
+                string login = dr["usu_login"].ToString();
+                string perfil = dr["per_descri"].ToString();
+                string telefono = dr["usu_telefono"].ToString();
+                dgvUsuarios.Rows.Add(codigo, nombre, login, perfil, telefono);
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -119,8 +140,45 @@ namespace SistemaContable.Usuarios
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            frmReporte freporte = new frmReporte("Usuarios", "SELECT * FROM Usuario Left Join Perfil on usu_perfil = per_codigo WHERE usu_codigo = 1","Titulo","Param1","Param2");
+            frmReporte freporte = new frmReporte("Usuarios", $"{query}", "Usuarios del Sistema", "Activos", DateTime.Now.ToString("d"));
             freporte.ShowDialog();
+        }
+
+        private void CheckUsuario_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            string nuevoQuery = "";
+            if (CheckUsuario.Checked)
+            {
+                if (query.Contains("WHERE"))
+                {
+                    nuevoQuery = query + " and usu_estado = 1";
+                }
+                else
+                {
+                    nuevoQuery = query + " WHERE usu_estado = 1";
+                }
+            }
+
+
+            DataSet data = new DataSet();
+            if (nuevoQuery != "" && nuevoQuery != null)
+            {
+                data = Datos.AccesoBase.ListarDatos($"{nuevoQuery + orderBy}");
+            }
+            else
+            {
+                data = Datos.AccesoBase.ListarDatos($"{query + orderBy}");
+            }
+            dgvUsuarios.Rows.Clear();
+            foreach (DataRow dr in data.Tables[0].Rows)
+            {
+                string codigo = dr["usu_codigo"].ToString();
+                string nombre = dr["usu_nombre"].ToString();
+                string login = dr["usu_login"].ToString();
+                string perfil = dr["per_descri"].ToString();
+                string telefono = dr["usu_telefono"].ToString();
+                dgvUsuarios.Rows.Add(codigo, nombre, login, perfil, telefono);
+            }
         }
     }
 }
