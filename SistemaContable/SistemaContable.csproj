@@ -499,6 +499,18 @@
     <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.Designer.cs">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Ver\Comunicacion Interna\frmComunicacionInterna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Ver\Comunicacion Interna\frmComunicacionInterna.Designer.cs">
+      <DependentUpon>frmComunicacionInterna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Ver\Comunicacion Interna\frmMensajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Ver\Comunicacion Interna\frmMensajes.Designer.cs">
+      <DependentUpon>frmMensajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Inicio\Mantenimiento\Rubros Contables\frmAgregarRubroContable.cs">
@@ -675,6 +687,12 @@
     <EmbeddedResource Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.resx">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Ver\Comunicacion Interna\frmComunicacionInterna.resx">
+      <DependentUpon>frmComunicacionInterna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Ver\Comunicacion Interna\frmMensajes.resx">
+      <DependentUpon>frmMensajes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -835,7 +853,6 @@
   <ItemGroup>
     <Folder Include="Inicio\Archivos\" />
     <Folder Include="Inicio\Ayuda\" />
-    <Folder Include="Inicio\Ver\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\contabilidad.png" />

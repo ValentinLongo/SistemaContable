@@ -338,6 +338,7 @@
             this.tsbMensajesInternos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbMensajesInternos.Name = "tsbMensajesInternos";
             this.tsbMensajesInternos.Tag = "2004";
+            this.tsbMensajesInternos.Click += new System.EventHandler(this.tsbMensajesInternos_Click);
             // 
             // tsbCalculadora
             // 
@@ -1279,7 +1280,6 @@
         private RJCodeAdvance.RJControls.RJButton btnContabilidad;
         private RJCodeAdvance.RJControls.RJButton btnVer;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Panel panel2;
@@ -1303,5 +1303,6 @@
         private System.Windows.Forms.ToolStripButton tsbCerrarSesion;
         private System.Windows.Forms.ToolStripButton tsbConfigImpresora;
         private System.Windows.Forms.ToolStripButton tsbAbrirSesion;
+        private System.Windows.Forms.Panel panel1;
     }
 }

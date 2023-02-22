@@ -95,14 +95,13 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                     {
                         seleccionado = DGV1.CurrentCell.RowIndex;
                         asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
-
                         Negocio.Funciones.Contabilidad.FDetalledeModelos.Modificar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText, Cuenta, frmDetalledeModelos.Codigo);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Atención: Ingrese datos en debe o en haber!","Mensaje");
+                MessageBox.Show("Atención: Falta ingresar datos!","Mensaje");
                 this.Close();
             }
         }

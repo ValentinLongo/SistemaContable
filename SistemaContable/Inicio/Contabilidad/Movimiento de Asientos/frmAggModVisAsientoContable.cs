@@ -20,6 +20,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
     public partial class frmAggModVisAsientoContable : Form
     {
         private static int add_mod_vis;
+
         //addmodvis = proceso que realiza el frm
         public frmAggModVisAsientoContable(int addmodvis, ComboBox cbSeleccion, string asiento, string fecha, string comentario)
         {
@@ -109,7 +110,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     haber = dr[2].ToString();
                 }
 
-                string codigo = dr[1].ToString(); //visible = false
+                string codigo = dr[1].ToString(); //(esta en el dgv pero, visible = false)
 
                 string concepto = dr[3].ToString();
                 string cc = dr[4].ToString();

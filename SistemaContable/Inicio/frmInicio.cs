@@ -34,6 +34,7 @@ using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_Mode
 using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
 using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeInformes;
 using SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos;
+using SistemaContable.Inicio.Ver.Comunicacion_Interna;
 
 namespace SistemaContable
 {
@@ -112,32 +113,38 @@ namespace SistemaContable
         //ACCESOS DIRECTOS
         private void tsbUsuario_Click(object sender, EventArgs e)
         {
-            frmUsuarios usuarios = new frmUsuarios();
-            Negocio.FGenerales.ManejarFormularios(usuarios, this, pbLogo, tsbUsuario.Tag.ToString());
+            frmUsuarios frm = new frmUsuarios();
+            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbUsuario.Tag.ToString());
         }
 
         private void tsbPlandeCuenta_Click(object sender, EventArgs e)
         {
-            frmPlanDeCuentas planDeCuentas = new frmPlanDeCuentas();
-            Negocio.FGenerales.ManejarFormularios(planDeCuentas, this, pbLogo, tsbPlandeCuenta.Tag.ToString());
+            frmPlanDeCuentas frm = new frmPlanDeCuentas();
+            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbPlandeCuenta.Tag.ToString());
         }
 
         private void tsbConceptoContable_Click(object sender, EventArgs e)
         {
-            frmConceptosContables conceptoscontables = new frmConceptosContables();
-            Negocio.FGenerales.ManejarFormularios(conceptoscontables, this, pbLogo, tsbConceptoContable.Tag.ToString());
+            frmConceptosContables frm = new frmConceptosContables();
+            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbConceptoContable.Tag.ToString());
         }
 
         private void tsbAgenda_Click(object sender, EventArgs e)
         {
-            frmAgenda agenda = new frmAgenda();
-            Negocio.FGenerales.ManejarFormularios(agenda, this, pbLogo, tsbAgenda.Tag.ToString());
+            frmAgenda frm = new frmAgenda();
+            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbAgenda.Tag.ToString());
         }
 
         private void tsbMovimientodeAsientos_Click(object sender, EventArgs e)
         {
-            frmAsientosContables asientocontable = new frmAsientosContables();
-            Negocio.FGenerales.ManejarFormularios(asientocontable, this, pbLogo, tsbMovimientodeAsientos.Tag.ToString());
+            frmAsientosContables frm = new frmAsientosContables();
+            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMovimientodeAsientos.Tag.ToString());
+        }
+
+        private void tsbMensajesInternos_Click(object sender, EventArgs e)
+        {
+            frmComunicacionInterna frm = new frmComunicacionInterna();
+            Negocio.FGenerales.Mostrarfrm(frm, tsbMensajesInternos.Tag.ToString());
         }
 
         private void tsbCalculadora_Click(object sender, EventArgs e)
@@ -215,43 +222,9 @@ namespace SistemaContable
             btnAyuda2.Visible = true;
             btnAyuda2.BringToFront();
         }
-
         //
 
         //
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            if (PanelMenu.Width == 212)
-            {
-                //PanelMenu.Width = 20;
-                //btnArchivos.Visible = false;
-                //btnVer.Visible = false;
-                //btnContabilidad.Visible = false;
-                //btnMantenimiento.Visible = false;
-                //btnAyuda.Visible = false;
-                //pbMaser.Visible = false;
-                //btnAbrir.Visible = true;
-                //pbLogo.Location = new Point(350, 300);
-
-            }
-        }
-
-        private void btnAbrir_Click(object sender, EventArgs e)
-        {
-            if (PanelMenu.Width != 212)
-            {
-                //PanelMenu.Width = 212;
-                //btnArchivos.Visible = true;
-                //btnVer.Visible = true;
-                //btnContabilidad.Visible = true;
-                //btnMantenimiento.Visible = true;
-                //btnAyuda.Visible = true;
-                //pbMaser.Visible = true;
-                //btnAbrir.Visible = false;
-                //pbLogo.Location = new Point(400, 300);
-            }
-        }
-
         private void HoraFecha_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToLongTimeString();
@@ -487,6 +460,8 @@ namespace SistemaContable
         }
         private void comunicacionInternaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmComunicacionInterna frm = new frmComunicacionInterna();
+            Negocio.FGenerales.Mostrarfrm(frm, comunicacionInternaToolStripMenuItem.Tag.ToString());
 
         }
         private void notasYObservacionesToolStripMenuItem_Click(object sender, EventArgs e)
