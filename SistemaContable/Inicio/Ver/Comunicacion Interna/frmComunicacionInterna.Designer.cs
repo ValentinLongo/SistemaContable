@@ -178,7 +178,7 @@
             this.dgvMensajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMensajes.Size = new System.Drawing.Size(724, 199);
             this.dgvMensajes.TabIndex = 124;
-            this.dgvMensajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMensajes_CellClick);
+            this.dgvMensajes.SelectionChanged += new System.EventHandler(this.dgvMensajes_SelectionChanged);
             // 
             // Column1
             // 
@@ -278,6 +278,7 @@
             this.txtComentario.Name = "txtComentario";
             this.txtComentario.Size = new System.Drawing.Size(723, 237);
             this.txtComentario.TabIndex = 127;
+            this.txtComentario.TextChanged += new System.EventHandler(this.txtComentario_TextChanged);
             // 
             // cbSeleccionar
             // 
@@ -300,7 +301,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(441, 35);
+            this.label1.Location = new System.Drawing.Point(441, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 17);
             this.label1.TabIndex = 128;

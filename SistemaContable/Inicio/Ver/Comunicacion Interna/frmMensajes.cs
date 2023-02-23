@@ -15,8 +15,6 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
 {
     public partial class frmMensajes : Form
     {
-        //private static List<int> lista = new List<int>();
-
         public frmMensajes()
         {
             InitializeComponent();
@@ -82,10 +80,11 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
                 bool checkeado = Convert.ToBoolean(row.Cells[2].Value);
                 if(checkeado)
                 {
-                    AccesoBase.InsertUpdateDatos($"INSERT INTO Observaciones(obs_codori, obs_origen, obs_destino, obs_nomdest, obs_comentario, obs_estado, obs_fecha, obs_ctrle, obs_ctrlr, obs_hora) VALUES ('{FLogin.IdUsuario}', '{FLogin.NombreUsuario}', '{destino}', '{nombredestino}', '{txtMensaje}', '0', '{fecha}', '0', '0', '{hora}')");
+                    AccesoBase.InsertUpdateDatos($"INSERT INTO Observaciones(obs_codori, obs_origen, obs_destino, obs_nomdest, obs_comentario, obs_estado, obs_fecha, obs_ctrle, obs_ctrlr, obs_hora) VALUES ('{FLogin.IdUsuario}', '{FLogin.NombreUsuario}', '{destino}', '{nombredestino}', '{txtMensaje.Text}', '0', '{fecha}', '0', '0', '{hora}')");
                 }
-
             }
+            MessageBox.Show("Mensaje enviado Correctamente!, Podra visualizarlo en su bandeja de salida","Atención");
+            this.Close();
         }
 
         //BARRA DE CONTROL

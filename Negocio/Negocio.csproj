@@ -241,6 +241,7 @@
     <Compile Include="Funciones\Mantenimiento\FRubrosContables.cs" />
     <Compile Include="Funciones\Mantenimiento\FUsuarios.cs" />
     <Compile Include="Funciones\Generales\FValidacionesEventos.cs" />
+    <Compile Include="Funciones\Ver\FComunicacionInterna.cs" />
     <Compile Include="Menu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -261,7 +262,6 @@
   <ItemGroup>
     <Folder Include="Funciones\Archivos\" />
     <Folder Include="Funciones\Ayuda\" />
-    <Folder Include="Funciones\Ver\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

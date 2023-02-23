@@ -238,13 +238,13 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGkSURBVEhL7Va9SgNBGFwFW62Mgg8gNtYWKdMoCim0sPAZ
-        0mglvkFKRXvtBCvRBzhstLP0pxEURJBTiLmf3MWZuzEhMeedRarswMDufPN9s7kUu8ZidNBqta7aQKPR
-        +Gw2m+9BEDxBu4mi6Bysx3G8BS7CMqGWDqixRg+97GEvZ3AWZ3I2NEctXbBQBK7rfmHwGULWSK6pqZwL
-        xXUhvY1hJXAeXAKXwU1wDwGnYRjeO44TydoBNdbooVc97OUMzirJ2huMfSWVB5yoDxgyB9Zk50Fr1FTO
-        hOxERZIxOO2DxNzgH8j+bz+zJPWcZujBhCQbXAyy2+BMyJ5Akg0uBtltcCZkTyBp1IN933/FDXKH18I1
-        7tcL8BDX3jbIi39GLb+CsZyVZwc9R+AlXyGcxZmpO4VajEHhRVoueK1h6L62ba6hPWqbCzyHnhWbnLbq
-        ed5bWhoelFFVbAoIY/hM0+AC1mVwA+td/KITfLLbQU+eftBDL3qO2QuuQy5zJsjnz7jiigNNU2hewdAD
-        vBo/GERwTY01cFL24QABq/yvSK4lW/wBY74By5G7dyhUXPMAAAAASUVORK5CYII=
+        0mglvoGlor12gpVofYiNdpb+NIKCCHIK8S6X3J0zd2NCYuKdxVXZgYHd+eb7ZnMpdo3F8KDVal3FQL1e
+        //Q87z0IgidoN2EYnoG7URRtgPOwjKmlDWqs0UMve9jLGZzFmZwN7VItHbCQB67rfmHwKUJWSK6pqZwJ
+        xXUgPcawEjgLLoCL4Dq4g4CTZrN57zhOKGsb1Fijh171sJczOKska3cw9pVU7nOiHmDIDFiTnQetUVN5
+        IGQnKpKMwWkfJGYG/0D2f/uZJanrNIUHE5JscD7IboMHQvYEkmxwPshugwdC9gSShj240Wi84ga5w2vh
+        GvfrOXiAa28T5MU/pZZfwVhOy7OFnkPwgq8QzuLM1J1CLcag8CItE7zWMHRP25hraI/aZgLPoWfFJqet
+        +r7/lpaKgzKqik0BYQSfaRKcw7oMrmG9jV90jE922+/J0wt66EXPEXvBVchlzgT5/BlVXH6gaQLNSxi6
+        j1fjB4MIrqmxBo7LXgwQsMz/iuRassUfMOYbLLW7X5KTHJsAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="tsbLibroDiario.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -284,10 +284,10 @@
   <data name="tsbBalanceDeSumasySaldos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVEhL7ZVdCsIwEITzlOtIfZR6PuNFPIPvXqIX0Dsk
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVEhL7ZVdCsIwEITzlOtIfZR6PuNFPIPv3qE30Dsk
         5MfZOhYEQSMbFMkHS7csmcn2oWNKKTaltPfeX9CrEkI44+FQVoykaY0zdC05541RBrKjaIuHvMxwpg7l
         SzeqhvLdqB7Kd6N6KP/PRmDkTA38qLfUfjBqyhITmkzThGXyCjVIf48J9eCj0YBaS48E34mRRbkWm1Hz
-        FuXvMp98Asd6xBhP1F7AJzly/OPgpgdeuhrZnDKv4ZmPocw3MOYKI/n5xkrzn9QAAAAASUVORK5CYII=
+        FuXvMp98Asd6xBhP1F7AJzly/OPgpgdeuhrZnDKv4ZmPocw3MOYK2N75rnc5Kq0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="tsbBalanceDeSumasySaldos.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -547,19 +547,6 @@
   <data name="tsbMensajesInternos.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="tsbMensajesInternos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGuSURBVEhL7ZQrT8NwFMXLI4SEYMCQwAdAwIcgaBQ4EsSC
-        w2H4CggkjqDA4UChsFgEZIbMQYqZZE1fnHN7Wrqu3RjbzNJf0tz/fZ3bu7V1amqmlziO14IgeIGdCL7v
-        v0ZRtK5xCQjsyq5g+LNqxwY1qZ2fZbiu6yFwwDPsUhiGj+oZGWg9QXNZ2nvtdvubZ4MFzWYzQKIhfwEN
-        d4yPAjTuYRapCe3DVqvlM07foEMwHPnoVLE5NF4nmeFB7w3MPLWgeQLtMMmUDM5xrvgMBC6S0N9BzyXM
-        LDUw9CyJ/sK4Ib+LQc19GHjTzBvye0DjLUzpz1VkmL+JNYb8UiBwpTIOP0ofkDyMMacyhz1KlaKy6sGd
-        TucLgtsqM+DbK6GSWK/ivtIGwpue530kFb2orHwwGl0IbjFPiy0eYNOPwA6+RO+8eFZsVTVZDzUk1wXz
-        hvyM/KZwefefjGPQG+Ldnz2AVPa5Lent2dyaiHyjuGnxrpVv4NrQdVxRU6nBuCG/ctP/0G9zxgw64xya
-        UjWcvjGJoSllw3k2kBj4JI4CNfMzaDOQH+umRfKb19RMI47zAzJiyoA0Oh9AAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="tsbMensajesInternos.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -598,12 +585,12 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVEhL7ZK7LgRhGIYnzgoKroBKuAWiUWi0SvdAqVKp
-        NtkotQqdasVSKHABlBONBHFIJCuTiJndOXje8WVjxW7MzGrwJF/++b/D8/87s87fJEmSqSiKDuI4HrdU
-        90A6HQTBA4ckHFK2dHfQzZHfmfyIZchKxfk9cr7BsJWK8+mDHrJ0vLnq9JWZG7NUe3LKq9ZftXR7aKqo
-        WYRheNbp1dDSlOtS9M5Y6WtoGKnVaq+u64b1ev1Ggwg2rdxCZrmgaVkD3PyU53k9c9AtS6+1pLDPLhcM
-        7WqIgTXtG43GlUnuWTaIfiKfnP4B4lmDMKkcw+sccmk5/bKTD/LHb8sFzYsmubBUE2pzvKpr1UVmueBm
-        2xpm3bOUxBPEqm6uD59bzlyPvecUHYL03LYp+neR388sF8zPvmta8TzvBWkF6Qoxau3ZQVIyZ+L7/hP7
-        HYRLxKC1FAPhMbGFf4Hos/Q/P4njvAEPDyvnnfcriwAAAABJRU5ErkJggg==
+        NtkotQqdasVSKHABVFNoJIhDIlmZRMzszsHzji8bK3ZjZlaDJ/nyz/8dnv/fmXX+JkmSTEVRdBDH8bil
+        ugfS6SAIHjgk4ZCypbuDbo78zuRHLENWKs7vkfMNhq1UnE8f9JCl481Vp6/M3Jil2pNTXrX+qqXbQ1NF
+        zSIMw7NOr4aWplyXonfGSl9Dw0itVnt1XTes1+s3GkSwaeUWMssFTcsa4OanPM/rmYNuWXqtJYV9drlg
+        aFdDDKxp32g0rkxyz7JB9BP55PQPEM8ahEnlGF7nkEvL6ZedfJA/flsuaF40yYWlmlCb41Vdqy4yywU3
+        29Yw656lJJ4gVnVzffjccuZ67D2n6BCk57ZN0b+L/H5muWB+9l3Tiud5L0grSFeIUWvPDpKSORPf95/Y
+        7yBcIgatpRgIj4kt/AtEn6X/+Ukc5w3hIivbn3aqsgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="tsbNotas.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -624,12 +611,12 @@
   <data name="tsbCerrarSesion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEfSURBVEhL3ZRLTsNAEAW9Iwu4QbgPIRsuwudykCsEVoQ9
-        G7gBsPE/70XlCGloMRkpQqKkUdo91W/sWHL154zjOBuG4bbruse6rr+8VK/Vu9E6QStDAecKe9EhP6K9
-        Zzlz9MPQ/GwK1+9GQUuVp16uv+35kMOfREN3BGwcSnuP9s/atn21o/qadj4KfmJ4SStB21d25K5p5aOX
-        +elhkdz9hJ/CgtwPWvnsogWXIWi/ent0V5dN07wzl41nNLsgJqYkfEKzb8TE4BZDTAxeMcTE4BVDTAxe
-        Qt/393qJcy/VD7QTiInBS3Awyu4bRTsBJQYv4egH+G9xsJfqFe0EYmLwiiEmBq8YYmLwiiEm5uifCr3E
-        hUVmsvGMZi+I+TdU1RYD+COk2+VbdAAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEgSURBVEhL3ZRLSgNBFEV7Zga6g7gfYyZuxM/mNFuIjoxz
+        J7oDFRr6m3vD6SCUDysFQfBAkdevzrvVnYau/pxxHGfDMNx2XfdY1/WXl+q1ejdaJ2hlKOBcYS865Ee0
+        9yxnjn4Ymp9N4frdKGip8tTL9bc9H3L4k2jojoCNQ2nv0f5Z27avdlRf085HwU8ML2klaPvKjtw1rXz0
+        Mj89LJK7n/BTWJD7QSufXbTgMgTtV2+P7uqyaZp35rLxjGYXxMSUhE9o9o2YGNxiiInBK4aYGLxiiInB
+        S+j7/l4vce6l+oF2AjExeAkORtl9o2gnoMTgJRz9AP8tDvZSvaKdQEwMXjHExOAVQ0wMXjHExBz9U6GX
+        uLDITDae0ewFMf+GqtoCTf0jjBl8W2gAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="tsbCerrarSesion.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -647,12 +634,12 @@
   <data name="tsbAbrirSesion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEnSURBVEhL3ZS9SgNREIUXQW20Cdolz6PRxsInSGcR307z
-        AGksxVa00DaVWO1vzoEvNjdDdi8GwQ+GOzv3zJl7d0OKP6frusO2bWd1XS/LslwpvpU/qXavOEaWh8zP
-        bKZ1K9p71pAx8mGo/2BjXlXVq4xuFSM9nmi91t6L9xgy/CZqmmH+rvyc8g+qnWrvzRrlc8r9UdOd3nep
-        9YJSgrxvPMA3pTQM9R6RbsW38ACd44vS7+MBhsfd6FRXOtEnfb1xj3qn2MTkmG9Q7wc2MWizwSYGXTbY
-        xKDLBpsYdAlN0zzoI44dyh8pJ2ATgy7Bxkj8S5tQTkASgy5h7wP8WmzsUL6gnIBNDLpssIlBlw02Meiy
-        wSZm738V+ohTC+npjXvUe4nNv6Eo1nxmEzmCLKNeAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEoSURBVEhL3ZS9TsNAEIQtJKCBBkEXngcSGoo8QToKeDvg
+        AWgoES2CIrRUKIXlX2akLzSXFfaJCIlPOnm9NzPrs6MUf07f97td1y2apnkoy/JDa6X6Ub0brX1keSj8
+        2GG6bkR7TxoyQT4O+XfW4XVdvyhornWk2wNdL7T37D2GjD+JTAvC31Sf0P5GvUPtvVqj+pr2cGS60vuu
+        dD2jlaDsSw/wSWmNQ949yo34FB6gB/mk9ft4gOH2Z/RUs6qq3vENxh55p8TE5ISvkXdJTAzabIiJQZcN
+        MTHosiEmBl1C27a3+ogTL9V3tBOIiUGX4GAk/qWd0k5AEoMuYesD/Foc7KX6nnYCMTHosiEmBl02xMSg
+        y4aYmK3/VegjTi3EMxh75D0n5t9QFF/EPRMh2Y8wAgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="tsbAbrirSesion.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -714,7 +701,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <metadata name="MenuArchivos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
@@ -1214,7 +1201,73 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
+  </data>
+  <metadata name="HoraFecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>783, 16</value>
+  </metadata>
+  <data name="borde2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 111</value>
+  </data>
+  <data name="borde2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2, 700</value>
+  </data>
+  <data name="borde2.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;borde2.Name" xml:space="preserve">
+    <value>borde2</value>
+  </data>
+  <data name="&gt;&gt;borde2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;borde2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;borde2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="borde3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 747</value>
+  </data>
+  <data name="borde3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1156, 50</value>
+  </data>
+  <data name="borde3.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;borde3.Name" xml:space="preserve">
+    <value>borde3</value>
+  </data>
+  <data name="&gt;&gt;borde3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;borde3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;borde3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="borde1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 112</value>
+  </data>
+  <data name="borde1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1160, 3</value>
+  </data>
+  <data name="borde1.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;borde1.Name" xml:space="preserve">
+    <value>borde1</value>
+  </data>
+  <data name="&gt;&gt;borde1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;borde1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;borde1.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="lblUsu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1249,9 +1302,6 @@
   <data name="&gt;&gt;lblUsu.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="HoraFecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>783, 16</value>
-  </metadata>
   <data name="btnAyuda2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -1286,7 +1336,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAyuda2.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="btnMantenimiento2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1322,7 +1372,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnMantenimiento2.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="btnContabilidad2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1358,7 +1408,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnContabilidad2.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="btnVer2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1394,7 +1444,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnVer2.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="btnArchivos2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1430,7 +1480,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnArchivos2.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="PanelMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1912,7 +1962,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PanelMenu.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="pbLogo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1942,70 +1992,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pbLogo.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
-  <data name="borde2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 111</value>
+  <data name="lblnuevomensaje.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="borde2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 700</value>
+  <data name="lblnuevomensaje.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Impact, 9pt</value>
   </data>
-  <data name="borde2.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
+  <data name="lblnuevomensaje.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1122, 47</value>
   </data>
-  <data name="&gt;&gt;borde2.Name" xml:space="preserve">
-    <value>borde2</value>
+  <data name="lblnuevomensaje.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 16</value>
   </data>
-  <data name="&gt;&gt;borde2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblnuevomensaje.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
   </data>
-  <data name="&gt;&gt;borde2.Parent" xml:space="preserve">
+  <data name="lblnuevomensaje.Text" xml:space="preserve">
+    <value>!</value>
+  </data>
+  <data name="lblnuevomensaje.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblnuevomensaje.Name" xml:space="preserve">
+    <value>lblnuevomensaje</value>
+  </data>
+  <data name="&gt;&gt;lblnuevomensaje.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblnuevomensaje.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;borde2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="borde3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 747</value>
-  </data>
-  <data name="borde3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1156, 50</value>
-  </data>
-  <data name="borde3.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="&gt;&gt;borde3.Name" xml:space="preserve">
-    <value>borde3</value>
-  </data>
-  <data name="&gt;&gt;borde3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;borde3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;borde3.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="borde1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 112</value>
-  </data>
-  <data name="borde1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1160, 3</value>
-  </data>
-  <data name="borde1.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;borde1.Name" xml:space="preserve">
-    <value>borde1</value>
-  </data>
-  <data name="&gt;&gt;borde1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;borde1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;borde1.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;lblnuevomensaje.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3870,35 +3890,14 @@
         AAA=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Sistema Contable - Inicio</value>
-  </data>
-  <data name="&gt;&gt;tsbUsuario.Name" xml:space="preserve">
-    <value>tsbUsuario</value>
-  </data>
-  <data name="&gt;&gt;tsbUsuario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbPlandeCuenta.Name" xml:space="preserve">
-    <value>tsbPlandeCuenta</value>
-  </data>
-  <data name="&gt;&gt;tsbPlandeCuenta.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbConceptoContable.Name" xml:space="preserve">
-    <value>tsbConceptoContable</value>
-  </data>
-  <data name="&gt;&gt;tsbConceptoContable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbAgenda.Name" xml:space="preserve">
-    <value>tsbAgenda</value>
-  </data>
-  <data name="&gt;&gt;tsbAgenda.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
@@ -3906,59 +3905,11 @@
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tsbMovimientodeAsientos.Name" xml:space="preserve">
-    <value>tsbMovimientodeAsientos</value>
-  </data>
-  <data name="&gt;&gt;tsbMovimientodeAsientos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbLibroDiario.Name" xml:space="preserve">
-    <value>tsbLibroDiario</value>
-  </data>
-  <data name="&gt;&gt;tsbLibroDiario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbLibroMayor.Name" xml:space="preserve">
-    <value>tsbLibroMayor</value>
-  </data>
-  <data name="&gt;&gt;tsbLibroMayor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbBalanceDeSumasySaldos.Name" xml:space="preserve">
-    <value>tsbBalanceDeSumasySaldos</value>
-  </data>
-  <data name="&gt;&gt;tsbBalanceDeSumasySaldos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
     <value>toolStripSeparator2</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton9.Name" xml:space="preserve">
-    <value>toolStripButton9</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton10.Name" xml:space="preserve">
-    <value>toolStripButton10</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton11.Name" xml:space="preserve">
-    <value>toolStripButton11</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton12.Name" xml:space="preserve">
-    <value>toolStripButton12</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
     <value>toolStripSeparator3</value>
@@ -3966,83 +3917,17 @@
   <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripButton13.Name" xml:space="preserve">
-    <value>toolStripButton13</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton14.Name" xml:space="preserve">
-    <value>toolStripButton14</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton15.Name" xml:space="preserve">
-    <value>toolStripButton15</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton16.Name" xml:space="preserve">
-    <value>toolStripButton16</value>
-  </data>
-  <data name="&gt;&gt;toolStripButton16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
     <value>toolStripSeparator4</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tsbBlockdeNotas.Name" xml:space="preserve">
-    <value>tsbBlockdeNotas</value>
-  </data>
-  <data name="&gt;&gt;tsbBlockdeNotas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbMensajesInternos.Name" xml:space="preserve">
-    <value>tsbMensajesInternos</value>
-  </data>
-  <data name="&gt;&gt;tsbMensajesInternos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbCalculadora.Name" xml:space="preserve">
-    <value>tsbCalculadora</value>
-  </data>
-  <data name="&gt;&gt;tsbCalculadora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbNotas.Name" xml:space="preserve">
-    <value>tsbNotas</value>
-  </data>
-  <data name="&gt;&gt;tsbNotas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
     <value>toolStripSeparator5</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbCerrarSesion.Name" xml:space="preserve">
-    <value>tsbCerrarSesion</value>
-  </data>
-  <data name="&gt;&gt;tsbCerrarSesion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbAbrirSesion.Name" xml:space="preserve">
-    <value>tsbAbrirSesion</value>
-  </data>
-  <data name="&gt;&gt;tsbAbrirSesion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbConfigImpresora.Name" xml:space="preserve">
-    <value>tsbConfigImpresora</value>
-  </data>
-  <data name="&gt;&gt;tsbConfigImpresora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;respaldoDeInformacionToolStripMenuItem.Name" xml:space="preserve">
     <value>respaldoDeInformacionToolStripMenuItem</value>
@@ -4301,6 +4186,144 @@
   </data>
   <data name="&gt;&gt;HoraFecha.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbUsuario.Name" xml:space="preserve">
+    <value>tsbUsuario</value>
+  </data>
+  <data name="&gt;&gt;tsbUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbPlandeCuenta.Name" xml:space="preserve">
+    <value>tsbPlandeCuenta</value>
+  </data>
+  <data name="&gt;&gt;tsbPlandeCuenta.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbConceptoContable.Name" xml:space="preserve">
+    <value>tsbConceptoContable</value>
+  </data>
+  <data name="&gt;&gt;tsbConceptoContable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbAgenda.Name" xml:space="preserve">
+    <value>tsbAgenda</value>
+  </data>
+  <data name="&gt;&gt;tsbAgenda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbMovimientodeAsientos.Name" xml:space="preserve">
+    <value>tsbMovimientodeAsientos</value>
+  </data>
+  <data name="&gt;&gt;tsbMovimientodeAsientos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbLibroDiario.Name" xml:space="preserve">
+    <value>tsbLibroDiario</value>
+  </data>
+  <data name="&gt;&gt;tsbLibroDiario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbLibroMayor.Name" xml:space="preserve">
+    <value>tsbLibroMayor</value>
+  </data>
+  <data name="&gt;&gt;tsbLibroMayor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbBalanceDeSumasySaldos.Name" xml:space="preserve">
+    <value>tsbBalanceDeSumasySaldos</value>
+  </data>
+  <data name="&gt;&gt;tsbBalanceDeSumasySaldos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton9.Name" xml:space="preserve">
+    <value>toolStripButton9</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton10.Name" xml:space="preserve">
+    <value>toolStripButton10</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton11.Name" xml:space="preserve">
+    <value>toolStripButton11</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton12.Name" xml:space="preserve">
+    <value>toolStripButton12</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton13.Name" xml:space="preserve">
+    <value>toolStripButton13</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton14.Name" xml:space="preserve">
+    <value>toolStripButton14</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton15.Name" xml:space="preserve">
+    <value>toolStripButton15</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton16.Name" xml:space="preserve">
+    <value>toolStripButton16</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbBlockdeNotas.Name" xml:space="preserve">
+    <value>tsbBlockdeNotas</value>
+  </data>
+  <data name="&gt;&gt;tsbBlockdeNotas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbMensajesInternos.Name" xml:space="preserve">
+    <value>tsbMensajesInternos</value>
+  </data>
+  <data name="&gt;&gt;tsbMensajesInternos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbCalculadora.Name" xml:space="preserve">
+    <value>tsbCalculadora</value>
+  </data>
+  <data name="&gt;&gt;tsbCalculadora.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbNotas.Name" xml:space="preserve">
+    <value>tsbNotas</value>
+  </data>
+  <data name="&gt;&gt;tsbNotas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbCerrarSesion.Name" xml:space="preserve">
+    <value>tsbCerrarSesion</value>
+  </data>
+  <data name="&gt;&gt;tsbCerrarSesion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbAbrirSesion.Name" xml:space="preserve">
+    <value>tsbAbrirSesion</value>
+  </data>
+  <data name="&gt;&gt;tsbAbrirSesion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbConfigImpresora.Name" xml:space="preserve">
+    <value>tsbConfigImpresora</value>
+  </data>
+  <data name="&gt;&gt;tsbConfigImpresora.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmInicio</value>
