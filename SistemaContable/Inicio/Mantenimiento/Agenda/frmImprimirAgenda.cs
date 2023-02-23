@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Datos.Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,15 +24,20 @@ namespace SistemaContable.Inicio.Mantenimiento.Agenda
         {
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos("SELECT * FROM Actividad");
-            cbActividad.DataSource = ds.Tables[0];
-            cbActividad.DisplayMember = "act_descri";
-            cbActividad.ValueMember = "act_codigo";
+            cbActividad.Items.Add("TODAS");
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                cbActividad.Items.Add(dr["act_descri"]);
+            }
+
 
 
             ds = AccesoBase.ListarDatos("SELECT * FROM Localidad");
-            cbLocalidad.DataSource = ds.Tables[0];
-            cbLocalidad.DisplayMember = "loc_nombre";
-            cbLocalidad.ValueMember = "loc_cod1";
+            cbLocalidad.Items.Add("TODAS");
+            foreach(DataRow dr in ds.Tables[0].Rows)
+            {
+                cbLocalidad.Items.Add(dr["loc_nombre"]);
+            }
         }
     }
 }
