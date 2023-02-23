@@ -1,5 +1,7 @@
 ﻿using Negocio.Funciones.Mantenimiento;
+using SistemaContable.General;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,51 +20,62 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         public frmConceptosContables()
         {
             InitializeComponent();
-            CargarDGV();
+            CargarDGV("");
         }
 
-        private void CargarDGV()
+        private void CargarDGV(string Descri)
         {
+            dgvConceptosContables.Rows.Clear();
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
             DataSet ds = new DataSet();
-            ds = data.listaConceptosContables();
-            dgvConceptosContables.DataSource = ds.Tables[0];
+            ds = data.listaConceptosContables(Descri);
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                string codigo = dr["coc_codigo"].ToString();
+                string descripcion = dr["coc_descri"].ToString();
+                dgvConceptosContables.Rows.Add(codigo, descripcion);
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             frmAgregarConceptoContable frm = new frmAgregarConceptoContable("Modificar");
             frm.ShowDialog();
-            CargarDGV();
+            CargarDGV("");
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAgregarConceptoContable frm = new frmAgregarConceptoContable("Agregar");
             frm.ShowDialog();
-            CargarDGV();
+            CargarDGV("");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             data.eliminarConceptoCont(Codigo);
             MessageBox.Show("Eliminado correctamente");
-            CargarDGV();
+            CargarDGV("");
         }
 
         private void Click(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
-            Codigo = (int)dgvConceptosContables.Rows[e.RowIndex].Cells[0].Value;
+            int indice = e.RowIndex;
+            Codigo = Convert.ToInt32(dgvConceptosContables.Rows[indice].Cells[0].Value.ToString());
         }
 
         private void tbDescripcion_TextChanged(object sender, EventArgs e)
         {
-            DataSet ds = new DataSet();
-            ds = data.busquedaConceptosContables(tbDescripcion.Text);
-            dgvConceptosContables.DataSource = ds.Tables[0];
+            CargarDGV(tbDescripcion.Text);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte freporte = new frmReporte("ConceptoCont", $"{FConceptosContables.query}", $"{FConceptosContables.query}", "Conceptos Contables", "Activos", DateTime.Now.ToString("d"));
+            freporte.ShowDialog();
         }
     }
 }

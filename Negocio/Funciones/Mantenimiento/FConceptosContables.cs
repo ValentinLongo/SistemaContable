@@ -11,16 +11,13 @@ namespace Negocio.Funciones.Mantenimiento
 {
     public class FConceptosContables
     {
-        public DataSet listaConceptosContables()
+        public static string query;
+        public DataSet listaConceptosContables(string Descri)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos("SELECT coc_codigo as Código, coc_descri as Descripción FROM ConceptoCont");
-            return ds;
-        }
-        public DataSet busquedaConceptosContables(string descri)
-        {
-            DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT coc_codigo as Código, coc_descri as Descripción FROM ConceptoCont WHERE coc_descri LIKE'%{descri}%'");
+            string Query = $"SELECT * FROM ConceptoCont left join PCuenta ON coc_ctacont = PCuenta.pcu_cuenta left join (select * from PCuenta) AS Comando ON coc_contrap = Comando.pcu_cuenta WHERE coc_descri LIKE'%{Descri}%'";
+            query = Query;
+            ds = AccesoBase.ListarDatos(Query);
             return ds;
         }
 

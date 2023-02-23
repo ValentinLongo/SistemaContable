@@ -1,4 +1,5 @@
 ﻿using Datos;
+using SistemaContable.Inicio.Mantenimiento.Agenda;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,8 +60,8 @@ namespace SistemaContable.Agenda
 
         private void btnImprimir_Click_1(object sender, EventArgs e)
         {
-            System.Diagnostics.Process calc = new System.Diagnostics.Process { StartInfo = { FileName = @"calc.exe" } };
-            calc.Start();
+            frmImprimirAgenda imprimirAgenda = new frmImprimirAgenda();
+            imprimirAgenda.ShowDialog();
         }
 
         private void dataAgenda_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

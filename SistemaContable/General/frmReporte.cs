@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,22 +17,21 @@ namespace SistemaContable.General
 {
     public partial class frmReporte : Form
     {
-        public frmReporte(string NombreReporte, string Consulta, string Titulo, string Param1, string Param2)
+        public frmReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, string Param2)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            cargarReporte(NombreReporte,Consulta, Titulo,Param1,Param2);
+            cargarReporte(NombreReporte, Consulta,Comando, Titulo, Param1, Param2);
         }
 
         //Nombre Reporte = nombre reporte en la carpeta
         //Consulta = Query
-        private void cargarReporte(string NombreReporte, string Consulta, string Titulo, string Param1, string Param2)
+        private void cargarReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, string Param2)
         {
             // Crea un objeto de informe de Crystal Reports
             ReportDocument report = new ReportDocument();
-
+            
             // Carga el informe externo en el objeto de informe de Crystal Reports
-            //report.Load($@"C:\Pedidos\REPORTES\{NombreReporte}.rpt");
             report.Load($@"..\..\Reportes\{NombreReporte}.rpt");
 
             // Configura la conexión de datos de Crystal Reports
@@ -53,10 +53,13 @@ namespace SistemaContable.General
 
             DataTable dt = new DataTable();
             dt = ds.Tables[0];
-            
+
             // Asigna el conjunto de datos al informe de Crystal Reports
             report.SetDataSource(dt);
-
+            if (Comando != "")
+            {
+                report.SetParameterValue(6, $"{Comando}");
+            }
             report.SetParameterValue("Empresa", "Nombre Empresa");
             report.SetParameterValue("Titulo", $"{Titulo}");
             report.SetParameterValue("Param1", $"{Param1}");

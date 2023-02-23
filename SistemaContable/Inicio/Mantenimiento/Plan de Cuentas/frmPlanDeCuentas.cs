@@ -1,6 +1,8 @@
 ﻿using Datos;
 using Negocio;
+using SistemaContable.General;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,14 +32,13 @@ namespace SistemaContable.Plan_de_Cuentas
             {
                 frmConControlBar();
             }
-            CargarDGV();
+
+            CargarDGV("");
         }
 
-        private void CargarDGV()
+        private void CargarDGV(string descri)
         {
             dgvCuentas.Rows.Clear();
-            DataSet ds = new DataSet();
-            ds = Negocio.FPlanDeCuentas.ListaCuentas();
             string codigo = "";
             int cuenta = 0;
             string descripcion = "";
@@ -45,6 +46,8 @@ namespace SistemaContable.Plan_de_Cuentas
             int hija = 0;
             int tabulador = 0;
             bool ajusta = false;
+            DataSet ds = new DataSet();
+            ds = Negocio.FPlanDeCuentas.BusquedaCuenta(descri);
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 codigo = dr["pcu_codigo"].ToString();
@@ -62,7 +65,6 @@ namespace SistemaContable.Plan_de_Cuentas
                 }
                 catch
                 {
-
                 }
                 dgvCuentas.Rows.Add(codigo, cuenta, descripcion, superior, hija, tabulador, ajusta);
             }
@@ -88,25 +90,17 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (tbDescipcion.Text != "" && tbDescipcion.Text != null)
-            {
-                btnModificar.Enabled = false;
-                btnEliminar.Enabled = false;
-                DataSet ds = new DataSet();
-                ds = Negocio.FPlanDeCuentas.BusquedaCuenta(tbDescipcion.Text);
-                dgvCuentas.DataSource = ds.Tables[0];
-            }
-            else
-            {
-                CargarDGV();
-            }
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
+
+            CargarDGV(tbDescipcion.Text);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAgregarCuenta frmAgregarCuenta = new frmAgregarCuenta();
             frmAgregarCuenta.ShowDialog();
-            CargarDGV();
+            CargarDGV("");
         }
 
         private void Click(object sender, DataGridViewCellMouseEventArgs e)
@@ -129,19 +123,15 @@ namespace SistemaContable.Plan_de_Cuentas
         {
             frmModificarCuenta formModificarCuenta = new frmModificarCuenta();
             formModificarCuenta.ShowDialog();
-            CargarDGV();
+            CargarDGV("");
         }
 
-        private void tbDescipcion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             FPlanDeCuentas.eliminarCuenta(idCuenta);
             MessageBox.Show("Eliminado Correctamente");
-            CargarDGV();
+            CargarDGV("");
         }
 
         private void panel7_MouseDown(object sender, MouseEventArgs e)
@@ -154,5 +144,11 @@ namespace SistemaContable.Plan_de_Cuentas
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte freporte = new frmReporte("PCuenta", $"{FPlanDeCuentas.query}","", "Plan de Cuentas", "Activos", DateTime.Now.ToString("d"));
+            freporte.ShowDialog();
+        }
     }
 }

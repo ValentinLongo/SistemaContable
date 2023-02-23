@@ -140,7 +140,7 @@ namespace SistemaContable.Usuarios
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            frmReporte freporte = new frmReporte("Usuarios", $"{query}", "Usuarios del Sistema", "Activos", DateTime.Now.ToString("d"));
+            frmReporte freporte = new frmReporte("Usuarios", $"{query}", "","Usuarios del Sistema", "Activos", DateTime.Now.ToString("d"));
             freporte.ShowDialog();
         }
 
