@@ -878,6 +878,12 @@
   <ItemGroup>
     <None Include="Resources\calculadora2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobre rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobre.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

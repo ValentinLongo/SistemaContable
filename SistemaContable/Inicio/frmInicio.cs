@@ -107,7 +107,24 @@ namespace SistemaContable
             MenuContabilidad.IsMainMenu = false;
             MenuMantenimiento.IsMainMenu = false;
             MenuAyuda.IsMainMenu = false;
+
+            if (Negocio.Funciones.Ver.FComunicacionInterna.NuevosMSGs())
+            {
+                lblnuevomensaje.Visible = true;
+            }
+
         }
+
+        private void tsbMensajesInternos_MouseEnter(object sender, EventArgs e)
+        {
+            lblnuevomensaje.BackColor = Color.FromArgb(255, 179, 215, 243);
+        }
+
+        private void tsbMensajesInternos_MouseLeave(object sender, EventArgs e)
+        {
+            lblnuevomensaje.BackColor = Color.FromArgb(255, 40, 40, 40);
+        }
+
         //
 
         //ACCESOS DIRECTOS

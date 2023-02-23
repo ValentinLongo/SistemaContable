@@ -124,6 +124,7 @@ namespace SistemaContable.Parametrizacion_Permisos
             AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu ( mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From aux_MenuxUsu Where aux_MenuxUsu.mxu_sistema = 'CO' AND mxu_terminal = '{terminal}' AND aux_MenuxUsu.mxu_usuario = {txtNroUsuario.Text}");
 
             MessageBox.Show("Cambios realizados correctamente!", "Mensaje");
+            this.Close();
         }
 
         private void Tpermisos_AfterCheck(object sender, TreeViewEventArgs e)
