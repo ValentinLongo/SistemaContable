@@ -349,6 +349,12 @@
     <Compile Include="Inicio\Mantenimiento\Agenda\frmAgregarAgenda.Designer.cs">
       <DependentUpon>frmAgregarAgenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Mantenimiento\Agenda\frmImprimirAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Agenda\frmImprimirAgenda.Designer.cs">
+      <DependentUpon>frmImprimirAgenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Mantenimiento\Centro de Costos\frmAggModEjercicioContable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -608,6 +614,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Agenda\frmAgregarAgenda.resx">
       <DependentUpon>frmAgregarAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Agenda\frmImprimirAgenda.resx">
+      <DependentUpon>frmImprimirAgenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Centro de Costos\frmAggModEjercicioContable.resx">
       <DependentUpon>frmAggModEjercicioContable.cs</DependentUpon>

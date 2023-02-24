@@ -37,6 +37,8 @@
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbDescripcion = new System.Windows.Forms.TextBox();
+            this.Codig = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConceptosContables)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +48,9 @@
             this.dgvConceptosContables.AllowUserToDeleteRows = false;
             this.dgvConceptosContables.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConceptosContables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConceptosContables.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codig,
+            this.Descripcion});
             this.dgvConceptosContables.Location = new System.Drawing.Point(26, 23);
             this.dgvConceptosContables.Name = "dgvConceptosContables";
             this.dgvConceptosContables.ReadOnly = true;
@@ -84,6 +89,7 @@
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnEliminar
             // 
@@ -189,6 +195,18 @@
             this.tbDescripcion.TabIndex = 54;
             this.tbDescripcion.Tag = "00000";
             // 
+            // Codig
+            // 
+            this.Codig.HeaderText = "Código";
+            this.Codig.Name = "Codig";
+            this.Codig.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
             // frmConceptosContables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,5 +242,7 @@
         private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tbDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codig;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }
