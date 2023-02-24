@@ -17,7 +17,7 @@ namespace SistemaContable.General
 {
     public partial class frmReporte : Form
     {
-        public frmReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, string Param2, [Optional] string Param3, [Optional] string Param4)
+        public frmReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, [Optional] string Param2, [Optional] string Param3, [Optional] string Param4)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
@@ -26,7 +26,7 @@ namespace SistemaContable.General
 
         //Nombre Reporte = nombre reporte en la carpeta
         //Consulta = Query
-        private void cargarReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, string Param2, [Optional] string Param3, [Optional] string Param4)
+        private void cargarReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, [Optional] string Param2, [Optional] string Param3, [Optional] string Param4)
         {
             // Crea un objeto de informe de Crystal Reports
             ReportDocument report = new ReportDocument();
@@ -63,7 +63,10 @@ namespace SistemaContable.General
             report.SetParameterValue("Empresa", "Nombre Empresa");
             report.SetParameterValue("Titulo", $"{Titulo}");
             report.SetParameterValue("Param1", $"{Param1}");
-            report.SetParameterValue("Param2", $"{Param2}");
+            if (Param2 != null)
+            {
+                report.SetParameterValue("Param2", $"{Param2}");
+            }
             if (Param3 != null)
             {
                 report.SetParameterValue("Param3", $"{Param3}");

@@ -35,7 +35,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Agenda
                 cbActividad.Items.Add(dr["act_descri"]);
             }
 
-            ds = AccesoBase.ListarDatos("SELECT * FROM Localidad");
+            ds = AccesoBase.ListarDatos("SELECT * FROM Localidad ORDER BY loc_nombre");
             cbLocalidad.Items.Add("TODAS");
             foreach(DataRow dr in ds.Tables[0].Rows)
             {
@@ -66,7 +66,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Agenda
             }
             string query = FAgenda.armarQuery(idActividad,CodPos1,CodPos2);
 
-            frmReporte reporte = new frmReporte("Agenda",query,"","Agenda","Activo","a","b","c");
+            frmReporte reporte = new frmReporte("Agenda",query,"","Agenda del Sistema", "TODOS",cbActividad.Text,cbLocalidad.Text,"");
             reporte.ShowDialog();
         }
 

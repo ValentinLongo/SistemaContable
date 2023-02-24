@@ -10,6 +10,7 @@ namespace Negocio
 {
     public class FEmpresa
     {
+        public static string querySucursales;
         public static DataSet listaEmpresa()
         {
             DataSet ds = new DataSet();
@@ -19,7 +20,9 @@ namespace Negocio
         public static DataSet listaSucursales()
         {
             DataSet ds = new DataSet();
-            ds = Datos.AccesoBase.ListarDatos("select suc_codigo as Código, suc_descri as Descripción from Sucursal ORDER BY suc_codigo");
+            string query = "select * from Sucursal ORDER BY suc_codigo";
+            querySucursales = query;
+            ds = Datos.AccesoBase.ListarDatos(query);
             return ds;
         }
 

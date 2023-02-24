@@ -147,7 +147,7 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            frmReporte freporte = new frmReporte("PCuenta", $"{FPlanDeCuentas.query}","", "Plan de Cuentas", "Activos", DateTime.Now.ToString("d"));
+            frmReporte freporte = new frmReporte("PCuenta", $"{FPlanDeCuentas.query}","", "Plan de Cuentas", "General", DateTime.Now.ToString("d"));
             freporte.ShowDialog();
         }
     }
