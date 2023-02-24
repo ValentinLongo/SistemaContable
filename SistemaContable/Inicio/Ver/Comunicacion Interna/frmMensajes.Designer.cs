@@ -39,6 +39,9 @@
             this.txtMensaje = new System.Windows.Forms.TextBox();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnaCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -46,14 +49,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtCodEjercicio = new System.Windows.Forms.TextBox();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -274,6 +274,26 @@
             this.dgvUsuarios.TabIndex = 130;
             this.dgvUsuarios.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentDoubleClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // ColumnaCheck
+            // 
+            this.ColumnaCheck.HeaderText = "Incluye";
+            this.ColumnaCheck.Name = "ColumnaCheck";
+            this.ColumnaCheck.ReadOnly = true;
+            this.ColumnaCheck.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnaCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -354,18 +374,18 @@
             this.panel3.Size = new System.Drawing.Size(309, 1);
             this.panel3.TabIndex = 138;
             // 
-            // txtCodEjercicio
+            // txtBusqueda
             // 
-            this.txtCodEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.txtCodEjercicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodEjercicio.Enabled = false;
-            this.txtCodEjercicio.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodEjercicio.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtCodEjercicio.Location = new System.Drawing.Point(83, 548);
-            this.txtCodEjercicio.Name = "txtCodEjercicio";
-            this.txtCodEjercicio.Size = new System.Drawing.Size(309, 19);
-            this.txtCodEjercicio.TabIndex = 137;
-            this.txtCodEjercicio.Tag = "11000";
+            this.txtBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtBusqueda.Location = new System.Drawing.Point(83, 548);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(309, 19);
+            this.txtBusqueda.TabIndex = 137;
+            this.txtBusqueda.Tag = "11000";
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // label6
             // 
@@ -452,26 +472,6 @@
             this.label8.TabIndex = 142;
             this.label8.Text = "Mensaje";
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // ColumnaCheck
-            // 
-            this.ColumnaCheck.HeaderText = "Incluye";
-            this.ColumnaCheck.Name = "ColumnaCheck";
-            this.ColumnaCheck.ReadOnly = true;
-            this.ColumnaCheck.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnaCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // frmMensajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,7 +483,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.CheckInicio);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.txtCodEjercicio);
+            this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblUsuario);
@@ -529,7 +529,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtCodEjercicio;
+        private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
         private System.Windows.Forms.Label label7;

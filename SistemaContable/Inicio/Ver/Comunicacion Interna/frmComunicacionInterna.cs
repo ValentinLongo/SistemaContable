@@ -15,10 +15,12 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
 {
     public partial class frmComunicacionInterna : Form
     {
+        public static Label nuevomsg;
 
-        public frmComunicacionInterna()
+        public frmComunicacionInterna(Label newmsg)
         {
             InitializeComponent();
+            nuevomsg = newmsg;
             txtComentario.Text = "";
             cbSeleccionar.SelectedIndex = 0;
         }
@@ -76,7 +78,7 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
         {
             if (cbSeleccionar.Text == "Bandeja de Entrada")
             {
-                Negocio.Funciones.Ver.FComunicacionInterna.VerMSGs(dgvMensajes);
+                Negocio.Funciones.Ver.FComunicacionInterna.VerMSGs(dgvMensajes, nuevomsg);
                 cbSeleccionar_SelectedIndexChanged(sender, e);
             }
         }

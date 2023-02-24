@@ -21,13 +21,13 @@ namespace SistemaContable.Usuarios
             //Negocio.FFormatoSistema.SetearFormato(this);
             ShapeBusqueda.SendToBack();
 
-            CargarDGV();
+            CargarDGV("");
         }
 
-        private void CargarDGV()
+        private void CargarDGV(string busqueda)
         {
             DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos($"select caj_codigo as Código, caj_descri as Descipción from Caja");
+            data = Datos.AccesoBase.ListarDatos($"select caj_codigo as Código, caj_descri as Descipción from Caja " + busqueda);
             dgvCajas.DataSource = data.Tables[0];
         }
 
@@ -63,34 +63,18 @@ namespace SistemaContable.Usuarios
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-            string query = "select caj_codigo as Código, caj_descri as Descipción from Caja ";
-            if (tbCodigo.Text != null && tbCodigo.Text != "")
+            string busqueda = "";
+            if (cbBusqueda.Text == "Codigo")
             {
-                if (query.Contains("WHERE"))
-                {
-                    query += $"and caj_codigo = {tbCodigo.Text}";
-                }
-                else
-                {
-                    query += $"WHERE caj_codigo = {tbCodigo.Text}";
-                }
+                busqueda = Negocio.FGenerales.Busqueda(dgvCajas, txtBusqueda.Text, CheckInicio, 1, "caj_codigo");
             }
-            if (tbDescripcion.Text != null && tbDescripcion.Text != "")
+            else if (cbBusqueda.Text == "Descripcion")
             {
-                if (query.Contains("WHERE"))
-                {
-                    query += $"and caj_descri = '{tbDescripcion.Text}'";
-                }
-                else
-                {
-                    query += $"WHERE caj_descri = '{tbDescripcion.Text}'";
-                }
+                busqueda = Negocio.FGenerales.Busqueda(dgvCajas, txtBusqueda.Text, CheckInicio, 1, "caj_descri");
             }
-            DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos(query);
-            dgvCajas.DataSource = data.Tables[0];
+            CargarDGV(busqueda);
         }
 
         //BARRA DE CONTROL

@@ -35,10 +35,10 @@ namespace SistemaContable.Parametrizacion_Permisos
             cargarDGV("","","");
         }
 
-        public void cargarDGV(string modulobusqueda, string txtdescri, string estado) 
+        public void cargarDGV(string modulobusqueda, string busqueda, string estado) 
         {
             DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos($"SELECT pef_codigo as Codigo, pef_modulo as Modulo, pef_descri as Descripcion, pxu_activo as Activo FROM PermisosxUsu LEFT JOIN Permisos ON pef_codigo = pxu_codigo AND pef_sistema = pxu_sistema  WHERE pef_sistema = 'CO' AND pxu_usuario = {codigo} {modulobusqueda} {txtdescri} ORDER BY pef_codigo");
+            data = Datos.AccesoBase.ListarDatos($"SELECT pef_codigo as Codigo, pef_modulo as Modulo, pef_descri as Descripcion, pxu_activo as Activo FROM PermisosxUsu LEFT JOIN Permisos ON pef_codigo = pxu_codigo AND pef_sistema = pxu_sistema  WHERE pef_sistema = 'CO' AND pxu_usuario = {codigo} {modulobusqueda} {busqueda} ORDER BY pef_codigo");
             foreach (DataRow dr in data.Tables[0].Rows)
             {
                 bool check = false;
@@ -107,26 +107,8 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
-            if (txtDescripcion.Text != "")
-            {
-                string txtdescri;
-
-                if (CheckInicio.Checked)
-                {
-                    txtdescri = "AND pef_descri LIKE " + "'" + txtDescripcion.Text + "%'";
-                }
-                else
-                {
-                    txtdescri = "AND pef_descri LIKE " + "'%" + txtDescripcion.Text + "%'";
-                }
-                dgvPEspeciales.Rows.Clear();
-                cargarDGV("", txtdescri,"");
-            }
-            else
-            {
-                dgvPEspeciales.Rows.Clear();
-                cargarDGV("", "", "");
-            }
+            string busqueda = Negocio.FGenerales.Busqueda(dgvPEspeciales,txtDescripcion.Text,CheckInicio,2,"pef_descri");
+            cargarDGV("",busqueda,"");
         }
 
         private void btnAgregarTodo_Click(object sender, EventArgs e)
