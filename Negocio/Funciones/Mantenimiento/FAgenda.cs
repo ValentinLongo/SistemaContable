@@ -71,5 +71,38 @@ namespace Negocio
             }
             return mAgenda;
         }
+
+
+        public static string armarQuery(int idActividad, int CodPos1, int CodPos2)
+        {
+            string query = "SELECT * FROM Agenda LEFT JOIN  Actividad ON age_actividad = act_codigo LEFT JOIN Localidad ON age_codpos1 = loc_cod1 AND age_codpos2 = loc_cod2";
+            if (idActividad > 0)
+            {
+                query += $" WHERE age_actividad = {idActividad}";
+            }
+            if (CodPos1 > 0)
+            {
+                if (query.Contains("WHERE"))
+                {
+                    query += $" and age_codpos1 = {CodPos1} and age_codpos2 = {CodPos2}";
+                }
+                else
+                {
+                    query += $" WHERE age_codpos1 = {CodPos1} and age_codpos2 = {CodPos2}";
+                }
+            }
+            return query;
+        }
+
+        public static int buscarIdActividad(string descripcion)
+        {
+            int id = 0;
+            DataSet ds = AccesoBase.ListarDatos($"SELECT * FROM Actividad WHERE act_descri = '{descripcion}'");
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                id = Convert.ToInt32(dr["act_codigo"].ToString());
+            }
+            return id;
+        }
     }
 }
