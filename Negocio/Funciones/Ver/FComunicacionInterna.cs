@@ -12,7 +12,7 @@ namespace Negocio.Funciones.Ver
 {
     public class FComunicacionInterna
     {
-        public static void VerMSGs(DataGridView dgv)
+        public static void VerMSGs(DataGridView dgv, Label nuevomsg)
         {
             int seleccionado = dgv.CurrentCell.RowIndex;
 
@@ -27,6 +27,12 @@ namespace Negocio.Funciones.Ver
                 string destino = dgv.Rows[seleccionado].Cells[3].Value.ToString();
 
                 AccesoBase.InsertUpdateDatos($"UPDATE Observaciones SET obs_Estado = 1, obs_fechaL = '{fechaL}', obs_horaL = '{horaL}' WHERE obs_fecha = '{fecha}' AND obs_hora = '{hora}' AND obs_origen = '{origen}' AND obs_nomdest = '{destino}'");
+
+                if (NuevosMSGs() == false)
+                {
+                    nuevomsg.Visible = false;
+                }
+
             }
         }
 

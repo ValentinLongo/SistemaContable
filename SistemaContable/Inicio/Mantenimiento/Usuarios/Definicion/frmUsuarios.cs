@@ -16,7 +16,6 @@ namespace SistemaContable.Usuarios
     {
         public static int codigoUsuario;
         string query;
-        string orderBy = "ORDER BY usu_codigo";
         public frmUsuarios()
         {
             InitializeComponent();
@@ -24,7 +23,8 @@ namespace SistemaContable.Usuarios
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
-            llenarDGV();
+            cbBusqueda.SelectedIndex = 0;
+            llenarDGV("");
             btnModificar.Enabled = false;
         }
 
@@ -34,12 +34,27 @@ namespace SistemaContable.Usuarios
             frmInicio.Show();
         }
 
-        public void llenarDGV()
+        public void llenarDGV(string busqueda)
         {
             DataSet data = new DataSet();
             //query = "SELECT usu_codigo as Codigo, usu_nombre as Nombre, usu_login as Login, Perfil.per_descri as Perfil, usu_telefono as Telefono FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo ORDER BY usu_codigo";
-            query = "SELECT * FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo ";
-            data = Datos.AccesoBase.ListarDatos($"{query + orderBy}");
+            if (CheckUsuario.Checked)
+            {
+                if (busqueda == "")
+                {
+                    query = "SELECT * FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo " + busqueda + "WHERE usu_estado = 1";
+                }
+                else
+                {
+                    query = "SELECT * FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo " + busqueda + "AND usu_estado = 1";
+                }
+            }
+            else
+            {
+                query = "SELECT * FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo " + busqueda;
+            }
+
+            data = Datos.AccesoBase.ListarDatos($"{query + " ORDER BY usu_codigo"}");
 
             foreach (DataRow dr in data.Tables[0].Rows)
             {
@@ -66,70 +81,18 @@ namespace SistemaContable.Usuarios
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            btnModificar.Enabled = false;
-            query = "SELECT * FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo ";
-            if (tbNombreBusqueda.Text != null && tbNombreBusqueda.Text != "")
-            {
-                if (query.Contains("WHERE"))
-                {
-                    query += $"and usu_nombre = '{tbNombreBusqueda.Text}'";
-                }
-                else
-                {
-                    query += $"WHERE usu_nombre = '{tbNombreBusqueda.Text}'";
-                }
-            }
-            if (tbCodigo.Text != null && tbCodigo.Text != "")
-            {
-                if (query.Contains("WHERE"))
-                {
-                    query += $"and usu_codigo = {tbCodigo.Text}";
-                }
-                else
-                {
-                    query += $"WHERE usu_codigo = '{tbCodigo.Text}'";
-                }
-            }
-            if (dtNacimiento.Value < Convert.ToDateTime("01/01/2015"))
-            {
-                if (query.Contains("WHERE"))
-                {
-                    query += $"and usu_fecnac = '{dtNacimiento.Text}'";
-                }
-                else
-                {
-                    query += $"WHERE usu_fecnac = '{dtNacimiento.Text}'";
-                }
-            }
-
-            DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos($"{query + orderBy}");
-            dgvUsuarios.Rows.Clear();
-            foreach (DataRow dr in data.Tables[0].Rows)
-            {
-                string codigo = dr["usu_codigo"].ToString();
-                string nombre = dr["usu_nombre"].ToString();
-                string login = dr["usu_login"].ToString();
-                string perfil = dr["per_descri"].ToString();
-                string telefono = dr["usu_telefono"].ToString();
-                dgvUsuarios.Rows.Add(codigo, nombre, login, perfil, telefono);
-            }
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAgregarUsuario frmAgregarUsuario = new frmAgregarUsuario();
             frmAgregarUsuario.ShowDialog();
-            llenarDGV();
+            llenarDGV("");
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             frmModificarUsuario formModificarUsuario = new frmModificarUsuario();
             formModificarUsuario.ShowDialog();
-            llenarDGV();
+            llenarDGV("");
         }
 
         private void btnDefinirCajas_Click(object sender, EventArgs e)
@@ -146,39 +109,22 @@ namespace SistemaContable.Usuarios
 
         private void CheckUsuario_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
-            string nuevoQuery = "";
-            if (CheckUsuario.Checked)
-            {
-                if (query.Contains("WHERE"))
-                {
-                    nuevoQuery = query + " and usu_estado = 1";
-                }
-                else
-                {
-                    nuevoQuery = query + " WHERE usu_estado = 1";
-                }
-            }
-
-
-            DataSet data = new DataSet();
-            if (nuevoQuery != "" && nuevoQuery != null)
-            {
-                data = Datos.AccesoBase.ListarDatos($"{nuevoQuery + orderBy}");
-            }
-            else
-            {
-                data = Datos.AccesoBase.ListarDatos($"{query + orderBy}");
-            }
             dgvUsuarios.Rows.Clear();
-            foreach (DataRow dr in data.Tables[0].Rows)
+            llenarDGV("");
+        }
+
+        private void txtbusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string busqueda = "";
+            if (cbBusqueda.Text == "Codigo")
             {
-                string codigo = dr["usu_codigo"].ToString();
-                string nombre = dr["usu_nombre"].ToString();
-                string login = dr["usu_login"].ToString();
-                string perfil = dr["per_descri"].ToString();
-                string telefono = dr["usu_telefono"].ToString();
-                dgvUsuarios.Rows.Add(codigo, nombre, login, perfil, telefono);
+                busqueda = Negocio.FGenerales.Busqueda(dgvUsuarios, txtbusqueda.Text, CheckInicio, 1, "usu_codigo");
             }
+            else if (cbBusqueda.Text == "Nombre")
+            {
+                busqueda = Negocio.FGenerales.Busqueda(dgvUsuarios, txtbusqueda.Text, CheckInicio, 1, "usu_nombre");
+            }
+            llenarDGV(busqueda);
         }
     }
 }

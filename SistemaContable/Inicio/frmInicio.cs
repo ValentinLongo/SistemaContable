@@ -160,7 +160,7 @@ namespace SistemaContable
 
         private void tsbMensajesInternos_Click(object sender, EventArgs e)
         {
-            frmComunicacionInterna frm = new frmComunicacionInterna();
+            frmComunicacionInterna frm = new frmComunicacionInterna(lblnuevomensaje);
             Negocio.FGenerales.Mostrarfrm(frm, tsbMensajesInternos.Tag.ToString());
         }
 
@@ -477,7 +477,7 @@ namespace SistemaContable
         }
         private void comunicacionInternaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmComunicacionInterna frm = new frmComunicacionInterna();
+            frmComunicacionInterna frm = new frmComunicacionInterna(lblnuevomensaje);
             Negocio.FGenerales.Mostrarfrm(frm, comunicacionInternaToolStripMenuItem.Tag.ToString());
 
         }

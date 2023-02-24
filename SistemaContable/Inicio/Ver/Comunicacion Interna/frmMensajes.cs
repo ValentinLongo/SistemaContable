@@ -20,13 +20,13 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
             InitializeComponent();
 
             lblUsuario.Text = FLogin.NombreUsuario;
-            CargarDGV(false);
+            CargarDGV(false,"");
         }
 
-        private void CargarDGV(bool incluye)
+        private void CargarDGV(bool incluye, string busqueda)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT usu_codigo, usu_nombre FROM Usuario");
+            ds = AccesoBase.ListarDatos($"SELECT usu_codigo, usu_nombre FROM Usuario {busqueda}");
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 string codigo = dr[0].ToString();
@@ -58,13 +58,13 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
         private void AgregarTodo_Click(object sender, EventArgs e)
         {
             dgvUsuarios.Rows.Clear();
-            CargarDGV(true);
+            CargarDGV(true,"");
         }
 
         private void QuitarTodo_Click(object sender, EventArgs e)
         {
             dgvUsuarios.Rows.Clear();
-            CargarDGV(false);
+            CargarDGV(false,"");
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -96,6 +96,12 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string busqueda = Negocio.FGenerales.Busqueda(dgvUsuarios,txtBusqueda.Text,CheckInicio,1,"usu_nombre");
+            CargarDGV(false, busqueda);
         }
     }
 }

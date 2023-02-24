@@ -31,11 +31,11 @@ namespace SistemaContable.Parametrizacion_Permisos
             cargarDGV("","","");
         }
 
-        public void cargarDGV(string modulobusqueda, string txtdescri, string estado)
+        public void cargarDGV(string modulobusqueda, string busqueda, string estado)
         {
             dgvPEspeciales.Rows.Clear();
             DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos($"SELECT pef_codigo as Codigo, pef_modulo as Modulo, pef_descri as Descripcion, pxp_activo as Activo FROM PermisosxPerfil LEFT JOIN Permisos ON pef_codigo = pxp_codigo AND pef_sistema = pxp_sistema  WHERE pef_sistema = 'CO' AND pxp_perfil = {codigo} {modulobusqueda} {txtdescri} ORDER BY pef_codigo");
+            data = Datos.AccesoBase.ListarDatos($"SELECT pef_codigo as Codigo, pef_modulo as Modulo, pef_descri as Descripcion, pxp_activo as Activo FROM PermisosxPerfil LEFT JOIN Permisos ON pef_codigo = pxp_codigo AND pef_sistema = pxp_sistema  WHERE pef_sistema = 'CO' AND pxp_perfil = {codigo} {modulobusqueda} {busqueda} ORDER BY pef_codigo");
             foreach (DataRow dr in data.Tables[0].Rows)
             {
                 bool check = false;
@@ -104,26 +104,9 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
-            if (txtDescripcion.Text != "")
-            {
-                string txtdescri;
+            string busqueda = Negocio.FGenerales.Busqueda(dgvPEspeciales, txtDescripcion.Text, CheckInicio, 2, "pef_descri");
+            cargarDGV("",busqueda,"");
 
-                if (CheckInicio.Checked)
-                {
-                    txtdescri = "AND pef_descri LIKE " + "'" + txtDescripcion.Text + "%'";
-                }
-                else
-                {
-                    txtdescri = "AND pef_descri LIKE " + "'%" + txtDescripcion.Text + "%'";
-                }
-                dgvPEspeciales.Rows.Clear();
-                cargarDGV("", txtdescri, "");
-            }
-            else
-            {
-                dgvPEspeciales.Rows.Clear();
-                cargarDGV("", "", "");
-            }
         }
 
         private void btnAgregarTodo_Click(object sender, EventArgs e)

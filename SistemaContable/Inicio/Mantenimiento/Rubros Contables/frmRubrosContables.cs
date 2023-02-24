@@ -18,19 +18,20 @@ namespace SistemaContable.Rubos_Contables
     {
         FRubrosContables rubrosContables = new FRubrosContables();
         public static int codigoRubro;
+
         public frmRubrosContables()
         {
             InitializeComponent();
-            CargarDGV();
+            CargarDGV("");
         }
 
-        private void CargarDGV()
+        private void CargarDGV(string busqueda)
         {
             dgvRubrosContables.Rows.Clear();
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
             DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos($"SELECT * FROM RubroCont ORDER BY ruc_codigo");
+            data = Datos.AccesoBase.ListarDatos($"SELECT * FROM RubroCont ORDER BY ruc_codigo " + busqueda);
             foreach (DataRow dr in data.Tables[0].Rows)
             {
                 string Codigo = dr[0].ToString();
@@ -49,7 +50,7 @@ namespace SistemaContable.Rubos_Contables
         {
             dgvRubrosContables.Rows.Clear();
             DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos($"select * from RubroCont where ruc_descri LIKE '%{tbDescripcion.Text}%'");
+            data = Datos.AccesoBase.ListarDatos($"select * from RubroCont where ruc_descri LIKE '%{txtBusqueda.Text}%'");
             foreach (DataRow dr in data.Tables[0].Rows)
             {
                 string Codigo = dr[0].ToString();
@@ -68,21 +69,21 @@ namespace SistemaContable.Rubos_Contables
         {
             frmAgregarRubroContable agregarRubroContable = new frmAgregarRubroContable("Agregar");
             agregarRubroContable.ShowDialog();
-            CargarDGV();
+            CargarDGV("");
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             frmAgregarRubroContable agregarRubroContable = new frmAgregarRubroContable("Modificar");
             agregarRubroContable.ShowDialog();
-            CargarDGV();
+            CargarDGV("");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             rubrosContables.EliminarRubroContable(codigoRubro);
             MessageBox.Show("Registro borrado correctamente");
-            CargarDGV();
+            CargarDGV("");
         }
 
         private void Click(object sender, DataGridViewCellMouseEventArgs e)
@@ -99,6 +100,12 @@ namespace SistemaContable.Rubos_Contables
                 btnModificar.Enabled = false;
                 btnEliminar.Enabled = false;
             }
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            //string busqueda = Negocio.FGenerales.Busqueda(dgvRubrosContables, txtBusqueda.Text, CheckInicio, 1, "ruc_descri");
+            //CargarDGV(busqueda);
         }
 
         //BARRA DE CONTROL

@@ -11,6 +11,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 using TheArtOfDev.HtmlRenderer.Adapters;
 
@@ -157,5 +158,56 @@ namespace Negocio
                 }
             }
         }
+
+        public static string Busqueda(DataGridView dgv,string txtbusqueda,BunifuCheckBox inicio,int where_o_and, string columna) //where = 1 / and = 2
+        {
+            string retorno = "";
+
+            if (txtbusqueda != "")
+            {
+                if (where_o_and == 1)
+                {
+                    if (inicio.Checked)
+                    {
+                        retorno = "WHERE " + columna + " LIKE " + "'" + txtbusqueda + "%'";
+                    }
+                    else
+                    {
+                        retorno = "WHERE " + columna + " LIKE " + "'%" + txtbusqueda + "%'";
+                    }
+
+                    dgv.Rows.Clear();
+                    return retorno;
+
+                }
+                else if (where_o_and == 2)
+                {
+                    if (inicio.Checked)
+                    {
+                        retorno = "AND " + columna + " LIKE " + "'" + txtbusqueda + "%'";
+                    }
+                    else
+                    {
+                        retorno = "AND " + columna + " LIKE " + "'%" + txtbusqueda + "%'";
+                    }
+
+                    dgv.Rows.Clear();
+                    return retorno;
+
+
+                }
+
+                dgv.Rows.Clear();
+                return retorno;
+
+            }
+
+            dgv.Rows.Clear();
+            return retorno;
+
+        }
+
+
+
     }
 }
