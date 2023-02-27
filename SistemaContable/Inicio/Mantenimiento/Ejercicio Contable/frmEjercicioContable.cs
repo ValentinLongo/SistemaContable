@@ -1,4 +1,5 @@
 ﻿using Datos;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
 {
     public partial class frmEjercicioContable : Form
     {
+        string txtbusqueda;
         public frmEjercicioContable()
         {
             InitializeComponent();
@@ -52,7 +54,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
 
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
-            string txtbusqueda = Negocio.Funciones.Mantenimiento.FEjercicioContable.Busqueda(dgvEjercicioContable, txtBusqueda, cbBusqueda, CheckInicio);
+            txtbusqueda = Negocio.Funciones.Mantenimiento.FEjercicioContable.Busqueda(dgvEjercicioContable, txtBusqueda, cbBusqueda, CheckInicio);
             cargarDGV(txtbusqueda);
         }
 
@@ -101,6 +103,20 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
+            if(txtbusqueda == null)
+            {
+                frmReporte reporte = new frmReporte("Ejercicio", "select * from Ejercicio ORDER BY eje_codigo", "","Informe de Ejercicios Contables","General",DateTime.Now.ToString("d"));
+                reporte.ShowDialog();
+            }
+            else
+            {
+                frmReporte reporte = new frmReporte("Ejercicio", $"select * from Ejercicio {txtbusqueda} ORDER BY eje_codigo", "", "Informe de Ejercicios Contables", "General", DateTime.Now.ToString("d"));
+                reporte.ShowDialog();
+            }
         }
     }
 }

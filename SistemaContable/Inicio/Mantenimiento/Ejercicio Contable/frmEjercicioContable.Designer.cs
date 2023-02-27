@@ -273,6 +273,7 @@
             this.rjButton5.Text = "Imprimir";
             this.rjButton5.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.rjButton5.UseVisualStyleBackColor = false;
+            this.rjButton5.Click += new System.EventHandler(this.rjButton5_Click);
             // 
             // bunifuShapes1
             // 
