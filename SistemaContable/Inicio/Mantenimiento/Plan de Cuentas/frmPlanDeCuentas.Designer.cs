@@ -203,8 +203,7 @@
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(818, 13);
             this.txtBusqueda.TabIndex = 0;
-            this.txtBusqueda.Tag = "";
-            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
+            this.txtBusqueda.Tag = "00000";
             // 
             // txtDescri
             // 
