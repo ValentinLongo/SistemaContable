@@ -152,7 +152,7 @@
             this.tbDescipcion.Location = new System.Drawing.Point(115, 38);
             this.tbDescipcion.Multiline = true;
             this.tbDescipcion.Name = "tbDescipcion";
-            this.tbDescipcion.Size = new System.Drawing.Size(808, 20);
+            this.tbDescipcion.Size = new System.Drawing.Size(750, 20);
             this.tbDescipcion.TabIndex = 56;
             this.tbDescipcion.Tag = "00000";
             this.tbDescipcion.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -182,7 +182,7 @@
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
-            this.ShapeBusqueda.Size = new System.Drawing.Size(946, 70);
+            this.ShapeBusqueda.Size = new System.Drawing.Size(829, 70);
             this.ShapeBusqueda.TabIndex = 58;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
@@ -195,7 +195,7 @@
             this.textBox1.Location = new System.Drawing.Point(115, 38);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(808, 20);
+            this.textBox1.Size = new System.Drawing.Size(750, 20);
             this.textBox1.TabIndex = 56;
             this.textBox1.Tag = "00000";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -206,7 +206,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(115, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(808, 1);
+            this.panel2.Size = new System.Drawing.Size(750, 1);
             this.panel2.TabIndex = 60;
             // 
             // frmAgenda

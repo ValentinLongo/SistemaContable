@@ -22,10 +22,10 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             Cargar("");
         }
 
-        private void Cargar(string txt)
+        private void Cargar(string busqueda)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT bal_codigo AS Código, bal_descri AS Descripción FROM Balance {txt} ORDER BY bal_codigo");
+            ds = AccesoBase.ListarDatos($"SELECT bal_codigo AS Código, bal_descri AS Descripción FROM Balance {busqueda} ORDER BY bal_codigo");
             dgvDetalleDeInformes.DataSource = ds.Tables[0];
         }
 
@@ -45,16 +45,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-            string txtbusqueda;
-            if (CheckInicio.Checked)
-            {
-                txtbusqueda = "WHERE bal_descri LIKE " + "'" + txtBusqueda.Text + "%'";
-            }
-            else
-            {
-                txtbusqueda = "WHERE bal_descri LIKE " + "'%" + txtBusqueda.Text + "%'";
-            }
-            Cargar(txtbusqueda);
+            string busqueda = Negocio.FGenerales.Busqueda(dgvAux, txtBusqueda.Text, CheckInicio, 1, "bal_descri");
+            Cargar(busqueda);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

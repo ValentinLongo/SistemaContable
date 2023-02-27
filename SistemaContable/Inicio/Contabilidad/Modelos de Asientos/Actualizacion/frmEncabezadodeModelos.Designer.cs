@@ -44,8 +44,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
+            this.dgvAux = new System.Windows.Forms.DataGridView();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncabezadodeModelos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -266,7 +268,7 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Codigo",
             "Descripcion"});
-            this.cbBusqueda.Location = new System.Drawing.Point(23, 409);
+            this.cbBusqueda.Location = new System.Drawing.Point(23, 408);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(134, 25);
             this.cbBusqueda.TabIndex = 72;
@@ -371,12 +373,30 @@
             this.bunifuShapes1.TabIndex = 68;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
+            // dgvAux
+            // 
+            this.dgvAux.AllowUserToAddRows = false;
+            this.dgvAux.AllowUserToDeleteRows = false;
+            this.dgvAux.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvAux.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAux.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.dgvAux.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAux.Location = new System.Drawing.Point(778, 427);
+            this.dgvAux.Name = "dgvAux";
+            this.dgvAux.ReadOnly = true;
+            this.dgvAux.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAux.Size = new System.Drawing.Size(10, 11);
+            this.dgvAux.TabIndex = 95;
+            this.dgvAux.TabStop = false;
+            // 
             // frmEncabezadodeModelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvAux);
             this.Controls.Add(this.cbBusqueda);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.CheckInicio);
@@ -397,6 +417,7 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncabezadodeModelos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,5 +440,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtBusqueda;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
+        private System.Windows.Forms.DataGridView dgvAux;
     }
 }

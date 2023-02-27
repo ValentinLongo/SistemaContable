@@ -11,43 +11,6 @@ namespace Negocio.Funciones.Contabilidad
 {
     public class FActualizacionDDI
     {
-        public static string Busqueda(DataGridView DGV, TextBox txt, ComboBox cbBusqueda, BunifuCheckBox cbInicio)
-        {
-            if (txt.Text != "")
-            {
-                string txtbusqueda;
-
-                if (cbBusqueda.SelectedIndex == 0)
-                {
-                    if (cbInicio.Checked)
-                    {
-                        txtbusqueda = "WHERE bal_codigo LIKE " + "'" + txt.Text + "%'";
-                    }
-                    else
-                    {
-                        txtbusqueda = "WHERE bal_codigo LIKE " + "'%" + txt.Text + "%'";
-                    }
-                    return txtbusqueda;
-                }
-                else if (cbBusqueda.SelectedIndex == 1)
-                {
-                    if (cbInicio.Checked)
-                    {
-                        txtbusqueda = "WHERE bal_descri LIKE " + "'" + txt.Text + "%'";
-                    }
-                    else
-                    {
-                        txtbusqueda = "WHERE bal_descri LIKE " + "'%" + txt.Text + "%'";
-                    }
-                    return txtbusqueda;
-                }
-            }
-            else
-            {
-                return "";
-            }
-            return "";
-        }
         public static void Agregar(Form frm, string txt)
         {
             int ultimoID = Negocio.FGenerales.ultimoNumeroID("bal_codigo", "Balance");

@@ -189,7 +189,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             frm.ArmarDGV("mod_codigo, mod_descri", "ModeloEncab","","ORDER BY mod_codigo", "frmAggModVisAsientoContable");
             frm.ShowDialog();
             string codigo = frmConsultaGeneral.codigoCG;
-            string descri = frmConsultaGeneral.descripcionCG;
+
+
 
             //terminar (preguntar jp)
         }

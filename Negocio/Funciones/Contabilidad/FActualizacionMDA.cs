@@ -12,43 +12,6 @@ namespace Negocio.Funciones.Contabilidad
 {
     public class FActualizacionMDA
     {
-        public static string Busqueda(DataGridView DGV, TextBox txt, ComboBox cbBusqueda, BunifuCheckBox cbInicio)
-        {
-            if (txt.Text != "")
-            {
-                string txtbusqueda;
-
-                if (cbBusqueda.SelectedIndex == 0)
-                {
-                    if (cbInicio.Checked)
-                    {
-                        txtbusqueda = "WHERE mod_codigo LIKE " + "'" + txt.Text + "%'";
-                    }
-                    else
-                    {
-                        txtbusqueda = "WHERE mod_codigo LIKE " + "'%" + txt.Text + "%'";
-                    }
-                    return txtbusqueda;
-                }
-                else if (cbBusqueda.SelectedIndex == 1)
-                {
-                    if (cbInicio.Checked)
-                    {
-                        txtbusqueda = "WHERE mod_descri LIKE " + "'" + txt.Text + "%'";
-                    }
-                    else
-                    {
-                        txtbusqueda = "WHERE mod_descri LIKE " + "'%" + txt.Text + "%'";
-                    }
-                    return txtbusqueda;
-                }
-            }
-            else
-            {
-                return "";
-            }
-            return "";
-        }
         public static void Agregar(Form frm, string txt)
         {
             int ultimoID = Negocio.FGenerales.ultimoNumeroID("mod_codigo", "ModeloEncab");

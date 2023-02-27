@@ -44,9 +44,11 @@
             this.dgvDetalledeInformesAux = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.dgvAux = new System.Windows.Forms.DataGridView();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleDeInformes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalledeInformesAux)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -353,12 +355,30 @@
             this.CheckInicio.ThreeState = false;
             this.CheckInicio.ToolTipText = null;
             // 
+            // dgvAux
+            // 
+            this.dgvAux.AllowUserToAddRows = false;
+            this.dgvAux.AllowUserToDeleteRows = false;
+            this.dgvAux.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvAux.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAux.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.dgvAux.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAux.Location = new System.Drawing.Point(762, 388);
+            this.dgvAux.Name = "dgvAux";
+            this.dgvAux.ReadOnly = true;
+            this.dgvAux.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAux.Size = new System.Drawing.Size(10, 11);
+            this.dgvAux.TabIndex = 95;
+            this.dgvAux.TabStop = false;
+            // 
             // frmDetalledeInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.dgvAux);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.CheckInicio);
             this.Controls.Add(this.dgvDetalledeInformesAux);
@@ -380,6 +400,7 @@
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleDeInformes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalledeInformesAux)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,5 +423,6 @@
         private System.Windows.Forms.DataGridView dgvDetalledeInformesAux;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
+        private System.Windows.Forms.DataGridView dgvAux;
     }
 }

@@ -31,26 +31,7 @@ namespace SistemaContable.Rubos_Contables
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
             DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos($"SELECT * FROM RubroCont ORDER BY ruc_codigo " + busqueda);
-            foreach (DataRow dr in data.Tables[0].Rows)
-            {
-                string Codigo = dr[0].ToString();
-                string Descripcion = dr[1].ToString();
-                int Vigencia = Convert.ToInt32(dr[2].ToString());
-                bool check = false;
-                if (Vigencia == 1)
-                {
-                    check = true;
-                }
-                dgvRubrosContables.Rows.Add(Codigo, Descripcion, check);
-            }
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            dgvRubrosContables.Rows.Clear();
-            DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos($"select * from RubroCont where ruc_descri LIKE '%{txtBusqueda.Text}%'");
+            data = Datos.AccesoBase.ListarDatos($"SELECT * FROM RubroCont " + busqueda + " ORDER BY ruc_codigo");
             foreach (DataRow dr in data.Tables[0].Rows)
             {
                 string Codigo = dr[0].ToString();
@@ -102,12 +83,6 @@ namespace SistemaContable.Rubos_Contables
             }
         }
 
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
-        {
-            //string busqueda = Negocio.FGenerales.Busqueda(dgvRubrosContables, txtBusqueda.Text, CheckInicio, 1, "ruc_descri");
-            //CargarDGV(busqueda);
-        }
-
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -117,6 +92,12 @@ namespace SistemaContable.Rubos_Contables
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string busqueda = Negocio.FGenerales.Busqueda(dgvRubrosContables, txtBusqueda.Text, CheckInicio, 1, "ruc_descri");
+            CargarDGV(busqueda);
         }
     }
 }
