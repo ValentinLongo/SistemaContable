@@ -23,7 +23,7 @@ namespace SistemaContable.Plan_de_Cuentas
         {
             InitializeComponent();
 
-            //Negocio.FValidacionesEventos.EventosFormulario(this);
+            Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
@@ -79,12 +79,21 @@ namespace SistemaContable.Plan_de_Cuentas
             btnModificar.Location = new Point(992, 143);
             btnEliminar.Location = new Point(992, 193);
             btnImprimir.Location = new Point(992, 453);
+            btnBuscar.Location = new Point(827, 47);
             ShapeBusqueda.Location = new Point(12, 38);
             lblBusqueda.Location = new Point(21, 29);
             txtDescri.Location = new Point(21, 57);
-            txtBusqueda.Location = new Point(212, 13);
+            tbDescipcion.Location = new Point(212, 13);
             panel2.Location = new Point(115, 72);
             MostrarControlBar = false;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
+
+            CargarDGV(tbDescipcion.Text);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -125,18 +134,6 @@ namespace SistemaContable.Plan_de_Cuentas
             CargarDGV("");
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-            frmReporte freporte = new frmReporte("PCuenta", $"{FPlanDeCuentas.query}","", "Plan de Cuentas", "Activos", DateTime.Now.ToString("d"));
-            freporte.ShowDialog();
-        }
-
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
-        {
-            dgvCuentas.Rows.Clear();
-            CargarDGV(txtBusqueda.Text);
-        }
-
         private void panel7_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -148,5 +145,10 @@ namespace SistemaContable.Plan_de_Cuentas
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte freporte = new frmReporte("PCuenta", $"{FPlanDeCuentas.query}","", "Plan de Cuentas", "General", DateTime.Now.ToString("d"));
+            freporte.ShowDialog();
+        }
     }
 }

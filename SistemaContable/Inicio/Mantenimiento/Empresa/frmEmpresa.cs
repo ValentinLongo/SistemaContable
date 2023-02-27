@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Negocio;
+using SistemaContable.General;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +32,12 @@ namespace SistemaContable.Empresa
             dgvEmpresa.DataSource = ds.Tables[0];
 
             ds = Negocio.FEmpresa.listaSucursales();
-            dgvSucursales.DataSource = ds.Tables[0];
+            foreach(DataRow dr in ds.Tables[0].Rows)
+            {
+                string codigo = dr["suc_codigo"].ToString();
+                string descripcion = dr["suc_descri"].ToString();
+                dgvSucursales.Rows.Add(codigo, descripcion);
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -80,6 +87,12 @@ namespace SistemaContable.Empresa
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte reporte = new frmReporte("Sucursal", FEmpresa.querySucursales, "", "Sucursales", "Todas",DateTime.Now.ToString("d"));
+            reporte.ShowDialog();
         }
     }
 }
