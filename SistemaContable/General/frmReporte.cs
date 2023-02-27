@@ -60,7 +60,7 @@ namespace SistemaContable.General
             {
                 report.SetParameterValue(6, $"{Comando}");
             }
-            report.SetParameterValue("Empresa", "Nombre Empresa");
+            report.SetParameterValue("Empresa", $"{FLogin.NombreEmpresa}");
             report.SetParameterValue("Titulo", $"{Titulo}");
             report.SetParameterValue("Param1", $"{Param1}");
             if (Param2 != null)

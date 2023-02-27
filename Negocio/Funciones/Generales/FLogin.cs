@@ -20,6 +20,8 @@ namespace Negocio
 
         public static string Servidor;
         public static string BaseDeDatos;
+
+        public static string NombreEmpresa;
         //BUSCO SI EXISTE USUARIO
         public static int buscarUsuario(string usuario, string contrasenia)
         {
@@ -40,7 +42,7 @@ namespace Negocio
         {
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contrasenia}'");
-
+            
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 MUsuario mUsuario = new MUsuario()
@@ -72,5 +74,13 @@ namespace Negocio
             return NumeroTerminal;
         }
 
+        public static void buscarNombreEmpresa()
+        {
+            DataSet ds = AccesoBase.ListarDatos("SELECT * FROM Empresa");
+            foreach(DataRow dr in ds.Tables[0].Rows)
+            {
+                NombreEmpresa = dr["emp_nombre"].ToString();
+            }
+        }
     }
 }

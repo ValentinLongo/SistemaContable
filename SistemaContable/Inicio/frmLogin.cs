@@ -88,6 +88,7 @@ namespace SistemaContable
                 int resultado = Negocio.FLogin.buscarUsuario(txtUsuario.Text, txtConstrasenia.Text);
                 if (resultado == 1)
                 {
+                    Negocio.FLogin.buscarNombreEmpresa();
                     frmCarga PantallaCarga = new frmCarga();
                     PantallaCarga.lblUsuario.Text = Negocio.FLogin.NombreUsuario;
                     this.Visible = false;
