@@ -41,9 +41,8 @@
             this.btnModificar = new RJCodeAdvance.RJControls.RJButton();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tbDescipcion = new System.Windows.Forms.TextBox();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.txtDescri = new System.Windows.Forms.Label();
-            this.btnBuscar = new RJCodeAdvance.RJControls.RJButton();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.btnEliminar = new RJCodeAdvance.RJControls.RJButton();
@@ -191,20 +190,21 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(115, 75);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(212, 1);
+            this.panel2.Size = new System.Drawing.Size(818, 1);
             this.panel2.TabIndex = 46;
             // 
-            // tbDescipcion
+            // txtBusqueda
             // 
-            this.tbDescipcion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbDescipcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.tbDescipcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbDescipcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescipcion.Location = new System.Drawing.Point(115, 62);
-            this.tbDescipcion.Name = "tbDescipcion";
-            this.tbDescipcion.Size = new System.Drawing.Size(212, 13);
-            this.tbDescipcion.TabIndex = 0;
-            this.tbDescipcion.Tag = "00000";
+            this.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtBusqueda.Location = new System.Drawing.Point(115, 62);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(818, 13);
+            this.txtBusqueda.TabIndex = 0;
+            this.txtBusqueda.Tag = "";
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // txtDescri
             // 
@@ -217,29 +217,6 @@
             this.txtDescri.Size = new System.Drawing.Size(88, 16);
             this.txtDescri.TabIndex = 44;
             this.txtDescri.Text = "Descripcion:";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnBuscar.BorderColor = System.Drawing.Color.White;
-            this.btnBuscar.BorderRadius = 0;
-            this.btnBuscar.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = global::SistemaContable.Properties.Resources.lupa;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(784, 45);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(154, 44);
-            this.btnBuscar.TabIndex = 1;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextColor = System.Drawing.Color.White;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // ShapeBusqueda
             // 
@@ -389,8 +366,7 @@
             this.Controls.Add(this.ControlBar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblBusqueda);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.tbDescipcion);
+            this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.txtDescri);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.panel2);
@@ -415,10 +391,9 @@
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private RJCodeAdvance.RJControls.RJButton btnModificar;
         private RJCodeAdvance.RJControls.RJButton btnAgregar;
-        private RJCodeAdvance.RJControls.RJButton btnBuscar;
         private System.Windows.Forms.Label txtDescri;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox tbDescipcion;
+        private System.Windows.Forms.TextBox txtBusqueda;
         private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
         private System.Windows.Forms.Label lblBusqueda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;

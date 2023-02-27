@@ -22,16 +22,24 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
             cbBusqueda.SelectedIndex = 0;
             
         }
-        public void CargarDGV(string txt) 
+        public void CargarDGV(string busqueda) 
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT mod_codigo as Codigo, mod_descri as Descripción FROM ModeloEncab {txt} ORDER BY mod_codigo");
+            ds = AccesoBase.ListarDatos($"SELECT mod_codigo as Codigo, mod_descri as Descripción FROM ModeloEncab {busqueda} ORDER BY mod_codigo");
             dgvEncabezadodeModelos.DataSource = ds.Tables[0];
         }
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-            string txtbusqueda = Negocio.Funciones.Contabilidad.FActualizacionMDA.Busqueda(dgvEncabezadodeModelos,txtBusqueda,cbBusqueda,CheckInicio);
-            CargarDGV(txtbusqueda);
+            string busqueda = "";
+            if (cbBusqueda.Text == "Codigo")
+            {
+                busqueda = Negocio.FGenerales.Busqueda(dgvAux, txtBusqueda.Text, CheckInicio, 1, "mod_codigo");
+            }
+            else if (cbBusqueda.Text == "Descripcion")
+            {
+                busqueda = Negocio.FGenerales.Busqueda(dgvAux, txtBusqueda.Text, CheckInicio, 1, "mod_descri");
+            }
+            CargarDGV(busqueda);
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {

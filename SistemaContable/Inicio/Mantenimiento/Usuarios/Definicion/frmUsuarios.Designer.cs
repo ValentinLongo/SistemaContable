@@ -207,7 +207,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(817, 46);
+            this.label5.Location = new System.Drawing.Point(813, 46);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 13);
             this.label5.TabIndex = 62;
@@ -231,7 +231,7 @@
             this.CheckUsuario.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckUsuario.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckUsuario.CustomCheckmarkImage = null;
-            this.CheckUsuario.Location = new System.Drawing.Point(794, 43);
+            this.CheckUsuario.Location = new System.Drawing.Point(790, 43);
             this.CheckUsuario.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckUsuario.Name = "CheckUsuario";
             this.CheckUsuario.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -277,7 +277,7 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Codigo",
             "Nombre"});
-            this.cbBusqueda.Location = new System.Drawing.Point(25, 38);
+            this.cbBusqueda.Location = new System.Drawing.Point(34, 36);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(169, 25);
             this.cbBusqueda.TabIndex = 63;

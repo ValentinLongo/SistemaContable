@@ -23,17 +23,26 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizaci
             CargarDGV("");
             cbBusqueda.SelectedIndex = 0;
         }
-        public void CargarDGV(string txt) 
+
+        public void CargarDGV(string busqueda)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT bal_codigo as Codigo, bal_descri as Descripción FROM Balance {txt} ORDER BY bal_codigo");
+            ds = AccesoBase.ListarDatos($"SELECT bal_codigo as Codigo, bal_descri as Descripción FROM Balance {busqueda} ORDER BY bal_codigo");
             dgvDefiniciondeInformes.DataSource = ds.Tables[0];
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-            string txtbusqueda = Negocio.Funciones.Contabilidad.FActualizacionDDI.Busqueda(dgvDefiniciondeInformes, txtBusqueda, cbBusqueda, CheckInicio);
-            CargarDGV(txtbusqueda);
+            string busqueda = "";
+            if (cbBusqueda.Text == "Codigo")
+            {
+                busqueda = Negocio.FGenerales.Busqueda(dgvAux, txtBusqueda.Text, CheckInicio, 1, "bal_codigo");
+            }
+            else if (cbBusqueda.Text == "Descripcion")
+            {
+                busqueda = Negocio.FGenerales.Busqueda(dgvAux, txtBusqueda.Text, CheckInicio, 1, "bal_descri");
+            }
+            CargarDGV(busqueda);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

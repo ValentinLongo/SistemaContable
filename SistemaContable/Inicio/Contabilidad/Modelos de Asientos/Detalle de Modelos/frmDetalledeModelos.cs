@@ -32,10 +32,10 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             cbBusqueda.SelectedIndex = 0;
         }
 
-        public void CargarDGV1(string txt) 
+        public void CargarDGV1(string busqueda) 
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT mod_codigo as Codigo, mod_descri as Descripción FROM ModeloEncab {txt} ORDER BY mod_codigo");
+            ds = AccesoBase.ListarDatos($"SELECT mod_codigo as Codigo, mod_descri as Descripción FROM ModeloEncab {busqueda} ORDER BY mod_codigo");
             dgvDetDeMod1.DataSource = ds.Tables[0];
         }
 
@@ -83,8 +83,16 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-            string txtbusqueda = Negocio.Funciones.Contabilidad.FDetalledeModelos.Busqueda(dgvDetDeMod1,txtBusqueda,cbBusqueda,CheckInicio);
-            CargarDGV1(txtbusqueda);
+            string busqueda = "";
+            if (cbBusqueda.Text == "Codigo")
+            {
+                busqueda = Negocio.FGenerales.Busqueda(dgvAux, txtBusqueda.Text, CheckInicio, 1, "mod_codigo");
+            }
+            else if (cbBusqueda.Text == "Descripcion")
+            {
+                busqueda = Negocio.FGenerales.Busqueda(dgvAux, txtBusqueda.Text, CheckInicio, 1, "mod_descri");
+            }
+            CargarDGV1(busqueda);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

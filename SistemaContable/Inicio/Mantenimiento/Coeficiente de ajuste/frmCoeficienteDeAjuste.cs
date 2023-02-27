@@ -94,7 +94,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             dgvCoeficientes.Rows.Clear();
             dgvEjercicios.Rows.Clear();
             List<MCoeficienteDeAjuste> mCoeficienteDeAjuste = new List<MCoeficienteDeAjuste>();
-            mCoeficienteDeAjuste = data.ejercicioParticular(check, tbDescripcion.Text);
+            mCoeficienteDeAjuste = data.ejercicioParticular(check, txtBusqueda.Text);
             foreach (var datos in mCoeficienteDeAjuste)
             {
                 bool cerrado = false;

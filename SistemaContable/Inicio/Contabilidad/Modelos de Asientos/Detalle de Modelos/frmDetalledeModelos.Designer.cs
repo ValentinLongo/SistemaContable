@@ -53,9 +53,11 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.dgvAux = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetDeMod1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetDeMod2)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDetDeMod1
@@ -454,12 +456,30 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
+            // dgvAux
+            // 
+            this.dgvAux.AllowUserToAddRows = false;
+            this.dgvAux.AllowUserToDeleteRows = false;
+            this.dgvAux.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvAux.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAux.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.dgvAux.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAux.Location = new System.Drawing.Point(778, 516);
+            this.dgvAux.Name = "dgvAux";
+            this.dgvAux.ReadOnly = true;
+            this.dgvAux.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAux.Size = new System.Drawing.Size(10, 11);
+            this.dgvAux.TabIndex = 94;
+            this.dgvAux.TabStop = false;
+            // 
             // frmDetalledeModelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(800, 536);
+            this.Controls.Add(this.dgvAux);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.cbBusqueda);
             this.Controls.Add(this.label13);
@@ -482,6 +502,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetDeMod2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,5 +534,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridView dgvAux;
     }
 }

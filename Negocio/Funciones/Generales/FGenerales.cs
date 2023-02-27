@@ -9,6 +9,7 @@ using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -159,7 +160,7 @@ namespace Negocio
             }
         }
 
-        public static string Busqueda(DataGridView dgv,string txtbusqueda,BunifuCheckBox inicio,int where_o_and, string columna) //where = 1 / and = 2
+        public static string Busqueda([Optional] DataGridView dgv,string txtbusqueda,BunifuCheckBox inicio,int where_o_and, string columna) //where = 1 / and = 2
         {
             string retorno = "";
 

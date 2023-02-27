@@ -46,7 +46,7 @@
             this.btnModificar = new RJCodeAdvance.RJControls.RJButton();
             this.btnBuscar = new RJCodeAdvance.RJControls.RJButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tbDescripcion = new System.Windows.Forms.TextBox();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.checkEjerciciosAbiertos = new Bunifu.UI.WinForms.BunifuCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjercicios)).BeginInit();
@@ -311,7 +311,6 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
             this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // panel2
             // 
@@ -321,16 +320,16 @@
             this.panel2.Size = new System.Drawing.Size(348, 1);
             this.panel2.TabIndex = 68;
             // 
-            // tbDescripcion
+            // txtBusqueda
             // 
-            this.tbDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescripcion.Location = new System.Drawing.Point(94, 38);
-            this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(348, 13);
-            this.tbDescripcion.TabIndex = 67;
-            this.tbDescripcion.Tag = "10000";
+            this.txtBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtBusqueda.Location = new System.Drawing.Point(94, 38);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(348, 13);
+            this.txtBusqueda.TabIndex = 67;
+            this.txtBusqueda.Tag = "10000";
             // 
             // label4
             // 
@@ -405,7 +404,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkEjerciciosAbiertos);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.tbDescripcion);
+            this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
@@ -446,7 +445,7 @@
         private RJCodeAdvance.RJControls.RJButton btnModificar;
         private RJCodeAdvance.RJControls.RJButton btnBuscar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox tbDescripcion;
+        private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuCheckBox checkEjerciciosAbiertos;
     }
