@@ -1,4 +1,5 @@
 ﻿using Datos;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,19 +15,27 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
 {
     public partial class frmEncabezadodeModelos : Form
     {
+        string query;
         public frmEncabezadodeModelos()
         {
             InitializeComponent();
 
             CargarDGV("");
             cbBusqueda.SelectedIndex = 0;
-            
         }
+
         public void CargarDGV(string busqueda) 
         {
+            dgvEncabezadodeModelos.Rows.Clear();
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT mod_codigo as Codigo, mod_descri as Descripción FROM ModeloEncab {busqueda} ORDER BY mod_codigo");
-            dgvEncabezadodeModelos.DataSource = ds.Tables[0];
+            query = $"SELECT * FROM ModeloEncab {busqueda} ORDER BY mod_codigo";
+            ds = AccesoBase.ListarDatos(query);
+            foreach(DataRow dr in ds.Tables[0].Rows)
+            {
+                string codigo = dr["mod_codigo"].ToString();
+                string descri = dr["mod_descri"].ToString();
+                dgvEncabezadodeModelos.Rows.Add(codigo, descri);
+            }
         }
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
@@ -76,6 +85,12 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte reporte = new frmReporte("ModeloEncab", query, "", "Informe de Encabezado de Modelos", "General", DateTime.Now.ToString("d"));
+            reporte.ShowDialog();
         }
     }
 }

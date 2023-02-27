@@ -1,4 +1,5 @@
 ﻿using Datos;
+using SistemaContable.General;
 using SistemaContable.Inicio.Mantenimiento.Centro_de_Costos;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace SistemaContable.Inicio.Mantenimiento
 {
     public partial class frmCentrodeCostos : Form
     {
+        private string query;
         public frmCentrodeCostos()
         {
             InitializeComponent();
@@ -29,7 +31,8 @@ namespace SistemaContable.Inicio.Mantenimiento
         public void CargarDGV(string txt) 
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT cec_codigo as Codigo, cec_descri as Descripción, cec_predef as Predefinido FROM CentroC {txt} ORDER BY cec_codigo");
+            query = $"SELECT cec_codigo as Codigo, cec_descri as Descripción, cec_predef as Predefinido FROM CentroC {txt} ORDER BY cec_codigo";
+            ds = AccesoBase.ListarDatos(query);
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 bool estado = false;
@@ -93,5 +96,6 @@ namespace SistemaContable.Inicio.Mantenimiento
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
     }
 }
