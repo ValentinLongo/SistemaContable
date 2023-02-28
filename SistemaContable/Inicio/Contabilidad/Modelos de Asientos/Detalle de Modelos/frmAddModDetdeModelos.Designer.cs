@@ -192,6 +192,7 @@
             this.txtCuenta.Size = new System.Drawing.Size(52, 19);
             this.txtCuenta.TabIndex = 84;
             this.txtCuenta.Tag = "11000";
+            this.txtCuenta.TextChanged += new System.EventHandler(this.txtCuenta_TextChanged);
             // 
             // label2
             // 

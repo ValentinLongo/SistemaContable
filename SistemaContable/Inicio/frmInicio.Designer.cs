@@ -390,6 +390,7 @@
             // 
             // MenuArchivos
             // 
+            this.MenuArchivos.BackColor = System.Drawing.SystemColors.Control;
             this.MenuArchivos.IsMainMenu = false;
             this.MenuArchivos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.respaldoDeInformacionToolStripMenuItem,

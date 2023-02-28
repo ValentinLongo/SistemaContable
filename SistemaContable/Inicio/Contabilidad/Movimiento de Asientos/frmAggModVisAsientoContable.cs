@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Negocio;
 using SistemaContable.General;
 using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_Modelos;
 using SistemaContable.Plan_de_Cuentas;
@@ -149,14 +150,12 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
                 frmAddModDetdeModelos.desdeotrofrm = true;
                 frmAddModDetdeModelos.asientofrm = txtNroAsiento.Text;
-                frmAddModDetdeModelos.cuentafrm = cuenta;
+                //frmAddModDetdeModelos.cuentafrm = cuenta;
                 frmAddModDetdeModelos.codigofrm = codigo;
                 frmAddModDetdeModelos frm = new frmAddModDetdeModelos(1, cuenta, descri, debe, haber, concepto, cc);
                 frm.ShowDialog();
                 dgvAddModVisASIENTO.Rows.Clear();
                 CargarDGV(txtNroAsiento.Text);
-
-                //terminar modificar (preguntar jp)
             }
         }
 
@@ -166,7 +165,14 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
             if (add_mod_vis == 1)
             {
-                //terminar agregar
+                string hora = DateTime.Now.ToLongTimeString();
+                string fecha = DateTime.Now.ToShortDateString();
+                string asiento_renumera = Negocio.FGenerales.ultimoNumeroID("ast_asiento", "Asiento").ToString();
+
+                DataSet ds = new DataSet();
+                ds = AccesoBase.ListarDatos($"INSERT INTO Asiento(ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_user, ast_hora, ast_ejercicio, ast_fecalta, ast_tipo) VALUES('{asiento_renumera}','{asiento_renumera}','{dtFecha.Value}','{txtComentario.Text}','{FLogin.IdUsuario}','{hora}','{txtCodEjercicio}','{fecha}','{cbTipoAsiento.SelectedValue}'");
+                MessageBox.Show("Agregado Correctamente!", "Mensaje");
+                this.Close();
             }
             else if (add_mod_vis == 2)
             {
@@ -188,11 +194,40 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             frmConsultaGeneral frm = new frmConsultaGeneral();
             frm.ArmarDGV("mod_codigo, mod_descri", "ModeloEncab","","ORDER BY mod_codigo", "frmAggModVisAsientoContable");
             frm.ShowDialog();
-            string codigo = frmConsultaGeneral.codigoCG;
+            string codigoCG = frmConsultaGeneral.codigoCG;
 
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT det_asiento, det_fecha, det_cuenta, det_codigo, det_importe, det_comenta, det_cc FROM ModeloDet WHERE det_asiento = {codigoCG}");
+            foreach (DataRow dr in ds.Tables[0].Rows) 
+            {
+                string debe = "0,0000";
+                string haber = "0,0000";
+                string descri = "";
 
+                string cuenta = dr[2].ToString();
 
-            //terminar (preguntar jp)
+                if (dr[3].ToString() == "1")
+                {
+                    debe = dr[4].ToString();
+                }
+                else if (dr[3].ToString() == "2")
+                {
+                    haber = dr[4].ToString();
+                }
+
+                string codigo = dr[3].ToString(); //(esta en el dgv pero, visible = false)
+
+                string concepto = dr[5].ToString();
+                string cc = dr[6].ToString();
+
+                DataSet ds2 = new DataSet();
+                ds2 = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta = {cuenta}");
+                foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                {
+                    descri = dr2[0].ToString();
+                }
+                dgvAddModVisASIENTO.Rows.Add(cuenta, descri, debe, haber, concepto, cc, codigo);
+            }
         }
 
         private void panel7_MouseDown(object sender, MouseEventArgs e)

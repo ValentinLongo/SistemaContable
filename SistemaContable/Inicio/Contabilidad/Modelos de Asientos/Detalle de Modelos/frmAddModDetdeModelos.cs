@@ -1,4 +1,5 @@
-﻿using SistemaContable.General;
+﻿using Datos;
+using SistemaContable.General;
 using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         //Para utilizar el frm desde otro (sin seleccionar nada en dgv)
         public static bool desdeotrofrm = false;
         public static string asientofrm;
-        public static string cuentafrm;
+        //public static string cuentafrm;
         public static string codigofrm;
 
         public frmAddModDetdeModelos(int aggmod,string cuenta,string descri,string debe,string haber,string concepto,string centrodecosto)
@@ -48,7 +49,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 txtDebe.Text = debe;
                 txtHaber.Text = haber;
                 txtConcepto.Text = concepto;
-                cbCentrodeCosto.Text = "NINGUNO"; //falta
+                cbCentrodeCosto.Text = centrodecosto;
             }
         }
 
@@ -77,6 +78,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
             if (contador != 2)
             {
+                string terminal = frmLogin.NumeroTerminal.ToString();
+
                 if (agg_o_mod == 0)
                 {
                     seleccionado = DGV1.CurrentCell.RowIndex;
@@ -88,7 +91,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 {
                     if (desdeotrofrm)
                     {
-                        Negocio.Funciones.Contabilidad.FDetalledeModelos.ModificarMovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText, cuentafrm, codigofrm);
+                        Negocio.Funciones.Contabilidad.FDetalledeModelos.ModificarMovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText, codigofrm, terminal);
                         desdeotrofrm = false;
                     }
                     else
@@ -147,6 +150,23 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             }
         }
 
+        private void txtCuenta_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT cec_codigo, cec_descri FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{txtCuenta.Text}'");
+            if (ds != null)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows) 
+                {
+                    cbCentrodeCosto.DataSource = ds.Tables[0];
+                    cbCentrodeCosto.ValueMember = "cec_codigo";
+                    cbCentrodeCosto.DisplayMember = "cec_descri";
+                }
+            }
+        }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -157,5 +177,6 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
     }
 }

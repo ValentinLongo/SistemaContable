@@ -14,9 +14,9 @@ namespace Negocio.Funciones.Contabilidad
 {
     public class FDetalledeModelos
     {
-        public static void Agregar(Form frm, string asiento, string cuenta, string debe, string haber, string concepto, [Optional] string centrodecosto) 
+        public static void Agregar(Form frm, string asiento, string cuenta, string debe, string haber, string concepto, string cc) 
         {
-            centrodecosto = "0"; //falta (despues quitar opcional)
+            string centrodecosto = cc;
             string fecha = DateTime.Now.ToString();
             string codigo = "0";
 
@@ -41,9 +41,9 @@ namespace Negocio.Funciones.Contabilidad
             frm.Close();
 
         }
-        public static void Modificar(Form frm, string asiento, string txtcuenta, string debe, string haber, string concepto, [Optional] string centrodecosto, string cuenta, string codigo2) 
+        public static void Modificar(Form frm, string asiento, string txtcuenta, string debe, string haber, string concepto, string cc, string cuenta, string codigo2) 
         {
-            centrodecosto = "0"; //falta (despues quitar opcional)
+            string centrodecosto = cc;
             string fecha = DateTime.Now.ToString();
             string codigo = "0";
             string importe = "";
@@ -75,36 +75,35 @@ namespace Negocio.Funciones.Contabilidad
             frm.Close();
         }
 
-        public static void ModificarMovAsto(Form frm, string asiento, string txtcuenta, string debe, string haber, string concepto, [Optional] string centrodecosto, string cuenta, string codigo2)
+        public static void ModificarMovAsto(Form frm, string asiento, string txtcuenta, string debe, string haber, string concepto, string cc, string codigo2, string terminal)
         {
-            centrodecosto = ""; //falta (despues quitar opcional)
-            string fecha = DateTime.Now.ToString();
-            string codigo = "0";
-            string importe = "";
-
-            if (debe != "0,0000")
+            string descri = "";
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta = '{txtcuenta}'");
+            foreach (DataRow dr in ds.Tables[0].Rows) 
             {
-                codigo = "1";
-                importe = debe;
+                descri = dr["pcu_descri"].ToString();
             }
-            if (haber != "0,0000")
+
+            string centrodecosto = cc;
+            string codigo = "0";
+            if (haber != "0,0000" || debe != "0,0000")
             {
-                codigo = "2";
-                importe = haber;
+                codigo = "102";
             }
 
             if (codigo == "0")
             {
                 AccesoBase.InsertUpdateDatos($"UPDATE MovAsto SET mva_fecha = '{fecha}', mva_cuenta = '{txtcuenta}', mva_codigo = '{codigo}', mva_importe = '{importe}', mva_comenta = '{concepto}', mva_cc = '{centrodecosto}' WHERE mva_asiento = '{asiento}' AND mva_cuenta = '{cuenta}' AND mva_codigo = '{codigo2}' ");
+                AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES('{terminal}', '{txtcuenta}', '{descri}','{debe}', '{haber}', '{concepto}','{codigo2}','{asiento}','{centrodecosto}'");
             }
-            else if (codigo == "1")
+            else
             {
-                AccesoBase.InsertUpdateDatos($"UPDATE MovAsto SET mva_fecha = '{fecha}', mva_cuenta = '{txtcuenta}', mva_codigo = '{codigo}', mva_importe = '{debe}', mva_comenta = '{concepto}', mva_cc = '{centrodecosto}' WHERE mva_asiento = '{asiento}' AND mva_cuenta = '{cuenta}' AND mva_codigo = '{codigo2}' ");
+                AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES('{terminal}', '{txtcuenta}', '{descri}','{debe}', '{haber}', '{concepto}','{codigo2}','{asiento}','{centrodecosto}'");
             }
-            else if (codigo == "2")
-            {
-                AccesoBase.InsertUpdateDatos($"UPDATE MovAsto SET mva_fecha = '{fecha}', mva_cuenta = '{txtcuenta}', mva_codigo = '{codigo}', mva_importe = '{haber}', mva_comenta = '{concepto}', mva_cc = '{centrodecosto}' WHERE mva_asiento = '{asiento}' AND mva_cuenta = '{cuenta}' AND mva_codigo = '{codigo2}' ");
-            }
+
+            AccesoBase.InsertUpdateDatos($"DELETE MovAsto WHERE ");
+
             MessageBox.Show("Modificado Correctamente!", "Mensaje");
             frm.Close();
         }

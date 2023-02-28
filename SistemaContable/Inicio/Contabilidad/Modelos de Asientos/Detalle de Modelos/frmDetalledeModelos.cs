@@ -43,6 +43,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         {
             int seleccion = dgvDetDeMod1.CurrentCell.RowIndex;
             string asiento;
+
             if (seleccion > -1)
             {
                 asiento = dgvDetDeMod1.Rows[seleccion].Cells[0].Value.ToString();
@@ -50,6 +51,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 ds = AccesoBase.ListarDatos($"SELECT det_cuenta as Cuenta,pcu_descri as Descripción,det_importe as Debe,det_importe as Haber,det_comenta as Concepto,det_codigo FROM ModeloEncab " +
                     $"LEFT JOIN ModeloDet on ModeloEncab.mod_codigo = ModeloDet.det_asiento " +
                     $"LEFT JOIN PCuenta on Modelodet.det_cuenta = PCuenta.pcu_cuenta WHERE det_asiento = '{asiento}'");
+
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
                     string debe = "0,0000";
@@ -57,7 +59,18 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                     string cuenta = dr[0].ToString();
                     string descripcion = dr[1].ToString();
                     string concepto = dr[4].ToString();
-                    string centrodecosto = ""; //falta
+
+                    string centrodecosto = "NINGUNO";
+                    DataSet ds2 = new DataSet();
+                    ds2 = AccesoBase.ListarDatos($"SELECT * FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{cuenta}'");
+                    foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                    {
+                        if (dr2["cec_descri"] != null && dr2["cec_descri"].ToString() != "")
+                        {
+                            centrodecosto = dr2["cec_Descri"].ToString();
+                        }
+                    }
+
                     if (Convert.ToInt32(dr[5]) == 0)
                     {
                         dgvDetDeMod2.Rows.Add(cuenta, descripcion, debe, haber, concepto, centrodecosto, "0", asiento);
@@ -75,6 +88,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 }
             }
         }
+
         private void dgvDetDeMod1_SelectionChanged(object sender, EventArgs e)
         {
             dgvDetDeMod2.Rows.Clear();
@@ -142,7 +156,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 debe = dgvDetDeMod2.Rows[seleccionado].Cells[2].Value.ToString();
                 haber = dgvDetDeMod2.Rows[seleccionado].Cells[3].Value.ToString();
                 concepto = dgvDetDeMod2.Rows[seleccionado].Cells[4].Value.ToString();
-                centrodecosto = "NINGUNO"; //falta
+                centrodecosto = dgvDetDeMod2.Rows[seleccionado].Cells[5].Value.ToString();
                 Codigo = dgvDetDeMod2.Rows[seleccionado].Cells[6].Value.ToString();
             }
         }
