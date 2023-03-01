@@ -94,7 +94,7 @@ namespace Negocio.Funciones.Contabilidad
 
             if (codigo == "0")
             {
-                AccesoBase.InsertUpdateDatos($"UPDATE MovAsto SET mva_fecha = '{fecha}', mva_cuenta = '{txtcuenta}', mva_codigo = '{codigo}', mva_importe = '{importe}', mva_comenta = '{concepto}', mva_cc = '{centrodecosto}' WHERE mva_asiento = '{asiento}' AND mva_cuenta = '{cuenta}' AND mva_codigo = '{codigo2}' ");
+                //AccesoBase.InsertUpdateDatos($"UPDATE MovAsto SET mva_fecha = '{fecha}', mva_cuenta = '{txtcuenta}', mva_codigo = '{codigo}', mva_importe = '{importe}', mva_comenta = '{concepto}', mva_cc = '{centrodecosto}' WHERE mva_asiento = '{asiento}' AND mva_cuenta = '{cuenta}' AND mva_codigo = '{codigo2}' ");
                 AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES('{terminal}', '{txtcuenta}', '{descri}','{debe}', '{haber}', '{concepto}','{codigo2}','{asiento}','{centrodecosto}'");
             }
             else
