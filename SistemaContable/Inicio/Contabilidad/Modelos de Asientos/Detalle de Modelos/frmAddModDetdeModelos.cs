@@ -44,12 +44,12 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 lblControlBar.Text = "Modificar Detalle de Modelo";
 
                 Cuenta = cuenta;
-                txtCuenta.Text = cuenta;
                 txtDescri.Text = descri;
                 txtDebe.Text = debe;
                 txtHaber.Text = haber;
                 txtConcepto.Text = concepto;
                 cbCentrodeCosto.Text = centrodecosto;
+                txtCuenta.Text = cuenta;
             }
         }
 
@@ -91,7 +91,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 {
                     if (desdeotrofrm)
                     {
-                        Negocio.Funciones.Contabilidad.FDetalledeModelos.ModificarMovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText, codigofrm, terminal);
+                        Negocio.Funciones.Contabilidad.FDetalledeModelos.ModificarAux_MovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText, codigofrm, terminal);
                         desdeotrofrm = false;
                     }
                     else
@@ -152,11 +152,9 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
         private void txtCuenta_TextChanged(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT cec_codigo, cec_descri FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{txtCuenta.Text}'");
-            if (ds != null)
+            ds = AccesoBase.ListarDatos($"SELECT cec_codigo, cec_descri FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{txtCuenta.Text}' AND cec_codigo is not null");
+            if (ds.Tables[0].Rows.Count != 0)
             {
                 foreach (DataRow dr in ds.Tables[0].Rows) 
                 {
@@ -164,6 +162,24 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                     cbCentrodeCosto.ValueMember = "cec_codigo";
                     cbCentrodeCosto.DisplayMember = "cec_descri";
                 }
+            }
+            else
+            {
+                //terminar
+            }
+
+            if (txtCuenta.Text != "" || txtCuenta.Text != null)
+            {
+                DataSet ds2 = new DataSet();
+                ds2 = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta = '{txtCuenta.Text}'");
+                foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                {
+                    txtDescri.Text = dr2[0].ToString();
+                }
+            }
+            else
+            {
+                txtDescri.Text = ""; // probar esto
             }
         }
 

@@ -21,11 +21,14 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
     public partial class frmAggModVisAsientoContable : Form
     {
         private static int add_mod_vis;
+        int autoincremental = 1;
+        bool flag;
 
         //addmodvis = proceso que realiza el frm
         public frmAggModVisAsientoContable(int addmodvis, ComboBox cbSeleccion, string asiento, string fecha, string comentario)
         {
             InitializeComponent();
+            flag = true;
             add_mod_vis = addmodvis;
             Setear(addmodvis,cbSeleccion.SelectedValue.ToString(),cbSeleccion.Text, asiento, fecha, comentario);
         }
@@ -62,7 +65,9 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 //botones
                 btnGenerar.Enabled = false;
 
-                CargarDGV(asiento);
+                CargarDGV(Convert.ToInt32(asiento));
+                flag = false;
+                autoincremental = 1;
             }
             else if(addmodvis == 3) // visualizar
             {
@@ -86,13 +91,15 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 //dgv
                 dgvAddModVisASIENTO.Enabled = false;
 
-                CargarDGV(asiento);
+                CargarDGV(Convert.ToInt32(asiento));
+                flag = false;
+                autoincremental = 1;
             }
         }
 
-        private void CargarDGV(string asiento) 
+        private void CargarDGV(int asiento) 
         {
-            string terminal = frmLogin.NumeroTerminal.ToString();
+            int terminal = Convert.ToInt32(frmLogin.NumeroTerminal);
 
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc FROM MovAsto WHERE mva_asiento = {asiento}");
@@ -102,7 +109,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 string haber = "0,0000";
                 string descri = "";
 
-                string cuenta = dr[0].ToString();
+                int cuenta = Convert.ToInt32(dr[0]);
 
                 if (dr[1].ToString() == "1")
                 {
@@ -113,10 +120,14 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     haber = dr[2].ToString();
                 }
 
-                string codigo = dr[1].ToString(); //(esta en el dgv pero, visible = false) //ver si se saca
-
                 string concepto = dr[3].ToString();
-                string cc = dr[4].ToString();
+
+                int cc = 0;
+                string centrodecosto = dr[4].ToString();
+                if (centrodecosto != "")
+                {
+                    cc = Convert.ToInt32(centrodecosto);
+                }
 
                 DataSet ds2 = new DataSet();
                 ds2 = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta = {cuenta}");
@@ -125,10 +136,13 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     descri = dr2[0].ToString();
                 }
 
-                int autoincremental = 1;
-                AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES ('{terminal}','{cuenta}','{descri}','{debe}','{haber}','{concepto}',{autoincremental},'{asiento}','{cc}'");
+                if (flag)
+                {
+                    AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES({terminal},{cuenta},'{descri}','{debe}','{haber}','{concepto}',{autoincremental},{asiento},{cc})");
+                }
+
+                dgvAddModVisASIENTO.Rows.Add(cuenta,descri,debe,haber,concepto,cc,autoincremental);
                 autoincremental++;
-                dgvAddModVisASIENTO.Rows.Add(cuenta,descri,debe,haber,concepto,cc,codigo);
             }
         }
 
@@ -160,7 +174,9 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 frmAddModDetdeModelos frm = new frmAddModDetdeModelos(1, cuenta, descri, debe, haber, concepto, cc);
                 frm.ShowDialog();
                 dgvAddModVisASIENTO.Rows.Clear();
-                CargarDGV(txtNroAsiento.Text);
+                CargarDGV(Convert.ToInt32(txtNroAsiento.Text));
+                flag = false;
+                autoincremental = 1;
             }
         }
 
@@ -187,6 +203,9 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 DialogResult boton = MessageBox.Show("Desea Finalizar la Modificación?", "Mensaje", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
                 if (boton == DialogResult.OK) 
                 {
+                    //AccesoBase.InsertUpdateDatos($"DELETE MovAsto WHERE mva_asiento = {asiento}");
+                    //AccesoBase.InsertUpdateDatos($"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES()");
+
                     AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET ast_usumodi = '{Negocio.FLogin.IdUsuario}', ast_fecmodi = '{fecha}', ast_horamodi = '{hora}', ast_tipo = {cbTipoAsiento.SelectedValue}, ast_comenta = '{txtComentario.Text}' WHERE ast_Asiento = '{txtNroAsiento.Text}'");
                     MessageBox.Show("Modificado Correctamente!", "Mensaje");
                     this.Close();

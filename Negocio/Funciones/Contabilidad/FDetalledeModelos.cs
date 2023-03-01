@@ -75,35 +75,17 @@ namespace Negocio.Funciones.Contabilidad
             frm.Close();
         }
 
-        public static void ModificarMovAsto(Form frm, string asiento, string txtcuenta, string debe, string haber, string concepto, string cc, string codigo2, string terminal)
+        public static void ModificarAux_MovAsto(Form frm, string asiento, string cuenta, string debe, string haber, string concepto, string cc, string codigo, string terminal)
         {
             string descri = "";
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta = '{txtcuenta}'");
+            ds = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta = '{cuenta}'");
             foreach (DataRow dr in ds.Tables[0].Rows) 
             {
                 descri = dr["pcu_descri"].ToString();
             }
 
-            string centrodecosto = cc;
-            string codigo = "0";
-            if (haber != "0,0000" || debe != "0,0000")
-            {
-                codigo = "102";
-            }
-
-            if (codigo == "0")
-            {
-                //AccesoBase.InsertUpdateDatos($"UPDATE MovAsto SET mva_fecha = '{fecha}', mva_cuenta = '{txtcuenta}', mva_codigo = '{codigo}', mva_importe = '{importe}', mva_comenta = '{concepto}', mva_cc = '{centrodecosto}' WHERE mva_asiento = '{asiento}' AND mva_cuenta = '{cuenta}' AND mva_codigo = '{codigo2}' ");
-                AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES('{terminal}', '{txtcuenta}', '{descri}','{debe}', '{haber}', '{concepto}','{codigo2}','{asiento}','{centrodecosto}'");
-            }
-            else
-            {
-                AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES('{terminal}', '{txtcuenta}', '{descri}','{debe}', '{haber}', '{concepto}','{codigo2}','{asiento}','{centrodecosto}'");
-            }
-
-            AccesoBase.InsertUpdateDatos($"DELETE MovAsto WHERE ");
-
+            AccesoBase.InsertUpdateDatos($"UPDATE Aux_MovAsto SET mva_terminal = '{terminal}', mva_cuenta = '{cuenta}', mva_descri = '{descri}', mva_debe = '{debe}', mva_haber = '{haber}', mva_concepto = '{concepto}', mva_cc = '{cc}' WHERE mva_cod = '{codigo}'");
             MessageBox.Show("Modificado Correctamente!", "Mensaje");
             frm.Close();
         }
