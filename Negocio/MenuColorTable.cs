@@ -24,8 +24,13 @@ namespace Negocio
         {
             if (isMainMenu)
             {
-                backColor = Color.FromArgb(37, 39, 60);
-                leftColumnColor = Color.FromArgb(32, 33, 51);
+                //backColor = Color.FromArgb(37, 39, 60);
+                //leftColumnColor = Color.FromArgb(32, 33, 51);
+                //borderColor = Color.FromArgb(32, 33, 51);
+                //menuItemBorderColor = primaryColor;
+                //menuItemSelectedColor = primaryColor;
+                backColor = Color.Red;
+                leftColumnColor = Color.Red;
                 borderColor = Color.FromArgb(32, 33, 51);
                 menuItemBorderColor = primaryColor;
                 menuItemSelectedColor = primaryColor;
@@ -39,6 +44,7 @@ namespace Negocio
                 menuItemSelectedColor = primaryColor;
             }
         }
+        
 
         //Overrides
         public override Color ToolStripDropDownBackground { get { return backColor; } }
