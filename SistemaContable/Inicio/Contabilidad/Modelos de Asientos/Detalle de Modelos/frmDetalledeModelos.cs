@@ -65,10 +65,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                     ds2 = AccesoBase.ListarDatos($"SELECT * FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{cuenta}'");
                     foreach (DataRow dr2 in ds2.Tables[0].Rows)
                     {
-                        if (dr2["cec_descri"] != null && dr2["cec_descri"].ToString() != "")
-                        {
-                            centrodecosto = dr2["cec_Descri"].ToString();
-                        }
+                        centrodecosto = dr2["cec_Descri"].ToString();
                     }
 
                     if (Convert.ToInt32(dr[5]) == 0)
