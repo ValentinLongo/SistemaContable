@@ -42,7 +42,7 @@ namespace Negocio.Funciones.Ver
             bool flag = false;
 
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT obs_estado FROM Observaciones WHERE obs_destino = " + FLogin.IdUsuario);
+            ds = AccesoBase.ListarDatos($"SELECT obs_estado FROM Observaciones WHERE obs_destino = {FLogin.IdUsuario} and obs_estado = 0");
 
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
