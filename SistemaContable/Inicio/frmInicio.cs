@@ -35,6 +35,8 @@ using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
 using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeInformes;
 using SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos;
 using SistemaContable.Inicio.Ver.Comunicacion_Interna;
+using SistemaContable.Inicio.Mantenimiento.Parametros_Contables;
+using Negocio.Funciones.Mantenimiento;
 
 namespace SistemaContable
 {
@@ -614,7 +616,8 @@ namespace SistemaContable
         }
         private void parametrosContablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmParametrosContables parametro = new frmParametrosContables();
+            Negocio.FGenerales.Mostrarfrm(parametro, parametrosContablesToolStripMenuItem.Tag.ToString());
         }
         private void configurarImpresorasToolStripMenuItem_Click(object sender, EventArgs e)
         {
