@@ -92,6 +92,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void CargarDGV(string asiento) 
         {
+            string terminal = frmLogin.NumeroTerminal.ToString();
+
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc FROM MovAsto WHERE mva_asiento = {asiento}");
             foreach (DataRow dr in ds.Tables[0].Rows) 
@@ -111,7 +113,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     haber = dr[2].ToString();
                 }
 
-                string codigo = dr[1].ToString(); //(esta en el dgv pero, visible = false)
+                string codigo = dr[1].ToString(); //(esta en el dgv pero, visible = false) //ver si se saca
 
                 string concepto = dr[3].ToString();
                 string cc = dr[4].ToString();
@@ -123,6 +125,9 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     descri = dr2[0].ToString();
                 }
 
+                int autoincremental = 1;
+                AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES ('{terminal}','{cuenta}','{descri}','{debe}','{haber}','{concepto}',{autoincremental},'{asiento}','{cc}'");
+                autoincremental++;
                 dgvAddModVisASIENTO.Rows.Add(cuenta,descri,debe,haber,concepto,cc,codigo);
             }
         }
