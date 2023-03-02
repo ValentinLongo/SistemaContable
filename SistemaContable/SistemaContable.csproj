@@ -463,6 +463,12 @@
     <Compile Include="Inicio\Mantenimiento\Centro de Costos\frmCentrodeCostos.Designer.cs">
       <DependentUpon>frmCentrodeCostos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Mantenimiento\Parametros Contables\frmParametrosContables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Parametros Contables\frmParametrosContables.Designer.cs">
+      <DependentUpon>frmParametrosContables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -674,6 +680,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Centro de Costos\frmCentrodeCostos.resx">
       <DependentUpon>frmCentrodeCostos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Parametros Contables\frmParametrosContables.resx">
+      <DependentUpon>frmParametrosContables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosEspecialesPerfil.resx">
       <DependentUpon>frmPermisosEspecialesPerfil.cs</DependentUpon>
