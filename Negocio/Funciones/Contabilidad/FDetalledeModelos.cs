@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Services.Description;
 using System.Windows.Forms;
 
 namespace Negocio.Funciones.Contabilidad
@@ -20,11 +21,11 @@ namespace Negocio.Funciones.Contabilidad
             string fecha = DateTime.Now.ToString();
             string codigo = "0";
 
-            if (debe != "0,0000")
+            if (debe != "0")
             {
                codigo = "1";
             }
-            if (haber != "0,0000")
+            if (haber != "0")
             {
                codigo = "2";
             }
@@ -48,12 +49,12 @@ namespace Negocio.Funciones.Contabilidad
             string codigo = "0";
             string importe = "";
 
-            if (debe != "0,0000")
+            if (debe != "0")
             {
                 codigo = "1";
                 importe = debe;
             }
-            if (haber != "0,0000")
+            if (haber != "0")
             {
                 codigo = "2";
                 importe = haber;
@@ -75,20 +76,41 @@ namespace Negocio.Funciones.Contabilidad
             frm.Close();
         }
 
-        public static void ModificarAux_MovAsto(Form frm, string asiento, string cuenta, string debe, string haber, string concepto, string cc, string codigo, string terminal)
+        public static void ModificarAux_MovAsto(Form frm, string asiento, string cuenta, string debe, string haber, string concepto, string cc, string codigo, string terminal,string descri)
         {
-            string descri = "";
-            DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta = '{cuenta}'");
-            foreach (DataRow dr in ds.Tables[0].Rows) 
+            if (cc == "NINGUNO")
             {
-                descri = dr["pcu_descri"].ToString();
+                cc = "0";
             }
 
-            AccesoBase.InsertUpdateDatos($"UPDATE Aux_MovAsto SET mva_terminal = '{terminal}', mva_cuenta = '{cuenta}', mva_descri = '{descri}', mva_debe = '{debe}', mva_haber = '{haber}', mva_concepto = '{concepto}', mva_cc = '{cc}' WHERE mva_cod = '{codigo}'");
+            if (debe != "0")
+            {
+                debe = RecortarDecimales(debe);
+            }
+            if (haber != "0")
+            {
+                haber = RecortarDecimales(haber);
+            }
+
+            Convert.ToInt32(debe);
+            Convert.ToInt32(haber);
+
+            AccesoBase.InsertUpdateDatos($"UPDATE Aux_MovAsto SET mva_terminal = '{terminal}', mva_cuenta = '{cuenta}', mva_descri = '{descri}', mva_debe = {debe}, mva_haber = {haber}, mva_concepto = '{concepto}', mva_cc = '{cc}' WHERE mva_cod = '{codigo}'");
             MessageBox.Show("Modificado Correctamente!", "Mensaje");
             frm.Close();
         }
 
+        private static string RecortarDecimales(string valor) 
+        {
+            for (int i = 0; i < valor.Length; i++)
+            {
+                if (valor[i] == ',')
+                {
+                    valor = valor.Substring(0, i);
+                    break; 
+                }
+            }
+            return valor;
+        }
     }
 }

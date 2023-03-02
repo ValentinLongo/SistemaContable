@@ -65,7 +65,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             }
             else
             {
-                txtDebe.Text = "0,0000";
+                txtDebe.Text = "0";
             }
             if (Convert.ToDecimal(txtHaber.Text) > 0)
             {
@@ -73,7 +73,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             }
             else
             {
-                txtHaber.Text = "0,0000";
+                txtHaber.Text = "0";
             }
 
             if (contador != 2)
@@ -91,7 +91,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 {
                     if (desdeotrofrm)
                     {
-                        Negocio.Funciones.Contabilidad.FDetalledeModelos.ModificarAux_MovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText, codigofrm, terminal);
+                        Negocio.Funciones.Contabilidad.FDetalledeModelos.ModificarAux_MovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString(), codigofrm, terminal,txtDescri.Text);
                         desdeotrofrm = false;
                     }
                     else
@@ -165,10 +165,15 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             }
             else
             {
-                //terminar
+                DataTable dt = new DataTable();
+                dt.Columns.Add("NINGUNO");
+                dt.Rows.Add("NINGUNO");
+                cbCentrodeCosto.DataSource = dt;
+                cbCentrodeCosto.ValueMember = "NINGUNO";
+                cbCentrodeCosto.DisplayMember = "NINGUNO";
             }
 
-            if (txtCuenta.Text != "" || txtCuenta.Text != null)
+            if (txtCuenta.Text != "")
             {
                 DataSet ds2 = new DataSet();
                 ds2 = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta = '{txtCuenta.Text}'");
@@ -179,7 +184,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             }
             else
             {
-                txtDescri.Text = ""; // probar esto
+                txtDescri.Text = "";
             }
         }
 
@@ -193,6 +198,5 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
     }
 }
