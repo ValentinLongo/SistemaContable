@@ -1,4 +1,7 @@
 ﻿using Datos;
+using Negocio;
+using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
+using SistemaContable.Plan_de_Cuentas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using Button = System.Windows.Forms.Button;
 using TextBox = System.Windows.Forms.TextBox;
 
 namespace SistemaContable.Inicio.Mantenimiento.Parametros_Contables
@@ -25,24 +29,120 @@ namespace SistemaContable.Inicio.Mantenimiento.Parametros_Contables
         {
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos("SELECT * FROM ParamContab");
-            //int indice = 0;
-            //int indiceInterno = 0;
-            //foreach (DataRow dr in ds.Tables[0].Rows)
-            //{
-            //    foreach (Control Ctrl in this.Controls)
-            //    {
-            //        if (Ctrl is TextBox)
-            //        {
-            //            if (indice == indiceInterno)
-            //            {
-            //                Ctrl.Text = dr[indice].ToString();
-            //                indiceInterno++;
-            //            }
-            //        }
-                    
-            //    }
-            //    indice++;
-            //}
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                foreach (Control Ctrl in this.Controls)
+                {
+                    if (Ctrl is TextBox)
+                    {
+                        try
+                        {
+                            Ctrl.Text = dr[$"{Ctrl.Name}"].ToString();
+                        }
+                        catch
+                        {
+                            Ctrl.Text = descripcionTextBox(Ctrl);
+                        }
+                    }
+                }
+            }
+        }
+
+        public string descripcionTextBox(Control tb)
+        {
+            string descri = tb.Name.Substring(0, tb.Name.Length - 1);
+            string codigo;
+            try
+            {
+                DataSet ds = new DataSet();
+                ds = AccesoBase.ListarDatos("SELECT * FROM ParamContab");
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    codigo = dr[$"{descri}"].ToString();
+                    DataSet ds1 = new DataSet();
+                    ds1 = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE pcu_cuenta = {codigo}");
+                    if (ds1.Tables[0].Rows.Count > 0)
+                    {
+                        foreach (DataRow dr1 in ds1.Tables[0].Rows)
+                        {
+                            descri = dr1["pcu_descri"].ToString();
+                        }
+                    }
+                    else
+                    {
+                        descri = "";
+                    }
+                }
+            }
+            catch
+            {
+                descri = "";
+            }
+            return descri;
+        }
+
+        public string descripcionTextBoxPorID(string campo)
+        {
+            string descripcion = "";
+            DataSet ds = new DataSet();
+            ds = FPlanDeCuentas.BusquedaCuentaPorCuenta(campo);
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                descripcion = dr["pcu_descri"].ToString();
+            }
+            return descripcion;
+        }
+
+        private void AbrirCuentas(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            string campo;
+
+            frmBuscarCuenta buscarCuenta = new frmBuscarCuenta("Cuenta");
+            buscarCuenta.ShowDialog();
+            if(frmBuscarCuenta.IdCuenta > 0)
+            {
+                campo = btn.Name.Substring(0, btn.Name.Length - 1);
+
+                foreach (Control Ctrl in this.Controls)
+                {
+                    if (Ctrl is TextBox)
+                    {
+                        string textBox = campo;
+                        string descriTextBox = $"{campo}1";
+                        if(Ctrl.Name == textBox)
+                        {
+                            Ctrl.Text = frmBuscarCuenta.IdCuenta.ToString();
+                        }
+                        if(Ctrl.Name == descriTextBox)
+                        {
+                            Ctrl.Text = descripcionTextBoxPorID(frmBuscarCuenta.IdCuenta.ToString());
+                        }
+                    }
+                }
+            }
+
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            foreach (Control Ctrl in this.Controls)
+            {
+                if(Ctrl is TextBox)
+                {
+                    try
+                    {
+                        int codigo = Convert.ToInt32(Ctrl.Text);
+                        string campo = Ctrl.Name;
+                        AccesoBase.InsertUpdateDatos($"UPDATE ParamContab SET {campo} = {codigo}");
+                    }
+                    catch
+                    {
+
+                    }
+                }
+            }
+            MessageBox.Show("Modificado Correctamente");
         }
     }
 }
