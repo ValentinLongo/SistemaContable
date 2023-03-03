@@ -66,140 +66,140 @@
             this.par_ctaIVA21 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA211 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA212 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.par_ctaIVA213 = new System.Windows.Forms.CheckBox();
+            this.par_ctaIVA103 = new System.Windows.Forms.CheckBox();
             this.par_ctaIVA102 = new System.Windows.Forms.Button();
             this.par_ctaIVA101 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA10 = new System.Windows.Forms.TextBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.par_ctaIVA273 = new System.Windows.Forms.CheckBox();
             this.par_ctaIVA272 = new System.Windows.Forms.Button();
             this.par_ctaIVA271 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA27 = new System.Windows.Forms.TextBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRetIIBB3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetIIBB2 = new System.Windows.Forms.Button();
             this.par_ctaRetIIBB1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetIIBB = new System.Windows.Forms.TextBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRetIVA3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetIVA2 = new System.Windows.Forms.Button();
             this.par_ctaRetIVA1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetIVA = new System.Windows.Forms.TextBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.par_ctaImpInt3 = new System.Windows.Forms.CheckBox();
             this.par_ctaImpInt2 = new System.Windows.Forms.Button();
             this.par_ctaImpInt1 = new System.Windows.Forms.TextBox();
             this.par_ctaImpInt = new System.Windows.Forms.TextBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.par_ctaOtrosImp3 = new System.Windows.Forms.CheckBox();
             this.par_ctaOtrosImp2 = new System.Windows.Forms.Button();
             this.par_ctaOtrosImp1 = new System.Windows.Forms.TextBox();
             this.par_ctaOtrosImp = new System.Windows.Forms.TextBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.par_ctaPerGan3 = new System.Windows.Forms.CheckBox();
             this.par_ctaPerGan2 = new System.Windows.Forms.Button();
             this.par_ctaPerGan1 = new System.Windows.Forms.TextBox();
             this.par_ctaPerGan = new System.Windows.Forms.TextBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.par_ctaPerIIBB3 = new System.Windows.Forms.CheckBox();
             this.par_ctaPerIIBB2 = new System.Windows.Forms.Button();
             this.par_ctaPerIIBB1 = new System.Windows.Forms.TextBox();
             this.par_ctaPerIIBB = new System.Windows.Forms.TextBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.par_ctaPerIVA3 = new System.Windows.Forms.CheckBox();
             this.par_ctaPerIVA2 = new System.Windows.Forms.Button();
             this.par_ctaPerIVA1 = new System.Windows.Forms.TextBox();
             this.par_ctaPerIVA = new System.Windows.Forms.TextBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRetSUSS3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetSUSS2 = new System.Windows.Forms.Button();
             this.par_ctaRetSUSS1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetSUSS = new System.Windows.Forms.TextBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRetGan3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetGan2 = new System.Windows.Forms.Button();
             this.par_ctaRetGan1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetGan = new System.Windows.Forms.TextBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.par_ctaDescuento3 = new System.Windows.Forms.CheckBox();
             this.par_ctaDescuento2 = new System.Windows.Forms.Button();
             this.par_ctaDescuento1 = new System.Windows.Forms.TextBox();
             this.par_ctaDescuento = new System.Windows.Forms.TextBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRetSUSSP3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetSUSSP2 = new System.Windows.Forms.Button();
             this.par_ctaRetSUSSP1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetSUSSP = new System.Windows.Forms.TextBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRetGanP3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetGanP2 = new System.Windows.Forms.Button();
             this.par_ctaRetGanP1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetGanP = new System.Windows.Forms.TextBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRetIIBBP3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetIIBBP2 = new System.Windows.Forms.Button();
             this.par_ctaRetIIBBP1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetIIBBP = new System.Windows.Forms.TextBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRetIVAP3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetIVAP2 = new System.Windows.Forms.Button();
             this.par_ctaRetIVAP1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetIVAP = new System.Windows.Forms.TextBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
+            this.par_ctaIVA27D3 = new System.Windows.Forms.CheckBox();
             this.par_ctaIVA27D2 = new System.Windows.Forms.Button();
             this.par_ctaIVA27D1 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA27D = new System.Windows.Forms.TextBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.par_ctaIVA10D3 = new System.Windows.Forms.CheckBox();
             this.par_ctaIVA10D2 = new System.Windows.Forms.Button();
             this.par_ctaIVA10D1 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA10D = new System.Windows.Forms.TextBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
+            this.par_ctaIVA21D3 = new System.Windows.Forms.CheckBox();
             this.par_ctaIVA21D2 = new System.Windows.Forms.Button();
             this.par_ctaIVA21D1 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA21D = new System.Windows.Forms.TextBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
+            this.par_ctaDeud3 = new System.Windows.Forms.CheckBox();
             this.par_ctaDeud2 = new System.Windows.Forms.Button();
             this.par_ctaDeud1 = new System.Windows.Forms.TextBox();
             this.par_ctaDeud = new System.Windows.Forms.TextBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
+            this.par_NetoVtaArti3 = new System.Windows.Forms.CheckBox();
             this.par_NetoVtaArti2 = new System.Windows.Forms.Button();
             this.par_NetoVtaArti1 = new System.Windows.Forms.TextBox();
             this.par_NetoVtaArti = new System.Windows.Forms.TextBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
+            this.par_ctaProvGral3 = new System.Windows.Forms.CheckBox();
             this.par_ctaProvGral2 = new System.Windows.Forms.Button();
             this.par_ctaProvGral1 = new System.Windows.Forms.TextBox();
             this.par_ctaProvGral = new System.Windows.Forms.TextBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
+            this.par_ctaProv3 = new System.Windows.Forms.CheckBox();
             this.par_ctaProv2 = new System.Windows.Forms.Button();
             this.par_ctaProv1 = new System.Windows.Forms.TextBox();
             this.par_ctaProv = new System.Windows.Forms.TextBox();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
+            this.par_ctaDifCambioVta3 = new System.Windows.Forms.CheckBox();
             this.par_ctaDifCambioVta2 = new System.Windows.Forms.Button();
             this.par_ctaDifCambioVta1 = new System.Windows.Forms.TextBox();
             this.par_ctaDifCambioVta = new System.Windows.Forms.TextBox();
-            this.checkBox26 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRetBFP3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetBFP2 = new System.Windows.Forms.Button();
             this.par_ctaRetBFP1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetBFP = new System.Windows.Forms.TextBox();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRetBF3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetBF2 = new System.Windows.Forms.Button();
             this.par_ctaRetBF1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetBF = new System.Windows.Forms.TextBox();
-            this.checkBox28 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRedondeo3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRedondeo2 = new System.Windows.Forms.Button();
             this.par_ctaRedondeo1 = new System.Windows.Forms.TextBox();
             this.par_ctaRedondeo = new System.Windows.Forms.TextBox();
-            this.checkBox29 = new System.Windows.Forms.CheckBox();
+            this.par_NetoVtaServ3 = new System.Windows.Forms.CheckBox();
             this.par_NetoVtaServ2 = new System.Windows.Forms.Button();
             this.par_NetoVtaServ1 = new System.Windows.Forms.TextBox();
             this.par_NetoVtaServ = new System.Windows.Forms.TextBox();
-            this.checkBox30 = new System.Windows.Forms.CheckBox();
+            this.par_ctaAnticipoCpa3 = new System.Windows.Forms.CheckBox();
             this.par_ctaAnticipoCpa2 = new System.Windows.Forms.Button();
             this.par_ctaAnticipoCpa1 = new System.Windows.Forms.TextBox();
             this.par_ctaAnticipoCpa = new System.Windows.Forms.TextBox();
-            this.checkBox31 = new System.Windows.Forms.CheckBox();
+            this.par_ctaAnticipoVta3 = new System.Windows.Forms.CheckBox();
             this.par_ctaAnticipoVta2 = new System.Windows.Forms.Button();
             this.par_ctaAnticipoVta1 = new System.Windows.Forms.TextBox();
             this.par_ctaAnticipoVta = new System.Windows.Forms.TextBox();
-            this.checkBox32 = new System.Windows.Forms.CheckBox();
+            this.par_ctaRecargo3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRecargo2 = new System.Windows.Forms.Button();
             this.par_ctaRecargo1 = new System.Windows.Forms.TextBox();
             this.par_ctaRecargo = new System.Windows.Forms.TextBox();
-            this.checkBox33 = new System.Windows.Forms.CheckBox();
+            this.par_ctaAjusteInf3 = new System.Windows.Forms.CheckBox();
             this.par_ctaAjusteInf2 = new System.Windows.Forms.Button();
             this.par_ctaAjusteInf1 = new System.Windows.Forms.TextBox();
             this.par_ctaAjusteInf = new System.Windows.Forms.TextBox();
-            this.checkBox34 = new System.Windows.Forms.CheckBox();
+            this.par_ctaCIIVA3 = new System.Windows.Forms.CheckBox();
             this.par_ctaCIIVA2 = new System.Windows.Forms.Button();
             this.par_ctaCIIVA1 = new System.Windows.Forms.TextBox();
             this.par_ctaCIIVA = new System.Windows.Forms.TextBox();
-            this.checkBox35 = new System.Windows.Forms.CheckBox();
+            this.par_ctaCINeto3 = new System.Windows.Forms.CheckBox();
             this.par_ctaCINeto2 = new System.Windows.Forms.Button();
             this.par_ctaCINeto1 = new System.Windows.Forms.TextBox();
             this.par_ctaCINeto = new System.Windows.Forms.TextBox();
@@ -547,23 +547,25 @@
             this.par_ctaIVA212.UseVisualStyleBackColor = true;
             this.par_ctaIVA212.Click += new System.EventHandler(this.AbrirCuentas);
             // 
-            // checkBox1
+            // par_ctaIVA213
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(618, 10);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 40;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.par_ctaIVA213.AutoSize = true;
+            this.par_ctaIVA213.Enabled = false;
+            this.par_ctaIVA213.Location = new System.Drawing.Point(618, 10);
+            this.par_ctaIVA213.Name = "par_ctaIVA213";
+            this.par_ctaIVA213.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaIVA213.TabIndex = 40;
+            this.par_ctaIVA213.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // par_ctaIVA103
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(618, 39);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 45;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.par_ctaIVA103.AutoSize = true;
+            this.par_ctaIVA103.Enabled = false;
+            this.par_ctaIVA103.Location = new System.Drawing.Point(618, 39);
+            this.par_ctaIVA103.Name = "par_ctaIVA103";
+            this.par_ctaIVA103.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaIVA103.TabIndex = 45;
+            this.par_ctaIVA103.UseVisualStyleBackColor = true;
             // 
             // par_ctaIVA102
             // 
@@ -591,14 +593,15 @@
             this.par_ctaIVA10.Size = new System.Drawing.Size(78, 20);
             this.par_ctaIVA10.TabIndex = 41;
             // 
-            // checkBox3
+            // par_ctaIVA273
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(618, 64);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 50;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.par_ctaIVA273.AutoSize = true;
+            this.par_ctaIVA273.Enabled = false;
+            this.par_ctaIVA273.Location = new System.Drawing.Point(618, 64);
+            this.par_ctaIVA273.Name = "par_ctaIVA273";
+            this.par_ctaIVA273.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaIVA273.TabIndex = 50;
+            this.par_ctaIVA273.UseVisualStyleBackColor = true;
             // 
             // par_ctaIVA272
             // 
@@ -626,14 +629,15 @@
             this.par_ctaIVA27.Size = new System.Drawing.Size(78, 20);
             this.par_ctaIVA27.TabIndex = 46;
             // 
-            // checkBox4
+            // par_ctaRetIIBB3
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(618, 146);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 65;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.par_ctaRetIIBB3.AutoSize = true;
+            this.par_ctaRetIIBB3.Enabled = false;
+            this.par_ctaRetIIBB3.Location = new System.Drawing.Point(618, 146);
+            this.par_ctaRetIIBB3.Name = "par_ctaRetIIBB3";
+            this.par_ctaRetIIBB3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRetIIBB3.TabIndex = 65;
+            this.par_ctaRetIIBB3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetIIBB2
             // 
@@ -661,14 +665,15 @@
             this.par_ctaRetIIBB.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRetIIBB.TabIndex = 61;
             // 
-            // checkBox5
+            // par_ctaRetIVA3
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(618, 121);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 60;
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.par_ctaRetIVA3.AutoSize = true;
+            this.par_ctaRetIVA3.Enabled = false;
+            this.par_ctaRetIVA3.Location = new System.Drawing.Point(618, 121);
+            this.par_ctaRetIVA3.Name = "par_ctaRetIVA3";
+            this.par_ctaRetIVA3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRetIVA3.TabIndex = 60;
+            this.par_ctaRetIVA3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetIVA2
             // 
@@ -696,14 +701,15 @@
             this.par_ctaRetIVA.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRetIVA.TabIndex = 56;
             // 
-            // checkBox6
+            // par_ctaImpInt3
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(618, 92);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 55;
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.par_ctaImpInt3.AutoSize = true;
+            this.par_ctaImpInt3.Enabled = false;
+            this.par_ctaImpInt3.Location = new System.Drawing.Point(618, 92);
+            this.par_ctaImpInt3.Name = "par_ctaImpInt3";
+            this.par_ctaImpInt3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaImpInt3.TabIndex = 55;
+            this.par_ctaImpInt3.UseVisualStyleBackColor = true;
             // 
             // par_ctaImpInt2
             // 
@@ -731,14 +737,15 @@
             this.par_ctaImpInt.Size = new System.Drawing.Size(78, 20);
             this.par_ctaImpInt.TabIndex = 51;
             // 
-            // checkBox7
+            // par_ctaOtrosImp3
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(618, 308);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(15, 14);
-            this.checkBox7.TabIndex = 95;
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.par_ctaOtrosImp3.AutoSize = true;
+            this.par_ctaOtrosImp3.Enabled = false;
+            this.par_ctaOtrosImp3.Location = new System.Drawing.Point(618, 308);
+            this.par_ctaOtrosImp3.Name = "par_ctaOtrosImp3";
+            this.par_ctaOtrosImp3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaOtrosImp3.TabIndex = 95;
+            this.par_ctaOtrosImp3.UseVisualStyleBackColor = true;
             // 
             // par_ctaOtrosImp2
             // 
@@ -766,14 +773,15 @@
             this.par_ctaOtrosImp.Size = new System.Drawing.Size(78, 20);
             this.par_ctaOtrosImp.TabIndex = 91;
             // 
-            // checkBox8
+            // par_ctaPerGan3
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(618, 283);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(15, 14);
-            this.checkBox8.TabIndex = 90;
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.par_ctaPerGan3.AutoSize = true;
+            this.par_ctaPerGan3.Enabled = false;
+            this.par_ctaPerGan3.Location = new System.Drawing.Point(618, 283);
+            this.par_ctaPerGan3.Name = "par_ctaPerGan3";
+            this.par_ctaPerGan3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaPerGan3.TabIndex = 90;
+            this.par_ctaPerGan3.UseVisualStyleBackColor = true;
             // 
             // par_ctaPerGan2
             // 
@@ -801,14 +809,15 @@
             this.par_ctaPerGan.Size = new System.Drawing.Size(78, 20);
             this.par_ctaPerGan.TabIndex = 86;
             // 
-            // checkBox9
+            // par_ctaPerIIBB3
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(618, 254);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(15, 14);
-            this.checkBox9.TabIndex = 85;
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.par_ctaPerIIBB3.AutoSize = true;
+            this.par_ctaPerIIBB3.Enabled = false;
+            this.par_ctaPerIIBB3.Location = new System.Drawing.Point(618, 254);
+            this.par_ctaPerIIBB3.Name = "par_ctaPerIIBB3";
+            this.par_ctaPerIIBB3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaPerIIBB3.TabIndex = 85;
+            this.par_ctaPerIIBB3.UseVisualStyleBackColor = true;
             // 
             // par_ctaPerIIBB2
             // 
@@ -836,14 +845,15 @@
             this.par_ctaPerIIBB.Size = new System.Drawing.Size(78, 20);
             this.par_ctaPerIIBB.TabIndex = 81;
             // 
-            // checkBox10
+            // par_ctaPerIVA3
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(618, 226);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(15, 14);
-            this.checkBox10.TabIndex = 80;
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.par_ctaPerIVA3.AutoSize = true;
+            this.par_ctaPerIVA3.Enabled = false;
+            this.par_ctaPerIVA3.Location = new System.Drawing.Point(618, 226);
+            this.par_ctaPerIVA3.Name = "par_ctaPerIVA3";
+            this.par_ctaPerIVA3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaPerIVA3.TabIndex = 80;
+            this.par_ctaPerIVA3.UseVisualStyleBackColor = true;
             // 
             // par_ctaPerIVA2
             // 
@@ -871,14 +881,15 @@
             this.par_ctaPerIVA.Size = new System.Drawing.Size(78, 20);
             this.par_ctaPerIVA.TabIndex = 76;
             // 
-            // checkBox11
+            // par_ctaRetSUSS3
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(618, 201);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(15, 14);
-            this.checkBox11.TabIndex = 75;
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.par_ctaRetSUSS3.AutoSize = true;
+            this.par_ctaRetSUSS3.Enabled = false;
+            this.par_ctaRetSUSS3.Location = new System.Drawing.Point(618, 201);
+            this.par_ctaRetSUSS3.Name = "par_ctaRetSUSS3";
+            this.par_ctaRetSUSS3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRetSUSS3.TabIndex = 75;
+            this.par_ctaRetSUSS3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetSUSS2
             // 
@@ -906,14 +917,15 @@
             this.par_ctaRetSUSS.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRetSUSS.TabIndex = 71;
             // 
-            // checkBox12
+            // par_ctaRetGan3
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(618, 172);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(15, 14);
-            this.checkBox12.TabIndex = 70;
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.par_ctaRetGan3.AutoSize = true;
+            this.par_ctaRetGan3.Enabled = false;
+            this.par_ctaRetGan3.Location = new System.Drawing.Point(618, 172);
+            this.par_ctaRetGan3.Name = "par_ctaRetGan3";
+            this.par_ctaRetGan3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRetGan3.TabIndex = 70;
+            this.par_ctaRetGan3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetGan2
             // 
@@ -941,14 +953,15 @@
             this.par_ctaRetGan.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRetGan.TabIndex = 66;
             // 
-            // checkBox13
+            // par_ctaDescuento3
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(618, 630);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(15, 14);
-            this.checkBox13.TabIndex = 155;
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.par_ctaDescuento3.AutoSize = true;
+            this.par_ctaDescuento3.Enabled = false;
+            this.par_ctaDescuento3.Location = new System.Drawing.Point(618, 630);
+            this.par_ctaDescuento3.Name = "par_ctaDescuento3";
+            this.par_ctaDescuento3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaDescuento3.TabIndex = 155;
+            this.par_ctaDescuento3.UseVisualStyleBackColor = true;
             // 
             // par_ctaDescuento2
             // 
@@ -976,14 +989,15 @@
             this.par_ctaDescuento.Size = new System.Drawing.Size(78, 20);
             this.par_ctaDescuento.TabIndex = 151;
             // 
-            // checkBox14
+            // par_ctaRetSUSSP3
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(618, 605);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(15, 14);
-            this.checkBox14.TabIndex = 150;
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.par_ctaRetSUSSP3.AutoSize = true;
+            this.par_ctaRetSUSSP3.Enabled = false;
+            this.par_ctaRetSUSSP3.Location = new System.Drawing.Point(618, 605);
+            this.par_ctaRetSUSSP3.Name = "par_ctaRetSUSSP3";
+            this.par_ctaRetSUSSP3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRetSUSSP3.TabIndex = 150;
+            this.par_ctaRetSUSSP3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetSUSSP2
             // 
@@ -1011,14 +1025,15 @@
             this.par_ctaRetSUSSP.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRetSUSSP.TabIndex = 146;
             // 
-            // checkBox15
+            // par_ctaRetGanP3
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(618, 576);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(15, 14);
-            this.checkBox15.TabIndex = 145;
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.par_ctaRetGanP3.AutoSize = true;
+            this.par_ctaRetGanP3.Enabled = false;
+            this.par_ctaRetGanP3.Location = new System.Drawing.Point(618, 576);
+            this.par_ctaRetGanP3.Name = "par_ctaRetGanP3";
+            this.par_ctaRetGanP3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRetGanP3.TabIndex = 145;
+            this.par_ctaRetGanP3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetGanP2
             // 
@@ -1046,14 +1061,15 @@
             this.par_ctaRetGanP.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRetGanP.TabIndex = 141;
             // 
-            // checkBox16
+            // par_ctaRetIIBBP3
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(618, 548);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(15, 14);
-            this.checkBox16.TabIndex = 140;
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.par_ctaRetIIBBP3.AutoSize = true;
+            this.par_ctaRetIIBBP3.Enabled = false;
+            this.par_ctaRetIIBBP3.Location = new System.Drawing.Point(618, 548);
+            this.par_ctaRetIIBBP3.Name = "par_ctaRetIIBBP3";
+            this.par_ctaRetIIBBP3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRetIIBBP3.TabIndex = 140;
+            this.par_ctaRetIIBBP3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetIIBBP2
             // 
@@ -1081,14 +1097,15 @@
             this.par_ctaRetIIBBP.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRetIIBBP.TabIndex = 136;
             // 
-            // checkBox17
+            // par_ctaRetIVAP3
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(618, 523);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(15, 14);
-            this.checkBox17.TabIndex = 135;
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.par_ctaRetIVAP3.AutoSize = true;
+            this.par_ctaRetIVAP3.Enabled = false;
+            this.par_ctaRetIVAP3.Location = new System.Drawing.Point(618, 523);
+            this.par_ctaRetIVAP3.Name = "par_ctaRetIVAP3";
+            this.par_ctaRetIVAP3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRetIVAP3.TabIndex = 135;
+            this.par_ctaRetIVAP3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetIVAP2
             // 
@@ -1116,14 +1133,15 @@
             this.par_ctaRetIVAP.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRetIVAP.TabIndex = 131;
             // 
-            // checkBox18
+            // par_ctaIVA27D3
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(618, 496);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(15, 14);
-            this.checkBox18.TabIndex = 130;
-            this.checkBox18.UseVisualStyleBackColor = true;
+            this.par_ctaIVA27D3.AutoSize = true;
+            this.par_ctaIVA27D3.Enabled = false;
+            this.par_ctaIVA27D3.Location = new System.Drawing.Point(618, 496);
+            this.par_ctaIVA27D3.Name = "par_ctaIVA27D3";
+            this.par_ctaIVA27D3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaIVA27D3.TabIndex = 130;
+            this.par_ctaIVA27D3.UseVisualStyleBackColor = true;
             // 
             // par_ctaIVA27D2
             // 
@@ -1151,14 +1169,15 @@
             this.par_ctaIVA27D.Size = new System.Drawing.Size(78, 20);
             this.par_ctaIVA27D.TabIndex = 126;
             // 
-            // checkBox19
+            // par_ctaIVA10D3
             // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(618, 470);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(15, 14);
-            this.checkBox19.TabIndex = 125;
-            this.checkBox19.UseVisualStyleBackColor = true;
+            this.par_ctaIVA10D3.AutoSize = true;
+            this.par_ctaIVA10D3.Enabled = false;
+            this.par_ctaIVA10D3.Location = new System.Drawing.Point(618, 470);
+            this.par_ctaIVA10D3.Name = "par_ctaIVA10D3";
+            this.par_ctaIVA10D3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaIVA10D3.TabIndex = 125;
+            this.par_ctaIVA10D3.UseVisualStyleBackColor = true;
             // 
             // par_ctaIVA10D2
             // 
@@ -1186,14 +1205,15 @@
             this.par_ctaIVA10D.Size = new System.Drawing.Size(78, 20);
             this.par_ctaIVA10D.TabIndex = 121;
             // 
-            // checkBox20
+            // par_ctaIVA21D3
             // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(618, 445);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(15, 14);
-            this.checkBox20.TabIndex = 120;
-            this.checkBox20.UseVisualStyleBackColor = true;
+            this.par_ctaIVA21D3.AutoSize = true;
+            this.par_ctaIVA21D3.Enabled = false;
+            this.par_ctaIVA21D3.Location = new System.Drawing.Point(618, 445);
+            this.par_ctaIVA21D3.Name = "par_ctaIVA21D3";
+            this.par_ctaIVA21D3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaIVA21D3.TabIndex = 120;
+            this.par_ctaIVA21D3.UseVisualStyleBackColor = true;
             // 
             // par_ctaIVA21D2
             // 
@@ -1221,14 +1241,15 @@
             this.par_ctaIVA21D.Size = new System.Drawing.Size(78, 20);
             this.par_ctaIVA21D.TabIndex = 116;
             // 
-            // checkBox21
+            // par_ctaDeud3
             // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.Location = new System.Drawing.Point(618, 416);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(15, 14);
-            this.checkBox21.TabIndex = 115;
-            this.checkBox21.UseVisualStyleBackColor = true;
+            this.par_ctaDeud3.AutoSize = true;
+            this.par_ctaDeud3.Enabled = false;
+            this.par_ctaDeud3.Location = new System.Drawing.Point(618, 416);
+            this.par_ctaDeud3.Name = "par_ctaDeud3";
+            this.par_ctaDeud3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaDeud3.TabIndex = 115;
+            this.par_ctaDeud3.UseVisualStyleBackColor = true;
             // 
             // par_ctaDeud2
             // 
@@ -1256,14 +1277,15 @@
             this.par_ctaDeud.Size = new System.Drawing.Size(78, 20);
             this.par_ctaDeud.TabIndex = 111;
             // 
-            // checkBox22
+            // par_NetoVtaArti3
             // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.Location = new System.Drawing.Point(618, 388);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(15, 14);
-            this.checkBox22.TabIndex = 110;
-            this.checkBox22.UseVisualStyleBackColor = true;
+            this.par_NetoVtaArti3.AutoSize = true;
+            this.par_NetoVtaArti3.Enabled = false;
+            this.par_NetoVtaArti3.Location = new System.Drawing.Point(618, 388);
+            this.par_NetoVtaArti3.Name = "par_NetoVtaArti3";
+            this.par_NetoVtaArti3.Size = new System.Drawing.Size(15, 14);
+            this.par_NetoVtaArti3.TabIndex = 110;
+            this.par_NetoVtaArti3.UseVisualStyleBackColor = true;
             // 
             // par_NetoVtaArti2
             // 
@@ -1291,14 +1313,15 @@
             this.par_NetoVtaArti.Size = new System.Drawing.Size(78, 20);
             this.par_NetoVtaArti.TabIndex = 106;
             // 
-            // checkBox23
+            // par_ctaProvGral3
             // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.Location = new System.Drawing.Point(618, 363);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(15, 14);
-            this.checkBox23.TabIndex = 105;
-            this.checkBox23.UseVisualStyleBackColor = true;
+            this.par_ctaProvGral3.AutoSize = true;
+            this.par_ctaProvGral3.Enabled = false;
+            this.par_ctaProvGral3.Location = new System.Drawing.Point(618, 363);
+            this.par_ctaProvGral3.Name = "par_ctaProvGral3";
+            this.par_ctaProvGral3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaProvGral3.TabIndex = 105;
+            this.par_ctaProvGral3.UseVisualStyleBackColor = true;
             // 
             // par_ctaProvGral2
             // 
@@ -1326,14 +1349,15 @@
             this.par_ctaProvGral.Size = new System.Drawing.Size(78, 20);
             this.par_ctaProvGral.TabIndex = 101;
             // 
-            // checkBox24
+            // par_ctaProv3
             // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.Location = new System.Drawing.Point(618, 334);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(15, 14);
-            this.checkBox24.TabIndex = 100;
-            this.checkBox24.UseVisualStyleBackColor = true;
+            this.par_ctaProv3.AutoSize = true;
+            this.par_ctaProv3.Enabled = false;
+            this.par_ctaProv3.Location = new System.Drawing.Point(618, 334);
+            this.par_ctaProv3.Name = "par_ctaProv3";
+            this.par_ctaProv3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaProv3.TabIndex = 100;
+            this.par_ctaProv3.UseVisualStyleBackColor = true;
             // 
             // par_ctaProv2
             // 
@@ -1361,14 +1385,15 @@
             this.par_ctaProv.Size = new System.Drawing.Size(78, 20);
             this.par_ctaProv.TabIndex = 96;
             // 
-            // checkBox25
+            // par_ctaDifCambioVta3
             // 
-            this.checkBox25.AutoSize = true;
-            this.checkBox25.Location = new System.Drawing.Point(618, 847);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(15, 14);
-            this.checkBox25.TabIndex = 195;
-            this.checkBox25.UseVisualStyleBackColor = true;
+            this.par_ctaDifCambioVta3.AutoSize = true;
+            this.par_ctaDifCambioVta3.Enabled = false;
+            this.par_ctaDifCambioVta3.Location = new System.Drawing.Point(618, 847);
+            this.par_ctaDifCambioVta3.Name = "par_ctaDifCambioVta3";
+            this.par_ctaDifCambioVta3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaDifCambioVta3.TabIndex = 195;
+            this.par_ctaDifCambioVta3.UseVisualStyleBackColor = true;
             // 
             // par_ctaDifCambioVta2
             // 
@@ -1396,14 +1421,15 @@
             this.par_ctaDifCambioVta.Size = new System.Drawing.Size(78, 20);
             this.par_ctaDifCambioVta.TabIndex = 191;
             // 
-            // checkBox26
+            // par_ctaRetBFP3
             // 
-            this.checkBox26.AutoSize = true;
-            this.checkBox26.Location = new System.Drawing.Point(618, 822);
-            this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(15, 14);
-            this.checkBox26.TabIndex = 190;
-            this.checkBox26.UseVisualStyleBackColor = true;
+            this.par_ctaRetBFP3.AutoSize = true;
+            this.par_ctaRetBFP3.Enabled = false;
+            this.par_ctaRetBFP3.Location = new System.Drawing.Point(618, 822);
+            this.par_ctaRetBFP3.Name = "par_ctaRetBFP3";
+            this.par_ctaRetBFP3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRetBFP3.TabIndex = 190;
+            this.par_ctaRetBFP3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetBFP2
             // 
@@ -1431,14 +1457,15 @@
             this.par_ctaRetBFP.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRetBFP.TabIndex = 186;
             // 
-            // checkBox27
+            // par_ctaRetBF3
             // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.Location = new System.Drawing.Point(618, 793);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(15, 14);
-            this.checkBox27.TabIndex = 185;
-            this.checkBox27.UseVisualStyleBackColor = true;
+            this.par_ctaRetBF3.AutoSize = true;
+            this.par_ctaRetBF3.Enabled = false;
+            this.par_ctaRetBF3.Location = new System.Drawing.Point(618, 793);
+            this.par_ctaRetBF3.Name = "par_ctaRetBF3";
+            this.par_ctaRetBF3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRetBF3.TabIndex = 185;
+            this.par_ctaRetBF3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetBF2
             // 
@@ -1466,14 +1493,15 @@
             this.par_ctaRetBF.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRetBF.TabIndex = 181;
             // 
-            // checkBox28
+            // par_ctaRedondeo3
             // 
-            this.checkBox28.AutoSize = true;
-            this.checkBox28.Location = new System.Drawing.Point(618, 765);
-            this.checkBox28.Name = "checkBox28";
-            this.checkBox28.Size = new System.Drawing.Size(15, 14);
-            this.checkBox28.TabIndex = 180;
-            this.checkBox28.UseVisualStyleBackColor = true;
+            this.par_ctaRedondeo3.AutoSize = true;
+            this.par_ctaRedondeo3.Enabled = false;
+            this.par_ctaRedondeo3.Location = new System.Drawing.Point(618, 765);
+            this.par_ctaRedondeo3.Name = "par_ctaRedondeo3";
+            this.par_ctaRedondeo3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRedondeo3.TabIndex = 180;
+            this.par_ctaRedondeo3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRedondeo2
             // 
@@ -1501,14 +1529,15 @@
             this.par_ctaRedondeo.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRedondeo.TabIndex = 176;
             // 
-            // checkBox29
+            // par_NetoVtaServ3
             // 
-            this.checkBox29.AutoSize = true;
-            this.checkBox29.Location = new System.Drawing.Point(618, 740);
-            this.checkBox29.Name = "checkBox29";
-            this.checkBox29.Size = new System.Drawing.Size(15, 14);
-            this.checkBox29.TabIndex = 175;
-            this.checkBox29.UseVisualStyleBackColor = true;
+            this.par_NetoVtaServ3.AutoSize = true;
+            this.par_NetoVtaServ3.Enabled = false;
+            this.par_NetoVtaServ3.Location = new System.Drawing.Point(618, 740);
+            this.par_NetoVtaServ3.Name = "par_NetoVtaServ3";
+            this.par_NetoVtaServ3.Size = new System.Drawing.Size(15, 14);
+            this.par_NetoVtaServ3.TabIndex = 175;
+            this.par_NetoVtaServ3.UseVisualStyleBackColor = true;
             // 
             // par_NetoVtaServ2
             // 
@@ -1536,14 +1565,15 @@
             this.par_NetoVtaServ.Size = new System.Drawing.Size(78, 20);
             this.par_NetoVtaServ.TabIndex = 171;
             // 
-            // checkBox30
+            // par_ctaAnticipoCpa3
             // 
-            this.checkBox30.AutoSize = true;
-            this.checkBox30.Location = new System.Drawing.Point(618, 711);
-            this.checkBox30.Name = "checkBox30";
-            this.checkBox30.Size = new System.Drawing.Size(15, 14);
-            this.checkBox30.TabIndex = 170;
-            this.checkBox30.UseVisualStyleBackColor = true;
+            this.par_ctaAnticipoCpa3.AutoSize = true;
+            this.par_ctaAnticipoCpa3.Enabled = false;
+            this.par_ctaAnticipoCpa3.Location = new System.Drawing.Point(618, 711);
+            this.par_ctaAnticipoCpa3.Name = "par_ctaAnticipoCpa3";
+            this.par_ctaAnticipoCpa3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaAnticipoCpa3.TabIndex = 170;
+            this.par_ctaAnticipoCpa3.UseVisualStyleBackColor = true;
             // 
             // par_ctaAnticipoCpa2
             // 
@@ -1571,14 +1601,15 @@
             this.par_ctaAnticipoCpa.Size = new System.Drawing.Size(78, 20);
             this.par_ctaAnticipoCpa.TabIndex = 166;
             // 
-            // checkBox31
+            // par_ctaAnticipoVta3
             // 
-            this.checkBox31.AutoSize = true;
-            this.checkBox31.Location = new System.Drawing.Point(618, 685);
-            this.checkBox31.Name = "checkBox31";
-            this.checkBox31.Size = new System.Drawing.Size(15, 14);
-            this.checkBox31.TabIndex = 165;
-            this.checkBox31.UseVisualStyleBackColor = true;
+            this.par_ctaAnticipoVta3.AutoSize = true;
+            this.par_ctaAnticipoVta3.Enabled = false;
+            this.par_ctaAnticipoVta3.Location = new System.Drawing.Point(618, 685);
+            this.par_ctaAnticipoVta3.Name = "par_ctaAnticipoVta3";
+            this.par_ctaAnticipoVta3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaAnticipoVta3.TabIndex = 165;
+            this.par_ctaAnticipoVta3.UseVisualStyleBackColor = true;
             // 
             // par_ctaAnticipoVta2
             // 
@@ -1606,14 +1637,15 @@
             this.par_ctaAnticipoVta.Size = new System.Drawing.Size(78, 20);
             this.par_ctaAnticipoVta.TabIndex = 161;
             // 
-            // checkBox32
+            // par_ctaRecargo3
             // 
-            this.checkBox32.AutoSize = true;
-            this.checkBox32.Location = new System.Drawing.Point(618, 660);
-            this.checkBox32.Name = "checkBox32";
-            this.checkBox32.Size = new System.Drawing.Size(15, 14);
-            this.checkBox32.TabIndex = 160;
-            this.checkBox32.UseVisualStyleBackColor = true;
+            this.par_ctaRecargo3.AutoSize = true;
+            this.par_ctaRecargo3.Enabled = false;
+            this.par_ctaRecargo3.Location = new System.Drawing.Point(618, 660);
+            this.par_ctaRecargo3.Name = "par_ctaRecargo3";
+            this.par_ctaRecargo3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaRecargo3.TabIndex = 160;
+            this.par_ctaRecargo3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRecargo2
             // 
@@ -1641,14 +1673,15 @@
             this.par_ctaRecargo.Size = new System.Drawing.Size(78, 20);
             this.par_ctaRecargo.TabIndex = 156;
             // 
-            // checkBox33
+            // par_ctaAjusteInf3
             // 
-            this.checkBox33.AutoSize = true;
-            this.checkBox33.Location = new System.Drawing.Point(618, 927);
-            this.checkBox33.Name = "checkBox33";
-            this.checkBox33.Size = new System.Drawing.Size(15, 14);
-            this.checkBox33.TabIndex = 210;
-            this.checkBox33.UseVisualStyleBackColor = true;
+            this.par_ctaAjusteInf3.AutoSize = true;
+            this.par_ctaAjusteInf3.Enabled = false;
+            this.par_ctaAjusteInf3.Location = new System.Drawing.Point(618, 927);
+            this.par_ctaAjusteInf3.Name = "par_ctaAjusteInf3";
+            this.par_ctaAjusteInf3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaAjusteInf3.TabIndex = 210;
+            this.par_ctaAjusteInf3.UseVisualStyleBackColor = true;
             // 
             // par_ctaAjusteInf2
             // 
@@ -1676,14 +1709,15 @@
             this.par_ctaAjusteInf.Size = new System.Drawing.Size(78, 20);
             this.par_ctaAjusteInf.TabIndex = 206;
             // 
-            // checkBox34
+            // par_ctaCIIVA3
             // 
-            this.checkBox34.AutoSize = true;
-            this.checkBox34.Location = new System.Drawing.Point(618, 902);
-            this.checkBox34.Name = "checkBox34";
-            this.checkBox34.Size = new System.Drawing.Size(15, 14);
-            this.checkBox34.TabIndex = 205;
-            this.checkBox34.UseVisualStyleBackColor = true;
+            this.par_ctaCIIVA3.AutoSize = true;
+            this.par_ctaCIIVA3.Enabled = false;
+            this.par_ctaCIIVA3.Location = new System.Drawing.Point(618, 902);
+            this.par_ctaCIIVA3.Name = "par_ctaCIIVA3";
+            this.par_ctaCIIVA3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaCIIVA3.TabIndex = 205;
+            this.par_ctaCIIVA3.UseVisualStyleBackColor = true;
             // 
             // par_ctaCIIVA2
             // 
@@ -1711,14 +1745,15 @@
             this.par_ctaCIIVA.Size = new System.Drawing.Size(78, 20);
             this.par_ctaCIIVA.TabIndex = 201;
             // 
-            // checkBox35
+            // par_ctaCINeto3
             // 
-            this.checkBox35.AutoSize = true;
-            this.checkBox35.Location = new System.Drawing.Point(618, 873);
-            this.checkBox35.Name = "checkBox35";
-            this.checkBox35.Size = new System.Drawing.Size(15, 14);
-            this.checkBox35.TabIndex = 200;
-            this.checkBox35.UseVisualStyleBackColor = true;
+            this.par_ctaCINeto3.AutoSize = true;
+            this.par_ctaCINeto3.Enabled = false;
+            this.par_ctaCINeto3.Location = new System.Drawing.Point(618, 873);
+            this.par_ctaCINeto3.Name = "par_ctaCINeto3";
+            this.par_ctaCINeto3.Size = new System.Drawing.Size(15, 14);
+            this.par_ctaCINeto3.TabIndex = 200;
+            this.par_ctaCINeto3.UseVisualStyleBackColor = true;
             // 
             // par_ctaCINeto2
             // 
@@ -1763,143 +1798,143 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(833, 510);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.checkBox33);
+            this.Controls.Add(this.par_ctaAjusteInf3);
             this.Controls.Add(this.par_ctaAjusteInf2);
             this.Controls.Add(this.par_ctaAjusteInf1);
             this.Controls.Add(this.par_ctaAjusteInf);
-            this.Controls.Add(this.checkBox34);
+            this.Controls.Add(this.par_ctaCIIVA3);
             this.Controls.Add(this.par_ctaCIIVA2);
             this.Controls.Add(this.par_ctaCIIVA1);
             this.Controls.Add(this.par_ctaCIIVA);
-            this.Controls.Add(this.checkBox35);
+            this.Controls.Add(this.par_ctaCINeto3);
             this.Controls.Add(this.par_ctaCINeto2);
             this.Controls.Add(this.par_ctaCINeto1);
             this.Controls.Add(this.par_ctaCINeto);
-            this.Controls.Add(this.checkBox25);
+            this.Controls.Add(this.par_ctaDifCambioVta3);
             this.Controls.Add(this.par_ctaDifCambioVta2);
             this.Controls.Add(this.par_ctaDifCambioVta1);
             this.Controls.Add(this.par_ctaDifCambioVta);
-            this.Controls.Add(this.checkBox26);
+            this.Controls.Add(this.par_ctaRetBFP3);
             this.Controls.Add(this.par_ctaRetBFP2);
             this.Controls.Add(this.par_ctaRetBFP1);
             this.Controls.Add(this.par_ctaRetBFP);
-            this.Controls.Add(this.checkBox27);
+            this.Controls.Add(this.par_ctaRetBF3);
             this.Controls.Add(this.par_ctaRetBF2);
             this.Controls.Add(this.par_ctaRetBF1);
             this.Controls.Add(this.par_ctaRetBF);
-            this.Controls.Add(this.checkBox28);
+            this.Controls.Add(this.par_ctaRedondeo3);
             this.Controls.Add(this.par_ctaRedondeo2);
             this.Controls.Add(this.par_ctaRedondeo1);
             this.Controls.Add(this.par_ctaRedondeo);
-            this.Controls.Add(this.checkBox29);
+            this.Controls.Add(this.par_NetoVtaServ3);
             this.Controls.Add(this.par_NetoVtaServ2);
             this.Controls.Add(this.par_NetoVtaServ1);
             this.Controls.Add(this.par_NetoVtaServ);
-            this.Controls.Add(this.checkBox30);
+            this.Controls.Add(this.par_ctaAnticipoCpa3);
             this.Controls.Add(this.par_ctaAnticipoCpa2);
             this.Controls.Add(this.par_ctaAnticipoCpa1);
             this.Controls.Add(this.par_ctaAnticipoCpa);
-            this.Controls.Add(this.checkBox31);
+            this.Controls.Add(this.par_ctaAnticipoVta3);
             this.Controls.Add(this.par_ctaAnticipoVta2);
             this.Controls.Add(this.par_ctaAnticipoVta1);
             this.Controls.Add(this.par_ctaAnticipoVta);
-            this.Controls.Add(this.checkBox32);
+            this.Controls.Add(this.par_ctaRecargo3);
             this.Controls.Add(this.par_ctaRecargo2);
             this.Controls.Add(this.par_ctaRecargo1);
             this.Controls.Add(this.par_ctaRecargo);
-            this.Controls.Add(this.checkBox13);
+            this.Controls.Add(this.par_ctaDescuento3);
             this.Controls.Add(this.par_ctaDescuento2);
             this.Controls.Add(this.par_ctaDescuento1);
             this.Controls.Add(this.par_ctaDescuento);
-            this.Controls.Add(this.checkBox14);
+            this.Controls.Add(this.par_ctaRetSUSSP3);
             this.Controls.Add(this.par_ctaRetSUSSP2);
             this.Controls.Add(this.par_ctaRetSUSSP1);
             this.Controls.Add(this.par_ctaRetSUSSP);
-            this.Controls.Add(this.checkBox15);
+            this.Controls.Add(this.par_ctaRetGanP3);
             this.Controls.Add(this.par_ctaRetGanP2);
             this.Controls.Add(this.par_ctaRetGanP1);
             this.Controls.Add(this.par_ctaRetGanP);
-            this.Controls.Add(this.checkBox16);
+            this.Controls.Add(this.par_ctaRetIIBBP3);
             this.Controls.Add(this.par_ctaRetIIBBP2);
             this.Controls.Add(this.par_ctaRetIIBBP1);
             this.Controls.Add(this.par_ctaRetIIBBP);
-            this.Controls.Add(this.checkBox17);
+            this.Controls.Add(this.par_ctaRetIVAP3);
             this.Controls.Add(this.par_ctaRetIVAP2);
             this.Controls.Add(this.par_ctaRetIVAP1);
             this.Controls.Add(this.par_ctaRetIVAP);
-            this.Controls.Add(this.checkBox18);
+            this.Controls.Add(this.par_ctaIVA27D3);
             this.Controls.Add(this.par_ctaIVA27D2);
             this.Controls.Add(this.par_ctaIVA27D1);
             this.Controls.Add(this.par_ctaIVA27D);
-            this.Controls.Add(this.checkBox19);
+            this.Controls.Add(this.par_ctaIVA10D3);
             this.Controls.Add(this.par_ctaIVA10D2);
             this.Controls.Add(this.par_ctaIVA10D1);
             this.Controls.Add(this.par_ctaIVA10D);
-            this.Controls.Add(this.checkBox20);
+            this.Controls.Add(this.par_ctaIVA21D3);
             this.Controls.Add(this.par_ctaIVA21D2);
             this.Controls.Add(this.par_ctaIVA21D1);
             this.Controls.Add(this.par_ctaIVA21D);
-            this.Controls.Add(this.checkBox21);
+            this.Controls.Add(this.par_ctaDeud3);
             this.Controls.Add(this.par_ctaDeud2);
             this.Controls.Add(this.par_ctaDeud1);
             this.Controls.Add(this.par_ctaDeud);
-            this.Controls.Add(this.checkBox22);
+            this.Controls.Add(this.par_NetoVtaArti3);
             this.Controls.Add(this.par_NetoVtaArti2);
             this.Controls.Add(this.par_NetoVtaArti1);
             this.Controls.Add(this.par_NetoVtaArti);
-            this.Controls.Add(this.checkBox23);
+            this.Controls.Add(this.par_ctaProvGral3);
             this.Controls.Add(this.par_ctaProvGral2);
             this.Controls.Add(this.par_ctaProvGral1);
             this.Controls.Add(this.par_ctaProvGral);
-            this.Controls.Add(this.checkBox24);
+            this.Controls.Add(this.par_ctaProv3);
             this.Controls.Add(this.par_ctaProv2);
             this.Controls.Add(this.par_ctaProv1);
             this.Controls.Add(this.par_ctaProv);
-            this.Controls.Add(this.checkBox7);
+            this.Controls.Add(this.par_ctaOtrosImp3);
             this.Controls.Add(this.par_ctaOtrosImp2);
             this.Controls.Add(this.par_ctaOtrosImp1);
             this.Controls.Add(this.par_ctaOtrosImp);
-            this.Controls.Add(this.checkBox8);
+            this.Controls.Add(this.par_ctaPerGan3);
             this.Controls.Add(this.par_ctaPerGan2);
             this.Controls.Add(this.par_ctaPerGan1);
             this.Controls.Add(this.par_ctaPerGan);
-            this.Controls.Add(this.checkBox9);
+            this.Controls.Add(this.par_ctaPerIIBB3);
             this.Controls.Add(this.par_ctaPerIIBB2);
             this.Controls.Add(this.par_ctaPerIIBB1);
             this.Controls.Add(this.par_ctaPerIIBB);
-            this.Controls.Add(this.checkBox10);
+            this.Controls.Add(this.par_ctaPerIVA3);
             this.Controls.Add(this.par_ctaPerIVA2);
             this.Controls.Add(this.par_ctaPerIVA1);
             this.Controls.Add(this.par_ctaPerIVA);
-            this.Controls.Add(this.checkBox11);
+            this.Controls.Add(this.par_ctaRetSUSS3);
             this.Controls.Add(this.par_ctaRetSUSS2);
             this.Controls.Add(this.par_ctaRetSUSS1);
             this.Controls.Add(this.par_ctaRetSUSS);
-            this.Controls.Add(this.checkBox12);
+            this.Controls.Add(this.par_ctaRetGan3);
             this.Controls.Add(this.par_ctaRetGan2);
             this.Controls.Add(this.par_ctaRetGan1);
             this.Controls.Add(this.par_ctaRetGan);
-            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.par_ctaRetIIBB3);
             this.Controls.Add(this.par_ctaRetIIBB2);
             this.Controls.Add(this.par_ctaRetIIBB1);
             this.Controls.Add(this.par_ctaRetIIBB);
-            this.Controls.Add(this.checkBox5);
+            this.Controls.Add(this.par_ctaRetIVA3);
             this.Controls.Add(this.par_ctaRetIVA2);
             this.Controls.Add(this.par_ctaRetIVA1);
             this.Controls.Add(this.par_ctaRetIVA);
-            this.Controls.Add(this.checkBox6);
+            this.Controls.Add(this.par_ctaImpInt3);
             this.Controls.Add(this.par_ctaImpInt2);
             this.Controls.Add(this.par_ctaImpInt1);
             this.Controls.Add(this.par_ctaImpInt);
-            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.par_ctaIVA273);
             this.Controls.Add(this.par_ctaIVA272);
             this.Controls.Add(this.par_ctaIVA271);
             this.Controls.Add(this.par_ctaIVA27);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.par_ctaIVA103);
             this.Controls.Add(this.par_ctaIVA102);
             this.Controls.Add(this.par_ctaIVA101);
             this.Controls.Add(this.par_ctaIVA10);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.par_ctaIVA213);
             this.Controls.Add(this.par_ctaIVA212);
             this.Controls.Add(this.par_ctaIVA211);
             this.Controls.Add(this.par_ctaIVA21);
@@ -1986,140 +2021,140 @@
         private System.Windows.Forms.TextBox par_ctaIVA21;
         private System.Windows.Forms.TextBox par_ctaIVA211;
         private System.Windows.Forms.Button par_ctaIVA212;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox par_ctaIVA213;
+        private System.Windows.Forms.CheckBox par_ctaIVA103;
         private System.Windows.Forms.Button par_ctaIVA102;
         private System.Windows.Forms.TextBox par_ctaIVA101;
         private System.Windows.Forms.TextBox par_ctaIVA10;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox par_ctaIVA273;
         private System.Windows.Forms.Button par_ctaIVA272;
         private System.Windows.Forms.TextBox par_ctaIVA271;
         private System.Windows.Forms.TextBox par_ctaIVA27;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox par_ctaRetIIBB3;
         private System.Windows.Forms.Button par_ctaRetIIBB2;
         private System.Windows.Forms.TextBox par_ctaRetIIBB1;
         private System.Windows.Forms.TextBox par_ctaRetIIBB;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox par_ctaRetIVA3;
         private System.Windows.Forms.Button par_ctaRetIVA2;
         private System.Windows.Forms.TextBox par_ctaRetIVA1;
         private System.Windows.Forms.TextBox par_ctaRetIVA;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox par_ctaImpInt3;
         private System.Windows.Forms.Button par_ctaImpInt2;
         private System.Windows.Forms.TextBox par_ctaImpInt1;
         private System.Windows.Forms.TextBox par_ctaImpInt;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox par_ctaOtrosImp3;
         private System.Windows.Forms.Button par_ctaOtrosImp2;
         private System.Windows.Forms.TextBox par_ctaOtrosImp1;
         private System.Windows.Forms.TextBox par_ctaOtrosImp;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox par_ctaPerGan3;
         private System.Windows.Forms.Button par_ctaPerGan2;
         private System.Windows.Forms.TextBox par_ctaPerGan1;
         private System.Windows.Forms.TextBox par_ctaPerGan;
-        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox par_ctaPerIIBB3;
         private System.Windows.Forms.Button par_ctaPerIIBB2;
         private System.Windows.Forms.TextBox par_ctaPerIIBB1;
         private System.Windows.Forms.TextBox par_ctaPerIIBB;
-        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox par_ctaPerIVA3;
         private System.Windows.Forms.Button par_ctaPerIVA2;
         private System.Windows.Forms.TextBox par_ctaPerIVA1;
         private System.Windows.Forms.TextBox par_ctaPerIVA;
-        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox par_ctaRetSUSS3;
         private System.Windows.Forms.Button par_ctaRetSUSS2;
         private System.Windows.Forms.TextBox par_ctaRetSUSS1;
         private System.Windows.Forms.TextBox par_ctaRetSUSS;
-        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox par_ctaRetGan3;
         private System.Windows.Forms.Button par_ctaRetGan2;
         private System.Windows.Forms.TextBox par_ctaRetGan1;
         private System.Windows.Forms.TextBox par_ctaRetGan;
-        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox par_ctaDescuento3;
         private System.Windows.Forms.Button par_ctaDescuento2;
         private System.Windows.Forms.TextBox par_ctaDescuento1;
         private System.Windows.Forms.TextBox par_ctaDescuento;
-        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.CheckBox par_ctaRetSUSSP3;
         private System.Windows.Forms.Button par_ctaRetSUSSP2;
         private System.Windows.Forms.TextBox par_ctaRetSUSSP1;
         private System.Windows.Forms.TextBox par_ctaRetSUSSP;
-        private System.Windows.Forms.CheckBox checkBox15;
+        private System.Windows.Forms.CheckBox par_ctaRetGanP3;
         private System.Windows.Forms.Button par_ctaRetGanP2;
         private System.Windows.Forms.TextBox par_ctaRetGanP1;
         private System.Windows.Forms.TextBox par_ctaRetGanP;
-        private System.Windows.Forms.CheckBox checkBox16;
+        private System.Windows.Forms.CheckBox par_ctaRetIIBBP3;
         private System.Windows.Forms.Button par_ctaRetIIBBP2;
         private System.Windows.Forms.TextBox par_ctaRetIIBBP1;
         private System.Windows.Forms.TextBox par_ctaRetIIBBP;
-        private System.Windows.Forms.CheckBox checkBox17;
+        private System.Windows.Forms.CheckBox par_ctaRetIVAP3;
         private System.Windows.Forms.Button par_ctaRetIVAP2;
         private System.Windows.Forms.TextBox par_ctaRetIVAP1;
         private System.Windows.Forms.TextBox par_ctaRetIVAP;
-        private System.Windows.Forms.CheckBox checkBox18;
+        private System.Windows.Forms.CheckBox par_ctaIVA27D3;
         private System.Windows.Forms.Button par_ctaIVA27D2;
         private System.Windows.Forms.TextBox par_ctaIVA27D1;
         private System.Windows.Forms.TextBox par_ctaIVA27D;
-        private System.Windows.Forms.CheckBox checkBox19;
+        private System.Windows.Forms.CheckBox par_ctaIVA10D3;
         private System.Windows.Forms.Button par_ctaIVA10D2;
         private System.Windows.Forms.TextBox par_ctaIVA10D1;
         private System.Windows.Forms.TextBox par_ctaIVA10D;
-        private System.Windows.Forms.CheckBox checkBox20;
+        private System.Windows.Forms.CheckBox par_ctaIVA21D3;
         private System.Windows.Forms.Button par_ctaIVA21D2;
         private System.Windows.Forms.TextBox par_ctaIVA21D1;
         private System.Windows.Forms.TextBox par_ctaIVA21D;
-        private System.Windows.Forms.CheckBox checkBox21;
+        private System.Windows.Forms.CheckBox par_ctaDeud3;
         private System.Windows.Forms.Button par_ctaDeud2;
         private System.Windows.Forms.TextBox par_ctaDeud1;
         private System.Windows.Forms.TextBox par_ctaDeud;
-        private System.Windows.Forms.CheckBox checkBox22;
+        private System.Windows.Forms.CheckBox par_NetoVtaArti3;
         private System.Windows.Forms.Button par_NetoVtaArti2;
         private System.Windows.Forms.TextBox par_NetoVtaArti1;
         private System.Windows.Forms.TextBox par_NetoVtaArti;
-        private System.Windows.Forms.CheckBox checkBox23;
+        private System.Windows.Forms.CheckBox par_ctaProvGral3;
         private System.Windows.Forms.Button par_ctaProvGral2;
         private System.Windows.Forms.TextBox par_ctaProvGral1;
         private System.Windows.Forms.TextBox par_ctaProvGral;
-        private System.Windows.Forms.CheckBox checkBox24;
+        private System.Windows.Forms.CheckBox par_ctaProv3;
         private System.Windows.Forms.Button par_ctaProv2;
         private System.Windows.Forms.TextBox par_ctaProv1;
         private System.Windows.Forms.TextBox par_ctaProv;
-        private System.Windows.Forms.CheckBox checkBox25;
+        private System.Windows.Forms.CheckBox par_ctaDifCambioVta3;
         private System.Windows.Forms.Button par_ctaDifCambioVta2;
         private System.Windows.Forms.TextBox par_ctaDifCambioVta1;
         private System.Windows.Forms.TextBox par_ctaDifCambioVta;
-        private System.Windows.Forms.CheckBox checkBox26;
+        private System.Windows.Forms.CheckBox par_ctaRetBFP3;
         private System.Windows.Forms.Button par_ctaRetBFP2;
         private System.Windows.Forms.TextBox par_ctaRetBFP1;
         private System.Windows.Forms.TextBox par_ctaRetBFP;
-        private System.Windows.Forms.CheckBox checkBox27;
+        private System.Windows.Forms.CheckBox par_ctaRetBF3;
         private System.Windows.Forms.Button par_ctaRetBF2;
         private System.Windows.Forms.TextBox par_ctaRetBF1;
         private System.Windows.Forms.TextBox par_ctaRetBF;
-        private System.Windows.Forms.CheckBox checkBox28;
+        private System.Windows.Forms.CheckBox par_ctaRedondeo3;
         private System.Windows.Forms.Button par_ctaRedondeo2;
         private System.Windows.Forms.TextBox par_ctaRedondeo1;
         private System.Windows.Forms.TextBox par_ctaRedondeo;
-        private System.Windows.Forms.CheckBox checkBox29;
+        private System.Windows.Forms.CheckBox par_NetoVtaServ3;
         private System.Windows.Forms.Button par_NetoVtaServ2;
         private System.Windows.Forms.TextBox par_NetoVtaServ1;
         private System.Windows.Forms.TextBox par_NetoVtaServ;
-        private System.Windows.Forms.CheckBox checkBox30;
+        private System.Windows.Forms.CheckBox par_ctaAnticipoCpa3;
         private System.Windows.Forms.Button par_ctaAnticipoCpa2;
         private System.Windows.Forms.TextBox par_ctaAnticipoCpa1;
         private System.Windows.Forms.TextBox par_ctaAnticipoCpa;
-        private System.Windows.Forms.CheckBox checkBox31;
+        private System.Windows.Forms.CheckBox par_ctaAnticipoVta3;
         private System.Windows.Forms.Button par_ctaAnticipoVta2;
         private System.Windows.Forms.TextBox par_ctaAnticipoVta1;
         private System.Windows.Forms.TextBox par_ctaAnticipoVta;
-        private System.Windows.Forms.CheckBox checkBox32;
+        private System.Windows.Forms.CheckBox par_ctaRecargo3;
         private System.Windows.Forms.Button par_ctaRecargo2;
         private System.Windows.Forms.TextBox par_ctaRecargo1;
         private System.Windows.Forms.TextBox par_ctaRecargo;
-        private System.Windows.Forms.CheckBox checkBox33;
+        private System.Windows.Forms.CheckBox par_ctaAjusteInf3;
         private System.Windows.Forms.Button par_ctaAjusteInf2;
         private System.Windows.Forms.TextBox par_ctaAjusteInf1;
         private System.Windows.Forms.TextBox par_ctaAjusteInf;
-        private System.Windows.Forms.CheckBox checkBox34;
+        private System.Windows.Forms.CheckBox par_ctaCIIVA3;
         private System.Windows.Forms.Button par_ctaCIIVA2;
         private System.Windows.Forms.TextBox par_ctaCIIVA1;
         private System.Windows.Forms.TextBox par_ctaCIIVA;
-        private System.Windows.Forms.CheckBox checkBox35;
+        private System.Windows.Forms.CheckBox par_ctaCINeto3;
         private System.Windows.Forms.Button par_ctaCINeto2;
         private System.Windows.Forms.TextBox par_ctaCINeto1;
         private System.Windows.Forms.TextBox par_ctaCINeto;
