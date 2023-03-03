@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using Button = System.Windows.Forms.Button;
+using CheckBox = System.Windows.Forms.CheckBox;
 using TextBox = System.Windows.Forms.TextBox;
 
 namespace SistemaContable.Inicio.Mantenimiento.Parametros_Contables
@@ -23,6 +24,37 @@ namespace SistemaContable.Inicio.Mantenimiento.Parametros_Contables
         {
             InitializeComponent();
             cargarDatos();
+            cargarCheck();
+        }
+
+        private void cargarCheck()
+        {
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos("SELECT * FROM ParamContabH");
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                foreach (Control Ctrl in this.Controls)
+                {
+                    if (Ctrl is CheckBox)
+                    {
+                        CheckBox che = (CheckBox)Ctrl;
+                        int valor;
+                        string nombreCheck = Ctrl.Name.Substring(0, Ctrl.Name.Length - 1);
+                        try
+                        {
+                            valor = Convert.ToInt32(dr[$"{nombreCheck}"].ToString());
+                        }
+                        catch
+                        {
+                            valor = 0;
+                        }
+                        if(valor == 1)
+                        {
+                            che.Checked = true;
+                        }
+                    }
+                }
+            }
         }
 
         private void cargarDatos()
