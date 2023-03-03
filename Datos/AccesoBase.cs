@@ -114,6 +114,40 @@ namespace Datos
                 }
             }
         }
+
+        //INSERT UPDATE PARA DATOS CON MONEY
+        public static int InsertUpdateDatosMoney(string queryString, string money)
+        {
+            SqlCommand command = null;
+            try
+            {
+                AbrirBD();
+                if (queryString.Contains("*"))
+                {
+                    money = money.Replace(",", ".");
+                    queryString = queryString.Replace("*", money);
+                }
+                command = new SqlCommand(queryString, sqlConec);
+                return command.ExecuteNonQuery();
+
+            }
+            catch (SqlException ex)
+            {
+                return -1;
+            }
+            catch (Exception exs)
+            {
+                return -1;
+            }
+            finally
+            {
+                if (sqlConec.State != System.Data.ConnectionState.Closed)
+                {
+                    CerrarBD();
+                }
+            }
+        }
+
         #endregion
 
         #region [Metodos Privado usados en los Metodos Publicos]

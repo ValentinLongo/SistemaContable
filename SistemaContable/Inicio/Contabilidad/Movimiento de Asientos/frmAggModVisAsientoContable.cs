@@ -25,6 +25,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         int autoincremental = 1;
         int autoincremental2 = 1;
 
+        public static int nuevoasiento;
+
         //addmodvis = proceso que realiza el frm
         public frmAggModVisAsientoContable(int addmodvis, ComboBox cbSeleccion, string asiento, string fecha, string comentario)
         {
@@ -96,25 +98,25 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 ds2 = AccesoBase.ListarDatos($"SELECT mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc FROM MovAsto WHERE mva_asiento = {asiento}");
                 foreach (DataRow dr2 in ds2.Tables[0].Rows)
                 {
-                    int debe = 0;
-                    int haber = 0;
+                    double debe = 0;
+                    double haber = 0;
                     string descri = "";
 
                     int cuenta = Convert.ToInt32(dr2[0]);
 
-                    if (dr2[1].ToString() == "1")
+                    if (dr2["mva_codigo"].ToString() == "1")
                     {
-                        debe = Convert.ToInt32(dr2[2]);
+                        debe = Convert.ToDouble(dr2["mva_importe"]);
                     }
-                    else if (dr2[1].ToString() == "2")
+                    else if (dr2["mva_codigo"].ToString() == "2")
                     {
-                        haber = Convert.ToInt32(dr2[2]);
+                        haber = Convert.ToDouble(dr2["mva_importe"]);
                     }
 
-                    string concepto = dr2[3].ToString();
+                    string concepto = dr2["mva_comenta"].ToString();
 
                     int cc = 0;
-                    string centrodecosto = dr2[4].ToString();
+                    string centrodecosto = dr2["mva_cc"].ToString();
                     if (centrodecosto != "")
                     {
                         cc = Convert.ToInt32(centrodecosto);
@@ -127,7 +129,19 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                         descri = dr3[0].ToString();
                     }
 
-                    AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES({terminal},{cuenta},'{descri}',{debe},{haber},'{concepto}',{autoincremental},{asiento},{cc})");
+                    string query = "";
+                    string money = "";
+                    if (debe != 0)
+                    {
+                        money = debe.ToString();
+                        query = $"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES({terminal},{cuenta},'{descri}',*,0,'{concepto}',{autoincremental},'{asiento}',{cc})";
+                    }
+                    else if(haber != 0)
+                    {
+                        money = haber.ToString();
+                        query = $"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES({terminal},{cuenta},'{descri}',0,*,'{concepto}',{autoincremental},'{asiento}',{cc})";
+                    }
+                    AccesoBase.InsertUpdateDatosMoney(query, money);
                     autoincremental++;
                 }
                 CargarDGV(asiento);
@@ -174,29 +188,43 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             frm.Show();
         }
 
-        private void dgvAddModVisASIENTO_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvAddModVisASIENTO_DoubleClick(object sender, EventArgs e)
         {
-            int seleccionado = dgvAddModVisASIENTO.CurrentCell.RowIndex;
-
-            if (seleccionado != -1)
+            try
             {
-                string cuenta = dgvAddModVisASIENTO.Rows[seleccionado].Cells[0].Value.ToString();
-                string descri = dgvAddModVisASIENTO.Rows[seleccionado].Cells[1].Value.ToString();
-                string debe = dgvAddModVisASIENTO.Rows[seleccionado].Cells[2].Value.ToString();
-                string haber = dgvAddModVisASIENTO.Rows[seleccionado].Cells[3].Value.ToString();
-                string concepto = dgvAddModVisASIENTO.Rows[seleccionado].Cells[4].Value.ToString();
-                string cc = dgvAddModVisASIENTO.Rows[seleccionado].Cells[5].Value.ToString();
-                string codigo = dgvAddModVisASIENTO.Rows[seleccionado].Cells[6].Value.ToString();
+                int seleccionado = dgvAddModVisASIENTO.CurrentCell.RowIndex;
+                if (seleccionado != -1) 
+                {
+                    string cuenta = dgvAddModVisASIENTO.Rows[seleccionado].Cells[0].Value.ToString();
+                    string descri = dgvAddModVisASIENTO.Rows[seleccionado].Cells[1].Value.ToString();
+                    string debe = dgvAddModVisASIENTO.Rows[seleccionado].Cells[2].Value.ToString();
+                    string haber = dgvAddModVisASIENTO.Rows[seleccionado].Cells[3].Value.ToString();
+                    string concepto = dgvAddModVisASIENTO.Rows[seleccionado].Cells[4].Value.ToString();
+                    string cc = dgvAddModVisASIENTO.Rows[seleccionado].Cells[5].Value.ToString();
+                    string codigo = dgvAddModVisASIENTO.Rows[seleccionado].Cells[6].Value.ToString(); //codigo autoincremental
 
+                    frmAddModDetdeModelos.desdeotrofrm = true;
+                    frmAddModDetdeModelos.asientofrm = txtNroAsiento.Text;
+                    //frmAddModDetdeModelos.cuentafrm = cuenta;
+                    frmAddModDetdeModelos.codigofrm = codigo;
+                    frmAddModDetdeModelos frm = new frmAddModDetdeModelos(1, cuenta, descri, debe, haber, concepto, cc);
+                    frm.ShowDialog();
+                    dgvAddModVisASIENTO.Rows.Clear();
+                    autoincremental2 = 1;
+
+                    //traer el asiento de aux_movasto
+
+                    CargarDGV(txtNroAsiento.Text);
+                }
+            }
+            catch (Exception)
+            {
                 frmAddModDetdeModelos.desdeotrofrm = true;
                 frmAddModDetdeModelos.asientofrm = txtNroAsiento.Text;
-                //frmAddModDetdeModelos.cuentafrm = cuenta;
-                frmAddModDetdeModelos.codigofrm = codigo;
-                frmAddModDetdeModelos frm = new frmAddModDetdeModelos(1, cuenta, descri, debe, haber, concepto, cc);
+                frmAddModDetdeModelos frm = new frmAddModDetdeModelos(0);
                 frm.ShowDialog();
                 dgvAddModVisASIENTO.Rows.Clear();
-                autoincremental2 = 1;
-                CargarDGV(txtNroAsiento.Text);
+                CargarDGV(nuevoasiento.ToString());
             }
         }
 
@@ -217,6 +245,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
             else if (add_mod_vis == 2)
             {
+                //MODIFICÁ TABLA MOVASTO
                 DialogResult boton = MessageBox.Show("Desea Finalizar la Modificación?", "Mensaje", MessageBoxButtons.OKCancel);
                 if (boton == DialogResult.OK)
                 {
@@ -235,23 +264,14 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
                         int cuenta = Convert.ToInt32(dr["mva_cuenta"]);
-                        string debe = dr["mva_debe"].ToString();
-                        string haber = dr["mva_haber"].ToString();
+                        double debe = Convert.ToDouble(dr["mva_debe"]);
+                        double haber = Convert.ToDouble(dr["mva_haber"]);
                         string concepto = dr["mva_concepto"].ToString();
-                        int cc = Convert.ToInt32(dr["mva_cc"]);
-                        //string cc = dr["mva_cc"].ToString();
-                        //if (cc == "0") 
-                        //{
-                        //    cc = null;
-                        //}
-                        //if (cc != null)
-                        //{
-                        //    Convert.ToInt32(cc);
-                        //}
-
-                        //guarda cc como null (cuando corresponda)
-                        //guardar bien los decimales y el codigo
-                        //corroborar codigo y probar
+                        string cc = dr["mva_cc"].ToString();
+                        if (cc != "0")
+                        {
+                            Convert.ToInt32(cc);
+                        }
 
                         DataSet ds2 = new DataSet();
                         ds2 = AccesoBase.ListarDatos($"SELECT ast_fecha FROM Asiento WHERE ast_asiento = {asiento}");
@@ -260,18 +280,33 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                             fechasiento = dr2["ast_fecha"].ToString();
                         }
 
-                        if (debe != "0")
+                        string query = "";
+                        string money = "";
+                        int codigo = 0;
+                        if (debe != 0)
                         {
-                            AccesoBase.InsertUpdateDatos($"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{1},'{debe}','{concepto}',{cc})");
+                            money = debe.ToString();
+                            codigo = 1;
+                        }
+                        else if (haber != 0)
+                        {
+                            money = haber.ToString();
+                            codigo = 2;
+                        }
+
+                        if (cc == "0")
+                        {
+                            query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{codigo},*,'{concepto}',null)";
                         }
                         else
                         {
-                            AccesoBase.InsertUpdateDatos($"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{2},'{haber}','{concepto}',{cc})");
+                            query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{codigo},*,'{concepto}',{cc})";
                         }
+                        AccesoBase.InsertUpdateDatosMoney(query, money);
                     }
                     AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto");
 
-                    //
+                    //MODIFICÁ TABLA ASIENTO
                     AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET ast_usumodi = '{Negocio.FLogin.IdUsuario}', ast_fecmodi = '{fecha}', ast_horamodi = '{hora}', ast_tipo = {cbTipoAsiento.SelectedValue}, ast_comenta = '{txtComentario.Text}' WHERE ast_Asiento = '{txtNroAsiento.Text}'");
                     this.Close();
                 }
@@ -284,38 +319,40 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             frm.ArmarDGV("mod_codigo, mod_descri", "ModeloEncab", "", "ORDER BY mod_codigo", "frmAggModVisAsientoContable");
             frm.ShowDialog();
             string codigoCG = frmConsultaGeneral.codigoCG;
-
-            DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT det_asiento, det_fecha, det_cuenta, det_codigo, det_importe, det_comenta, det_cc FROM ModeloDet WHERE det_asiento = {codigoCG}");
-            foreach (DataRow dr in ds.Tables[0].Rows)
+            if (codigoCG != null)
             {
-                string debe = "0";
-                string haber = "0";
-                string descri = "";
-
-                string cuenta = dr[2].ToString();
-
-                if (dr[3].ToString() == "1")
+                DataSet ds = new DataSet();
+                ds = AccesoBase.ListarDatos($"SELECT det_asiento, det_fecha, det_cuenta, det_codigo, det_importe, det_comenta, det_cc FROM ModeloDet WHERE det_asiento = {codigoCG}");
+                foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    debe = dr[4].ToString();
-                }
-                else if (dr[3].ToString() == "2")
-                {
-                    haber = dr[4].ToString();
-                }
+                    string debe = "0";
+                    string haber = "0";
+                    string descri = "";
 
-                string codigo = dr[3].ToString(); //(esta en el dgv pero, visible = false)
+                    string cuenta = dr[2].ToString();
 
-                string concepto = dr[5].ToString();
-                string cc = dr[6].ToString();
+                    if (dr[3].ToString() == "1")
+                    {
+                        debe = dr[4].ToString();
+                    }
+                    else if (dr[3].ToString() == "2")
+                    {
+                        haber = dr[4].ToString();
+                    }
 
-                DataSet ds2 = new DataSet();
-                ds2 = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta = {cuenta}");
-                foreach (DataRow dr2 in ds2.Tables[0].Rows)
-                {
-                    descri = dr2[0].ToString();
+                    string codigo = dr[3].ToString(); //(esta en el dgv pero, visible = false)
+
+                    string concepto = dr[5].ToString();
+                    string cc = dr[6].ToString();
+
+                    DataSet ds2 = new DataSet();
+                    ds2 = AccesoBase.ListarDatos($"SELECT pcu_descri FROM PCuenta WHERE pcu_cuenta = {cuenta}");
+                    foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                    {
+                        descri = dr2[0].ToString();
+                    }
+                    dgvAddModVisASIENTO.Rows.Add(cuenta, descri, debe, haber, concepto, cc, codigo);
                 }
-                dgvAddModVisASIENTO.Rows.Add(cuenta, descri, debe, haber, concepto, cc, codigo);
             }
         }
 

@@ -172,7 +172,7 @@
             this.dgvAddModVisASIENTO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAddModVisASIENTO.Size = new System.Drawing.Size(624, 267);
             this.dgvAddModVisASIENTO.TabIndex = 96;
-            this.dgvAddModVisASIENTO.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAddModVisASIENTO_CellDoubleClick);
+            this.dgvAddModVisASIENTO.DoubleClick += new System.EventHandler(this.dgvAddModVisASIENTO_DoubleClick);
             // 
             // Column1
             // 

@@ -1,5 +1,7 @@
 ﻿using Datos;
+using Negocio.Funciones.Contabilidad;
 using SistemaContable.General;
+using SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos;
 using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
 using System;
 using System.Collections.Generic;
@@ -27,7 +29,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         //public static string cuentafrm;
         public static string codigofrm;
 
-        public frmAddModDetdeModelos(int aggmod,string cuenta,string descri,string debe,string haber,string concepto,string centrodecosto)
+        public frmAddModDetdeModelos(int aggmod, [Optional] string cuenta, [Optional] string descri, [Optional] string debe,[Optional] string haber,[Optional] string concepto,[Optional] string centrodecosto)
         {
             InitializeComponent();
             agg_o_mod = aggmod;
@@ -82,16 +84,23 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
                 if (agg_o_mod == 0)
                 {
-                    seleccionado = DGV1.CurrentCell.RowIndex;
-                    asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
-
-                    Negocio.Funciones.Contabilidad.FDetalledeModelos.Agregar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText);
+                    if (desdeotrofrm)
+                    {
+                        frmAggModVisAsientoContable.nuevoasiento = Negocio.Funciones.Contabilidad.FDetalledeModelos.AgregarAux_MovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString(), codigofrm, terminal, txtDescri.Text);
+                        desdeotrofrm = false;
+                    }
+                    else
+                    {
+                        seleccionado = DGV1.CurrentCell.RowIndex;
+                        asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
+                        Negocio.Funciones.Contabilidad.FDetalledeModelos.Agregar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText);
+                    }
                 }
                 else if (agg_o_mod == 1)
                 {
                     if (desdeotrofrm)
                     {
-                        Negocio.Funciones.Contabilidad.FDetalledeModelos.ModificarAux_MovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString(), codigofrm, terminal,txtDescri.Text);
+                        Negocio.Funciones.Contabilidad.FDetalledeModelos.ModificarAux_MovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString(), codigofrm, terminal, txtDescri.Text);
                         desdeotrofrm = false;
                     }
                     else

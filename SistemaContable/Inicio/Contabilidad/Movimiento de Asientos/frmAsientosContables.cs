@@ -85,6 +85,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
                 frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(2, cbSeleccion, asiento, fecha, comentario);
                 frm.ShowDialog();
+                AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto");
             }
             else
             {
