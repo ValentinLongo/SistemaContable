@@ -26,7 +26,6 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         //Para utilizar el frm desde otro (sin seleccionar nada en dgv)
         public static bool desdeotrofrm = false;
         public static string asientofrm;
-        //public static string cuentafrm;
         public static string codigofrm;
 
         public frmAddModDetdeModelos(int aggmod, [Optional] string cuenta, [Optional] string descri, [Optional] string debe,[Optional] string haber,[Optional] string concepto,[Optional] string centrodecosto)
@@ -87,7 +86,10 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                     if (desdeotrofrm)
                     {
                         frmAggModVisAsientoContable.nuevoasiento = Negocio.Funciones.Contabilidad.FDetalledeModelos.AgregarAux_MovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString(), codigofrm, terminal, txtDescri.Text);
-                        desdeotrofrm = false;
+                        txtCuenta.Text = "";
+                        txtConcepto.Text = "";
+                        txtDebe.Text = "0,0000";
+                        txtHaber.Text = "0,0000";
                     }
                     else
                     {

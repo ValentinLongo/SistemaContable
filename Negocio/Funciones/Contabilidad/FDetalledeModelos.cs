@@ -74,7 +74,6 @@ namespace Negocio.Funciones.Contabilidad
             AccesoBase.InsertUpdateDatosMoney(query, money);
 
             MessageBox.Show("Agregado Correctamente!", "Mensaje");
-            frm.Close();
 
             return Convert.ToInt32(asiento);
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsientosContables));
             this.dgvAsientosContables = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
@@ -40,18 +41,22 @@
             this.btnAnular = new RJCodeAdvance.RJControls.RJButton();
             this.btnVisualizar = new RJCodeAdvance.RJControls.RJButton();
             this.cbBusqueda = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblinicio = new System.Windows.Forms.Label();
+            this.LineaBusqueda = new System.Windows.Forms.Panel();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
-            this.bunifuCheckBox3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.CheckModificados = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.CheckManuales = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.CheckDiferencia = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.btnDerecha = new RJCodeAdvance.RJControls.RJButton();
-            this.btnIzquierda = new RJCodeAdvance.RJControls.RJButton();
+            this.dtFechaBusqueda = new System.Windows.Forms.DateTimePicker();
+            this.dgvAux = new System.Windows.Forms.DataGridView();
+            this.timerBusqueda = new System.Windows.Forms.Timer(this.components);
+            this.lblDesde = new System.Windows.Forms.Label();
+            this.btnBuscar = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAsientosContables
@@ -65,7 +70,7 @@
             this.dgvAsientosContables.Name = "dgvAsientosContables";
             this.dgvAsientosContables.ReadOnly = true;
             this.dgvAsientosContables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAsientosContables.Size = new System.Drawing.Size(964, 448);
+            this.dgvAsientosContables.Size = new System.Drawing.Size(964, 478);
             this.dgvAsientosContables.TabIndex = 95;
             // 
             // btnAgregar
@@ -227,32 +232,34 @@
             this.cbBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbBusqueda.FormattingEnabled = true;
             this.cbBusqueda.Items.AddRange(new object[] {
-            "Codigo",
-            "Descripcion"});
-            this.cbBusqueda.Location = new System.Drawing.Point(27, 576);
+            "Asiento",
+            "Descripción",
+            "Fecha"});
+            this.cbBusqueda.Location = new System.Drawing.Point(25, 587);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(154, 25);
             this.cbBusqueda.TabIndex = 113;
+            this.cbBusqueda.SelectedIndexChanged += new System.EventHandler(this.cbBusqueda_SelectedIndexChanged);
             // 
-            // label5
+            // lblinicio
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(934, 583);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 112;
-            this.label5.Text = "Inicio";
+            this.lblinicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblinicio.AutoSize = true;
+            this.lblinicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblinicio.Location = new System.Drawing.Point(934, 593);
+            this.lblinicio.Name = "lblinicio";
+            this.lblinicio.Size = new System.Drawing.Size(32, 13);
+            this.lblinicio.TabIndex = 112;
+            this.lblinicio.Text = "Inicio";
             // 
-            // panel3
+            // LineaBusqueda
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(195, 597);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(700, 1);
-            this.panel3.TabIndex = 110;
+            this.LineaBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LineaBusqueda.BackColor = System.Drawing.Color.White;
+            this.LineaBusqueda.Location = new System.Drawing.Point(195, 611);
+            this.LineaBusqueda.Name = "LineaBusqueda";
+            this.LineaBusqueda.Size = new System.Drawing.Size(700, 1);
+            this.LineaBusqueda.TabIndex = 110;
             // 
             // txtBusqueda
             // 
@@ -261,11 +268,12 @@
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBusqueda.Location = new System.Drawing.Point(198, 579);
+            this.txtBusqueda.Location = new System.Drawing.Point(198, 593);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(697, 19);
             this.txtBusqueda.TabIndex = 108;
             this.txtBusqueda.Tag = "11000";
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // bunifuShapes1
             // 
@@ -276,11 +284,11 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(12, 542);
+            this.bunifuShapes1.Location = new System.Drawing.Point(12, 572);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(964, 85);
+            this.bunifuShapes1.Size = new System.Drawing.Size(964, 55);
             this.bunifuShapes1.TabIndex = 109;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
@@ -305,59 +313,59 @@
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
             // 
-            // bunifuCheckBox3
+            // CheckInicio
             // 
-            this.bunifuCheckBox3.AllowBindingControlAnimation = true;
-            this.bunifuCheckBox3.AllowBindingControlColorChanges = false;
-            this.bunifuCheckBox3.AllowBindingControlLocation = true;
-            this.bunifuCheckBox3.AllowCheckBoxAnimation = false;
-            this.bunifuCheckBox3.AllowCheckmarkAnimation = true;
-            this.bunifuCheckBox3.AllowOnHoverStates = true;
-            this.bunifuCheckBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuCheckBox3.AutoCheck = true;
-            this.bunifuCheckBox3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox3.BackgroundImage")));
-            this.bunifuCheckBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuCheckBox3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.bunifuCheckBox3.BorderRadius = 12;
-            this.bunifuCheckBox3.Checked = false;
-            this.bunifuCheckBox3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.bunifuCheckBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuCheckBox3.CustomCheckmarkImage = null;
-            this.bunifuCheckBox3.Location = new System.Drawing.Point(912, 581);
-            this.bunifuCheckBox3.MinimumSize = new System.Drawing.Size(17, 17);
-            this.bunifuCheckBox3.Name = "bunifuCheckBox3";
-            this.bunifuCheckBox3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.bunifuCheckBox3.OnCheck.BorderRadius = 12;
-            this.bunifuCheckBox3.OnCheck.BorderThickness = 2;
-            this.bunifuCheckBox3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.bunifuCheckBox3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.bunifuCheckBox3.OnCheck.CheckmarkThickness = 2;
-            this.bunifuCheckBox3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.bunifuCheckBox3.OnDisable.BorderRadius = 12;
-            this.bunifuCheckBox3.OnDisable.BorderThickness = 2;
-            this.bunifuCheckBox3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.bunifuCheckBox3.OnDisable.CheckmarkThickness = 2;
-            this.bunifuCheckBox3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox3.OnHoverChecked.BorderRadius = 12;
-            this.bunifuCheckBox3.OnHoverChecked.BorderThickness = 2;
-            this.bunifuCheckBox3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.bunifuCheckBox3.OnHoverChecked.CheckmarkThickness = 2;
-            this.bunifuCheckBox3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox3.OnHoverUnchecked.BorderRadius = 12;
-            this.bunifuCheckBox3.OnHoverUnchecked.BorderThickness = 1;
-            this.bunifuCheckBox3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.bunifuCheckBox3.OnUncheck.BorderRadius = 12;
-            this.bunifuCheckBox3.OnUncheck.BorderThickness = 1;
-            this.bunifuCheckBox3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox3.Size = new System.Drawing.Size(17, 17);
-            this.bunifuCheckBox3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.bunifuCheckBox3.TabIndex = 111;
-            this.bunifuCheckBox3.ThreeState = false;
-            this.bunifuCheckBox3.ToolTipText = null;
+            this.CheckInicio.AllowBindingControlAnimation = true;
+            this.CheckInicio.AllowBindingControlColorChanges = false;
+            this.CheckInicio.AllowBindingControlLocation = true;
+            this.CheckInicio.AllowCheckBoxAnimation = false;
+            this.CheckInicio.AllowCheckmarkAnimation = true;
+            this.CheckInicio.AllowOnHoverStates = true;
+            this.CheckInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CheckInicio.AutoCheck = true;
+            this.CheckInicio.BackColor = System.Drawing.Color.Transparent;
+            this.CheckInicio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckInicio.BackgroundImage")));
+            this.CheckInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CheckInicio.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.CheckInicio.BorderRadius = 12;
+            this.CheckInicio.Checked = false;
+            this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CheckInicio.CustomCheckmarkImage = null;
+            this.CheckInicio.Location = new System.Drawing.Point(912, 591);
+            this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
+            this.CheckInicio.Name = "CheckInicio";
+            this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckInicio.OnCheck.BorderRadius = 12;
+            this.CheckInicio.OnCheck.BorderThickness = 2;
+            this.CheckInicio.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckInicio.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckInicio.OnCheck.CheckmarkThickness = 2;
+            this.CheckInicio.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.CheckInicio.OnDisable.BorderRadius = 12;
+            this.CheckInicio.OnDisable.BorderThickness = 2;
+            this.CheckInicio.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckInicio.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.CheckInicio.OnDisable.CheckmarkThickness = 2;
+            this.CheckInicio.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckInicio.OnHoverChecked.BorderRadius = 12;
+            this.CheckInicio.OnHoverChecked.BorderThickness = 2;
+            this.CheckInicio.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckInicio.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckInicio.OnHoverChecked.CheckmarkThickness = 2;
+            this.CheckInicio.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckInicio.OnHoverUnchecked.BorderRadius = 12;
+            this.CheckInicio.OnHoverUnchecked.BorderThickness = 1;
+            this.CheckInicio.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckInicio.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.CheckInicio.OnUncheck.BorderRadius = 12;
+            this.CheckInicio.OnUncheck.BorderThickness = 1;
+            this.CheckInicio.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckInicio.Size = new System.Drawing.Size(17, 17);
+            this.CheckInicio.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.CheckInicio.TabIndex = 111;
+            this.CheckInicio.ThreeState = false;
+            this.CheckInicio.ToolTipText = null;
             // 
             // CheckModificados
             // 
@@ -412,6 +420,7 @@
             this.CheckModificados.TabIndex = 102;
             this.CheckModificados.ThreeState = false;
             this.CheckModificados.ToolTipText = null;
+            this.CheckModificados.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckModificados_CheckedChanged);
             // 
             // CheckManuales
             // 
@@ -466,6 +475,7 @@
             this.CheckManuales.TabIndex = 101;
             this.CheckManuales.ThreeState = false;
             this.CheckManuales.ToolTipText = null;
+            this.CheckManuales.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckManuales_CheckedChanged);
             // 
             // CheckDiferencia
             // 
@@ -520,50 +530,74 @@
             this.CheckDiferencia.TabIndex = 100;
             this.CheckDiferencia.ThreeState = false;
             this.CheckDiferencia.ToolTipText = null;
+            this.CheckDiferencia.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckDiferencia_CheckedChanged);
             // 
-            // btnDerecha
+            // dtFechaBusqueda
             // 
-            this.btnDerecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDerecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnDerecha.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnDerecha.BorderColor = System.Drawing.Color.White;
-            this.btnDerecha.BorderRadius = 0;
-            this.btnDerecha.BorderSize = 0;
-            this.btnDerecha.FlatAppearance.BorderSize = 0;
-            this.btnDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDerecha.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDerecha.ForeColor = System.Drawing.Color.White;
-            this.btnDerecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDerecha.Location = new System.Drawing.Point(512, 59);
-            this.btnDerecha.Name = "btnDerecha";
-            this.btnDerecha.Size = new System.Drawing.Size(42, 22);
-            this.btnDerecha.TabIndex = 116;
-            this.btnDerecha.Text = ">";
-            this.btnDerecha.TextColor = System.Drawing.Color.White;
-            this.btnDerecha.UseVisualStyleBackColor = false;
-            this.btnDerecha.Click += new System.EventHandler(this.btnDerecha_Click);
+            this.dtFechaBusqueda.CustomFormat = "dd/MM/yyyy";
+            this.dtFechaBusqueda.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFechaBusqueda.Location = new System.Drawing.Point(255, 589);
+            this.dtFechaBusqueda.Name = "dtFechaBusqueda";
+            this.dtFechaBusqueda.Size = new System.Drawing.Size(95, 20);
+            this.dtFechaBusqueda.TabIndex = 116;
+            this.dtFechaBusqueda.Visible = false;
             // 
-            // btnIzquierda
+            // dgvAux
             // 
-            this.btnIzquierda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnIzquierda.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnIzquierda.BorderColor = System.Drawing.Color.White;
-            this.btnIzquierda.BorderRadius = 0;
-            this.btnIzquierda.BorderSize = 0;
-            this.btnIzquierda.FlatAppearance.BorderSize = 0;
-            this.btnIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIzquierda.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIzquierda.ForeColor = System.Drawing.Color.White;
-            this.btnIzquierda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIzquierda.Location = new System.Drawing.Point(428, 59);
-            this.btnIzquierda.Name = "btnIzquierda";
-            this.btnIzquierda.Size = new System.Drawing.Size(42, 22);
-            this.btnIzquierda.TabIndex = 117;
-            this.btnIzquierda.Text = "<";
-            this.btnIzquierda.TextColor = System.Drawing.Color.White;
-            this.btnIzquierda.UseVisualStyleBackColor = false;
-            this.btnIzquierda.Click += new System.EventHandler(this.btnIzquierda_Click);
+            this.dgvAux.AllowUserToAddRows = false;
+            this.dgvAux.AllowUserToDeleteRows = false;
+            this.dgvAux.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvAux.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAux.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.dgvAux.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAux.Location = new System.Drawing.Point(1104, 623);
+            this.dgvAux.Name = "dgvAux";
+            this.dgvAux.ReadOnly = true;
+            this.dgvAux.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAux.Size = new System.Drawing.Size(13, 15);
+            this.dgvAux.TabIndex = 117;
+            // 
+            // timerBusqueda
+            // 
+            this.timerBusqueda.Interval = 1000;
+            this.timerBusqueda.Tick += new System.EventHandler(this.timerBusqueda_Tick);
+            // 
+            // lblDesde
+            // 
+            this.lblDesde.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDesde.AutoSize = true;
+            this.lblDesde.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDesde.Location = new System.Drawing.Point(198, 590);
+            this.lblDesde.Name = "lblDesde";
+            this.lblDesde.Size = new System.Drawing.Size(47, 17);
+            this.lblDesde.TabIndex = 118;
+            this.lblDesde.Text = "Desde:";
+            this.lblDesde.Visible = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscar.BorderColor = System.Drawing.Color.White;
+            this.btnBuscar.BorderRadius = 0;
+            this.btnBuscar.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Dotum", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(360, 589);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(107, 20);
+            this.btnBuscar.TabIndex = 119;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextColor = System.Drawing.Color.White;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // frmAsientosContables
             // 
@@ -571,13 +605,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1129, 650);
-            this.Controls.Add(this.btnIzquierda);
-            this.Controls.Add(this.btnDerecha);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.lblDesde);
+            this.Controls.Add(this.dgvAux);
+            this.Controls.Add(this.dtFechaBusqueda);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.cbBusqueda);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.bunifuCheckBox3);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.lblinicio);
+            this.Controls.Add(this.CheckInicio);
+            this.Controls.Add(this.LineaBusqueda);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.bunifuShapes1);
             this.Controls.Add(this.btnVisualizar);
@@ -599,6 +635,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAsientosContables";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -619,13 +656,16 @@
         private RJCodeAdvance.RJControls.RJButton btnAnular;
         private RJCodeAdvance.RJControls.RJButton btnVisualizar;
         private System.Windows.Forms.ComboBox cbBusqueda;
-        private System.Windows.Forms.Label label5;
-        private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox3;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblinicio;
+        private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
+        private System.Windows.Forms.Panel LineaBusqueda;
         private System.Windows.Forms.TextBox txtBusqueda;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
-        private RJCodeAdvance.RJControls.RJButton btnDerecha;
-        private RJCodeAdvance.RJControls.RJButton btnIzquierda;
+        private System.Windows.Forms.DateTimePicker dtFechaBusqueda;
+        private System.Windows.Forms.DataGridView dgvAux;
+        private System.Windows.Forms.Timer timerBusqueda;
+        private System.Windows.Forms.Label lblDesde;
+        private RJCodeAdvance.RJControls.RJButton btnBuscar;
     }
 }

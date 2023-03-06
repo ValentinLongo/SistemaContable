@@ -25,7 +25,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         int autoincremental = 1;
         int autoincremental2 = 1;
 
-        public static int nuevoasiento;
+        public static int nuevoasiento = 0;
 
         //addmodvis = proceso que realiza el frm
         public frmAggModVisAsientoContable(int addmodvis, ComboBox cbSeleccion, string asiento, string fecha, string comentario)
@@ -136,7 +136,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                         money = debe.ToString();
                         query = $"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES({terminal},{cuenta},'{descri}',*,0,'{concepto}',{autoincremental},'{asiento}',{cc})";
                     }
-                    else if(haber != 0)
+                    else if (haber != 0)
                     {
                         money = haber.ToString();
                         query = $"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES({terminal},{cuenta},'{descri}',0,*,'{concepto}',{autoincremental},'{asiento}',{cc})";
@@ -150,6 +150,10 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void CargarDGV(string asiento)
         {
+            if (asiento == "ALTA EN CONCEPTO")
+            {
+                asiento = Negocio.FGenerales.ultimoNumeroID("ast_asiento","Asiento").ToString();
+            }
 
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cc FROM Aux_MovAsto WHERE mva_asiento = '{asiento}'");
@@ -193,7 +197,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             try
             {
                 int seleccionado = dgvAddModVisASIENTO.CurrentCell.RowIndex;
-                if (seleccionado != -1) 
+                if (seleccionado != -1)
                 {
                     string cuenta = dgvAddModVisASIENTO.Rows[seleccionado].Cells[0].Value.ToString();
                     string descri = dgvAddModVisASIENTO.Rows[seleccionado].Cells[1].Value.ToString();
@@ -205,24 +209,21 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
                     frmAddModDetdeModelos.desdeotrofrm = true;
                     frmAddModDetdeModelos.asientofrm = txtNroAsiento.Text;
-                    //frmAddModDetdeModelos.cuentafrm = cuenta;
                     frmAddModDetdeModelos.codigofrm = codigo;
                     frmAddModDetdeModelos frm = new frmAddModDetdeModelos(1, cuenta, descri, debe, haber, concepto, cc);
                     frm.ShowDialog();
                     dgvAddModVisASIENTO.Rows.Clear();
                     autoincremental2 = 1;
-
-                    //traer el asiento de aux_movasto
-
                     CargarDGV(txtNroAsiento.Text);
                 }
             }
-            catch (Exception)
+            catch (NullReferenceException)
             {
                 frmAddModDetdeModelos.desdeotrofrm = true;
                 frmAddModDetdeModelos.asientofrm = txtNroAsiento.Text;
                 frmAddModDetdeModelos frm = new frmAddModDetdeModelos(0);
                 frm.ShowDialog();
+                frmAddModDetdeModelos.desdeotrofrm = false;
                 dgvAddModVisASIENTO.Rows.Clear();
                 CargarDGV(nuevoasiento.ToString());
             }
@@ -233,83 +234,160 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             string hora = DateTime.Now.ToLongTimeString();
             string fecha = DateTime.Now.ToShortDateString();
 
-            //hacer validaciones (confirmar - para agregar y para modificar)
+            //VALIDACIONES
+            int validaciones = 0;
 
-            if (add_mod_vis == 1)
+            DataSet dsV = new DataSet();
+            dsV = AccesoBase.ListarDatos("SELECT mva_debe, mva_haber FROM Aux_MovAsto");
+            if (dsV.Tables[0].Rows.Count != 0)
             {
-                string asiento_renumera = Negocio.FGenerales.ultimoNumeroID("ast_asiento", "Asiento").ToString();
-
-                AccesoBase.InsertUpdateDatos($"INSERT INTO Asiento(ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_user, ast_hora, ast_ejercicio, ast_fecalta, ast_tipo) VALUES('{asiento_renumera}','{asiento_renumera}','{dtFecha.Value}','{txtComentario.Text}','{FLogin.IdUsuario}','{hora}','{txtCodEjercicio}','{fecha}','{cbTipoAsiento.SelectedValue}'");
-                MessageBox.Show("Agregado Correctamente!", "Mensaje");
-                this.Close();
+                validaciones++; //VALIDA QUE HAYA POR LO MENOS UN DETALLE
             }
-            else if (add_mod_vis == 2)
+
+            double totaldebe = 0;
+            double totalhaber = 0;
+            foreach (DataRow drV in dsV.Tables[0].Rows) 
             {
-                //MODIFICÁ TABLA MOVASTO
-                DialogResult boton = MessageBox.Show("Desea Finalizar la Modificación?", "Mensaje", MessageBoxButtons.OKCancel);
-                if (boton == DialogResult.OK)
+                double debe = Convert.ToDouble(drV["mva_debe"]);
+                double haber = Convert.ToDouble(drV["mva_haber"]);
+
+                totaldebe = totaldebe + debe;
+                totalhaber = totalhaber + haber;
+            }
+            if (totaldebe == totalhaber)
+            {
+                validaciones++; //VALIDA QUE EL ASIENTO ESTE BALANCEADO
+            }
+
+            if (txtComentario.Text != "")
+            {
+                validaciones++; //VALIDA QUE EL ASIENTO TENGA COMENTARIO
+            }
+
+            DateTime fechadesde;
+            DateTime fechahasta;
+            dsV = AccesoBase.ListarDatos($"SELECT eje_desde, eje_hasta FROM Ejercicio WHERE eje_codigo = {txtCodEjercicio.Text}");
+            foreach (DataRow drV in dsV.Tables[0].Rows) 
+            {
+                fechadesde = Convert.ToDateTime(drV["eje_desde"]);
+                fechahasta = Convert.ToDateTime(drV["eje_hasta"]);
+
+                if (fechadesde <= dtFecha.Value && fechahasta >= dtFecha.Value)
                 {
-                    int asiento = 0;
-                    string fechasiento = "";
+                    validaciones++;//VALIDA QUE LA FECHA DEL ASIENTO SE ENCUENTRE DENTRO DEL EJERCICIO
+                }
 
-                    DataSet ds = new DataSet();
-                    ds = AccesoBase.ListarDatos($"SELECT mva_asiento, mva_cuenta, mva_debe, mva_haber, mva_concepto, mva_cc FROM Aux_MovAsto");
+                if (Convert.ToInt32(cbTipoAsiento.SelectedValue) == 4)
+                {
+                    string dtfecha = dtFecha.Value.ToString();
+                    dtfecha = dtfecha.Substring(0, 10);
+                    
+                    string fechacierre = fechahasta.ToString();
+                    fechacierre = fechacierre.Substring(0, 10);
 
-                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    if (Convert.ToDateTime(dtfecha) == Convert.ToDateTime(fechacierre))
                     {
-                        asiento = Convert.ToInt32(dr["mva_asiento"]);
+                        validaciones++;//VALIDA QUE LA FECHA DEL ASIENTO DE CIERRE SEA IGUAL QUE EL HASTA EL EJERCICIO
                     }
-                    AccesoBase.InsertUpdateDatos($"DELETE MovAsto WHERE mva_asiento = {asiento}");
+                }
+            }
 
-                    foreach (DataRow dr in ds.Tables[0].Rows)
+            if (Convert.ToInt32(cbTipoAsiento.SelectedValue) != 2)
+            {
+                int resultado = AccesoBase.ValidarDatos($"SELECT ast_tipo FROM Asiento WHERE ast_tipo = {cbTipoAsiento.SelectedValue}");
+                if (resultado == 1) 
+                {
+                    DialogResult boton = MessageBox.Show("Atención: El asiento de tipo " + cbTipoAsiento.SelectedText.ToString() + " ya ha sido registrado para este ejercicio. ¿Desea Continuar?", "Mensaje", MessageBoxButtons.OKCancel);
+                    if (boton == DialogResult.OK)
                     {
-                        int cuenta = Convert.ToInt32(dr["mva_cuenta"]);
-                        double debe = Convert.ToDouble(dr["mva_debe"]);
-                        double haber = Convert.ToDouble(dr["mva_haber"]);
-                        string concepto = dr["mva_concepto"].ToString();
-                        string cc = dr["mva_cc"].ToString();
-                        if (cc != "0")
-                        {
-                            Convert.ToInt32(cc);
-                        }
-
-                        DataSet ds2 = new DataSet();
-                        ds2 = AccesoBase.ListarDatos($"SELECT ast_fecha FROM Asiento WHERE ast_asiento = {asiento}");
-                        foreach (DataRow dr2 in ds2.Tables[0].Rows)
-                        {
-                            fechasiento = dr2["ast_fecha"].ToString();
-                        }
-
-                        string query = "";
-                        string money = "";
-                        int codigo = 0;
-                        if (debe != 0)
-                        {
-                            money = debe.ToString();
-                            codigo = 1;
-                        }
-                        else if (haber != 0)
-                        {
-                            money = haber.ToString();
-                            codigo = 2;
-                        }
-
-                        if (cc == "0")
-                        {
-                            query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{codigo},*,'{concepto}',null)";
-                        }
-                        else
-                        {
-                            query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{codigo},*,'{concepto}',{cc})";
-                        }
-                        AccesoBase.InsertUpdateDatosMoney(query, money);
+                        validaciones++;//ADVIERTE SI YA HAY UN TIPO DE ASIENTO DISTINTO DE REGISTRACION
                     }
-                    AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto");
+                }
+            }
+            // 
 
-                    //MODIFICÁ TABLA ASIENTO
-                    AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET ast_usumodi = '{Negocio.FLogin.IdUsuario}', ast_fecmodi = '{fecha}', ast_horamodi = '{hora}', ast_tipo = {cbTipoAsiento.SelectedValue}, ast_comenta = '{txtComentario.Text}' WHERE ast_Asiento = '{txtNroAsiento.Text}'");
+            if (validaciones == 6)
+            {
+                if (add_mod_vis == 1)
+                {
+                    string asiento_renumera = Negocio.FGenerales.ultimoNumeroID("ast_asiento", "Asiento").ToString();
+
+                    AccesoBase.InsertUpdateDatos($"INSERT INTO Asiento(ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_user, ast_hora, ast_ejercicio, ast_fecalta, ast_tipo) VALUES('{asiento_renumera}','{asiento_renumera}','{dtFecha.Value}','{txtComentario.Text}','{FLogin.IdUsuario}','{hora}','{txtCodEjercicio}','{fecha}','{cbTipoAsiento.SelectedValue}'");
+                    MessageBox.Show("Agregado Correctamente!", "Mensaje");
                     this.Close();
                 }
+                else if (add_mod_vis == 2)
+                {
+                    //MODIFICÁ TABLA MOVASTO
+                    DialogResult boton = MessageBox.Show("Desea Finalizar la Modificación?", "Mensaje", MessageBoxButtons.OKCancel);
+                    if (boton == DialogResult.OK)
+                    {
+                        int asiento = 0;
+                        string fechasiento = "";
+
+                        DataSet ds = new DataSet();
+                        ds = AccesoBase.ListarDatos($"SELECT mva_asiento, mva_cuenta, mva_debe, mva_haber, mva_concepto, mva_cc FROM Aux_MovAsto");
+
+                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        {
+                            asiento = Convert.ToInt32(dr["mva_asiento"]);
+                        }
+                        AccesoBase.InsertUpdateDatos($"DELETE MovAsto WHERE mva_asiento = {asiento}");
+
+                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        {
+                            int cuenta = Convert.ToInt32(dr["mva_cuenta"]);
+                            double debe = Convert.ToDouble(dr["mva_debe"]);
+                            double haber = Convert.ToDouble(dr["mva_haber"]);
+                            string concepto = dr["mva_concepto"].ToString();
+                            string cc = dr["mva_cc"].ToString();
+                            if (cc != "0")
+                            {
+                                Convert.ToInt32(cc);
+                            }
+
+                            DataSet ds2 = new DataSet();
+                            ds2 = AccesoBase.ListarDatos($"SELECT ast_fecha FROM Asiento WHERE ast_asiento = {asiento}");
+                            foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                            {
+                                fechasiento = dr2["ast_fecha"].ToString();
+                            }
+
+                            string query = "";
+                            string money = "";
+                            int codigo = 0;
+                            if (debe != 0)
+                            {
+                                money = debe.ToString();
+                                codigo = 1;
+                            }
+                            else if (haber != 0)
+                            {
+                                money = haber.ToString();
+                                codigo = 2;
+                            }
+
+                            if (cc == "0")
+                            {
+                                query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{codigo},*,'{concepto}',null)";
+                            }
+                            else
+                            {
+                                query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{codigo},*,'{concepto}',{cc})";
+                            }
+                            AccesoBase.InsertUpdateDatosMoney(query, money);
+                        }
+                        AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto");
+
+                        //MODIFICÁ TABLA ASIENTO
+                        AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET ast_usumodi = '{Negocio.FLogin.IdUsuario}', ast_fecmodi = '{fecha}', ast_horamodi = '{hora}', ast_tipo = {cbTipoAsiento.SelectedValue}, ast_comenta = '{txtComentario.Text}' WHERE ast_Asiento = '{txtNroAsiento.Text}'");
+                        this.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("ERROR","Mensaje");
             }
         }
 

@@ -176,10 +176,8 @@ namespace Negocio
                     {
                         retorno = "WHERE " + columna + " LIKE " + "'%" + txtbusqueda + "%'";
                     }
-
                     dgv.Rows.Clear();
                     return retorno;
-
                 }
                 else if (where_o_and == 2)
                 {
@@ -191,21 +189,14 @@ namespace Negocio
                     {
                         retorno = "AND " + columna + " LIKE " + "'%" + txtbusqueda + "%'";
                     }
-
                     dgv.Rows.Clear();
                     return retorno;
-
-
                 }
-
                 dgv.Rows.Clear();
                 return retorno;
-
             }
-
             dgv.Rows.Clear();
             return retorno;
-
         }
 
 
