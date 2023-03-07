@@ -42,13 +42,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.dgvDetalledeInformesAux = new System.Windows.Forms.DataGridView();
-            this.label13 = new System.Windows.Forms.Label();
-            this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.dgvAux = new System.Windows.Forms.DataGridView();
             this.Cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CentroCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label13 = new System.Windows.Forms.Label();
+            this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.dgvAux = new System.Windows.Forms.DataGridView();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleDeInformes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalledeInformesAux)).BeginInit();
@@ -152,6 +152,7 @@
             this.dgvDetalleDeInformes.Name = "dgvDetalleDeInformes";
             this.dgvDetalleDeInformes.ReadOnly = true;
             this.dgvDetalleDeInformes.RowHeadersVisible = false;
+            this.dgvDetalleDeInformes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetalleDeInformes.Size = new System.Drawing.Size(620, 125);
             this.dgvDetalleDeInformes.TabIndex = 63;
             this.dgvDetalleDeInformes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleDeInformes_CellClick);
@@ -309,6 +310,30 @@
             this.dgvDetalledeInformesAux.Size = new System.Drawing.Size(620, 176);
             this.dgvDetalledeInformesAux.TabIndex = 90;
             // 
+            // Cuenta
+            // 
+            this.Cuenta.HeaderText = "Cuenta";
+            this.Cuenta.Name = "Cuenta";
+            this.Cuenta.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // CentroCosto
+            // 
+            this.CentroCosto.HeaderText = "Centro de Costo";
+            this.CentroCosto.Name = "CentroCosto";
+            this.CentroCosto.ReadOnly = true;
+            // 
+            // Orden
+            // 
+            this.Orden.HeaderText = "Orden";
+            this.Orden.Name = "Orden";
+            this.Orden.ReadOnly = true;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -388,30 +413,6 @@
             this.dgvAux.Size = new System.Drawing.Size(10, 11);
             this.dgvAux.TabIndex = 95;
             this.dgvAux.TabStop = false;
-            // 
-            // Cuenta
-            // 
-            this.Cuenta.HeaderText = "Cuenta";
-            this.Cuenta.Name = "Cuenta";
-            this.Cuenta.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // CentroCosto
-            // 
-            this.CentroCosto.HeaderText = "Centro de Costo";
-            this.CentroCosto.Name = "CentroCosto";
-            this.CentroCosto.ReadOnly = true;
-            // 
-            // Orden
-            // 
-            this.Orden.HeaderText = "Orden";
-            this.Orden.Name = "Orden";
-            this.Orden.ReadOnly = true;
             // 
             // frmDetalledeInformes
             // 
