@@ -50,11 +50,11 @@
             this.CheckModificados = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.CheckManuales = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.CheckDiferencia = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.dtFechaBusqueda = new System.Windows.Forms.DateTimePicker();
             this.dgvAux = new System.Windows.Forms.DataGridView();
             this.timerBusqueda = new System.Windows.Forms.Timer(this.components);
             this.lblDesde = new System.Windows.Forms.Label();
             this.btnBuscar = new RJCodeAdvance.RJControls.RJButton();
+            this.maskFecha = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
             this.SuspendLayout();
@@ -200,6 +200,7 @@
             this.btnAnular.Text = "Anular";
             this.btnAnular.TextColor = System.Drawing.Color.White;
             this.btnAnular.UseVisualStyleBackColor = false;
+            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
             // btnVisualizar
             // 
@@ -305,7 +306,7 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(985, 498);
+            this.btnImprimir.Location = new System.Drawing.Point(985, 526);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(135, 38);
             this.btnImprimir.TabIndex = 115;
@@ -532,16 +533,6 @@
             this.CheckDiferencia.ToolTipText = null;
             this.CheckDiferencia.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckDiferencia_CheckedChanged);
             // 
-            // dtFechaBusqueda
-            // 
-            this.dtFechaBusqueda.CustomFormat = "dd/MM/yyyy";
-            this.dtFechaBusqueda.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFechaBusqueda.Location = new System.Drawing.Point(255, 589);
-            this.dtFechaBusqueda.Name = "dtFechaBusqueda";
-            this.dtFechaBusqueda.Size = new System.Drawing.Size(95, 20);
-            this.dtFechaBusqueda.TabIndex = 116;
-            this.dtFechaBusqueda.Visible = false;
-            // 
             // dgvAux
             // 
             this.dgvAux.AllowUserToAddRows = false;
@@ -569,7 +560,7 @@
             this.lblDesde.AutoSize = true;
             this.lblDesde.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesde.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDesde.Location = new System.Drawing.Point(198, 590);
+            this.lblDesde.Location = new System.Drawing.Point(196, 592);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.Size = new System.Drawing.Size(47, 17);
             this.lblDesde.TabIndex = 118;
@@ -586,12 +577,12 @@
             this.btnBuscar.BorderSize = 0;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Dotum", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(360, 589);
+            this.btnBuscar.Location = new System.Drawing.Point(855, 586);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(107, 20);
+            this.btnBuscar.Size = new System.Drawing.Size(107, 27);
             this.btnBuscar.TabIndex = 119;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
@@ -599,16 +590,23 @@
             this.btnBuscar.Visible = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // maskFecha
+            // 
+            this.maskFecha.Location = new System.Drawing.Point(259, 592);
+            this.maskFecha.Name = "maskFecha";
+            this.maskFecha.Size = new System.Drawing.Size(63, 20);
+            this.maskFecha.TabIndex = 120;
+            // 
             // frmAsientosContables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1129, 650);
+            this.Controls.Add(this.maskFecha);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblDesde);
             this.Controls.Add(this.dgvAux);
-            this.Controls.Add(this.dtFechaBusqueda);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.cbBusqueda);
             this.Controls.Add(this.lblinicio);
@@ -662,10 +660,10 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
-        private System.Windows.Forms.DateTimePicker dtFechaBusqueda;
         private System.Windows.Forms.DataGridView dgvAux;
         private System.Windows.Forms.Timer timerBusqueda;
         private System.Windows.Forms.Label lblDesde;
         private RJCodeAdvance.RJControls.RJButton btnBuscar;
+        private System.Windows.Forms.MaskedTextBox maskFecha;
     }
 }

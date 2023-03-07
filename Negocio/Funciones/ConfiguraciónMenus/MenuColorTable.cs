@@ -24,13 +24,8 @@ namespace Negocio
         {
             if (isMainMenu)
             {
-                //backColor = Color.FromArgb(37, 39, 60);
-                //leftColumnColor = Color.FromArgb(32, 33, 51);
-                //borderColor = Color.FromArgb(32, 33, 51);
-                //menuItemBorderColor = primaryColor;
-                //menuItemSelectedColor = primaryColor;
-                backColor = Color.Red;
-                leftColumnColor = Color.Red;
+                backColor = Color.FromArgb(37, 39, 60);
+                leftColumnColor = Color.FromArgb(32, 33, 51);
                 borderColor = Color.FromArgb(32, 33, 51);
                 menuItemBorderColor = primaryColor;
                 menuItemSelectedColor = primaryColor;
@@ -43,8 +38,7 @@ namespace Negocio
                 menuItemBorderColor = primaryColor;
                 menuItemSelectedColor = primaryColor;
             }
-        }
-        
+        }     
 
         //Overrides
         public override Color ToolStripDropDownBackground { get { return backColor; } }
@@ -54,6 +48,5 @@ namespace Negocio
         public override Color ImageMarginGradientBegin { get { return leftColumnColor; } }
         public override Color ImageMarginGradientMiddle { get { return leftColumnColor; } }
         public override Color ImageMarginGradientEnd { get { return leftColumnColor; } }
-
     }
 }

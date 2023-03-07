@@ -28,7 +28,6 @@ namespace SistemaContable.Parametrizacion_Permisos
                 txtDescriPerfil.ReadOnly = true;
                 cbModulo.SelectedIndex = 0;
             }
-            cargarDGV("","","");
         }
 
         public void cargarDGV(string modulobusqueda, string busqueda, string estado)

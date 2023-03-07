@@ -332,6 +332,7 @@
             this.tsbBlockdeNotas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbBlockdeNotas.Name = "tsbBlockdeNotas";
             this.tsbBlockdeNotas.Tag = "0";
+            this.tsbBlockdeNotas.Click += new System.EventHandler(this.tsbBlockdeNotas_Click);
             // 
             // tsbMensajesInternos
             // 
