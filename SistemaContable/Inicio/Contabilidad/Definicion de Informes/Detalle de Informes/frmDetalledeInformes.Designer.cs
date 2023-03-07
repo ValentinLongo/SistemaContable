@@ -45,6 +45,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.dgvAux = new System.Windows.Forms.DataGridView();
+            this.Cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CentroCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleDeInformes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalledeInformesAux)).BeginInit();
@@ -139,11 +143,14 @@
             // 
             // dgvDetalleDeInformes
             // 
+            this.dgvDetalleDeInformes.AllowUserToAddRows = false;
+            this.dgvDetalleDeInformes.AllowUserToDeleteRows = false;
             this.dgvDetalleDeInformes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvDetalleDeInformes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDetalleDeInformes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalleDeInformes.Location = new System.Drawing.Point(12, 27);
             this.dgvDetalleDeInformes.Name = "dgvDetalleDeInformes";
+            this.dgvDetalleDeInformes.ReadOnly = true;
             this.dgvDetalleDeInformes.RowHeadersVisible = false;
             this.dgvDetalleDeInformes.Size = new System.Drawing.Size(620, 125);
             this.dgvDetalleDeInformes.TabIndex = 63;
@@ -268,6 +275,7 @@
             this.btnImprimir.BorderColor = System.Drawing.Color.White;
             this.btnImprimir.BorderRadius = 0;
             this.btnImprimir.BorderSize = 0;
+            this.btnImprimir.Enabled = false;
             this.btnImprimir.FlatAppearance.BorderSize = 0;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -280,14 +288,23 @@
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // dgvDetalledeInformesAux
             // 
+            this.dgvDetalledeInformesAux.AllowUserToAddRows = false;
+            this.dgvDetalledeInformesAux.AllowUserToDeleteRows = false;
             this.dgvDetalledeInformesAux.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvDetalledeInformesAux.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDetalledeInformesAux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalledeInformesAux.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cuenta,
+            this.Descripcion,
+            this.CentroCosto,
+            this.Orden});
             this.dgvDetalledeInformesAux.Location = new System.Drawing.Point(12, 158);
             this.dgvDetalledeInformesAux.Name = "dgvDetalledeInformesAux";
+            this.dgvDetalledeInformesAux.ReadOnly = true;
             this.dgvDetalledeInformesAux.RowHeadersVisible = false;
             this.dgvDetalledeInformesAux.Size = new System.Drawing.Size(620, 176);
             this.dgvDetalledeInformesAux.TabIndex = 90;
@@ -372,6 +389,30 @@
             this.dgvAux.TabIndex = 95;
             this.dgvAux.TabStop = false;
             // 
+            // Cuenta
+            // 
+            this.Cuenta.HeaderText = "Cuenta";
+            this.Cuenta.Name = "Cuenta";
+            this.Cuenta.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // CentroCosto
+            // 
+            this.CentroCosto.HeaderText = "Centro de Costo";
+            this.CentroCosto.Name = "CentroCosto";
+            this.CentroCosto.ReadOnly = true;
+            // 
+            // Orden
+            // 
+            this.Orden.HeaderText = "Orden";
+            this.Orden.Name = "Orden";
+            this.Orden.ReadOnly = true;
+            // 
             // frmDetalledeInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,5 +465,9 @@
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
         private System.Windows.Forms.DataGridView dgvAux;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cuenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CentroCosto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Orden;
     }
 }

@@ -45,6 +45,8 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.dgvAux = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDefiniciondeInformes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
@@ -142,6 +144,9 @@
             this.dgvDefiniciondeInformes.AllowUserToDeleteRows = false;
             this.dgvDefiniciondeInformes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDefiniciondeInformes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDefiniciondeInformes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Descripcion});
             this.dgvDefiniciondeInformes.Location = new System.Drawing.Point(14, 36);
             this.dgvDefiniciondeInformes.Name = "dgvDefiniciondeInformes";
             this.dgvDefiniciondeInformes.ReadOnly = true;
@@ -169,6 +174,7 @@
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnActualizar
             // 
@@ -390,6 +396,18 @@
             this.dgvAux.TabIndex = 95;
             this.dgvAux.TabStop = false;
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
             // frmDefiniciondeInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,5 +459,7 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.DataGridView dgvAux;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }

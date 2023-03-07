@@ -31,7 +31,7 @@ namespace SistemaContable.Inicio.Mantenimiento
         public void CargarDGV(string txt) 
         {
             DataSet ds = new DataSet();
-            query = $"SELECT cec_codigo as Codigo, cec_descri as Descripción, cec_predef as Predefinido FROM CentroC {txt} ORDER BY cec_codigo";
+            query = $"SELECT * FROM CentroC {txt} ORDER BY cec_codigo";
             ds = AccesoBase.ListarDatos(query);
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
@@ -97,5 +97,10 @@ namespace SistemaContable.Inicio.Mantenimiento
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte reporte = new frmReporte("CentroC", query,"","Centro de Costos","Todos",DateTime.Now.ToString(""));
+            reporte.ShowDialog();
+        }
     }
 }

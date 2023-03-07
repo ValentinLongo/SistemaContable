@@ -1,4 +1,5 @@
 ﻿using Datos;
+using SistemaContable.General;
 using SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion;
 using System;
 using System.Collections.Generic;
@@ -16,19 +17,26 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizaci
 {
     public partial class frmDefiniciondeInformes : Form
     {
+        string Query;
         public frmDefiniciondeInformes()
         {
             InitializeComponent();
-
             CargarDGV("");
             cbBusqueda.SelectedIndex = 0;
         }
 
         public void CargarDGV(string busqueda)
         {
+            dgvDefiniciondeInformes.Rows.Clear();
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT bal_codigo as Codigo, bal_descri as Descripción FROM Balance {busqueda} ORDER BY bal_codigo");
-            dgvDefiniciondeInformes.DataSource = ds.Tables[0];
+            Query = $"SELECT * FROM Balance {busqueda} ORDER BY bal_codigo";
+            ds = AccesoBase.ListarDatos(Query);
+            foreach(DataRow dr in ds.Tables[0].Rows)
+            {
+                string codigo = dr["bal_codigo"].ToString();
+                string descri = dr["bal_descri"].ToString();
+                dgvDefiniciondeInformes.Rows.Add(codigo, descri);
+            }
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
@@ -80,6 +88,12 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizaci
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte reporte = new frmReporte("ModBalance", Query, "", "Informe de Modelos de Balance", "General", DateTime.Now.ToString("d"));
+            reporte.ShowDialog();
         }
     }
 }

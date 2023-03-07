@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Negocio;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
 {
     public partial class frmDetalledeInformes : Form
     {
+        string Query;
         public frmDetalledeInformes()
         {
             InitializeComponent();
@@ -25,12 +27,14 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
         private void Cargar(string busqueda)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT bal_codigo AS Código, bal_descri AS Descripción FROM Balance {busqueda} ORDER BY bal_codigo");
+            string query = $"SELECT bal_codigo AS Código, bal_descri AS Descripción FROM Balance {busqueda} ORDER BY bal_codigo";
+            ds = AccesoBase.ListarDatos(query);
             dgvDetalleDeInformes.DataSource = ds.Tables[0];
         }
 
         private void dgvDetalleDeInformes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnImprimir.Enabled = true;
             string codigo;
             codigo = dgvDetalleDeInformes.Rows[dgvDetalleDeInformes.CurrentRow.Index].Cells[0].Value.ToString();
 
@@ -39,12 +43,30 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
                 codigo = "0";
             }
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT det_ctacont as Cuenta, pcu_descri AS Descripción, pcu_centroC AS 'Centro Costos', det_orden AS Orden FROM BalanceDet LEFT JOIN PCuenta ON pcu_cuenta = det_ctacont WHERE det_codigo = {codigo}");
-            dgvDetalledeInformesAux.DataSource = ds.Tables[0];
+            Query = $"SELECT * FROM BalanceDet LEFT JOIN PCuenta ON pcu_cuenta = det_ctacont LEFT JOIN Balance on det_codigo = bal_codigo WHERE det_codigo = {codigo}";
+            ds = AccesoBase.ListarDatos(Query);
+            dgvDetalledeInformesAux.Rows.Clear();
+            foreach(DataRow dr in ds.Tables[0].Rows)
+            {
+                string cuenta = dr["det_ctacont"].ToString();
+                string descri = dr["pcu_descri"].ToString();
+                string cc = dr["pcu_centroC"].ToString();
+                string orden = "";
+                try
+                {
+                    orden = dr["det_orden"].ToString();
+                }
+                catch
+                {
+
+                }
+                dgvDetalledeInformesAux.Rows.Add(cuenta,descri,cc,orden);
+            }
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
+            btnImprimir.Enabled = false;
             string busqueda = Negocio.FGenerales.Busqueda(dgvAux, txtBusqueda.Text, CheckInicio, 1, "bal_descri");
             Cargar(busqueda);
         }
@@ -64,6 +86,12 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte reporte = new frmReporte("ModBalanceDet", Query, "", "Informe de Modelos de Balance","General",DateTime.Now.ToString("d"));
+            reporte.ShowDialog();
         }
     }
 }
