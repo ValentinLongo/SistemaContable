@@ -37,6 +37,7 @@ using SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos;
 using SistemaContable.Inicio.Ver.Comunicacion_Interna;
 using SistemaContable.Inicio.Mantenimiento.Parametros_Contables;
 using Negocio.Funciones.Mantenimiento;
+using System.Drawing.Printing;
 
 namespace SistemaContable
 {
@@ -621,7 +622,8 @@ namespace SistemaContable
         }
         private void configurarImpresorasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            PrintDialog printDialog1 = new PrintDialog();
+            DialogResult result = printDialog1.ShowDialog();
         }
         //50
         private void soporteInteractivoDeContableToolStripMenuItem_Click(object sender, EventArgs e)
