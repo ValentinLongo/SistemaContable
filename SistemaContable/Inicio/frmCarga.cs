@@ -39,9 +39,9 @@ namespace SistemaContable
                 frmInicio Inicio = new frmInicio();
 
                 tDesaparece.Stop();
-                this.Close();
 
-                Inicio.ShowDialog();
+                Inicio.Show();
+                this.Close();
             }
         }
 

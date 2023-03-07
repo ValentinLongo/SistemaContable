@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Negocio;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,7 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
     public partial class frmComunicacionInterna : Form
     {
         public static Label nuevomsg;
-
+        string Query;
         public frmComunicacionInterna(Label newmsg)
         {
             InitializeComponent();
@@ -24,21 +25,26 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
             txtComentario.Text = "";
             cbSeleccionar.SelectedIndex = 0;
         }
-
+        string fecha;
+        string origen;
+        string destino;
         private void CargarDGV(string where)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT obs_fecha, obs_hora, obs_origen, obs_nomdest, obs_fechaL, obs_horaL, obs_comentario FROM Observaciones {where}");
+            Query = $"SELECT * FROM Observaciones {where}";
+            ds = AccesoBase.ListarDatos(Query);
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                string fecha = dr["obs_fecha"].ToString();
+                fecha = dr["obs_fecha"].ToString();
                 string hora = dr["obs_hora"].ToString();
-                string origen = dr["obs_origen"].ToString();
-                string destino = dr["obs_nomdest"].ToString();
+                origen = dr["obs_origen"].ToString();
+                destino = dr["obs_nomdest"].ToString();
                 string fechaL = dr["obs_fechaL"].ToString();
                 string horaL = dr["obs_horaL"].ToString();
                 string comentario = dr["obs_comentario"].ToString();
 
+                fechaL = fechaL.Substring(0, 10);
+                fecha = fecha.Substring(0, 10);
                 dgvMensajes.Rows.Add(fecha, hora, origen, destino, fechaL, horaL, comentario);
             }
         }
@@ -111,7 +117,8 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-
+            frmReporte reporte = new frmReporte("Msg", Query, "", "Comunicación Interna", origen, destino,fecha);
+            reporte.ShowDialog();
         }
 
         //BARRA DE CONTROL
