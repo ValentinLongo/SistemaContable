@@ -16,6 +16,7 @@ namespace Negocio
         private int menuItemHeight = 25;
         private Color menuItemTextColor = Color.Empty;//No color, The default color is set in the MenuRenderer class
         private Color primaryColor = Color.Empty;//No color, The default color is set in the MenuRenderer class
+
         private Bitmap menuItemHeaderSize;
         //Constructor
         public Menu(IContainer container)
@@ -55,7 +56,7 @@ namespace Negocio
         {
             if (isMainMenu)
                 menuItemHeaderSize = new Bitmap(25, 45);
-            else menuItemHeaderSize = new Bitmap(10, menuItemHeight);
+            else menuItemHeaderSize = new Bitmap(20, menuItemHeight);
             foreach (ToolStripMenuItem menuItemL1 in this.Items)
             {
                 menuItemL1.ImageScaling = ToolStripItemImageScaling.None;

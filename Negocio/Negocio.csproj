@@ -242,11 +242,11 @@
     <Compile Include="Funciones\Mantenimiento\FUsuarios.cs" />
     <Compile Include="Funciones\Generales\FValidacionesEventos.cs" />
     <Compile Include="Funciones\Ver\FComunicacionInterna.cs" />
-    <Compile Include="Menu.cs">
+    <Compile Include="Funciones\ConfiguraciónMenus\Menu.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="MenuColorTable.cs" />
-    <Compile Include="MenuRenderer.cs" />
+    <Compile Include="Funciones\ConfiguraciónMenus\MenuColorTable.cs" />
+    <Compile Include="Funciones\ConfiguraciónMenus\MenuRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

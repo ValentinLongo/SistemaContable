@@ -62,6 +62,5 @@ namespace Negocio
                 graph.DrawPath(pen, path);
             }
         }
-
     }
 }

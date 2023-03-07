@@ -161,6 +161,12 @@ namespace SistemaContable
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMovimientodeAsientos.Tag.ToString());
         }
 
+        private void tsbBlockdeNotas_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process notepad = new System.Diagnostics.Process { StartInfo = { FileName = @"notepad.exe" } };
+            notepad.Start();
+        }
+
         private void tsbMensajesInternos_Click(object sender, EventArgs e)
         {
             frmComunicacionInterna frm = new frmComunicacionInterna(lblnuevomensaje);
@@ -486,7 +492,8 @@ namespace SistemaContable
         }
         private void notasYObservacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process notepad = new System.Diagnostics.Process { StartInfo = { FileName = @"notepad.exe" } };
+            notepad.Start();
         }
         private void calendarioToolStripMenuItem_Click(object sender, EventArgs e)
         {

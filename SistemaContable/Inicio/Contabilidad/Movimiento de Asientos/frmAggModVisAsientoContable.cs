@@ -13,6 +13,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Security.Cryptography;
+using System.Speech.Synthesis.TtsEngine;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -236,12 +237,14 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
             //VALIDACIONES
             int validaciones = 0;
+            int[] MSGValidaciones = new int[4];
 
             DataSet dsV = new DataSet();
             dsV = AccesoBase.ListarDatos("SELECT mva_debe, mva_haber FROM Aux_MovAsto");
             if (dsV.Tables[0].Rows.Count != 0)
             {
                 validaciones++; //VALIDA QUE HAYA POR LO MENOS UN DETALLE
+                MSGValidaciones[0] = 1;
             }
 
             double totaldebe = 0;
@@ -257,11 +260,13 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             if (totaldebe == totalhaber)
             {
                 validaciones++; //VALIDA QUE EL ASIENTO ESTE BALANCEADO
+                MSGValidaciones[1] = 1;
             }
 
             if (txtComentario.Text != "")
             {
                 validaciones++; //VALIDA QUE EL ASIENTO TENGA COMENTARIO
+                MSGValidaciones[2] = 1;
             }
 
             DateTime fechadesde;
@@ -275,6 +280,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 if (fechadesde <= dtFecha.Value && fechahasta >= dtFecha.Value)
                 {
                     validaciones++;//VALIDA QUE LA FECHA DEL ASIENTO SE ENCUENTRE DENTRO DEL EJERCICIO
+                    MSGValidaciones[3] = 1;
                 }
 
                 if (Convert.ToInt32(cbTipoAsiento.SelectedValue) == 4)
@@ -288,6 +294,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     if (Convert.ToDateTime(dtfecha) == Convert.ToDateTime(fechacierre))
                     {
                         validaciones++;//VALIDA QUE LA FECHA DEL ASIENTO DE CIERRE SEA IGUAL QUE EL HASTA EL EJERCICIO
+                        MSGValidaciones[4] = 1;
                     }
                 }
             }
@@ -306,7 +313,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
             // 
 
-            if (validaciones == 6)
+            if (validaciones >= 4 && validaciones <= 6)
             {
                 if (add_mod_vis == 1)
                 {
@@ -387,7 +394,26 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
             else
             {
-                MessageBox.Show("ERROR","Mensaje");
+                if (MSGValidaciones[0] != 1)
+                {
+                    MessageBox.Show("Atención: Debe agregar un detalle", "Mensaje");
+                }
+                else if (MSGValidaciones[1] != 1) 
+                {
+                    MessageBox.Show("Atención: El asiento debe estar balanceado", "Mensaje");
+                }
+                else if (MSGValidaciones[2] != 1)
+                {
+                    MessageBox.Show("Atención: Debe agregar un comentario", "Mensaje");
+                }
+                else if (MSGValidaciones[3] != 1)
+                {
+                    MessageBox.Show("Atención: La fecha ingresada no concuerda con los parametros del ejercicio", "Mensaje");
+                }
+                else if (MSGValidaciones[4] != 1)
+                {
+                    MessageBox.Show("Atención: La fecha de cierre no concuerda con la del ejercicio", "Mensaje");
+                }
             }
         }
 
@@ -432,6 +458,11 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     dgvAddModVisASIENTO.Rows.Add(cuenta, descri, debe, haber, concepto, cc, codigo);
                 }
             }
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void panel7_MouseDown(object sender, MouseEventArgs e)
