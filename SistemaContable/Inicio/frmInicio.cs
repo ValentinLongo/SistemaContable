@@ -38,6 +38,8 @@ using SistemaContable.Inicio.Ver.Comunicacion_Interna;
 using SistemaContable.Inicio.Mantenimiento.Parametros_Contables;
 using Negocio.Funciones.Mantenimiento;
 using System.Drawing.Printing;
+using SistemaContable.Inicio.Contabilidad.Libro_Diario;
+using SistemaContable.Inicio.Contabilidad.LibroMayor;
 
 namespace SistemaContable
 {
@@ -519,11 +521,13 @@ namespace SistemaContable
         }
         private void libroDiario_Click(object sender, EventArgs e)
         {
-
+            frmLibroDiario OlibroDiario = new frmLibroDiario();
+            Negocio.FGenerales.Mostrarfrm(OlibroDiario, libroDiario.Tag.ToString());
         }
         private void libroMayor_Click(object sender, EventArgs e)
         {
-
+            frmLibroMayor OlibroMayor = new frmLibroMayor();
+            Negocio.FGenerales.Mostrarfrm(OlibroMayor, libroMayor.Tag.ToString());
         }
         private void libroMayorGrupo_Click(object sender, EventArgs e)
         {
