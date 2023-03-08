@@ -20,6 +20,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         FConceptosContables data = new FConceptosContables();
         private string Accion;
         public static int IdCuenta;
+        public static string DescriCuenta;
         public static int IdContrapartida;
         public static string txt = "";
         public static string txt2 = "";
@@ -73,6 +74,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             if(Accion == "Cuenta")
             {
                 IdCuenta = (int)dgvCuentas.Rows[e.RowIndex].Cells[1].Value;
+                DescriCuenta = dgvCuentas.Rows[e.RowIndex].Cells[2].Value.ToString();
             }
             else if(Accion == "Contrapartida")
             {
@@ -122,6 +124,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         private void bunifuFormControlBox1_CloseClicked(object sender, EventArgs e)
         {
             IdCuenta = 0;
+            DescriCuenta = "";
             IdContrapartida = 0;
         }
 

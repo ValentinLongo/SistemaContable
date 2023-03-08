@@ -265,6 +265,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="General\frmBuscarEjercicioContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmBuscarEjercicioContable.Designer.cs">
+      <DependentUpon>frmBuscarEjercicioContable.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\frmLocalidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,18 @@
     </Compile>
     <Compile Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmDefiniciondeInformes.Designer.cs">
       <DependentUpon>frmDefiniciondeInformes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Libro Diario\frmLibroDiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Libro Diario\frmLibroDiario.Designer.cs">
+      <DependentUpon>frmLibroDiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\LibroMayor\frmLibroMayor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\LibroMayor\frmLibroMayor.Designer.cs">
+      <DependentUpon>frmLibroMayor.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Detalle de Modelos\frmAddModDetdeModelos.cs">
       <SubType>Form</SubType>
@@ -579,6 +597,9 @@
     <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="General\frmBuscarEjercicioContable.resx">
+      <DependentUpon>frmBuscarEjercicioContable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="General\frmLocalidades.resx">
       <DependentUpon>frmLocalidades.cs</DependentUpon>
     </EmbeddedResource>
@@ -590,6 +611,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmDefiniciondeInformes.resx">
       <DependentUpon>frmDefiniciondeInformes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Libro Diario\frmLibroDiario.resx">
+      <DependentUpon>frmLibroDiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\LibroMayor\frmLibroMayor.resx">
+      <DependentUpon>frmLibroMayor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Modelos de Asientos\Detalle de Modelos\frmAddModDetdeModelos.resx">
       <DependentUpon>frmAddModDetdeModelos.cs</DependentUpon>
