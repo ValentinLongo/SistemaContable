@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripADs = new System.Windows.Forms.ToolStrip();
             this.tsbUsuario = new System.Windows.Forms.ToolStripButton();
             this.tsbPlandeCuenta = new System.Windows.Forms.ToolStripButton();
             this.tsbConceptoContable = new System.Windows.Forms.ToolStripButton();
@@ -59,53 +59,6 @@
             this.tsbCerrarSesion = new System.Windows.Forms.ToolStripButton();
             this.tsbAbrirSesion = new System.Windows.Forms.ToolStripButton();
             this.tsbConfigImpresora = new System.Windows.Forms.ToolStripButton();
-            this.MenuArchivos = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
-            this.respaldoDeInformacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restauracionDeInformacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuVer = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
-            this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comunicacionInternaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.notasYObservacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuContabilidad = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
-            this.movimientoDeAsientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modelosDeAsientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.detalleDeModelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.renumeraciónDeAsientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.libroDiarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.libroMayorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.libroMayorGrupoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.libroMayorInformeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.balanceDeSumasYSaldosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.balanceGeneralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.definiciónDeInformesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.auditoriaInternaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.detalleInformeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inforrmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.auditoriaInternaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuMantenimiento = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
-            this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.definicionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parametrizacionDePermisosPerfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parametrizacionDePermisosUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recalcularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ejercicioContableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.planDeCuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.conceptosContablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rubrosContablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.coeficienteDeAjusteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.centroDeCosteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rubricacionDeSubDiariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parametrosContablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configurarImpresorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuAyuda = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
-            this.soporteInteractivoDeContableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.controlbarCerrar = new System.Windows.Forms.Button();
@@ -136,26 +89,73 @@
             this.btnArchivos = new RJCodeAdvance.RJControls.RJButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblnuevomensaje = new System.Windows.Forms.Label();
-            this.toolStrip1.SuspendLayout();
-            this.MenuArchivos.SuspendLayout();
-            this.MenuVer.SuspendLayout();
-            this.MenuContabilidad.SuspendLayout();
-            this.MenuMantenimiento.SuspendLayout();
-            this.MenuAyuda.SuspendLayout();
+            this.Menu_Archivos = new Negocio.MenuGobbato(this.components);
+            this.respaldoDeInformación = new System.Windows.Forms.ToolStripMenuItem();
+            this.restauraciónDeInformación = new System.Windows.Forms.ToolStripMenuItem();
+            this.salir = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_Ver = new Negocio.MenuGobbato(this.components);
+            this.calculadora = new System.Windows.Forms.ToolStripMenuItem();
+            this.comunicaciónInterna = new System.Windows.Forms.ToolStripMenuItem();
+            this.notasYObservaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.calendario = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_Ayuda = new Negocio.MenuGobbato(this.components);
+            this.soporteInteractivoDeContable = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_Contabilidad = new Negocio.MenuGobbato(this.components);
+            this.movimientoDeAsientos = new System.Windows.Forms.ToolStripMenuItem();
+            this.modelosDeAsientos = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizaciónMA = new System.Windows.Forms.ToolStripMenuItem();
+            this.detalleDeModelos = new System.Windows.Forms.ToolStripMenuItem();
+            this.renumeraciónDeAsientos = new System.Windows.Forms.ToolStripMenuItem();
+            this.libroDiario = new System.Windows.Forms.ToolStripMenuItem();
+            this.libroMayor = new System.Windows.Forms.ToolStripMenuItem();
+            this.libroMayorGrupo = new System.Windows.Forms.ToolStripMenuItem();
+            this.libroMayorInforme = new System.Windows.Forms.ToolStripMenuItem();
+            this.saldosYAjustados = new System.Windows.Forms.ToolStripMenuItem();
+            this.balanceDeSumasYSaldos = new System.Windows.Forms.ToolStripMenuItem();
+            this.balanceGeneral = new System.Windows.Forms.ToolStripMenuItem();
+            this.definiciónDeInformes = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizaciónDI = new System.Windows.Forms.ToolStripMenuItem();
+            this.detalleInforme = new System.Windows.Forms.ToolStripMenuItem();
+            this.informe = new System.Windows.Forms.ToolStripMenuItem();
+            this.auditoriaInterna = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_Mantenimiento = new Negocio.MenuGobbato(this.components);
+            this.empresa = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.definición = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificaciónDeContraseña = new System.Windows.Forms.ToolStripMenuItem();
+            this.parametrizacionDePermisosPerfiles = new System.Windows.Forms.ToolStripMenuItem();
+            this.parametrizacionDePermisosUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.recalcularPermisos = new System.Windows.Forms.ToolStripMenuItem();
+            this.ejercicioContable = new System.Windows.Forms.ToolStripMenuItem();
+            this.planDeCuentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.conceptosContables = new System.Windows.Forms.ToolStripMenuItem();
+            this.rubrosContables = new System.Windows.Forms.ToolStripMenuItem();
+            this.coeficienteDeAjuste = new System.Windows.Forms.ToolStripMenuItem();
+            this.centroDeCosto = new System.Windows.Forms.ToolStripMenuItem();
+            this.rubricaciónDeSubDiarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.agenda = new System.Windows.Forms.ToolStripMenuItem();
+            this.parametrosContables = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurarImpresora = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripADs.SuspendLayout();
             this.panel5.SuspendLayout();
             this.PanelMenu.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.Menu_Archivos.SuspendLayout();
+            this.Menu_Ver.SuspendLayout();
+            this.Menu_Ayuda.SuspendLayout();
+            this.Menu_Contabilidad.SuspendLayout();
+            this.Menu_Mantenimiento.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStrip1
+            // toolStripADs
             // 
-            resources.ApplyResources(this.toolStrip1, "toolStrip1");
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            resources.ApplyResources(this.toolStripADs, "toolStripADs");
+            this.toolStripADs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.toolStripADs.GripMargin = new System.Windows.Forms.Padding(0);
+            this.toolStripADs.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripADs.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbUsuario,
             this.tsbPlandeCuenta,
             this.tsbConceptoContable,
@@ -184,8 +184,8 @@
             this.tsbCerrarSesion,
             this.tsbAbrirSesion,
             this.tsbConfigImpresora});
-            this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.toolStrip1.Name = "toolStrip1";
+            this.toolStripADs.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.toolStripADs.Name = "toolStripADs";
             // 
             // tsbUsuario
             // 
@@ -388,394 +388,6 @@
             this.tsbConfigImpresora.Name = "tsbConfigImpresora";
             this.tsbConfigImpresora.Tag = "0";
             this.tsbConfigImpresora.Click += new System.EventHandler(this.tsbConfigImpresora_Click);
-            // 
-            // MenuArchivos
-            // 
-            this.MenuArchivos.BackColor = System.Drawing.SystemColors.Control;
-            this.MenuArchivos.IsMainMenu = false;
-            this.MenuArchivos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.respaldoDeInformacionToolStripMenuItem,
-            this.restauracionDeInformacionToolStripMenuItem,
-            this.salirToolStripMenuItem});
-            this.MenuArchivos.MenuItemHeight = 25;
-            this.MenuArchivos.MenuItemTextColor = System.Drawing.Color.Black;
-            this.MenuArchivos.Name = "rjDropdownMenu1";
-            this.MenuArchivos.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
-            resources.ApplyResources(this.MenuArchivos, "MenuArchivos");
-            this.MenuArchivos.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.MenuArchivos_Closed);
-            // 
-            // respaldoDeInformacionToolStripMenuItem
-            // 
-            this.respaldoDeInformacionToolStripMenuItem.Name = "respaldoDeInformacionToolStripMenuItem";
-            resources.ApplyResources(this.respaldoDeInformacionToolStripMenuItem, "respaldoDeInformacionToolStripMenuItem");
-            this.respaldoDeInformacionToolStripMenuItem.Tag = "1002";
-            this.respaldoDeInformacionToolStripMenuItem.Click += new System.EventHandler(this.respaldoDeInformacionToolStripMenuItem_Click);
-            // 
-            // restauracionDeInformacionToolStripMenuItem
-            // 
-            this.restauracionDeInformacionToolStripMenuItem.Name = "restauracionDeInformacionToolStripMenuItem";
-            resources.ApplyResources(this.restauracionDeInformacionToolStripMenuItem, "restauracionDeInformacionToolStripMenuItem");
-            this.restauracionDeInformacionToolStripMenuItem.Tag = "1004";
-            this.restauracionDeInformacionToolStripMenuItem.Click += new System.EventHandler(this.restauracionDeInformacionToolStripMenuItem_Click);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            resources.ApplyResources(this.salirToolStripMenuItem, "salirToolStripMenuItem");
-            this.salirToolStripMenuItem.Tag = "1006";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // MenuVer
-            // 
-            resources.ApplyResources(this.MenuVer, "MenuVer");
-            this.MenuVer.IsMainMenu = false;
-            this.MenuVer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.calculadoraToolStripMenuItem,
-            this.comunicacionInternaToolStripMenuItem,
-            this.notasYObservacionesToolStripMenuItem,
-            this.calendarioToolStripMenuItem});
-            this.MenuVer.MenuItemHeight = 25;
-            this.MenuVer.MenuItemTextColor = System.Drawing.Color.Black;
-            this.MenuVer.Name = "rjDropdownMenu2";
-            this.MenuVer.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
-            this.MenuVer.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.MenuVer_Closed);
-            // 
-            // calculadoraToolStripMenuItem
-            // 
-            this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            resources.ApplyResources(this.calculadoraToolStripMenuItem, "calculadoraToolStripMenuItem");
-            this.calculadoraToolStripMenuItem.Tag = "2002";
-            this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
-            // 
-            // comunicacionInternaToolStripMenuItem
-            // 
-            this.comunicacionInternaToolStripMenuItem.Name = "comunicacionInternaToolStripMenuItem";
-            resources.ApplyResources(this.comunicacionInternaToolStripMenuItem, "comunicacionInternaToolStripMenuItem");
-            this.comunicacionInternaToolStripMenuItem.Tag = "2004";
-            this.comunicacionInternaToolStripMenuItem.Click += new System.EventHandler(this.comunicacionInternaToolStripMenuItem_Click);
-            // 
-            // notasYObservacionesToolStripMenuItem
-            // 
-            this.notasYObservacionesToolStripMenuItem.Name = "notasYObservacionesToolStripMenuItem";
-            resources.ApplyResources(this.notasYObservacionesToolStripMenuItem, "notasYObservacionesToolStripMenuItem");
-            this.notasYObservacionesToolStripMenuItem.Tag = "2006";
-            this.notasYObservacionesToolStripMenuItem.Click += new System.EventHandler(this.notasYObservacionesToolStripMenuItem_Click);
-            // 
-            // calendarioToolStripMenuItem
-            // 
-            this.calendarioToolStripMenuItem.Name = "calendarioToolStripMenuItem";
-            resources.ApplyResources(this.calendarioToolStripMenuItem, "calendarioToolStripMenuItem");
-            this.calendarioToolStripMenuItem.Tag = "2008";
-            this.calendarioToolStripMenuItem.Click += new System.EventHandler(this.calendarioToolStripMenuItem_Click);
-            // 
-            // MenuContabilidad
-            // 
-            this.MenuContabilidad.IsMainMenu = false;
-            this.MenuContabilidad.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.movimientoDeAsientosToolStripMenuItem,
-            this.modelosDeAsientosToolStripMenuItem,
-            this.renumeraciónDeAsientosToolStripMenuItem,
-            this.libroDiarioToolStripMenuItem,
-            this.libroMayorToolStripMenuItem,
-            this.libroMayorGrupoToolStripMenuItem,
-            this.libroMayorInformeToolStripMenuItem,
-            this.balanceDeSumasYSaldosToolStripMenuItem,
-            this.balanceGeneralToolStripMenuItem,
-            this.definiciónDeInformesToolStripMenuItem,
-            this.auditoriaInternaToolStripMenuItem,
-            this.auditoriaInternaToolStripMenuItem1});
-            this.MenuContabilidad.MenuItemHeight = 25;
-            this.MenuContabilidad.MenuItemTextColor = System.Drawing.Color.Black;
-            this.MenuContabilidad.Name = "rjDropdownMenu3";
-            this.MenuContabilidad.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
-            resources.ApplyResources(this.MenuContabilidad, "MenuContabilidad");
-            this.MenuContabilidad.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.MenuContabilidad_Closed);
-            // 
-            // movimientoDeAsientosToolStripMenuItem
-            // 
-            this.movimientoDeAsientosToolStripMenuItem.Name = "movimientoDeAsientosToolStripMenuItem";
-            resources.ApplyResources(this.movimientoDeAsientosToolStripMenuItem, "movimientoDeAsientosToolStripMenuItem");
-            this.movimientoDeAsientosToolStripMenuItem.Tag = "3002";
-            this.movimientoDeAsientosToolStripMenuItem.Click += new System.EventHandler(this.movimientoDeAsientosToolStripMenuItem_Click);
-            // 
-            // modelosDeAsientosToolStripMenuItem
-            // 
-            this.modelosDeAsientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.actualizaciónToolStripMenuItem1,
-            this.detalleDeModelosToolStripMenuItem});
-            this.modelosDeAsientosToolStripMenuItem.Name = "modelosDeAsientosToolStripMenuItem";
-            resources.ApplyResources(this.modelosDeAsientosToolStripMenuItem, "modelosDeAsientosToolStripMenuItem");
-            this.modelosDeAsientosToolStripMenuItem.Tag = "3004";
-            // 
-            // actualizaciónToolStripMenuItem1
-            // 
-            this.actualizaciónToolStripMenuItem1.Name = "actualizaciónToolStripMenuItem1";
-            resources.ApplyResources(this.actualizaciónToolStripMenuItem1, "actualizaciónToolStripMenuItem1");
-            this.actualizaciónToolStripMenuItem1.Tag = "300402";
-            this.actualizaciónToolStripMenuItem1.Click += new System.EventHandler(this.actualizaciónToolStripMenuItem1_Click);
-            // 
-            // detalleDeModelosToolStripMenuItem
-            // 
-            this.detalleDeModelosToolStripMenuItem.Name = "detalleDeModelosToolStripMenuItem";
-            resources.ApplyResources(this.detalleDeModelosToolStripMenuItem, "detalleDeModelosToolStripMenuItem");
-            this.detalleDeModelosToolStripMenuItem.Tag = "300404";
-            this.detalleDeModelosToolStripMenuItem.Click += new System.EventHandler(this.detalleDeModelosToolStripMenuItem_Click);
-            // 
-            // renumeraciónDeAsientosToolStripMenuItem
-            // 
-            this.renumeraciónDeAsientosToolStripMenuItem.Name = "renumeraciónDeAsientosToolStripMenuItem";
-            resources.ApplyResources(this.renumeraciónDeAsientosToolStripMenuItem, "renumeraciónDeAsientosToolStripMenuItem");
-            this.renumeraciónDeAsientosToolStripMenuItem.Tag = "3006";
-            this.renumeraciónDeAsientosToolStripMenuItem.Click += new System.EventHandler(this.renumeraciónDeAsientosToolStripMenuItem_Click);
-            // 
-            // libroDiarioToolStripMenuItem
-            // 
-            this.libroDiarioToolStripMenuItem.Name = "libroDiarioToolStripMenuItem";
-            resources.ApplyResources(this.libroDiarioToolStripMenuItem, "libroDiarioToolStripMenuItem");
-            this.libroDiarioToolStripMenuItem.Tag = "3008";
-            this.libroDiarioToolStripMenuItem.Click += new System.EventHandler(this.libroDiarioToolStripMenuItem_Click);
-            // 
-            // libroMayorToolStripMenuItem
-            // 
-            this.libroMayorToolStripMenuItem.Name = "libroMayorToolStripMenuItem";
-            resources.ApplyResources(this.libroMayorToolStripMenuItem, "libroMayorToolStripMenuItem");
-            this.libroMayorToolStripMenuItem.Tag = "3010";
-            this.libroMayorToolStripMenuItem.Click += new System.EventHandler(this.libroMayorToolStripMenuItem_Click);
-            // 
-            // libroMayorGrupoToolStripMenuItem
-            // 
-            this.libroMayorGrupoToolStripMenuItem.Name = "libroMayorGrupoToolStripMenuItem";
-            resources.ApplyResources(this.libroMayorGrupoToolStripMenuItem, "libroMayorGrupoToolStripMenuItem");
-            this.libroMayorGrupoToolStripMenuItem.Tag = "3012";
-            this.libroMayorGrupoToolStripMenuItem.Click += new System.EventHandler(this.libroMayorGrupoToolStripMenuItem_Click);
-            // 
-            // libroMayorInformeToolStripMenuItem
-            // 
-            this.libroMayorInformeToolStripMenuItem.Name = "libroMayorInformeToolStripMenuItem";
-            resources.ApplyResources(this.libroMayorInformeToolStripMenuItem, "libroMayorInformeToolStripMenuItem");
-            this.libroMayorInformeToolStripMenuItem.Tag = "3013";
-            this.libroMayorInformeToolStripMenuItem.Click += new System.EventHandler(this.libroMayorInformeToolStripMenuItem_Click);
-            // 
-            // balanceDeSumasYSaldosToolStripMenuItem
-            // 
-            this.balanceDeSumasYSaldosToolStripMenuItem.Name = "balanceDeSumasYSaldosToolStripMenuItem";
-            resources.ApplyResources(this.balanceDeSumasYSaldosToolStripMenuItem, "balanceDeSumasYSaldosToolStripMenuItem");
-            this.balanceDeSumasYSaldosToolStripMenuItem.Tag = "3019";
-            this.balanceDeSumasYSaldosToolStripMenuItem.Click += new System.EventHandler(this.balanceDeSumasYSaldosToolStripMenuItem_Click);
-            // 
-            // balanceGeneralToolStripMenuItem
-            // 
-            this.balanceGeneralToolStripMenuItem.Name = "balanceGeneralToolStripMenuItem";
-            resources.ApplyResources(this.balanceGeneralToolStripMenuItem, "balanceGeneralToolStripMenuItem");
-            this.balanceGeneralToolStripMenuItem.Tag = "3014";
-            this.balanceGeneralToolStripMenuItem.Click += new System.EventHandler(this.balanceGeneralToolStripMenuItem_Click);
-            // 
-            // definiciónDeInformesToolStripMenuItem
-            // 
-            this.definiciónDeInformesToolStripMenuItem.Name = "definiciónDeInformesToolStripMenuItem";
-            resources.ApplyResources(this.definiciónDeInformesToolStripMenuItem, "definiciónDeInformesToolStripMenuItem");
-            this.definiciónDeInformesToolStripMenuItem.Tag = "3016";
-            this.definiciónDeInformesToolStripMenuItem.Click += new System.EventHandler(this.definiciónDeInformesToolStripMenuItem_Click);
-            // 
-            // auditoriaInternaToolStripMenuItem
-            // 
-            this.auditoriaInternaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.actualizacionToolStripMenuItem,
-            this.detalleInformeToolStripMenuItem,
-            this.inforrmeToolStripMenuItem});
-            this.auditoriaInternaToolStripMenuItem.Name = "auditoriaInternaToolStripMenuItem";
-            resources.ApplyResources(this.auditoriaInternaToolStripMenuItem, "auditoriaInternaToolStripMenuItem");
-            this.auditoriaInternaToolStripMenuItem.Tag = "3017";
-            // 
-            // actualizacionToolStripMenuItem
-            // 
-            this.actualizacionToolStripMenuItem.Name = "actualizacionToolStripMenuItem";
-            resources.ApplyResources(this.actualizacionToolStripMenuItem, "actualizacionToolStripMenuItem");
-            this.actualizacionToolStripMenuItem.Tag = "301702";
-            this.actualizacionToolStripMenuItem.Click += new System.EventHandler(this.actualizacionToolStripMenuItem_Click);
-            // 
-            // detalleInformeToolStripMenuItem
-            // 
-            this.detalleInformeToolStripMenuItem.Name = "detalleInformeToolStripMenuItem";
-            resources.ApplyResources(this.detalleInformeToolStripMenuItem, "detalleInformeToolStripMenuItem");
-            this.detalleInformeToolStripMenuItem.Tag = "301704";
-            this.detalleInformeToolStripMenuItem.Click += new System.EventHandler(this.detalleInformeToolStripMenuItem_Click);
-            // 
-            // inforrmeToolStripMenuItem
-            // 
-            this.inforrmeToolStripMenuItem.Name = "inforrmeToolStripMenuItem";
-            resources.ApplyResources(this.inforrmeToolStripMenuItem, "inforrmeToolStripMenuItem");
-            this.inforrmeToolStripMenuItem.Tag = "301708";
-            this.inforrmeToolStripMenuItem.Click += new System.EventHandler(this.inforrmeToolStripMenuItem_Click);
-            // 
-            // auditoriaInternaToolStripMenuItem1
-            // 
-            this.auditoriaInternaToolStripMenuItem1.Name = "auditoriaInternaToolStripMenuItem1";
-            resources.ApplyResources(this.auditoriaInternaToolStripMenuItem1, "auditoriaInternaToolStripMenuItem1");
-            this.auditoriaInternaToolStripMenuItem1.Tag = "3018";
-            this.auditoriaInternaToolStripMenuItem1.Click += new System.EventHandler(this.auditoriaInternaToolStripMenuItem1_Click);
-            // 
-            // MenuMantenimiento
-            // 
-            this.MenuMantenimiento.IsMainMenu = false;
-            this.MenuMantenimiento.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.empresaToolStripMenuItem,
-            this.usuarioToolStripMenuItem,
-            this.ejercicioContableToolStripMenuItem,
-            this.planDeCuentasToolStripMenuItem,
-            this.conceptosContablesToolStripMenuItem,
-            this.rubrosContablesToolStripMenuItem,
-            this.coeficienteDeAjusteToolStripMenuItem,
-            this.centroDeCosteToolStripMenuItem,
-            this.rubricacionDeSubDiariosToolStripMenuItem,
-            this.agendaToolStripMenuItem,
-            this.parametrosContablesToolStripMenuItem,
-            this.configurarImpresorasToolStripMenuItem});
-            this.MenuMantenimiento.MenuItemHeight = 25;
-            this.MenuMantenimiento.MenuItemTextColor = System.Drawing.Color.Black;
-            this.MenuMantenimiento.Name = "MenuMantenimiento";
-            this.MenuMantenimiento.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
-            resources.ApplyResources(this.MenuMantenimiento, "MenuMantenimiento");
-            this.MenuMantenimiento.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.MenuMantenimiento_Closed);
-            // 
-            // empresaToolStripMenuItem
-            // 
-            this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
-            resources.ApplyResources(this.empresaToolStripMenuItem, "empresaToolStripMenuItem");
-            this.empresaToolStripMenuItem.Tag = "4002";
-            this.empresaToolStripMenuItem.Click += new System.EventHandler(this.empresaToolStripMenuItem_Click);
-            // 
-            // usuarioToolStripMenuItem
-            // 
-            this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.definicionToolStripMenuItem,
-            this.modificaToolStripMenuItem,
-            this.parametrizacionDePermisosPerfilesToolStripMenuItem,
-            this.parametrizacionDePermisosUsuariosToolStripMenuItem,
-            this.recalcularToolStripMenuItem});
-            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            resources.ApplyResources(this.usuarioToolStripMenuItem, "usuarioToolStripMenuItem");
-            this.usuarioToolStripMenuItem.Tag = "4004";
-            // 
-            // definicionToolStripMenuItem
-            // 
-            this.definicionToolStripMenuItem.Name = "definicionToolStripMenuItem";
-            resources.ApplyResources(this.definicionToolStripMenuItem, "definicionToolStripMenuItem");
-            this.definicionToolStripMenuItem.Tag = "400402";
-            this.definicionToolStripMenuItem.Click += new System.EventHandler(this.definicionToolStripMenuItem_Click);
-            // 
-            // modificaToolStripMenuItem
-            // 
-            this.modificaToolStripMenuItem.Name = "modificaToolStripMenuItem";
-            resources.ApplyResources(this.modificaToolStripMenuItem, "modificaToolStripMenuItem");
-            this.modificaToolStripMenuItem.Tag = "400404";
-            this.modificaToolStripMenuItem.Click += new System.EventHandler(this.modificaToolStripMenuItem_Click);
-            // 
-            // parametrizacionDePermisosPerfilesToolStripMenuItem
-            // 
-            this.parametrizacionDePermisosPerfilesToolStripMenuItem.Name = "parametrizacionDePermisosPerfilesToolStripMenuItem";
-            resources.ApplyResources(this.parametrizacionDePermisosPerfilesToolStripMenuItem, "parametrizacionDePermisosPerfilesToolStripMenuItem");
-            this.parametrizacionDePermisosPerfilesToolStripMenuItem.Click += new System.EventHandler(this.parametrizacionDePermisosPerfilesToolStripMenuItem_Click);
-            // 
-            // parametrizacionDePermisosUsuariosToolStripMenuItem
-            // 
-            this.parametrizacionDePermisosUsuariosToolStripMenuItem.Name = "parametrizacionDePermisosUsuariosToolStripMenuItem";
-            resources.ApplyResources(this.parametrizacionDePermisosUsuariosToolStripMenuItem, "parametrizacionDePermisosUsuariosToolStripMenuItem");
-            this.parametrizacionDePermisosUsuariosToolStripMenuItem.Click += new System.EventHandler(this.parametrizacionDePermisosUsuariosToolStripMenuItem_Click);
-            // 
-            // recalcularToolStripMenuItem
-            // 
-            this.recalcularToolStripMenuItem.Name = "recalcularToolStripMenuItem";
-            resources.ApplyResources(this.recalcularToolStripMenuItem, "recalcularToolStripMenuItem");
-            this.recalcularToolStripMenuItem.Click += new System.EventHandler(this.recalcularToolStripMenuItem_Click);
-            // 
-            // ejercicioContableToolStripMenuItem
-            // 
-            this.ejercicioContableToolStripMenuItem.Name = "ejercicioContableToolStripMenuItem";
-            resources.ApplyResources(this.ejercicioContableToolStripMenuItem, "ejercicioContableToolStripMenuItem");
-            this.ejercicioContableToolStripMenuItem.Tag = "4006";
-            this.ejercicioContableToolStripMenuItem.Click += new System.EventHandler(this.ejercicioContableToolStripMenuItem_Click);
-            // 
-            // planDeCuentasToolStripMenuItem
-            // 
-            this.planDeCuentasToolStripMenuItem.Name = "planDeCuentasToolStripMenuItem";
-            resources.ApplyResources(this.planDeCuentasToolStripMenuItem, "planDeCuentasToolStripMenuItem");
-            this.planDeCuentasToolStripMenuItem.Tag = "4008";
-            this.planDeCuentasToolStripMenuItem.Click += new System.EventHandler(this.planDeCuentasToolStripMenuItem_Click);
-            // 
-            // conceptosContablesToolStripMenuItem
-            // 
-            this.conceptosContablesToolStripMenuItem.Name = "conceptosContablesToolStripMenuItem";
-            resources.ApplyResources(this.conceptosContablesToolStripMenuItem, "conceptosContablesToolStripMenuItem");
-            this.conceptosContablesToolStripMenuItem.Tag = "4010";
-            this.conceptosContablesToolStripMenuItem.Click += new System.EventHandler(this.conceptosContablesToolStripMenuItem_Click);
-            // 
-            // rubrosContablesToolStripMenuItem
-            // 
-            this.rubrosContablesToolStripMenuItem.Name = "rubrosContablesToolStripMenuItem";
-            resources.ApplyResources(this.rubrosContablesToolStripMenuItem, "rubrosContablesToolStripMenuItem");
-            this.rubrosContablesToolStripMenuItem.Tag = "4009";
-            this.rubrosContablesToolStripMenuItem.Click += new System.EventHandler(this.rubrosContablesToolStripMenuItem_Click);
-            // 
-            // coeficienteDeAjusteToolStripMenuItem
-            // 
-            this.coeficienteDeAjusteToolStripMenuItem.Name = "coeficienteDeAjusteToolStripMenuItem";
-            resources.ApplyResources(this.coeficienteDeAjusteToolStripMenuItem, "coeficienteDeAjusteToolStripMenuItem");
-            this.coeficienteDeAjusteToolStripMenuItem.Tag = "4016";
-            this.coeficienteDeAjusteToolStripMenuItem.Click += new System.EventHandler(this.coeficienteDeAjusteToolStripMenuItem_Click);
-            // 
-            // centroDeCosteToolStripMenuItem
-            // 
-            this.centroDeCosteToolStripMenuItem.Name = "centroDeCosteToolStripMenuItem";
-            resources.ApplyResources(this.centroDeCosteToolStripMenuItem, "centroDeCosteToolStripMenuItem");
-            this.centroDeCosteToolStripMenuItem.Tag = "4011";
-            this.centroDeCosteToolStripMenuItem.Click += new System.EventHandler(this.centroDeCosteToolStripMenuItem_Click);
-            // 
-            // rubricacionDeSubDiariosToolStripMenuItem
-            // 
-            this.rubricacionDeSubDiariosToolStripMenuItem.Name = "rubricacionDeSubDiariosToolStripMenuItem";
-            resources.ApplyResources(this.rubricacionDeSubDiariosToolStripMenuItem, "rubricacionDeSubDiariosToolStripMenuItem");
-            this.rubricacionDeSubDiariosToolStripMenuItem.Click += new System.EventHandler(this.rubricacionDeSubDiariosToolStripMenuItem_Click);
-            // 
-            // agendaToolStripMenuItem
-            // 
-            this.agendaToolStripMenuItem.Name = "agendaToolStripMenuItem";
-            resources.ApplyResources(this.agendaToolStripMenuItem, "agendaToolStripMenuItem");
-            this.agendaToolStripMenuItem.Tag = "4012";
-            this.agendaToolStripMenuItem.Click += new System.EventHandler(this.agendaToolStripMenuItem_Click);
-            // 
-            // parametrosContablesToolStripMenuItem
-            // 
-            this.parametrosContablesToolStripMenuItem.Name = "parametrosContablesToolStripMenuItem";
-            resources.ApplyResources(this.parametrosContablesToolStripMenuItem, "parametrosContablesToolStripMenuItem");
-            this.parametrosContablesToolStripMenuItem.Tag = "4013";
-            this.parametrosContablesToolStripMenuItem.Click += new System.EventHandler(this.parametrosContablesToolStripMenuItem_Click);
-            // 
-            // configurarImpresorasToolStripMenuItem
-            // 
-            this.configurarImpresorasToolStripMenuItem.Name = "configurarImpresorasToolStripMenuItem";
-            resources.ApplyResources(this.configurarImpresorasToolStripMenuItem, "configurarImpresorasToolStripMenuItem");
-            this.configurarImpresorasToolStripMenuItem.Tag = "4014";
-            this.configurarImpresorasToolStripMenuItem.Click += new System.EventHandler(this.configurarImpresorasToolStripMenuItem_Click);
-            // 
-            // MenuAyuda
-            // 
-            this.MenuAyuda.IsMainMenu = false;
-            this.MenuAyuda.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.soporteInteractivoDeContableToolStripMenuItem});
-            this.MenuAyuda.MenuItemHeight = 25;
-            this.MenuAyuda.MenuItemTextColor = System.Drawing.Color.Black;
-            this.MenuAyuda.Name = "MenuAyuda";
-            this.MenuAyuda.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(126)))), ((int)(((byte)(138)))));
-            resources.ApplyResources(this.MenuAyuda, "MenuAyuda");
-            this.MenuAyuda.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.MenuAyuda_Closed);
-            // 
-            // soporteInteractivoDeContableToolStripMenuItem
-            // 
-            this.soporteInteractivoDeContableToolStripMenuItem.Name = "soporteInteractivoDeContableToolStripMenuItem";
-            resources.ApplyResources(this.soporteInteractivoDeContableToolStripMenuItem, "soporteInteractivoDeContableToolStripMenuItem");
-            this.soporteInteractivoDeContableToolStripMenuItem.Tag = "5002";
-            this.soporteInteractivoDeContableToolStripMenuItem.Click += new System.EventHandler(this.soporteInteractivoDeContableToolStripMenuItem_Click);
             // 
             // panel5
             // 
@@ -1170,6 +782,393 @@
             this.lblnuevomensaje.ForeColor = System.Drawing.Color.Red;
             this.lblnuevomensaje.Name = "lblnuevomensaje";
             // 
+            // Menu_Archivos
+            // 
+            this.Menu_Archivos.IsMainMenu = false;
+            this.Menu_Archivos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.respaldoDeInformación,
+            this.restauraciónDeInformación,
+            this.salir});
+            this.Menu_Archivos.MenuItemHeight = 25;
+            this.Menu_Archivos.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.Menu_Archivos.Name = "menuGobbato1";
+            this.Menu_Archivos.PrimaryColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.Menu_Archivos, "Menu_Archivos");
+            this.Menu_Archivos.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Archivos_Closed);
+            // 
+            // respaldoDeInformación
+            // 
+            this.respaldoDeInformación.Name = "respaldoDeInformación";
+            resources.ApplyResources(this.respaldoDeInformación, "respaldoDeInformación");
+            this.respaldoDeInformación.Tag = "1002";
+            this.respaldoDeInformación.Click += new System.EventHandler(this.respaldoDeInformación_Click);
+            // 
+            // restauraciónDeInformación
+            // 
+            this.restauraciónDeInformación.Name = "restauraciónDeInformación";
+            resources.ApplyResources(this.restauraciónDeInformación, "restauraciónDeInformación");
+            this.restauraciónDeInformación.Tag = "1004";
+            this.restauraciónDeInformación.Click += new System.EventHandler(this.restauraciónDeInformación_Click);
+            // 
+            // salir
+            // 
+            this.salir.Name = "salir";
+            resources.ApplyResources(this.salir, "salir");
+            this.salir.Tag = "1006";
+            this.salir.Click += new System.EventHandler(this.salir_Click);
+            // 
+            // Menu_Ver
+            // 
+            this.Menu_Ver.IsMainMenu = false;
+            this.Menu_Ver.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calculadora,
+            this.comunicaciónInterna,
+            this.notasYObservaciones,
+            this.calendario});
+            this.Menu_Ver.MenuItemHeight = 25;
+            this.Menu_Ver.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.Menu_Ver.Name = "Menu_Ver";
+            this.Menu_Ver.PrimaryColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.Menu_Ver, "Menu_Ver");
+            this.Menu_Ver.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Ver_Closed);
+            // 
+            // calculadora
+            // 
+            this.calculadora.Name = "calculadora";
+            resources.ApplyResources(this.calculadora, "calculadora");
+            this.calculadora.Tag = "2002";
+            this.calculadora.Click += new System.EventHandler(this.calculadora_Click);
+            // 
+            // comunicaciónInterna
+            // 
+            this.comunicaciónInterna.Name = "comunicaciónInterna";
+            resources.ApplyResources(this.comunicaciónInterna, "comunicaciónInterna");
+            this.comunicaciónInterna.Tag = "2004";
+            this.comunicaciónInterna.Click += new System.EventHandler(this.comunicaciónInterna_Click);
+            // 
+            // notasYObservaciones
+            // 
+            this.notasYObservaciones.Name = "notasYObservaciones";
+            resources.ApplyResources(this.notasYObservaciones, "notasYObservaciones");
+            this.notasYObservaciones.Tag = "2006";
+            this.notasYObservaciones.Click += new System.EventHandler(this.notasYObservaciones_Click);
+            // 
+            // calendario
+            // 
+            this.calendario.Name = "calendario";
+            resources.ApplyResources(this.calendario, "calendario");
+            this.calendario.Tag = "2008";
+            this.calendario.Click += new System.EventHandler(this.calendario_Click);
+            // 
+            // Menu_Ayuda
+            // 
+            this.Menu_Ayuda.IsMainMenu = false;
+            this.Menu_Ayuda.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.soporteInteractivoDeContable});
+            this.Menu_Ayuda.MenuItemHeight = 25;
+            this.Menu_Ayuda.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.Menu_Ayuda.Name = "Menu_Ayuda";
+            this.Menu_Ayuda.PrimaryColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.Menu_Ayuda, "Menu_Ayuda");
+            this.Menu_Ayuda.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Ayuda_Closed);
+            // 
+            // soporteInteractivoDeContable
+            // 
+            this.soporteInteractivoDeContable.Name = "soporteInteractivoDeContable";
+            resources.ApplyResources(this.soporteInteractivoDeContable, "soporteInteractivoDeContable");
+            this.soporteInteractivoDeContable.Tag = "5002";
+            this.soporteInteractivoDeContable.Click += new System.EventHandler(this.soporteInteractivoDeContable_Click);
+            // 
+            // Menu_Contabilidad
+            // 
+            this.Menu_Contabilidad.IsMainMenu = false;
+            this.Menu_Contabilidad.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.movimientoDeAsientos,
+            this.modelosDeAsientos,
+            this.renumeraciónDeAsientos,
+            this.libroDiario,
+            this.libroMayor,
+            this.libroMayorGrupo,
+            this.libroMayorInforme,
+            this.saldosYAjustados,
+            this.balanceDeSumasYSaldos,
+            this.balanceGeneral,
+            this.definiciónDeInformes,
+            this.auditoriaInterna});
+            this.Menu_Contabilidad.MenuItemHeight = 25;
+            this.Menu_Contabilidad.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.Menu_Contabilidad.Name = "Menu_Contabilidad";
+            this.Menu_Contabilidad.PrimaryColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.Menu_Contabilidad, "Menu_Contabilidad");
+            this.Menu_Contabilidad.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Contabilidad_Closed);
+            // 
+            // movimientoDeAsientos
+            // 
+            this.movimientoDeAsientos.Name = "movimientoDeAsientos";
+            resources.ApplyResources(this.movimientoDeAsientos, "movimientoDeAsientos");
+            this.movimientoDeAsientos.Tag = "3002";
+            this.movimientoDeAsientos.Click += new System.EventHandler(this.movimientoDeAsientos_Click);
+            // 
+            // modelosDeAsientos
+            // 
+            this.modelosDeAsientos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.actualizaciónMA,
+            this.detalleDeModelos});
+            this.modelosDeAsientos.Name = "modelosDeAsientos";
+            resources.ApplyResources(this.modelosDeAsientos, "modelosDeAsientos");
+            this.modelosDeAsientos.Tag = "3004";
+            // 
+            // actualizaciónMA
+            // 
+            this.actualizaciónMA.Name = "actualizaciónMA";
+            resources.ApplyResources(this.actualizaciónMA, "actualizaciónMA");
+            this.actualizaciónMA.Tag = "300402";
+            this.actualizaciónMA.Click += new System.EventHandler(this.actualizaciónMA_Click);
+            // 
+            // detalleDeModelos
+            // 
+            this.detalleDeModelos.Name = "detalleDeModelos";
+            resources.ApplyResources(this.detalleDeModelos, "detalleDeModelos");
+            this.detalleDeModelos.Tag = "300404";
+            this.detalleDeModelos.Click += new System.EventHandler(this.detalleDeModelos_Click);
+            // 
+            // renumeraciónDeAsientos
+            // 
+            this.renumeraciónDeAsientos.Name = "renumeraciónDeAsientos";
+            resources.ApplyResources(this.renumeraciónDeAsientos, "renumeraciónDeAsientos");
+            this.renumeraciónDeAsientos.Tag = "3006";
+            this.renumeraciónDeAsientos.Click += new System.EventHandler(this.renumeraciónDeAsientos_Click);
+            // 
+            // libroDiario
+            // 
+            this.libroDiario.Name = "libroDiario";
+            resources.ApplyResources(this.libroDiario, "libroDiario");
+            this.libroDiario.Tag = "3008";
+            this.libroDiario.Click += new System.EventHandler(this.libroDiario_Click);
+            // 
+            // libroMayor
+            // 
+            this.libroMayor.Name = "libroMayor";
+            resources.ApplyResources(this.libroMayor, "libroMayor");
+            this.libroMayor.Tag = "3010";
+            this.libroMayor.Click += new System.EventHandler(this.libroMayor_Click);
+            // 
+            // libroMayorGrupo
+            // 
+            this.libroMayorGrupo.Name = "libroMayorGrupo";
+            resources.ApplyResources(this.libroMayorGrupo, "libroMayorGrupo");
+            this.libroMayorGrupo.Tag = "3012";
+            this.libroMayorGrupo.Click += new System.EventHandler(this.libroMayorGrupo_Click);
+            // 
+            // libroMayorInforme
+            // 
+            this.libroMayorInforme.Name = "libroMayorInforme";
+            resources.ApplyResources(this.libroMayorInforme, "libroMayorInforme");
+            this.libroMayorInforme.Tag = "3013";
+            this.libroMayorInforme.Click += new System.EventHandler(this.libroMayorInforme_Click);
+            // 
+            // saldosYAjustados
+            // 
+            this.saldosYAjustados.Name = "saldosYAjustados";
+            resources.ApplyResources(this.saldosYAjustados, "saldosYAjustados");
+            this.saldosYAjustados.Tag = "3019";
+            this.saldosYAjustados.Click += new System.EventHandler(this.saldosYAjustados_Click);
+            // 
+            // balanceDeSumasYSaldos
+            // 
+            this.balanceDeSumasYSaldos.Name = "balanceDeSumasYSaldos";
+            resources.ApplyResources(this.balanceDeSumasYSaldos, "balanceDeSumasYSaldos");
+            this.balanceDeSumasYSaldos.Tag = "3014";
+            this.balanceDeSumasYSaldos.Click += new System.EventHandler(this.balanceDeSumasYSaldos_Click);
+            // 
+            // balanceGeneral
+            // 
+            this.balanceGeneral.Name = "balanceGeneral";
+            resources.ApplyResources(this.balanceGeneral, "balanceGeneral");
+            this.balanceGeneral.Tag = "3016";
+            this.balanceGeneral.Click += new System.EventHandler(this.balanceGeneral_Click);
+            // 
+            // definiciónDeInformes
+            // 
+            this.definiciónDeInformes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.actualizaciónDI,
+            this.detalleInforme,
+            this.informe});
+            this.definiciónDeInformes.Name = "definiciónDeInformes";
+            resources.ApplyResources(this.definiciónDeInformes, "definiciónDeInformes");
+            this.definiciónDeInformes.Tag = "3017";
+            // 
+            // actualizaciónDI
+            // 
+            this.actualizaciónDI.Name = "actualizaciónDI";
+            resources.ApplyResources(this.actualizaciónDI, "actualizaciónDI");
+            this.actualizaciónDI.Tag = "301702";
+            this.actualizaciónDI.Click += new System.EventHandler(this.actualizaciónDI_Click);
+            // 
+            // detalleInforme
+            // 
+            this.detalleInforme.Name = "detalleInforme";
+            resources.ApplyResources(this.detalleInforme, "detalleInforme");
+            this.detalleInforme.Tag = "301704";
+            this.detalleInforme.Click += new System.EventHandler(this.detalleInforme_Click);
+            // 
+            // informe
+            // 
+            this.informe.Name = "informe";
+            resources.ApplyResources(this.informe, "informe");
+            this.informe.Tag = "301708";
+            this.informe.Click += new System.EventHandler(this.informe_Click);
+            // 
+            // auditoriaInterna
+            // 
+            this.auditoriaInterna.Name = "auditoriaInterna";
+            resources.ApplyResources(this.auditoriaInterna, "auditoriaInterna");
+            this.auditoriaInterna.Tag = "3018";
+            this.auditoriaInterna.Click += new System.EventHandler(this.auditoriaInterna_Click);
+            // 
+            // Menu_Mantenimiento
+            // 
+            this.Menu_Mantenimiento.IsMainMenu = false;
+            this.Menu_Mantenimiento.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.empresa,
+            this.usuarios,
+            this.ejercicioContable,
+            this.planDeCuentas,
+            this.conceptosContables,
+            this.rubrosContables,
+            this.coeficienteDeAjuste,
+            this.centroDeCosto,
+            this.rubricaciónDeSubDiarios,
+            this.agenda,
+            this.parametrosContables,
+            this.configurarImpresora});
+            this.Menu_Mantenimiento.MenuItemHeight = 25;
+            this.Menu_Mantenimiento.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.Menu_Mantenimiento.Name = "menuGobbato1";
+            this.Menu_Mantenimiento.PrimaryColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.Menu_Mantenimiento, "Menu_Mantenimiento");
+            this.Menu_Mantenimiento.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Mantenimiento_Closed);
+            // 
+            // empresa
+            // 
+            this.empresa.Name = "empresa";
+            resources.ApplyResources(this.empresa, "empresa");
+            this.empresa.Tag = "4002";
+            this.empresa.Click += new System.EventHandler(this.empresa_Click);
+            // 
+            // usuarios
+            // 
+            this.usuarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.definición,
+            this.modificaciónDeContraseña,
+            this.parametrizacionDePermisosPerfiles,
+            this.parametrizacionDePermisosUsuarios,
+            this.recalcularPermisos});
+            this.usuarios.Name = "usuarios";
+            resources.ApplyResources(this.usuarios, "usuarios");
+            this.usuarios.Tag = "4004";
+            // 
+            // definición
+            // 
+            this.definición.Name = "definición";
+            resources.ApplyResources(this.definición, "definición");
+            this.definición.Tag = "400402";
+            this.definición.Click += new System.EventHandler(this.definición_Click);
+            // 
+            // modificaciónDeContraseña
+            // 
+            this.modificaciónDeContraseña.Name = "modificaciónDeContraseña";
+            resources.ApplyResources(this.modificaciónDeContraseña, "modificaciónDeContraseña");
+            this.modificaciónDeContraseña.Tag = "400404";
+            this.modificaciónDeContraseña.Click += new System.EventHandler(this.modificaciónDeContraseña_Click);
+            // 
+            // parametrizacionDePermisosPerfiles
+            // 
+            this.parametrizacionDePermisosPerfiles.Name = "parametrizacionDePermisosPerfiles";
+            resources.ApplyResources(this.parametrizacionDePermisosPerfiles, "parametrizacionDePermisosPerfiles");
+            this.parametrizacionDePermisosPerfiles.Click += new System.EventHandler(this.parametrizacionDePermisosPerfiles_Click);
+            // 
+            // parametrizacionDePermisosUsuarios
+            // 
+            this.parametrizacionDePermisosUsuarios.Name = "parametrizacionDePermisosUsuarios";
+            resources.ApplyResources(this.parametrizacionDePermisosUsuarios, "parametrizacionDePermisosUsuarios");
+            this.parametrizacionDePermisosUsuarios.Click += new System.EventHandler(this.parametrizacionDePermisosUsuarios_Click);
+            // 
+            // recalcularPermisos
+            // 
+            this.recalcularPermisos.Name = "recalcularPermisos";
+            resources.ApplyResources(this.recalcularPermisos, "recalcularPermisos");
+            this.recalcularPermisos.Click += new System.EventHandler(this.recalcularPermisos_Click);
+            // 
+            // ejercicioContable
+            // 
+            this.ejercicioContable.Name = "ejercicioContable";
+            resources.ApplyResources(this.ejercicioContable, "ejercicioContable");
+            this.ejercicioContable.Tag = "4006";
+            this.ejercicioContable.Click += new System.EventHandler(this.ejercicioContable_Click);
+            // 
+            // planDeCuentas
+            // 
+            this.planDeCuentas.Name = "planDeCuentas";
+            resources.ApplyResources(this.planDeCuentas, "planDeCuentas");
+            this.planDeCuentas.Tag = "4008";
+            this.planDeCuentas.Click += new System.EventHandler(this.planDeCuentas_Click);
+            // 
+            // conceptosContables
+            // 
+            this.conceptosContables.Name = "conceptosContables";
+            resources.ApplyResources(this.conceptosContables, "conceptosContables");
+            this.conceptosContables.Tag = "4010";
+            this.conceptosContables.Click += new System.EventHandler(this.conceptosContables_Click);
+            // 
+            // rubrosContables
+            // 
+            this.rubrosContables.Name = "rubrosContables";
+            resources.ApplyResources(this.rubrosContables, "rubrosContables");
+            this.rubrosContables.Tag = "4009";
+            this.rubrosContables.Click += new System.EventHandler(this.rubrosContables_Click);
+            // 
+            // coeficienteDeAjuste
+            // 
+            this.coeficienteDeAjuste.Name = "coeficienteDeAjuste";
+            resources.ApplyResources(this.coeficienteDeAjuste, "coeficienteDeAjuste");
+            this.coeficienteDeAjuste.Tag = "4016";
+            this.coeficienteDeAjuste.Click += new System.EventHandler(this.coeficienteDeAjuste_Click);
+            // 
+            // centroDeCosto
+            // 
+            this.centroDeCosto.Name = "centroDeCosto";
+            resources.ApplyResources(this.centroDeCosto, "centroDeCosto");
+            this.centroDeCosto.Tag = "4011";
+            this.centroDeCosto.Click += new System.EventHandler(this.centroDeCosto_Click);
+            // 
+            // rubricaciónDeSubDiarios
+            // 
+            this.rubricaciónDeSubDiarios.Name = "rubricaciónDeSubDiarios";
+            resources.ApplyResources(this.rubricaciónDeSubDiarios, "rubricaciónDeSubDiarios");
+            this.rubricaciónDeSubDiarios.Click += new System.EventHandler(this.rubricaciónDeSubDiarios_Click);
+            // 
+            // agenda
+            // 
+            this.agenda.Name = "agenda";
+            resources.ApplyResources(this.agenda, "agenda");
+            this.agenda.Tag = "4012";
+            this.agenda.Click += new System.EventHandler(this.agenda_Click);
+            // 
+            // parametrosContables
+            // 
+            this.parametrosContables.Name = "parametrosContables";
+            resources.ApplyResources(this.parametrosContables, "parametrosContables");
+            this.parametrosContables.Tag = "4013";
+            this.parametrosContables.Click += new System.EventHandler(this.parametrosContables_Click);
+            // 
+            // configurarImpresora
+            // 
+            this.configurarImpresora.Name = "configurarImpresora";
+            resources.ApplyResources(this.configurarImpresora, "configurarImpresora");
+            this.configurarImpresora.Tag = "4014";
+            this.configurarImpresora.Click += new System.EventHandler(this.configurarImpresora_Click);
+            // 
             // frmInicio
             // 
             resources.ApplyResources(this, "$this");
@@ -1179,7 +1178,7 @@
             this.Controls.Add(this.borde1);
             this.Controls.Add(this.borde3);
             this.Controls.Add(this.borde2);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.toolStripADs);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.pbLogo);
@@ -1194,13 +1193,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.MdiChildActivate += new System.EventHandler(this.frmInicio_MdiChildActivate);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.MenuArchivos.ResumeLayout(false);
-            this.MenuVer.ResumeLayout(false);
-            this.MenuContabilidad.ResumeLayout(false);
-            this.MenuMantenimiento.ResumeLayout(false);
-            this.MenuAyuda.ResumeLayout(false);
+            this.toolStripADs.ResumeLayout(false);
+            this.toolStripADs.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.PanelMenu.ResumeLayout(false);
@@ -1208,13 +1202,18 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            this.Menu_Archivos.ResumeLayout(false);
+            this.Menu_Ver.ResumeLayout(false);
+            this.Menu_Ayuda.ResumeLayout(false);
+            this.Menu_Contabilidad.ResumeLayout(false);
+            this.Menu_Mantenimiento.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip toolStripADs;
         private System.Windows.Forms.ToolStripButton tsbUsuario;
         private System.Windows.Forms.ToolStripButton tsbPlandeCuenta;
         private System.Windows.Forms.ToolStripButton tsbConceptoContable;
@@ -1239,53 +1238,6 @@
         private System.Windows.Forms.ToolStripButton tsbMensajesInternos;
         private System.Windows.Forms.ToolStripButton tsbCalculadora;
         private System.Windows.Forms.ToolStripButton tsbNotas;
-        private RJCodeAdvance.RJControls.RJDropdownMenu MenuArchivos;
-        private System.Windows.Forms.ToolStripMenuItem respaldoDeInformacionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem restauracionDeInformacionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private RJCodeAdvance.RJControls.RJDropdownMenu MenuVer;
-        private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comunicacionInternaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem notasYObservacionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calendarioToolStripMenuItem;
-        private RJCodeAdvance.RJControls.RJDropdownMenu MenuContabilidad;
-        private System.Windows.Forms.ToolStripMenuItem movimientoDeAsientosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modelosDeAsientosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actualizaciónToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem detalleDeModelosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem renumeraciónDeAsientosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem libroDiarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem libroMayorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem libroMayorGrupoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem libroMayorInformeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem balanceDeSumasYSaldosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem balanceGeneralToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem definiciónDeInformesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem auditoriaInternaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actualizacionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem detalleInformeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inforrmeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem auditoriaInternaToolStripMenuItem1;
-        private RJCodeAdvance.RJControls.RJDropdownMenu MenuMantenimiento;
-        private System.Windows.Forms.ToolStripMenuItem empresaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem definicionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem parametrizacionDePermisosPerfilesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem parametrizacionDePermisosUsuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem recalcularToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ejercicioContableToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem planDeCuentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem conceptosContablesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rubrosContablesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem coeficienteDeAjusteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem centroDeCosteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rubricacionDeSubDiariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agendaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem parametrosContablesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem configurarImpresorasToolStripMenuItem;
-        private RJCodeAdvance.RJControls.RJDropdownMenu MenuAyuda;
-        private System.Windows.Forms.ToolStripMenuItem soporteInteractivoDeContableToolStripMenuItem;
         private Bunifu.UI.WinForms.BunifuGradientPanel PanelMenu;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private RJCodeAdvance.RJControls.RJButton btnArchivos;
@@ -1320,5 +1272,52 @@
         private System.Windows.Forms.ToolStripButton tsbAbrirSesion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblnuevomensaje;
+        private Negocio.MenuGobbato Menu_Archivos;
+        private System.Windows.Forms.ToolStripMenuItem respaldoDeInformación;
+        private System.Windows.Forms.ToolStripMenuItem restauraciónDeInformación;
+        private System.Windows.Forms.ToolStripMenuItem salir;
+        private Negocio.MenuGobbato Menu_Ver;
+        private System.Windows.Forms.ToolStripMenuItem calculadora;
+        private System.Windows.Forms.ToolStripMenuItem comunicaciónInterna;
+        private System.Windows.Forms.ToolStripMenuItem notasYObservaciones;
+        private System.Windows.Forms.ToolStripMenuItem calendario;
+        private Negocio.MenuGobbato Menu_Ayuda;
+        private Negocio.MenuGobbato Menu_Contabilidad;
+        private System.Windows.Forms.ToolStripMenuItem movimientoDeAsientos;
+        private System.Windows.Forms.ToolStripMenuItem modelosDeAsientos;
+        private System.Windows.Forms.ToolStripMenuItem actualizaciónMA;
+        private System.Windows.Forms.ToolStripMenuItem detalleDeModelos;
+        private System.Windows.Forms.ToolStripMenuItem renumeraciónDeAsientos;
+        private System.Windows.Forms.ToolStripMenuItem libroDiario;
+        private System.Windows.Forms.ToolStripMenuItem libroMayor;
+        private System.Windows.Forms.ToolStripMenuItem libroMayorGrupo;
+        private System.Windows.Forms.ToolStripMenuItem libroMayorInforme;
+        private System.Windows.Forms.ToolStripMenuItem saldosYAjustados;
+        private System.Windows.Forms.ToolStripMenuItem balanceDeSumasYSaldos;
+        private System.Windows.Forms.ToolStripMenuItem balanceGeneral;
+        private System.Windows.Forms.ToolStripMenuItem definiciónDeInformes;
+        private System.Windows.Forms.ToolStripMenuItem actualizaciónDI;
+        private System.Windows.Forms.ToolStripMenuItem detalleInforme;
+        private System.Windows.Forms.ToolStripMenuItem informe;
+        private System.Windows.Forms.ToolStripMenuItem auditoriaInterna;
+        private Negocio.MenuGobbato Menu_Mantenimiento;
+        private System.Windows.Forms.ToolStripMenuItem empresa;
+        private System.Windows.Forms.ToolStripMenuItem usuarios;
+        private System.Windows.Forms.ToolStripMenuItem definición;
+        private System.Windows.Forms.ToolStripMenuItem modificaciónDeContraseña;
+        private System.Windows.Forms.ToolStripMenuItem parametrizacionDePermisosPerfiles;
+        private System.Windows.Forms.ToolStripMenuItem parametrizacionDePermisosUsuarios;
+        private System.Windows.Forms.ToolStripMenuItem recalcularPermisos;
+        private System.Windows.Forms.ToolStripMenuItem ejercicioContable;
+        private System.Windows.Forms.ToolStripMenuItem planDeCuentas;
+        private System.Windows.Forms.ToolStripMenuItem conceptosContables;
+        private System.Windows.Forms.ToolStripMenuItem rubrosContables;
+        private System.Windows.Forms.ToolStripMenuItem coeficienteDeAjuste;
+        private System.Windows.Forms.ToolStripMenuItem centroDeCosto;
+        private System.Windows.Forms.ToolStripMenuItem rubricaciónDeSubDiarios;
+        private System.Windows.Forms.ToolStripMenuItem agenda;
+        private System.Windows.Forms.ToolStripMenuItem parametrosContables;
+        private System.Windows.Forms.ToolStripMenuItem configurarImpresora;
+        private System.Windows.Forms.ToolStripMenuItem soporteInteractivoDeContable;
     }
 }

@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace Negocio
 {
-    public class Menu : ContextMenuStrip
+    public class MenuGobbato : ContextMenuStrip
     {
         //Fields
         private bool isMainMenu;
@@ -19,12 +19,12 @@ namespace Negocio
 
         private Bitmap menuItemHeaderSize;
         //Constructor
-        public Menu(IContainer container)
+        public MenuGobbato(IContainer container)
             : base(container)
         {
         }
         //Properties
-        //Optionally, hide the properties in the toolbox to avoid the problem of displaying and/or 
+        //Optionally, hide the properties in the toolbox to avoid the problem of displaying and/or
         //saving control property changes in the designer at design time in Visual Studio.
         //If the problem I mention does not occur you can expose the properties and manipulate them from the toolbox.
         [Browsable(true)]
