@@ -329,11 +329,12 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     DialogResult boton = MessageBox.Show("Desea Finalizar la Modificación?", "Mensaje", MessageBoxButtons.OKCancel);
                     if (boton == DialogResult.OK)
                     {
+                        int terminal = 0;
                         int asiento = 0;
                         string fechasiento = "";
 
                         DataSet ds = new DataSet();
-                        ds = AccesoBase.ListarDatos($"SELECT mva_asiento, mva_cuenta, mva_debe, mva_haber, mva_concepto, mva_cc FROM Aux_MovAsto");
+                        ds = AccesoBase.ListarDatos($"SELECT mva_terminal, mva_asiento, mva_cuenta, mva_debe, mva_haber, mva_concepto, mva_cc FROM Aux_MovAsto");
 
                         foreach (DataRow dr in ds.Tables[0].Rows)
                         {
@@ -343,6 +344,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
                         foreach (DataRow dr in ds.Tables[0].Rows)
                         {
+                            terminal = Convert.ToInt32(dr["mva_terminal"]);
                             int cuenta = Convert.ToInt32(dr["mva_cuenta"]);
                             double debe = Convert.ToDouble(dr["mva_debe"]);
                             double haber = Convert.ToDouble(dr["mva_haber"]);
@@ -384,7 +386,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                             }
                             AccesoBase.InsertUpdateDatosMoney(query, money);
                         }
-                        AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto");
+                        AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto WHERE mva_terminal = {terminal}");
 
                         //MODIFICÁ TABLA ASIENTO
                         AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET ast_usumodi = '{Negocio.FLogin.IdUsuario}', ast_fecmodi = '{fecha}', ast_horamodi = '{hora}', ast_tipo = {cbTipoAsiento.SelectedValue}, ast_comenta = '{txtComentario.Text}' WHERE ast_Asiento = '{txtNroAsiento.Text}'");

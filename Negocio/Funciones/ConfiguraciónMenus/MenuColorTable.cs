@@ -24,9 +24,9 @@ namespace Negocio
         {
             if (isMainMenu)
             {
-                backColor = Color.FromArgb(37, 39, 60);
-                leftColumnColor = Color.FromArgb(32, 33, 51);
-                borderColor = Color.FromArgb(32, 33, 51);
+                backColor = Color.FromArgb(0, 52, 162);
+                leftColumnColor = Color.FromArgb(0, 52, 162);
+                borderColor = Color.FromArgb(0, 52, 162);
                 menuItemBorderColor = primaryColor;
                 menuItemSelectedColor = primaryColor;
             }
