@@ -270,5 +270,19 @@ namespace Negocio
                 }
             }
         }
+
+        public static void ColorMDI(Control ctrl) 
+        {
+            BuscarFormato();
+            foreach (MFormatoSistema MFormato in lista)
+            {
+                if (MFormato.fmt_control == "formulariomdi")
+                {
+                    RGBbackFormulariomdi = MFormato.fmt_rgbBack.ToString();
+                }
+            }
+            ctrl.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
+        }
+
     }
 }

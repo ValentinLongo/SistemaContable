@@ -51,8 +51,7 @@ namespace SistemaContable
         public frmInicio()
         {
             InitializeComponent();
-
-            lblUsu.Text = "Usuario: " + FLogin.NombreUsuario;
+            DatosUsuEmp();
 
             Negocio.FValidacionesEventos.EventosFormulario(this);
             Negocio.FFormatoSistema.FondoMDI(this, borde1, borde2, borde3, pbLogo);
@@ -65,6 +64,11 @@ namespace SistemaContable
             borde1.BackColor = Color.FromArgb(255, 45, 45, 45);
             borde2.BackColor = Color.FromArgb(255, 45, 45, 45);
             borde3.BackColor = Color.FromArgb(255, 45, 45, 45);
+        }
+
+        private void DatosUsuEmp() 
+        {
+            lblUsu.Text = "Usuario: " + FLogin.NombreUsuario;
         }
 
         //CONTROLBAR
@@ -210,8 +214,10 @@ namespace SistemaContable
         {
             Menu_Archivos.Show(btnArchivos, btnArchivos.Width, 0);
             btnArchivos.Visible = false;
-            btnArchivos2.Location = new Point(0, 144);
+            btnArchivos2.Location = btnArchivos.Location;
+            btnArchivos2.Size = btnArchivos.Size;
             btnArchivos2.Visible = true;
+            pArchivos2.Visible = true;
             btnArchivos2.BringToFront();
         }
 
@@ -219,8 +225,10 @@ namespace SistemaContable
         {
             Menu_Ver.Show(btnArchivos, btnArchivos.Width, 0);
             btnVer.Visible = false;
-            btnVer2.Location = new Point(0, 217);
+            btnVer2.Location = btnVer.Location;
+            btnVer2.Size = btnVer.Size;
             btnVer2.Visible = true;
+            pVer2.Visible = true;
             btnVer2.BringToFront();
         }
 
@@ -228,8 +236,10 @@ namespace SistemaContable
         {
             Menu_Contabilidad.Show(btnArchivos, btnArchivos.Width, 0);
             btnContabilidad.Visible = false;
-            btnContabilidad2.Location = new Point(-3, 292);
+            btnContabilidad2.Location = btnContabilidad.Location;
+            btnContabilidad2.Size = btnContabilidad.Size;
             btnContabilidad2.Visible = true;
+            pContabilidad2.Visible = true;
             btnContabilidad2.BringToFront();
 
         }
@@ -238,8 +248,10 @@ namespace SistemaContable
         {
             Menu_Mantenimiento.Show(btnArchivos, btnArchivos.Width, 0);
             btnMantenimiento.Visible = false;
-            btnMantenimiento2.Location = new Point(1, 365);
+            btnMantenimiento2.Location = btnMantenimiento.Location;
+            btnMantenimiento2.Size = btnMantenimiento.Size;
             btnMantenimiento2.Visible = true;
+            pMantenimiento2.Visible = true;
             btnMantenimiento2.BringToFront();
         }
 
@@ -247,8 +259,63 @@ namespace SistemaContable
         {
             Menu_Ayuda.Show(btnAyuda, btnAyuda.Width, 0);
             btnAyuda.Visible = false;
+            btnAyuda2.Location = btnAyuda.Location;
+            btnAyuda2.Size = btnAyuda.Size;
             btnAyuda2.Visible = true;
+            pAyuda2.Visible = true;
             btnAyuda2.BringToFront();
+        }
+
+        private void btnArchivos_MouseEnter(object sender, EventArgs e)
+        {
+            Negocio.FFormatoSistema.ColorMDI(btnArchivos);
+            pArchivos.Visible = true;
+            
+        }
+        private void btnArchivos_MouseLeave(object sender, EventArgs e)
+        {
+            btnArchivos.BackColor = Color.FromArgb(40,40,40);
+            pArchivos.Visible = false;
+        }
+        private void btnVer_MouseEnter(object sender, EventArgs e)
+        {
+            Negocio.FFormatoSistema.ColorMDI(btnVer);
+            pVer.Visible = true;
+        }
+        private void btnVer_MouseLeave(object sender, EventArgs e)
+        {
+            btnVer.BackColor = Color.FromArgb(40, 40, 40);
+            pVer.Visible = false;
+        }
+        private void btnContabilidad_MouseEnter(object sender, EventArgs e)
+        {
+            Negocio.FFormatoSistema.ColorMDI(btnContabilidad);
+            pContabilidad.Visible = true;
+        }
+        private void btnContabilidad_MouseLeave(object sender, EventArgs e)
+        {
+            btnContabilidad.BackColor = Color.FromArgb(40, 40, 40);
+            pContabilidad.Visible = false;
+        }
+        private void btnMantenimiento_MouseEnter(object sender, EventArgs e)
+        {
+            Negocio.FFormatoSistema.ColorMDI(btnMantenimiento);
+            pMantenimiento.Visible = true;
+        }
+        private void btnMantenimiento_MouseLeave(object sender, EventArgs e)
+        {
+            btnMantenimiento.BackColor = Color.FromArgb(40, 40, 40);
+            pMantenimiento.Visible = false;
+        }
+        private void btnAyuda_MouseEnter(object sender, EventArgs e)
+        {
+            Negocio.FFormatoSistema.ColorMDI(btnAyuda);
+            pAyuda.Visible = true;
+        }
+        private void btnAyuda_MouseLeave(object sender, EventArgs e)
+        {
+            btnAyuda.BackColor = Color.FromArgb(40, 40, 40);
+            pAyuda.Visible = false;
         }
         //
 
@@ -264,6 +331,7 @@ namespace SistemaContable
             btnArchivos.Visible = true;
             btnArchivos.BringToFront();
             btnArchivos2.Visible = false;
+            pArchivos2.Visible = false;
         }
 
         private void Menu_Ver_Closed(object sender, ToolStripDropDownClosedEventArgs e)
@@ -271,6 +339,7 @@ namespace SistemaContable
             btnVer.Visible = true;
             btnVer.BringToFront();
             btnVer2.Visible = false;
+            pVer2.Visible = false;
         }
 
         private void Menu_Contabilidad_Closed(object sender, ToolStripDropDownClosedEventArgs e)
@@ -278,6 +347,7 @@ namespace SistemaContable
             btnContabilidad.Visible = true;
             btnContabilidad.BringToFront();
             btnContabilidad2.Visible = false;
+            pContabilidad2.Visible = false;
         }
 
         private void Menu_Mantenimiento_Closed(object sender, ToolStripDropDownClosedEventArgs e)
@@ -285,6 +355,7 @@ namespace SistemaContable
             btnMantenimiento.Visible = true;
             btnMantenimiento.BringToFront();
             btnMantenimiento2.Visible = false;
+            pMantenimiento2.Visible = false;
         }
 
         private void Menu_Ayuda_Closed(object sender, ToolStripDropDownClosedEventArgs e)
@@ -292,6 +363,7 @@ namespace SistemaContable
             btnAyuda.Visible = true;
             btnAyuda.BringToFront();
             btnAyuda2.Visible = false;
+            pAyuda2.Visible = false;
         }
         //
 
@@ -502,18 +574,18 @@ namespace SistemaContable
         //30
         private void movimientoDeAsientos_Click(object sender, EventArgs e)
         {
-            frmAsientosContables asientocontable = new frmAsientosContables();
-            Negocio.FGenerales.ManejarFormularios(asientocontable, this, pbLogo, movimientoDeAsientos.Tag.ToString());
+            frmAsientosContables frm = new frmAsientosContables();
+            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, movimientoDeAsientos.Tag.ToString());
         }
         private void actualizaciónMA_Click(object sender, EventArgs e)
         {
-            frmEncabezadodeModelos encabezadodemodelos = new frmEncabezadodeModelos();
-            Negocio.FGenerales.Mostrarfrm(encabezadodemodelos, actualizaciónMA.Tag.ToString());
+            frmEncabezadodeModelos frm = new frmEncabezadodeModelos();
+            Negocio.FGenerales.Mostrarfrm(frm, actualizaciónMA.Tag.ToString());
         }
         private void detalleDeModelos_Click(object sender, EventArgs e)
         {
-            frmDetalledeModelos detalledemodelos = new frmDetalledeModelos();
-            Negocio.FGenerales.Mostrarfrm(detalledemodelos, detalleDeModelos.Tag.ToString());
+            frmDetalledeModelos frm = new frmDetalledeModelos();
+            Negocio.FGenerales.Mostrarfrm(frm, detalleDeModelos.Tag.ToString());
         }
         private void renumeraciónDeAsientos_Click(object sender, EventArgs e)
         {
@@ -521,13 +593,13 @@ namespace SistemaContable
         }
         private void libroDiario_Click(object sender, EventArgs e)
         {
-            frmLibroDiario OlibroDiario = new frmLibroDiario();
-            Negocio.FGenerales.Mostrarfrm(OlibroDiario, libroDiario.Tag.ToString());
+            frmLibroDiario frm = new frmLibroDiario();
+            Negocio.FGenerales.Mostrarfrm(frm, libroDiario.Tag.ToString());
         }
         private void libroMayor_Click(object sender, EventArgs e)
         {
-            frmLibroMayor OlibroMayor = new frmLibroMayor();
-            Negocio.FGenerales.Mostrarfrm(OlibroMayor, libroMayor.Tag.ToString());
+            frmLibroMayor frm = new frmLibroMayor();
+            Negocio.FGenerales.Mostrarfrm(frm, libroMayor.Tag.ToString());
         }
         private void libroMayorGrupo_Click(object sender, EventArgs e)
         {
@@ -551,13 +623,13 @@ namespace SistemaContable
         }
         private void actualizaciónDI_Click(object sender, EventArgs e)
         {
-            frmDefiniciondeInformes definiciondeinformes = new frmDefiniciondeInformes();
-            Negocio.FGenerales.Mostrarfrm(definiciondeinformes, actualizaciónDI.Tag.ToString());
+            frmDefiniciondeInformes frm = new frmDefiniciondeInformes();
+            Negocio.FGenerales.Mostrarfrm(frm, actualizaciónDI.Tag.ToString());
         }
         private void detalleInforme_Click(object sender, EventArgs e)
         {
-            frmDetalledeInformes detalledeInformes = new frmDetalledeInformes();
-            Negocio.FGenerales.Mostrarfrm(detalledeInformes, detalleInforme.Tag.ToString());
+            frmDetalledeInformes frm = new frmDetalledeInformes();
+            Negocio.FGenerales.Mostrarfrm(frm, detalleInforme.Tag.ToString());
         }
         private void informe_Click(object sender, EventArgs e)
         {
@@ -568,78 +640,65 @@ namespace SistemaContable
 
         }
         //40
-
         private void empresa_Click(object sender, EventArgs e)
         {
             frmEmpresa frm = new frmEmpresa();
             Negocio.FGenerales.Mostrarfrm(frm, empresa.Tag.ToString());
         }
-
         private void definición_Click(object sender, EventArgs e)
         {
             frmUsuarios frm = new frmUsuarios();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, definición.Tag.ToString());
         }
-
         private void modificaciónDeContraseña_Click(object sender, EventArgs e)
         {
             frmModificarContra frm = new frmModificarContra();
             Negocio.FGenerales.Mostrarfrm(frm, modificaciónDeContraseña.Tag.ToString());
         }
-
         private void ejercicioContable_Click(object sender, EventArgs e)
         {
             frmEjercicioContable frm = new frmEjercicioContable();
             Negocio.FGenerales.Mostrarfrm(frm, ejercicioContable.Tag.ToString());
         }
-
         private void planDeCuentas_Click(object sender, EventArgs e)
         {
             frmPlanDeCuentas frm = new frmPlanDeCuentas();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, planDeCuentas.Tag.ToString());
         }
-
         private void conceptosContables_Click(object sender, EventArgs e)
         {
             frmConceptosContables frm = new frmConceptosContables();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, conceptosContables.Tag.ToString());
         }
-
         private void rubrosContables_Click(object sender, EventArgs e)
         {
             frmRubrosContables frm = new frmRubrosContables();
             Negocio.FGenerales.Mostrarfrm(frm, rubrosContables.Tag.ToString());
         }
-
         private void coeficienteDeAjuste_Click(object sender, EventArgs e)
         {
             frmCoeficienteDeAjuste frm = new frmCoeficienteDeAjuste();
             Negocio.FGenerales.Mostrarfrm(frm, coeficienteDeAjuste.Tag.ToString());
         }
-
         private void centroDeCosto_Click(object sender, EventArgs e)
         {
             frmCentrodeCostos frm = new frmCentrodeCostos();
             Negocio.FGenerales.Mostrarfrm(frm, centroDeCosto.Tag.ToString());
         }
-
         private void rubricaciónDeSubDiarios_Click(object sender, EventArgs e)
         {
             
         }
-
         private void agenda_Click(object sender, EventArgs e)
         {
             frmAgenda frm = new frmAgenda();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, agenda.Tag.ToString());
         }
-
         private void parametrosContables_Click(object sender, EventArgs e)
         {
             frmParametrosContables frm = new frmParametrosContables();
             Negocio.FGenerales.Mostrarfrm(frm, parametrosContables.Tag.ToString());
         }
-
         private void configurarImpresora_Click(object sender, EventArgs e)
         {
             PrintDialog printDialog1 = new PrintDialog();

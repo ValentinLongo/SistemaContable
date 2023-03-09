@@ -34,13 +34,11 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -59,26 +57,28 @@
             this.CircleProgress = new Bunifu.UI.WinForms.BunifuCircleProgress();
             this.tAparece = new System.Windows.Forms.Timer(this.components);
             this.tDesaparece = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel13);
             this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -123,16 +123,6 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Contable";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox2.Location = new System.Drawing.Point(444, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(156, 77);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -176,16 +166,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Sistema";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
@@ -224,7 +204,7 @@
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.White;
-            this.panel15.Location = new System.Drawing.Point(315, 29);
+            this.panel15.Location = new System.Drawing.Point(317, 29);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(1, 225);
             this.panel15.TabIndex = 43;
@@ -255,9 +235,9 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(24, 208);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(175, 16);
+            this.label7.Size = new System.Drawing.Size(186, 16);
             this.label7.TabIndex = 40;
-            this.label7.Text = "Plataforma: windows 7/10/11";
+            this.label7.Text = "Plataforma: windows 7/8/10/11";
             // 
             // label6
             // 
@@ -296,18 +276,18 @@
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(0, 2);
+            this.panel11.Location = new System.Drawing.Point(0, 1);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(2, 291);
+            this.panel11.Size = new System.Drawing.Size(2, 292);
             this.panel11.TabIndex = 36;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(598, 2);
+            this.panel10.Location = new System.Drawing.Point(598, 1);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(2, 291);
+            this.panel10.Size = new System.Drawing.Size(2, 292);
             this.panel10.TabIndex = 35;
             // 
             // panel8
@@ -325,7 +305,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(600, 2);
+            this.panel3.Size = new System.Drawing.Size(600, 1);
             this.panel3.TabIndex = 33;
             // 
             // label2
@@ -363,7 +343,7 @@
             this.CircleProgress.IsPercentage = true;
             this.CircleProgress.LineProgressThickness = 10;
             this.CircleProgress.LineThickness = 10;
-            this.CircleProgress.Location = new System.Drawing.Point(322, 9);
+            this.CircleProgress.Location = new System.Drawing.Point(319, 9);
             this.CircleProgress.Name = "CircleProgress";
             this.CircleProgress.ProgressAnimationSpeed = 200;
             this.CircleProgress.ProgressBackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -382,9 +362,10 @@
             this.CircleProgress.SuperScriptMargin = new System.Windows.Forms.Padding(5, 50, 0, 0);
             this.CircleProgress.SuperScriptText = "%";
             this.CircleProgress.TabIndex = 16;
-            this.CircleProgress.Text = "0";
+            this.CircleProgress.Text = "30";
             this.CircleProgress.TextMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.CircleProgress.ValueByTransition = 0;
+            this.CircleProgress.Value = 30;
+            this.CircleProgress.ValueByTransition = 30;
             this.CircleProgress.ValueMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             // 
             // tAparece
@@ -396,6 +377,32 @@
             // 
             this.tDesaparece.Interval = 30;
             this.tDesaparece.Tick += new System.EventHandler(this.tDesaparece_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(445, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(147, 100);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 59;
+            this.pictureBox2.TabStop = false;
             // 
             // frmCarga
             // 
@@ -411,10 +418,10 @@
             this.Text = "frmCarga";
             this.Load += new System.EventHandler(this.frmCarga_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,13 +433,11 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
@@ -451,5 +456,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
