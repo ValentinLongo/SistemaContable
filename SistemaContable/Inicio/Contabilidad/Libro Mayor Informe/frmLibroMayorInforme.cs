@@ -1,5 +1,4 @@
 ﻿using SistemaContable.General;
-using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaContable.Inicio.Contabilidad.LibroMayor
+namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
 {
-    public partial class frmLibroMayor : Form
+    public partial class frmLibroMayorInforme : Form
     {
-        public frmLibroMayor()
+        public frmLibroMayorInforme()
         {
             InitializeComponent();
         }
@@ -30,14 +29,14 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
             }
         }
 
-        private void btnBuscarCuenta_Click(object sender, EventArgs e)
+        private void btnBuscarModelo_Click(object sender, EventArgs e)
         {
-            frmBuscarCuenta buscarCuenta = new frmBuscarCuenta("Cuenta");
-            buscarCuenta.ShowDialog();
-            if (frmBuscarCuenta.IdCuenta > 0)
+            frmConsultaGeneral consultaGeneral = new frmConsultaGeneral("*", "Balance", "", "", "frmModelos");
+            consultaGeneral.ShowDialog();
+            if(Convert.ToInt32(frmConsultaGeneral.codigoCG) > 0)
             {
-                tbIdCuenta.Text = frmBuscarCuenta.IdCuenta.ToString();
-                tbDescriCuenta.Text = frmBuscarCuenta.DescriCuenta;
+                tbIdModelo.Text = frmConsultaGeneral.codigoCG.ToString();
+                tbDescriModelo.Text = frmConsultaGeneral.descripcionCG;
             }
         }
     }

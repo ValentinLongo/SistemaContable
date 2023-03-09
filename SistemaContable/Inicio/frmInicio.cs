@@ -40,6 +40,8 @@ using Negocio.Funciones.Mantenimiento;
 using System.Drawing.Printing;
 using SistemaContable.Inicio.Contabilidad.Libro_Diario;
 using SistemaContable.Inicio.Contabilidad.LibroMayor;
+using SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo;
+using SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe;
 
 namespace SistemaContable
 {
@@ -531,11 +533,14 @@ namespace SistemaContable
         }
         private void libroMayorGrupo_Click(object sender, EventArgs e)
         {
+            frmLibroMayorGrupo OlibroMayor = new frmLibroMayorGrupo();
+            Negocio.FGenerales.Mostrarfrm(OlibroMayor, libroMayorGrupo.Tag.ToString());
 
         }
         private void libroMayorInforme_Click(object sender, EventArgs e)
         {
-
+            frmLibroMayorInforme OlibroMayor = new frmLibroMayorInforme();
+            Negocio.FGenerales.Mostrarfrm(OlibroMayor, libroMayorInforme.Tag.ToString());
         }
         private void saldosYAjustados_Click(object sender, EventArgs e)
         {
