@@ -49,7 +49,7 @@ namespace Negocio
             //Fields
             var graph = e.Graphics;
             var arrowSize = new Size(5, 12);
-            var arrowColor = e.Item.Selected ? Color.White : primaryColor;
+            var arrowColor = e.Item.Selected ? Color.White : Color.White;
             var rect = new Rectangle(e.ArrowRectangle.Location.X, (e.ArrowRectangle.Height - arrowSize.Height) / 2,
                 arrowSize.Width, arrowSize.Height);
             using (GraphicsPath path = new GraphicsPath())

@@ -947,6 +947,30 @@
   <ItemGroup>
     <None Include="Resources\sobre.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llave2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llave21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llave3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contraseña.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contabilidad5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contabilidad21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contabilidad31.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

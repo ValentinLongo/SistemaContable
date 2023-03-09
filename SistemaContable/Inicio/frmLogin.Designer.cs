@@ -33,17 +33,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
             this.label3 = new System.Windows.Forms.Label();
             this.txtConstrasenia = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pbVisibilidad = new System.Windows.Forms.PictureBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pbOcultar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -54,27 +49,32 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.pbOcultar = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbVisibilidad = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ShapeContra = new Bunifu.UI.WinForms.BunifuShapes();
             this.ShapeUsuario = new Bunifu.UI.WinForms.BunifuShapes();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Controls.Add(this.panel1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(366, 167);
+            this.panel5.Size = new System.Drawing.Size(366, 172);
             this.panel5.TabIndex = 16;
             this.panel5.Tag = "3";
             // 
@@ -86,7 +86,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(366, 21);
+            this.panel1.Size = new System.Drawing.Size(366, 25);
             this.panel1.TabIndex = 12;
             this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -96,7 +96,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(3, 2);
+            this.label4.Location = new System.Drawing.Point(3, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 17);
             this.label4.TabIndex = 30;
@@ -131,7 +131,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(342, 1);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(342, 3);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = false;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -164,16 +164,6 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(66, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 127);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnAcceder
             // 
             this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -183,14 +173,14 @@
             this.btnAcceder.BorderSize = 0;
             this.btnAcceder.FlatAppearance.BorderSize = 0;
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcceder.Font = new System.Drawing.Font("Dotum", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceder.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAcceder.Location = new System.Drawing.Point(32, 258);
+            this.btnAcceder.Location = new System.Drawing.Point(32, 259);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(303, 39);
             this.btnAcceder.TabIndex = 2;
             this.btnAcceder.Tag = "";
-            this.btnAcceder.Text = "Acceder";
+            this.btnAcceder.Text = "Ingresar";
             this.btnAcceder.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
@@ -198,21 +188,21 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(93, 19);
+            this.label3.Location = new System.Drawing.Point(99, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 24);
+            this.label3.Size = new System.Drawing.Size(170, 23);
             this.label3.TabIndex = 18;
             this.label3.Text = "Inicio de Sesión";
             // 
             // txtConstrasenia
             // 
-            this.txtConstrasenia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtConstrasenia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
             this.txtConstrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConstrasenia.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConstrasenia.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtConstrasenia.Location = new System.Drawing.Point(86, 195);
+            this.txtConstrasenia.Location = new System.Drawing.Point(86, 192);
             this.txtConstrasenia.MaxLength = 32766;
             this.txtConstrasenia.Name = "txtConstrasenia";
             this.txtConstrasenia.PasswordChar = '*';
@@ -223,35 +213,14 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(85, 216);
+            this.panel4.Location = new System.Drawing.Point(85, 213);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(195, 1);
             this.panel4.TabIndex = 15;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::SistemaContable.Properties.Resources.icons8_candado_2_30;
-            this.pictureBox3.Location = new System.Drawing.Point(53, 185);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pbVisibilidad
-            // 
-            this.pbVisibilidad.Image = global::SistemaContable.Properties.Resources.visible;
-            this.pbVisibilidad.Location = new System.Drawing.Point(286, 187);
-            this.pbVisibilidad.Name = "pbVisibilidad";
-            this.pbVisibilidad.Size = new System.Drawing.Size(27, 30);
-            this.pbVisibilidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbVisibilidad.TabIndex = 24;
-            this.pbVisibilidad.TabStop = false;
-            this.pbVisibilidad.Click += new System.EventHandler(this.pbVisibilidad_Click);
-            // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.Window;
@@ -269,56 +238,34 @@
             this.panel3.Size = new System.Drawing.Size(229, 1);
             this.panel3.TabIndex = 14;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SistemaContable.Properties.Resources.icons8_usuario_30;
-            this.pictureBox2.Location = new System.Drawing.Point(53, 86);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pbOcultar
-            // 
-            this.pbOcultar.Image = global::SistemaContable.Properties.Resources.ocultar;
-            this.pbOcultar.Location = new System.Drawing.Point(286, 187);
-            this.pbOcultar.Name = "pbOcultar";
-            this.pbOcultar.Size = new System.Drawing.Size(27, 30);
-            this.pbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbOcultar.TabIndex = 25;
-            this.pbOcultar.TabStop = false;
-            this.pbOcultar.Visible = false;
-            this.pbOcultar.Click += new System.EventHandler(this.pbOcultar_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Dotum", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(39, 59);
+            this.label1.Location = new System.Drawing.Point(39, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 15);
+            this.label1.Size = new System.Drawing.Size(57, 11);
             this.label1.TabIndex = 31;
             this.label1.Text = "USUARIO";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Dotum", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(39, 155);
+            this.label2.Location = new System.Drawing.Point(39, 159);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 15);
+            this.label2.Size = new System.Drawing.Size(83, 11);
             this.label2.TabIndex = 32;
             this.label2.Text = "CONTRASEÑA";
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel7.Location = new System.Drawing.Point(283, 33);
+            this.panel7.Location = new System.Drawing.Point(273, 33);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(70, 1);
+            this.panel7.Size = new System.Drawing.Size(80, 1);
             this.panel7.TabIndex = 35;
             // 
             // panel8
@@ -331,7 +278,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
             this.panel6.Controls.Add(this.panel2);
             this.panel6.Controls.Add(this.panel12);
             this.panel6.Controls.Add(this.panel11);
@@ -354,9 +301,9 @@
             this.panel6.Controls.Add(this.ShapeContra);
             this.panel6.Controls.Add(this.ShapeUsuario);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 167);
+            this.panel6.Location = new System.Drawing.Point(0, 172);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(366, 314);
+            this.panel6.Size = new System.Drawing.Size(366, 309);
             this.panel6.TabIndex = 0;
             this.panel6.Tag = "2";
             // 
@@ -401,6 +348,49 @@
             this.panel9.Size = new System.Drawing.Size(1, 248);
             this.panel9.TabIndex = 39;
             // 
+            // pbOcultar
+            // 
+            this.pbOcultar.Image = global::SistemaContable.Properties.Resources.ocultar;
+            this.pbOcultar.Location = new System.Drawing.Point(293, 187);
+            this.pbOcultar.Name = "pbOcultar";
+            this.pbOcultar.Size = new System.Drawing.Size(27, 30);
+            this.pbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbOcultar.TabIndex = 25;
+            this.pbOcultar.TabStop = false;
+            this.pbOcultar.Visible = false;
+            this.pbOcultar.Click += new System.EventHandler(this.pbOcultar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SistemaContable.Properties.Resources.icons8_usuario_30;
+            this.pictureBox2.Location = new System.Drawing.Point(53, 91);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(27, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pbVisibilidad
+            // 
+            this.pbVisibilidad.Image = global::SistemaContable.Properties.Resources.visible;
+            this.pbVisibilidad.Location = new System.Drawing.Point(293, 187);
+            this.pbVisibilidad.Name = "pbVisibilidad";
+            this.pbVisibilidad.Size = new System.Drawing.Size(27, 30);
+            this.pbVisibilidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbVisibilidad.TabIndex = 24;
+            this.pbVisibilidad.TabStop = false;
+            this.pbVisibilidad.Click += new System.EventHandler(this.pbVisibilidad_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SistemaContable.Properties.Resources.icons8_candado_2_30;
+            this.pictureBox3.Location = new System.Drawing.Point(53, 187);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(27, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
             // ShapeContra
             // 
             this.ShapeContra.Angle = 0F;
@@ -431,6 +421,19 @@
             this.ShapeUsuario.Size = new System.Drawing.Size(303, 75);
             this.ShapeUsuario.TabIndex = 37;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(341, 118);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 59;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,25 +445,24 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
-            this.Opacity = 0.9D;
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
@@ -487,6 +489,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
