@@ -301,10 +301,22 @@
     <Compile Include="Inicio\Contabilidad\Libro Diario\frmLibroDiario.Designer.cs">
       <DependentUpon>frmLibroDiario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\LibroMayor\frmLibroMayor.cs">
+    <Compile Include="Inicio\Contabilidad\Libro Mayor Grupo\frmLibroMayorGrupo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\LibroMayor\frmLibroMayor.Designer.cs">
+    <Compile Include="Inicio\Contabilidad\Libro Mayor Grupo\frmLibroMayorGrupo.Designer.cs">
+      <DependentUpon>frmLibroMayorGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Libro Mayor Informe\frmLibroMayorInforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Libro Mayor Informe\frmLibroMayorInforme.Designer.cs">
+      <DependentUpon>frmLibroMayorInforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Libro Mayor\frmLibroMayor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Libro Mayor\frmLibroMayor.Designer.cs">
       <DependentUpon>frmLibroMayor.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Contabilidad\Modelos de Asientos\Detalle de Modelos\frmAddModDetdeModelos.cs">
@@ -615,7 +627,13 @@
     <EmbeddedResource Include="Inicio\Contabilidad\Libro Diario\frmLibroDiario.resx">
       <DependentUpon>frmLibroDiario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Contabilidad\LibroMayor\frmLibroMayor.resx">
+    <EmbeddedResource Include="Inicio\Contabilidad\Libro Mayor Grupo\frmLibroMayorGrupo.resx">
+      <DependentUpon>frmLibroMayorGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Libro Mayor Informe\frmLibroMayorInforme.resx">
+      <DependentUpon>frmLibroMayorInforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Libro Mayor\frmLibroMayor.resx">
       <DependentUpon>frmLibroMayor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Modelos de Asientos\Detalle de Modelos\frmAddModDetdeModelos.resx">

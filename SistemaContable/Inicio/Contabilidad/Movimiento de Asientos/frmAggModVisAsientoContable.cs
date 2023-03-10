@@ -421,8 +421,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnModelo_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral frm = new frmConsultaGeneral();
-            frm.ArmarDGV("mod_codigo, mod_descri", "ModeloEncab", "", "ORDER BY mod_codigo", "frmAggModVisAsientoContable");
+            frmConsultaGeneral frm = new frmConsultaGeneral("mod_codigo, mod_descri", "ModeloEncab", "", "ORDER BY mod_codigo", "frmAggModVisAsientoContable");
+            //frm.ArmarDGV("mod_codigo, mod_descri", "ModeloEncab", "", "ORDER BY mod_codigo", "frmAggModVisAsientoContable");
             frm.ShowDialog();
             string codigoCG = frmConsultaGeneral.codigoCG;
             if (codigoCG != null)

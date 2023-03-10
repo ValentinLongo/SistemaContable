@@ -23,10 +23,11 @@ namespace SistemaContable.General
         private static string whe; //where
         private static string ord; //orden
         private static string columna;
-        public frmConsultaGeneral()
+        public frmConsultaGeneral(string asterisco, string tabla, string where, string orden, string frm)
         {
             InitializeComponent();
             cbBusqueda.SelectedIndex = 0;
+            ArmarDGV(asterisco, tabla, where, orden, frm);
         }
 
         public void ArmarDGV(string asterisco, string tabla, string where, string orden, string frm) //frm = desde que formulario fue llamado

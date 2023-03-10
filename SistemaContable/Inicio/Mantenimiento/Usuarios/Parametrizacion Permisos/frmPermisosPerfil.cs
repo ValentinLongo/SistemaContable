@@ -37,8 +37,8 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral consultageneral = new frmConsultaGeneral();
-            consultageneral.ArmarDGV("per_codigo as Codigo, per_descri as Descripcion", "Perfil", "", "ORDER BY per_codigo","frmPermisosPerfil");
+            frmConsultaGeneral consultageneral = new frmConsultaGeneral("per_codigo as Codigo, per_descri as Descripcion", "Perfil", "", "ORDER BY per_codigo", "frmPermisosPerfil");
+            //consultageneral.ArmarDGV("per_codigo as Codigo, per_descri as Descripcion", "Perfil", "", "ORDER BY per_codigo","frmPermisosPerfil");
             consultageneral.ShowDialog();
 
             string cod = frmConsultaGeneral.codigoCG;
@@ -49,8 +49,6 @@ namespace SistemaContable.Parametrizacion_Permisos
                 txtNroPerfil.Text = cod.ToString();
                 txtDescriPerfil.Text = descri;
             }
-
-            //
 
             ArmarArbol(txtNroPerfil.Text);
         }
