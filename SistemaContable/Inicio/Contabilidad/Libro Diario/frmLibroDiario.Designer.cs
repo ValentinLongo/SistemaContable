@@ -57,6 +57,10 @@
             this.dtHasta = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,15 +75,16 @@
             this.panel1.Size = new System.Drawing.Size(547, 21);
             this.panel1.TabIndex = 16;
             this.panel1.Tag = "1";
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(3, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.Size = new System.Drawing.Size(111, 15);
             this.label1.TabIndex = 30;
             this.label1.Text = "Libro Diario (Reporte)";
             // 
@@ -150,7 +155,7 @@
             this.Mensaje.AutoSize = true;
             this.Mensaje.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Mensaje.Location = new System.Drawing.Point(18, 42);
+            this.Mensaje.Location = new System.Drawing.Point(124, 37);
             this.Mensaje.Name = "Mensaje";
             this.Mensaje.Size = new System.Drawing.Size(57, 17);
             this.Mensaje.TabIndex = 18;
@@ -161,7 +166,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(28, 77);
+            this.label2.Location = new System.Drawing.Point(134, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 19;
@@ -172,7 +177,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(32, 110);
+            this.label3.Location = new System.Drawing.Point(138, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 20;
@@ -181,10 +186,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(42, 144);
+            this.label13.Location = new System.Drawing.Point(158, 141);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 13);
+            this.label13.Size = new System.Drawing.Size(113, 16);
             this.label13.TabIndex = 105;
             this.label13.Text = "Informe Detallado";
             // 
@@ -206,7 +212,7 @@
             this.ChechInfDet.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.ChechInfDet.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChechInfDet.CustomCheckmarkImage = null;
-            this.ChechInfDet.Location = new System.Drawing.Point(22, 140);
+            this.ChechInfDet.Location = new System.Drawing.Point(138, 140);
             this.ChechInfDet.MinimumSize = new System.Drawing.Size(17, 17);
             this.ChechInfDet.Name = "ChechInfDet";
             this.ChechInfDet.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -244,10 +250,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(42, 167);
+            this.label4.Location = new System.Drawing.Point(158, 164);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 13);
+            this.label4.Size = new System.Drawing.Size(153, 16);
             this.label4.TabIndex = 107;
             this.label4.Text = "Informe Agrupado Diario";
             // 
@@ -269,7 +276,7 @@
             this.CheckInfAgDi.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInfAgDi.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInfAgDi.CustomCheckmarkImage = null;
-            this.CheckInfAgDi.Location = new System.Drawing.Point(22, 163);
+            this.CheckInfAgDi.Location = new System.Drawing.Point(138, 163);
             this.CheckInfAgDi.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInfAgDi.Name = "CheckInfAgDi";
             this.CheckInfAgDi.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -307,10 +314,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(42, 190);
+            this.label5.Location = new System.Drawing.Point(158, 187);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 13);
+            this.label5.Size = new System.Drawing.Size(168, 16);
             this.label5.TabIndex = 109;
             this.label5.Text = "Informe Agrupado Mensual";
             // 
@@ -332,7 +340,7 @@
             this.CheckInfAgMen.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInfAgMen.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInfAgMen.CustomCheckmarkImage = null;
-            this.CheckInfAgMen.Location = new System.Drawing.Point(22, 186);
+            this.CheckInfAgMen.Location = new System.Drawing.Point(138, 186);
             this.CheckInfAgMen.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInfAgMen.Name = "CheckInfAgMen";
             this.CheckInfAgMen.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -370,10 +378,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(41, 343);
+            this.label6.Location = new System.Drawing.Point(157, 342);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(213, 13);
+            this.label6.Size = new System.Drawing.Size(268, 16);
             this.label6.TabIndex = 118;
             this.label6.Text = "Impresion Sin Encabezado (Con Nº de folio)";
             // 
@@ -395,7 +404,7 @@
             this.CheckImpSinEnNF.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckImpSinEnNF.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckImpSinEnNF.CustomCheckmarkImage = null;
-            this.CheckImpSinEnNF.Location = new System.Drawing.Point(21, 339);
+            this.CheckImpSinEnNF.Location = new System.Drawing.Point(137, 341);
             this.CheckImpSinEnNF.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckImpSinEnNF.Name = "CheckImpSinEnNF";
             this.CheckImpSinEnNF.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -433,10 +442,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(41, 320);
+            this.label7.Location = new System.Drawing.Point(157, 319);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 13);
+            this.label7.Size = new System.Drawing.Size(168, 16);
             this.label7.TabIndex = 116;
             this.label7.Text = "Impresion Sin Encabezado";
             // 
@@ -458,7 +468,7 @@
             this.CheckImpSinEnc.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckImpSinEnc.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckImpSinEnc.CustomCheckmarkImage = null;
-            this.CheckImpSinEnc.Location = new System.Drawing.Point(21, 316);
+            this.CheckImpSinEnc.Location = new System.Drawing.Point(137, 318);
             this.CheckImpSinEnc.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckImpSinEnc.Name = "CheckImpSinEnc";
             this.CheckImpSinEnc.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -496,10 +506,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(41, 297);
+            this.label8.Location = new System.Drawing.Point(157, 296);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 13);
+            this.label8.Size = new System.Drawing.Size(116, 16);
             this.label8.TabIndex = 114;
             this.label8.Text = "Impresion Standar";
             // 
@@ -521,7 +532,7 @@
             this.CheckImpStandar.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckImpStandar.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckImpStandar.CustomCheckmarkImage = null;
-            this.CheckImpStandar.Location = new System.Drawing.Point(21, 293);
+            this.CheckImpStandar.Location = new System.Drawing.Point(137, 295);
             this.CheckImpStandar.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckImpStandar.Name = "CheckImpStandar";
             this.CheckImpStandar.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -561,7 +572,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(3, 264);
+            this.label9.Location = new System.Drawing.Point(105, 258);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 17);
             this.label9.TabIndex = 112;
@@ -572,7 +583,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(22, 228);
+            this.label10.Location = new System.Drawing.Point(124, 226);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 17);
             this.label10.TabIndex = 111;
@@ -580,36 +591,52 @@
             // 
             // tbIdEjercicio
             // 
-            this.tbIdEjercicio.Location = new System.Drawing.Point(75, 41);
+            this.tbIdEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbIdEjercicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbIdEjercicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIdEjercicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbIdEjercicio.Location = new System.Drawing.Point(181, 36);
             this.tbIdEjercicio.Name = "tbIdEjercicio";
-            this.tbIdEjercicio.Size = new System.Drawing.Size(78, 20);
+            this.tbIdEjercicio.Size = new System.Drawing.Size(78, 15);
             this.tbIdEjercicio.TabIndex = 119;
             // 
             // tbDescriEjercicio
             // 
-            this.tbDescriEjercicio.Location = new System.Drawing.Point(159, 41);
+            this.tbDescriEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbDescriEjercicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescriEjercicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDescriEjercicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbDescriEjercicio.Location = new System.Drawing.Point(265, 36);
             this.tbDescriEjercicio.Name = "tbDescriEjercicio";
-            this.tbDescriEjercicio.Size = new System.Drawing.Size(314, 20);
+            this.tbDescriEjercicio.Size = new System.Drawing.Size(208, 15);
             this.tbDescriEjercicio.TabIndex = 120;
             // 
             // tbLibroN
             // 
-            this.tbLibroN.Location = new System.Drawing.Point(75, 227);
+            this.tbLibroN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbLibroN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLibroN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLibroN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbLibroN.Location = new System.Drawing.Point(177, 225);
             this.tbLibroN.Name = "tbLibroN";
-            this.tbLibroN.Size = new System.Drawing.Size(65, 20);
+            this.tbLibroN.Size = new System.Drawing.Size(65, 15);
             this.tbLibroN.TabIndex = 121;
             // 
             // tbFolioInicial
             // 
-            this.tbFolioInicial.Location = new System.Drawing.Point(75, 263);
+            this.tbFolioInicial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbFolioInicial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbFolioInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFolioInicial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbFolioInicial.Location = new System.Drawing.Point(177, 257);
             this.tbFolioInicial.Name = "tbFolioInicial";
-            this.tbFolioInicial.Size = new System.Drawing.Size(65, 20);
+            this.tbFolioInicial.Size = new System.Drawing.Size(65, 15);
             this.tbFolioInicial.TabIndex = 122;
             // 
             // dtDesde
             // 
             this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDesde.Location = new System.Drawing.Point(75, 76);
+            this.dtDesde.Location = new System.Drawing.Point(181, 67);
             this.dtDesde.Name = "dtDesde";
             this.dtDesde.Size = new System.Drawing.Size(101, 20);
             this.dtDesde.TabIndex = 123;
@@ -617,19 +644,22 @@
             // dtHasta
             // 
             this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtHasta.Location = new System.Drawing.Point(75, 109);
+            this.dtHasta.Location = new System.Drawing.Point(181, 100);
             this.dtHasta.Name = "dtHasta";
             this.dtHasta.Size = new System.Drawing.Size(101, 20);
             this.dtHasta.TabIndex = 124;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(479, 39);
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::SistemaContable.Properties.Resources.binocular2;
+            this.btnBuscar.Location = new System.Drawing.Point(477, 34);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(18, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(25, 23);
             this.btnBuscar.TabIndex = 125;
-            this.btnBuscar.Text = "button1";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnConfirmar
@@ -641,23 +671,63 @@
             this.btnConfirmar.BorderSize = 0;
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(211, 382);
+            this.btnConfirmar.Location = new System.Drawing.Point(198, 376);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(121, 26);
+            this.btnConfirmar.Size = new System.Drawing.Size(151, 38);
             this.btnConfirmar.TabIndex = 126;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConfirmar.UseVisualStyleBackColor = false;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(177, 274);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(65, 1);
+            this.panel3.TabIndex = 167;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(177, 242);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(65, 1);
+            this.panel2.TabIndex = 168;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(265, 53);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(206, 1);
+            this.panel4.TabIndex = 169;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel5.Location = new System.Drawing.Point(181, 53);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(78, 1);
+            this.panel5.TabIndex = 170;
+            // 
             // frmLibroDiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(547, 425);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dtHasta);
@@ -725,5 +795,9 @@
         private System.Windows.Forms.DateTimePicker dtHasta;
         private System.Windows.Forms.Button btnBuscar;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }

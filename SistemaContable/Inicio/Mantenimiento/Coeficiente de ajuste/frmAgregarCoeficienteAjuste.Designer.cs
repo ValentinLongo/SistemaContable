@@ -55,7 +55,7 @@
             // 
             // maskPeriodo
             // 
-            this.maskPeriodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.maskPeriodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.maskPeriodo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskPeriodo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.maskPeriodo.Location = new System.Drawing.Point(94, 41);
@@ -183,7 +183,7 @@
             // tbCoeficiente
             // 
             this.tbCoeficiente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbCoeficiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbCoeficiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbCoeficiente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCoeficiente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbCoeficiente.Location = new System.Drawing.Point(105, 68);
@@ -218,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(327, 165);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panel2);

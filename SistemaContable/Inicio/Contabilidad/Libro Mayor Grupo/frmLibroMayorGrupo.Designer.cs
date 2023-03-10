@@ -51,6 +51,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuCheckBox4 = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,15 +71,16 @@
             this.panel1.Size = new System.Drawing.Size(558, 21);
             this.panel1.TabIndex = 18;
             this.panel1.Tag = "1";
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Location = new System.Drawing.Point(3, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 13);
+            this.label1.Size = new System.Drawing.Size(112, 15);
             this.label1.TabIndex = 30;
             this.label1.Text = "Libro Mayor (Reporte)";
             // 
@@ -141,26 +148,35 @@
             // 
             // btnBuscarCuenta
             // 
-            this.btnBuscarCuenta.Location = new System.Drawing.Point(484, 75);
+            this.btnBuscarCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscarCuenta.FlatAppearance.BorderSize = 0;
+            this.btnBuscarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCuenta.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta.Image")));
+            this.btnBuscarCuenta.Location = new System.Drawing.Point(511, 74);
             this.btnBuscarCuenta.Name = "btnBuscarCuenta";
-            this.btnBuscarCuenta.Size = new System.Drawing.Size(18, 23);
+            this.btnBuscarCuenta.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta.TabIndex = 141;
-            this.btnBuscarCuenta.Text = "button1";
-            this.btnBuscarCuenta.UseVisualStyleBackColor = true;
+            this.btnBuscarCuenta.UseVisualStyleBackColor = false;
             this.btnBuscarCuenta.Click += new System.EventHandler(this.btnBuscarCuenta_Click);
             // 
             // tbDescriCuenta
             // 
-            this.tbDescriCuenta.Location = new System.Drawing.Point(164, 77);
+            this.tbDescriCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbDescriCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescriCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbDescriCuenta.Location = new System.Drawing.Point(191, 77);
             this.tbDescriCuenta.Name = "tbDescriCuenta";
-            this.tbDescriCuenta.Size = new System.Drawing.Size(314, 20);
+            this.tbDescriCuenta.Size = new System.Drawing.Size(314, 13);
             this.tbDescriCuenta.TabIndex = 140;
             // 
             // tbIdCuenta
             // 
-            this.tbIdCuenta.Location = new System.Drawing.Point(80, 77);
+            this.tbIdCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbIdCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbIdCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbIdCuenta.Location = new System.Drawing.Point(99, 77);
             this.tbIdCuenta.Name = "tbIdCuenta";
-            this.tbIdCuenta.Size = new System.Drawing.Size(78, 20);
+            this.tbIdCuenta.Size = new System.Drawing.Size(78, 13);
             this.tbIdCuenta.TabIndex = 139;
             // 
             // label2
@@ -168,7 +184,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(23, 78);
+            this.label2.Location = new System.Drawing.Point(42, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 138;
@@ -176,26 +192,35 @@
             // 
             // btnBuscarEjercicio
             // 
-            this.btnBuscarEjercicio.Location = new System.Drawing.Point(484, 40);
+            this.btnBuscarEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscarEjercicio.FlatAppearance.BorderSize = 0;
+            this.btnBuscarEjercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarEjercicio.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarEjercicio.Image")));
+            this.btnBuscarEjercicio.Location = new System.Drawing.Point(511, 39);
             this.btnBuscarEjercicio.Name = "btnBuscarEjercicio";
-            this.btnBuscarEjercicio.Size = new System.Drawing.Size(18, 23);
+            this.btnBuscarEjercicio.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarEjercicio.TabIndex = 137;
-            this.btnBuscarEjercicio.Text = "button1";
-            this.btnBuscarEjercicio.UseVisualStyleBackColor = true;
+            this.btnBuscarEjercicio.UseVisualStyleBackColor = false;
             this.btnBuscarEjercicio.Click += new System.EventHandler(this.btnBuscarEjercicio_Click);
             // 
             // tbDescriEjercicio
             // 
-            this.tbDescriEjercicio.Location = new System.Drawing.Point(164, 42);
+            this.tbDescriEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbDescriEjercicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescriEjercicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbDescriEjercicio.Location = new System.Drawing.Point(191, 42);
             this.tbDescriEjercicio.Name = "tbDescriEjercicio";
-            this.tbDescriEjercicio.Size = new System.Drawing.Size(314, 20);
+            this.tbDescriEjercicio.Size = new System.Drawing.Size(314, 13);
             this.tbDescriEjercicio.TabIndex = 136;
             // 
             // tbIdEjercicio
             // 
-            this.tbIdEjercicio.Location = new System.Drawing.Point(80, 42);
+            this.tbIdEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbIdEjercicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbIdEjercicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbIdEjercicio.Location = new System.Drawing.Point(99, 42);
             this.tbIdEjercicio.Name = "tbIdEjercicio";
-            this.tbIdEjercicio.Size = new System.Drawing.Size(78, 20);
+            this.tbIdEjercicio.Size = new System.Drawing.Size(78, 13);
             this.tbIdEjercicio.TabIndex = 135;
             // 
             // Mensaje
@@ -203,7 +228,7 @@
             this.Mensaje.AutoSize = true;
             this.Mensaje.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Mensaje.Location = new System.Drawing.Point(23, 43);
+            this.Mensaje.Location = new System.Drawing.Point(42, 42);
             this.Mensaje.Name = "Mensaje";
             this.Mensaje.Size = new System.Drawing.Size(57, 17);
             this.Mensaje.TabIndex = 134;
@@ -211,26 +236,35 @@
             // 
             // btnBuscarCuenta2
             // 
-            this.btnBuscarCuenta2.Location = new System.Drawing.Point(484, 110);
+            this.btnBuscarCuenta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscarCuenta2.FlatAppearance.BorderSize = 0;
+            this.btnBuscarCuenta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCuenta2.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta2.Image")));
+            this.btnBuscarCuenta2.Location = new System.Drawing.Point(511, 109);
             this.btnBuscarCuenta2.Name = "btnBuscarCuenta2";
-            this.btnBuscarCuenta2.Size = new System.Drawing.Size(18, 23);
+            this.btnBuscarCuenta2.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta2.TabIndex = 145;
-            this.btnBuscarCuenta2.Text = "button1";
-            this.btnBuscarCuenta2.UseVisualStyleBackColor = true;
+            this.btnBuscarCuenta2.UseVisualStyleBackColor = false;
             this.btnBuscarCuenta2.Click += new System.EventHandler(this.btnBuscarCuenta2_Click);
             // 
             // tbDescriCuenta2
             // 
-            this.tbDescriCuenta2.Location = new System.Drawing.Point(164, 112);
+            this.tbDescriCuenta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbDescriCuenta2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescriCuenta2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbDescriCuenta2.Location = new System.Drawing.Point(191, 112);
             this.tbDescriCuenta2.Name = "tbDescriCuenta2";
-            this.tbDescriCuenta2.Size = new System.Drawing.Size(314, 20);
+            this.tbDescriCuenta2.Size = new System.Drawing.Size(314, 13);
             this.tbDescriCuenta2.TabIndex = 144;
             // 
             // tbIdCuenta2
             // 
-            this.tbIdCuenta2.Location = new System.Drawing.Point(80, 112);
+            this.tbIdCuenta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbIdCuenta2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbIdCuenta2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbIdCuenta2.Location = new System.Drawing.Point(99, 112);
             this.tbIdCuenta2.Name = "tbIdCuenta2";
-            this.tbIdCuenta2.Size = new System.Drawing.Size(78, 20);
+            this.tbIdCuenta2.Size = new System.Drawing.Size(78, 13);
             this.tbIdCuenta2.TabIndex = 143;
             // 
             // label3
@@ -238,7 +272,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(23, 113);
+            this.label3.Location = new System.Drawing.Point(42, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 142;
@@ -247,7 +281,7 @@
             // dtHasta
             // 
             this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtHasta.Location = new System.Drawing.Point(81, 179);
+            this.dtHasta.Location = new System.Drawing.Point(99, 179);
             this.dtHasta.Name = "dtHasta";
             this.dtHasta.Size = new System.Drawing.Size(101, 20);
             this.dtHasta.TabIndex = 149;
@@ -255,7 +289,7 @@
             // dtDesde
             // 
             this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDesde.Location = new System.Drawing.Point(81, 146);
+            this.dtDesde.Location = new System.Drawing.Point(99, 146);
             this.dtDesde.Name = "dtDesde";
             this.dtDesde.Size = new System.Drawing.Size(101, 20);
             this.dtDesde.TabIndex = 148;
@@ -265,7 +299,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(31, 179);
+            this.label6.Location = new System.Drawing.Point(49, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 147;
@@ -276,7 +310,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(27, 146);
+            this.label7.Location = new System.Drawing.Point(45, 146);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 17);
             this.label7.TabIndex = 146;
@@ -285,10 +319,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(56, 216);
+            this.label9.Location = new System.Drawing.Point(192, 225);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(175, 13);
+            this.label9.Size = new System.Drawing.Size(222, 16);
             this.label9.TabIndex = 155;
             this.label9.Text = "Visualizar únicamente Comprobante";
             // 
@@ -310,7 +345,7 @@
             this.bunifuCheckBox4.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.bunifuCheckBox4.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox4.CustomCheckmarkImage = null;
-            this.bunifuCheckBox4.Location = new System.Drawing.Point(36, 212);
+            this.bunifuCheckBox4.Location = new System.Drawing.Point(172, 223);
             this.bunifuCheckBox4.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox4.Name = "bunifuCheckBox4";
             this.bunifuCheckBox4.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -354,23 +389,83 @@
             this.btnConfirmar.BorderSize = 0;
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(219, 255);
+            this.btnConfirmar.Location = new System.Drawing.Point(208, 255);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(121, 26);
+            this.btnConfirmar.Size = new System.Drawing.Size(144, 43);
             this.btnConfirmar.TabIndex = 156;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConfirmar.UseVisualStyleBackColor = false;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(191, 127);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(314, 1);
+            this.panel3.TabIndex = 166;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(191, 57);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(314, 1);
+            this.panel2.TabIndex = 167;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(191, 92);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(314, 1);
+            this.panel4.TabIndex = 168;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel5.Location = new System.Drawing.Point(100, 127);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(78, 1);
+            this.panel5.TabIndex = 169;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.Location = new System.Drawing.Point(99, 57);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(78, 1);
+            this.panel6.TabIndex = 170;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel7.Location = new System.Drawing.Point(99, 92);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(78, 1);
+            this.panel7.TabIndex = 171;
+            // 
             // frmLibroMayorGrupo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(558, 310);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.bunifuCheckBox4);
@@ -426,5 +521,11 @@
         private System.Windows.Forms.Label label9;
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox4;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
     }
 }

@@ -167,7 +167,7 @@
             // tbCodigo
             // 
             this.tbCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbCodigo.Location = new System.Drawing.Point(100, 30);
@@ -197,7 +197,7 @@
             // tbDescripción
             // 
             this.tbDescripción.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbDescripción.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbDescripción.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDescripción.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescripción.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbDescripción.Location = new System.Drawing.Point(96, 60);
@@ -218,7 +218,7 @@
             // tbNroCuenta
             // 
             this.tbNroCuenta.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbNroCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbNroCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbNroCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNroCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbNroCuenta.Location = new System.Drawing.Point(97, 97);
@@ -239,7 +239,7 @@
             // tbDescriCuenta
             // 
             this.tbDescriCuenta.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbDescriCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbDescriCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDescriCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescriCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbDescriCuenta.Location = new System.Drawing.Point(181, 97);
@@ -260,7 +260,7 @@
             // tbDescriContrapartida
             // 
             this.tbDescriContrapartida.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbDescriContrapartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbDescriContrapartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDescriContrapartida.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescriContrapartida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbDescriContrapartida.Location = new System.Drawing.Point(180, 176);
@@ -281,7 +281,7 @@
             // tbNumContrapartida
             // 
             this.tbNumContrapartida.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbNumContrapartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbNumContrapartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbNumContrapartida.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNumContrapartida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbNumContrapartida.Location = new System.Drawing.Point(96, 176);
@@ -292,7 +292,7 @@
             // 
             // cbCentroCostos2
             // 
-            this.cbCentroCostos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.cbCentroCostos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbCentroCostos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCentroCostos2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCentroCostos2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -304,7 +304,7 @@
             // 
             // cbCentroCostos1
             // 
-            this.cbCentroCostos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.cbCentroCostos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbCentroCostos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCentroCostos1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCentroCostos1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -690,7 +690,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(469, 450);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.label10);

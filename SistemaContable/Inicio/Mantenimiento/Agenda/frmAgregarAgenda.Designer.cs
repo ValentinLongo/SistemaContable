@@ -284,7 +284,7 @@
             // tbObserv
             // 
             this.tbObserv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbObserv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbObserv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbObserv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbObserv.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbObserv.Location = new System.Drawing.Point(162, 350);
@@ -296,7 +296,7 @@
             // 
             // cbActividad
             // 
-            this.cbActividad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.cbActividad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbActividad.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActividad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -395,7 +395,7 @@
             // tbWeb
             // 
             this.tbWeb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbWeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbWeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbWeb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbWeb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbWeb.Location = new System.Drawing.Point(162, 312);
@@ -417,7 +417,7 @@
             // tbMail
             // 
             this.tbMail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbMail.Location = new System.Drawing.Point(162, 272);
@@ -439,7 +439,7 @@
             // tbTel
             // 
             this.tbTel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbTel.Location = new System.Drawing.Point(162, 193);
@@ -461,7 +461,7 @@
             // tbCel
             // 
             this.tbCel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbCel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbCel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbCel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbCel.Location = new System.Drawing.Point(162, 234);
@@ -483,7 +483,7 @@
             // tbNombre
             // 
             this.tbNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbNombre.Location = new System.Drawing.Point(162, 76);
@@ -505,7 +505,7 @@
             // tbDireccion
             // 
             this.tbDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDireccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbDireccion.Location = new System.Drawing.Point(162, 117);
@@ -527,7 +527,7 @@
             // tbCodigo
             // 
             this.tbCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbCodigo.Location = new System.Drawing.Point(162, 38);
@@ -550,7 +550,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(474, 553);
             this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.panel10);
@@ -590,6 +590,7 @@
             this.Controls.Add(this.lblObservaciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAgregarAgenda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarAgenda";
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

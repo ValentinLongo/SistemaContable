@@ -281,7 +281,7 @@
             // 
             // tbContraActual
             // 
-            this.tbContraActual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbContraActual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbContraActual.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbContraActual.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbContraActual.Location = new System.Drawing.Point(177, 95);
@@ -300,7 +300,7 @@
             // 
             // tbNuevaContra
             // 
-            this.tbNuevaContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbNuevaContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbNuevaContra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNuevaContra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbNuevaContra.Location = new System.Drawing.Point(177, 173);
@@ -319,7 +319,7 @@
             // 
             // tbConfNuevaContra
             // 
-            this.tbConfNuevaContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tbConfNuevaContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbConfNuevaContra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbConfNuevaContra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbConfNuevaContra.Location = new System.Drawing.Point(177, 206);
@@ -332,7 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(418, 319);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.tbConfNuevaContra);

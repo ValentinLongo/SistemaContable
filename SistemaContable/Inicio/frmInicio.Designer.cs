@@ -75,6 +75,7 @@
             this.btnVer2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnArchivos2 = new RJCodeAdvance.RJControls.RJButton();
             this.PanelMenu = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pContabilidad2 = new System.Windows.Forms.Panel();
             this.pVer2 = new System.Windows.Forms.Panel();
             this.pAyuda2 = new System.Windows.Forms.Panel();
@@ -144,7 +145,6 @@
             this.agenda = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrosContables = new System.Windows.Forms.ToolStripMenuItem();
             this.configurarImpresora = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
             this.toolStripADs.SuspendLayout();
             this.panel5.SuspendLayout();
             this.PanelMenu.SuspendLayout();
@@ -249,6 +249,7 @@
             this.tsbLibroDiario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbLibroDiario.Name = "tsbLibroDiario";
             this.tsbLibroDiario.Tag = "3008";
+            this.tsbLibroDiario.Click += new System.EventHandler(this.tsbLibroDiario_Click);
             // 
             // tsbLibroMayor
             // 
@@ -256,6 +257,7 @@
             this.tsbLibroMayor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbLibroMayor.Name = "tsbLibroMayor";
             this.tsbLibroMayor.Tag = "3010";
+            this.tsbLibroMayor.Click += new System.EventHandler(this.tsbLibroMayor_Click);
             // 
             // tsbBalanceDeSumasySaldos
             // 
@@ -645,6 +647,12 @@
             this.PanelMenu.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Quality = 10;
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Name = "label2";
             // 
             // pContabilidad2
             // 
@@ -1252,12 +1260,6 @@
             resources.ApplyResources(this.configurarImpresora, "configurarImpresora");
             this.configurarImpresora.Tag = "4014";
             this.configurarImpresora.Click += new System.EventHandler(this.configurarImpresora_Click);
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Name = "label2";
             // 
             // frmInicio
             // 

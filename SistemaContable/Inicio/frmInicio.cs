@@ -63,9 +63,9 @@ namespace SistemaContable
         private void frmInicio_MdiChildActivate(object sender, EventArgs e)
         {
             //cambiar
-            borde1.BackColor = Color.FromArgb(255, 45, 45, 45);
-            borde2.BackColor = Color.FromArgb(255, 45, 45, 45);
-            borde3.BackColor = Color.FromArgb(255, 45, 45, 45);
+            borde1.BackColor = Color.FromArgb(255, 50, 50, 50);
+            borde2.BackColor = Color.FromArgb(255, 50, 50, 50);
+            borde3.BackColor = Color.FromArgb(255, 50, 50, 50);
         }
 
         private void DatosUsuEmp() 
@@ -167,6 +167,18 @@ namespace SistemaContable
         {
             frmAsientosContables frm = new frmAsientosContables();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMovimientodeAsientos.Tag.ToString());
+        }
+
+        private void tsbLibroDiario_Click(object sender, EventArgs e)
+        {
+            frmLibroDiario frm = new frmLibroDiario();
+            Negocio.FGenerales.Mostrarfrm(frm, libroDiario.Tag.ToString());
+        }
+
+        private void tsbLibroMayor_Click(object sender, EventArgs e)
+        {
+            frmLibroMayor frm = new frmLibroMayor();
+            Negocio.FGenerales.Mostrarfrm(frm, libroMayor.Tag.ToString());
         }
 
         private void tsbBlockdeNotas_Click(object sender, EventArgs e)
@@ -605,14 +617,14 @@ namespace SistemaContable
         }
         private void libroMayorGrupo_Click(object sender, EventArgs e)
         {
-            frmLibroMayorGrupo OlibroMayor = new frmLibroMayorGrupo();
-            Negocio.FGenerales.Mostrarfrm(OlibroMayor, libroMayorGrupo.Tag.ToString());
+            frmLibroMayorGrupo frm = new frmLibroMayorGrupo();
+            Negocio.FGenerales.Mostrarfrm(frm, libroMayorGrupo.Tag.ToString());
 
         }
         private void libroMayorInforme_Click(object sender, EventArgs e)
         {
-            frmLibroMayorInforme OlibroMayor = new frmLibroMayorInforme();
-            Negocio.FGenerales.Mostrarfrm(OlibroMayor, libroMayorInforme.Tag.ToString());
+            frmLibroMayorInforme frm = new frmLibroMayorInforme();
+            Negocio.FGenerales.Mostrarfrm(frm, libroMayorInforme.Tag.ToString());
         }
         private void saldosYAjustados_Click(object sender, EventArgs e)
         {

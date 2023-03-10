@@ -45,6 +45,12 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -56,12 +62,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ShapeContra = new Bunifu.UI.WinForms.BunifuShapes();
             this.ShapeUsuario = new Bunifu.UI.WinForms.BunifuShapes();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -113,11 +113,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 16);
+            this.label4.Size = new System.Drawing.Size(148, 17);
             this.label4.TabIndex = 30;
             this.label4.Text = "Sistema Contable - LOGIN";
             // 
@@ -332,6 +332,54 @@
             this.panel6.TabIndex = 0;
             this.panel6.Tag = "2";
             // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.White;
+            this.panel18.Location = new System.Drawing.Point(39, 292);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(10, 1);
+            this.panel18.TabIndex = 50;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.White;
+            this.panel17.Location = new System.Drawing.Point(39, 263);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(10, 1);
+            this.panel17.TabIndex = 49;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Location = new System.Drawing.Point(319, 292);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(10, 1);
+            this.panel14.TabIndex = 48;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Location = new System.Drawing.Point(319, 263);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(10, 1);
+            this.panel13.TabIndex = 47;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.Location = new System.Drawing.Point(38, 263);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(1, 30);
+            this.panel16.TabIndex = 46;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.Location = new System.Drawing.Point(329, 263);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(1, 30);
+            this.panel15.TabIndex = 45;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -445,54 +493,6 @@
             this.ShapeUsuario.Sides = 5;
             this.ShapeUsuario.Size = new System.Drawing.Size(303, 75);
             this.ShapeUsuario.TabIndex = 37;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.White;
-            this.panel15.Location = new System.Drawing.Point(324, 263);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1, 30);
-            this.panel15.TabIndex = 45;
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.White;
-            this.panel16.Location = new System.Drawing.Point(43, 263);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(1, 30);
-            this.panel16.TabIndex = 46;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(314, 263);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(10, 1);
-            this.panel13.TabIndex = 47;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Location = new System.Drawing.Point(314, 292);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(10, 1);
-            this.panel14.TabIndex = 48;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.White;
-            this.panel17.Location = new System.Drawing.Point(44, 263);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(10, 1);
-            this.panel17.TabIndex = 49;
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.White;
-            this.panel18.Location = new System.Drawing.Point(44, 292);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(10, 1);
-            this.panel18.TabIndex = 50;
             // 
             // frmLogin
             // 

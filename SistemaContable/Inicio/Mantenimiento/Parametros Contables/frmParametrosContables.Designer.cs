@@ -205,13 +205,17 @@
             this.par_ctaCIIVA3 = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.par_ctaAjusteInf3 = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(30, 10);
+            this.label1.Location = new System.Drawing.Point(30, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 13);
             this.label1.TabIndex = 0;
@@ -221,7 +225,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(30, 37);
+            this.label2.Location = new System.Drawing.Point(30, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 13);
             this.label2.TabIndex = 1;
@@ -231,7 +235,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(30, 64);
+            this.label3.Location = new System.Drawing.Point(30, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 13);
             this.label3.TabIndex = 2;
@@ -241,7 +245,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(83, 91);
+            this.label4.Location = new System.Drawing.Point(83, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 13);
             this.label4.TabIndex = 3;
@@ -251,7 +255,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(78, 118);
+            this.label5.Location = new System.Drawing.Point(78, 143);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 13);
             this.label5.TabIndex = 4;
@@ -261,7 +265,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(75, 145);
+            this.label6.Location = new System.Drawing.Point(75, 170);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 13);
             this.label6.TabIndex = 5;
@@ -271,7 +275,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(44, 172);
+            this.label7.Location = new System.Drawing.Point(44, 197);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(176, 13);
             this.label7.TabIndex = 6;
@@ -281,7 +285,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(81, 199);
+            this.label8.Location = new System.Drawing.Point(81, 224);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(139, 13);
             this.label8.TabIndex = 7;
@@ -291,7 +295,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(88, 226);
+            this.label9.Location = new System.Drawing.Point(88, 251);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 13);
             this.label9.TabIndex = 8;
@@ -301,7 +305,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(85, 254);
+            this.label10.Location = new System.Drawing.Point(85, 279);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(135, 13);
             this.label10.TabIndex = 9;
@@ -311,7 +315,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(39, 281);
+            this.label11.Location = new System.Drawing.Point(39, 306);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(181, 13);
             this.label11.TabIndex = 10;
@@ -321,7 +325,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(86, 306);
+            this.label12.Location = new System.Drawing.Point(86, 331);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(134, 13);
             this.label12.TabIndex = 11;
@@ -331,7 +335,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(58, 334);
+            this.label13.Location = new System.Drawing.Point(58, 359);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(162, 13);
             this.label13.TabIndex = 12;
@@ -341,7 +345,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(37, 361);
+            this.label14.Location = new System.Drawing.Point(37, 386);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(183, 13);
             this.label14.TabIndex = 13;
@@ -351,7 +355,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label15.Location = new System.Drawing.Point(40, 388);
+            this.label15.Location = new System.Drawing.Point(40, 413);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(180, 13);
             this.label15.TabIndex = 14;
@@ -361,7 +365,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label16.Location = new System.Drawing.Point(72, 415);
+            this.label16.Location = new System.Drawing.Point(72, 440);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(148, 13);
             this.label16.TabIndex = 15;
@@ -371,7 +375,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label17.Location = new System.Drawing.Point(32, 497);
+            this.label17.Location = new System.Drawing.Point(32, 522);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(188, 13);
             this.label17.TabIndex = 18;
@@ -381,7 +385,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label18.Location = new System.Drawing.Point(32, 469);
+            this.label18.Location = new System.Drawing.Point(32, 494);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(188, 13);
             this.label18.TabIndex = 17;
@@ -391,7 +395,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(32, 442);
+            this.label19.Location = new System.Drawing.Point(32, 467);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(188, 13);
             this.label19.TabIndex = 16;
@@ -401,7 +405,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label20.Location = new System.Drawing.Point(50, 605);
+            this.label20.Location = new System.Drawing.Point(50, 630);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(170, 13);
             this.label20.TabIndex = 22;
@@ -411,7 +415,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label21.Location = new System.Drawing.Point(13, 578);
+            this.label21.Location = new System.Drawing.Point(13, 603);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(207, 13);
             this.label21.TabIndex = 21;
@@ -421,7 +425,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label22.Location = new System.Drawing.Point(44, 550);
+            this.label22.Location = new System.Drawing.Point(44, 575);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(176, 13);
             this.label22.TabIndex = 20;
@@ -431,7 +435,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label23.Location = new System.Drawing.Point(47, 525);
+            this.label23.Location = new System.Drawing.Point(47, 550);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(173, 13);
             this.label23.TabIndex = 19;
@@ -441,7 +445,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label24.Location = new System.Drawing.Point(56, 632);
+            this.label24.Location = new System.Drawing.Point(56, 657);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(164, 13);
             this.label24.TabIndex = 23;
@@ -451,7 +455,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label25.Location = new System.Drawing.Point(67, 660);
+            this.label25.Location = new System.Drawing.Point(67, 685);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(153, 13);
             this.label25.TabIndex = 25;
@@ -461,7 +465,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label26.Location = new System.Drawing.Point(73, 686);
+            this.label26.Location = new System.Drawing.Point(73, 711);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(147, 13);
             this.label26.TabIndex = 26;
@@ -471,7 +475,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label27.Location = new System.Drawing.Point(65, 713);
+            this.label27.Location = new System.Drawing.Point(65, 738);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(155, 13);
             this.label27.TabIndex = 27;
@@ -481,7 +485,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label28.Location = new System.Drawing.Point(41, 740);
+            this.label28.Location = new System.Drawing.Point(41, 765);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(179, 13);
             this.label28.TabIndex = 28;
@@ -491,7 +495,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label29.Location = new System.Drawing.Point(82, 767);
+            this.label29.Location = new System.Drawing.Point(82, 792);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(138, 13);
             this.label29.TabIndex = 29;
@@ -501,7 +505,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label30.Location = new System.Drawing.Point(55, 794);
+            this.label30.Location = new System.Drawing.Point(55, 819);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(165, 13);
             this.label30.TabIndex = 30;
@@ -511,7 +515,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label31.Location = new System.Drawing.Point(24, 823);
+            this.label31.Location = new System.Drawing.Point(24, 848);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(196, 13);
             this.label31.TabIndex = 31;
@@ -521,7 +525,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label32.Location = new System.Drawing.Point(44, 849);
+            this.label32.Location = new System.Drawing.Point(44, 874);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(177, 13);
             this.label32.TabIndex = 32;
@@ -531,7 +535,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label33.Location = new System.Drawing.Point(0, 875);
+            this.label33.Location = new System.Drawing.Point(0, 900);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(220, 13);
             this.label33.TabIndex = 33;
@@ -541,7 +545,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label34.Location = new System.Drawing.Point(6, 903);
+            this.label34.Location = new System.Drawing.Point(6, 928);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(214, 13);
             this.label34.TabIndex = 34;
@@ -551,7 +555,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label35.Location = new System.Drawing.Point(72, 926);
+            this.label35.Location = new System.Drawing.Point(72, 951);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(148, 13);
             this.label35.TabIndex = 35;
@@ -561,7 +565,8 @@
             // 
             this.par_ctaIVA21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA21.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA21.Location = new System.Drawing.Point(229, 11);
+            this.par_ctaIVA21.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA21.Location = new System.Drawing.Point(229, 36);
             this.par_ctaIVA21.Name = "par_ctaIVA21";
             this.par_ctaIVA21.ReadOnly = true;
             this.par_ctaIVA21.Size = new System.Drawing.Size(78, 13);
@@ -571,7 +576,8 @@
             // 
             this.par_ctaIVA211.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA211.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA211.Location = new System.Drawing.Point(315, 11);
+            this.par_ctaIVA211.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA211.Location = new System.Drawing.Point(315, 36);
             this.par_ctaIVA211.Name = "par_ctaIVA211";
             this.par_ctaIVA211.ReadOnly = true;
             this.par_ctaIVA211.Size = new System.Drawing.Size(279, 13);
@@ -583,7 +589,7 @@
             this.par_ctaIVA212.FlatAppearance.BorderSize = 0;
             this.par_ctaIVA212.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaIVA212.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA212.Image")));
-            this.par_ctaIVA212.Location = new System.Drawing.Point(600, 7);
+            this.par_ctaIVA212.Location = new System.Drawing.Point(600, 32);
             this.par_ctaIVA212.Name = "par_ctaIVA212";
             this.par_ctaIVA212.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA212.TabIndex = 38;
@@ -596,7 +602,7 @@
             this.par_ctaIVA102.FlatAppearance.BorderSize = 0;
             this.par_ctaIVA102.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaIVA102.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA102.Image")));
-            this.par_ctaIVA102.Location = new System.Drawing.Point(600, 34);
+            this.par_ctaIVA102.Location = new System.Drawing.Point(600, 59);
             this.par_ctaIVA102.Name = "par_ctaIVA102";
             this.par_ctaIVA102.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA102.TabIndex = 43;
@@ -607,7 +613,8 @@
             // 
             this.par_ctaIVA101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA101.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA101.Location = new System.Drawing.Point(315, 36);
+            this.par_ctaIVA101.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA101.Location = new System.Drawing.Point(315, 61);
             this.par_ctaIVA101.Name = "par_ctaIVA101";
             this.par_ctaIVA101.ReadOnly = true;
             this.par_ctaIVA101.Size = new System.Drawing.Size(279, 13);
@@ -617,7 +624,8 @@
             // 
             this.par_ctaIVA10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA10.Location = new System.Drawing.Point(229, 36);
+            this.par_ctaIVA10.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA10.Location = new System.Drawing.Point(229, 61);
             this.par_ctaIVA10.Name = "par_ctaIVA10";
             this.par_ctaIVA10.ReadOnly = true;
             this.par_ctaIVA10.Size = new System.Drawing.Size(78, 13);
@@ -629,7 +637,7 @@
             this.par_ctaIVA272.FlatAppearance.BorderSize = 0;
             this.par_ctaIVA272.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaIVA272.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA272.Image")));
-            this.par_ctaIVA272.Location = new System.Drawing.Point(600, 59);
+            this.par_ctaIVA272.Location = new System.Drawing.Point(600, 84);
             this.par_ctaIVA272.Name = "par_ctaIVA272";
             this.par_ctaIVA272.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA272.TabIndex = 48;
@@ -640,7 +648,8 @@
             // 
             this.par_ctaIVA271.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA271.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA271.Location = new System.Drawing.Point(315, 61);
+            this.par_ctaIVA271.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA271.Location = new System.Drawing.Point(315, 86);
             this.par_ctaIVA271.Name = "par_ctaIVA271";
             this.par_ctaIVA271.ReadOnly = true;
             this.par_ctaIVA271.Size = new System.Drawing.Size(279, 13);
@@ -650,7 +659,8 @@
             // 
             this.par_ctaIVA27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA27.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA27.Location = new System.Drawing.Point(229, 61);
+            this.par_ctaIVA27.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA27.Location = new System.Drawing.Point(229, 86);
             this.par_ctaIVA27.Name = "par_ctaIVA27";
             this.par_ctaIVA27.ReadOnly = true;
             this.par_ctaIVA27.Size = new System.Drawing.Size(78, 13);
@@ -662,7 +672,7 @@
             this.par_ctaRetIIBB2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetIIBB2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetIIBB2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIIBB2.Image")));
-            this.par_ctaRetIIBB2.Location = new System.Drawing.Point(600, 142);
+            this.par_ctaRetIIBB2.Location = new System.Drawing.Point(600, 167);
             this.par_ctaRetIIBB2.Name = "par_ctaRetIIBB2";
             this.par_ctaRetIIBB2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetIIBB2.TabIndex = 63;
@@ -673,7 +683,8 @@
             // 
             this.par_ctaRetIIBB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetIIBB1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetIIBB1.Location = new System.Drawing.Point(315, 143);
+            this.par_ctaRetIIBB1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetIIBB1.Location = new System.Drawing.Point(315, 168);
             this.par_ctaRetIIBB1.Name = "par_ctaRetIIBB1";
             this.par_ctaRetIIBB1.ReadOnly = true;
             this.par_ctaRetIIBB1.Size = new System.Drawing.Size(279, 13);
@@ -683,7 +694,8 @@
             // 
             this.par_ctaRetIIBB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetIIBB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetIIBB.Location = new System.Drawing.Point(229, 143);
+            this.par_ctaRetIIBB.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetIIBB.Location = new System.Drawing.Point(229, 168);
             this.par_ctaRetIIBB.Name = "par_ctaRetIIBB";
             this.par_ctaRetIIBB.ReadOnly = true;
             this.par_ctaRetIIBB.Size = new System.Drawing.Size(78, 13);
@@ -695,7 +707,7 @@
             this.par_ctaRetIVA2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetIVA2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetIVA2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIVA2.Image")));
-            this.par_ctaRetIVA2.Location = new System.Drawing.Point(600, 116);
+            this.par_ctaRetIVA2.Location = new System.Drawing.Point(600, 141);
             this.par_ctaRetIVA2.Name = "par_ctaRetIVA2";
             this.par_ctaRetIVA2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetIVA2.TabIndex = 58;
@@ -706,7 +718,8 @@
             // 
             this.par_ctaRetIVA1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetIVA1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetIVA1.Location = new System.Drawing.Point(315, 118);
+            this.par_ctaRetIVA1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetIVA1.Location = new System.Drawing.Point(315, 143);
             this.par_ctaRetIVA1.Name = "par_ctaRetIVA1";
             this.par_ctaRetIVA1.ReadOnly = true;
             this.par_ctaRetIVA1.Size = new System.Drawing.Size(279, 13);
@@ -716,7 +729,8 @@
             // 
             this.par_ctaRetIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetIVA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetIVA.Location = new System.Drawing.Point(229, 118);
+            this.par_ctaRetIVA.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetIVA.Location = new System.Drawing.Point(229, 143);
             this.par_ctaRetIVA.Name = "par_ctaRetIVA";
             this.par_ctaRetIVA.ReadOnly = true;
             this.par_ctaRetIVA.Size = new System.Drawing.Size(78, 13);
@@ -728,7 +742,7 @@
             this.par_ctaImpInt2.FlatAppearance.BorderSize = 0;
             this.par_ctaImpInt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaImpInt2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaImpInt2.Image")));
-            this.par_ctaImpInt2.Location = new System.Drawing.Point(600, 87);
+            this.par_ctaImpInt2.Location = new System.Drawing.Point(600, 112);
             this.par_ctaImpInt2.Name = "par_ctaImpInt2";
             this.par_ctaImpInt2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaImpInt2.TabIndex = 53;
@@ -739,7 +753,8 @@
             // 
             this.par_ctaImpInt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaImpInt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaImpInt1.Location = new System.Drawing.Point(315, 89);
+            this.par_ctaImpInt1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaImpInt1.Location = new System.Drawing.Point(315, 114);
             this.par_ctaImpInt1.Name = "par_ctaImpInt1";
             this.par_ctaImpInt1.ReadOnly = true;
             this.par_ctaImpInt1.Size = new System.Drawing.Size(279, 13);
@@ -749,7 +764,8 @@
             // 
             this.par_ctaImpInt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaImpInt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaImpInt.Location = new System.Drawing.Point(229, 89);
+            this.par_ctaImpInt.ForeColor = System.Drawing.Color.White;
+            this.par_ctaImpInt.Location = new System.Drawing.Point(229, 114);
             this.par_ctaImpInt.Name = "par_ctaImpInt";
             this.par_ctaImpInt.ReadOnly = true;
             this.par_ctaImpInt.Size = new System.Drawing.Size(78, 13);
@@ -761,7 +777,7 @@
             this.par_ctaOtrosImp2.FlatAppearance.BorderSize = 0;
             this.par_ctaOtrosImp2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaOtrosImp2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaOtrosImp2.Image")));
-            this.par_ctaOtrosImp2.Location = new System.Drawing.Point(600, 303);
+            this.par_ctaOtrosImp2.Location = new System.Drawing.Point(600, 328);
             this.par_ctaOtrosImp2.Name = "par_ctaOtrosImp2";
             this.par_ctaOtrosImp2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaOtrosImp2.TabIndex = 93;
@@ -772,7 +788,8 @@
             // 
             this.par_ctaOtrosImp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaOtrosImp1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaOtrosImp1.Location = new System.Drawing.Point(315, 306);
+            this.par_ctaOtrosImp1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaOtrosImp1.Location = new System.Drawing.Point(315, 331);
             this.par_ctaOtrosImp1.Name = "par_ctaOtrosImp1";
             this.par_ctaOtrosImp1.ReadOnly = true;
             this.par_ctaOtrosImp1.Size = new System.Drawing.Size(279, 13);
@@ -782,7 +799,8 @@
             // 
             this.par_ctaOtrosImp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaOtrosImp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaOtrosImp.Location = new System.Drawing.Point(229, 306);
+            this.par_ctaOtrosImp.ForeColor = System.Drawing.Color.White;
+            this.par_ctaOtrosImp.Location = new System.Drawing.Point(229, 331);
             this.par_ctaOtrosImp.Name = "par_ctaOtrosImp";
             this.par_ctaOtrosImp.ReadOnly = true;
             this.par_ctaOtrosImp.Size = new System.Drawing.Size(78, 13);
@@ -794,7 +812,7 @@
             this.par_ctaPerGan2.FlatAppearance.BorderSize = 0;
             this.par_ctaPerGan2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaPerGan2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaPerGan2.Image")));
-            this.par_ctaPerGan2.Location = new System.Drawing.Point(600, 277);
+            this.par_ctaPerGan2.Location = new System.Drawing.Point(600, 302);
             this.par_ctaPerGan2.Name = "par_ctaPerGan2";
             this.par_ctaPerGan2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaPerGan2.TabIndex = 88;
@@ -805,7 +823,8 @@
             // 
             this.par_ctaPerGan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaPerGan1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaPerGan1.Location = new System.Drawing.Point(315, 281);
+            this.par_ctaPerGan1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaPerGan1.Location = new System.Drawing.Point(315, 306);
             this.par_ctaPerGan1.Name = "par_ctaPerGan1";
             this.par_ctaPerGan1.ReadOnly = true;
             this.par_ctaPerGan1.Size = new System.Drawing.Size(279, 13);
@@ -815,7 +834,8 @@
             // 
             this.par_ctaPerGan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaPerGan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaPerGan.Location = new System.Drawing.Point(229, 281);
+            this.par_ctaPerGan.ForeColor = System.Drawing.Color.White;
+            this.par_ctaPerGan.Location = new System.Drawing.Point(229, 306);
             this.par_ctaPerGan.Name = "par_ctaPerGan";
             this.par_ctaPerGan.ReadOnly = true;
             this.par_ctaPerGan.Size = new System.Drawing.Size(78, 13);
@@ -827,7 +847,7 @@
             this.par_ctaPerIIBB2.FlatAppearance.BorderSize = 0;
             this.par_ctaPerIIBB2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaPerIIBB2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaPerIIBB2.Image")));
-            this.par_ctaPerIIBB2.Location = new System.Drawing.Point(600, 248);
+            this.par_ctaPerIIBB2.Location = new System.Drawing.Point(600, 273);
             this.par_ctaPerIIBB2.Name = "par_ctaPerIIBB2";
             this.par_ctaPerIIBB2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaPerIIBB2.TabIndex = 83;
@@ -838,7 +858,8 @@
             // 
             this.par_ctaPerIIBB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaPerIIBB1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaPerIIBB1.Location = new System.Drawing.Point(315, 252);
+            this.par_ctaPerIIBB1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaPerIIBB1.Location = new System.Drawing.Point(315, 277);
             this.par_ctaPerIIBB1.Name = "par_ctaPerIIBB1";
             this.par_ctaPerIIBB1.ReadOnly = true;
             this.par_ctaPerIIBB1.Size = new System.Drawing.Size(279, 13);
@@ -848,7 +869,8 @@
             // 
             this.par_ctaPerIIBB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaPerIIBB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaPerIIBB.Location = new System.Drawing.Point(229, 252);
+            this.par_ctaPerIIBB.ForeColor = System.Drawing.Color.White;
+            this.par_ctaPerIIBB.Location = new System.Drawing.Point(229, 277);
             this.par_ctaPerIIBB.Name = "par_ctaPerIIBB";
             this.par_ctaPerIIBB.ReadOnly = true;
             this.par_ctaPerIIBB.Size = new System.Drawing.Size(78, 13);
@@ -860,7 +882,7 @@
             this.par_ctaPerIVA2.FlatAppearance.BorderSize = 0;
             this.par_ctaPerIVA2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaPerIVA2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaPerIVA2.Image")));
-            this.par_ctaPerIVA2.Location = new System.Drawing.Point(600, 221);
+            this.par_ctaPerIVA2.Location = new System.Drawing.Point(600, 246);
             this.par_ctaPerIVA2.Name = "par_ctaPerIVA2";
             this.par_ctaPerIVA2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaPerIVA2.TabIndex = 78;
@@ -871,7 +893,8 @@
             // 
             this.par_ctaPerIVA1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaPerIVA1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaPerIVA1.Location = new System.Drawing.Point(315, 223);
+            this.par_ctaPerIVA1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaPerIVA1.Location = new System.Drawing.Point(315, 248);
             this.par_ctaPerIVA1.Name = "par_ctaPerIVA1";
             this.par_ctaPerIVA1.ReadOnly = true;
             this.par_ctaPerIVA1.Size = new System.Drawing.Size(279, 13);
@@ -881,7 +904,8 @@
             // 
             this.par_ctaPerIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaPerIVA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaPerIVA.Location = new System.Drawing.Point(229, 223);
+            this.par_ctaPerIVA.ForeColor = System.Drawing.Color.White;
+            this.par_ctaPerIVA.Location = new System.Drawing.Point(229, 248);
             this.par_ctaPerIVA.Name = "par_ctaPerIVA";
             this.par_ctaPerIVA.ReadOnly = true;
             this.par_ctaPerIVA.Size = new System.Drawing.Size(78, 13);
@@ -893,7 +917,7 @@
             this.par_ctaRetSUSS2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetSUSS2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetSUSS2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetSUSS2.Image")));
-            this.par_ctaRetSUSS2.Location = new System.Drawing.Point(600, 195);
+            this.par_ctaRetSUSS2.Location = new System.Drawing.Point(600, 220);
             this.par_ctaRetSUSS2.Name = "par_ctaRetSUSS2";
             this.par_ctaRetSUSS2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetSUSS2.TabIndex = 73;
@@ -904,7 +928,8 @@
             // 
             this.par_ctaRetSUSS1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetSUSS1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetSUSS1.Location = new System.Drawing.Point(315, 198);
+            this.par_ctaRetSUSS1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetSUSS1.Location = new System.Drawing.Point(315, 223);
             this.par_ctaRetSUSS1.Name = "par_ctaRetSUSS1";
             this.par_ctaRetSUSS1.ReadOnly = true;
             this.par_ctaRetSUSS1.Size = new System.Drawing.Size(279, 13);
@@ -914,7 +939,8 @@
             // 
             this.par_ctaRetSUSS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetSUSS.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetSUSS.Location = new System.Drawing.Point(229, 198);
+            this.par_ctaRetSUSS.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetSUSS.Location = new System.Drawing.Point(229, 223);
             this.par_ctaRetSUSS.Name = "par_ctaRetSUSS";
             this.par_ctaRetSUSS.ReadOnly = true;
             this.par_ctaRetSUSS.Size = new System.Drawing.Size(78, 13);
@@ -926,7 +952,7 @@
             this.par_ctaRetGan2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetGan2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetGan2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetGan2.Image")));
-            this.par_ctaRetGan2.Location = new System.Drawing.Point(600, 168);
+            this.par_ctaRetGan2.Location = new System.Drawing.Point(600, 193);
             this.par_ctaRetGan2.Name = "par_ctaRetGan2";
             this.par_ctaRetGan2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetGan2.TabIndex = 68;
@@ -937,7 +963,8 @@
             // 
             this.par_ctaRetGan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetGan1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetGan1.Location = new System.Drawing.Point(315, 171);
+            this.par_ctaRetGan1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetGan1.Location = new System.Drawing.Point(315, 196);
             this.par_ctaRetGan1.Name = "par_ctaRetGan1";
             this.par_ctaRetGan1.ReadOnly = true;
             this.par_ctaRetGan1.Size = new System.Drawing.Size(279, 13);
@@ -947,7 +974,8 @@
             // 
             this.par_ctaRetGan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetGan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetGan.Location = new System.Drawing.Point(229, 171);
+            this.par_ctaRetGan.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetGan.Location = new System.Drawing.Point(229, 196);
             this.par_ctaRetGan.Name = "par_ctaRetGan";
             this.par_ctaRetGan.ReadOnly = true;
             this.par_ctaRetGan.Size = new System.Drawing.Size(78, 13);
@@ -959,7 +987,7 @@
             this.par_ctaDescuento2.FlatAppearance.BorderSize = 0;
             this.par_ctaDescuento2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaDescuento2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaDescuento2.Image")));
-            this.par_ctaDescuento2.Location = new System.Drawing.Point(600, 627);
+            this.par_ctaDescuento2.Location = new System.Drawing.Point(600, 652);
             this.par_ctaDescuento2.Name = "par_ctaDescuento2";
             this.par_ctaDescuento2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaDescuento2.TabIndex = 153;
@@ -970,7 +998,8 @@
             // 
             this.par_ctaDescuento1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaDescuento1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaDescuento1.Location = new System.Drawing.Point(315, 631);
+            this.par_ctaDescuento1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaDescuento1.Location = new System.Drawing.Point(315, 656);
             this.par_ctaDescuento1.Name = "par_ctaDescuento1";
             this.par_ctaDescuento1.ReadOnly = true;
             this.par_ctaDescuento1.Size = new System.Drawing.Size(279, 13);
@@ -980,7 +1009,8 @@
             // 
             this.par_ctaDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaDescuento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaDescuento.Location = new System.Drawing.Point(229, 631);
+            this.par_ctaDescuento.ForeColor = System.Drawing.Color.White;
+            this.par_ctaDescuento.Location = new System.Drawing.Point(229, 656);
             this.par_ctaDescuento.Name = "par_ctaDescuento";
             this.par_ctaDescuento.ReadOnly = true;
             this.par_ctaDescuento.Size = new System.Drawing.Size(78, 13);
@@ -992,7 +1022,7 @@
             this.par_ctaRetSUSSP2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetSUSSP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetSUSSP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetSUSSP2.Image")));
-            this.par_ctaRetSUSSP2.Location = new System.Drawing.Point(600, 602);
+            this.par_ctaRetSUSSP2.Location = new System.Drawing.Point(600, 627);
             this.par_ctaRetSUSSP2.Name = "par_ctaRetSUSSP2";
             this.par_ctaRetSUSSP2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetSUSSP2.TabIndex = 148;
@@ -1003,7 +1033,8 @@
             // 
             this.par_ctaRetSUSSP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetSUSSP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetSUSSP1.Location = new System.Drawing.Point(315, 604);
+            this.par_ctaRetSUSSP1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetSUSSP1.Location = new System.Drawing.Point(315, 629);
             this.par_ctaRetSUSSP1.Name = "par_ctaRetSUSSP1";
             this.par_ctaRetSUSSP1.ReadOnly = true;
             this.par_ctaRetSUSSP1.Size = new System.Drawing.Size(279, 13);
@@ -1013,7 +1044,8 @@
             // 
             this.par_ctaRetSUSSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetSUSSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetSUSSP.Location = new System.Drawing.Point(229, 604);
+            this.par_ctaRetSUSSP.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetSUSSP.Location = new System.Drawing.Point(229, 629);
             this.par_ctaRetSUSSP.Name = "par_ctaRetSUSSP";
             this.par_ctaRetSUSSP.ReadOnly = true;
             this.par_ctaRetSUSSP.Size = new System.Drawing.Size(78, 13);
@@ -1025,7 +1057,7 @@
             this.par_ctaRetGanP2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetGanP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetGanP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetGanP2.Image")));
-            this.par_ctaRetGanP2.Location = new System.Drawing.Point(600, 573);
+            this.par_ctaRetGanP2.Location = new System.Drawing.Point(600, 598);
             this.par_ctaRetGanP2.Name = "par_ctaRetGanP2";
             this.par_ctaRetGanP2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetGanP2.TabIndex = 143;
@@ -1036,7 +1068,8 @@
             // 
             this.par_ctaRetGanP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetGanP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetGanP1.Location = new System.Drawing.Point(315, 577);
+            this.par_ctaRetGanP1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetGanP1.Location = new System.Drawing.Point(315, 602);
             this.par_ctaRetGanP1.Name = "par_ctaRetGanP1";
             this.par_ctaRetGanP1.ReadOnly = true;
             this.par_ctaRetGanP1.Size = new System.Drawing.Size(279, 13);
@@ -1046,7 +1079,8 @@
             // 
             this.par_ctaRetGanP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetGanP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetGanP.Location = new System.Drawing.Point(229, 577);
+            this.par_ctaRetGanP.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetGanP.Location = new System.Drawing.Point(229, 602);
             this.par_ctaRetGanP.Name = "par_ctaRetGanP";
             this.par_ctaRetGanP.ReadOnly = true;
             this.par_ctaRetGanP.Size = new System.Drawing.Size(78, 13);
@@ -1058,7 +1092,7 @@
             this.par_ctaRetIIBBP2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetIIBBP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetIIBBP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIIBBP2.Image")));
-            this.par_ctaRetIIBBP2.Location = new System.Drawing.Point(600, 545);
+            this.par_ctaRetIIBBP2.Location = new System.Drawing.Point(600, 570);
             this.par_ctaRetIIBBP2.Name = "par_ctaRetIIBBP2";
             this.par_ctaRetIIBBP2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetIIBBP2.TabIndex = 138;
@@ -1069,7 +1103,8 @@
             // 
             this.par_ctaRetIIBBP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetIIBBP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetIIBBP1.Location = new System.Drawing.Point(315, 547);
+            this.par_ctaRetIIBBP1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetIIBBP1.Location = new System.Drawing.Point(315, 572);
             this.par_ctaRetIIBBP1.Name = "par_ctaRetIIBBP1";
             this.par_ctaRetIIBBP1.ReadOnly = true;
             this.par_ctaRetIIBBP1.Size = new System.Drawing.Size(279, 13);
@@ -1079,7 +1114,8 @@
             // 
             this.par_ctaRetIIBBP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetIIBBP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetIIBBP.Location = new System.Drawing.Point(229, 547);
+            this.par_ctaRetIIBBP.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetIIBBP.Location = new System.Drawing.Point(229, 572);
             this.par_ctaRetIIBBP.Name = "par_ctaRetIIBBP";
             this.par_ctaRetIIBBP.ReadOnly = true;
             this.par_ctaRetIIBBP.Size = new System.Drawing.Size(78, 13);
@@ -1091,7 +1127,7 @@
             this.par_ctaRetIVAP2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetIVAP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetIVAP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIVAP2.Image")));
-            this.par_ctaRetIVAP2.Location = new System.Drawing.Point(600, 520);
+            this.par_ctaRetIVAP2.Location = new System.Drawing.Point(600, 545);
             this.par_ctaRetIVAP2.Name = "par_ctaRetIVAP2";
             this.par_ctaRetIVAP2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetIVAP2.TabIndex = 133;
@@ -1102,7 +1138,8 @@
             // 
             this.par_ctaRetIVAP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetIVAP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetIVAP1.Location = new System.Drawing.Point(315, 522);
+            this.par_ctaRetIVAP1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetIVAP1.Location = new System.Drawing.Point(315, 547);
             this.par_ctaRetIVAP1.Name = "par_ctaRetIVAP1";
             this.par_ctaRetIVAP1.ReadOnly = true;
             this.par_ctaRetIVAP1.Size = new System.Drawing.Size(279, 13);
@@ -1112,7 +1149,8 @@
             // 
             this.par_ctaRetIVAP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetIVAP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetIVAP.Location = new System.Drawing.Point(229, 522);
+            this.par_ctaRetIVAP.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetIVAP.Location = new System.Drawing.Point(229, 547);
             this.par_ctaRetIVAP.Name = "par_ctaRetIVAP";
             this.par_ctaRetIVAP.ReadOnly = true;
             this.par_ctaRetIVAP.Size = new System.Drawing.Size(78, 13);
@@ -1124,7 +1162,7 @@
             this.par_ctaIVA27D2.FlatAppearance.BorderSize = 0;
             this.par_ctaIVA27D2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaIVA27D2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA27D2.Image")));
-            this.par_ctaIVA27D2.Location = new System.Drawing.Point(600, 493);
+            this.par_ctaIVA27D2.Location = new System.Drawing.Point(600, 518);
             this.par_ctaIVA27D2.Name = "par_ctaIVA27D2";
             this.par_ctaIVA27D2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA27D2.TabIndex = 128;
@@ -1135,7 +1173,8 @@
             // 
             this.par_ctaIVA27D1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA27D1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA27D1.Location = new System.Drawing.Point(315, 493);
+            this.par_ctaIVA27D1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA27D1.Location = new System.Drawing.Point(315, 518);
             this.par_ctaIVA27D1.Name = "par_ctaIVA27D1";
             this.par_ctaIVA27D1.ReadOnly = true;
             this.par_ctaIVA27D1.Size = new System.Drawing.Size(279, 13);
@@ -1145,7 +1184,8 @@
             // 
             this.par_ctaIVA27D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA27D.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA27D.Location = new System.Drawing.Point(229, 493);
+            this.par_ctaIVA27D.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA27D.Location = new System.Drawing.Point(229, 518);
             this.par_ctaIVA27D.Name = "par_ctaIVA27D";
             this.par_ctaIVA27D.ReadOnly = true;
             this.par_ctaIVA27D.Size = new System.Drawing.Size(78, 13);
@@ -1157,7 +1197,7 @@
             this.par_ctaIVA10D2.FlatAppearance.BorderSize = 0;
             this.par_ctaIVA10D2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaIVA10D2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA10D2.Image")));
-            this.par_ctaIVA10D2.Location = new System.Drawing.Point(600, 467);
+            this.par_ctaIVA10D2.Location = new System.Drawing.Point(600, 492);
             this.par_ctaIVA10D2.Name = "par_ctaIVA10D2";
             this.par_ctaIVA10D2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA10D2.TabIndex = 123;
@@ -1168,7 +1208,8 @@
             // 
             this.par_ctaIVA10D1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA10D1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA10D1.Location = new System.Drawing.Point(315, 467);
+            this.par_ctaIVA10D1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA10D1.Location = new System.Drawing.Point(315, 492);
             this.par_ctaIVA10D1.Name = "par_ctaIVA10D1";
             this.par_ctaIVA10D1.ReadOnly = true;
             this.par_ctaIVA10D1.Size = new System.Drawing.Size(279, 13);
@@ -1178,7 +1219,8 @@
             // 
             this.par_ctaIVA10D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA10D.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA10D.Location = new System.Drawing.Point(229, 467);
+            this.par_ctaIVA10D.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA10D.Location = new System.Drawing.Point(229, 492);
             this.par_ctaIVA10D.Name = "par_ctaIVA10D";
             this.par_ctaIVA10D.ReadOnly = true;
             this.par_ctaIVA10D.Size = new System.Drawing.Size(78, 13);
@@ -1190,7 +1232,7 @@
             this.par_ctaIVA21D2.FlatAppearance.BorderSize = 0;
             this.par_ctaIVA21D2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaIVA21D2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA21D2.Image")));
-            this.par_ctaIVA21D2.Location = new System.Drawing.Point(600, 442);
+            this.par_ctaIVA21D2.Location = new System.Drawing.Point(600, 467);
             this.par_ctaIVA21D2.Name = "par_ctaIVA21D2";
             this.par_ctaIVA21D2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA21D2.TabIndex = 118;
@@ -1201,7 +1243,8 @@
             // 
             this.par_ctaIVA21D1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA21D1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA21D1.Location = new System.Drawing.Point(315, 442);
+            this.par_ctaIVA21D1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA21D1.Location = new System.Drawing.Point(315, 467);
             this.par_ctaIVA21D1.Name = "par_ctaIVA21D1";
             this.par_ctaIVA21D1.ReadOnly = true;
             this.par_ctaIVA21D1.Size = new System.Drawing.Size(279, 13);
@@ -1211,7 +1254,8 @@
             // 
             this.par_ctaIVA21D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaIVA21D.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaIVA21D.Location = new System.Drawing.Point(229, 442);
+            this.par_ctaIVA21D.ForeColor = System.Drawing.Color.White;
+            this.par_ctaIVA21D.Location = new System.Drawing.Point(229, 467);
             this.par_ctaIVA21D.Name = "par_ctaIVA21D";
             this.par_ctaIVA21D.ReadOnly = true;
             this.par_ctaIVA21D.Size = new System.Drawing.Size(78, 13);
@@ -1223,7 +1267,7 @@
             this.par_ctaDeud2.FlatAppearance.BorderSize = 0;
             this.par_ctaDeud2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaDeud2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaDeud2.Image")));
-            this.par_ctaDeud2.Location = new System.Drawing.Point(600, 412);
+            this.par_ctaDeud2.Location = new System.Drawing.Point(600, 437);
             this.par_ctaDeud2.Name = "par_ctaDeud2";
             this.par_ctaDeud2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaDeud2.TabIndex = 113;
@@ -1234,7 +1278,8 @@
             // 
             this.par_ctaDeud1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaDeud1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaDeud1.Location = new System.Drawing.Point(315, 415);
+            this.par_ctaDeud1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaDeud1.Location = new System.Drawing.Point(315, 440);
             this.par_ctaDeud1.Name = "par_ctaDeud1";
             this.par_ctaDeud1.ReadOnly = true;
             this.par_ctaDeud1.Size = new System.Drawing.Size(279, 13);
@@ -1244,7 +1289,8 @@
             // 
             this.par_ctaDeud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaDeud.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaDeud.Location = new System.Drawing.Point(229, 415);
+            this.par_ctaDeud.ForeColor = System.Drawing.Color.White;
+            this.par_ctaDeud.Location = new System.Drawing.Point(229, 440);
             this.par_ctaDeud.Name = "par_ctaDeud";
             this.par_ctaDeud.ReadOnly = true;
             this.par_ctaDeud.Size = new System.Drawing.Size(78, 13);
@@ -1256,7 +1302,7 @@
             this.par_NetoVtaArti2.FlatAppearance.BorderSize = 0;
             this.par_NetoVtaArti2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_NetoVtaArti2.Image = ((System.Drawing.Image)(resources.GetObject("par_NetoVtaArti2.Image")));
-            this.par_NetoVtaArti2.Location = new System.Drawing.Point(600, 384);
+            this.par_NetoVtaArti2.Location = new System.Drawing.Point(600, 409);
             this.par_NetoVtaArti2.Name = "par_NetoVtaArti2";
             this.par_NetoVtaArti2.Size = new System.Drawing.Size(22, 21);
             this.par_NetoVtaArti2.TabIndex = 108;
@@ -1267,7 +1313,8 @@
             // 
             this.par_NetoVtaArti1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_NetoVtaArti1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_NetoVtaArti1.Location = new System.Drawing.Point(315, 387);
+            this.par_NetoVtaArti1.ForeColor = System.Drawing.Color.White;
+            this.par_NetoVtaArti1.Location = new System.Drawing.Point(315, 412);
             this.par_NetoVtaArti1.Name = "par_NetoVtaArti1";
             this.par_NetoVtaArti1.ReadOnly = true;
             this.par_NetoVtaArti1.Size = new System.Drawing.Size(279, 13);
@@ -1277,7 +1324,8 @@
             // 
             this.par_NetoVtaArti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_NetoVtaArti.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_NetoVtaArti.Location = new System.Drawing.Point(229, 387);
+            this.par_NetoVtaArti.ForeColor = System.Drawing.Color.White;
+            this.par_NetoVtaArti.Location = new System.Drawing.Point(229, 412);
             this.par_NetoVtaArti.Name = "par_NetoVtaArti";
             this.par_NetoVtaArti.ReadOnly = true;
             this.par_NetoVtaArti.Size = new System.Drawing.Size(78, 13);
@@ -1289,7 +1337,7 @@
             this.par_ctaProvGral2.FlatAppearance.BorderSize = 0;
             this.par_ctaProvGral2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaProvGral2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaProvGral2.Image")));
-            this.par_ctaProvGral2.Location = new System.Drawing.Point(600, 359);
+            this.par_ctaProvGral2.Location = new System.Drawing.Point(600, 384);
             this.par_ctaProvGral2.Name = "par_ctaProvGral2";
             this.par_ctaProvGral2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaProvGral2.TabIndex = 103;
@@ -1300,7 +1348,8 @@
             // 
             this.par_ctaProvGral1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaProvGral1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaProvGral1.Location = new System.Drawing.Point(315, 362);
+            this.par_ctaProvGral1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaProvGral1.Location = new System.Drawing.Point(315, 387);
             this.par_ctaProvGral1.Name = "par_ctaProvGral1";
             this.par_ctaProvGral1.ReadOnly = true;
             this.par_ctaProvGral1.Size = new System.Drawing.Size(279, 13);
@@ -1310,7 +1359,8 @@
             // 
             this.par_ctaProvGral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaProvGral.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaProvGral.Location = new System.Drawing.Point(229, 362);
+            this.par_ctaProvGral.ForeColor = System.Drawing.Color.White;
+            this.par_ctaProvGral.Location = new System.Drawing.Point(229, 387);
             this.par_ctaProvGral.Name = "par_ctaProvGral";
             this.par_ctaProvGral.ReadOnly = true;
             this.par_ctaProvGral.Size = new System.Drawing.Size(78, 13);
@@ -1322,7 +1372,7 @@
             this.par_ctaProv2.FlatAppearance.BorderSize = 0;
             this.par_ctaProv2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaProv2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaProv2.Image")));
-            this.par_ctaProv2.Location = new System.Drawing.Point(600, 330);
+            this.par_ctaProv2.Location = new System.Drawing.Point(600, 355);
             this.par_ctaProv2.Name = "par_ctaProv2";
             this.par_ctaProv2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaProv2.TabIndex = 98;
@@ -1333,7 +1383,8 @@
             // 
             this.par_ctaProv1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaProv1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaProv1.Location = new System.Drawing.Point(315, 332);
+            this.par_ctaProv1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaProv1.Location = new System.Drawing.Point(315, 357);
             this.par_ctaProv1.Name = "par_ctaProv1";
             this.par_ctaProv1.ReadOnly = true;
             this.par_ctaProv1.Size = new System.Drawing.Size(279, 13);
@@ -1343,7 +1394,8 @@
             // 
             this.par_ctaProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaProv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaProv.Location = new System.Drawing.Point(229, 332);
+            this.par_ctaProv.ForeColor = System.Drawing.Color.White;
+            this.par_ctaProv.Location = new System.Drawing.Point(229, 357);
             this.par_ctaProv.Name = "par_ctaProv";
             this.par_ctaProv.ReadOnly = true;
             this.par_ctaProv.Size = new System.Drawing.Size(78, 13);
@@ -1355,7 +1407,7 @@
             this.par_ctaDifCambioVta2.FlatAppearance.BorderSize = 0;
             this.par_ctaDifCambioVta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaDifCambioVta2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaDifCambioVta2.Image")));
-            this.par_ctaDifCambioVta2.Location = new System.Drawing.Point(600, 844);
+            this.par_ctaDifCambioVta2.Location = new System.Drawing.Point(600, 869);
             this.par_ctaDifCambioVta2.Name = "par_ctaDifCambioVta2";
             this.par_ctaDifCambioVta2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaDifCambioVta2.TabIndex = 193;
@@ -1366,7 +1418,8 @@
             // 
             this.par_ctaDifCambioVta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaDifCambioVta1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaDifCambioVta1.Location = new System.Drawing.Point(315, 848);
+            this.par_ctaDifCambioVta1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaDifCambioVta1.Location = new System.Drawing.Point(315, 873);
             this.par_ctaDifCambioVta1.Name = "par_ctaDifCambioVta1";
             this.par_ctaDifCambioVta1.ReadOnly = true;
             this.par_ctaDifCambioVta1.Size = new System.Drawing.Size(279, 13);
@@ -1376,7 +1429,8 @@
             // 
             this.par_ctaDifCambioVta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaDifCambioVta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaDifCambioVta.Location = new System.Drawing.Point(229, 848);
+            this.par_ctaDifCambioVta.ForeColor = System.Drawing.Color.White;
+            this.par_ctaDifCambioVta.Location = new System.Drawing.Point(229, 873);
             this.par_ctaDifCambioVta.Name = "par_ctaDifCambioVta";
             this.par_ctaDifCambioVta.ReadOnly = true;
             this.par_ctaDifCambioVta.Size = new System.Drawing.Size(78, 13);
@@ -1388,7 +1442,7 @@
             this.par_ctaRetBFP2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetBFP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetBFP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetBFP2.Image")));
-            this.par_ctaRetBFP2.Location = new System.Drawing.Point(600, 819);
+            this.par_ctaRetBFP2.Location = new System.Drawing.Point(600, 844);
             this.par_ctaRetBFP2.Name = "par_ctaRetBFP2";
             this.par_ctaRetBFP2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetBFP2.TabIndex = 188;
@@ -1399,7 +1453,8 @@
             // 
             this.par_ctaRetBFP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetBFP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetBFP1.Location = new System.Drawing.Point(315, 822);
+            this.par_ctaRetBFP1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetBFP1.Location = new System.Drawing.Point(315, 847);
             this.par_ctaRetBFP1.Name = "par_ctaRetBFP1";
             this.par_ctaRetBFP1.ReadOnly = true;
             this.par_ctaRetBFP1.Size = new System.Drawing.Size(279, 13);
@@ -1409,7 +1464,8 @@
             // 
             this.par_ctaRetBFP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetBFP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetBFP.Location = new System.Drawing.Point(229, 822);
+            this.par_ctaRetBFP.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetBFP.Location = new System.Drawing.Point(229, 847);
             this.par_ctaRetBFP.Name = "par_ctaRetBFP";
             this.par_ctaRetBFP.ReadOnly = true;
             this.par_ctaRetBFP.Size = new System.Drawing.Size(78, 13);
@@ -1421,7 +1477,7 @@
             this.par_ctaRetBF2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetBF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetBF2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetBF2.Image")));
-            this.par_ctaRetBF2.Location = new System.Drawing.Point(600, 790);
+            this.par_ctaRetBF2.Location = new System.Drawing.Point(600, 815);
             this.par_ctaRetBF2.Name = "par_ctaRetBF2";
             this.par_ctaRetBF2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetBF2.TabIndex = 183;
@@ -1432,7 +1488,8 @@
             // 
             this.par_ctaRetBF1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetBF1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetBF1.Location = new System.Drawing.Point(315, 794);
+            this.par_ctaRetBF1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetBF1.Location = new System.Drawing.Point(315, 819);
             this.par_ctaRetBF1.Name = "par_ctaRetBF1";
             this.par_ctaRetBF1.ReadOnly = true;
             this.par_ctaRetBF1.Size = new System.Drawing.Size(279, 13);
@@ -1442,7 +1499,8 @@
             // 
             this.par_ctaRetBF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRetBF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRetBF.Location = new System.Drawing.Point(229, 794);
+            this.par_ctaRetBF.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRetBF.Location = new System.Drawing.Point(229, 819);
             this.par_ctaRetBF.Name = "par_ctaRetBF";
             this.par_ctaRetBF.ReadOnly = true;
             this.par_ctaRetBF.Size = new System.Drawing.Size(78, 13);
@@ -1454,7 +1512,7 @@
             this.par_ctaRedondeo2.FlatAppearance.BorderSize = 0;
             this.par_ctaRedondeo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRedondeo2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRedondeo2.Image")));
-            this.par_ctaRedondeo2.Location = new System.Drawing.Point(600, 762);
+            this.par_ctaRedondeo2.Location = new System.Drawing.Point(600, 787);
             this.par_ctaRedondeo2.Name = "par_ctaRedondeo2";
             this.par_ctaRedondeo2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRedondeo2.TabIndex = 178;
@@ -1465,7 +1523,8 @@
             // 
             this.par_ctaRedondeo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRedondeo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRedondeo1.Location = new System.Drawing.Point(315, 766);
+            this.par_ctaRedondeo1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRedondeo1.Location = new System.Drawing.Point(315, 791);
             this.par_ctaRedondeo1.Name = "par_ctaRedondeo1";
             this.par_ctaRedondeo1.ReadOnly = true;
             this.par_ctaRedondeo1.Size = new System.Drawing.Size(279, 13);
@@ -1475,7 +1534,8 @@
             // 
             this.par_ctaRedondeo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRedondeo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRedondeo.Location = new System.Drawing.Point(229, 766);
+            this.par_ctaRedondeo.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRedondeo.Location = new System.Drawing.Point(229, 791);
             this.par_ctaRedondeo.Name = "par_ctaRedondeo";
             this.par_ctaRedondeo.ReadOnly = true;
             this.par_ctaRedondeo.Size = new System.Drawing.Size(78, 13);
@@ -1487,7 +1547,7 @@
             this.par_NetoVtaServ2.FlatAppearance.BorderSize = 0;
             this.par_NetoVtaServ2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_NetoVtaServ2.Image = ((System.Drawing.Image)(resources.GetObject("par_NetoVtaServ2.Image")));
-            this.par_NetoVtaServ2.Location = new System.Drawing.Point(600, 737);
+            this.par_NetoVtaServ2.Location = new System.Drawing.Point(600, 762);
             this.par_NetoVtaServ2.Name = "par_NetoVtaServ2";
             this.par_NetoVtaServ2.Size = new System.Drawing.Size(22, 21);
             this.par_NetoVtaServ2.TabIndex = 173;
@@ -1498,7 +1558,8 @@
             // 
             this.par_NetoVtaServ1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_NetoVtaServ1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_NetoVtaServ1.Location = new System.Drawing.Point(315, 740);
+            this.par_NetoVtaServ1.ForeColor = System.Drawing.Color.White;
+            this.par_NetoVtaServ1.Location = new System.Drawing.Point(315, 765);
             this.par_NetoVtaServ1.Name = "par_NetoVtaServ1";
             this.par_NetoVtaServ1.ReadOnly = true;
             this.par_NetoVtaServ1.Size = new System.Drawing.Size(279, 13);
@@ -1508,7 +1569,8 @@
             // 
             this.par_NetoVtaServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_NetoVtaServ.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_NetoVtaServ.Location = new System.Drawing.Point(229, 740);
+            this.par_NetoVtaServ.ForeColor = System.Drawing.Color.White;
+            this.par_NetoVtaServ.Location = new System.Drawing.Point(229, 765);
             this.par_NetoVtaServ.Name = "par_NetoVtaServ";
             this.par_NetoVtaServ.ReadOnly = true;
             this.par_NetoVtaServ.Size = new System.Drawing.Size(78, 13);
@@ -1520,7 +1582,7 @@
             this.par_ctaAnticipoCpa2.FlatAppearance.BorderSize = 0;
             this.par_ctaAnticipoCpa2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaAnticipoCpa2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaAnticipoCpa2.Image")));
-            this.par_ctaAnticipoCpa2.Location = new System.Drawing.Point(600, 708);
+            this.par_ctaAnticipoCpa2.Location = new System.Drawing.Point(600, 733);
             this.par_ctaAnticipoCpa2.Name = "par_ctaAnticipoCpa2";
             this.par_ctaAnticipoCpa2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaAnticipoCpa2.TabIndex = 168;
@@ -1531,7 +1593,8 @@
             // 
             this.par_ctaAnticipoCpa1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaAnticipoCpa1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaAnticipoCpa1.Location = new System.Drawing.Point(315, 713);
+            this.par_ctaAnticipoCpa1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaAnticipoCpa1.Location = new System.Drawing.Point(315, 738);
             this.par_ctaAnticipoCpa1.Name = "par_ctaAnticipoCpa1";
             this.par_ctaAnticipoCpa1.ReadOnly = true;
             this.par_ctaAnticipoCpa1.Size = new System.Drawing.Size(279, 13);
@@ -1541,7 +1604,8 @@
             // 
             this.par_ctaAnticipoCpa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaAnticipoCpa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaAnticipoCpa.Location = new System.Drawing.Point(229, 713);
+            this.par_ctaAnticipoCpa.ForeColor = System.Drawing.Color.White;
+            this.par_ctaAnticipoCpa.Location = new System.Drawing.Point(229, 738);
             this.par_ctaAnticipoCpa.Name = "par_ctaAnticipoCpa";
             this.par_ctaAnticipoCpa.ReadOnly = true;
             this.par_ctaAnticipoCpa.Size = new System.Drawing.Size(78, 13);
@@ -1553,7 +1617,7 @@
             this.par_ctaAnticipoVta2.FlatAppearance.BorderSize = 0;
             this.par_ctaAnticipoVta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaAnticipoVta2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaAnticipoVta2.Image")));
-            this.par_ctaAnticipoVta2.Location = new System.Drawing.Point(600, 682);
+            this.par_ctaAnticipoVta2.Location = new System.Drawing.Point(600, 707);
             this.par_ctaAnticipoVta2.Name = "par_ctaAnticipoVta2";
             this.par_ctaAnticipoVta2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaAnticipoVta2.TabIndex = 163;
@@ -1564,7 +1628,8 @@
             // 
             this.par_ctaAnticipoVta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaAnticipoVta1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaAnticipoVta1.Location = new System.Drawing.Point(315, 685);
+            this.par_ctaAnticipoVta1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaAnticipoVta1.Location = new System.Drawing.Point(315, 710);
             this.par_ctaAnticipoVta1.Name = "par_ctaAnticipoVta1";
             this.par_ctaAnticipoVta1.ReadOnly = true;
             this.par_ctaAnticipoVta1.Size = new System.Drawing.Size(279, 13);
@@ -1574,7 +1639,8 @@
             // 
             this.par_ctaAnticipoVta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaAnticipoVta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaAnticipoVta.Location = new System.Drawing.Point(229, 685);
+            this.par_ctaAnticipoVta.ForeColor = System.Drawing.Color.White;
+            this.par_ctaAnticipoVta.Location = new System.Drawing.Point(229, 710);
             this.par_ctaAnticipoVta.Name = "par_ctaAnticipoVta";
             this.par_ctaAnticipoVta.ReadOnly = true;
             this.par_ctaAnticipoVta.Size = new System.Drawing.Size(78, 13);
@@ -1586,7 +1652,7 @@
             this.par_ctaRecargo2.FlatAppearance.BorderSize = 0;
             this.par_ctaRecargo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRecargo2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRecargo2.Image")));
-            this.par_ctaRecargo2.Location = new System.Drawing.Point(600, 657);
+            this.par_ctaRecargo2.Location = new System.Drawing.Point(600, 682);
             this.par_ctaRecargo2.Name = "par_ctaRecargo2";
             this.par_ctaRecargo2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRecargo2.TabIndex = 158;
@@ -1597,7 +1663,8 @@
             // 
             this.par_ctaRecargo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRecargo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRecargo1.Location = new System.Drawing.Point(315, 660);
+            this.par_ctaRecargo1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRecargo1.Location = new System.Drawing.Point(315, 685);
             this.par_ctaRecargo1.Name = "par_ctaRecargo1";
             this.par_ctaRecargo1.ReadOnly = true;
             this.par_ctaRecargo1.Size = new System.Drawing.Size(279, 13);
@@ -1607,7 +1674,8 @@
             // 
             this.par_ctaRecargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaRecargo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaRecargo.Location = new System.Drawing.Point(229, 660);
+            this.par_ctaRecargo.ForeColor = System.Drawing.Color.White;
+            this.par_ctaRecargo.Location = new System.Drawing.Point(229, 685);
             this.par_ctaRecargo.Name = "par_ctaRecargo";
             this.par_ctaRecargo.ReadOnly = true;
             this.par_ctaRecargo.Size = new System.Drawing.Size(78, 13);
@@ -1619,7 +1687,7 @@
             this.par_ctaAjusteInf2.FlatAppearance.BorderSize = 0;
             this.par_ctaAjusteInf2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaAjusteInf2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaAjusteInf2.Image")));
-            this.par_ctaAjusteInf2.Location = new System.Drawing.Point(600, 924);
+            this.par_ctaAjusteInf2.Location = new System.Drawing.Point(600, 949);
             this.par_ctaAjusteInf2.Name = "par_ctaAjusteInf2";
             this.par_ctaAjusteInf2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaAjusteInf2.TabIndex = 208;
@@ -1630,7 +1698,8 @@
             // 
             this.par_ctaAjusteInf1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaAjusteInf1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaAjusteInf1.Location = new System.Drawing.Point(315, 926);
+            this.par_ctaAjusteInf1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaAjusteInf1.Location = new System.Drawing.Point(315, 951);
             this.par_ctaAjusteInf1.Name = "par_ctaAjusteInf1";
             this.par_ctaAjusteInf1.ReadOnly = true;
             this.par_ctaAjusteInf1.Size = new System.Drawing.Size(279, 13);
@@ -1640,7 +1709,8 @@
             // 
             this.par_ctaAjusteInf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaAjusteInf.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaAjusteInf.Location = new System.Drawing.Point(229, 926);
+            this.par_ctaAjusteInf.ForeColor = System.Drawing.Color.White;
+            this.par_ctaAjusteInf.Location = new System.Drawing.Point(229, 951);
             this.par_ctaAjusteInf.Name = "par_ctaAjusteInf";
             this.par_ctaAjusteInf.ReadOnly = true;
             this.par_ctaAjusteInf.Size = new System.Drawing.Size(78, 13);
@@ -1652,7 +1722,7 @@
             this.par_ctaCIIVA2.FlatAppearance.BorderSize = 0;
             this.par_ctaCIIVA2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaCIIVA2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaCIIVA2.Image")));
-            this.par_ctaCIIVA2.Location = new System.Drawing.Point(600, 899);
+            this.par_ctaCIIVA2.Location = new System.Drawing.Point(600, 924);
             this.par_ctaCIIVA2.Name = "par_ctaCIIVA2";
             this.par_ctaCIIVA2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaCIIVA2.TabIndex = 203;
@@ -1663,7 +1733,8 @@
             // 
             this.par_ctaCIIVA1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaCIIVA1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaCIIVA1.Location = new System.Drawing.Point(315, 902);
+            this.par_ctaCIIVA1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaCIIVA1.Location = new System.Drawing.Point(315, 927);
             this.par_ctaCIIVA1.Name = "par_ctaCIIVA1";
             this.par_ctaCIIVA1.ReadOnly = true;
             this.par_ctaCIIVA1.Size = new System.Drawing.Size(279, 13);
@@ -1673,7 +1744,8 @@
             // 
             this.par_ctaCIIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaCIIVA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaCIIVA.Location = new System.Drawing.Point(229, 902);
+            this.par_ctaCIIVA.ForeColor = System.Drawing.Color.White;
+            this.par_ctaCIIVA.Location = new System.Drawing.Point(229, 927);
             this.par_ctaCIIVA.Name = "par_ctaCIIVA";
             this.par_ctaCIIVA.ReadOnly = true;
             this.par_ctaCIIVA.Size = new System.Drawing.Size(78, 13);
@@ -1685,7 +1757,7 @@
             this.par_ctaCINeto2.FlatAppearance.BorderSize = 0;
             this.par_ctaCINeto2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaCINeto2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaCINeto2.Image")));
-            this.par_ctaCINeto2.Location = new System.Drawing.Point(600, 870);
+            this.par_ctaCINeto2.Location = new System.Drawing.Point(600, 895);
             this.par_ctaCINeto2.Name = "par_ctaCINeto2";
             this.par_ctaCINeto2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaCINeto2.TabIndex = 198;
@@ -1696,7 +1768,8 @@
             // 
             this.par_ctaCINeto1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaCINeto1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaCINeto1.Location = new System.Drawing.Point(315, 875);
+            this.par_ctaCINeto1.ForeColor = System.Drawing.Color.White;
+            this.par_ctaCINeto1.Location = new System.Drawing.Point(315, 900);
             this.par_ctaCINeto1.Name = "par_ctaCINeto1";
             this.par_ctaCINeto1.ReadOnly = true;
             this.par_ctaCINeto1.Size = new System.Drawing.Size(279, 13);
@@ -1706,7 +1779,8 @@
             // 
             this.par_ctaCINeto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.par_ctaCINeto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.par_ctaCINeto.Location = new System.Drawing.Point(229, 875);
+            this.par_ctaCINeto.ForeColor = System.Drawing.Color.White;
+            this.par_ctaCINeto.Location = new System.Drawing.Point(229, 900);
             this.par_ctaCINeto.Name = "par_ctaCINeto";
             this.par_ctaCINeto.ReadOnly = true;
             this.par_ctaCINeto.Size = new System.Drawing.Size(78, 13);
@@ -1730,7 +1804,7 @@
             this.par_ctaIVA213.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA213.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA213.CustomCheckmarkImage = null;
-            this.par_ctaIVA213.Location = new System.Drawing.Point(628, 9);
+            this.par_ctaIVA213.Location = new System.Drawing.Point(628, 34);
             this.par_ctaIVA213.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA213.Name = "par_ctaIVA213";
             this.par_ctaIVA213.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -1783,7 +1857,7 @@
             this.par_ctaIVA103.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA103.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA103.CustomCheckmarkImage = null;
-            this.par_ctaIVA103.Location = new System.Drawing.Point(628, 35);
+            this.par_ctaIVA103.Location = new System.Drawing.Point(628, 60);
             this.par_ctaIVA103.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA103.Name = "par_ctaIVA103";
             this.par_ctaIVA103.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -1836,7 +1910,7 @@
             this.par_ctaIVA273.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA273.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA273.CustomCheckmarkImage = null;
-            this.par_ctaIVA273.Location = new System.Drawing.Point(628, 61);
+            this.par_ctaIVA273.Location = new System.Drawing.Point(628, 86);
             this.par_ctaIVA273.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA273.Name = "par_ctaIVA273";
             this.par_ctaIVA273.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -1889,7 +1963,7 @@
             this.par_ctaImpInt3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaImpInt3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaImpInt3.CustomCheckmarkImage = null;
-            this.par_ctaImpInt3.Location = new System.Drawing.Point(628, 90);
+            this.par_ctaImpInt3.Location = new System.Drawing.Point(628, 115);
             this.par_ctaImpInt3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaImpInt3.Name = "par_ctaImpInt3";
             this.par_ctaImpInt3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -1942,7 +2016,7 @@
             this.par_ctaRetIVA3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetIVA3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetIVA3.CustomCheckmarkImage = null;
-            this.par_ctaRetIVA3.Location = new System.Drawing.Point(628, 119);
+            this.par_ctaRetIVA3.Location = new System.Drawing.Point(628, 144);
             this.par_ctaRetIVA3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetIVA3.Name = "par_ctaRetIVA3";
             this.par_ctaRetIVA3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -1995,7 +2069,7 @@
             this.par_ctaRetIIBB3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetIIBB3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetIIBB3.CustomCheckmarkImage = null;
-            this.par_ctaRetIIBB3.Location = new System.Drawing.Point(628, 145);
+            this.par_ctaRetIIBB3.Location = new System.Drawing.Point(628, 170);
             this.par_ctaRetIIBB3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetIIBB3.Name = "par_ctaRetIIBB3";
             this.par_ctaRetIIBB3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2048,7 +2122,7 @@
             this.par_ctaRetGan3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetGan3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetGan3.CustomCheckmarkImage = null;
-            this.par_ctaRetGan3.Location = new System.Drawing.Point(628, 171);
+            this.par_ctaRetGan3.Location = new System.Drawing.Point(628, 196);
             this.par_ctaRetGan3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetGan3.Name = "par_ctaRetGan3";
             this.par_ctaRetGan3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2101,7 +2175,7 @@
             this.par_ctaRetSUSS3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetSUSS3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetSUSS3.CustomCheckmarkImage = null;
-            this.par_ctaRetSUSS3.Location = new System.Drawing.Point(628, 198);
+            this.par_ctaRetSUSS3.Location = new System.Drawing.Point(628, 223);
             this.par_ctaRetSUSS3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetSUSS3.Name = "par_ctaRetSUSS3";
             this.par_ctaRetSUSS3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2154,7 +2228,7 @@
             this.par_ctaPerIVA3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaPerIVA3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaPerIVA3.CustomCheckmarkImage = null;
-            this.par_ctaPerIVA3.Location = new System.Drawing.Point(628, 224);
+            this.par_ctaPerIVA3.Location = new System.Drawing.Point(628, 249);
             this.par_ctaPerIVA3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaPerIVA3.Name = "par_ctaPerIVA3";
             this.par_ctaPerIVA3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2207,7 +2281,7 @@
             this.par_ctaPerIIBB3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaPerIIBB3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaPerIIBB3.CustomCheckmarkImage = null;
-            this.par_ctaPerIIBB3.Location = new System.Drawing.Point(628, 252);
+            this.par_ctaPerIIBB3.Location = new System.Drawing.Point(628, 277);
             this.par_ctaPerIIBB3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaPerIIBB3.Name = "par_ctaPerIIBB3";
             this.par_ctaPerIIBB3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2260,7 +2334,7 @@
             this.par_ctaDeud3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaDeud3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaDeud3.CustomCheckmarkImage = null;
-            this.par_ctaDeud3.Location = new System.Drawing.Point(628, 414);
+            this.par_ctaDeud3.Location = new System.Drawing.Point(628, 439);
             this.par_ctaDeud3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaDeud3.Name = "par_ctaDeud3";
             this.par_ctaDeud3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2313,7 +2387,7 @@
             this.par_ctaPerGan3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaPerGan3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaPerGan3.CustomCheckmarkImage = null;
-            this.par_ctaPerGan3.Location = new System.Drawing.Point(628, 280);
+            this.par_ctaPerGan3.Location = new System.Drawing.Point(628, 305);
             this.par_ctaPerGan3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaPerGan3.Name = "par_ctaPerGan3";
             this.par_ctaPerGan3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2366,7 +2440,7 @@
             this.par_ctaOtrosImp3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaOtrosImp3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaOtrosImp3.CustomCheckmarkImage = null;
-            this.par_ctaOtrosImp3.Location = new System.Drawing.Point(628, 306);
+            this.par_ctaOtrosImp3.Location = new System.Drawing.Point(628, 331);
             this.par_ctaOtrosImp3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaOtrosImp3.Name = "par_ctaOtrosImp3";
             this.par_ctaOtrosImp3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2419,7 +2493,7 @@
             this.par_ctaProvGral3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaProvGral3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaProvGral3.CustomCheckmarkImage = null;
-            this.par_ctaProvGral3.Location = new System.Drawing.Point(628, 360);
+            this.par_ctaProvGral3.Location = new System.Drawing.Point(628, 385);
             this.par_ctaProvGral3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaProvGral3.Name = "par_ctaProvGral3";
             this.par_ctaProvGral3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2472,7 +2546,7 @@
             this.par_ctaIVA21D3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA21D3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA21D3.CustomCheckmarkImage = null;
-            this.par_ctaIVA21D3.Location = new System.Drawing.Point(628, 443);
+            this.par_ctaIVA21D3.Location = new System.Drawing.Point(628, 468);
             this.par_ctaIVA21D3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA21D3.Name = "par_ctaIVA21D3";
             this.par_ctaIVA21D3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2525,7 +2599,7 @@
             this.par_NetoVtaArti3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_NetoVtaArti3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_NetoVtaArti3.CustomCheckmarkImage = null;
-            this.par_NetoVtaArti3.Location = new System.Drawing.Point(628, 387);
+            this.par_NetoVtaArti3.Location = new System.Drawing.Point(628, 412);
             this.par_NetoVtaArti3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_NetoVtaArti3.Name = "par_NetoVtaArti3";
             this.par_NetoVtaArti3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2578,7 +2652,7 @@
             this.par_ctaProv3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaProv3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaProv3.CustomCheckmarkImage = null;
-            this.par_ctaProv3.Location = new System.Drawing.Point(628, 333);
+            this.par_ctaProv3.Location = new System.Drawing.Point(628, 358);
             this.par_ctaProv3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaProv3.Name = "par_ctaProv3";
             this.par_ctaProv3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2631,7 +2705,7 @@
             this.par_ctaIVA10D3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA10D3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA10D3.CustomCheckmarkImage = null;
-            this.par_ctaIVA10D3.Location = new System.Drawing.Point(628, 469);
+            this.par_ctaIVA10D3.Location = new System.Drawing.Point(628, 494);
             this.par_ctaIVA10D3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA10D3.Name = "par_ctaIVA10D3";
             this.par_ctaIVA10D3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2684,7 +2758,7 @@
             this.par_ctaIVA27D3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA27D3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA27D3.CustomCheckmarkImage = null;
-            this.par_ctaIVA27D3.Location = new System.Drawing.Point(628, 496);
+            this.par_ctaIVA27D3.Location = new System.Drawing.Point(628, 521);
             this.par_ctaIVA27D3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA27D3.Name = "par_ctaIVA27D3";
             this.par_ctaIVA27D3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2737,7 +2811,7 @@
             this.par_ctaRetIIBBP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetIIBBP3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetIIBBP3.CustomCheckmarkImage = null;
-            this.par_ctaRetIIBBP3.Location = new System.Drawing.Point(628, 548);
+            this.par_ctaRetIIBBP3.Location = new System.Drawing.Point(628, 573);
             this.par_ctaRetIIBBP3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetIIBBP3.Name = "par_ctaRetIIBBP3";
             this.par_ctaRetIIBBP3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2790,7 +2864,7 @@
             this.par_ctaRetIVAP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetIVAP3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetIVAP3.CustomCheckmarkImage = null;
-            this.par_ctaRetIVAP3.Location = new System.Drawing.Point(628, 522);
+            this.par_ctaRetIVAP3.Location = new System.Drawing.Point(628, 547);
             this.par_ctaRetIVAP3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetIVAP3.Name = "par_ctaRetIVAP3";
             this.par_ctaRetIVAP3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2843,7 +2917,7 @@
             this.par_ctaRetGanP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetGanP3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetGanP3.CustomCheckmarkImage = null;
-            this.par_ctaRetGanP3.Location = new System.Drawing.Point(628, 576);
+            this.par_ctaRetGanP3.Location = new System.Drawing.Point(628, 601);
             this.par_ctaRetGanP3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetGanP3.Name = "par_ctaRetGanP3";
             this.par_ctaRetGanP3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2896,7 +2970,7 @@
             this.par_ctaRetSUSSP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetSUSSP3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetSUSSP3.CustomCheckmarkImage = null;
-            this.par_ctaRetSUSSP3.Location = new System.Drawing.Point(628, 602);
+            this.par_ctaRetSUSSP3.Location = new System.Drawing.Point(628, 627);
             this.par_ctaRetSUSSP3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetSUSSP3.Name = "par_ctaRetSUSSP3";
             this.par_ctaRetSUSSP3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -2949,7 +3023,7 @@
             this.par_ctaDescuento3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaDescuento3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaDescuento3.CustomCheckmarkImage = null;
-            this.par_ctaDescuento3.Location = new System.Drawing.Point(628, 628);
+            this.par_ctaDescuento3.Location = new System.Drawing.Point(628, 653);
             this.par_ctaDescuento3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaDescuento3.Name = "par_ctaDescuento3";
             this.par_ctaDescuento3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3002,7 +3076,7 @@
             this.par_ctaRecargo3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRecargo3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRecargo3.CustomCheckmarkImage = null;
-            this.par_ctaRecargo3.Location = new System.Drawing.Point(628, 660);
+            this.par_ctaRecargo3.Location = new System.Drawing.Point(628, 685);
             this.par_ctaRecargo3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRecargo3.Name = "par_ctaRecargo3";
             this.par_ctaRecargo3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3055,7 +3129,7 @@
             this.par_NetoVtaServ3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_NetoVtaServ3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_NetoVtaServ3.CustomCheckmarkImage = null;
-            this.par_NetoVtaServ3.Location = new System.Drawing.Point(628, 739);
+            this.par_NetoVtaServ3.Location = new System.Drawing.Point(628, 764);
             this.par_NetoVtaServ3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_NetoVtaServ3.Name = "par_NetoVtaServ3";
             this.par_NetoVtaServ3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3108,7 +3182,7 @@
             this.par_ctaAnticipoCpa3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaAnticipoCpa3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaAnticipoCpa3.CustomCheckmarkImage = null;
-            this.par_ctaAnticipoCpa3.Location = new System.Drawing.Point(628, 710);
+            this.par_ctaAnticipoCpa3.Location = new System.Drawing.Point(628, 735);
             this.par_ctaAnticipoCpa3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaAnticipoCpa3.Name = "par_ctaAnticipoCpa3";
             this.par_ctaAnticipoCpa3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3161,7 +3235,7 @@
             this.par_ctaRetBF3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetBF3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetBF3.CustomCheckmarkImage = null;
-            this.par_ctaRetBF3.Location = new System.Drawing.Point(628, 793);
+            this.par_ctaRetBF3.Location = new System.Drawing.Point(628, 818);
             this.par_ctaRetBF3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetBF3.Name = "par_ctaRetBF3";
             this.par_ctaRetBF3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3214,7 +3288,7 @@
             this.par_ctaRedondeo3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRedondeo3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRedondeo3.CustomCheckmarkImage = null;
-            this.par_ctaRedondeo3.Location = new System.Drawing.Point(628, 765);
+            this.par_ctaRedondeo3.Location = new System.Drawing.Point(628, 790);
             this.par_ctaRedondeo3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRedondeo3.Name = "par_ctaRedondeo3";
             this.par_ctaRedondeo3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3267,7 +3341,7 @@
             this.par_ctaRetBFP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetBFP3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetBFP3.CustomCheckmarkImage = null;
-            this.par_ctaRetBFP3.Location = new System.Drawing.Point(628, 821);
+            this.par_ctaRetBFP3.Location = new System.Drawing.Point(628, 846);
             this.par_ctaRetBFP3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetBFP3.Name = "par_ctaRetBFP3";
             this.par_ctaRetBFP3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3320,7 +3394,7 @@
             this.par_ctaAnticipoVta3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaAnticipoVta3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaAnticipoVta3.CustomCheckmarkImage = null;
-            this.par_ctaAnticipoVta3.Location = new System.Drawing.Point(628, 686);
+            this.par_ctaAnticipoVta3.Location = new System.Drawing.Point(628, 711);
             this.par_ctaAnticipoVta3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaAnticipoVta3.Name = "par_ctaAnticipoVta3";
             this.par_ctaAnticipoVta3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3373,7 +3447,7 @@
             this.par_ctaDifCambioVta3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaDifCambioVta3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaDifCambioVta3.CustomCheckmarkImage = null;
-            this.par_ctaDifCambioVta3.Location = new System.Drawing.Point(628, 847);
+            this.par_ctaDifCambioVta3.Location = new System.Drawing.Point(628, 872);
             this.par_ctaDifCambioVta3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaDifCambioVta3.Name = "par_ctaDifCambioVta3";
             this.par_ctaDifCambioVta3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3426,7 +3500,7 @@
             this.par_ctaCINeto3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaCINeto3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaCINeto3.CustomCheckmarkImage = null;
-            this.par_ctaCINeto3.Location = new System.Drawing.Point(628, 871);
+            this.par_ctaCINeto3.Location = new System.Drawing.Point(628, 896);
             this.par_ctaCINeto3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaCINeto3.Name = "par_ctaCINeto3";
             this.par_ctaCINeto3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3479,7 +3553,7 @@
             this.par_ctaCIIVA3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaCIIVA3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaCIIVA3.CustomCheckmarkImage = null;
-            this.par_ctaCIIVA3.Location = new System.Drawing.Point(628, 900);
+            this.par_ctaCIIVA3.Location = new System.Drawing.Point(628, 925);
             this.par_ctaCIIVA3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaCIIVA3.Name = "par_ctaCIIVA3";
             this.par_ctaCIIVA3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3532,7 +3606,7 @@
             this.par_ctaAjusteInf3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaAjusteInf3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaAjusteInf3.CustomCheckmarkImage = null;
-            this.par_ctaAjusteInf3.Location = new System.Drawing.Point(628, 927);
+            this.par_ctaAjusteInf3.Location = new System.Drawing.Point(628, 952);
             this.par_ctaAjusteInf3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaAjusteInf3.Name = "par_ctaAjusteInf3";
             this.par_ctaAjusteInf3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -3569,7 +3643,6 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnAceptar.BorderColor = System.Drawing.Color.White;
@@ -3580,22 +3653,109 @@
             this.btnAceptar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(665, 10);
+            this.btnAceptar.Location = new System.Drawing.Point(659, 38);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(129, 46);
+            this.btnAceptar.Size = new System.Drawing.Size(141, 46);
             this.btnAceptar.TabIndex = 247;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel1.Controls.Add(this.label36);
+            this.panel1.Controls.Add(this.bunifuFormControlBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(816, 21);
+            this.panel1.TabIndex = 249;
+            this.panel1.Tag = "1";
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
+            this.label36.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label36.Location = new System.Drawing.Point(3, 2);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(132, 17);
+            this.label36.TabIndex = 30;
+            this.label36.Text = "Parametros Contables";
+            // 
+            // bunifuFormControlBox1
+            // 
+            this.bunifuFormControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuFormControlBox1.BunifuFormDrag = null;
+            this.bunifuFormControlBox1.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFormControlBox1.CloseBoxOptions.BorderRadius = 0;
+            this.bunifuFormControlBox1.CloseBoxOptions.Enabled = true;
+            this.bunifuFormControlBox1.CloseBoxOptions.EnableDefaultAction = true;
+            this.bunifuFormControlBox1.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.bunifuFormControlBox1.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.CloseBoxOptions.Icon")));
+            this.bunifuFormControlBox1.CloseBoxOptions.IconAlt = null;
+            this.bunifuFormControlBox1.CloseBoxOptions.IconColor = System.Drawing.Color.White;
+            this.bunifuFormControlBox1.CloseBoxOptions.IconHoverColor = System.Drawing.Color.White;
+            this.bunifuFormControlBox1.CloseBoxOptions.IconPressedColor = System.Drawing.Color.White;
+            this.bunifuFormControlBox1.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
+            this.bunifuFormControlBox1.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.bunifuFormControlBox1.HelpBox = false;
+            this.bunifuFormControlBox1.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFormControlBox1.HelpBoxOptions.BorderRadius = 0;
+            this.bunifuFormControlBox1.HelpBoxOptions.Enabled = true;
+            this.bunifuFormControlBox1.HelpBoxOptions.EnableDefaultAction = true;
+            this.bunifuFormControlBox1.HelpBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.bunifuFormControlBox1.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.HelpBoxOptions.Icon")));
+            this.bunifuFormControlBox1.HelpBoxOptions.IconAlt = null;
+            this.bunifuFormControlBox1.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
+            this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(792, 0);
+            this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuFormControlBox1.MaximizeBox = false;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.BorderRadius = 0;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.Enabled = true;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.EnableDefaultAction = true;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.MaximizeBoxOptions.Icon")));
+            this.bunifuFormControlBox1.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.MaximizeBoxOptions.IconAlt")));
+            this.bunifuFormControlBox1.MaximizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
+            this.bunifuFormControlBox1.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.bunifuFormControlBox1.MinimizeBox = false;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.BorderRadius = 0;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.Enabled = true;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.EnableDefaultAction = true;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.MinimizeBoxOptions.Icon")));
+            this.bunifuFormControlBox1.MinimizeBoxOptions.IconAlt = null;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
+            this.bunifuFormControlBox1.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.bunifuFormControlBox1.Name = "bunifuFormControlBox1";
+            this.bunifuFormControlBox1.ShowDesignBorders = false;
+            this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
+            this.bunifuFormControlBox1.TabIndex = 29;
+            // 
             // frmParametrosContables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(833, 510);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.par_ctaAjusteInf3);
             this.Controls.Add(this.par_ctaCIIVA3);
@@ -3776,6 +3936,8 @@
             this.Name = "frmParametrosContables";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmParametrosContables";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3959,5 +4121,8 @@
         private Bunifu.UI.WinForms.BunifuCheckBox par_ctaCIIVA3;
         private Bunifu.UI.WinForms.BunifuCheckBox par_ctaAjusteInf3;
         private RJCodeAdvance.RJControls.RJButton btnAceptar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label36;
+        private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
     }
 }

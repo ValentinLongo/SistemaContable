@@ -41,7 +41,6 @@
             this.tbIdCuenta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbCentroCosto = new System.Windows.Forms.ComboBox();
             this.dtHasta = new System.Windows.Forms.DateTimePicker();
             this.dtDesde = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
@@ -57,6 +56,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuCheckBox4 = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.cbCentroCosto = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +75,7 @@
             this.panel1.Size = new System.Drawing.Size(556, 21);
             this.panel1.TabIndex = 17;
             this.panel1.Tag = "1";
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label1
             // 
@@ -147,26 +152,37 @@
             // 
             // btnBuscarEjercicio
             // 
-            this.btnBuscarEjercicio.Location = new System.Drawing.Point(506, 33);
+            this.btnBuscarEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscarEjercicio.FlatAppearance.BorderSize = 0;
+            this.btnBuscarEjercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarEjercicio.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarEjercicio.Image")));
+            this.btnBuscarEjercicio.Location = new System.Drawing.Point(507, 36);
             this.btnBuscarEjercicio.Name = "btnBuscarEjercicio";
-            this.btnBuscarEjercicio.Size = new System.Drawing.Size(18, 23);
+            this.btnBuscarEjercicio.Size = new System.Drawing.Size(23, 23);
             this.btnBuscarEjercicio.TabIndex = 129;
-            this.btnBuscarEjercicio.Text = "button1";
-            this.btnBuscarEjercicio.UseVisualStyleBackColor = true;
+            this.btnBuscarEjercicio.UseVisualStyleBackColor = false;
             this.btnBuscarEjercicio.Click += new System.EventHandler(this.btnBuscarEjercicio_Click);
             // 
             // tbDescriEjercicio
             // 
-            this.tbDescriEjercicio.Location = new System.Drawing.Point(186, 35);
+            this.tbDescriEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbDescriEjercicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescriEjercicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDescriEjercicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbDescriEjercicio.Location = new System.Drawing.Point(273, 38);
             this.tbDescriEjercicio.Name = "tbDescriEjercicio";
-            this.tbDescriEjercicio.Size = new System.Drawing.Size(314, 20);
+            this.tbDescriEjercicio.Size = new System.Drawing.Size(229, 15);
             this.tbDescriEjercicio.TabIndex = 128;
             // 
             // tbIdEjercicio
             // 
-            this.tbIdEjercicio.Location = new System.Drawing.Point(102, 35);
+            this.tbIdEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbIdEjercicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbIdEjercicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIdEjercicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbIdEjercicio.Location = new System.Drawing.Point(184, 38);
             this.tbIdEjercicio.Name = "tbIdEjercicio";
-            this.tbIdEjercicio.Size = new System.Drawing.Size(78, 20);
+            this.tbIdEjercicio.Size = new System.Drawing.Size(78, 15);
             this.tbIdEjercicio.TabIndex = 127;
             // 
             // Mensaje
@@ -174,7 +190,7 @@
             this.Mensaje.AutoSize = true;
             this.Mensaje.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Mensaje.Location = new System.Drawing.Point(45, 36);
+            this.Mensaje.Location = new System.Drawing.Point(125, 39);
             this.Mensaje.Name = "Mensaje";
             this.Mensaje.Size = new System.Drawing.Size(57, 17);
             this.Mensaje.TabIndex = 126;
@@ -182,26 +198,37 @@
             // 
             // btnBuscarCuenta
             // 
-            this.btnBuscarCuenta.Location = new System.Drawing.Point(506, 68);
+            this.btnBuscarCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscarCuenta.FlatAppearance.BorderSize = 0;
+            this.btnBuscarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCuenta.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta.Image")));
+            this.btnBuscarCuenta.Location = new System.Drawing.Point(507, 71);
             this.btnBuscarCuenta.Name = "btnBuscarCuenta";
-            this.btnBuscarCuenta.Size = new System.Drawing.Size(18, 23);
+            this.btnBuscarCuenta.Size = new System.Drawing.Size(23, 23);
             this.btnBuscarCuenta.TabIndex = 133;
-            this.btnBuscarCuenta.Text = "button1";
-            this.btnBuscarCuenta.UseVisualStyleBackColor = true;
+            this.btnBuscarCuenta.UseVisualStyleBackColor = false;
             this.btnBuscarCuenta.Click += new System.EventHandler(this.btnBuscarCuenta_Click);
             // 
             // tbDescriCuenta
             // 
-            this.tbDescriCuenta.Location = new System.Drawing.Point(186, 70);
+            this.tbDescriCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbDescriCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescriCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDescriCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbDescriCuenta.Location = new System.Drawing.Point(273, 73);
             this.tbDescriCuenta.Name = "tbDescriCuenta";
-            this.tbDescriCuenta.Size = new System.Drawing.Size(314, 20);
+            this.tbDescriCuenta.Size = new System.Drawing.Size(229, 15);
             this.tbDescriCuenta.TabIndex = 132;
             // 
             // tbIdCuenta
             // 
-            this.tbIdCuenta.Location = new System.Drawing.Point(102, 70);
+            this.tbIdCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tbIdCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbIdCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIdCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbIdCuenta.Location = new System.Drawing.Point(184, 73);
             this.tbIdCuenta.Name = "tbIdCuenta";
-            this.tbIdCuenta.Size = new System.Drawing.Size(78, 20);
+            this.tbIdCuenta.Size = new System.Drawing.Size(78, 15);
             this.tbIdCuenta.TabIndex = 131;
             // 
             // label2
@@ -209,7 +236,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(45, 71);
+            this.label2.Location = new System.Drawing.Point(130, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 130;
@@ -220,24 +247,16 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(12, 109);
+            this.label3.Location = new System.Drawing.Point(99, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 17);
             this.label3.TabIndex = 134;
             this.label3.Text = "Centro Costo:";
             // 
-            // cbCentroCosto
-            // 
-            this.cbCentroCosto.FormattingEnabled = true;
-            this.cbCentroCosto.Location = new System.Drawing.Point(102, 108);
-            this.cbCentroCosto.Name = "cbCentroCosto";
-            this.cbCentroCosto.Size = new System.Drawing.Size(249, 21);
-            this.cbCentroCosto.TabIndex = 135;
-            // 
             // dtHasta
             // 
             this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtHasta.Location = new System.Drawing.Point(102, 175);
+            this.dtHasta.Location = new System.Drawing.Point(185, 185);
             this.dtHasta.Name = "dtHasta";
             this.dtHasta.Size = new System.Drawing.Size(101, 20);
             this.dtHasta.TabIndex = 145;
@@ -245,7 +264,7 @@
             // dtDesde
             // 
             this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDesde.Location = new System.Drawing.Point(102, 142);
+            this.dtDesde.Location = new System.Drawing.Point(185, 152);
             this.dtDesde.Name = "dtDesde";
             this.dtDesde.Size = new System.Drawing.Size(101, 20);
             this.dtDesde.TabIndex = 144;
@@ -253,10 +272,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(62, 225);
+            this.label13.Location = new System.Drawing.Point(161, 229);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(201, 13);
+            this.label13.Size = new System.Drawing.Size(254, 16);
             this.label13.TabIndex = 139;
             this.label13.Text = "Visualizar únicamente Asientos Manuales";
             // 
@@ -278,7 +298,7 @@
             this.ChechInfDet.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.ChechInfDet.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChechInfDet.CustomCheckmarkImage = null;
-            this.ChechInfDet.Location = new System.Drawing.Point(42, 221);
+            this.ChechInfDet.Location = new System.Drawing.Point(141, 228);
             this.ChechInfDet.MinimumSize = new System.Drawing.Size(17, 17);
             this.ChechInfDet.Name = "ChechInfDet";
             this.ChechInfDet.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -318,7 +338,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(52, 175);
+            this.label6.Location = new System.Drawing.Point(138, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 137;
@@ -329,7 +349,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(48, 142);
+            this.label7.Location = new System.Drawing.Point(135, 152);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 17);
             this.label7.TabIndex = 136;
@@ -338,10 +358,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(62, 252);
+            this.label4.Location = new System.Drawing.Point(161, 256);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 13);
+            this.label4.Size = new System.Drawing.Size(237, 16);
             this.label4.TabIndex = 147;
             this.label4.Text = "Visualizar Informe de Centro de Costos";
             // 
@@ -363,7 +384,7 @@
             this.bunifuCheckBox1.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.bunifuCheckBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox1.CustomCheckmarkImage = null;
-            this.bunifuCheckBox1.Location = new System.Drawing.Point(42, 248);
+            this.bunifuCheckBox1.Location = new System.Drawing.Point(141, 255);
             this.bunifuCheckBox1.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox1.Name = "bunifuCheckBox1";
             this.bunifuCheckBox1.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -401,10 +422,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(62, 275);
+            this.label5.Location = new System.Drawing.Point(161, 279);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(256, 13);
+            this.label5.Size = new System.Drawing.Size(323, 16);
             this.label5.TabIndex = 149;
             this.label5.Text = "Visualizar únicamente Asientos con Importes al Debe";
             // 
@@ -426,7 +448,7 @@
             this.bunifuCheckBox2.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.bunifuCheckBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox2.CustomCheckmarkImage = null;
-            this.bunifuCheckBox2.Location = new System.Drawing.Point(42, 271);
+            this.bunifuCheckBox2.Location = new System.Drawing.Point(141, 278);
             this.bunifuCheckBox2.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox2.Name = "bunifuCheckBox2";
             this.bunifuCheckBox2.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -464,10 +486,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(62, 298);
+            this.label8.Location = new System.Drawing.Point(161, 302);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(259, 13);
+            this.label8.Size = new System.Drawing.Size(327, 16);
             this.label8.TabIndex = 151;
             this.label8.Text = "Visualizar únicamente Asientos con Importes al Haber";
             // 
@@ -489,7 +512,7 @@
             this.bunifuCheckBox3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.bunifuCheckBox3.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox3.CustomCheckmarkImage = null;
-            this.bunifuCheckBox3.Location = new System.Drawing.Point(42, 294);
+            this.bunifuCheckBox3.Location = new System.Drawing.Point(141, 301);
             this.bunifuCheckBox3.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox3.Name = "bunifuCheckBox3";
             this.bunifuCheckBox3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -527,10 +550,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(62, 321);
+            this.label9.Location = new System.Drawing.Point(161, 325);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(175, 13);
+            this.label9.Size = new System.Drawing.Size(222, 16);
             this.label9.TabIndex = 153;
             this.label9.Text = "Visualizar únicamente Comprobante";
             // 
@@ -552,7 +576,7 @@
             this.bunifuCheckBox4.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.bunifuCheckBox4.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox4.CustomCheckmarkImage = null;
-            this.bunifuCheckBox4.Location = new System.Drawing.Point(42, 317);
+            this.bunifuCheckBox4.Location = new System.Drawing.Point(141, 324);
             this.bunifuCheckBox4.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox4.Name = "bunifuCheckBox4";
             this.bunifuCheckBox4.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -596,23 +620,79 @@
             this.btnConfirmar.BorderSize = 0;
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(213, 365);
+            this.btnConfirmar.Location = new System.Drawing.Point(204, 360);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(121, 26);
+            this.btnConfirmar.Size = new System.Drawing.Size(148, 44);
             this.btnConfirmar.TabIndex = 154;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConfirmar.UseVisualStyleBackColor = false;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(273, 90);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(229, 1);
+            this.panel4.TabIndex = 170;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(273, 56);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(229, 1);
+            this.panel2.TabIndex = 171;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(184, 90);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(78, 1);
+            this.panel3.TabIndex = 172;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel5.Location = new System.Drawing.Point(184, 56);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(78, 1);
+            this.panel5.TabIndex = 173;
+            // 
+            // cbCentroCosto
+            // 
+            this.cbCentroCosto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.cbCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCentroCosto.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCentroCosto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cbCentroCosto.FormattingEnabled = true;
+            this.cbCentroCosto.Items.AddRange(new object[] {
+            "Codigo",
+            "Nombre"});
+            this.cbCentroCosto.Location = new System.Drawing.Point(184, 109);
+            this.cbCentroCosto.Name = "cbCentroCosto";
+            this.cbCentroCosto.Size = new System.Drawing.Size(250, 23);
+            this.cbCentroCosto.TabIndex = 174;
+            // 
             // frmLibroMayor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(556, 421);
+            this.Controls.Add(this.cbCentroCosto);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.bunifuCheckBox4);
@@ -628,7 +708,6 @@
             this.Controls.Add(this.ChechInfDet);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbCentroCosto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBuscarCuenta);
             this.Controls.Add(this.tbDescriCuenta);
@@ -664,7 +743,6 @@
         private System.Windows.Forms.TextBox tbIdCuenta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbCentroCosto;
         private System.Windows.Forms.DateTimePicker dtHasta;
         private System.Windows.Forms.DateTimePicker dtDesde;
         private System.Windows.Forms.Label label13;
@@ -680,5 +758,10 @@
         private System.Windows.Forms.Label label9;
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox4;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.ComboBox cbCentroCosto;
     }
 }

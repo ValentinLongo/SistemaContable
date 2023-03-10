@@ -197,7 +197,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(25, 6);
+            this.label4.Location = new System.Drawing.Point(25, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 53;
@@ -208,7 +208,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(719, 45);
+            this.label5.Location = new System.Drawing.Point(720, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 16);
             this.label5.TabIndex = 62;
@@ -232,7 +232,7 @@
             this.CheckUsuario.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckUsuario.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckUsuario.CustomCheckmarkImage = null;
-            this.CheckUsuario.Location = new System.Drawing.Point(693, 44);
+            this.CheckUsuario.Location = new System.Drawing.Point(694, 44);
             this.CheckUsuario.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckUsuario.Name = "CheckUsuario";
             this.CheckUsuario.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -270,7 +270,7 @@
             // 
             // cbBusqueda
             // 
-            this.cbBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.cbBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -278,7 +278,7 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Codigo",
             "Nombre"});
-            this.cbBusqueda.Location = new System.Drawing.Point(42, 39);
+            this.cbBusqueda.Location = new System.Drawing.Point(56, 39);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(169, 25);
             this.cbBusqueda.TabIndex = 63;
@@ -287,18 +287,18 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(217, 63);
+            this.panel2.Location = new System.Drawing.Point(236, 63);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(228, 1);
             this.panel2.TabIndex = 65;
             // 
             // txtbusqueda
             // 
-            this.txtbusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtbusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtbusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtbusqueda.Location = new System.Drawing.Point(217, 46);
+            this.txtbusqueda.Location = new System.Drawing.Point(236, 46);
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(228, 15);
             this.txtbusqueda.TabIndex = 64;
@@ -323,7 +323,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(456, 44);
+            this.CheckInicio.Location = new System.Drawing.Point(471, 44);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -363,7 +363,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(479, 45);
+            this.label1.Location = new System.Drawing.Point(494, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 67;
@@ -390,7 +390,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1060, 650);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CheckInicio);
