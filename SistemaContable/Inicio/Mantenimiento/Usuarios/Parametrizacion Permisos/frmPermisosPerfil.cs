@@ -50,8 +50,6 @@ namespace SistemaContable.Parametrizacion_Permisos
                 txtDescriPerfil.Text = descri;
             }
 
-            //
-
             ArmarArbol(txtNroPerfil.Text);
         }
 
