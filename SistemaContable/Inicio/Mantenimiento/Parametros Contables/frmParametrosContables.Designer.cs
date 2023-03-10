@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmParametrosContables));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,150 +67,151 @@
             this.par_ctaIVA21 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA211 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA212 = new System.Windows.Forms.Button();
-            this.par_ctaIVA213 = new System.Windows.Forms.CheckBox();
-            this.par_ctaIVA103 = new System.Windows.Forms.CheckBox();
             this.par_ctaIVA102 = new System.Windows.Forms.Button();
             this.par_ctaIVA101 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA10 = new System.Windows.Forms.TextBox();
-            this.par_ctaIVA273 = new System.Windows.Forms.CheckBox();
             this.par_ctaIVA272 = new System.Windows.Forms.Button();
             this.par_ctaIVA271 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA27 = new System.Windows.Forms.TextBox();
-            this.par_ctaRetIIBB3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetIIBB2 = new System.Windows.Forms.Button();
             this.par_ctaRetIIBB1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetIIBB = new System.Windows.Forms.TextBox();
-            this.par_ctaRetIVA3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetIVA2 = new System.Windows.Forms.Button();
             this.par_ctaRetIVA1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetIVA = new System.Windows.Forms.TextBox();
-            this.par_ctaImpInt3 = new System.Windows.Forms.CheckBox();
             this.par_ctaImpInt2 = new System.Windows.Forms.Button();
             this.par_ctaImpInt1 = new System.Windows.Forms.TextBox();
             this.par_ctaImpInt = new System.Windows.Forms.TextBox();
-            this.par_ctaOtrosImp3 = new System.Windows.Forms.CheckBox();
             this.par_ctaOtrosImp2 = new System.Windows.Forms.Button();
             this.par_ctaOtrosImp1 = new System.Windows.Forms.TextBox();
             this.par_ctaOtrosImp = new System.Windows.Forms.TextBox();
-            this.par_ctaPerGan3 = new System.Windows.Forms.CheckBox();
             this.par_ctaPerGan2 = new System.Windows.Forms.Button();
             this.par_ctaPerGan1 = new System.Windows.Forms.TextBox();
             this.par_ctaPerGan = new System.Windows.Forms.TextBox();
-            this.par_ctaPerIIBB3 = new System.Windows.Forms.CheckBox();
             this.par_ctaPerIIBB2 = new System.Windows.Forms.Button();
             this.par_ctaPerIIBB1 = new System.Windows.Forms.TextBox();
             this.par_ctaPerIIBB = new System.Windows.Forms.TextBox();
-            this.par_ctaPerIVA3 = new System.Windows.Forms.CheckBox();
             this.par_ctaPerIVA2 = new System.Windows.Forms.Button();
             this.par_ctaPerIVA1 = new System.Windows.Forms.TextBox();
             this.par_ctaPerIVA = new System.Windows.Forms.TextBox();
-            this.par_ctaRetSUSS3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetSUSS2 = new System.Windows.Forms.Button();
             this.par_ctaRetSUSS1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetSUSS = new System.Windows.Forms.TextBox();
-            this.par_ctaRetGan3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetGan2 = new System.Windows.Forms.Button();
             this.par_ctaRetGan1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetGan = new System.Windows.Forms.TextBox();
-            this.par_ctaDescuento3 = new System.Windows.Forms.CheckBox();
             this.par_ctaDescuento2 = new System.Windows.Forms.Button();
             this.par_ctaDescuento1 = new System.Windows.Forms.TextBox();
             this.par_ctaDescuento = new System.Windows.Forms.TextBox();
-            this.par_ctaRetSUSSP3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetSUSSP2 = new System.Windows.Forms.Button();
             this.par_ctaRetSUSSP1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetSUSSP = new System.Windows.Forms.TextBox();
-            this.par_ctaRetGanP3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetGanP2 = new System.Windows.Forms.Button();
             this.par_ctaRetGanP1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetGanP = new System.Windows.Forms.TextBox();
-            this.par_ctaRetIIBBP3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetIIBBP2 = new System.Windows.Forms.Button();
             this.par_ctaRetIIBBP1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetIIBBP = new System.Windows.Forms.TextBox();
-            this.par_ctaRetIVAP3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetIVAP2 = new System.Windows.Forms.Button();
             this.par_ctaRetIVAP1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetIVAP = new System.Windows.Forms.TextBox();
-            this.par_ctaIVA27D3 = new System.Windows.Forms.CheckBox();
             this.par_ctaIVA27D2 = new System.Windows.Forms.Button();
             this.par_ctaIVA27D1 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA27D = new System.Windows.Forms.TextBox();
-            this.par_ctaIVA10D3 = new System.Windows.Forms.CheckBox();
             this.par_ctaIVA10D2 = new System.Windows.Forms.Button();
             this.par_ctaIVA10D1 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA10D = new System.Windows.Forms.TextBox();
-            this.par_ctaIVA21D3 = new System.Windows.Forms.CheckBox();
             this.par_ctaIVA21D2 = new System.Windows.Forms.Button();
             this.par_ctaIVA21D1 = new System.Windows.Forms.TextBox();
             this.par_ctaIVA21D = new System.Windows.Forms.TextBox();
-            this.par_ctaDeud3 = new System.Windows.Forms.CheckBox();
             this.par_ctaDeud2 = new System.Windows.Forms.Button();
             this.par_ctaDeud1 = new System.Windows.Forms.TextBox();
             this.par_ctaDeud = new System.Windows.Forms.TextBox();
-            this.par_NetoVtaArti3 = new System.Windows.Forms.CheckBox();
             this.par_NetoVtaArti2 = new System.Windows.Forms.Button();
             this.par_NetoVtaArti1 = new System.Windows.Forms.TextBox();
             this.par_NetoVtaArti = new System.Windows.Forms.TextBox();
-            this.par_ctaProvGral3 = new System.Windows.Forms.CheckBox();
             this.par_ctaProvGral2 = new System.Windows.Forms.Button();
             this.par_ctaProvGral1 = new System.Windows.Forms.TextBox();
             this.par_ctaProvGral = new System.Windows.Forms.TextBox();
-            this.par_ctaProv3 = new System.Windows.Forms.CheckBox();
             this.par_ctaProv2 = new System.Windows.Forms.Button();
             this.par_ctaProv1 = new System.Windows.Forms.TextBox();
             this.par_ctaProv = new System.Windows.Forms.TextBox();
-            this.par_ctaDifCambioVta3 = new System.Windows.Forms.CheckBox();
             this.par_ctaDifCambioVta2 = new System.Windows.Forms.Button();
             this.par_ctaDifCambioVta1 = new System.Windows.Forms.TextBox();
             this.par_ctaDifCambioVta = new System.Windows.Forms.TextBox();
-            this.par_ctaRetBFP3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetBFP2 = new System.Windows.Forms.Button();
             this.par_ctaRetBFP1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetBFP = new System.Windows.Forms.TextBox();
-            this.par_ctaRetBF3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRetBF2 = new System.Windows.Forms.Button();
             this.par_ctaRetBF1 = new System.Windows.Forms.TextBox();
             this.par_ctaRetBF = new System.Windows.Forms.TextBox();
-            this.par_ctaRedondeo3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRedondeo2 = new System.Windows.Forms.Button();
             this.par_ctaRedondeo1 = new System.Windows.Forms.TextBox();
             this.par_ctaRedondeo = new System.Windows.Forms.TextBox();
-            this.par_NetoVtaServ3 = new System.Windows.Forms.CheckBox();
             this.par_NetoVtaServ2 = new System.Windows.Forms.Button();
             this.par_NetoVtaServ1 = new System.Windows.Forms.TextBox();
             this.par_NetoVtaServ = new System.Windows.Forms.TextBox();
-            this.par_ctaAnticipoCpa3 = new System.Windows.Forms.CheckBox();
             this.par_ctaAnticipoCpa2 = new System.Windows.Forms.Button();
             this.par_ctaAnticipoCpa1 = new System.Windows.Forms.TextBox();
             this.par_ctaAnticipoCpa = new System.Windows.Forms.TextBox();
-            this.par_ctaAnticipoVta3 = new System.Windows.Forms.CheckBox();
             this.par_ctaAnticipoVta2 = new System.Windows.Forms.Button();
             this.par_ctaAnticipoVta1 = new System.Windows.Forms.TextBox();
             this.par_ctaAnticipoVta = new System.Windows.Forms.TextBox();
-            this.par_ctaRecargo3 = new System.Windows.Forms.CheckBox();
             this.par_ctaRecargo2 = new System.Windows.Forms.Button();
             this.par_ctaRecargo1 = new System.Windows.Forms.TextBox();
             this.par_ctaRecargo = new System.Windows.Forms.TextBox();
-            this.par_ctaAjusteInf3 = new System.Windows.Forms.CheckBox();
             this.par_ctaAjusteInf2 = new System.Windows.Forms.Button();
             this.par_ctaAjusteInf1 = new System.Windows.Forms.TextBox();
             this.par_ctaAjusteInf = new System.Windows.Forms.TextBox();
-            this.par_ctaCIIVA3 = new System.Windows.Forms.CheckBox();
             this.par_ctaCIIVA2 = new System.Windows.Forms.Button();
             this.par_ctaCIIVA1 = new System.Windows.Forms.TextBox();
             this.par_ctaCIIVA = new System.Windows.Forms.TextBox();
-            this.par_ctaCINeto3 = new System.Windows.Forms.CheckBox();
             this.par_ctaCINeto2 = new System.Windows.Forms.Button();
             this.par_ctaCINeto1 = new System.Windows.Forms.TextBox();
             this.par_ctaCINeto = new System.Windows.Forms.TextBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.par_ctaIVA213 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaIVA103 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaIVA273 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaImpInt3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRetIVA3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRetIIBB3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRetGan3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRetSUSS3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaPerIVA3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaPerIIBB3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaDeud3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaPerGan3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaOtrosImp3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaProvGral3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaIVA21D3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_NetoVtaArti3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaProv3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaIVA10D3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaIVA27D3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRetIIBBP3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRetIVAP3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRetGanP3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRetSUSSP3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaDescuento3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRecargo3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_NetoVtaServ3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaAnticipoCpa3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRetBF3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRedondeo3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaRetBFP3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaAnticipoVta3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaDifCambioVta3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaCINeto3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaCIIVA3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.par_ctaAjusteInf3 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 10);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(30, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 13);
             this.label1.TabIndex = 0;
@@ -218,7 +220,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 37);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(30, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 13);
             this.label2.TabIndex = 1;
@@ -227,7 +230,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 64);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(30, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 13);
             this.label3.TabIndex = 2;
@@ -236,7 +240,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 91);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(83, 91);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 13);
             this.label4.TabIndex = 3;
@@ -245,7 +250,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(68, 118);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(78, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 13);
             this.label5.TabIndex = 4;
@@ -254,7 +260,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(65, 145);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(75, 145);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 13);
             this.label6.TabIndex = 5;
@@ -263,7 +270,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 172);
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(44, 172);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(176, 13);
             this.label7.TabIndex = 6;
@@ -272,7 +280,8 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(71, 199);
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(81, 199);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(139, 13);
             this.label8.TabIndex = 7;
@@ -281,7 +290,8 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(78, 226);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(88, 226);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 13);
             this.label9.TabIndex = 8;
@@ -290,7 +300,8 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(75, 253);
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(85, 254);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(135, 13);
             this.label10.TabIndex = 9;
@@ -299,7 +310,8 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(29, 280);
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Location = new System.Drawing.Point(39, 281);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(181, 13);
             this.label11.TabIndex = 10;
@@ -308,7 +320,8 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(76, 307);
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.Location = new System.Drawing.Point(86, 306);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(134, 13);
             this.label12.TabIndex = 11;
@@ -317,7 +330,8 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(48, 334);
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.Location = new System.Drawing.Point(58, 334);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(162, 13);
             this.label13.TabIndex = 12;
@@ -326,7 +340,8 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(27, 361);
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.Location = new System.Drawing.Point(37, 361);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(183, 13);
             this.label14.TabIndex = 13;
@@ -335,7 +350,8 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(30, 388);
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label15.Location = new System.Drawing.Point(40, 388);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(180, 13);
             this.label15.TabIndex = 14;
@@ -344,7 +360,8 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(62, 415);
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label16.Location = new System.Drawing.Point(72, 415);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(148, 13);
             this.label16.TabIndex = 15;
@@ -353,7 +370,8 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(22, 497);
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label17.Location = new System.Drawing.Point(32, 497);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(188, 13);
             this.label17.TabIndex = 18;
@@ -362,7 +380,8 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(22, 469);
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label18.Location = new System.Drawing.Point(32, 469);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(188, 13);
             this.label18.TabIndex = 17;
@@ -371,7 +390,8 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(22, 442);
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label19.Location = new System.Drawing.Point(32, 442);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(188, 13);
             this.label19.TabIndex = 16;
@@ -380,7 +400,8 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(40, 607);
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label20.Location = new System.Drawing.Point(50, 605);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(170, 13);
             this.label20.TabIndex = 22;
@@ -389,7 +410,8 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(3, 579);
+            this.label21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label21.Location = new System.Drawing.Point(13, 578);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(207, 13);
             this.label21.TabIndex = 21;
@@ -398,7 +420,8 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(34, 550);
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label22.Location = new System.Drawing.Point(44, 550);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(176, 13);
             this.label22.TabIndex = 20;
@@ -407,7 +430,8 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(37, 525);
+            this.label23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label23.Location = new System.Drawing.Point(47, 525);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(173, 13);
             this.label23.TabIndex = 19;
@@ -416,7 +440,8 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(46, 632);
+            this.label24.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label24.Location = new System.Drawing.Point(56, 632);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(164, 13);
             this.label24.TabIndex = 23;
@@ -425,7 +450,8 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(57, 663);
+            this.label25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label25.Location = new System.Drawing.Point(67, 660);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(153, 13);
             this.label25.TabIndex = 25;
@@ -434,7 +460,8 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(63, 688);
+            this.label26.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label26.Location = new System.Drawing.Point(73, 686);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(147, 13);
             this.label26.TabIndex = 26;
@@ -443,7 +470,8 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(55, 713);
+            this.label27.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label27.Location = new System.Drawing.Point(65, 713);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(155, 13);
             this.label27.TabIndex = 27;
@@ -452,7 +480,8 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(31, 742);
+            this.label28.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label28.Location = new System.Drawing.Point(41, 740);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(179, 13);
             this.label28.TabIndex = 28;
@@ -461,7 +490,8 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(72, 767);
+            this.label29.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label29.Location = new System.Drawing.Point(82, 767);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(138, 13);
             this.label29.TabIndex = 29;
@@ -470,7 +500,8 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(45, 795);
+            this.label30.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label30.Location = new System.Drawing.Point(55, 794);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(165, 13);
             this.label30.TabIndex = 30;
@@ -479,7 +510,8 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(14, 825);
+            this.label31.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label31.Location = new System.Drawing.Point(24, 823);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(196, 13);
             this.label31.TabIndex = 31;
@@ -488,7 +520,8 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(34, 849);
+            this.label32.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label32.Location = new System.Drawing.Point(44, 849);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(177, 13);
             this.label32.TabIndex = 32;
@@ -497,7 +530,8 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(-10, 876);
+            this.label33.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label33.Location = new System.Drawing.Point(0, 875);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(220, 13);
             this.label33.TabIndex = 33;
@@ -506,7 +540,8 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(-4, 905);
+            this.label34.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label34.Location = new System.Drawing.Point(6, 903);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(214, 13);
             this.label34.TabIndex = 34;
@@ -515,7 +550,8 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(62, 930);
+            this.label35.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label35.Location = new System.Drawing.Point(72, 926);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(148, 13);
             this.label35.TabIndex = 35;
@@ -523,1272 +559,3034 @@
             // 
             // par_ctaIVA21
             // 
-            this.par_ctaIVA21.Location = new System.Drawing.Point(219, 7);
+            this.par_ctaIVA21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA21.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA21.Location = new System.Drawing.Point(229, 11);
             this.par_ctaIVA21.Name = "par_ctaIVA21";
             this.par_ctaIVA21.ReadOnly = true;
-            this.par_ctaIVA21.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaIVA21.Size = new System.Drawing.Size(78, 13);
             this.par_ctaIVA21.TabIndex = 36;
             // 
             // par_ctaIVA211
             // 
-            this.par_ctaIVA211.Location = new System.Drawing.Point(305, 8);
+            this.par_ctaIVA211.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA211.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA211.Location = new System.Drawing.Point(315, 11);
             this.par_ctaIVA211.Name = "par_ctaIVA211";
             this.par_ctaIVA211.ReadOnly = true;
-            this.par_ctaIVA211.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaIVA211.Size = new System.Drawing.Size(279, 13);
             this.par_ctaIVA211.TabIndex = 37;
             // 
             // par_ctaIVA212
             // 
-            this.par_ctaIVA212.Location = new System.Drawing.Point(590, 6);
+            this.par_ctaIVA212.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA212.FlatAppearance.BorderSize = 0;
+            this.par_ctaIVA212.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaIVA212.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA212.Image")));
+            this.par_ctaIVA212.Location = new System.Drawing.Point(600, 7);
             this.par_ctaIVA212.Name = "par_ctaIVA212";
             this.par_ctaIVA212.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA212.TabIndex = 38;
-            this.par_ctaIVA212.Text = "button1";
-            this.par_ctaIVA212.UseVisualStyleBackColor = true;
+            this.par_ctaIVA212.UseVisualStyleBackColor = false;
             this.par_ctaIVA212.Click += new System.EventHandler(this.AbrirCuentas);
-            // 
-            // par_ctaIVA213
-            // 
-            this.par_ctaIVA213.AutoSize = true;
-            this.par_ctaIVA213.Enabled = false;
-            this.par_ctaIVA213.Location = new System.Drawing.Point(618, 10);
-            this.par_ctaIVA213.Name = "par_ctaIVA213";
-            this.par_ctaIVA213.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaIVA213.TabIndex = 40;
-            this.par_ctaIVA213.UseVisualStyleBackColor = true;
-            // 
-            // par_ctaIVA103
-            // 
-            this.par_ctaIVA103.AutoSize = true;
-            this.par_ctaIVA103.Enabled = false;
-            this.par_ctaIVA103.Location = new System.Drawing.Point(618, 39);
-            this.par_ctaIVA103.Name = "par_ctaIVA103";
-            this.par_ctaIVA103.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaIVA103.TabIndex = 45;
-            this.par_ctaIVA103.UseVisualStyleBackColor = true;
             // 
             // par_ctaIVA102
             // 
-            this.par_ctaIVA102.Location = new System.Drawing.Point(590, 35);
+            this.par_ctaIVA102.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA102.FlatAppearance.BorderSize = 0;
+            this.par_ctaIVA102.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaIVA102.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA102.Image")));
+            this.par_ctaIVA102.Location = new System.Drawing.Point(600, 34);
             this.par_ctaIVA102.Name = "par_ctaIVA102";
             this.par_ctaIVA102.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA102.TabIndex = 43;
-            this.par_ctaIVA102.Text = "button4";
-            this.par_ctaIVA102.UseVisualStyleBackColor = true;
+            this.par_ctaIVA102.UseVisualStyleBackColor = false;
             this.par_ctaIVA102.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaIVA101
             // 
-            this.par_ctaIVA101.Location = new System.Drawing.Point(305, 36);
+            this.par_ctaIVA101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA101.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA101.Location = new System.Drawing.Point(315, 36);
             this.par_ctaIVA101.Name = "par_ctaIVA101";
             this.par_ctaIVA101.ReadOnly = true;
-            this.par_ctaIVA101.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaIVA101.Size = new System.Drawing.Size(279, 13);
             this.par_ctaIVA101.TabIndex = 42;
             // 
             // par_ctaIVA10
             // 
-            this.par_ctaIVA10.Location = new System.Drawing.Point(219, 36);
+            this.par_ctaIVA10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA10.Location = new System.Drawing.Point(229, 36);
             this.par_ctaIVA10.Name = "par_ctaIVA10";
             this.par_ctaIVA10.ReadOnly = true;
-            this.par_ctaIVA10.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaIVA10.Size = new System.Drawing.Size(78, 13);
             this.par_ctaIVA10.TabIndex = 41;
-            // 
-            // par_ctaIVA273
-            // 
-            this.par_ctaIVA273.AutoSize = true;
-            this.par_ctaIVA273.Enabled = false;
-            this.par_ctaIVA273.Location = new System.Drawing.Point(618, 64);
-            this.par_ctaIVA273.Name = "par_ctaIVA273";
-            this.par_ctaIVA273.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaIVA273.TabIndex = 50;
-            this.par_ctaIVA273.UseVisualStyleBackColor = true;
             // 
             // par_ctaIVA272
             // 
-            this.par_ctaIVA272.Location = new System.Drawing.Point(590, 60);
+            this.par_ctaIVA272.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA272.FlatAppearance.BorderSize = 0;
+            this.par_ctaIVA272.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaIVA272.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA272.Image")));
+            this.par_ctaIVA272.Location = new System.Drawing.Point(600, 59);
             this.par_ctaIVA272.Name = "par_ctaIVA272";
             this.par_ctaIVA272.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA272.TabIndex = 48;
-            this.par_ctaIVA272.Text = "button6";
-            this.par_ctaIVA272.UseVisualStyleBackColor = true;
+            this.par_ctaIVA272.UseVisualStyleBackColor = false;
             this.par_ctaIVA272.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaIVA271
             // 
-            this.par_ctaIVA271.Location = new System.Drawing.Point(305, 61);
+            this.par_ctaIVA271.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA271.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA271.Location = new System.Drawing.Point(315, 61);
             this.par_ctaIVA271.Name = "par_ctaIVA271";
             this.par_ctaIVA271.ReadOnly = true;
-            this.par_ctaIVA271.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaIVA271.Size = new System.Drawing.Size(279, 13);
             this.par_ctaIVA271.TabIndex = 47;
             // 
             // par_ctaIVA27
             // 
-            this.par_ctaIVA27.Location = new System.Drawing.Point(219, 61);
+            this.par_ctaIVA27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA27.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA27.Location = new System.Drawing.Point(229, 61);
             this.par_ctaIVA27.Name = "par_ctaIVA27";
             this.par_ctaIVA27.ReadOnly = true;
-            this.par_ctaIVA27.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaIVA27.Size = new System.Drawing.Size(78, 13);
             this.par_ctaIVA27.TabIndex = 46;
-            // 
-            // par_ctaRetIIBB3
-            // 
-            this.par_ctaRetIIBB3.AutoSize = true;
-            this.par_ctaRetIIBB3.Enabled = false;
-            this.par_ctaRetIIBB3.Location = new System.Drawing.Point(618, 146);
-            this.par_ctaRetIIBB3.Name = "par_ctaRetIIBB3";
-            this.par_ctaRetIIBB3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRetIIBB3.TabIndex = 65;
-            this.par_ctaRetIIBB3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetIIBB2
             // 
-            this.par_ctaRetIIBB2.Location = new System.Drawing.Point(590, 142);
+            this.par_ctaRetIIBB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIIBB2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRetIIBB2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRetIIBB2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIIBB2.Image")));
+            this.par_ctaRetIIBB2.Location = new System.Drawing.Point(600, 142);
             this.par_ctaRetIIBB2.Name = "par_ctaRetIIBB2";
             this.par_ctaRetIIBB2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetIIBB2.TabIndex = 63;
-            this.par_ctaRetIIBB2.Text = "button8";
-            this.par_ctaRetIIBB2.UseVisualStyleBackColor = true;
+            this.par_ctaRetIIBB2.UseVisualStyleBackColor = false;
             this.par_ctaRetIIBB2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRetIIBB1
             // 
-            this.par_ctaRetIIBB1.Location = new System.Drawing.Point(305, 143);
+            this.par_ctaRetIIBB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetIIBB1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetIIBB1.Location = new System.Drawing.Point(315, 143);
             this.par_ctaRetIIBB1.Name = "par_ctaRetIIBB1";
             this.par_ctaRetIIBB1.ReadOnly = true;
-            this.par_ctaRetIIBB1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRetIIBB1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRetIIBB1.TabIndex = 62;
             // 
             // par_ctaRetIIBB
             // 
-            this.par_ctaRetIIBB.Location = new System.Drawing.Point(219, 143);
+            this.par_ctaRetIIBB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetIIBB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetIIBB.Location = new System.Drawing.Point(229, 143);
             this.par_ctaRetIIBB.Name = "par_ctaRetIIBB";
             this.par_ctaRetIIBB.ReadOnly = true;
-            this.par_ctaRetIIBB.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRetIIBB.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRetIIBB.TabIndex = 61;
-            // 
-            // par_ctaRetIVA3
-            // 
-            this.par_ctaRetIVA3.AutoSize = true;
-            this.par_ctaRetIVA3.Enabled = false;
-            this.par_ctaRetIVA3.Location = new System.Drawing.Point(618, 121);
-            this.par_ctaRetIVA3.Name = "par_ctaRetIVA3";
-            this.par_ctaRetIVA3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRetIVA3.TabIndex = 60;
-            this.par_ctaRetIVA3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetIVA2
             // 
-            this.par_ctaRetIVA2.Location = new System.Drawing.Point(590, 117);
+            this.par_ctaRetIVA2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIVA2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRetIVA2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRetIVA2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIVA2.Image")));
+            this.par_ctaRetIVA2.Location = new System.Drawing.Point(600, 116);
             this.par_ctaRetIVA2.Name = "par_ctaRetIVA2";
             this.par_ctaRetIVA2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetIVA2.TabIndex = 58;
-            this.par_ctaRetIVA2.Text = "button10";
-            this.par_ctaRetIVA2.UseVisualStyleBackColor = true;
+            this.par_ctaRetIVA2.UseVisualStyleBackColor = false;
             this.par_ctaRetIVA2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRetIVA1
             // 
-            this.par_ctaRetIVA1.Location = new System.Drawing.Point(305, 118);
+            this.par_ctaRetIVA1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetIVA1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetIVA1.Location = new System.Drawing.Point(315, 118);
             this.par_ctaRetIVA1.Name = "par_ctaRetIVA1";
             this.par_ctaRetIVA1.ReadOnly = true;
-            this.par_ctaRetIVA1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRetIVA1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRetIVA1.TabIndex = 57;
             // 
             // par_ctaRetIVA
             // 
-            this.par_ctaRetIVA.Location = new System.Drawing.Point(219, 118);
+            this.par_ctaRetIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetIVA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetIVA.Location = new System.Drawing.Point(229, 118);
             this.par_ctaRetIVA.Name = "par_ctaRetIVA";
             this.par_ctaRetIVA.ReadOnly = true;
-            this.par_ctaRetIVA.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRetIVA.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRetIVA.TabIndex = 56;
-            // 
-            // par_ctaImpInt3
-            // 
-            this.par_ctaImpInt3.AutoSize = true;
-            this.par_ctaImpInt3.Enabled = false;
-            this.par_ctaImpInt3.Location = new System.Drawing.Point(618, 92);
-            this.par_ctaImpInt3.Name = "par_ctaImpInt3";
-            this.par_ctaImpInt3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaImpInt3.TabIndex = 55;
-            this.par_ctaImpInt3.UseVisualStyleBackColor = true;
             // 
             // par_ctaImpInt2
             // 
-            this.par_ctaImpInt2.Location = new System.Drawing.Point(590, 88);
+            this.par_ctaImpInt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaImpInt2.FlatAppearance.BorderSize = 0;
+            this.par_ctaImpInt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaImpInt2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaImpInt2.Image")));
+            this.par_ctaImpInt2.Location = new System.Drawing.Point(600, 87);
             this.par_ctaImpInt2.Name = "par_ctaImpInt2";
             this.par_ctaImpInt2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaImpInt2.TabIndex = 53;
-            this.par_ctaImpInt2.Text = "button12";
-            this.par_ctaImpInt2.UseVisualStyleBackColor = true;
+            this.par_ctaImpInt2.UseVisualStyleBackColor = false;
             this.par_ctaImpInt2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaImpInt1
             // 
-            this.par_ctaImpInt1.Location = new System.Drawing.Point(305, 89);
+            this.par_ctaImpInt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaImpInt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaImpInt1.Location = new System.Drawing.Point(315, 89);
             this.par_ctaImpInt1.Name = "par_ctaImpInt1";
             this.par_ctaImpInt1.ReadOnly = true;
-            this.par_ctaImpInt1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaImpInt1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaImpInt1.TabIndex = 52;
             // 
             // par_ctaImpInt
             // 
-            this.par_ctaImpInt.Location = new System.Drawing.Point(219, 89);
+            this.par_ctaImpInt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaImpInt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaImpInt.Location = new System.Drawing.Point(229, 89);
             this.par_ctaImpInt.Name = "par_ctaImpInt";
             this.par_ctaImpInt.ReadOnly = true;
-            this.par_ctaImpInt.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaImpInt.Size = new System.Drawing.Size(78, 13);
             this.par_ctaImpInt.TabIndex = 51;
-            // 
-            // par_ctaOtrosImp3
-            // 
-            this.par_ctaOtrosImp3.AutoSize = true;
-            this.par_ctaOtrosImp3.Enabled = false;
-            this.par_ctaOtrosImp3.Location = new System.Drawing.Point(618, 308);
-            this.par_ctaOtrosImp3.Name = "par_ctaOtrosImp3";
-            this.par_ctaOtrosImp3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaOtrosImp3.TabIndex = 95;
-            this.par_ctaOtrosImp3.UseVisualStyleBackColor = true;
             // 
             // par_ctaOtrosImp2
             // 
-            this.par_ctaOtrosImp2.Location = new System.Drawing.Point(590, 304);
+            this.par_ctaOtrosImp2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaOtrosImp2.FlatAppearance.BorderSize = 0;
+            this.par_ctaOtrosImp2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaOtrosImp2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaOtrosImp2.Image")));
+            this.par_ctaOtrosImp2.Location = new System.Drawing.Point(600, 303);
             this.par_ctaOtrosImp2.Name = "par_ctaOtrosImp2";
             this.par_ctaOtrosImp2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaOtrosImp2.TabIndex = 93;
-            this.par_ctaOtrosImp2.Text = "button14";
-            this.par_ctaOtrosImp2.UseVisualStyleBackColor = true;
+            this.par_ctaOtrosImp2.UseVisualStyleBackColor = false;
             this.par_ctaOtrosImp2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaOtrosImp1
             // 
-            this.par_ctaOtrosImp1.Location = new System.Drawing.Point(305, 305);
+            this.par_ctaOtrosImp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaOtrosImp1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaOtrosImp1.Location = new System.Drawing.Point(315, 306);
             this.par_ctaOtrosImp1.Name = "par_ctaOtrosImp1";
             this.par_ctaOtrosImp1.ReadOnly = true;
-            this.par_ctaOtrosImp1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaOtrosImp1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaOtrosImp1.TabIndex = 92;
             // 
             // par_ctaOtrosImp
             // 
-            this.par_ctaOtrosImp.Location = new System.Drawing.Point(219, 305);
+            this.par_ctaOtrosImp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaOtrosImp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaOtrosImp.Location = new System.Drawing.Point(229, 306);
             this.par_ctaOtrosImp.Name = "par_ctaOtrosImp";
             this.par_ctaOtrosImp.ReadOnly = true;
-            this.par_ctaOtrosImp.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaOtrosImp.Size = new System.Drawing.Size(78, 13);
             this.par_ctaOtrosImp.TabIndex = 91;
-            // 
-            // par_ctaPerGan3
-            // 
-            this.par_ctaPerGan3.AutoSize = true;
-            this.par_ctaPerGan3.Enabled = false;
-            this.par_ctaPerGan3.Location = new System.Drawing.Point(618, 283);
-            this.par_ctaPerGan3.Name = "par_ctaPerGan3";
-            this.par_ctaPerGan3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaPerGan3.TabIndex = 90;
-            this.par_ctaPerGan3.UseVisualStyleBackColor = true;
             // 
             // par_ctaPerGan2
             // 
-            this.par_ctaPerGan2.Location = new System.Drawing.Point(590, 279);
+            this.par_ctaPerGan2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaPerGan2.FlatAppearance.BorderSize = 0;
+            this.par_ctaPerGan2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaPerGan2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaPerGan2.Image")));
+            this.par_ctaPerGan2.Location = new System.Drawing.Point(600, 277);
             this.par_ctaPerGan2.Name = "par_ctaPerGan2";
             this.par_ctaPerGan2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaPerGan2.TabIndex = 88;
-            this.par_ctaPerGan2.Text = "button16";
-            this.par_ctaPerGan2.UseVisualStyleBackColor = true;
+            this.par_ctaPerGan2.UseVisualStyleBackColor = false;
             this.par_ctaPerGan2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaPerGan1
             // 
-            this.par_ctaPerGan1.Location = new System.Drawing.Point(305, 280);
+            this.par_ctaPerGan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaPerGan1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaPerGan1.Location = new System.Drawing.Point(315, 281);
             this.par_ctaPerGan1.Name = "par_ctaPerGan1";
             this.par_ctaPerGan1.ReadOnly = true;
-            this.par_ctaPerGan1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaPerGan1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaPerGan1.TabIndex = 87;
             // 
             // par_ctaPerGan
             // 
-            this.par_ctaPerGan.Location = new System.Drawing.Point(219, 280);
+            this.par_ctaPerGan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaPerGan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaPerGan.Location = new System.Drawing.Point(229, 281);
             this.par_ctaPerGan.Name = "par_ctaPerGan";
             this.par_ctaPerGan.ReadOnly = true;
-            this.par_ctaPerGan.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaPerGan.Size = new System.Drawing.Size(78, 13);
             this.par_ctaPerGan.TabIndex = 86;
-            // 
-            // par_ctaPerIIBB3
-            // 
-            this.par_ctaPerIIBB3.AutoSize = true;
-            this.par_ctaPerIIBB3.Enabled = false;
-            this.par_ctaPerIIBB3.Location = new System.Drawing.Point(618, 254);
-            this.par_ctaPerIIBB3.Name = "par_ctaPerIIBB3";
-            this.par_ctaPerIIBB3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaPerIIBB3.TabIndex = 85;
-            this.par_ctaPerIIBB3.UseVisualStyleBackColor = true;
             // 
             // par_ctaPerIIBB2
             // 
-            this.par_ctaPerIIBB2.Location = new System.Drawing.Point(590, 250);
+            this.par_ctaPerIIBB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaPerIIBB2.FlatAppearance.BorderSize = 0;
+            this.par_ctaPerIIBB2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaPerIIBB2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaPerIIBB2.Image")));
+            this.par_ctaPerIIBB2.Location = new System.Drawing.Point(600, 248);
             this.par_ctaPerIIBB2.Name = "par_ctaPerIIBB2";
             this.par_ctaPerIIBB2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaPerIIBB2.TabIndex = 83;
-            this.par_ctaPerIIBB2.Text = "button18";
-            this.par_ctaPerIIBB2.UseVisualStyleBackColor = true;
+            this.par_ctaPerIIBB2.UseVisualStyleBackColor = false;
             this.par_ctaPerIIBB2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaPerIIBB1
             // 
-            this.par_ctaPerIIBB1.Location = new System.Drawing.Point(305, 251);
+            this.par_ctaPerIIBB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaPerIIBB1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaPerIIBB1.Location = new System.Drawing.Point(315, 252);
             this.par_ctaPerIIBB1.Name = "par_ctaPerIIBB1";
             this.par_ctaPerIIBB1.ReadOnly = true;
-            this.par_ctaPerIIBB1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaPerIIBB1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaPerIIBB1.TabIndex = 82;
             // 
             // par_ctaPerIIBB
             // 
-            this.par_ctaPerIIBB.Location = new System.Drawing.Point(219, 251);
+            this.par_ctaPerIIBB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaPerIIBB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaPerIIBB.Location = new System.Drawing.Point(229, 252);
             this.par_ctaPerIIBB.Name = "par_ctaPerIIBB";
             this.par_ctaPerIIBB.ReadOnly = true;
-            this.par_ctaPerIIBB.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaPerIIBB.Size = new System.Drawing.Size(78, 13);
             this.par_ctaPerIIBB.TabIndex = 81;
-            // 
-            // par_ctaPerIVA3
-            // 
-            this.par_ctaPerIVA3.AutoSize = true;
-            this.par_ctaPerIVA3.Enabled = false;
-            this.par_ctaPerIVA3.Location = new System.Drawing.Point(618, 226);
-            this.par_ctaPerIVA3.Name = "par_ctaPerIVA3";
-            this.par_ctaPerIVA3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaPerIVA3.TabIndex = 80;
-            this.par_ctaPerIVA3.UseVisualStyleBackColor = true;
             // 
             // par_ctaPerIVA2
             // 
-            this.par_ctaPerIVA2.Location = new System.Drawing.Point(590, 222);
+            this.par_ctaPerIVA2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaPerIVA2.FlatAppearance.BorderSize = 0;
+            this.par_ctaPerIVA2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaPerIVA2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaPerIVA2.Image")));
+            this.par_ctaPerIVA2.Location = new System.Drawing.Point(600, 221);
             this.par_ctaPerIVA2.Name = "par_ctaPerIVA2";
             this.par_ctaPerIVA2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaPerIVA2.TabIndex = 78;
-            this.par_ctaPerIVA2.Text = "button20";
-            this.par_ctaPerIVA2.UseVisualStyleBackColor = true;
+            this.par_ctaPerIVA2.UseVisualStyleBackColor = false;
             this.par_ctaPerIVA2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaPerIVA1
             // 
-            this.par_ctaPerIVA1.Location = new System.Drawing.Point(305, 223);
+            this.par_ctaPerIVA1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaPerIVA1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaPerIVA1.Location = new System.Drawing.Point(315, 223);
             this.par_ctaPerIVA1.Name = "par_ctaPerIVA1";
             this.par_ctaPerIVA1.ReadOnly = true;
-            this.par_ctaPerIVA1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaPerIVA1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaPerIVA1.TabIndex = 77;
             // 
             // par_ctaPerIVA
             // 
-            this.par_ctaPerIVA.Location = new System.Drawing.Point(219, 223);
+            this.par_ctaPerIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaPerIVA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaPerIVA.Location = new System.Drawing.Point(229, 223);
             this.par_ctaPerIVA.Name = "par_ctaPerIVA";
             this.par_ctaPerIVA.ReadOnly = true;
-            this.par_ctaPerIVA.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaPerIVA.Size = new System.Drawing.Size(78, 13);
             this.par_ctaPerIVA.TabIndex = 76;
-            // 
-            // par_ctaRetSUSS3
-            // 
-            this.par_ctaRetSUSS3.AutoSize = true;
-            this.par_ctaRetSUSS3.Enabled = false;
-            this.par_ctaRetSUSS3.Location = new System.Drawing.Point(618, 201);
-            this.par_ctaRetSUSS3.Name = "par_ctaRetSUSS3";
-            this.par_ctaRetSUSS3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRetSUSS3.TabIndex = 75;
-            this.par_ctaRetSUSS3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetSUSS2
             // 
-            this.par_ctaRetSUSS2.Location = new System.Drawing.Point(590, 197);
+            this.par_ctaRetSUSS2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetSUSS2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRetSUSS2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRetSUSS2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetSUSS2.Image")));
+            this.par_ctaRetSUSS2.Location = new System.Drawing.Point(600, 195);
             this.par_ctaRetSUSS2.Name = "par_ctaRetSUSS2";
             this.par_ctaRetSUSS2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetSUSS2.TabIndex = 73;
-            this.par_ctaRetSUSS2.Text = "button22";
-            this.par_ctaRetSUSS2.UseVisualStyleBackColor = true;
+            this.par_ctaRetSUSS2.UseVisualStyleBackColor = false;
             this.par_ctaRetSUSS2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRetSUSS1
             // 
-            this.par_ctaRetSUSS1.Location = new System.Drawing.Point(305, 198);
+            this.par_ctaRetSUSS1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetSUSS1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetSUSS1.Location = new System.Drawing.Point(315, 198);
             this.par_ctaRetSUSS1.Name = "par_ctaRetSUSS1";
             this.par_ctaRetSUSS1.ReadOnly = true;
-            this.par_ctaRetSUSS1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRetSUSS1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRetSUSS1.TabIndex = 72;
             // 
             // par_ctaRetSUSS
             // 
-            this.par_ctaRetSUSS.Location = new System.Drawing.Point(219, 198);
+            this.par_ctaRetSUSS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetSUSS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetSUSS.Location = new System.Drawing.Point(229, 198);
             this.par_ctaRetSUSS.Name = "par_ctaRetSUSS";
             this.par_ctaRetSUSS.ReadOnly = true;
-            this.par_ctaRetSUSS.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRetSUSS.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRetSUSS.TabIndex = 71;
-            // 
-            // par_ctaRetGan3
-            // 
-            this.par_ctaRetGan3.AutoSize = true;
-            this.par_ctaRetGan3.Enabled = false;
-            this.par_ctaRetGan3.Location = new System.Drawing.Point(618, 172);
-            this.par_ctaRetGan3.Name = "par_ctaRetGan3";
-            this.par_ctaRetGan3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRetGan3.TabIndex = 70;
-            this.par_ctaRetGan3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetGan2
             // 
-            this.par_ctaRetGan2.Location = new System.Drawing.Point(590, 168);
+            this.par_ctaRetGan2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetGan2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRetGan2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRetGan2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetGan2.Image")));
+            this.par_ctaRetGan2.Location = new System.Drawing.Point(600, 168);
             this.par_ctaRetGan2.Name = "par_ctaRetGan2";
             this.par_ctaRetGan2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetGan2.TabIndex = 68;
-            this.par_ctaRetGan2.Text = "button24";
-            this.par_ctaRetGan2.UseVisualStyleBackColor = true;
+            this.par_ctaRetGan2.UseVisualStyleBackColor = false;
             this.par_ctaRetGan2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRetGan1
             // 
-            this.par_ctaRetGan1.Location = new System.Drawing.Point(305, 169);
+            this.par_ctaRetGan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetGan1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetGan1.Location = new System.Drawing.Point(315, 171);
             this.par_ctaRetGan1.Name = "par_ctaRetGan1";
             this.par_ctaRetGan1.ReadOnly = true;
-            this.par_ctaRetGan1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRetGan1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRetGan1.TabIndex = 67;
             // 
             // par_ctaRetGan
             // 
-            this.par_ctaRetGan.Location = new System.Drawing.Point(219, 169);
+            this.par_ctaRetGan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetGan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetGan.Location = new System.Drawing.Point(229, 171);
             this.par_ctaRetGan.Name = "par_ctaRetGan";
             this.par_ctaRetGan.ReadOnly = true;
-            this.par_ctaRetGan.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRetGan.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRetGan.TabIndex = 66;
-            // 
-            // par_ctaDescuento3
-            // 
-            this.par_ctaDescuento3.AutoSize = true;
-            this.par_ctaDescuento3.Enabled = false;
-            this.par_ctaDescuento3.Location = new System.Drawing.Point(618, 630);
-            this.par_ctaDescuento3.Name = "par_ctaDescuento3";
-            this.par_ctaDescuento3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaDescuento3.TabIndex = 155;
-            this.par_ctaDescuento3.UseVisualStyleBackColor = true;
             // 
             // par_ctaDescuento2
             // 
-            this.par_ctaDescuento2.Location = new System.Drawing.Point(590, 627);
+            this.par_ctaDescuento2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaDescuento2.FlatAppearance.BorderSize = 0;
+            this.par_ctaDescuento2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaDescuento2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaDescuento2.Image")));
+            this.par_ctaDescuento2.Location = new System.Drawing.Point(600, 627);
             this.par_ctaDescuento2.Name = "par_ctaDescuento2";
             this.par_ctaDescuento2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaDescuento2.TabIndex = 153;
-            this.par_ctaDescuento2.Text = "button26";
-            this.par_ctaDescuento2.UseVisualStyleBackColor = true;
+            this.par_ctaDescuento2.UseVisualStyleBackColor = false;
             this.par_ctaDescuento2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaDescuento1
             // 
-            this.par_ctaDescuento1.Location = new System.Drawing.Point(305, 629);
+            this.par_ctaDescuento1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaDescuento1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaDescuento1.Location = new System.Drawing.Point(315, 631);
             this.par_ctaDescuento1.Name = "par_ctaDescuento1";
             this.par_ctaDescuento1.ReadOnly = true;
-            this.par_ctaDescuento1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaDescuento1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaDescuento1.TabIndex = 152;
             // 
             // par_ctaDescuento
             // 
-            this.par_ctaDescuento.Location = new System.Drawing.Point(219, 629);
+            this.par_ctaDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaDescuento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaDescuento.Location = new System.Drawing.Point(229, 631);
             this.par_ctaDescuento.Name = "par_ctaDescuento";
             this.par_ctaDescuento.ReadOnly = true;
-            this.par_ctaDescuento.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaDescuento.Size = new System.Drawing.Size(78, 13);
             this.par_ctaDescuento.TabIndex = 151;
-            // 
-            // par_ctaRetSUSSP3
-            // 
-            this.par_ctaRetSUSSP3.AutoSize = true;
-            this.par_ctaRetSUSSP3.Enabled = false;
-            this.par_ctaRetSUSSP3.Location = new System.Drawing.Point(618, 605);
-            this.par_ctaRetSUSSP3.Name = "par_ctaRetSUSSP3";
-            this.par_ctaRetSUSSP3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRetSUSSP3.TabIndex = 150;
-            this.par_ctaRetSUSSP3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetSUSSP2
             // 
-            this.par_ctaRetSUSSP2.Location = new System.Drawing.Point(590, 602);
+            this.par_ctaRetSUSSP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetSUSSP2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRetSUSSP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRetSUSSP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetSUSSP2.Image")));
+            this.par_ctaRetSUSSP2.Location = new System.Drawing.Point(600, 602);
             this.par_ctaRetSUSSP2.Name = "par_ctaRetSUSSP2";
             this.par_ctaRetSUSSP2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetSUSSP2.TabIndex = 148;
-            this.par_ctaRetSUSSP2.Text = "button28";
-            this.par_ctaRetSUSSP2.UseVisualStyleBackColor = true;
+            this.par_ctaRetSUSSP2.UseVisualStyleBackColor = false;
             this.par_ctaRetSUSSP2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRetSUSSP1
             // 
-            this.par_ctaRetSUSSP1.Location = new System.Drawing.Point(305, 604);
+            this.par_ctaRetSUSSP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetSUSSP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetSUSSP1.Location = new System.Drawing.Point(315, 604);
             this.par_ctaRetSUSSP1.Name = "par_ctaRetSUSSP1";
             this.par_ctaRetSUSSP1.ReadOnly = true;
-            this.par_ctaRetSUSSP1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRetSUSSP1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRetSUSSP1.TabIndex = 147;
             // 
             // par_ctaRetSUSSP
             // 
-            this.par_ctaRetSUSSP.Location = new System.Drawing.Point(219, 604);
+            this.par_ctaRetSUSSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetSUSSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetSUSSP.Location = new System.Drawing.Point(229, 604);
             this.par_ctaRetSUSSP.Name = "par_ctaRetSUSSP";
             this.par_ctaRetSUSSP.ReadOnly = true;
-            this.par_ctaRetSUSSP.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRetSUSSP.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRetSUSSP.TabIndex = 146;
-            // 
-            // par_ctaRetGanP3
-            // 
-            this.par_ctaRetGanP3.AutoSize = true;
-            this.par_ctaRetGanP3.Enabled = false;
-            this.par_ctaRetGanP3.Location = new System.Drawing.Point(618, 576);
-            this.par_ctaRetGanP3.Name = "par_ctaRetGanP3";
-            this.par_ctaRetGanP3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRetGanP3.TabIndex = 145;
-            this.par_ctaRetGanP3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetGanP2
             // 
-            this.par_ctaRetGanP2.Location = new System.Drawing.Point(590, 573);
+            this.par_ctaRetGanP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetGanP2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRetGanP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRetGanP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetGanP2.Image")));
+            this.par_ctaRetGanP2.Location = new System.Drawing.Point(600, 573);
             this.par_ctaRetGanP2.Name = "par_ctaRetGanP2";
             this.par_ctaRetGanP2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetGanP2.TabIndex = 143;
-            this.par_ctaRetGanP2.Text = "button30";
-            this.par_ctaRetGanP2.UseVisualStyleBackColor = true;
+            this.par_ctaRetGanP2.UseVisualStyleBackColor = false;
             this.par_ctaRetGanP2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRetGanP1
             // 
-            this.par_ctaRetGanP1.Location = new System.Drawing.Point(305, 575);
+            this.par_ctaRetGanP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetGanP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetGanP1.Location = new System.Drawing.Point(315, 577);
             this.par_ctaRetGanP1.Name = "par_ctaRetGanP1";
             this.par_ctaRetGanP1.ReadOnly = true;
-            this.par_ctaRetGanP1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRetGanP1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRetGanP1.TabIndex = 142;
             // 
             // par_ctaRetGanP
             // 
-            this.par_ctaRetGanP.Location = new System.Drawing.Point(219, 575);
+            this.par_ctaRetGanP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetGanP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetGanP.Location = new System.Drawing.Point(229, 577);
             this.par_ctaRetGanP.Name = "par_ctaRetGanP";
             this.par_ctaRetGanP.ReadOnly = true;
-            this.par_ctaRetGanP.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRetGanP.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRetGanP.TabIndex = 141;
-            // 
-            // par_ctaRetIIBBP3
-            // 
-            this.par_ctaRetIIBBP3.AutoSize = true;
-            this.par_ctaRetIIBBP3.Enabled = false;
-            this.par_ctaRetIIBBP3.Location = new System.Drawing.Point(618, 548);
-            this.par_ctaRetIIBBP3.Name = "par_ctaRetIIBBP3";
-            this.par_ctaRetIIBBP3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRetIIBBP3.TabIndex = 140;
-            this.par_ctaRetIIBBP3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetIIBBP2
             // 
-            this.par_ctaRetIIBBP2.Location = new System.Drawing.Point(590, 545);
+            this.par_ctaRetIIBBP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIIBBP2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRetIIBBP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRetIIBBP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIIBBP2.Image")));
+            this.par_ctaRetIIBBP2.Location = new System.Drawing.Point(600, 545);
             this.par_ctaRetIIBBP2.Name = "par_ctaRetIIBBP2";
             this.par_ctaRetIIBBP2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetIIBBP2.TabIndex = 138;
-            this.par_ctaRetIIBBP2.Text = "button32";
-            this.par_ctaRetIIBBP2.UseVisualStyleBackColor = true;
+            this.par_ctaRetIIBBP2.UseVisualStyleBackColor = false;
             this.par_ctaRetIIBBP2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRetIIBBP1
             // 
-            this.par_ctaRetIIBBP1.Location = new System.Drawing.Point(305, 547);
+            this.par_ctaRetIIBBP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetIIBBP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetIIBBP1.Location = new System.Drawing.Point(315, 547);
             this.par_ctaRetIIBBP1.Name = "par_ctaRetIIBBP1";
             this.par_ctaRetIIBBP1.ReadOnly = true;
-            this.par_ctaRetIIBBP1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRetIIBBP1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRetIIBBP1.TabIndex = 137;
             // 
             // par_ctaRetIIBBP
             // 
-            this.par_ctaRetIIBBP.Location = new System.Drawing.Point(219, 547);
+            this.par_ctaRetIIBBP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetIIBBP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetIIBBP.Location = new System.Drawing.Point(229, 547);
             this.par_ctaRetIIBBP.Name = "par_ctaRetIIBBP";
             this.par_ctaRetIIBBP.ReadOnly = true;
-            this.par_ctaRetIIBBP.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRetIIBBP.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRetIIBBP.TabIndex = 136;
-            // 
-            // par_ctaRetIVAP3
-            // 
-            this.par_ctaRetIVAP3.AutoSize = true;
-            this.par_ctaRetIVAP3.Enabled = false;
-            this.par_ctaRetIVAP3.Location = new System.Drawing.Point(618, 523);
-            this.par_ctaRetIVAP3.Name = "par_ctaRetIVAP3";
-            this.par_ctaRetIVAP3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRetIVAP3.TabIndex = 135;
-            this.par_ctaRetIVAP3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetIVAP2
             // 
-            this.par_ctaRetIVAP2.Location = new System.Drawing.Point(590, 520);
+            this.par_ctaRetIVAP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIVAP2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRetIVAP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRetIVAP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIVAP2.Image")));
+            this.par_ctaRetIVAP2.Location = new System.Drawing.Point(600, 520);
             this.par_ctaRetIVAP2.Name = "par_ctaRetIVAP2";
             this.par_ctaRetIVAP2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetIVAP2.TabIndex = 133;
-            this.par_ctaRetIVAP2.Text = "button34";
-            this.par_ctaRetIVAP2.UseVisualStyleBackColor = true;
+            this.par_ctaRetIVAP2.UseVisualStyleBackColor = false;
             this.par_ctaRetIVAP2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRetIVAP1
             // 
-            this.par_ctaRetIVAP1.Location = new System.Drawing.Point(305, 522);
+            this.par_ctaRetIVAP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetIVAP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetIVAP1.Location = new System.Drawing.Point(315, 522);
             this.par_ctaRetIVAP1.Name = "par_ctaRetIVAP1";
             this.par_ctaRetIVAP1.ReadOnly = true;
-            this.par_ctaRetIVAP1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRetIVAP1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRetIVAP1.TabIndex = 132;
             // 
             // par_ctaRetIVAP
             // 
-            this.par_ctaRetIVAP.Location = new System.Drawing.Point(219, 522);
+            this.par_ctaRetIVAP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetIVAP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetIVAP.Location = new System.Drawing.Point(229, 522);
             this.par_ctaRetIVAP.Name = "par_ctaRetIVAP";
             this.par_ctaRetIVAP.ReadOnly = true;
-            this.par_ctaRetIVAP.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRetIVAP.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRetIVAP.TabIndex = 131;
-            // 
-            // par_ctaIVA27D3
-            // 
-            this.par_ctaIVA27D3.AutoSize = true;
-            this.par_ctaIVA27D3.Enabled = false;
-            this.par_ctaIVA27D3.Location = new System.Drawing.Point(618, 496);
-            this.par_ctaIVA27D3.Name = "par_ctaIVA27D3";
-            this.par_ctaIVA27D3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaIVA27D3.TabIndex = 130;
-            this.par_ctaIVA27D3.UseVisualStyleBackColor = true;
             // 
             // par_ctaIVA27D2
             // 
-            this.par_ctaIVA27D2.Location = new System.Drawing.Point(590, 493);
+            this.par_ctaIVA27D2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA27D2.FlatAppearance.BorderSize = 0;
+            this.par_ctaIVA27D2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaIVA27D2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA27D2.Image")));
+            this.par_ctaIVA27D2.Location = new System.Drawing.Point(600, 493);
             this.par_ctaIVA27D2.Name = "par_ctaIVA27D2";
             this.par_ctaIVA27D2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA27D2.TabIndex = 128;
-            this.par_ctaIVA27D2.Text = "button36";
-            this.par_ctaIVA27D2.UseVisualStyleBackColor = true;
+            this.par_ctaIVA27D2.UseVisualStyleBackColor = false;
             this.par_ctaIVA27D2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaIVA27D1
             // 
-            this.par_ctaIVA27D1.Location = new System.Drawing.Point(305, 493);
+            this.par_ctaIVA27D1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA27D1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA27D1.Location = new System.Drawing.Point(315, 493);
             this.par_ctaIVA27D1.Name = "par_ctaIVA27D1";
             this.par_ctaIVA27D1.ReadOnly = true;
-            this.par_ctaIVA27D1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaIVA27D1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaIVA27D1.TabIndex = 127;
             // 
             // par_ctaIVA27D
             // 
-            this.par_ctaIVA27D.Location = new System.Drawing.Point(219, 493);
+            this.par_ctaIVA27D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA27D.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA27D.Location = new System.Drawing.Point(229, 493);
             this.par_ctaIVA27D.Name = "par_ctaIVA27D";
             this.par_ctaIVA27D.ReadOnly = true;
-            this.par_ctaIVA27D.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaIVA27D.Size = new System.Drawing.Size(78, 13);
             this.par_ctaIVA27D.TabIndex = 126;
-            // 
-            // par_ctaIVA10D3
-            // 
-            this.par_ctaIVA10D3.AutoSize = true;
-            this.par_ctaIVA10D3.Enabled = false;
-            this.par_ctaIVA10D3.Location = new System.Drawing.Point(618, 470);
-            this.par_ctaIVA10D3.Name = "par_ctaIVA10D3";
-            this.par_ctaIVA10D3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaIVA10D3.TabIndex = 125;
-            this.par_ctaIVA10D3.UseVisualStyleBackColor = true;
             // 
             // par_ctaIVA10D2
             // 
-            this.par_ctaIVA10D2.Location = new System.Drawing.Point(590, 467);
+            this.par_ctaIVA10D2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA10D2.FlatAppearance.BorderSize = 0;
+            this.par_ctaIVA10D2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaIVA10D2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA10D2.Image")));
+            this.par_ctaIVA10D2.Location = new System.Drawing.Point(600, 467);
             this.par_ctaIVA10D2.Name = "par_ctaIVA10D2";
             this.par_ctaIVA10D2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA10D2.TabIndex = 123;
-            this.par_ctaIVA10D2.Text = "button38";
-            this.par_ctaIVA10D2.UseVisualStyleBackColor = true;
+            this.par_ctaIVA10D2.UseVisualStyleBackColor = false;
             this.par_ctaIVA10D2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaIVA10D1
             // 
-            this.par_ctaIVA10D1.Location = new System.Drawing.Point(305, 467);
+            this.par_ctaIVA10D1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA10D1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA10D1.Location = new System.Drawing.Point(315, 467);
             this.par_ctaIVA10D1.Name = "par_ctaIVA10D1";
             this.par_ctaIVA10D1.ReadOnly = true;
-            this.par_ctaIVA10D1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaIVA10D1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaIVA10D1.TabIndex = 122;
             // 
             // par_ctaIVA10D
             // 
-            this.par_ctaIVA10D.Location = new System.Drawing.Point(219, 467);
+            this.par_ctaIVA10D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA10D.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA10D.Location = new System.Drawing.Point(229, 467);
             this.par_ctaIVA10D.Name = "par_ctaIVA10D";
             this.par_ctaIVA10D.ReadOnly = true;
-            this.par_ctaIVA10D.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaIVA10D.Size = new System.Drawing.Size(78, 13);
             this.par_ctaIVA10D.TabIndex = 121;
-            // 
-            // par_ctaIVA21D3
-            // 
-            this.par_ctaIVA21D3.AutoSize = true;
-            this.par_ctaIVA21D3.Enabled = false;
-            this.par_ctaIVA21D3.Location = new System.Drawing.Point(618, 445);
-            this.par_ctaIVA21D3.Name = "par_ctaIVA21D3";
-            this.par_ctaIVA21D3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaIVA21D3.TabIndex = 120;
-            this.par_ctaIVA21D3.UseVisualStyleBackColor = true;
             // 
             // par_ctaIVA21D2
             // 
-            this.par_ctaIVA21D2.Location = new System.Drawing.Point(590, 442);
+            this.par_ctaIVA21D2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA21D2.FlatAppearance.BorderSize = 0;
+            this.par_ctaIVA21D2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaIVA21D2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA21D2.Image")));
+            this.par_ctaIVA21D2.Location = new System.Drawing.Point(600, 442);
             this.par_ctaIVA21D2.Name = "par_ctaIVA21D2";
             this.par_ctaIVA21D2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaIVA21D2.TabIndex = 118;
-            this.par_ctaIVA21D2.Text = "button40";
-            this.par_ctaIVA21D2.UseVisualStyleBackColor = true;
+            this.par_ctaIVA21D2.UseVisualStyleBackColor = false;
             this.par_ctaIVA21D2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaIVA21D1
             // 
-            this.par_ctaIVA21D1.Location = new System.Drawing.Point(305, 442);
+            this.par_ctaIVA21D1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA21D1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA21D1.Location = new System.Drawing.Point(315, 442);
             this.par_ctaIVA21D1.Name = "par_ctaIVA21D1";
             this.par_ctaIVA21D1.ReadOnly = true;
-            this.par_ctaIVA21D1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaIVA21D1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaIVA21D1.TabIndex = 117;
             // 
             // par_ctaIVA21D
             // 
-            this.par_ctaIVA21D.Location = new System.Drawing.Point(219, 442);
+            this.par_ctaIVA21D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaIVA21D.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaIVA21D.Location = new System.Drawing.Point(229, 442);
             this.par_ctaIVA21D.Name = "par_ctaIVA21D";
             this.par_ctaIVA21D.ReadOnly = true;
-            this.par_ctaIVA21D.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaIVA21D.Size = new System.Drawing.Size(78, 13);
             this.par_ctaIVA21D.TabIndex = 116;
-            // 
-            // par_ctaDeud3
-            // 
-            this.par_ctaDeud3.AutoSize = true;
-            this.par_ctaDeud3.Enabled = false;
-            this.par_ctaDeud3.Location = new System.Drawing.Point(618, 416);
-            this.par_ctaDeud3.Name = "par_ctaDeud3";
-            this.par_ctaDeud3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaDeud3.TabIndex = 115;
-            this.par_ctaDeud3.UseVisualStyleBackColor = true;
             // 
             // par_ctaDeud2
             // 
-            this.par_ctaDeud2.Location = new System.Drawing.Point(590, 412);
+            this.par_ctaDeud2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaDeud2.FlatAppearance.BorderSize = 0;
+            this.par_ctaDeud2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaDeud2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaDeud2.Image")));
+            this.par_ctaDeud2.Location = new System.Drawing.Point(600, 412);
             this.par_ctaDeud2.Name = "par_ctaDeud2";
             this.par_ctaDeud2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaDeud2.TabIndex = 113;
-            this.par_ctaDeud2.Text = "button42";
-            this.par_ctaDeud2.UseVisualStyleBackColor = true;
+            this.par_ctaDeud2.UseVisualStyleBackColor = false;
             this.par_ctaDeud2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaDeud1
             // 
-            this.par_ctaDeud1.Location = new System.Drawing.Point(305, 413);
+            this.par_ctaDeud1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaDeud1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaDeud1.Location = new System.Drawing.Point(315, 415);
             this.par_ctaDeud1.Name = "par_ctaDeud1";
             this.par_ctaDeud1.ReadOnly = true;
-            this.par_ctaDeud1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaDeud1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaDeud1.TabIndex = 112;
             // 
             // par_ctaDeud
             // 
-            this.par_ctaDeud.Location = new System.Drawing.Point(219, 413);
+            this.par_ctaDeud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaDeud.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaDeud.Location = new System.Drawing.Point(229, 415);
             this.par_ctaDeud.Name = "par_ctaDeud";
             this.par_ctaDeud.ReadOnly = true;
-            this.par_ctaDeud.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaDeud.Size = new System.Drawing.Size(78, 13);
             this.par_ctaDeud.TabIndex = 111;
-            // 
-            // par_NetoVtaArti3
-            // 
-            this.par_NetoVtaArti3.AutoSize = true;
-            this.par_NetoVtaArti3.Enabled = false;
-            this.par_NetoVtaArti3.Location = new System.Drawing.Point(618, 388);
-            this.par_NetoVtaArti3.Name = "par_NetoVtaArti3";
-            this.par_NetoVtaArti3.Size = new System.Drawing.Size(15, 14);
-            this.par_NetoVtaArti3.TabIndex = 110;
-            this.par_NetoVtaArti3.UseVisualStyleBackColor = true;
             // 
             // par_NetoVtaArti2
             // 
-            this.par_NetoVtaArti2.Location = new System.Drawing.Point(590, 384);
+            this.par_NetoVtaArti2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_NetoVtaArti2.FlatAppearance.BorderSize = 0;
+            this.par_NetoVtaArti2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_NetoVtaArti2.Image = ((System.Drawing.Image)(resources.GetObject("par_NetoVtaArti2.Image")));
+            this.par_NetoVtaArti2.Location = new System.Drawing.Point(600, 384);
             this.par_NetoVtaArti2.Name = "par_NetoVtaArti2";
             this.par_NetoVtaArti2.Size = new System.Drawing.Size(22, 21);
             this.par_NetoVtaArti2.TabIndex = 108;
-            this.par_NetoVtaArti2.Text = "button44";
-            this.par_NetoVtaArti2.UseVisualStyleBackColor = true;
+            this.par_NetoVtaArti2.UseVisualStyleBackColor = false;
             this.par_NetoVtaArti2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_NetoVtaArti1
             // 
-            this.par_NetoVtaArti1.Location = new System.Drawing.Point(305, 385);
+            this.par_NetoVtaArti1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_NetoVtaArti1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_NetoVtaArti1.Location = new System.Drawing.Point(315, 387);
             this.par_NetoVtaArti1.Name = "par_NetoVtaArti1";
             this.par_NetoVtaArti1.ReadOnly = true;
-            this.par_NetoVtaArti1.Size = new System.Drawing.Size(279, 20);
+            this.par_NetoVtaArti1.Size = new System.Drawing.Size(279, 13);
             this.par_NetoVtaArti1.TabIndex = 107;
             // 
             // par_NetoVtaArti
             // 
-            this.par_NetoVtaArti.Location = new System.Drawing.Point(219, 385);
+            this.par_NetoVtaArti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_NetoVtaArti.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_NetoVtaArti.Location = new System.Drawing.Point(229, 387);
             this.par_NetoVtaArti.Name = "par_NetoVtaArti";
             this.par_NetoVtaArti.ReadOnly = true;
-            this.par_NetoVtaArti.Size = new System.Drawing.Size(78, 20);
+            this.par_NetoVtaArti.Size = new System.Drawing.Size(78, 13);
             this.par_NetoVtaArti.TabIndex = 106;
-            // 
-            // par_ctaProvGral3
-            // 
-            this.par_ctaProvGral3.AutoSize = true;
-            this.par_ctaProvGral3.Enabled = false;
-            this.par_ctaProvGral3.Location = new System.Drawing.Point(618, 363);
-            this.par_ctaProvGral3.Name = "par_ctaProvGral3";
-            this.par_ctaProvGral3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaProvGral3.TabIndex = 105;
-            this.par_ctaProvGral3.UseVisualStyleBackColor = true;
             // 
             // par_ctaProvGral2
             // 
-            this.par_ctaProvGral2.Location = new System.Drawing.Point(590, 359);
+            this.par_ctaProvGral2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaProvGral2.FlatAppearance.BorderSize = 0;
+            this.par_ctaProvGral2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaProvGral2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaProvGral2.Image")));
+            this.par_ctaProvGral2.Location = new System.Drawing.Point(600, 359);
             this.par_ctaProvGral2.Name = "par_ctaProvGral2";
             this.par_ctaProvGral2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaProvGral2.TabIndex = 103;
-            this.par_ctaProvGral2.Text = "button46";
-            this.par_ctaProvGral2.UseVisualStyleBackColor = true;
+            this.par_ctaProvGral2.UseVisualStyleBackColor = false;
             this.par_ctaProvGral2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaProvGral1
             // 
-            this.par_ctaProvGral1.Location = new System.Drawing.Point(305, 360);
+            this.par_ctaProvGral1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaProvGral1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaProvGral1.Location = new System.Drawing.Point(315, 362);
             this.par_ctaProvGral1.Name = "par_ctaProvGral1";
             this.par_ctaProvGral1.ReadOnly = true;
-            this.par_ctaProvGral1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaProvGral1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaProvGral1.TabIndex = 102;
             // 
             // par_ctaProvGral
             // 
-            this.par_ctaProvGral.Location = new System.Drawing.Point(219, 360);
+            this.par_ctaProvGral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaProvGral.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaProvGral.Location = new System.Drawing.Point(229, 362);
             this.par_ctaProvGral.Name = "par_ctaProvGral";
             this.par_ctaProvGral.ReadOnly = true;
-            this.par_ctaProvGral.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaProvGral.Size = new System.Drawing.Size(78, 13);
             this.par_ctaProvGral.TabIndex = 101;
-            // 
-            // par_ctaProv3
-            // 
-            this.par_ctaProv3.AutoSize = true;
-            this.par_ctaProv3.Enabled = false;
-            this.par_ctaProv3.Location = new System.Drawing.Point(618, 334);
-            this.par_ctaProv3.Name = "par_ctaProv3";
-            this.par_ctaProv3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaProv3.TabIndex = 100;
-            this.par_ctaProv3.UseVisualStyleBackColor = true;
             // 
             // par_ctaProv2
             // 
-            this.par_ctaProv2.Location = new System.Drawing.Point(590, 330);
+            this.par_ctaProv2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaProv2.FlatAppearance.BorderSize = 0;
+            this.par_ctaProv2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaProv2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaProv2.Image")));
+            this.par_ctaProv2.Location = new System.Drawing.Point(600, 330);
             this.par_ctaProv2.Name = "par_ctaProv2";
             this.par_ctaProv2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaProv2.TabIndex = 98;
-            this.par_ctaProv2.Text = "button48";
-            this.par_ctaProv2.UseVisualStyleBackColor = true;
+            this.par_ctaProv2.UseVisualStyleBackColor = false;
             this.par_ctaProv2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaProv1
             // 
-            this.par_ctaProv1.Location = new System.Drawing.Point(305, 331);
+            this.par_ctaProv1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaProv1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaProv1.Location = new System.Drawing.Point(315, 332);
             this.par_ctaProv1.Name = "par_ctaProv1";
             this.par_ctaProv1.ReadOnly = true;
-            this.par_ctaProv1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaProv1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaProv1.TabIndex = 97;
             // 
             // par_ctaProv
             // 
-            this.par_ctaProv.Location = new System.Drawing.Point(219, 331);
+            this.par_ctaProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaProv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaProv.Location = new System.Drawing.Point(229, 332);
             this.par_ctaProv.Name = "par_ctaProv";
             this.par_ctaProv.ReadOnly = true;
-            this.par_ctaProv.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaProv.Size = new System.Drawing.Size(78, 13);
             this.par_ctaProv.TabIndex = 96;
-            // 
-            // par_ctaDifCambioVta3
-            // 
-            this.par_ctaDifCambioVta3.AutoSize = true;
-            this.par_ctaDifCambioVta3.Enabled = false;
-            this.par_ctaDifCambioVta3.Location = new System.Drawing.Point(618, 847);
-            this.par_ctaDifCambioVta3.Name = "par_ctaDifCambioVta3";
-            this.par_ctaDifCambioVta3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaDifCambioVta3.TabIndex = 195;
-            this.par_ctaDifCambioVta3.UseVisualStyleBackColor = true;
             // 
             // par_ctaDifCambioVta2
             // 
-            this.par_ctaDifCambioVta2.Location = new System.Drawing.Point(590, 844);
+            this.par_ctaDifCambioVta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaDifCambioVta2.FlatAppearance.BorderSize = 0;
+            this.par_ctaDifCambioVta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaDifCambioVta2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaDifCambioVta2.Image")));
+            this.par_ctaDifCambioVta2.Location = new System.Drawing.Point(600, 844);
             this.par_ctaDifCambioVta2.Name = "par_ctaDifCambioVta2";
             this.par_ctaDifCambioVta2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaDifCambioVta2.TabIndex = 193;
-            this.par_ctaDifCambioVta2.Text = "button50";
-            this.par_ctaDifCambioVta2.UseVisualStyleBackColor = true;
+            this.par_ctaDifCambioVta2.UseVisualStyleBackColor = false;
             this.par_ctaDifCambioVta2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaDifCambioVta1
             // 
-            this.par_ctaDifCambioVta1.Location = new System.Drawing.Point(305, 846);
+            this.par_ctaDifCambioVta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaDifCambioVta1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaDifCambioVta1.Location = new System.Drawing.Point(315, 848);
             this.par_ctaDifCambioVta1.Name = "par_ctaDifCambioVta1";
             this.par_ctaDifCambioVta1.ReadOnly = true;
-            this.par_ctaDifCambioVta1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaDifCambioVta1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaDifCambioVta1.TabIndex = 192;
             // 
             // par_ctaDifCambioVta
             // 
-            this.par_ctaDifCambioVta.Location = new System.Drawing.Point(219, 846);
+            this.par_ctaDifCambioVta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaDifCambioVta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaDifCambioVta.Location = new System.Drawing.Point(229, 848);
             this.par_ctaDifCambioVta.Name = "par_ctaDifCambioVta";
             this.par_ctaDifCambioVta.ReadOnly = true;
-            this.par_ctaDifCambioVta.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaDifCambioVta.Size = new System.Drawing.Size(78, 13);
             this.par_ctaDifCambioVta.TabIndex = 191;
-            // 
-            // par_ctaRetBFP3
-            // 
-            this.par_ctaRetBFP3.AutoSize = true;
-            this.par_ctaRetBFP3.Enabled = false;
-            this.par_ctaRetBFP3.Location = new System.Drawing.Point(618, 822);
-            this.par_ctaRetBFP3.Name = "par_ctaRetBFP3";
-            this.par_ctaRetBFP3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRetBFP3.TabIndex = 190;
-            this.par_ctaRetBFP3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetBFP2
             // 
-            this.par_ctaRetBFP2.Location = new System.Drawing.Point(590, 819);
+            this.par_ctaRetBFP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetBFP2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRetBFP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRetBFP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetBFP2.Image")));
+            this.par_ctaRetBFP2.Location = new System.Drawing.Point(600, 819);
             this.par_ctaRetBFP2.Name = "par_ctaRetBFP2";
             this.par_ctaRetBFP2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetBFP2.TabIndex = 188;
-            this.par_ctaRetBFP2.Text = "button52";
-            this.par_ctaRetBFP2.UseVisualStyleBackColor = true;
+            this.par_ctaRetBFP2.UseVisualStyleBackColor = false;
             this.par_ctaRetBFP2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRetBFP1
             // 
-            this.par_ctaRetBFP1.Location = new System.Drawing.Point(305, 821);
+            this.par_ctaRetBFP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetBFP1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetBFP1.Location = new System.Drawing.Point(315, 822);
             this.par_ctaRetBFP1.Name = "par_ctaRetBFP1";
             this.par_ctaRetBFP1.ReadOnly = true;
-            this.par_ctaRetBFP1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRetBFP1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRetBFP1.TabIndex = 187;
             // 
             // par_ctaRetBFP
             // 
-            this.par_ctaRetBFP.Location = new System.Drawing.Point(219, 821);
+            this.par_ctaRetBFP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetBFP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetBFP.Location = new System.Drawing.Point(229, 822);
             this.par_ctaRetBFP.Name = "par_ctaRetBFP";
             this.par_ctaRetBFP.ReadOnly = true;
-            this.par_ctaRetBFP.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRetBFP.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRetBFP.TabIndex = 186;
-            // 
-            // par_ctaRetBF3
-            // 
-            this.par_ctaRetBF3.AutoSize = true;
-            this.par_ctaRetBF3.Enabled = false;
-            this.par_ctaRetBF3.Location = new System.Drawing.Point(618, 793);
-            this.par_ctaRetBF3.Name = "par_ctaRetBF3";
-            this.par_ctaRetBF3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRetBF3.TabIndex = 185;
-            this.par_ctaRetBF3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRetBF2
             // 
-            this.par_ctaRetBF2.Location = new System.Drawing.Point(590, 790);
+            this.par_ctaRetBF2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetBF2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRetBF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRetBF2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetBF2.Image")));
+            this.par_ctaRetBF2.Location = new System.Drawing.Point(600, 790);
             this.par_ctaRetBF2.Name = "par_ctaRetBF2";
             this.par_ctaRetBF2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRetBF2.TabIndex = 183;
-            this.par_ctaRetBF2.Text = "button54";
-            this.par_ctaRetBF2.UseVisualStyleBackColor = true;
+            this.par_ctaRetBF2.UseVisualStyleBackColor = false;
             this.par_ctaRetBF2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRetBF1
             // 
-            this.par_ctaRetBF1.Location = new System.Drawing.Point(305, 792);
+            this.par_ctaRetBF1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetBF1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetBF1.Location = new System.Drawing.Point(315, 794);
             this.par_ctaRetBF1.Name = "par_ctaRetBF1";
             this.par_ctaRetBF1.ReadOnly = true;
-            this.par_ctaRetBF1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRetBF1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRetBF1.TabIndex = 182;
             // 
             // par_ctaRetBF
             // 
-            this.par_ctaRetBF.Location = new System.Drawing.Point(219, 792);
+            this.par_ctaRetBF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRetBF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRetBF.Location = new System.Drawing.Point(229, 794);
             this.par_ctaRetBF.Name = "par_ctaRetBF";
             this.par_ctaRetBF.ReadOnly = true;
-            this.par_ctaRetBF.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRetBF.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRetBF.TabIndex = 181;
-            // 
-            // par_ctaRedondeo3
-            // 
-            this.par_ctaRedondeo3.AutoSize = true;
-            this.par_ctaRedondeo3.Enabled = false;
-            this.par_ctaRedondeo3.Location = new System.Drawing.Point(618, 765);
-            this.par_ctaRedondeo3.Name = "par_ctaRedondeo3";
-            this.par_ctaRedondeo3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRedondeo3.TabIndex = 180;
-            this.par_ctaRedondeo3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRedondeo2
             // 
-            this.par_ctaRedondeo2.Location = new System.Drawing.Point(590, 762);
+            this.par_ctaRedondeo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRedondeo2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRedondeo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRedondeo2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRedondeo2.Image")));
+            this.par_ctaRedondeo2.Location = new System.Drawing.Point(600, 762);
             this.par_ctaRedondeo2.Name = "par_ctaRedondeo2";
             this.par_ctaRedondeo2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRedondeo2.TabIndex = 178;
-            this.par_ctaRedondeo2.Text = "button56";
-            this.par_ctaRedondeo2.UseVisualStyleBackColor = true;
+            this.par_ctaRedondeo2.UseVisualStyleBackColor = false;
             this.par_ctaRedondeo2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRedondeo1
             // 
-            this.par_ctaRedondeo1.Location = new System.Drawing.Point(305, 764);
+            this.par_ctaRedondeo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRedondeo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRedondeo1.Location = new System.Drawing.Point(315, 766);
             this.par_ctaRedondeo1.Name = "par_ctaRedondeo1";
             this.par_ctaRedondeo1.ReadOnly = true;
-            this.par_ctaRedondeo1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRedondeo1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRedondeo1.TabIndex = 177;
             // 
             // par_ctaRedondeo
             // 
-            this.par_ctaRedondeo.Location = new System.Drawing.Point(219, 764);
+            this.par_ctaRedondeo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRedondeo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRedondeo.Location = new System.Drawing.Point(229, 766);
             this.par_ctaRedondeo.Name = "par_ctaRedondeo";
             this.par_ctaRedondeo.ReadOnly = true;
-            this.par_ctaRedondeo.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRedondeo.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRedondeo.TabIndex = 176;
-            // 
-            // par_NetoVtaServ3
-            // 
-            this.par_NetoVtaServ3.AutoSize = true;
-            this.par_NetoVtaServ3.Enabled = false;
-            this.par_NetoVtaServ3.Location = new System.Drawing.Point(618, 740);
-            this.par_NetoVtaServ3.Name = "par_NetoVtaServ3";
-            this.par_NetoVtaServ3.Size = new System.Drawing.Size(15, 14);
-            this.par_NetoVtaServ3.TabIndex = 175;
-            this.par_NetoVtaServ3.UseVisualStyleBackColor = true;
             // 
             // par_NetoVtaServ2
             // 
-            this.par_NetoVtaServ2.Location = new System.Drawing.Point(590, 737);
+            this.par_NetoVtaServ2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_NetoVtaServ2.FlatAppearance.BorderSize = 0;
+            this.par_NetoVtaServ2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_NetoVtaServ2.Image = ((System.Drawing.Image)(resources.GetObject("par_NetoVtaServ2.Image")));
+            this.par_NetoVtaServ2.Location = new System.Drawing.Point(600, 737);
             this.par_NetoVtaServ2.Name = "par_NetoVtaServ2";
             this.par_NetoVtaServ2.Size = new System.Drawing.Size(22, 21);
             this.par_NetoVtaServ2.TabIndex = 173;
-            this.par_NetoVtaServ2.Text = "button58";
-            this.par_NetoVtaServ2.UseVisualStyleBackColor = true;
+            this.par_NetoVtaServ2.UseVisualStyleBackColor = false;
             this.par_NetoVtaServ2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_NetoVtaServ1
             // 
-            this.par_NetoVtaServ1.Location = new System.Drawing.Point(305, 739);
+            this.par_NetoVtaServ1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_NetoVtaServ1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_NetoVtaServ1.Location = new System.Drawing.Point(315, 740);
             this.par_NetoVtaServ1.Name = "par_NetoVtaServ1";
             this.par_NetoVtaServ1.ReadOnly = true;
-            this.par_NetoVtaServ1.Size = new System.Drawing.Size(279, 20);
+            this.par_NetoVtaServ1.Size = new System.Drawing.Size(279, 13);
             this.par_NetoVtaServ1.TabIndex = 172;
             // 
             // par_NetoVtaServ
             // 
-            this.par_NetoVtaServ.Location = new System.Drawing.Point(219, 739);
+            this.par_NetoVtaServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_NetoVtaServ.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_NetoVtaServ.Location = new System.Drawing.Point(229, 740);
             this.par_NetoVtaServ.Name = "par_NetoVtaServ";
             this.par_NetoVtaServ.ReadOnly = true;
-            this.par_NetoVtaServ.Size = new System.Drawing.Size(78, 20);
+            this.par_NetoVtaServ.Size = new System.Drawing.Size(78, 13);
             this.par_NetoVtaServ.TabIndex = 171;
-            // 
-            // par_ctaAnticipoCpa3
-            // 
-            this.par_ctaAnticipoCpa3.AutoSize = true;
-            this.par_ctaAnticipoCpa3.Enabled = false;
-            this.par_ctaAnticipoCpa3.Location = new System.Drawing.Point(618, 711);
-            this.par_ctaAnticipoCpa3.Name = "par_ctaAnticipoCpa3";
-            this.par_ctaAnticipoCpa3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaAnticipoCpa3.TabIndex = 170;
-            this.par_ctaAnticipoCpa3.UseVisualStyleBackColor = true;
             // 
             // par_ctaAnticipoCpa2
             // 
-            this.par_ctaAnticipoCpa2.Location = new System.Drawing.Point(590, 708);
+            this.par_ctaAnticipoCpa2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaAnticipoCpa2.FlatAppearance.BorderSize = 0;
+            this.par_ctaAnticipoCpa2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaAnticipoCpa2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaAnticipoCpa2.Image")));
+            this.par_ctaAnticipoCpa2.Location = new System.Drawing.Point(600, 708);
             this.par_ctaAnticipoCpa2.Name = "par_ctaAnticipoCpa2";
             this.par_ctaAnticipoCpa2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaAnticipoCpa2.TabIndex = 168;
-            this.par_ctaAnticipoCpa2.Text = "button60";
-            this.par_ctaAnticipoCpa2.UseVisualStyleBackColor = true;
+            this.par_ctaAnticipoCpa2.UseVisualStyleBackColor = false;
             this.par_ctaAnticipoCpa2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaAnticipoCpa1
             // 
-            this.par_ctaAnticipoCpa1.Location = new System.Drawing.Point(305, 710);
+            this.par_ctaAnticipoCpa1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaAnticipoCpa1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaAnticipoCpa1.Location = new System.Drawing.Point(315, 713);
             this.par_ctaAnticipoCpa1.Name = "par_ctaAnticipoCpa1";
             this.par_ctaAnticipoCpa1.ReadOnly = true;
-            this.par_ctaAnticipoCpa1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaAnticipoCpa1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaAnticipoCpa1.TabIndex = 167;
             // 
             // par_ctaAnticipoCpa
             // 
-            this.par_ctaAnticipoCpa.Location = new System.Drawing.Point(219, 710);
+            this.par_ctaAnticipoCpa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaAnticipoCpa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaAnticipoCpa.Location = new System.Drawing.Point(229, 713);
             this.par_ctaAnticipoCpa.Name = "par_ctaAnticipoCpa";
             this.par_ctaAnticipoCpa.ReadOnly = true;
-            this.par_ctaAnticipoCpa.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaAnticipoCpa.Size = new System.Drawing.Size(78, 13);
             this.par_ctaAnticipoCpa.TabIndex = 166;
-            // 
-            // par_ctaAnticipoVta3
-            // 
-            this.par_ctaAnticipoVta3.AutoSize = true;
-            this.par_ctaAnticipoVta3.Enabled = false;
-            this.par_ctaAnticipoVta3.Location = new System.Drawing.Point(618, 685);
-            this.par_ctaAnticipoVta3.Name = "par_ctaAnticipoVta3";
-            this.par_ctaAnticipoVta3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaAnticipoVta3.TabIndex = 165;
-            this.par_ctaAnticipoVta3.UseVisualStyleBackColor = true;
             // 
             // par_ctaAnticipoVta2
             // 
-            this.par_ctaAnticipoVta2.Location = new System.Drawing.Point(590, 682);
+            this.par_ctaAnticipoVta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaAnticipoVta2.FlatAppearance.BorderSize = 0;
+            this.par_ctaAnticipoVta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaAnticipoVta2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaAnticipoVta2.Image")));
+            this.par_ctaAnticipoVta2.Location = new System.Drawing.Point(600, 682);
             this.par_ctaAnticipoVta2.Name = "par_ctaAnticipoVta2";
             this.par_ctaAnticipoVta2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaAnticipoVta2.TabIndex = 163;
-            this.par_ctaAnticipoVta2.Text = "button62";
-            this.par_ctaAnticipoVta2.UseVisualStyleBackColor = true;
+            this.par_ctaAnticipoVta2.UseVisualStyleBackColor = false;
             this.par_ctaAnticipoVta2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaAnticipoVta1
             // 
-            this.par_ctaAnticipoVta1.Location = new System.Drawing.Point(305, 684);
+            this.par_ctaAnticipoVta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaAnticipoVta1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaAnticipoVta1.Location = new System.Drawing.Point(315, 685);
             this.par_ctaAnticipoVta1.Name = "par_ctaAnticipoVta1";
             this.par_ctaAnticipoVta1.ReadOnly = true;
-            this.par_ctaAnticipoVta1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaAnticipoVta1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaAnticipoVta1.TabIndex = 162;
             // 
             // par_ctaAnticipoVta
             // 
-            this.par_ctaAnticipoVta.Location = new System.Drawing.Point(219, 684);
+            this.par_ctaAnticipoVta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaAnticipoVta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaAnticipoVta.Location = new System.Drawing.Point(229, 685);
             this.par_ctaAnticipoVta.Name = "par_ctaAnticipoVta";
             this.par_ctaAnticipoVta.ReadOnly = true;
-            this.par_ctaAnticipoVta.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaAnticipoVta.Size = new System.Drawing.Size(78, 13);
             this.par_ctaAnticipoVta.TabIndex = 161;
-            // 
-            // par_ctaRecargo3
-            // 
-            this.par_ctaRecargo3.AutoSize = true;
-            this.par_ctaRecargo3.Enabled = false;
-            this.par_ctaRecargo3.Location = new System.Drawing.Point(618, 660);
-            this.par_ctaRecargo3.Name = "par_ctaRecargo3";
-            this.par_ctaRecargo3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaRecargo3.TabIndex = 160;
-            this.par_ctaRecargo3.UseVisualStyleBackColor = true;
             // 
             // par_ctaRecargo2
             // 
-            this.par_ctaRecargo2.Location = new System.Drawing.Point(590, 657);
+            this.par_ctaRecargo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRecargo2.FlatAppearance.BorderSize = 0;
+            this.par_ctaRecargo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaRecargo2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRecargo2.Image")));
+            this.par_ctaRecargo2.Location = new System.Drawing.Point(600, 657);
             this.par_ctaRecargo2.Name = "par_ctaRecargo2";
             this.par_ctaRecargo2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaRecargo2.TabIndex = 158;
-            this.par_ctaRecargo2.Text = "button64";
-            this.par_ctaRecargo2.UseVisualStyleBackColor = true;
+            this.par_ctaRecargo2.UseVisualStyleBackColor = false;
             this.par_ctaRecargo2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaRecargo1
             // 
-            this.par_ctaRecargo1.Location = new System.Drawing.Point(305, 659);
+            this.par_ctaRecargo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRecargo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRecargo1.Location = new System.Drawing.Point(315, 660);
             this.par_ctaRecargo1.Name = "par_ctaRecargo1";
             this.par_ctaRecargo1.ReadOnly = true;
-            this.par_ctaRecargo1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaRecargo1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaRecargo1.TabIndex = 157;
             // 
             // par_ctaRecargo
             // 
-            this.par_ctaRecargo.Location = new System.Drawing.Point(219, 659);
+            this.par_ctaRecargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaRecargo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaRecargo.Location = new System.Drawing.Point(229, 660);
             this.par_ctaRecargo.Name = "par_ctaRecargo";
             this.par_ctaRecargo.ReadOnly = true;
-            this.par_ctaRecargo.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaRecargo.Size = new System.Drawing.Size(78, 13);
             this.par_ctaRecargo.TabIndex = 156;
-            // 
-            // par_ctaAjusteInf3
-            // 
-            this.par_ctaAjusteInf3.AutoSize = true;
-            this.par_ctaAjusteInf3.Enabled = false;
-            this.par_ctaAjusteInf3.Location = new System.Drawing.Point(618, 927);
-            this.par_ctaAjusteInf3.Name = "par_ctaAjusteInf3";
-            this.par_ctaAjusteInf3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaAjusteInf3.TabIndex = 210;
-            this.par_ctaAjusteInf3.UseVisualStyleBackColor = true;
             // 
             // par_ctaAjusteInf2
             // 
-            this.par_ctaAjusteInf2.Location = new System.Drawing.Point(590, 924);
+            this.par_ctaAjusteInf2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaAjusteInf2.FlatAppearance.BorderSize = 0;
+            this.par_ctaAjusteInf2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaAjusteInf2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaAjusteInf2.Image")));
+            this.par_ctaAjusteInf2.Location = new System.Drawing.Point(600, 924);
             this.par_ctaAjusteInf2.Name = "par_ctaAjusteInf2";
             this.par_ctaAjusteInf2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaAjusteInf2.TabIndex = 208;
-            this.par_ctaAjusteInf2.Text = "button66";
-            this.par_ctaAjusteInf2.UseVisualStyleBackColor = true;
+            this.par_ctaAjusteInf2.UseVisualStyleBackColor = false;
             this.par_ctaAjusteInf2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaAjusteInf1
             // 
-            this.par_ctaAjusteInf1.Location = new System.Drawing.Point(305, 926);
+            this.par_ctaAjusteInf1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaAjusteInf1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaAjusteInf1.Location = new System.Drawing.Point(315, 926);
             this.par_ctaAjusteInf1.Name = "par_ctaAjusteInf1";
             this.par_ctaAjusteInf1.ReadOnly = true;
-            this.par_ctaAjusteInf1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaAjusteInf1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaAjusteInf1.TabIndex = 207;
             // 
             // par_ctaAjusteInf
             // 
-            this.par_ctaAjusteInf.Location = new System.Drawing.Point(219, 926);
+            this.par_ctaAjusteInf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaAjusteInf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaAjusteInf.Location = new System.Drawing.Point(229, 926);
             this.par_ctaAjusteInf.Name = "par_ctaAjusteInf";
             this.par_ctaAjusteInf.ReadOnly = true;
-            this.par_ctaAjusteInf.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaAjusteInf.Size = new System.Drawing.Size(78, 13);
             this.par_ctaAjusteInf.TabIndex = 206;
-            // 
-            // par_ctaCIIVA3
-            // 
-            this.par_ctaCIIVA3.AutoSize = true;
-            this.par_ctaCIIVA3.Enabled = false;
-            this.par_ctaCIIVA3.Location = new System.Drawing.Point(618, 902);
-            this.par_ctaCIIVA3.Name = "par_ctaCIIVA3";
-            this.par_ctaCIIVA3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaCIIVA3.TabIndex = 205;
-            this.par_ctaCIIVA3.UseVisualStyleBackColor = true;
             // 
             // par_ctaCIIVA2
             // 
-            this.par_ctaCIIVA2.Location = new System.Drawing.Point(590, 899);
+            this.par_ctaCIIVA2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaCIIVA2.FlatAppearance.BorderSize = 0;
+            this.par_ctaCIIVA2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaCIIVA2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaCIIVA2.Image")));
+            this.par_ctaCIIVA2.Location = new System.Drawing.Point(600, 899);
             this.par_ctaCIIVA2.Name = "par_ctaCIIVA2";
             this.par_ctaCIIVA2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaCIIVA2.TabIndex = 203;
-            this.par_ctaCIIVA2.Text = "button68";
-            this.par_ctaCIIVA2.UseVisualStyleBackColor = true;
+            this.par_ctaCIIVA2.UseVisualStyleBackColor = false;
             this.par_ctaCIIVA2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaCIIVA1
             // 
-            this.par_ctaCIIVA1.Location = new System.Drawing.Point(305, 901);
+            this.par_ctaCIIVA1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaCIIVA1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaCIIVA1.Location = new System.Drawing.Point(315, 902);
             this.par_ctaCIIVA1.Name = "par_ctaCIIVA1";
             this.par_ctaCIIVA1.ReadOnly = true;
-            this.par_ctaCIIVA1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaCIIVA1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaCIIVA1.TabIndex = 202;
             // 
             // par_ctaCIIVA
             // 
-            this.par_ctaCIIVA.Location = new System.Drawing.Point(219, 901);
+            this.par_ctaCIIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaCIIVA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaCIIVA.Location = new System.Drawing.Point(229, 902);
             this.par_ctaCIIVA.Name = "par_ctaCIIVA";
             this.par_ctaCIIVA.ReadOnly = true;
-            this.par_ctaCIIVA.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaCIIVA.Size = new System.Drawing.Size(78, 13);
             this.par_ctaCIIVA.TabIndex = 201;
-            // 
-            // par_ctaCINeto3
-            // 
-            this.par_ctaCINeto3.AutoSize = true;
-            this.par_ctaCINeto3.Enabled = false;
-            this.par_ctaCINeto3.Location = new System.Drawing.Point(618, 873);
-            this.par_ctaCINeto3.Name = "par_ctaCINeto3";
-            this.par_ctaCINeto3.Size = new System.Drawing.Size(15, 14);
-            this.par_ctaCINeto3.TabIndex = 200;
-            this.par_ctaCINeto3.UseVisualStyleBackColor = true;
             // 
             // par_ctaCINeto2
             // 
-            this.par_ctaCINeto2.Location = new System.Drawing.Point(590, 870);
+            this.par_ctaCINeto2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaCINeto2.FlatAppearance.BorderSize = 0;
+            this.par_ctaCINeto2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.par_ctaCINeto2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaCINeto2.Image")));
+            this.par_ctaCINeto2.Location = new System.Drawing.Point(600, 870);
             this.par_ctaCINeto2.Name = "par_ctaCINeto2";
             this.par_ctaCINeto2.Size = new System.Drawing.Size(22, 21);
             this.par_ctaCINeto2.TabIndex = 198;
-            this.par_ctaCINeto2.Text = "button70";
-            this.par_ctaCINeto2.UseVisualStyleBackColor = true;
+            this.par_ctaCINeto2.UseVisualStyleBackColor = false;
             this.par_ctaCINeto2.Click += new System.EventHandler(this.AbrirCuentas);
             // 
             // par_ctaCINeto1
             // 
-            this.par_ctaCINeto1.Location = new System.Drawing.Point(305, 872);
+            this.par_ctaCINeto1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaCINeto1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaCINeto1.Location = new System.Drawing.Point(315, 875);
             this.par_ctaCINeto1.Name = "par_ctaCINeto1";
             this.par_ctaCINeto1.ReadOnly = true;
-            this.par_ctaCINeto1.Size = new System.Drawing.Size(279, 20);
+            this.par_ctaCINeto1.Size = new System.Drawing.Size(279, 13);
             this.par_ctaCINeto1.TabIndex = 197;
             // 
             // par_ctaCINeto
             // 
-            this.par_ctaCINeto.Location = new System.Drawing.Point(219, 872);
+            this.par_ctaCINeto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.par_ctaCINeto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.par_ctaCINeto.Location = new System.Drawing.Point(229, 875);
             this.par_ctaCINeto.Name = "par_ctaCINeto";
             this.par_ctaCINeto.ReadOnly = true;
-            this.par_ctaCINeto.Size = new System.Drawing.Size(78, 20);
+            this.par_ctaCINeto.Size = new System.Drawing.Size(78, 13);
             this.par_ctaCINeto.TabIndex = 196;
+            // 
+            // par_ctaIVA213
+            // 
+            this.par_ctaIVA213.AllowBindingControlAnimation = true;
+            this.par_ctaIVA213.AllowBindingControlColorChanges = false;
+            this.par_ctaIVA213.AllowBindingControlLocation = true;
+            this.par_ctaIVA213.AllowCheckBoxAnimation = false;
+            this.par_ctaIVA213.AllowCheckmarkAnimation = true;
+            this.par_ctaIVA213.AllowOnHoverStates = true;
+            this.par_ctaIVA213.AutoCheck = true;
+            this.par_ctaIVA213.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA213.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA213.BackgroundImage")));
+            this.par_ctaIVA213.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaIVA213.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaIVA213.BorderRadius = 12;
+            this.par_ctaIVA213.Checked = false;
+            this.par_ctaIVA213.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaIVA213.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaIVA213.CustomCheckmarkImage = null;
+            this.par_ctaIVA213.Location = new System.Drawing.Point(628, 9);
+            this.par_ctaIVA213.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA213.Name = "par_ctaIVA213";
+            this.par_ctaIVA213.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA213.OnCheck.BorderRadius = 12;
+            this.par_ctaIVA213.OnCheck.BorderThickness = 2;
+            this.par_ctaIVA213.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA213.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA213.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaIVA213.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA213.OnDisable.BorderRadius = 12;
+            this.par_ctaIVA213.OnDisable.BorderThickness = 2;
+            this.par_ctaIVA213.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA213.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA213.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaIVA213.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA213.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaIVA213.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaIVA213.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA213.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA213.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaIVA213.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA213.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaIVA213.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaIVA213.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA213.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaIVA213.OnUncheck.BorderRadius = 12;
+            this.par_ctaIVA213.OnUncheck.BorderThickness = 1;
+            this.par_ctaIVA213.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA213.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA213.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaIVA213.TabIndex = 212;
+            this.par_ctaIVA213.ThreeState = false;
+            this.par_ctaIVA213.ToolTipText = null;
+            // 
+            // par_ctaIVA103
+            // 
+            this.par_ctaIVA103.AllowBindingControlAnimation = true;
+            this.par_ctaIVA103.AllowBindingControlColorChanges = false;
+            this.par_ctaIVA103.AllowBindingControlLocation = true;
+            this.par_ctaIVA103.AllowCheckBoxAnimation = false;
+            this.par_ctaIVA103.AllowCheckmarkAnimation = true;
+            this.par_ctaIVA103.AllowOnHoverStates = true;
+            this.par_ctaIVA103.AutoCheck = true;
+            this.par_ctaIVA103.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA103.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA103.BackgroundImage")));
+            this.par_ctaIVA103.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaIVA103.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaIVA103.BorderRadius = 12;
+            this.par_ctaIVA103.Checked = false;
+            this.par_ctaIVA103.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaIVA103.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaIVA103.CustomCheckmarkImage = null;
+            this.par_ctaIVA103.Location = new System.Drawing.Point(628, 35);
+            this.par_ctaIVA103.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA103.Name = "par_ctaIVA103";
+            this.par_ctaIVA103.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA103.OnCheck.BorderRadius = 12;
+            this.par_ctaIVA103.OnCheck.BorderThickness = 2;
+            this.par_ctaIVA103.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA103.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA103.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaIVA103.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA103.OnDisable.BorderRadius = 12;
+            this.par_ctaIVA103.OnDisable.BorderThickness = 2;
+            this.par_ctaIVA103.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA103.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA103.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaIVA103.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA103.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaIVA103.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaIVA103.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA103.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA103.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaIVA103.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA103.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaIVA103.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaIVA103.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA103.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaIVA103.OnUncheck.BorderRadius = 12;
+            this.par_ctaIVA103.OnUncheck.BorderThickness = 1;
+            this.par_ctaIVA103.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA103.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA103.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaIVA103.TabIndex = 213;
+            this.par_ctaIVA103.ThreeState = false;
+            this.par_ctaIVA103.ToolTipText = null;
+            // 
+            // par_ctaIVA273
+            // 
+            this.par_ctaIVA273.AllowBindingControlAnimation = true;
+            this.par_ctaIVA273.AllowBindingControlColorChanges = false;
+            this.par_ctaIVA273.AllowBindingControlLocation = true;
+            this.par_ctaIVA273.AllowCheckBoxAnimation = false;
+            this.par_ctaIVA273.AllowCheckmarkAnimation = true;
+            this.par_ctaIVA273.AllowOnHoverStates = true;
+            this.par_ctaIVA273.AutoCheck = true;
+            this.par_ctaIVA273.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA273.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA273.BackgroundImage")));
+            this.par_ctaIVA273.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaIVA273.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaIVA273.BorderRadius = 12;
+            this.par_ctaIVA273.Checked = false;
+            this.par_ctaIVA273.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaIVA273.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaIVA273.CustomCheckmarkImage = null;
+            this.par_ctaIVA273.Location = new System.Drawing.Point(628, 61);
+            this.par_ctaIVA273.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA273.Name = "par_ctaIVA273";
+            this.par_ctaIVA273.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA273.OnCheck.BorderRadius = 12;
+            this.par_ctaIVA273.OnCheck.BorderThickness = 2;
+            this.par_ctaIVA273.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA273.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA273.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaIVA273.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA273.OnDisable.BorderRadius = 12;
+            this.par_ctaIVA273.OnDisable.BorderThickness = 2;
+            this.par_ctaIVA273.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA273.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA273.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaIVA273.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA273.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaIVA273.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaIVA273.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA273.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA273.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaIVA273.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA273.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaIVA273.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaIVA273.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA273.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaIVA273.OnUncheck.BorderRadius = 12;
+            this.par_ctaIVA273.OnUncheck.BorderThickness = 1;
+            this.par_ctaIVA273.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA273.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA273.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaIVA273.TabIndex = 214;
+            this.par_ctaIVA273.ThreeState = false;
+            this.par_ctaIVA273.ToolTipText = null;
+            // 
+            // par_ctaImpInt3
+            // 
+            this.par_ctaImpInt3.AllowBindingControlAnimation = true;
+            this.par_ctaImpInt3.AllowBindingControlColorChanges = false;
+            this.par_ctaImpInt3.AllowBindingControlLocation = true;
+            this.par_ctaImpInt3.AllowCheckBoxAnimation = false;
+            this.par_ctaImpInt3.AllowCheckmarkAnimation = true;
+            this.par_ctaImpInt3.AllowOnHoverStates = true;
+            this.par_ctaImpInt3.AutoCheck = true;
+            this.par_ctaImpInt3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaImpInt3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaImpInt3.BackgroundImage")));
+            this.par_ctaImpInt3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaImpInt3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaImpInt3.BorderRadius = 12;
+            this.par_ctaImpInt3.Checked = false;
+            this.par_ctaImpInt3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaImpInt3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaImpInt3.CustomCheckmarkImage = null;
+            this.par_ctaImpInt3.Location = new System.Drawing.Point(628, 90);
+            this.par_ctaImpInt3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaImpInt3.Name = "par_ctaImpInt3";
+            this.par_ctaImpInt3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaImpInt3.OnCheck.BorderRadius = 12;
+            this.par_ctaImpInt3.OnCheck.BorderThickness = 2;
+            this.par_ctaImpInt3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaImpInt3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaImpInt3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaImpInt3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaImpInt3.OnDisable.BorderRadius = 12;
+            this.par_ctaImpInt3.OnDisable.BorderThickness = 2;
+            this.par_ctaImpInt3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaImpInt3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaImpInt3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaImpInt3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaImpInt3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaImpInt3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaImpInt3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaImpInt3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaImpInt3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaImpInt3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaImpInt3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaImpInt3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaImpInt3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaImpInt3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaImpInt3.OnUncheck.BorderRadius = 12;
+            this.par_ctaImpInt3.OnUncheck.BorderThickness = 1;
+            this.par_ctaImpInt3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaImpInt3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaImpInt3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaImpInt3.TabIndex = 215;
+            this.par_ctaImpInt3.ThreeState = false;
+            this.par_ctaImpInt3.ToolTipText = null;
+            // 
+            // par_ctaRetIVA3
+            // 
+            this.par_ctaRetIVA3.AllowBindingControlAnimation = true;
+            this.par_ctaRetIVA3.AllowBindingControlColorChanges = false;
+            this.par_ctaRetIVA3.AllowBindingControlLocation = true;
+            this.par_ctaRetIVA3.AllowCheckBoxAnimation = false;
+            this.par_ctaRetIVA3.AllowCheckmarkAnimation = true;
+            this.par_ctaRetIVA3.AllowOnHoverStates = true;
+            this.par_ctaRetIVA3.AutoCheck = true;
+            this.par_ctaRetIVA3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIVA3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIVA3.BackgroundImage")));
+            this.par_ctaRetIVA3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRetIVA3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRetIVA3.BorderRadius = 12;
+            this.par_ctaRetIVA3.Checked = false;
+            this.par_ctaRetIVA3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRetIVA3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRetIVA3.CustomCheckmarkImage = null;
+            this.par_ctaRetIVA3.Location = new System.Drawing.Point(628, 119);
+            this.par_ctaRetIVA3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRetIVA3.Name = "par_ctaRetIVA3";
+            this.par_ctaRetIVA3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIVA3.OnCheck.BorderRadius = 12;
+            this.par_ctaRetIVA3.OnCheck.BorderThickness = 2;
+            this.par_ctaRetIVA3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIVA3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetIVA3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRetIVA3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetIVA3.OnDisable.BorderRadius = 12;
+            this.par_ctaRetIVA3.OnDisable.BorderThickness = 2;
+            this.par_ctaRetIVA3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIVA3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetIVA3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRetIVA3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIVA3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRetIVA3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRetIVA3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIVA3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetIVA3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRetIVA3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIVA3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRetIVA3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRetIVA3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIVA3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRetIVA3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRetIVA3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRetIVA3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIVA3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRetIVA3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRetIVA3.TabIndex = 216;
+            this.par_ctaRetIVA3.ThreeState = false;
+            this.par_ctaRetIVA3.ToolTipText = null;
+            // 
+            // par_ctaRetIIBB3
+            // 
+            this.par_ctaRetIIBB3.AllowBindingControlAnimation = true;
+            this.par_ctaRetIIBB3.AllowBindingControlColorChanges = false;
+            this.par_ctaRetIIBB3.AllowBindingControlLocation = true;
+            this.par_ctaRetIIBB3.AllowCheckBoxAnimation = false;
+            this.par_ctaRetIIBB3.AllowCheckmarkAnimation = true;
+            this.par_ctaRetIIBB3.AllowOnHoverStates = true;
+            this.par_ctaRetIIBB3.AutoCheck = true;
+            this.par_ctaRetIIBB3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIIBB3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIIBB3.BackgroundImage")));
+            this.par_ctaRetIIBB3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRetIIBB3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRetIIBB3.BorderRadius = 12;
+            this.par_ctaRetIIBB3.Checked = false;
+            this.par_ctaRetIIBB3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRetIIBB3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRetIIBB3.CustomCheckmarkImage = null;
+            this.par_ctaRetIIBB3.Location = new System.Drawing.Point(628, 145);
+            this.par_ctaRetIIBB3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRetIIBB3.Name = "par_ctaRetIIBB3";
+            this.par_ctaRetIIBB3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIIBB3.OnCheck.BorderRadius = 12;
+            this.par_ctaRetIIBB3.OnCheck.BorderThickness = 2;
+            this.par_ctaRetIIBB3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIIBB3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetIIBB3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRetIIBB3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetIIBB3.OnDisable.BorderRadius = 12;
+            this.par_ctaRetIIBB3.OnDisable.BorderThickness = 2;
+            this.par_ctaRetIIBB3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIIBB3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetIIBB3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRetIIBB3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIIBB3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRetIIBB3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRetIIBB3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIIBB3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetIIBB3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRetIIBB3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIIBB3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRetIIBB3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRetIIBB3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIIBB3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRetIIBB3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRetIIBB3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRetIIBB3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIIBB3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRetIIBB3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRetIIBB3.TabIndex = 217;
+            this.par_ctaRetIIBB3.ThreeState = false;
+            this.par_ctaRetIIBB3.ToolTipText = null;
+            // 
+            // par_ctaRetGan3
+            // 
+            this.par_ctaRetGan3.AllowBindingControlAnimation = true;
+            this.par_ctaRetGan3.AllowBindingControlColorChanges = false;
+            this.par_ctaRetGan3.AllowBindingControlLocation = true;
+            this.par_ctaRetGan3.AllowCheckBoxAnimation = false;
+            this.par_ctaRetGan3.AllowCheckmarkAnimation = true;
+            this.par_ctaRetGan3.AllowOnHoverStates = true;
+            this.par_ctaRetGan3.AutoCheck = true;
+            this.par_ctaRetGan3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetGan3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRetGan3.BackgroundImage")));
+            this.par_ctaRetGan3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRetGan3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRetGan3.BorderRadius = 12;
+            this.par_ctaRetGan3.Checked = false;
+            this.par_ctaRetGan3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRetGan3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRetGan3.CustomCheckmarkImage = null;
+            this.par_ctaRetGan3.Location = new System.Drawing.Point(628, 171);
+            this.par_ctaRetGan3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRetGan3.Name = "par_ctaRetGan3";
+            this.par_ctaRetGan3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetGan3.OnCheck.BorderRadius = 12;
+            this.par_ctaRetGan3.OnCheck.BorderThickness = 2;
+            this.par_ctaRetGan3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetGan3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetGan3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRetGan3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetGan3.OnDisable.BorderRadius = 12;
+            this.par_ctaRetGan3.OnDisable.BorderThickness = 2;
+            this.par_ctaRetGan3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetGan3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetGan3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRetGan3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetGan3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRetGan3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRetGan3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetGan3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetGan3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRetGan3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetGan3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRetGan3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRetGan3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetGan3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRetGan3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRetGan3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRetGan3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetGan3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRetGan3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRetGan3.TabIndex = 218;
+            this.par_ctaRetGan3.ThreeState = false;
+            this.par_ctaRetGan3.ToolTipText = null;
+            // 
+            // par_ctaRetSUSS3
+            // 
+            this.par_ctaRetSUSS3.AllowBindingControlAnimation = true;
+            this.par_ctaRetSUSS3.AllowBindingControlColorChanges = false;
+            this.par_ctaRetSUSS3.AllowBindingControlLocation = true;
+            this.par_ctaRetSUSS3.AllowCheckBoxAnimation = false;
+            this.par_ctaRetSUSS3.AllowCheckmarkAnimation = true;
+            this.par_ctaRetSUSS3.AllowOnHoverStates = true;
+            this.par_ctaRetSUSS3.AutoCheck = true;
+            this.par_ctaRetSUSS3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetSUSS3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRetSUSS3.BackgroundImage")));
+            this.par_ctaRetSUSS3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRetSUSS3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRetSUSS3.BorderRadius = 12;
+            this.par_ctaRetSUSS3.Checked = false;
+            this.par_ctaRetSUSS3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRetSUSS3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRetSUSS3.CustomCheckmarkImage = null;
+            this.par_ctaRetSUSS3.Location = new System.Drawing.Point(628, 198);
+            this.par_ctaRetSUSS3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRetSUSS3.Name = "par_ctaRetSUSS3";
+            this.par_ctaRetSUSS3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetSUSS3.OnCheck.BorderRadius = 12;
+            this.par_ctaRetSUSS3.OnCheck.BorderThickness = 2;
+            this.par_ctaRetSUSS3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetSUSS3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetSUSS3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRetSUSS3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetSUSS3.OnDisable.BorderRadius = 12;
+            this.par_ctaRetSUSS3.OnDisable.BorderThickness = 2;
+            this.par_ctaRetSUSS3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetSUSS3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetSUSS3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRetSUSS3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetSUSS3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRetSUSS3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRetSUSS3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetSUSS3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetSUSS3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRetSUSS3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetSUSS3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRetSUSS3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRetSUSS3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetSUSS3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRetSUSS3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRetSUSS3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRetSUSS3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetSUSS3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRetSUSS3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRetSUSS3.TabIndex = 219;
+            this.par_ctaRetSUSS3.ThreeState = false;
+            this.par_ctaRetSUSS3.ToolTipText = null;
+            // 
+            // par_ctaPerIVA3
+            // 
+            this.par_ctaPerIVA3.AllowBindingControlAnimation = true;
+            this.par_ctaPerIVA3.AllowBindingControlColorChanges = false;
+            this.par_ctaPerIVA3.AllowBindingControlLocation = true;
+            this.par_ctaPerIVA3.AllowCheckBoxAnimation = false;
+            this.par_ctaPerIVA3.AllowCheckmarkAnimation = true;
+            this.par_ctaPerIVA3.AllowOnHoverStates = true;
+            this.par_ctaPerIVA3.AutoCheck = true;
+            this.par_ctaPerIVA3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerIVA3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaPerIVA3.BackgroundImage")));
+            this.par_ctaPerIVA3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaPerIVA3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaPerIVA3.BorderRadius = 12;
+            this.par_ctaPerIVA3.Checked = false;
+            this.par_ctaPerIVA3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaPerIVA3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaPerIVA3.CustomCheckmarkImage = null;
+            this.par_ctaPerIVA3.Location = new System.Drawing.Point(628, 224);
+            this.par_ctaPerIVA3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaPerIVA3.Name = "par_ctaPerIVA3";
+            this.par_ctaPerIVA3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaPerIVA3.OnCheck.BorderRadius = 12;
+            this.par_ctaPerIVA3.OnCheck.BorderThickness = 2;
+            this.par_ctaPerIVA3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaPerIVA3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaPerIVA3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaPerIVA3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaPerIVA3.OnDisable.BorderRadius = 12;
+            this.par_ctaPerIVA3.OnDisable.BorderThickness = 2;
+            this.par_ctaPerIVA3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerIVA3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaPerIVA3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaPerIVA3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaPerIVA3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaPerIVA3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaPerIVA3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaPerIVA3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaPerIVA3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaPerIVA3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaPerIVA3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaPerIVA3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaPerIVA3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerIVA3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaPerIVA3.OnUncheck.BorderRadius = 12;
+            this.par_ctaPerIVA3.OnUncheck.BorderThickness = 1;
+            this.par_ctaPerIVA3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerIVA3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaPerIVA3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaPerIVA3.TabIndex = 220;
+            this.par_ctaPerIVA3.ThreeState = false;
+            this.par_ctaPerIVA3.ToolTipText = null;
+            // 
+            // par_ctaPerIIBB3
+            // 
+            this.par_ctaPerIIBB3.AllowBindingControlAnimation = true;
+            this.par_ctaPerIIBB3.AllowBindingControlColorChanges = false;
+            this.par_ctaPerIIBB3.AllowBindingControlLocation = true;
+            this.par_ctaPerIIBB3.AllowCheckBoxAnimation = false;
+            this.par_ctaPerIIBB3.AllowCheckmarkAnimation = true;
+            this.par_ctaPerIIBB3.AllowOnHoverStates = true;
+            this.par_ctaPerIIBB3.AutoCheck = true;
+            this.par_ctaPerIIBB3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerIIBB3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaPerIIBB3.BackgroundImage")));
+            this.par_ctaPerIIBB3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaPerIIBB3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaPerIIBB3.BorderRadius = 12;
+            this.par_ctaPerIIBB3.Checked = false;
+            this.par_ctaPerIIBB3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaPerIIBB3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaPerIIBB3.CustomCheckmarkImage = null;
+            this.par_ctaPerIIBB3.Location = new System.Drawing.Point(628, 252);
+            this.par_ctaPerIIBB3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaPerIIBB3.Name = "par_ctaPerIIBB3";
+            this.par_ctaPerIIBB3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaPerIIBB3.OnCheck.BorderRadius = 12;
+            this.par_ctaPerIIBB3.OnCheck.BorderThickness = 2;
+            this.par_ctaPerIIBB3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaPerIIBB3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaPerIIBB3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaPerIIBB3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaPerIIBB3.OnDisable.BorderRadius = 12;
+            this.par_ctaPerIIBB3.OnDisable.BorderThickness = 2;
+            this.par_ctaPerIIBB3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerIIBB3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaPerIIBB3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaPerIIBB3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaPerIIBB3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaPerIIBB3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaPerIIBB3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaPerIIBB3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaPerIIBB3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaPerIIBB3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaPerIIBB3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaPerIIBB3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaPerIIBB3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerIIBB3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaPerIIBB3.OnUncheck.BorderRadius = 12;
+            this.par_ctaPerIIBB3.OnUncheck.BorderThickness = 1;
+            this.par_ctaPerIIBB3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerIIBB3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaPerIIBB3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaPerIIBB3.TabIndex = 221;
+            this.par_ctaPerIIBB3.ThreeState = false;
+            this.par_ctaPerIIBB3.ToolTipText = null;
+            // 
+            // par_ctaDeud3
+            // 
+            this.par_ctaDeud3.AllowBindingControlAnimation = true;
+            this.par_ctaDeud3.AllowBindingControlColorChanges = false;
+            this.par_ctaDeud3.AllowBindingControlLocation = true;
+            this.par_ctaDeud3.AllowCheckBoxAnimation = false;
+            this.par_ctaDeud3.AllowCheckmarkAnimation = true;
+            this.par_ctaDeud3.AllowOnHoverStates = true;
+            this.par_ctaDeud3.AutoCheck = true;
+            this.par_ctaDeud3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaDeud3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaDeud3.BackgroundImage")));
+            this.par_ctaDeud3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaDeud3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaDeud3.BorderRadius = 12;
+            this.par_ctaDeud3.Checked = false;
+            this.par_ctaDeud3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaDeud3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaDeud3.CustomCheckmarkImage = null;
+            this.par_ctaDeud3.Location = new System.Drawing.Point(628, 414);
+            this.par_ctaDeud3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaDeud3.Name = "par_ctaDeud3";
+            this.par_ctaDeud3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaDeud3.OnCheck.BorderRadius = 12;
+            this.par_ctaDeud3.OnCheck.BorderThickness = 2;
+            this.par_ctaDeud3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaDeud3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaDeud3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaDeud3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaDeud3.OnDisable.BorderRadius = 12;
+            this.par_ctaDeud3.OnDisable.BorderThickness = 2;
+            this.par_ctaDeud3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaDeud3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaDeud3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaDeud3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaDeud3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaDeud3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaDeud3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaDeud3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaDeud3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaDeud3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaDeud3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaDeud3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaDeud3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaDeud3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaDeud3.OnUncheck.BorderRadius = 12;
+            this.par_ctaDeud3.OnUncheck.BorderThickness = 1;
+            this.par_ctaDeud3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaDeud3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaDeud3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaDeud3.TabIndex = 222;
+            this.par_ctaDeud3.ThreeState = false;
+            this.par_ctaDeud3.ToolTipText = null;
+            // 
+            // par_ctaPerGan3
+            // 
+            this.par_ctaPerGan3.AllowBindingControlAnimation = true;
+            this.par_ctaPerGan3.AllowBindingControlColorChanges = false;
+            this.par_ctaPerGan3.AllowBindingControlLocation = true;
+            this.par_ctaPerGan3.AllowCheckBoxAnimation = false;
+            this.par_ctaPerGan3.AllowCheckmarkAnimation = true;
+            this.par_ctaPerGan3.AllowOnHoverStates = true;
+            this.par_ctaPerGan3.AutoCheck = true;
+            this.par_ctaPerGan3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerGan3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaPerGan3.BackgroundImage")));
+            this.par_ctaPerGan3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaPerGan3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaPerGan3.BorderRadius = 12;
+            this.par_ctaPerGan3.Checked = false;
+            this.par_ctaPerGan3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaPerGan3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaPerGan3.CustomCheckmarkImage = null;
+            this.par_ctaPerGan3.Location = new System.Drawing.Point(628, 280);
+            this.par_ctaPerGan3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaPerGan3.Name = "par_ctaPerGan3";
+            this.par_ctaPerGan3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaPerGan3.OnCheck.BorderRadius = 12;
+            this.par_ctaPerGan3.OnCheck.BorderThickness = 2;
+            this.par_ctaPerGan3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaPerGan3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaPerGan3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaPerGan3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaPerGan3.OnDisable.BorderRadius = 12;
+            this.par_ctaPerGan3.OnDisable.BorderThickness = 2;
+            this.par_ctaPerGan3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerGan3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaPerGan3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaPerGan3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaPerGan3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaPerGan3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaPerGan3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaPerGan3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaPerGan3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaPerGan3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaPerGan3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaPerGan3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaPerGan3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerGan3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaPerGan3.OnUncheck.BorderRadius = 12;
+            this.par_ctaPerGan3.OnUncheck.BorderThickness = 1;
+            this.par_ctaPerGan3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaPerGan3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaPerGan3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaPerGan3.TabIndex = 223;
+            this.par_ctaPerGan3.ThreeState = false;
+            this.par_ctaPerGan3.ToolTipText = null;
+            // 
+            // par_ctaOtrosImp3
+            // 
+            this.par_ctaOtrosImp3.AllowBindingControlAnimation = true;
+            this.par_ctaOtrosImp3.AllowBindingControlColorChanges = false;
+            this.par_ctaOtrosImp3.AllowBindingControlLocation = true;
+            this.par_ctaOtrosImp3.AllowCheckBoxAnimation = false;
+            this.par_ctaOtrosImp3.AllowCheckmarkAnimation = true;
+            this.par_ctaOtrosImp3.AllowOnHoverStates = true;
+            this.par_ctaOtrosImp3.AutoCheck = true;
+            this.par_ctaOtrosImp3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaOtrosImp3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaOtrosImp3.BackgroundImage")));
+            this.par_ctaOtrosImp3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaOtrosImp3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaOtrosImp3.BorderRadius = 12;
+            this.par_ctaOtrosImp3.Checked = false;
+            this.par_ctaOtrosImp3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaOtrosImp3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaOtrosImp3.CustomCheckmarkImage = null;
+            this.par_ctaOtrosImp3.Location = new System.Drawing.Point(628, 306);
+            this.par_ctaOtrosImp3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaOtrosImp3.Name = "par_ctaOtrosImp3";
+            this.par_ctaOtrosImp3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaOtrosImp3.OnCheck.BorderRadius = 12;
+            this.par_ctaOtrosImp3.OnCheck.BorderThickness = 2;
+            this.par_ctaOtrosImp3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaOtrosImp3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaOtrosImp3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaOtrosImp3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaOtrosImp3.OnDisable.BorderRadius = 12;
+            this.par_ctaOtrosImp3.OnDisable.BorderThickness = 2;
+            this.par_ctaOtrosImp3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaOtrosImp3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaOtrosImp3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaOtrosImp3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaOtrosImp3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaOtrosImp3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaOtrosImp3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaOtrosImp3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaOtrosImp3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaOtrosImp3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaOtrosImp3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaOtrosImp3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaOtrosImp3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaOtrosImp3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaOtrosImp3.OnUncheck.BorderRadius = 12;
+            this.par_ctaOtrosImp3.OnUncheck.BorderThickness = 1;
+            this.par_ctaOtrosImp3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaOtrosImp3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaOtrosImp3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaOtrosImp3.TabIndex = 224;
+            this.par_ctaOtrosImp3.ThreeState = false;
+            this.par_ctaOtrosImp3.ToolTipText = null;
+            // 
+            // par_ctaProvGral3
+            // 
+            this.par_ctaProvGral3.AllowBindingControlAnimation = true;
+            this.par_ctaProvGral3.AllowBindingControlColorChanges = false;
+            this.par_ctaProvGral3.AllowBindingControlLocation = true;
+            this.par_ctaProvGral3.AllowCheckBoxAnimation = false;
+            this.par_ctaProvGral3.AllowCheckmarkAnimation = true;
+            this.par_ctaProvGral3.AllowOnHoverStates = true;
+            this.par_ctaProvGral3.AutoCheck = true;
+            this.par_ctaProvGral3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaProvGral3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaProvGral3.BackgroundImage")));
+            this.par_ctaProvGral3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaProvGral3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaProvGral3.BorderRadius = 12;
+            this.par_ctaProvGral3.Checked = false;
+            this.par_ctaProvGral3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaProvGral3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaProvGral3.CustomCheckmarkImage = null;
+            this.par_ctaProvGral3.Location = new System.Drawing.Point(628, 360);
+            this.par_ctaProvGral3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaProvGral3.Name = "par_ctaProvGral3";
+            this.par_ctaProvGral3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaProvGral3.OnCheck.BorderRadius = 12;
+            this.par_ctaProvGral3.OnCheck.BorderThickness = 2;
+            this.par_ctaProvGral3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaProvGral3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaProvGral3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaProvGral3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaProvGral3.OnDisable.BorderRadius = 12;
+            this.par_ctaProvGral3.OnDisable.BorderThickness = 2;
+            this.par_ctaProvGral3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaProvGral3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaProvGral3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaProvGral3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaProvGral3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaProvGral3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaProvGral3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaProvGral3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaProvGral3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaProvGral3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaProvGral3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaProvGral3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaProvGral3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaProvGral3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaProvGral3.OnUncheck.BorderRadius = 12;
+            this.par_ctaProvGral3.OnUncheck.BorderThickness = 1;
+            this.par_ctaProvGral3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaProvGral3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaProvGral3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaProvGral3.TabIndex = 225;
+            this.par_ctaProvGral3.ThreeState = false;
+            this.par_ctaProvGral3.ToolTipText = null;
+            // 
+            // par_ctaIVA21D3
+            // 
+            this.par_ctaIVA21D3.AllowBindingControlAnimation = true;
+            this.par_ctaIVA21D3.AllowBindingControlColorChanges = false;
+            this.par_ctaIVA21D3.AllowBindingControlLocation = true;
+            this.par_ctaIVA21D3.AllowCheckBoxAnimation = false;
+            this.par_ctaIVA21D3.AllowCheckmarkAnimation = true;
+            this.par_ctaIVA21D3.AllowOnHoverStates = true;
+            this.par_ctaIVA21D3.AutoCheck = true;
+            this.par_ctaIVA21D3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA21D3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA21D3.BackgroundImage")));
+            this.par_ctaIVA21D3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaIVA21D3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaIVA21D3.BorderRadius = 12;
+            this.par_ctaIVA21D3.Checked = false;
+            this.par_ctaIVA21D3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaIVA21D3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaIVA21D3.CustomCheckmarkImage = null;
+            this.par_ctaIVA21D3.Location = new System.Drawing.Point(628, 443);
+            this.par_ctaIVA21D3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA21D3.Name = "par_ctaIVA21D3";
+            this.par_ctaIVA21D3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA21D3.OnCheck.BorderRadius = 12;
+            this.par_ctaIVA21D3.OnCheck.BorderThickness = 2;
+            this.par_ctaIVA21D3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA21D3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA21D3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaIVA21D3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA21D3.OnDisable.BorderRadius = 12;
+            this.par_ctaIVA21D3.OnDisable.BorderThickness = 2;
+            this.par_ctaIVA21D3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA21D3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA21D3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaIVA21D3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA21D3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaIVA21D3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaIVA21D3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA21D3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA21D3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaIVA21D3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA21D3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaIVA21D3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaIVA21D3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA21D3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaIVA21D3.OnUncheck.BorderRadius = 12;
+            this.par_ctaIVA21D3.OnUncheck.BorderThickness = 1;
+            this.par_ctaIVA21D3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA21D3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA21D3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaIVA21D3.TabIndex = 226;
+            this.par_ctaIVA21D3.ThreeState = false;
+            this.par_ctaIVA21D3.ToolTipText = null;
+            // 
+            // par_NetoVtaArti3
+            // 
+            this.par_NetoVtaArti3.AllowBindingControlAnimation = true;
+            this.par_NetoVtaArti3.AllowBindingControlColorChanges = false;
+            this.par_NetoVtaArti3.AllowBindingControlLocation = true;
+            this.par_NetoVtaArti3.AllowCheckBoxAnimation = false;
+            this.par_NetoVtaArti3.AllowCheckmarkAnimation = true;
+            this.par_NetoVtaArti3.AllowOnHoverStates = true;
+            this.par_NetoVtaArti3.AutoCheck = true;
+            this.par_NetoVtaArti3.BackColor = System.Drawing.Color.Transparent;
+            this.par_NetoVtaArti3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_NetoVtaArti3.BackgroundImage")));
+            this.par_NetoVtaArti3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_NetoVtaArti3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_NetoVtaArti3.BorderRadius = 12;
+            this.par_NetoVtaArti3.Checked = false;
+            this.par_NetoVtaArti3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_NetoVtaArti3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_NetoVtaArti3.CustomCheckmarkImage = null;
+            this.par_NetoVtaArti3.Location = new System.Drawing.Point(628, 387);
+            this.par_NetoVtaArti3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_NetoVtaArti3.Name = "par_NetoVtaArti3";
+            this.par_NetoVtaArti3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_NetoVtaArti3.OnCheck.BorderRadius = 12;
+            this.par_NetoVtaArti3.OnCheck.BorderThickness = 2;
+            this.par_NetoVtaArti3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_NetoVtaArti3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_NetoVtaArti3.OnCheck.CheckmarkThickness = 2;
+            this.par_NetoVtaArti3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_NetoVtaArti3.OnDisable.BorderRadius = 12;
+            this.par_NetoVtaArti3.OnDisable.BorderThickness = 2;
+            this.par_NetoVtaArti3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_NetoVtaArti3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_NetoVtaArti3.OnDisable.CheckmarkThickness = 2;
+            this.par_NetoVtaArti3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_NetoVtaArti3.OnHoverChecked.BorderRadius = 12;
+            this.par_NetoVtaArti3.OnHoverChecked.BorderThickness = 2;
+            this.par_NetoVtaArti3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_NetoVtaArti3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_NetoVtaArti3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_NetoVtaArti3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_NetoVtaArti3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_NetoVtaArti3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_NetoVtaArti3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_NetoVtaArti3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_NetoVtaArti3.OnUncheck.BorderRadius = 12;
+            this.par_NetoVtaArti3.OnUncheck.BorderThickness = 1;
+            this.par_NetoVtaArti3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_NetoVtaArti3.Size = new System.Drawing.Size(17, 17);
+            this.par_NetoVtaArti3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_NetoVtaArti3.TabIndex = 227;
+            this.par_NetoVtaArti3.ThreeState = false;
+            this.par_NetoVtaArti3.ToolTipText = null;
+            // 
+            // par_ctaProv3
+            // 
+            this.par_ctaProv3.AllowBindingControlAnimation = true;
+            this.par_ctaProv3.AllowBindingControlColorChanges = false;
+            this.par_ctaProv3.AllowBindingControlLocation = true;
+            this.par_ctaProv3.AllowCheckBoxAnimation = false;
+            this.par_ctaProv3.AllowCheckmarkAnimation = true;
+            this.par_ctaProv3.AllowOnHoverStates = true;
+            this.par_ctaProv3.AutoCheck = true;
+            this.par_ctaProv3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaProv3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaProv3.BackgroundImage")));
+            this.par_ctaProv3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaProv3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaProv3.BorderRadius = 12;
+            this.par_ctaProv3.Checked = false;
+            this.par_ctaProv3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaProv3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaProv3.CustomCheckmarkImage = null;
+            this.par_ctaProv3.Location = new System.Drawing.Point(628, 333);
+            this.par_ctaProv3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaProv3.Name = "par_ctaProv3";
+            this.par_ctaProv3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaProv3.OnCheck.BorderRadius = 12;
+            this.par_ctaProv3.OnCheck.BorderThickness = 2;
+            this.par_ctaProv3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaProv3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaProv3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaProv3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaProv3.OnDisable.BorderRadius = 12;
+            this.par_ctaProv3.OnDisable.BorderThickness = 2;
+            this.par_ctaProv3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaProv3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaProv3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaProv3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaProv3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaProv3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaProv3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaProv3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaProv3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaProv3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaProv3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaProv3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaProv3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaProv3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaProv3.OnUncheck.BorderRadius = 12;
+            this.par_ctaProv3.OnUncheck.BorderThickness = 1;
+            this.par_ctaProv3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaProv3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaProv3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaProv3.TabIndex = 228;
+            this.par_ctaProv3.ThreeState = false;
+            this.par_ctaProv3.ToolTipText = null;
+            // 
+            // par_ctaIVA10D3
+            // 
+            this.par_ctaIVA10D3.AllowBindingControlAnimation = true;
+            this.par_ctaIVA10D3.AllowBindingControlColorChanges = false;
+            this.par_ctaIVA10D3.AllowBindingControlLocation = true;
+            this.par_ctaIVA10D3.AllowCheckBoxAnimation = false;
+            this.par_ctaIVA10D3.AllowCheckmarkAnimation = true;
+            this.par_ctaIVA10D3.AllowOnHoverStates = true;
+            this.par_ctaIVA10D3.AutoCheck = true;
+            this.par_ctaIVA10D3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA10D3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA10D3.BackgroundImage")));
+            this.par_ctaIVA10D3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaIVA10D3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaIVA10D3.BorderRadius = 12;
+            this.par_ctaIVA10D3.Checked = false;
+            this.par_ctaIVA10D3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaIVA10D3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaIVA10D3.CustomCheckmarkImage = null;
+            this.par_ctaIVA10D3.Location = new System.Drawing.Point(628, 469);
+            this.par_ctaIVA10D3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA10D3.Name = "par_ctaIVA10D3";
+            this.par_ctaIVA10D3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA10D3.OnCheck.BorderRadius = 12;
+            this.par_ctaIVA10D3.OnCheck.BorderThickness = 2;
+            this.par_ctaIVA10D3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA10D3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA10D3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaIVA10D3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA10D3.OnDisable.BorderRadius = 12;
+            this.par_ctaIVA10D3.OnDisable.BorderThickness = 2;
+            this.par_ctaIVA10D3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA10D3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA10D3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaIVA10D3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA10D3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaIVA10D3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaIVA10D3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA10D3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA10D3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaIVA10D3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA10D3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaIVA10D3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaIVA10D3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA10D3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaIVA10D3.OnUncheck.BorderRadius = 12;
+            this.par_ctaIVA10D3.OnUncheck.BorderThickness = 1;
+            this.par_ctaIVA10D3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA10D3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA10D3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaIVA10D3.TabIndex = 229;
+            this.par_ctaIVA10D3.ThreeState = false;
+            this.par_ctaIVA10D3.ToolTipText = null;
+            // 
+            // par_ctaIVA27D3
+            // 
+            this.par_ctaIVA27D3.AllowBindingControlAnimation = true;
+            this.par_ctaIVA27D3.AllowBindingControlColorChanges = false;
+            this.par_ctaIVA27D3.AllowBindingControlLocation = true;
+            this.par_ctaIVA27D3.AllowCheckBoxAnimation = false;
+            this.par_ctaIVA27D3.AllowCheckmarkAnimation = true;
+            this.par_ctaIVA27D3.AllowOnHoverStates = true;
+            this.par_ctaIVA27D3.AutoCheck = true;
+            this.par_ctaIVA27D3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA27D3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA27D3.BackgroundImage")));
+            this.par_ctaIVA27D3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaIVA27D3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaIVA27D3.BorderRadius = 12;
+            this.par_ctaIVA27D3.Checked = false;
+            this.par_ctaIVA27D3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaIVA27D3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaIVA27D3.CustomCheckmarkImage = null;
+            this.par_ctaIVA27D3.Location = new System.Drawing.Point(628, 496);
+            this.par_ctaIVA27D3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA27D3.Name = "par_ctaIVA27D3";
+            this.par_ctaIVA27D3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA27D3.OnCheck.BorderRadius = 12;
+            this.par_ctaIVA27D3.OnCheck.BorderThickness = 2;
+            this.par_ctaIVA27D3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaIVA27D3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA27D3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaIVA27D3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA27D3.OnDisable.BorderRadius = 12;
+            this.par_ctaIVA27D3.OnDisable.BorderThickness = 2;
+            this.par_ctaIVA27D3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA27D3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaIVA27D3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaIVA27D3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA27D3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaIVA27D3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaIVA27D3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA27D3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaIVA27D3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaIVA27D3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaIVA27D3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaIVA27D3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaIVA27D3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA27D3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaIVA27D3.OnUncheck.BorderRadius = 12;
+            this.par_ctaIVA27D3.OnUncheck.BorderThickness = 1;
+            this.par_ctaIVA27D3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaIVA27D3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaIVA27D3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaIVA27D3.TabIndex = 230;
+            this.par_ctaIVA27D3.ThreeState = false;
+            this.par_ctaIVA27D3.ToolTipText = null;
+            // 
+            // par_ctaRetIIBBP3
+            // 
+            this.par_ctaRetIIBBP3.AllowBindingControlAnimation = true;
+            this.par_ctaRetIIBBP3.AllowBindingControlColorChanges = false;
+            this.par_ctaRetIIBBP3.AllowBindingControlLocation = true;
+            this.par_ctaRetIIBBP3.AllowCheckBoxAnimation = false;
+            this.par_ctaRetIIBBP3.AllowCheckmarkAnimation = true;
+            this.par_ctaRetIIBBP3.AllowOnHoverStates = true;
+            this.par_ctaRetIIBBP3.AutoCheck = true;
+            this.par_ctaRetIIBBP3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIIBBP3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIIBBP3.BackgroundImage")));
+            this.par_ctaRetIIBBP3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRetIIBBP3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRetIIBBP3.BorderRadius = 12;
+            this.par_ctaRetIIBBP3.Checked = false;
+            this.par_ctaRetIIBBP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRetIIBBP3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRetIIBBP3.CustomCheckmarkImage = null;
+            this.par_ctaRetIIBBP3.Location = new System.Drawing.Point(628, 548);
+            this.par_ctaRetIIBBP3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRetIIBBP3.Name = "par_ctaRetIIBBP3";
+            this.par_ctaRetIIBBP3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIIBBP3.OnCheck.BorderRadius = 12;
+            this.par_ctaRetIIBBP3.OnCheck.BorderThickness = 2;
+            this.par_ctaRetIIBBP3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIIBBP3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetIIBBP3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRetIIBBP3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetIIBBP3.OnDisable.BorderRadius = 12;
+            this.par_ctaRetIIBBP3.OnDisable.BorderThickness = 2;
+            this.par_ctaRetIIBBP3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIIBBP3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetIIBBP3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRetIIBBP3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIIBBP3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRetIIBBP3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRetIIBBP3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIIBBP3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetIIBBP3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRetIIBBP3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIIBBP3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRetIIBBP3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRetIIBBP3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIIBBP3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRetIIBBP3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRetIIBBP3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRetIIBBP3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIIBBP3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRetIIBBP3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRetIIBBP3.TabIndex = 231;
+            this.par_ctaRetIIBBP3.ThreeState = false;
+            this.par_ctaRetIIBBP3.ToolTipText = null;
+            // 
+            // par_ctaRetIVAP3
+            // 
+            this.par_ctaRetIVAP3.AllowBindingControlAnimation = true;
+            this.par_ctaRetIVAP3.AllowBindingControlColorChanges = false;
+            this.par_ctaRetIVAP3.AllowBindingControlLocation = true;
+            this.par_ctaRetIVAP3.AllowCheckBoxAnimation = false;
+            this.par_ctaRetIVAP3.AllowCheckmarkAnimation = true;
+            this.par_ctaRetIVAP3.AllowOnHoverStates = true;
+            this.par_ctaRetIVAP3.AutoCheck = true;
+            this.par_ctaRetIVAP3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIVAP3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIVAP3.BackgroundImage")));
+            this.par_ctaRetIVAP3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRetIVAP3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRetIVAP3.BorderRadius = 12;
+            this.par_ctaRetIVAP3.Checked = false;
+            this.par_ctaRetIVAP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRetIVAP3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRetIVAP3.CustomCheckmarkImage = null;
+            this.par_ctaRetIVAP3.Location = new System.Drawing.Point(628, 522);
+            this.par_ctaRetIVAP3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRetIVAP3.Name = "par_ctaRetIVAP3";
+            this.par_ctaRetIVAP3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIVAP3.OnCheck.BorderRadius = 12;
+            this.par_ctaRetIVAP3.OnCheck.BorderThickness = 2;
+            this.par_ctaRetIVAP3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetIVAP3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetIVAP3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRetIVAP3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetIVAP3.OnDisable.BorderRadius = 12;
+            this.par_ctaRetIVAP3.OnDisable.BorderThickness = 2;
+            this.par_ctaRetIVAP3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIVAP3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetIVAP3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRetIVAP3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIVAP3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRetIVAP3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRetIVAP3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIVAP3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetIVAP3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRetIVAP3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetIVAP3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRetIVAP3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRetIVAP3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIVAP3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRetIVAP3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRetIVAP3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRetIVAP3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetIVAP3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRetIVAP3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRetIVAP3.TabIndex = 232;
+            this.par_ctaRetIVAP3.ThreeState = false;
+            this.par_ctaRetIVAP3.ToolTipText = null;
+            // 
+            // par_ctaRetGanP3
+            // 
+            this.par_ctaRetGanP3.AllowBindingControlAnimation = true;
+            this.par_ctaRetGanP3.AllowBindingControlColorChanges = false;
+            this.par_ctaRetGanP3.AllowBindingControlLocation = true;
+            this.par_ctaRetGanP3.AllowCheckBoxAnimation = false;
+            this.par_ctaRetGanP3.AllowCheckmarkAnimation = true;
+            this.par_ctaRetGanP3.AllowOnHoverStates = true;
+            this.par_ctaRetGanP3.AutoCheck = true;
+            this.par_ctaRetGanP3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetGanP3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRetGanP3.BackgroundImage")));
+            this.par_ctaRetGanP3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRetGanP3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRetGanP3.BorderRadius = 12;
+            this.par_ctaRetGanP3.Checked = false;
+            this.par_ctaRetGanP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRetGanP3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRetGanP3.CustomCheckmarkImage = null;
+            this.par_ctaRetGanP3.Location = new System.Drawing.Point(628, 576);
+            this.par_ctaRetGanP3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRetGanP3.Name = "par_ctaRetGanP3";
+            this.par_ctaRetGanP3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetGanP3.OnCheck.BorderRadius = 12;
+            this.par_ctaRetGanP3.OnCheck.BorderThickness = 2;
+            this.par_ctaRetGanP3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetGanP3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetGanP3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRetGanP3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetGanP3.OnDisable.BorderRadius = 12;
+            this.par_ctaRetGanP3.OnDisable.BorderThickness = 2;
+            this.par_ctaRetGanP3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetGanP3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetGanP3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRetGanP3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetGanP3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRetGanP3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRetGanP3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetGanP3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetGanP3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRetGanP3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetGanP3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRetGanP3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRetGanP3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetGanP3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRetGanP3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRetGanP3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRetGanP3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetGanP3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRetGanP3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRetGanP3.TabIndex = 233;
+            this.par_ctaRetGanP3.ThreeState = false;
+            this.par_ctaRetGanP3.ToolTipText = null;
+            // 
+            // par_ctaRetSUSSP3
+            // 
+            this.par_ctaRetSUSSP3.AllowBindingControlAnimation = true;
+            this.par_ctaRetSUSSP3.AllowBindingControlColorChanges = false;
+            this.par_ctaRetSUSSP3.AllowBindingControlLocation = true;
+            this.par_ctaRetSUSSP3.AllowCheckBoxAnimation = false;
+            this.par_ctaRetSUSSP3.AllowCheckmarkAnimation = true;
+            this.par_ctaRetSUSSP3.AllowOnHoverStates = true;
+            this.par_ctaRetSUSSP3.AutoCheck = true;
+            this.par_ctaRetSUSSP3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetSUSSP3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRetSUSSP3.BackgroundImage")));
+            this.par_ctaRetSUSSP3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRetSUSSP3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRetSUSSP3.BorderRadius = 12;
+            this.par_ctaRetSUSSP3.Checked = false;
+            this.par_ctaRetSUSSP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRetSUSSP3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRetSUSSP3.CustomCheckmarkImage = null;
+            this.par_ctaRetSUSSP3.Location = new System.Drawing.Point(628, 602);
+            this.par_ctaRetSUSSP3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRetSUSSP3.Name = "par_ctaRetSUSSP3";
+            this.par_ctaRetSUSSP3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetSUSSP3.OnCheck.BorderRadius = 12;
+            this.par_ctaRetSUSSP3.OnCheck.BorderThickness = 2;
+            this.par_ctaRetSUSSP3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetSUSSP3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetSUSSP3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRetSUSSP3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetSUSSP3.OnDisable.BorderRadius = 12;
+            this.par_ctaRetSUSSP3.OnDisable.BorderThickness = 2;
+            this.par_ctaRetSUSSP3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetSUSSP3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetSUSSP3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRetSUSSP3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetSUSSP3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRetSUSSP3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRetSUSSP3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetSUSSP3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetSUSSP3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRetSUSSP3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetSUSSP3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRetSUSSP3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRetSUSSP3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetSUSSP3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRetSUSSP3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRetSUSSP3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRetSUSSP3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetSUSSP3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRetSUSSP3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRetSUSSP3.TabIndex = 234;
+            this.par_ctaRetSUSSP3.ThreeState = false;
+            this.par_ctaRetSUSSP3.ToolTipText = null;
+            // 
+            // par_ctaDescuento3
+            // 
+            this.par_ctaDescuento3.AllowBindingControlAnimation = true;
+            this.par_ctaDescuento3.AllowBindingControlColorChanges = false;
+            this.par_ctaDescuento3.AllowBindingControlLocation = true;
+            this.par_ctaDescuento3.AllowCheckBoxAnimation = false;
+            this.par_ctaDescuento3.AllowCheckmarkAnimation = true;
+            this.par_ctaDescuento3.AllowOnHoverStates = true;
+            this.par_ctaDescuento3.AutoCheck = true;
+            this.par_ctaDescuento3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaDescuento3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaDescuento3.BackgroundImage")));
+            this.par_ctaDescuento3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaDescuento3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaDescuento3.BorderRadius = 12;
+            this.par_ctaDescuento3.Checked = false;
+            this.par_ctaDescuento3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaDescuento3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaDescuento3.CustomCheckmarkImage = null;
+            this.par_ctaDescuento3.Location = new System.Drawing.Point(628, 628);
+            this.par_ctaDescuento3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaDescuento3.Name = "par_ctaDescuento3";
+            this.par_ctaDescuento3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaDescuento3.OnCheck.BorderRadius = 12;
+            this.par_ctaDescuento3.OnCheck.BorderThickness = 2;
+            this.par_ctaDescuento3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaDescuento3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaDescuento3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaDescuento3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaDescuento3.OnDisable.BorderRadius = 12;
+            this.par_ctaDescuento3.OnDisable.BorderThickness = 2;
+            this.par_ctaDescuento3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaDescuento3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaDescuento3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaDescuento3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaDescuento3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaDescuento3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaDescuento3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaDescuento3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaDescuento3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaDescuento3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaDescuento3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaDescuento3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaDescuento3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaDescuento3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaDescuento3.OnUncheck.BorderRadius = 12;
+            this.par_ctaDescuento3.OnUncheck.BorderThickness = 1;
+            this.par_ctaDescuento3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaDescuento3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaDescuento3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaDescuento3.TabIndex = 235;
+            this.par_ctaDescuento3.ThreeState = false;
+            this.par_ctaDescuento3.ToolTipText = null;
+            // 
+            // par_ctaRecargo3
+            // 
+            this.par_ctaRecargo3.AllowBindingControlAnimation = true;
+            this.par_ctaRecargo3.AllowBindingControlColorChanges = false;
+            this.par_ctaRecargo3.AllowBindingControlLocation = true;
+            this.par_ctaRecargo3.AllowCheckBoxAnimation = false;
+            this.par_ctaRecargo3.AllowCheckmarkAnimation = true;
+            this.par_ctaRecargo3.AllowOnHoverStates = true;
+            this.par_ctaRecargo3.AutoCheck = true;
+            this.par_ctaRecargo3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRecargo3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRecargo3.BackgroundImage")));
+            this.par_ctaRecargo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRecargo3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRecargo3.BorderRadius = 12;
+            this.par_ctaRecargo3.Checked = false;
+            this.par_ctaRecargo3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRecargo3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRecargo3.CustomCheckmarkImage = null;
+            this.par_ctaRecargo3.Location = new System.Drawing.Point(628, 660);
+            this.par_ctaRecargo3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRecargo3.Name = "par_ctaRecargo3";
+            this.par_ctaRecargo3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRecargo3.OnCheck.BorderRadius = 12;
+            this.par_ctaRecargo3.OnCheck.BorderThickness = 2;
+            this.par_ctaRecargo3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRecargo3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRecargo3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRecargo3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRecargo3.OnDisable.BorderRadius = 12;
+            this.par_ctaRecargo3.OnDisable.BorderThickness = 2;
+            this.par_ctaRecargo3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRecargo3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRecargo3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRecargo3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRecargo3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRecargo3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRecargo3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRecargo3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRecargo3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRecargo3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRecargo3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRecargo3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRecargo3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRecargo3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRecargo3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRecargo3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRecargo3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRecargo3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRecargo3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRecargo3.TabIndex = 236;
+            this.par_ctaRecargo3.ThreeState = false;
+            this.par_ctaRecargo3.ToolTipText = null;
+            // 
+            // par_NetoVtaServ3
+            // 
+            this.par_NetoVtaServ3.AllowBindingControlAnimation = true;
+            this.par_NetoVtaServ3.AllowBindingControlColorChanges = false;
+            this.par_NetoVtaServ3.AllowBindingControlLocation = true;
+            this.par_NetoVtaServ3.AllowCheckBoxAnimation = false;
+            this.par_NetoVtaServ3.AllowCheckmarkAnimation = true;
+            this.par_NetoVtaServ3.AllowOnHoverStates = true;
+            this.par_NetoVtaServ3.AutoCheck = true;
+            this.par_NetoVtaServ3.BackColor = System.Drawing.Color.Transparent;
+            this.par_NetoVtaServ3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_NetoVtaServ3.BackgroundImage")));
+            this.par_NetoVtaServ3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_NetoVtaServ3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_NetoVtaServ3.BorderRadius = 12;
+            this.par_NetoVtaServ3.Checked = false;
+            this.par_NetoVtaServ3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_NetoVtaServ3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_NetoVtaServ3.CustomCheckmarkImage = null;
+            this.par_NetoVtaServ3.Location = new System.Drawing.Point(628, 739);
+            this.par_NetoVtaServ3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_NetoVtaServ3.Name = "par_NetoVtaServ3";
+            this.par_NetoVtaServ3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_NetoVtaServ3.OnCheck.BorderRadius = 12;
+            this.par_NetoVtaServ3.OnCheck.BorderThickness = 2;
+            this.par_NetoVtaServ3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_NetoVtaServ3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_NetoVtaServ3.OnCheck.CheckmarkThickness = 2;
+            this.par_NetoVtaServ3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_NetoVtaServ3.OnDisable.BorderRadius = 12;
+            this.par_NetoVtaServ3.OnDisable.BorderThickness = 2;
+            this.par_NetoVtaServ3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_NetoVtaServ3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_NetoVtaServ3.OnDisable.CheckmarkThickness = 2;
+            this.par_NetoVtaServ3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_NetoVtaServ3.OnHoverChecked.BorderRadius = 12;
+            this.par_NetoVtaServ3.OnHoverChecked.BorderThickness = 2;
+            this.par_NetoVtaServ3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_NetoVtaServ3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_NetoVtaServ3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_NetoVtaServ3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_NetoVtaServ3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_NetoVtaServ3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_NetoVtaServ3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_NetoVtaServ3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_NetoVtaServ3.OnUncheck.BorderRadius = 12;
+            this.par_NetoVtaServ3.OnUncheck.BorderThickness = 1;
+            this.par_NetoVtaServ3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_NetoVtaServ3.Size = new System.Drawing.Size(17, 17);
+            this.par_NetoVtaServ3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_NetoVtaServ3.TabIndex = 237;
+            this.par_NetoVtaServ3.ThreeState = false;
+            this.par_NetoVtaServ3.ToolTipText = null;
+            // 
+            // par_ctaAnticipoCpa3
+            // 
+            this.par_ctaAnticipoCpa3.AllowBindingControlAnimation = true;
+            this.par_ctaAnticipoCpa3.AllowBindingControlColorChanges = false;
+            this.par_ctaAnticipoCpa3.AllowBindingControlLocation = true;
+            this.par_ctaAnticipoCpa3.AllowCheckBoxAnimation = false;
+            this.par_ctaAnticipoCpa3.AllowCheckmarkAnimation = true;
+            this.par_ctaAnticipoCpa3.AllowOnHoverStates = true;
+            this.par_ctaAnticipoCpa3.AutoCheck = true;
+            this.par_ctaAnticipoCpa3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaAnticipoCpa3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaAnticipoCpa3.BackgroundImage")));
+            this.par_ctaAnticipoCpa3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaAnticipoCpa3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaAnticipoCpa3.BorderRadius = 12;
+            this.par_ctaAnticipoCpa3.Checked = false;
+            this.par_ctaAnticipoCpa3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaAnticipoCpa3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaAnticipoCpa3.CustomCheckmarkImage = null;
+            this.par_ctaAnticipoCpa3.Location = new System.Drawing.Point(628, 710);
+            this.par_ctaAnticipoCpa3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaAnticipoCpa3.Name = "par_ctaAnticipoCpa3";
+            this.par_ctaAnticipoCpa3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaAnticipoCpa3.OnCheck.BorderRadius = 12;
+            this.par_ctaAnticipoCpa3.OnCheck.BorderThickness = 2;
+            this.par_ctaAnticipoCpa3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaAnticipoCpa3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaAnticipoCpa3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaAnticipoCpa3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaAnticipoCpa3.OnDisable.BorderRadius = 12;
+            this.par_ctaAnticipoCpa3.OnDisable.BorderThickness = 2;
+            this.par_ctaAnticipoCpa3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaAnticipoCpa3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaAnticipoCpa3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaAnticipoCpa3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaAnticipoCpa3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaAnticipoCpa3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaAnticipoCpa3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaAnticipoCpa3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaAnticipoCpa3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaAnticipoCpa3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaAnticipoCpa3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaAnticipoCpa3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaAnticipoCpa3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaAnticipoCpa3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaAnticipoCpa3.OnUncheck.BorderRadius = 12;
+            this.par_ctaAnticipoCpa3.OnUncheck.BorderThickness = 1;
+            this.par_ctaAnticipoCpa3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaAnticipoCpa3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaAnticipoCpa3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaAnticipoCpa3.TabIndex = 238;
+            this.par_ctaAnticipoCpa3.ThreeState = false;
+            this.par_ctaAnticipoCpa3.ToolTipText = null;
+            // 
+            // par_ctaRetBF3
+            // 
+            this.par_ctaRetBF3.AllowBindingControlAnimation = true;
+            this.par_ctaRetBF3.AllowBindingControlColorChanges = false;
+            this.par_ctaRetBF3.AllowBindingControlLocation = true;
+            this.par_ctaRetBF3.AllowCheckBoxAnimation = false;
+            this.par_ctaRetBF3.AllowCheckmarkAnimation = true;
+            this.par_ctaRetBF3.AllowOnHoverStates = true;
+            this.par_ctaRetBF3.AutoCheck = true;
+            this.par_ctaRetBF3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetBF3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRetBF3.BackgroundImage")));
+            this.par_ctaRetBF3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRetBF3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRetBF3.BorderRadius = 12;
+            this.par_ctaRetBF3.Checked = false;
+            this.par_ctaRetBF3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRetBF3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRetBF3.CustomCheckmarkImage = null;
+            this.par_ctaRetBF3.Location = new System.Drawing.Point(628, 793);
+            this.par_ctaRetBF3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRetBF3.Name = "par_ctaRetBF3";
+            this.par_ctaRetBF3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetBF3.OnCheck.BorderRadius = 12;
+            this.par_ctaRetBF3.OnCheck.BorderThickness = 2;
+            this.par_ctaRetBF3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetBF3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetBF3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRetBF3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetBF3.OnDisable.BorderRadius = 12;
+            this.par_ctaRetBF3.OnDisable.BorderThickness = 2;
+            this.par_ctaRetBF3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetBF3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetBF3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRetBF3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetBF3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRetBF3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRetBF3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetBF3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetBF3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRetBF3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetBF3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRetBF3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRetBF3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetBF3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRetBF3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRetBF3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRetBF3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetBF3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRetBF3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRetBF3.TabIndex = 239;
+            this.par_ctaRetBF3.ThreeState = false;
+            this.par_ctaRetBF3.ToolTipText = null;
+            // 
+            // par_ctaRedondeo3
+            // 
+            this.par_ctaRedondeo3.AllowBindingControlAnimation = true;
+            this.par_ctaRedondeo3.AllowBindingControlColorChanges = false;
+            this.par_ctaRedondeo3.AllowBindingControlLocation = true;
+            this.par_ctaRedondeo3.AllowCheckBoxAnimation = false;
+            this.par_ctaRedondeo3.AllowCheckmarkAnimation = true;
+            this.par_ctaRedondeo3.AllowOnHoverStates = true;
+            this.par_ctaRedondeo3.AutoCheck = true;
+            this.par_ctaRedondeo3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRedondeo3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRedondeo3.BackgroundImage")));
+            this.par_ctaRedondeo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRedondeo3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRedondeo3.BorderRadius = 12;
+            this.par_ctaRedondeo3.Checked = false;
+            this.par_ctaRedondeo3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRedondeo3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRedondeo3.CustomCheckmarkImage = null;
+            this.par_ctaRedondeo3.Location = new System.Drawing.Point(628, 765);
+            this.par_ctaRedondeo3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRedondeo3.Name = "par_ctaRedondeo3";
+            this.par_ctaRedondeo3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRedondeo3.OnCheck.BorderRadius = 12;
+            this.par_ctaRedondeo3.OnCheck.BorderThickness = 2;
+            this.par_ctaRedondeo3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRedondeo3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRedondeo3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRedondeo3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRedondeo3.OnDisable.BorderRadius = 12;
+            this.par_ctaRedondeo3.OnDisable.BorderThickness = 2;
+            this.par_ctaRedondeo3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRedondeo3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRedondeo3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRedondeo3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRedondeo3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRedondeo3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRedondeo3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRedondeo3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRedondeo3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRedondeo3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRedondeo3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRedondeo3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRedondeo3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRedondeo3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRedondeo3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRedondeo3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRedondeo3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRedondeo3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRedondeo3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRedondeo3.TabIndex = 240;
+            this.par_ctaRedondeo3.ThreeState = false;
+            this.par_ctaRedondeo3.ToolTipText = null;
+            // 
+            // par_ctaRetBFP3
+            // 
+            this.par_ctaRetBFP3.AllowBindingControlAnimation = true;
+            this.par_ctaRetBFP3.AllowBindingControlColorChanges = false;
+            this.par_ctaRetBFP3.AllowBindingControlLocation = true;
+            this.par_ctaRetBFP3.AllowCheckBoxAnimation = false;
+            this.par_ctaRetBFP3.AllowCheckmarkAnimation = true;
+            this.par_ctaRetBFP3.AllowOnHoverStates = true;
+            this.par_ctaRetBFP3.AutoCheck = true;
+            this.par_ctaRetBFP3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetBFP3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaRetBFP3.BackgroundImage")));
+            this.par_ctaRetBFP3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaRetBFP3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaRetBFP3.BorderRadius = 12;
+            this.par_ctaRetBFP3.Checked = false;
+            this.par_ctaRetBFP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaRetBFP3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaRetBFP3.CustomCheckmarkImage = null;
+            this.par_ctaRetBFP3.Location = new System.Drawing.Point(628, 821);
+            this.par_ctaRetBFP3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaRetBFP3.Name = "par_ctaRetBFP3";
+            this.par_ctaRetBFP3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetBFP3.OnCheck.BorderRadius = 12;
+            this.par_ctaRetBFP3.OnCheck.BorderThickness = 2;
+            this.par_ctaRetBFP3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaRetBFP3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetBFP3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaRetBFP3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetBFP3.OnDisable.BorderRadius = 12;
+            this.par_ctaRetBFP3.OnDisable.BorderThickness = 2;
+            this.par_ctaRetBFP3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetBFP3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaRetBFP3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaRetBFP3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetBFP3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaRetBFP3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaRetBFP3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetBFP3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaRetBFP3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaRetBFP3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaRetBFP3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaRetBFP3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaRetBFP3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetBFP3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaRetBFP3.OnUncheck.BorderRadius = 12;
+            this.par_ctaRetBFP3.OnUncheck.BorderThickness = 1;
+            this.par_ctaRetBFP3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaRetBFP3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaRetBFP3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaRetBFP3.TabIndex = 241;
+            this.par_ctaRetBFP3.ThreeState = false;
+            this.par_ctaRetBFP3.ToolTipText = null;
+            // 
+            // par_ctaAnticipoVta3
+            // 
+            this.par_ctaAnticipoVta3.AllowBindingControlAnimation = true;
+            this.par_ctaAnticipoVta3.AllowBindingControlColorChanges = false;
+            this.par_ctaAnticipoVta3.AllowBindingControlLocation = true;
+            this.par_ctaAnticipoVta3.AllowCheckBoxAnimation = false;
+            this.par_ctaAnticipoVta3.AllowCheckmarkAnimation = true;
+            this.par_ctaAnticipoVta3.AllowOnHoverStates = true;
+            this.par_ctaAnticipoVta3.AutoCheck = true;
+            this.par_ctaAnticipoVta3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaAnticipoVta3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaAnticipoVta3.BackgroundImage")));
+            this.par_ctaAnticipoVta3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaAnticipoVta3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaAnticipoVta3.BorderRadius = 12;
+            this.par_ctaAnticipoVta3.Checked = false;
+            this.par_ctaAnticipoVta3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaAnticipoVta3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaAnticipoVta3.CustomCheckmarkImage = null;
+            this.par_ctaAnticipoVta3.Location = new System.Drawing.Point(628, 686);
+            this.par_ctaAnticipoVta3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaAnticipoVta3.Name = "par_ctaAnticipoVta3";
+            this.par_ctaAnticipoVta3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaAnticipoVta3.OnCheck.BorderRadius = 12;
+            this.par_ctaAnticipoVta3.OnCheck.BorderThickness = 2;
+            this.par_ctaAnticipoVta3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaAnticipoVta3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaAnticipoVta3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaAnticipoVta3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaAnticipoVta3.OnDisable.BorderRadius = 12;
+            this.par_ctaAnticipoVta3.OnDisable.BorderThickness = 2;
+            this.par_ctaAnticipoVta3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaAnticipoVta3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaAnticipoVta3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaAnticipoVta3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaAnticipoVta3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaAnticipoVta3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaAnticipoVta3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaAnticipoVta3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaAnticipoVta3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaAnticipoVta3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaAnticipoVta3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaAnticipoVta3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaAnticipoVta3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaAnticipoVta3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaAnticipoVta3.OnUncheck.BorderRadius = 12;
+            this.par_ctaAnticipoVta3.OnUncheck.BorderThickness = 1;
+            this.par_ctaAnticipoVta3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaAnticipoVta3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaAnticipoVta3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaAnticipoVta3.TabIndex = 242;
+            this.par_ctaAnticipoVta3.ThreeState = false;
+            this.par_ctaAnticipoVta3.ToolTipText = null;
+            // 
+            // par_ctaDifCambioVta3
+            // 
+            this.par_ctaDifCambioVta3.AllowBindingControlAnimation = true;
+            this.par_ctaDifCambioVta3.AllowBindingControlColorChanges = false;
+            this.par_ctaDifCambioVta3.AllowBindingControlLocation = true;
+            this.par_ctaDifCambioVta3.AllowCheckBoxAnimation = false;
+            this.par_ctaDifCambioVta3.AllowCheckmarkAnimation = true;
+            this.par_ctaDifCambioVta3.AllowOnHoverStates = true;
+            this.par_ctaDifCambioVta3.AutoCheck = true;
+            this.par_ctaDifCambioVta3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaDifCambioVta3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaDifCambioVta3.BackgroundImage")));
+            this.par_ctaDifCambioVta3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaDifCambioVta3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaDifCambioVta3.BorderRadius = 12;
+            this.par_ctaDifCambioVta3.Checked = false;
+            this.par_ctaDifCambioVta3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaDifCambioVta3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaDifCambioVta3.CustomCheckmarkImage = null;
+            this.par_ctaDifCambioVta3.Location = new System.Drawing.Point(628, 847);
+            this.par_ctaDifCambioVta3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaDifCambioVta3.Name = "par_ctaDifCambioVta3";
+            this.par_ctaDifCambioVta3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaDifCambioVta3.OnCheck.BorderRadius = 12;
+            this.par_ctaDifCambioVta3.OnCheck.BorderThickness = 2;
+            this.par_ctaDifCambioVta3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaDifCambioVta3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaDifCambioVta3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaDifCambioVta3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaDifCambioVta3.OnDisable.BorderRadius = 12;
+            this.par_ctaDifCambioVta3.OnDisable.BorderThickness = 2;
+            this.par_ctaDifCambioVta3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaDifCambioVta3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaDifCambioVta3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaDifCambioVta3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaDifCambioVta3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaDifCambioVta3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaDifCambioVta3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaDifCambioVta3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaDifCambioVta3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaDifCambioVta3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaDifCambioVta3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaDifCambioVta3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaDifCambioVta3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaDifCambioVta3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaDifCambioVta3.OnUncheck.BorderRadius = 12;
+            this.par_ctaDifCambioVta3.OnUncheck.BorderThickness = 1;
+            this.par_ctaDifCambioVta3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaDifCambioVta3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaDifCambioVta3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaDifCambioVta3.TabIndex = 243;
+            this.par_ctaDifCambioVta3.ThreeState = false;
+            this.par_ctaDifCambioVta3.ToolTipText = null;
+            // 
+            // par_ctaCINeto3
+            // 
+            this.par_ctaCINeto3.AllowBindingControlAnimation = true;
+            this.par_ctaCINeto3.AllowBindingControlColorChanges = false;
+            this.par_ctaCINeto3.AllowBindingControlLocation = true;
+            this.par_ctaCINeto3.AllowCheckBoxAnimation = false;
+            this.par_ctaCINeto3.AllowCheckmarkAnimation = true;
+            this.par_ctaCINeto3.AllowOnHoverStates = true;
+            this.par_ctaCINeto3.AutoCheck = true;
+            this.par_ctaCINeto3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaCINeto3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaCINeto3.BackgroundImage")));
+            this.par_ctaCINeto3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaCINeto3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaCINeto3.BorderRadius = 12;
+            this.par_ctaCINeto3.Checked = false;
+            this.par_ctaCINeto3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaCINeto3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaCINeto3.CustomCheckmarkImage = null;
+            this.par_ctaCINeto3.Location = new System.Drawing.Point(628, 871);
+            this.par_ctaCINeto3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaCINeto3.Name = "par_ctaCINeto3";
+            this.par_ctaCINeto3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaCINeto3.OnCheck.BorderRadius = 12;
+            this.par_ctaCINeto3.OnCheck.BorderThickness = 2;
+            this.par_ctaCINeto3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaCINeto3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaCINeto3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaCINeto3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaCINeto3.OnDisable.BorderRadius = 12;
+            this.par_ctaCINeto3.OnDisable.BorderThickness = 2;
+            this.par_ctaCINeto3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaCINeto3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaCINeto3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaCINeto3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaCINeto3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaCINeto3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaCINeto3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaCINeto3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaCINeto3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaCINeto3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaCINeto3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaCINeto3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaCINeto3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaCINeto3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaCINeto3.OnUncheck.BorderRadius = 12;
+            this.par_ctaCINeto3.OnUncheck.BorderThickness = 1;
+            this.par_ctaCINeto3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaCINeto3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaCINeto3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaCINeto3.TabIndex = 244;
+            this.par_ctaCINeto3.ThreeState = false;
+            this.par_ctaCINeto3.ToolTipText = null;
+            // 
+            // par_ctaCIIVA3
+            // 
+            this.par_ctaCIIVA3.AllowBindingControlAnimation = true;
+            this.par_ctaCIIVA3.AllowBindingControlColorChanges = false;
+            this.par_ctaCIIVA3.AllowBindingControlLocation = true;
+            this.par_ctaCIIVA3.AllowCheckBoxAnimation = false;
+            this.par_ctaCIIVA3.AllowCheckmarkAnimation = true;
+            this.par_ctaCIIVA3.AllowOnHoverStates = true;
+            this.par_ctaCIIVA3.AutoCheck = true;
+            this.par_ctaCIIVA3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaCIIVA3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaCIIVA3.BackgroundImage")));
+            this.par_ctaCIIVA3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaCIIVA3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaCIIVA3.BorderRadius = 12;
+            this.par_ctaCIIVA3.Checked = false;
+            this.par_ctaCIIVA3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaCIIVA3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaCIIVA3.CustomCheckmarkImage = null;
+            this.par_ctaCIIVA3.Location = new System.Drawing.Point(628, 900);
+            this.par_ctaCIIVA3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaCIIVA3.Name = "par_ctaCIIVA3";
+            this.par_ctaCIIVA3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaCIIVA3.OnCheck.BorderRadius = 12;
+            this.par_ctaCIIVA3.OnCheck.BorderThickness = 2;
+            this.par_ctaCIIVA3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaCIIVA3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaCIIVA3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaCIIVA3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaCIIVA3.OnDisable.BorderRadius = 12;
+            this.par_ctaCIIVA3.OnDisable.BorderThickness = 2;
+            this.par_ctaCIIVA3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaCIIVA3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaCIIVA3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaCIIVA3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaCIIVA3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaCIIVA3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaCIIVA3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaCIIVA3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaCIIVA3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaCIIVA3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaCIIVA3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaCIIVA3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaCIIVA3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaCIIVA3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaCIIVA3.OnUncheck.BorderRadius = 12;
+            this.par_ctaCIIVA3.OnUncheck.BorderThickness = 1;
+            this.par_ctaCIIVA3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaCIIVA3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaCIIVA3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaCIIVA3.TabIndex = 245;
+            this.par_ctaCIIVA3.ThreeState = false;
+            this.par_ctaCIIVA3.ToolTipText = null;
+            // 
+            // par_ctaAjusteInf3
+            // 
+            this.par_ctaAjusteInf3.AllowBindingControlAnimation = true;
+            this.par_ctaAjusteInf3.AllowBindingControlColorChanges = false;
+            this.par_ctaAjusteInf3.AllowBindingControlLocation = true;
+            this.par_ctaAjusteInf3.AllowCheckBoxAnimation = false;
+            this.par_ctaAjusteInf3.AllowCheckmarkAnimation = true;
+            this.par_ctaAjusteInf3.AllowOnHoverStates = true;
+            this.par_ctaAjusteInf3.AutoCheck = true;
+            this.par_ctaAjusteInf3.BackColor = System.Drawing.Color.Transparent;
+            this.par_ctaAjusteInf3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("par_ctaAjusteInf3.BackgroundImage")));
+            this.par_ctaAjusteInf3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.par_ctaAjusteInf3.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.par_ctaAjusteInf3.BorderRadius = 12;
+            this.par_ctaAjusteInf3.Checked = false;
+            this.par_ctaAjusteInf3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.par_ctaAjusteInf3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.par_ctaAjusteInf3.CustomCheckmarkImage = null;
+            this.par_ctaAjusteInf3.Location = new System.Drawing.Point(628, 927);
+            this.par_ctaAjusteInf3.MinimumSize = new System.Drawing.Size(17, 17);
+            this.par_ctaAjusteInf3.Name = "par_ctaAjusteInf3";
+            this.par_ctaAjusteInf3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaAjusteInf3.OnCheck.BorderRadius = 12;
+            this.par_ctaAjusteInf3.OnCheck.BorderThickness = 2;
+            this.par_ctaAjusteInf3.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.par_ctaAjusteInf3.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaAjusteInf3.OnCheck.CheckmarkThickness = 2;
+            this.par_ctaAjusteInf3.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.par_ctaAjusteInf3.OnDisable.BorderRadius = 12;
+            this.par_ctaAjusteInf3.OnDisable.BorderThickness = 2;
+            this.par_ctaAjusteInf3.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaAjusteInf3.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.par_ctaAjusteInf3.OnDisable.CheckmarkThickness = 2;
+            this.par_ctaAjusteInf3.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaAjusteInf3.OnHoverChecked.BorderRadius = 12;
+            this.par_ctaAjusteInf3.OnHoverChecked.BorderThickness = 2;
+            this.par_ctaAjusteInf3.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaAjusteInf3.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.par_ctaAjusteInf3.OnHoverChecked.CheckmarkThickness = 2;
+            this.par_ctaAjusteInf3.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.par_ctaAjusteInf3.OnHoverUnchecked.BorderRadius = 12;
+            this.par_ctaAjusteInf3.OnHoverUnchecked.BorderThickness = 1;
+            this.par_ctaAjusteInf3.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaAjusteInf3.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.par_ctaAjusteInf3.OnUncheck.BorderRadius = 12;
+            this.par_ctaAjusteInf3.OnUncheck.BorderThickness = 1;
+            this.par_ctaAjusteInf3.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.par_ctaAjusteInf3.Size = new System.Drawing.Size(17, 17);
+            this.par_ctaAjusteInf3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.par_ctaAjusteInf3.TabIndex = 246;
+            this.par_ctaAjusteInf3.ThreeState = false;
+            this.par_ctaAjusteInf3.ToolTipText = null;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(694, 24);
+            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAceptar.BorderColor = System.Drawing.Color.White;
+            this.btnAceptar.BorderRadius = 0;
+            this.btnAceptar.BorderSize = 0;
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.Location = new System.Drawing.Point(665, 10);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 211;
+            this.btnAceptar.Size = new System.Drawing.Size(129, 46);
+            this.btnAceptar.TabIndex = 247;
             this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.TextColor = System.Drawing.Color.White;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // frmParametrosContables
@@ -1796,145 +3594,146 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(833, 510);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.par_ctaAjusteInf3);
+            this.Controls.Add(this.par_ctaCIIVA3);
+            this.Controls.Add(this.par_ctaCINeto3);
+            this.Controls.Add(this.par_ctaDifCambioVta3);
+            this.Controls.Add(this.par_ctaAnticipoVta3);
+            this.Controls.Add(this.par_ctaRetBFP3);
+            this.Controls.Add(this.par_ctaRedondeo3);
+            this.Controls.Add(this.par_ctaRetBF3);
+            this.Controls.Add(this.par_ctaAnticipoCpa3);
+            this.Controls.Add(this.par_NetoVtaServ3);
+            this.Controls.Add(this.par_ctaRecargo3);
+            this.Controls.Add(this.par_ctaDescuento3);
+            this.Controls.Add(this.par_ctaRetSUSSP3);
+            this.Controls.Add(this.par_ctaRetGanP3);
+            this.Controls.Add(this.par_ctaRetIVAP3);
+            this.Controls.Add(this.par_ctaRetIIBBP3);
+            this.Controls.Add(this.par_ctaIVA27D3);
+            this.Controls.Add(this.par_ctaIVA10D3);
+            this.Controls.Add(this.par_ctaProv3);
+            this.Controls.Add(this.par_NetoVtaArti3);
+            this.Controls.Add(this.par_ctaIVA21D3);
+            this.Controls.Add(this.par_ctaProvGral3);
+            this.Controls.Add(this.par_ctaOtrosImp3);
+            this.Controls.Add(this.par_ctaPerGan3);
+            this.Controls.Add(this.par_ctaDeud3);
+            this.Controls.Add(this.par_ctaPerIIBB3);
+            this.Controls.Add(this.par_ctaPerIVA3);
+            this.Controls.Add(this.par_ctaRetSUSS3);
+            this.Controls.Add(this.par_ctaRetGan3);
+            this.Controls.Add(this.par_ctaRetIIBB3);
+            this.Controls.Add(this.par_ctaRetIVA3);
+            this.Controls.Add(this.par_ctaImpInt3);
+            this.Controls.Add(this.par_ctaIVA273);
+            this.Controls.Add(this.par_ctaIVA103);
+            this.Controls.Add(this.par_ctaIVA213);
             this.Controls.Add(this.par_ctaAjusteInf2);
             this.Controls.Add(this.par_ctaAjusteInf1);
             this.Controls.Add(this.par_ctaAjusteInf);
-            this.Controls.Add(this.par_ctaCIIVA3);
             this.Controls.Add(this.par_ctaCIIVA2);
             this.Controls.Add(this.par_ctaCIIVA1);
             this.Controls.Add(this.par_ctaCIIVA);
-            this.Controls.Add(this.par_ctaCINeto3);
             this.Controls.Add(this.par_ctaCINeto2);
             this.Controls.Add(this.par_ctaCINeto1);
             this.Controls.Add(this.par_ctaCINeto);
-            this.Controls.Add(this.par_ctaDifCambioVta3);
             this.Controls.Add(this.par_ctaDifCambioVta2);
             this.Controls.Add(this.par_ctaDifCambioVta1);
             this.Controls.Add(this.par_ctaDifCambioVta);
-            this.Controls.Add(this.par_ctaRetBFP3);
             this.Controls.Add(this.par_ctaRetBFP2);
             this.Controls.Add(this.par_ctaRetBFP1);
             this.Controls.Add(this.par_ctaRetBFP);
-            this.Controls.Add(this.par_ctaRetBF3);
             this.Controls.Add(this.par_ctaRetBF2);
             this.Controls.Add(this.par_ctaRetBF1);
             this.Controls.Add(this.par_ctaRetBF);
-            this.Controls.Add(this.par_ctaRedondeo3);
             this.Controls.Add(this.par_ctaRedondeo2);
             this.Controls.Add(this.par_ctaRedondeo1);
             this.Controls.Add(this.par_ctaRedondeo);
-            this.Controls.Add(this.par_NetoVtaServ3);
             this.Controls.Add(this.par_NetoVtaServ2);
             this.Controls.Add(this.par_NetoVtaServ1);
             this.Controls.Add(this.par_NetoVtaServ);
-            this.Controls.Add(this.par_ctaAnticipoCpa3);
             this.Controls.Add(this.par_ctaAnticipoCpa2);
             this.Controls.Add(this.par_ctaAnticipoCpa1);
             this.Controls.Add(this.par_ctaAnticipoCpa);
-            this.Controls.Add(this.par_ctaAnticipoVta3);
             this.Controls.Add(this.par_ctaAnticipoVta2);
             this.Controls.Add(this.par_ctaAnticipoVta1);
             this.Controls.Add(this.par_ctaAnticipoVta);
-            this.Controls.Add(this.par_ctaRecargo3);
             this.Controls.Add(this.par_ctaRecargo2);
             this.Controls.Add(this.par_ctaRecargo1);
             this.Controls.Add(this.par_ctaRecargo);
-            this.Controls.Add(this.par_ctaDescuento3);
             this.Controls.Add(this.par_ctaDescuento2);
             this.Controls.Add(this.par_ctaDescuento1);
             this.Controls.Add(this.par_ctaDescuento);
-            this.Controls.Add(this.par_ctaRetSUSSP3);
             this.Controls.Add(this.par_ctaRetSUSSP2);
             this.Controls.Add(this.par_ctaRetSUSSP1);
             this.Controls.Add(this.par_ctaRetSUSSP);
-            this.Controls.Add(this.par_ctaRetGanP3);
             this.Controls.Add(this.par_ctaRetGanP2);
             this.Controls.Add(this.par_ctaRetGanP1);
             this.Controls.Add(this.par_ctaRetGanP);
-            this.Controls.Add(this.par_ctaRetIIBBP3);
             this.Controls.Add(this.par_ctaRetIIBBP2);
             this.Controls.Add(this.par_ctaRetIIBBP1);
             this.Controls.Add(this.par_ctaRetIIBBP);
-            this.Controls.Add(this.par_ctaRetIVAP3);
             this.Controls.Add(this.par_ctaRetIVAP2);
             this.Controls.Add(this.par_ctaRetIVAP1);
             this.Controls.Add(this.par_ctaRetIVAP);
-            this.Controls.Add(this.par_ctaIVA27D3);
             this.Controls.Add(this.par_ctaIVA27D2);
             this.Controls.Add(this.par_ctaIVA27D1);
             this.Controls.Add(this.par_ctaIVA27D);
-            this.Controls.Add(this.par_ctaIVA10D3);
             this.Controls.Add(this.par_ctaIVA10D2);
             this.Controls.Add(this.par_ctaIVA10D1);
             this.Controls.Add(this.par_ctaIVA10D);
-            this.Controls.Add(this.par_ctaIVA21D3);
             this.Controls.Add(this.par_ctaIVA21D2);
             this.Controls.Add(this.par_ctaIVA21D1);
             this.Controls.Add(this.par_ctaIVA21D);
-            this.Controls.Add(this.par_ctaDeud3);
             this.Controls.Add(this.par_ctaDeud2);
             this.Controls.Add(this.par_ctaDeud1);
             this.Controls.Add(this.par_ctaDeud);
-            this.Controls.Add(this.par_NetoVtaArti3);
             this.Controls.Add(this.par_NetoVtaArti2);
             this.Controls.Add(this.par_NetoVtaArti1);
             this.Controls.Add(this.par_NetoVtaArti);
-            this.Controls.Add(this.par_ctaProvGral3);
             this.Controls.Add(this.par_ctaProvGral2);
             this.Controls.Add(this.par_ctaProvGral1);
             this.Controls.Add(this.par_ctaProvGral);
-            this.Controls.Add(this.par_ctaProv3);
             this.Controls.Add(this.par_ctaProv2);
             this.Controls.Add(this.par_ctaProv1);
             this.Controls.Add(this.par_ctaProv);
-            this.Controls.Add(this.par_ctaOtrosImp3);
             this.Controls.Add(this.par_ctaOtrosImp2);
             this.Controls.Add(this.par_ctaOtrosImp1);
             this.Controls.Add(this.par_ctaOtrosImp);
-            this.Controls.Add(this.par_ctaPerGan3);
             this.Controls.Add(this.par_ctaPerGan2);
             this.Controls.Add(this.par_ctaPerGan1);
             this.Controls.Add(this.par_ctaPerGan);
-            this.Controls.Add(this.par_ctaPerIIBB3);
             this.Controls.Add(this.par_ctaPerIIBB2);
             this.Controls.Add(this.par_ctaPerIIBB1);
             this.Controls.Add(this.par_ctaPerIIBB);
-            this.Controls.Add(this.par_ctaPerIVA3);
             this.Controls.Add(this.par_ctaPerIVA2);
             this.Controls.Add(this.par_ctaPerIVA1);
             this.Controls.Add(this.par_ctaPerIVA);
-            this.Controls.Add(this.par_ctaRetSUSS3);
             this.Controls.Add(this.par_ctaRetSUSS2);
             this.Controls.Add(this.par_ctaRetSUSS1);
             this.Controls.Add(this.par_ctaRetSUSS);
-            this.Controls.Add(this.par_ctaRetGan3);
             this.Controls.Add(this.par_ctaRetGan2);
             this.Controls.Add(this.par_ctaRetGan1);
             this.Controls.Add(this.par_ctaRetGan);
-            this.Controls.Add(this.par_ctaRetIIBB3);
             this.Controls.Add(this.par_ctaRetIIBB2);
             this.Controls.Add(this.par_ctaRetIIBB1);
             this.Controls.Add(this.par_ctaRetIIBB);
-            this.Controls.Add(this.par_ctaRetIVA3);
             this.Controls.Add(this.par_ctaRetIVA2);
             this.Controls.Add(this.par_ctaRetIVA1);
             this.Controls.Add(this.par_ctaRetIVA);
-            this.Controls.Add(this.par_ctaImpInt3);
             this.Controls.Add(this.par_ctaImpInt2);
             this.Controls.Add(this.par_ctaImpInt1);
             this.Controls.Add(this.par_ctaImpInt);
-            this.Controls.Add(this.par_ctaIVA273);
             this.Controls.Add(this.par_ctaIVA272);
             this.Controls.Add(this.par_ctaIVA271);
             this.Controls.Add(this.par_ctaIVA27);
-            this.Controls.Add(this.par_ctaIVA103);
             this.Controls.Add(this.par_ctaIVA102);
             this.Controls.Add(this.par_ctaIVA101);
             this.Controls.Add(this.par_ctaIVA10);
-            this.Controls.Add(this.par_ctaIVA213);
             this.Controls.Add(this.par_ctaIVA212);
             this.Controls.Add(this.par_ctaIVA211);
             this.Controls.Add(this.par_ctaIVA21);
@@ -1973,6 +3772,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmParametrosContables";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmParametrosContables";
@@ -2021,143 +3821,143 @@
         private System.Windows.Forms.TextBox par_ctaIVA21;
         private System.Windows.Forms.TextBox par_ctaIVA211;
         private System.Windows.Forms.Button par_ctaIVA212;
-        private System.Windows.Forms.CheckBox par_ctaIVA213;
-        private System.Windows.Forms.CheckBox par_ctaIVA103;
         private System.Windows.Forms.Button par_ctaIVA102;
         private System.Windows.Forms.TextBox par_ctaIVA101;
         private System.Windows.Forms.TextBox par_ctaIVA10;
-        private System.Windows.Forms.CheckBox par_ctaIVA273;
         private System.Windows.Forms.Button par_ctaIVA272;
         private System.Windows.Forms.TextBox par_ctaIVA271;
         private System.Windows.Forms.TextBox par_ctaIVA27;
-        private System.Windows.Forms.CheckBox par_ctaRetIIBB3;
         private System.Windows.Forms.Button par_ctaRetIIBB2;
         private System.Windows.Forms.TextBox par_ctaRetIIBB1;
         private System.Windows.Forms.TextBox par_ctaRetIIBB;
-        private System.Windows.Forms.CheckBox par_ctaRetIVA3;
         private System.Windows.Forms.Button par_ctaRetIVA2;
         private System.Windows.Forms.TextBox par_ctaRetIVA1;
         private System.Windows.Forms.TextBox par_ctaRetIVA;
-        private System.Windows.Forms.CheckBox par_ctaImpInt3;
         private System.Windows.Forms.Button par_ctaImpInt2;
         private System.Windows.Forms.TextBox par_ctaImpInt1;
         private System.Windows.Forms.TextBox par_ctaImpInt;
-        private System.Windows.Forms.CheckBox par_ctaOtrosImp3;
         private System.Windows.Forms.Button par_ctaOtrosImp2;
         private System.Windows.Forms.TextBox par_ctaOtrosImp1;
         private System.Windows.Forms.TextBox par_ctaOtrosImp;
-        private System.Windows.Forms.CheckBox par_ctaPerGan3;
         private System.Windows.Forms.Button par_ctaPerGan2;
         private System.Windows.Forms.TextBox par_ctaPerGan1;
         private System.Windows.Forms.TextBox par_ctaPerGan;
-        private System.Windows.Forms.CheckBox par_ctaPerIIBB3;
         private System.Windows.Forms.Button par_ctaPerIIBB2;
         private System.Windows.Forms.TextBox par_ctaPerIIBB1;
         private System.Windows.Forms.TextBox par_ctaPerIIBB;
-        private System.Windows.Forms.CheckBox par_ctaPerIVA3;
         private System.Windows.Forms.Button par_ctaPerIVA2;
         private System.Windows.Forms.TextBox par_ctaPerIVA1;
         private System.Windows.Forms.TextBox par_ctaPerIVA;
-        private System.Windows.Forms.CheckBox par_ctaRetSUSS3;
         private System.Windows.Forms.Button par_ctaRetSUSS2;
         private System.Windows.Forms.TextBox par_ctaRetSUSS1;
         private System.Windows.Forms.TextBox par_ctaRetSUSS;
-        private System.Windows.Forms.CheckBox par_ctaRetGan3;
         private System.Windows.Forms.Button par_ctaRetGan2;
         private System.Windows.Forms.TextBox par_ctaRetGan1;
         private System.Windows.Forms.TextBox par_ctaRetGan;
-        private System.Windows.Forms.CheckBox par_ctaDescuento3;
         private System.Windows.Forms.Button par_ctaDescuento2;
         private System.Windows.Forms.TextBox par_ctaDescuento1;
         private System.Windows.Forms.TextBox par_ctaDescuento;
-        private System.Windows.Forms.CheckBox par_ctaRetSUSSP3;
         private System.Windows.Forms.Button par_ctaRetSUSSP2;
         private System.Windows.Forms.TextBox par_ctaRetSUSSP1;
         private System.Windows.Forms.TextBox par_ctaRetSUSSP;
-        private System.Windows.Forms.CheckBox par_ctaRetGanP3;
         private System.Windows.Forms.Button par_ctaRetGanP2;
         private System.Windows.Forms.TextBox par_ctaRetGanP1;
         private System.Windows.Forms.TextBox par_ctaRetGanP;
-        private System.Windows.Forms.CheckBox par_ctaRetIIBBP3;
         private System.Windows.Forms.Button par_ctaRetIIBBP2;
         private System.Windows.Forms.TextBox par_ctaRetIIBBP1;
         private System.Windows.Forms.TextBox par_ctaRetIIBBP;
-        private System.Windows.Forms.CheckBox par_ctaRetIVAP3;
         private System.Windows.Forms.Button par_ctaRetIVAP2;
         private System.Windows.Forms.TextBox par_ctaRetIVAP1;
         private System.Windows.Forms.TextBox par_ctaRetIVAP;
-        private System.Windows.Forms.CheckBox par_ctaIVA27D3;
         private System.Windows.Forms.Button par_ctaIVA27D2;
         private System.Windows.Forms.TextBox par_ctaIVA27D1;
         private System.Windows.Forms.TextBox par_ctaIVA27D;
-        private System.Windows.Forms.CheckBox par_ctaIVA10D3;
         private System.Windows.Forms.Button par_ctaIVA10D2;
         private System.Windows.Forms.TextBox par_ctaIVA10D1;
         private System.Windows.Forms.TextBox par_ctaIVA10D;
-        private System.Windows.Forms.CheckBox par_ctaIVA21D3;
         private System.Windows.Forms.Button par_ctaIVA21D2;
         private System.Windows.Forms.TextBox par_ctaIVA21D1;
         private System.Windows.Forms.TextBox par_ctaIVA21D;
-        private System.Windows.Forms.CheckBox par_ctaDeud3;
         private System.Windows.Forms.Button par_ctaDeud2;
         private System.Windows.Forms.TextBox par_ctaDeud1;
         private System.Windows.Forms.TextBox par_ctaDeud;
-        private System.Windows.Forms.CheckBox par_NetoVtaArti3;
         private System.Windows.Forms.Button par_NetoVtaArti2;
         private System.Windows.Forms.TextBox par_NetoVtaArti1;
         private System.Windows.Forms.TextBox par_NetoVtaArti;
-        private System.Windows.Forms.CheckBox par_ctaProvGral3;
         private System.Windows.Forms.Button par_ctaProvGral2;
         private System.Windows.Forms.TextBox par_ctaProvGral1;
         private System.Windows.Forms.TextBox par_ctaProvGral;
-        private System.Windows.Forms.CheckBox par_ctaProv3;
         private System.Windows.Forms.Button par_ctaProv2;
         private System.Windows.Forms.TextBox par_ctaProv1;
         private System.Windows.Forms.TextBox par_ctaProv;
-        private System.Windows.Forms.CheckBox par_ctaDifCambioVta3;
         private System.Windows.Forms.Button par_ctaDifCambioVta2;
         private System.Windows.Forms.TextBox par_ctaDifCambioVta1;
         private System.Windows.Forms.TextBox par_ctaDifCambioVta;
-        private System.Windows.Forms.CheckBox par_ctaRetBFP3;
         private System.Windows.Forms.Button par_ctaRetBFP2;
         private System.Windows.Forms.TextBox par_ctaRetBFP1;
         private System.Windows.Forms.TextBox par_ctaRetBFP;
-        private System.Windows.Forms.CheckBox par_ctaRetBF3;
         private System.Windows.Forms.Button par_ctaRetBF2;
         private System.Windows.Forms.TextBox par_ctaRetBF1;
         private System.Windows.Forms.TextBox par_ctaRetBF;
-        private System.Windows.Forms.CheckBox par_ctaRedondeo3;
         private System.Windows.Forms.Button par_ctaRedondeo2;
         private System.Windows.Forms.TextBox par_ctaRedondeo1;
         private System.Windows.Forms.TextBox par_ctaRedondeo;
-        private System.Windows.Forms.CheckBox par_NetoVtaServ3;
         private System.Windows.Forms.Button par_NetoVtaServ2;
         private System.Windows.Forms.TextBox par_NetoVtaServ1;
         private System.Windows.Forms.TextBox par_NetoVtaServ;
-        private System.Windows.Forms.CheckBox par_ctaAnticipoCpa3;
         private System.Windows.Forms.Button par_ctaAnticipoCpa2;
         private System.Windows.Forms.TextBox par_ctaAnticipoCpa1;
         private System.Windows.Forms.TextBox par_ctaAnticipoCpa;
-        private System.Windows.Forms.CheckBox par_ctaAnticipoVta3;
         private System.Windows.Forms.Button par_ctaAnticipoVta2;
         private System.Windows.Forms.TextBox par_ctaAnticipoVta1;
         private System.Windows.Forms.TextBox par_ctaAnticipoVta;
-        private System.Windows.Forms.CheckBox par_ctaRecargo3;
         private System.Windows.Forms.Button par_ctaRecargo2;
         private System.Windows.Forms.TextBox par_ctaRecargo1;
         private System.Windows.Forms.TextBox par_ctaRecargo;
-        private System.Windows.Forms.CheckBox par_ctaAjusteInf3;
         private System.Windows.Forms.Button par_ctaAjusteInf2;
         private System.Windows.Forms.TextBox par_ctaAjusteInf1;
         private System.Windows.Forms.TextBox par_ctaAjusteInf;
-        private System.Windows.Forms.CheckBox par_ctaCIIVA3;
         private System.Windows.Forms.Button par_ctaCIIVA2;
         private System.Windows.Forms.TextBox par_ctaCIIVA1;
         private System.Windows.Forms.TextBox par_ctaCIIVA;
-        private System.Windows.Forms.CheckBox par_ctaCINeto3;
         private System.Windows.Forms.Button par_ctaCINeto2;
         private System.Windows.Forms.TextBox par_ctaCINeto1;
         private System.Windows.Forms.TextBox par_ctaCINeto;
-        private System.Windows.Forms.Button btnAceptar;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaIVA213;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaIVA103;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaIVA273;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaImpInt3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRetIVA3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRetIIBB3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRetGan3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRetSUSS3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaPerIVA3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaPerIIBB3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaDeud3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaPerGan3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaOtrosImp3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaProvGral3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaIVA21D3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_NetoVtaArti3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaProv3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaIVA10D3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaIVA27D3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRetIIBBP3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRetIVAP3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRetGanP3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRetSUSSP3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaDescuento3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRecargo3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_NetoVtaServ3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaAnticipoCpa3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRetBF3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRedondeo3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaRetBFP3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaAnticipoVta3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaDifCambioVta3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaCINeto3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaCIIVA3;
+        private Bunifu.UI.WinForms.BunifuCheckBox par_ctaAjusteInf3;
+        private RJCodeAdvance.RJControls.RJButton btnAceptar;
     }
 }

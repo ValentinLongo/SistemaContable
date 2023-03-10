@@ -160,7 +160,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Parametros_Contables
         {
             foreach (Control Ctrl in this.Controls)
             {
-                if(Ctrl is TextBox)
+                if (Ctrl is TextBox)
                 {
                     try
                     {

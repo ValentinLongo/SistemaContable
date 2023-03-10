@@ -108,7 +108,7 @@
             this.lblLocalidad.AutoSize = true;
             this.lblLocalidad.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalidad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblLocalidad.Location = new System.Drawing.Point(93, 157);
+            this.lblLocalidad.Location = new System.Drawing.Point(93, 163);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(64, 17);
             this.lblLocalidad.TabIndex = 3;
@@ -171,23 +171,32 @@
             // 
             // tbLocalidad3
             // 
-            this.tbLocalidad3.Location = new System.Drawing.Point(239, 156);
+            this.tbLocalidad3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.tbLocalidad3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLocalidad3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLocalidad3.Location = new System.Drawing.Point(239, 165);
             this.tbLocalidad3.Name = "tbLocalidad3";
-            this.tbLocalidad3.Size = new System.Drawing.Size(160, 20);
+            this.tbLocalidad3.Size = new System.Drawing.Size(160, 15);
             this.tbLocalidad3.TabIndex = 14;
             // 
             // tbLocalidad1
             // 
-            this.tbLocalidad1.Location = new System.Drawing.Point(162, 156);
+            this.tbLocalidad1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.tbLocalidad1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLocalidad1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLocalidad1.Location = new System.Drawing.Point(162, 165);
             this.tbLocalidad1.Name = "tbLocalidad1";
-            this.tbLocalidad1.Size = new System.Drawing.Size(41, 20);
+            this.tbLocalidad1.Size = new System.Drawing.Size(41, 15);
             this.tbLocalidad1.TabIndex = 18;
             // 
             // tbLocalidad2
             // 
-            this.tbLocalidad2.Location = new System.Drawing.Point(209, 156);
+            this.tbLocalidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.tbLocalidad2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLocalidad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLocalidad2.Location = new System.Drawing.Point(209, 165);
             this.tbLocalidad2.Name = "tbLocalidad2";
-            this.tbLocalidad2.Size = new System.Drawing.Size(24, 20);
+            this.tbLocalidad2.Size = new System.Drawing.Size(24, 15);
             this.tbLocalidad2.TabIndex = 19;
             // 
             // btnBusLoc
@@ -196,7 +205,7 @@
             this.btnBusLoc.FlatAppearance.BorderSize = 0;
             this.btnBusLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBusLoc.Image = global::SistemaContable.Properties.Resources.lupa;
-            this.btnBusLoc.Location = new System.Drawing.Point(405, 150);
+            this.btnBusLoc.Location = new System.Drawing.Point(405, 156);
             this.btnBusLoc.Name = "btnBusLoc";
             this.btnBusLoc.Size = new System.Drawing.Size(32, 31);
             this.btnBusLoc.TabIndex = 20;
@@ -205,7 +214,7 @@
             // 
             // dtFechaNacimiento
             // 
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(171, 406);
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(171, 407);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(235, 20);
             this.dtFechaNacimiento.TabIndex = 24;
@@ -242,7 +251,7 @@
             this.btnConfirmar.BorderSize = 0;
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfirmar.Location = new System.Drawing.Point(162, 497);
@@ -292,7 +301,7 @@
             this.cbActividad.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActividad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbActividad.FormattingEnabled = true;
-            this.cbActividad.Location = new System.Drawing.Point(170, 444);
+            this.cbActividad.Location = new System.Drawing.Point(170, 446);
             this.cbActividad.Name = "cbActividad";
             this.cbActividad.Size = new System.Drawing.Size(236, 25);
             this.cbActividad.TabIndex = 116;

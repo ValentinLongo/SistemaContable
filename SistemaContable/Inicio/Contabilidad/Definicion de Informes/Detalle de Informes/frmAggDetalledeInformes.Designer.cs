@@ -138,11 +138,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(62, 59);
+            this.label2.Location = new System.Drawing.Point(75, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 16);
+            this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 81;
             this.label2.Text = "Cuenta:";
             // 
@@ -150,11 +150,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(62, 86);
+            this.label1.Location = new System.Drawing.Point(45, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 82;
             this.label1.Text = "Descripción:";
             // 
@@ -162,11 +162,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(62, 119);
+            this.label3.Location = new System.Drawing.Point(6, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 16);
+            this.label3.Size = new System.Drawing.Size(126, 17);
             this.label3.TabIndex = 83;
             this.label3.Text = "Centro de Costos:";
             // 
@@ -174,18 +174,18 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(62, 154);
+            this.label4.Location = new System.Drawing.Point(79, 151);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 16);
+            this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 84;
             this.label4.Text = "Orden:";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(126, 74);
+            this.panel3.Location = new System.Drawing.Point(139, 56);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(229, 1);
             this.panel3.TabIndex = 86;
@@ -196,7 +196,7 @@
             this.txtCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCuenta.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCuenta.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtCuenta.Location = new System.Drawing.Point(126, 56);
+            this.txtCuenta.Location = new System.Drawing.Point(139, 38);
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.Size = new System.Drawing.Size(229, 19);
             this.txtCuenta.TabIndex = 85;
@@ -229,7 +229,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(156, 86);
+            this.textBox1.Location = new System.Drawing.Point(139, 77);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(229, 19);
             this.textBox1.TabIndex = 88;
@@ -238,7 +238,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(156, 102);
+            this.panel4.Location = new System.Drawing.Point(139, 93);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 1);
             this.panel4.TabIndex = 91;
@@ -246,7 +246,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(120, 169);
+            this.panel5.Location = new System.Drawing.Point(139, 169);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(74, 1);
             this.panel5.TabIndex = 93;
@@ -257,7 +257,7 @@
             this.txtOrden.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtOrden.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOrden.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtOrden.Location = new System.Drawing.Point(120, 151);
+            this.txtOrden.Location = new System.Drawing.Point(139, 151);
             this.txtOrden.Name = "txtOrden";
             this.txtOrden.Size = new System.Drawing.Size(74, 19);
             this.txtOrden.TabIndex = 92;
@@ -269,7 +269,7 @@
             this.txtDescri.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescri.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescri.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtDescri.Location = new System.Drawing.Point(156, 81);
+            this.txtDescri.Location = new System.Drawing.Point(139, 72);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(229, 19);
             this.txtDescri.TabIndex = 96;
@@ -282,7 +282,7 @@
             this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsulta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConsulta.Image = global::SistemaContable.Properties.Resources.binocular2;
-            this.btnConsulta.Location = new System.Drawing.Point(362, 49);
+            this.btnConsulta.Location = new System.Drawing.Point(374, 35);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(23, 26);
             this.btnConsulta.TabIndex = 97;
@@ -296,7 +296,7 @@
             this.cbCentroCostos.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCentroCostos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbCentroCostos.FormattingEnabled = true;
-            this.cbCentroCostos.Location = new System.Drawing.Point(189, 116);
+            this.cbCentroCostos.Location = new System.Drawing.Point(139, 110);
             this.cbCentroCostos.Name = "cbCentroCostos";
             this.cbCentroCostos.Size = new System.Drawing.Size(229, 25);
             this.cbCentroCostos.TabIndex = 98;

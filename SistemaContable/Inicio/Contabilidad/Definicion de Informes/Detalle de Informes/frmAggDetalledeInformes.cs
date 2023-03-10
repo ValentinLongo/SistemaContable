@@ -52,6 +52,5 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             }
             this.idCuenta = Cuenta;
         }
-        
     }
 }

@@ -69,7 +69,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(25, 76);
+            this.label2.Location = new System.Drawing.Point(25, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(126, 95);
+            this.label3.Location = new System.Drawing.Point(126, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 13);
             this.label3.TabIndex = 5;
@@ -175,7 +175,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(104, 91);
+            this.panel2.Location = new System.Drawing.Point(104, 83);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(182, 1);
             this.panel2.TabIndex = 98;
@@ -186,7 +186,7 @@
             this.tbCoeficiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbCoeficiente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCoeficiente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCoeficiente.Location = new System.Drawing.Point(105, 76);
+            this.tbCoeficiente.Location = new System.Drawing.Point(105, 68);
             this.tbCoeficiente.Name = "tbCoeficiente";
             this.tbCoeficiente.Size = new System.Drawing.Size(182, 13);
             this.tbCoeficiente.TabIndex = 97;
@@ -202,12 +202,12 @@
             this.btnConfirmar.BorderSize = 0;
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmar.Location = new System.Drawing.Point(102, 125);
+            this.btnConfirmar.Location = new System.Drawing.Point(99, 118);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(122, 28);
+            this.btnConfirmar.Size = new System.Drawing.Size(130, 34);
             this.btnConfirmar.TabIndex = 99;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;

@@ -174,7 +174,7 @@
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmar.Location = new System.Drawing.Point(490, 46);
+            this.btnConfirmar.Location = new System.Drawing.Point(490, 94);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(125, 31);
             this.btnConfirmar.TabIndex = 124;
@@ -196,7 +196,7 @@
             this.AgregarTodo.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgregarTodo.ForeColor = System.Drawing.Color.White;
             this.AgregarTodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AgregarTodo.Location = new System.Drawing.Point(490, 95);
+            this.AgregarTodo.Location = new System.Drawing.Point(490, 241);
             this.AgregarTodo.Name = "AgregarTodo";
             this.AgregarTodo.Size = new System.Drawing.Size(125, 31);
             this.AgregarTodo.TabIndex = 125;
@@ -218,7 +218,7 @@
             this.QuitarTodo.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuitarTodo.ForeColor = System.Drawing.Color.White;
             this.QuitarTodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.QuitarTodo.Location = new System.Drawing.Point(490, 132);
+            this.QuitarTodo.Location = new System.Drawing.Point(490, 278);
             this.QuitarTodo.Name = "QuitarTodo";
             this.QuitarTodo.Size = new System.Drawing.Size(125, 31);
             this.QuitarTodo.TabIndex = 126;

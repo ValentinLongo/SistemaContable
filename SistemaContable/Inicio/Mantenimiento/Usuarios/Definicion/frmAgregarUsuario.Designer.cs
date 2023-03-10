@@ -92,7 +92,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(170, 24);
+            this.label3.Location = new System.Drawing.Point(170, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(206, 24);
             this.label3.TabIndex = 2;
@@ -103,7 +103,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(85, 88);
+            this.label4.Location = new System.Drawing.Point(90, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 3;
@@ -125,7 +125,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(85, 154);
+            this.label6.Location = new System.Drawing.Point(85, 157);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 16);
             this.label6.TabIndex = 5;
@@ -136,7 +136,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(5, 187);
+            this.label7.Location = new System.Drawing.Point(5, 194);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(146, 16);
             this.label7.TabIndex = 6;
@@ -147,7 +147,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(99, 224);
+            this.label8.Location = new System.Drawing.Point(104, 224);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 16);
             this.label8.TabIndex = 7;
@@ -158,7 +158,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(101, 253);
+            this.label9.Location = new System.Drawing.Point(106, 254);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 16);
             this.label9.TabIndex = 8;
@@ -169,7 +169,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(93, 286);
+            this.label10.Location = new System.Drawing.Point(98, 286);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 16);
             this.label10.TabIndex = 9;
@@ -191,7 +191,7 @@
             this.tbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDireccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDireccion.Location = new System.Drawing.Point(157, 124);
+            this.tbDireccion.Location = new System.Drawing.Point(158, 124);
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(252, 13);
             this.tbDireccion.TabIndex = 1;
@@ -202,7 +202,7 @@
             this.tbTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTelefono.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbTelefono.Location = new System.Drawing.Point(156, 160);
+            this.tbTelefono.Location = new System.Drawing.Point(157, 160);
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(252, 13);
             this.tbTelefono.TabIndex = 2;
@@ -211,7 +211,7 @@
             // dtFechaNachimiento
             // 
             this.dtFechaNachimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaNachimiento.Location = new System.Drawing.Point(157, 187);
+            this.dtFechaNachimiento.Location = new System.Drawing.Point(157, 193);
             this.dtFechaNachimiento.Name = "dtFechaNachimiento";
             this.dtFechaNachimiento.Size = new System.Drawing.Size(133, 20);
             this.dtFechaNachimiento.TabIndex = 13;
@@ -305,7 +305,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(84, 319);
+            this.label12.Location = new System.Drawing.Point(89, 319);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 16);
             this.label12.TabIndex = 45;
@@ -324,7 +324,7 @@
             this.tbVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tbVendedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbVendedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbVendedor.Location = new System.Drawing.Point(154, 354);
+            this.tbVendedor.Location = new System.Drawing.Point(155, 353);
             this.tbVendedor.Name = "tbVendedor";
             this.tbVendedor.Size = new System.Drawing.Size(252, 13);
             this.tbVendedor.TabIndex = 4;
@@ -352,7 +352,7 @@
             this.btnAceptar.BorderSize = 0;
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.Location = new System.Drawing.Point(191, 435);
@@ -453,10 +453,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label13.Location = new System.Drawing.Point(171, 397);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(203, 13);
+            this.label13.Size = new System.Drawing.Size(255, 16);
             this.label13.TabIndex = 62;
             this.label13.Text = "El usuario no posee un vendedor definido";
             // 
@@ -478,7 +479,7 @@
             this.CambioCheck.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CambioCheck.Cursor = System.Windows.Forms.Cursors.Default;
             this.CambioCheck.CustomCheckmarkImage = null;
-            this.CambioCheck.Location = new System.Drawing.Point(151, 393);
+            this.CambioCheck.Location = new System.Drawing.Point(151, 396);
             this.CambioCheck.MinimumSize = new System.Drawing.Size(17, 17);
             this.CambioCheck.Name = "CambioCheck";
             this.CambioCheck.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));

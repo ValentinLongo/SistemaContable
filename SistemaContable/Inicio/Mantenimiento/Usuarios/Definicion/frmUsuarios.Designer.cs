@@ -64,11 +64,11 @@
             this.Login,
             this.Perfil,
             this.Telefono});
-            this.dgvUsuarios.Location = new System.Drawing.Point(12, 89);
+            this.dgvUsuarios.Location = new System.Drawing.Point(18, 89);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(949, 540);
+            this.dgvUsuarios.Size = new System.Drawing.Size(874, 540);
             this.dgvUsuarios.TabIndex = 7;
             this.dgvUsuarios.TabStop = false;
             this.dgvUsuarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
@@ -113,12 +113,12 @@
             this.btnAgregar.BorderSize = 0;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(968, 89);
+            this.btnAgregar.Location = new System.Drawing.Point(898, 89);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(154, 44);
+            this.btnAgregar.Size = new System.Drawing.Size(150, 46);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
@@ -135,12 +135,12 @@
             this.btnImprimir.BorderSize = 0;
             this.btnImprimir.FlatAppearance.BorderSize = 0;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(968, 585);
+            this.btnImprimir.Location = new System.Drawing.Point(899, 585);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(154, 44);
+            this.btnImprimir.Size = new System.Drawing.Size(149, 44);
             this.btnImprimir.TabIndex = 6;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
@@ -157,12 +157,12 @@
             this.btnDefinirCajas.BorderSize = 0;
             this.btnDefinirCajas.FlatAppearance.BorderSize = 0;
             this.btnDefinirCajas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDefinirCajas.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDefinirCajas.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDefinirCajas.ForeColor = System.Drawing.Color.White;
             this.btnDefinirCajas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDefinirCajas.Location = new System.Drawing.Point(968, 238);
+            this.btnDefinirCajas.Location = new System.Drawing.Point(899, 239);
             this.btnDefinirCajas.Name = "btnDefinirCajas";
-            this.btnDefinirCajas.Size = new System.Drawing.Size(154, 44);
+            this.btnDefinirCajas.Size = new System.Drawing.Size(149, 44);
             this.btnDefinirCajas.TabIndex = 5;
             this.btnDefinirCajas.Text = "Definir Cajas";
             this.btnDefinirCajas.TextColor = System.Drawing.Color.White;
@@ -179,12 +179,12 @@
             this.btnModificar.BorderSize = 0;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(968, 163);
+            this.btnModificar.Location = new System.Drawing.Point(899, 161);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(154, 44);
+            this.btnModificar.Size = new System.Drawing.Size(149, 44);
             this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
@@ -197,7 +197,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(22, 5);
+            this.label4.Location = new System.Drawing.Point(25, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 53;
@@ -206,10 +206,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(813, 46);
+            this.label5.Location = new System.Drawing.Point(719, 45);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 13);
+            this.label5.Size = new System.Drawing.Size(166, 16);
             this.label5.TabIndex = 62;
             this.label5.Text = "Visualizar usuarios Activos";
             // 
@@ -231,7 +232,7 @@
             this.CheckUsuario.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckUsuario.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckUsuario.CustomCheckmarkImage = null;
-            this.CheckUsuario.Location = new System.Drawing.Point(790, 43);
+            this.CheckUsuario.Location = new System.Drawing.Point(693, 44);
             this.CheckUsuario.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckUsuario.Name = "CheckUsuario";
             this.CheckUsuario.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -277,7 +278,7 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Codigo",
             "Nombre"});
-            this.cbBusqueda.Location = new System.Drawing.Point(34, 36);
+            this.cbBusqueda.Location = new System.Drawing.Point(42, 39);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(169, 25);
             this.cbBusqueda.TabIndex = 63;
@@ -286,9 +287,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(211, 58);
+            this.panel2.Location = new System.Drawing.Point(217, 63);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(177, 1);
+            this.panel2.Size = new System.Drawing.Size(228, 1);
             this.panel2.TabIndex = 65;
             // 
             // txtbusqueda
@@ -297,9 +298,9 @@
             this.txtbusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtbusqueda.Location = new System.Drawing.Point(210, 43);
+            this.txtbusqueda.Location = new System.Drawing.Point(217, 46);
             this.txtbusqueda.Name = "txtbusqueda";
-            this.txtbusqueda.Size = new System.Drawing.Size(177, 15);
+            this.txtbusqueda.Size = new System.Drawing.Size(228, 15);
             this.txtbusqueda.TabIndex = 64;
             this.txtbusqueda.Tag = "00000";
             this.txtbusqueda.TextChanged += new System.EventHandler(this.txtbusqueda_TextChanged);
@@ -322,7 +323,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(404, 42);
+            this.CheckInicio.Location = new System.Drawing.Point(456, 44);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -360,10 +361,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(427, 44);
+            this.label1.Location = new System.Drawing.Point(479, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 67;
             this.label1.Text = "Inicio";
             // 
@@ -376,11 +378,11 @@
             this.ShapeBusqueda.BorderThickness = 1;
             this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.FillShape = true;
-            this.ShapeBusqueda.Location = new System.Drawing.Point(12, 14);
+            this.ShapeBusqueda.Location = new System.Drawing.Point(18, 14);
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
-            this.ShapeBusqueda.Size = new System.Drawing.Size(949, 69);
+            this.ShapeBusqueda.Size = new System.Drawing.Size(874, 69);
             this.ShapeBusqueda.TabIndex = 68;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
@@ -389,7 +391,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1129, 650);
+            this.ClientSize = new System.Drawing.Size(1060, 650);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CheckInicio);
             this.Controls.Add(this.panel2);

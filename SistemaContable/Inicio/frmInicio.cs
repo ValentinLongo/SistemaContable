@@ -176,7 +176,7 @@ namespace SistemaContable
         private void tsbMensajesInternos_Click(object sender, EventArgs e)
         {
             frmComunicacionInterna frm = new frmComunicacionInterna(lblnuevomensaje);
-            Negocio.FGenerales.Mostrarfrm(frm, tsbMensajesInternos.Tag.ToString());
+            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMensajesInternos.Tag.ToString());
         }
 
         private void tsbCalculadora_Click(object sender, EventArgs e)
@@ -257,7 +257,7 @@ namespace SistemaContable
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            Menu_Ayuda.Show(btnAyuda, btnAyuda.Width, 0);
+            Menu_Ayuda.Show(btnArchivos, btnArchivos.Width, 0);
             btnAyuda.Visible = false;
             btnAyuda2.Location = btnAyuda.Location;
             btnAyuda2.Size = btnAyuda.Size;
@@ -560,7 +560,7 @@ namespace SistemaContable
         private void comunicaciónInterna_Click(object sender, EventArgs e)
         {
             frmComunicacionInterna frm = new frmComunicacionInterna(lblnuevomensaje);
-            Negocio.FGenerales.Mostrarfrm(frm, comunicaciónInterna.Tag.ToString());
+            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMensajesInternos.Tag.ToString());
         }
         private void notasYObservaciones_Click(object sender, EventArgs e)
         {

@@ -75,15 +75,15 @@
             this.btnVer2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnArchivos2 = new RJCodeAdvance.RJControls.RJButton();
             this.PanelMenu = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pContabilidad2 = new System.Windows.Forms.Panel();
+            this.pVer2 = new System.Windows.Forms.Panel();
             this.pAyuda2 = new System.Windows.Forms.Panel();
             this.pMantenimiento2 = new System.Windows.Forms.Panel();
             this.pArchivos2 = new System.Windows.Forms.Panel();
             this.pAyuda = new System.Windows.Forms.Panel();
             this.pMantenimiento = new System.Windows.Forms.Panel();
             this.pContabilidad = new System.Windows.Forms.Panel();
-            this.pContabilidad2 = new System.Windows.Forms.Panel();
             this.pVer = new System.Windows.Forms.Panel();
-            this.pVer2 = new System.Windows.Forms.Panel();
             this.pArchivos = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -144,6 +144,7 @@
             this.agenda = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrosContables = new System.Windows.Forms.ToolStripMenuItem();
             this.configurarImpresora = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
             this.toolStripADs.SuspendLayout();
             this.panel5.SuspendLayout();
             this.PanelMenu.SuspendLayout();
@@ -615,6 +616,7 @@
             this.PanelMenu.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.PanelMenu, "PanelMenu");
             this.PanelMenu.BorderRadius = 0;
+            this.PanelMenu.Controls.Add(this.label2);
             this.PanelMenu.Controls.Add(this.pContabilidad2);
             this.PanelMenu.Controls.Add(this.pVer2);
             this.PanelMenu.Controls.Add(this.pAyuda2);
@@ -643,6 +645,18 @@
             this.PanelMenu.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Quality = 10;
+            // 
+            // pContabilidad2
+            // 
+            this.pContabilidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.pContabilidad2, "pContabilidad2");
+            this.pContabilidad2.Name = "pContabilidad2";
+            // 
+            // pVer2
+            // 
+            this.pVer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.pVer2, "pVer2");
+            this.pVer2.Name = "pVer2";
             // 
             // pAyuda2
             // 
@@ -680,23 +694,11 @@
             resources.ApplyResources(this.pContabilidad, "pContabilidad");
             this.pContabilidad.Name = "pContabilidad";
             // 
-            // pContabilidad2
-            // 
-            this.pContabilidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.pContabilidad2, "pContabilidad2");
-            this.pContabilidad2.Name = "pContabilidad2";
-            // 
             // pVer
             // 
             this.pVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.pVer, "pVer");
             this.pVer.Name = "pVer";
-            // 
-            // pVer2
-            // 
-            this.pVer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.pVer2, "pVer2");
-            this.pVer2.Name = "pVer2";
             // 
             // pArchivos
             // 
@@ -1251,6 +1253,12 @@
             this.configurarImpresora.Tag = "4014";
             this.configurarImpresora.Click += new System.EventHandler(this.configurarImpresora_Click);
             // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Name = "label2";
+            // 
             // frmInicio
             // 
             resources.ApplyResources(this, "$this");
@@ -1409,5 +1417,6 @@
         private System.Windows.Forms.Panel pArchivos2;
         private System.Windows.Forms.Panel pContabilidad2;
         private System.Windows.Forms.Panel pVer2;
+        private System.Windows.Forms.Label label2;
     }
 }
