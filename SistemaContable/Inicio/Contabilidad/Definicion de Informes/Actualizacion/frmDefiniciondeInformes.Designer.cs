@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDefiniciondeInformes));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.dgvDefiniciondeInformes = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.btnActualizar = new RJCodeAdvance.RJControls.RJButton();
             this.btnEliminar = new RJCodeAdvance.RJControls.RJButton();
@@ -47,9 +47,12 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.dgvAux = new System.Windows.Forms.DataGridView();
+            this.dgvDefiniciondeInformes = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDefiniciondeInformes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDefiniciondeInformes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -137,34 +140,6 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
-            // 
-            // dgvDefiniciondeInformes
-            // 
-            this.dgvDefiniciondeInformes.AllowUserToAddRows = false;
-            this.dgvDefiniciondeInformes.AllowUserToDeleteRows = false;
-            this.dgvDefiniciondeInformes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDefiniciondeInformes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDefiniciondeInformes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Descripcion});
-            this.dgvDefiniciondeInformes.Location = new System.Drawing.Point(14, 36);
-            this.dgvDefiniciondeInformes.Name = "dgvDefiniciondeInformes";
-            this.dgvDefiniciondeInformes.ReadOnly = true;
-            this.dgvDefiniciondeInformes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDefiniciondeInformes.Size = new System.Drawing.Size(621, 357);
-            this.dgvDefiniciondeInformes.TabIndex = 62;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
             // 
             // btnImprimir
             // 
@@ -409,12 +384,75 @@
             this.dgvAux.TabIndex = 95;
             this.dgvAux.TabStop = false;
             // 
+            // dgvDefiniciondeInformes
+            // 
+            this.dgvDefiniciondeInformes.AllowUserToAddRows = false;
+            this.dgvDefiniciondeInformes.AllowUserToDeleteRows = false;
+            this.dgvDefiniciondeInformes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvDefiniciondeInformes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDefiniciondeInformes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.dgvDefiniciondeInformes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDefiniciondeInformes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDefiniciondeInformes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDefiniciondeInformes.ColumnHeadersHeight = 25;
+            this.dgvDefiniciondeInformes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvDefiniciondeInformes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDefiniciondeInformes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDefiniciondeInformes.EnableHeadersVisualStyles = false;
+            this.dgvDefiniciondeInformes.GridColor = System.Drawing.Color.White;
+            this.dgvDefiniciondeInformes.Location = new System.Drawing.Point(14, 36);
+            this.dgvDefiniciondeInformes.Name = "dgvDefiniciondeInformes";
+            this.dgvDefiniciondeInformes.ReadOnly = true;
+            this.dgvDefiniciondeInformes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDefiniciondeInformes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDefiniciondeInformes.RowHeadersVisible = false;
+            this.dgvDefiniciondeInformes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDefiniciondeInformes.Size = new System.Drawing.Size(621, 355);
+            this.dgvDefiniciondeInformes.TabIndex = 96;
+            this.dgvDefiniciondeInformes.TabStop = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Código";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // frmDefiniciondeInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvDefiniciondeInformes);
             this.Controls.Add(this.dgvAux);
             this.Controls.Add(this.cbBusqueda);
             this.Controls.Add(this.label13);
@@ -427,7 +465,6 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dgvDefiniciondeInformes);
             this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDefiniciondeInformes";
@@ -435,8 +472,8 @@
             this.Text = "frmDefiniciondeInformes";
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDefiniciondeInformes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDefiniciondeInformes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,7 +484,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
-        private System.Windows.Forms.DataGridView dgvDefiniciondeInformes;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private RJCodeAdvance.RJControls.RJButton btnActualizar;
         private RJCodeAdvance.RJControls.RJButton btnEliminar;
@@ -460,7 +496,8 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.DataGridView dgvAux;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridView dgvDefiniciondeInformes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

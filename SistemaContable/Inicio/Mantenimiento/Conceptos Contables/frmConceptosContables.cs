@@ -59,7 +59,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             CargarDGV("");
         }
 
-        private void Click(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvConceptosContables_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;

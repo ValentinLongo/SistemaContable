@@ -61,7 +61,7 @@ namespace SistemaContable.Parametrizacion_Permisos
             //dgvPEspeciales.DataSource = data.Tables[0];
         }
 
-        private void dgvPEspeciales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvPEspeciales_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             string codigo2 = (string)dgvPEspeciales.Rows[e.RowIndex].Cells[0].Value; //codigo2 = pxu_usuario de la tabla permisosxusu
             bool estado = (bool)dgvPEspeciales.Rows[e.RowIndex].Cells[3].Value;
@@ -74,10 +74,10 @@ namespace SistemaContable.Parametrizacion_Permisos
                 AccesoBase.InsertUpdateDatos($"UPDATE PermisosxPerfil SET pxp_activo = '1' WHERE pxp_perfil = '{codigo}' AND pxp_codigo = '{codigo2}' AND pxp_sistema = 'CO'");
             }
             dgvPEspeciales.Rows.Clear();
-            cargarDGV("","","");
+            cargarDGV("", "", "");
         }
 
-        private void dgvPEspeciales_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        private void dgvPEspeciales_CurrentCellDirtyStateChanged_1(object sender, EventArgs e)
         {
             if (dgvPEspeciales.IsCurrentCellDirty)
             {

@@ -33,11 +33,6 @@ namespace SistemaContable.Usuarios
             dgvVendedores.DataSource = ds.Tables[0];
         }
 
-        private void Click(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            indice = e.RowIndex;
-        }
-
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             CodigoVendedor = Convert.ToInt32(dgvVendedores.Rows[indice].Cells[0].Value.ToString());
@@ -45,6 +40,12 @@ namespace SistemaContable.Usuarios
             MessageBox.Show("Vendedor Seleccionado");
             this.Close();
         }
+
+        private void dgvVendedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            indice = e.RowIndex;
+        }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

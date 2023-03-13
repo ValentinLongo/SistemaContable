@@ -64,30 +64,6 @@ namespace SistemaContable.Parametrizacion_Permisos
             //dgvPEspeciales.DataSource = data.Tables[0];
         }
 
-        private void dgvPEspeciales_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            string codigo2 = (string)dgvPEspeciales.Rows[e.RowIndex].Cells[0].Value; //codigo2 = pxu_usuario de la tabla permisosxusu
-            bool estado = (bool)dgvPEspeciales.Rows[e.RowIndex].Cells[3].Value;
-            if (estado)
-            {
-                AccesoBase.InsertUpdateDatos($"UPDATE PermisosxUsu SET pxu_activo = '0' WHERE pxu_usuario = '{codigo}' AND pxu_codigo = '{codigo2}'  AND pxu_sistema = 'CO'");
-            }
-            else
-            {
-                AccesoBase.InsertUpdateDatos($"UPDATE PermisosxUsu SET pxu_activo = '1' WHERE pxu_usuario = '{codigo}' AND pxu_codigo = '{codigo2}' AND pxu_sistema = 'CO'");
-            }
-            dgvPEspeciales.Rows.Clear();
-            cargarDGV("","","");
-        }
-
-        private void dgvPEspeciales_CurrentCellDirtyStateChanged_1(object sender, EventArgs e)
-        {
-            if (dgvPEspeciales.IsCurrentCellDirty)
-            {
-                dgvPEspeciales.CommitEdit(DataGridViewDataErrorContexts.Commit);
-            }
-        }
-
         private void cbModulo_SelectedIndexChanged(object sender, EventArgs e)
         {
             string modulobusqueda = cbModulo.Text;
@@ -125,6 +101,30 @@ namespace SistemaContable.Parametrizacion_Permisos
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvPEspeciales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string codigo2 = (string)dgvPEspeciales.Rows[e.RowIndex].Cells[0].Value; //codigo2 = pxu_usuario de la tabla permisosxusu
+            bool estado = (bool)dgvPEspeciales.Rows[e.RowIndex].Cells[3].Value;
+            if (estado)
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE PermisosxUsu SET pxu_activo = '0' WHERE pxu_usuario = '{codigo}' AND pxu_codigo = '{codigo2}'  AND pxu_sistema = 'CO'");
+            }
+            else
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE PermisosxUsu SET pxu_activo = '1' WHERE pxu_usuario = '{codigo}' AND pxu_codigo = '{codigo2}' AND pxu_sistema = 'CO'");
+            }
+            dgvPEspeciales.Rows.Clear();
+            cargarDGV("", "", "");
+        }
+
+        private void dgvPEspeciales_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (dgvPEspeciales.IsCurrentCellDirty)
+            {
+                dgvPEspeciales.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
         }
 
         //BARRA DE CONTROL

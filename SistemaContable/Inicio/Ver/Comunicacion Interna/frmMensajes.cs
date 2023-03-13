@@ -36,25 +36,6 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
             }
         }
 
-        private void dgvUsuarios_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int seleccionado = dgvUsuarios.CurrentCell.RowIndex;
-
-            if (seleccionado != -1)
-            {
-                bool checkeado = Convert.ToBoolean(dgvUsuarios.Rows[seleccionado].Cells["ColumnaCheck"].Value);
-
-                if (checkeado)
-                {
-                    dgvUsuarios.Rows[seleccionado].Cells["ColumnaCheck"].Value = false;
-                }
-                else
-                {
-                    dgvUsuarios.Rows[seleccionado].Cells["ColumnaCheck"].Value = true;
-                }
-            }
-        }
-
         private void AgregarTodo_Click(object sender, EventArgs e)
         {
             dgvUsuarios.Rows.Clear();
@@ -87,6 +68,31 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
             this.Close();
         }
 
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string busqueda = Negocio.FGenerales.Busqueda(dgvUsuarios,txtBusqueda.Text,CheckInicio,1,"usu_nombre");
+            CargarDGV(false, busqueda);
+        }
+
+        private void dgvUsuarios_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int seleccionado = dgvUsuarios.CurrentCell.RowIndex;
+
+            if (seleccionado != -1)
+            {
+                bool checkeado = Convert.ToBoolean(dgvUsuarios.Rows[seleccionado].Cells["ColumnaCheck"].Value);
+
+                if (checkeado)
+                {
+                    dgvUsuarios.Rows[seleccionado].Cells["ColumnaCheck"].Value = false;
+                }
+                else
+                {
+                    dgvUsuarios.Rows[seleccionado].Cells["ColumnaCheck"].Value = true;
+                }
+            }
+        }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -96,12 +102,6 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
-        {
-            string busqueda = Negocio.FGenerales.Busqueda(dgvUsuarios,txtBusqueda.Text,CheckInicio,1,"usu_nombre");
-            CargarDGV(false, busqueda);
         }
     }
 }

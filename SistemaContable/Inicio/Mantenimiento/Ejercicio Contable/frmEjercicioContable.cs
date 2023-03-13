@@ -58,22 +58,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             cargarDGV(txtbusqueda);
         }
 
-        private void dgvEjercicioContable_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string codigo = (string)dgvEjercicioContable.Rows[e.RowIndex].Cells[0].Value;
-            bool estado = (bool)dgvEjercicioContable.Rows[e.RowIndex].Cells[4].Value;
-            Negocio.Funciones.Mantenimiento.FEjercicioContable.EstadoCheckBox(dgvEjercicioContable, codigo, estado);
-            cargarDGV("");
-        }
-
-        private void dgvEjercicioContable_CurrentCellDirtyStateChanged(object sender, EventArgs e)
-        {
-            if (dgvEjercicioContable.IsCurrentCellDirty)
-            {
-                dgvEjercicioContable.CommitEdit(DataGridViewDataErrorContexts.Commit);
-            }
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAggEjercicioContable aggejerciciocontable = new frmAggEjercicioContable();
@@ -94,17 +78,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             cargarDGV("");
         }
 
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void rjButton5_Click(object sender, EventArgs e)
         {
             if(txtbusqueda == null)
@@ -117,6 +90,33 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
                 frmReporte reporte = new frmReporte("Ejercicio", $"select * from Ejercicio {txtbusqueda} ORDER BY eje_codigo", "", "Informe de Ejercicios Contables", "General", DateTime.Now.ToString("d"));
                 reporte.ShowDialog();
             }
+        }
+
+        private void dgvEjercicioContable_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            string codigo = (string)dgvEjercicioContable.Rows[e.RowIndex].Cells[0].Value;
+            bool estado = (bool)dgvEjercicioContable.Rows[e.RowIndex].Cells[4].Value;
+            Negocio.Funciones.Mantenimiento.FEjercicioContable.EstadoCheckBox(dgvEjercicioContable, codigo, estado);
+            cargarDGV("");
+        }
+
+        private void dgvEjercicioContable_CurrentCellDirtyStateChanged_1(object sender, EventArgs e)
+        {
+            if (dgvEjercicioContable.IsCurrentCellDirty)
+            {
+                dgvEjercicioContable.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

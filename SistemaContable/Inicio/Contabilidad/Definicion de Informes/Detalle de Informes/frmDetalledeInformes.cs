@@ -18,6 +18,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
     public partial class frmDetalledeInformes : Form
     {
         string Query;
+
         public frmDetalledeInformes()
         {
             InitializeComponent();
@@ -32,13 +33,13 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             dgvDetalleDeInformes.DataSource = ds.Tables[0];
         }
 
-        private void dgvDetalleDeInformes_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDetalleDeInformes_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             btnImprimir.Enabled = true;
             string codigo;
             codigo = dgvDetalleDeInformes.Rows[dgvDetalleDeInformes.CurrentRow.Index].Cells[0].Value.ToString();
 
-            if(codigo == string.Empty)
+            if (codigo == string.Empty)
             {
                 codigo = "0";
             }
@@ -46,7 +47,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             Query = $"SELECT * FROM BalanceDet LEFT JOIN PCuenta ON pcu_cuenta = det_ctacont LEFT JOIN Balance on det_codigo = bal_codigo WHERE det_codigo = {codigo}";
             ds = AccesoBase.ListarDatos(Query);
             dgvDetalledeInformesAux.Rows.Clear();
-            foreach(DataRow dr in ds.Tables[0].Rows)
+            foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 string cuenta = dr["det_ctacont"].ToString();
                 string descri = dr["pcu_descri"].ToString();
@@ -60,7 +61,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
                 {
 
                 }
-                dgvDetalledeInformesAux.Rows.Add(cuenta,descri,cc,orden);
+                dgvDetalledeInformesAux.Rows.Add(cuenta, descri, cc, orden);
             }
         }
 
@@ -78,6 +79,13 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             Cargar("");
         }
 
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte reporte = new frmReporte("ModBalanceDet", Query, "", "Informe de Modelos de Balance","General",DateTime.Now.ToString("d"));
+            reporte.ShowDialog();
+        }
+
+        //CONTROLBAR
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -86,12 +94,6 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-            frmReporte reporte = new frmReporte("ModBalanceDet", Query, "", "Informe de Modelos de Balance","General",DateTime.Now.ToString("d"));
-            reporte.ShowDialog();
         }
     }
 }

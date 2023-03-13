@@ -63,10 +63,10 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             CargarDGV();
         }
 
-        private void Click(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvEjercicios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int indice = e.RowIndex;
-            if(indice >= 0)
+            if (indice >= 0)
             {
                 codigoEjercicio = Convert.ToInt32(dgvEjercicios.Rows[indice].Cells[0].Value.ToString());
                 DataSet ds = data.listaCoeficientes(codigoEjercicio);
@@ -74,13 +74,13 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             }
         }
 
-        private void ClickCoeficientes(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvCoeficientes_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
             int codigoEjercicio;
             int indice = e.RowIndex;
-            if( indice >= 0)
+            if (indice >= 0)
             {
                 codigoEjercicio = Convert.ToInt32(dgvCoeficientes.Rows[indice].Cells[0].Value.ToString());
                 codigoCoeficiente = codigoEjercicio;
@@ -89,7 +89,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             dgvCoeficientes.Rows.Clear();
             dgvEjercicios.Rows.Clear();

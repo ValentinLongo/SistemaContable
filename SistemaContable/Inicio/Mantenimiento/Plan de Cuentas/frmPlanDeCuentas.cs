@@ -102,7 +102,7 @@ namespace SistemaContable.Plan_de_Cuentas
             CargarDGV("");
         }
 
-        private void Click(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvCuentas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {

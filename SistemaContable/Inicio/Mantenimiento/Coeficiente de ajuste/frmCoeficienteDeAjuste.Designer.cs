@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCoeficienteDeAjuste));
-            this.dgvEjercicios = new System.Windows.Forms.DataGridView();
-            this.Ejercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desde = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cerrado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvCoeficientes = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,60 +48,17 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.checkEjerciciosAbiertos = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.dgvEjercicios = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCoeficientes = new System.Windows.Forms.DataGridView();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjercicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCoeficientes)).BeginInit();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dgvEjercicios
-            // 
-            this.dgvEjercicios.AllowUserToAddRows = false;
-            this.dgvEjercicios.AllowUserToDeleteRows = false;
-            this.dgvEjercicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEjercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEjercicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Ejercicio,
-            this.Descripción,
-            this.Desde,
-            this.Hasta,
-            this.Cerrado});
-            this.dgvEjercicios.Location = new System.Drawing.Point(12, 66);
-            this.dgvEjercicios.Name = "dgvEjercicios";
-            this.dgvEjercicios.ReadOnly = true;
-            this.dgvEjercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEjercicios.Size = new System.Drawing.Size(637, 164);
-            this.dgvEjercicios.TabIndex = 0;
-            this.dgvEjercicios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
-            // 
-            // Ejercicio
-            // 
-            this.Ejercicio.HeaderText = "Ejercicio";
-            this.Ejercicio.Name = "Ejercicio";
-            this.Ejercicio.ReadOnly = true;
-            // 
-            // Descripción
-            // 
-            this.Descripción.HeaderText = "Descripción";
-            this.Descripción.Name = "Descripción";
-            this.Descripción.ReadOnly = true;
-            // 
-            // Desde
-            // 
-            this.Desde.HeaderText = "Desde";
-            this.Desde.Name = "Desde";
-            this.Desde.ReadOnly = true;
-            // 
-            // Hasta
-            // 
-            this.Hasta.HeaderText = "Hasta";
-            this.Hasta.Name = "Hasta";
-            this.Hasta.ReadOnly = true;
-            // 
-            // Cerrado
-            // 
-            this.Cerrado.HeaderText = "Cerrado";
-            this.Cerrado.Name = "Cerrado";
-            this.Cerrado.ReadOnly = true;
             // 
             // label1
             // 
@@ -114,19 +70,6 @@
             this.label1.Size = new System.Drawing.Size(150, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Coeficientes mensuales";
-            // 
-            // dgvCoeficientes
-            // 
-            this.dgvCoeficientes.AllowUserToAddRows = false;
-            this.dgvCoeficientes.AllowUserToDeleteRows = false;
-            this.dgvCoeficientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCoeficientes.Location = new System.Drawing.Point(12, 259);
-            this.dgvCoeficientes.Name = "dgvCoeficientes";
-            this.dgvCoeficientes.ReadOnly = true;
-            this.dgvCoeficientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCoeficientes.Size = new System.Drawing.Size(637, 261);
-            this.dgvCoeficientes.TabIndex = 3;
-            this.dgvCoeficientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ClickCoeficientes);
             // 
             // label2
             // 
@@ -235,12 +178,12 @@
             this.btnAgregar.BorderSize = 0;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Dotum", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(662, 259);
+            this.btnAgregar.Location = new System.Drawing.Point(660, 69);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(128, 27);
+            this.btnAgregar.Size = new System.Drawing.Size(128, 38);
             this.btnAgregar.TabIndex = 61;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
@@ -257,12 +200,12 @@
             this.btnEliminar.BorderSize = 0;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Dotum", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(662, 346);
+            this.btnEliminar.Location = new System.Drawing.Point(661, 195);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(128, 27);
+            this.btnEliminar.Size = new System.Drawing.Size(128, 38);
             this.btnEliminar.TabIndex = 62;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
@@ -279,12 +222,12 @@
             this.btnModificar.BorderSize = 0;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Dotum", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(662, 303);
+            this.btnModificar.Location = new System.Drawing.Point(661, 132);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(128, 27);
+            this.btnModificar.Size = new System.Drawing.Size(128, 38);
             this.btnModificar.TabIndex = 63;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
@@ -311,6 +254,7 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // panel2
             // 
@@ -395,12 +339,146 @@
             this.checkEjerciciosAbiertos.ToolTipText = null;
             this.checkEjerciciosAbiertos.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkEjerciciosAbiertos_CheckedChanged);
             // 
+            // dgvEjercicios
+            // 
+            this.dgvEjercicios.AllowUserToAddRows = false;
+            this.dgvEjercicios.AllowUserToDeleteRows = false;
+            this.dgvEjercicios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvEjercicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEjercicios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.dgvEjercicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEjercicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEjercicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEjercicios.ColumnHeadersHeight = 25;
+            this.dgvEjercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvEjercicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEjercicios.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEjercicios.EnableHeadersVisualStyles = false;
+            this.dgvEjercicios.GridColor = System.Drawing.Color.White;
+            this.dgvEjercicios.Location = new System.Drawing.Point(12, 69);
+            this.dgvEjercicios.Name = "dgvEjercicios";
+            this.dgvEjercicios.ReadOnly = true;
+            this.dgvEjercicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEjercicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvEjercicios.RowHeadersVisible = false;
+            this.dgvEjercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEjercicios.Size = new System.Drawing.Size(637, 164);
+            this.dgvEjercicios.TabIndex = 71;
+            this.dgvEjercicios.TabStop = false;
+            this.dgvEjercicios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEjercicios_CellMouseClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Ejercicio";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Desde";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Hasta";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Cerrado";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // dgvCoeficientes
+            // 
+            this.dgvCoeficientes.AllowUserToAddRows = false;
+            this.dgvCoeficientes.AllowUserToDeleteRows = false;
+            this.dgvCoeficientes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvCoeficientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCoeficientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.dgvCoeficientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCoeficientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCoeficientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvCoeficientes.ColumnHeadersHeight = 25;
+            this.dgvCoeficientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCoeficientes.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvCoeficientes.EnableHeadersVisualStyles = false;
+            this.dgvCoeficientes.GridColor = System.Drawing.Color.White;
+            this.dgvCoeficientes.Location = new System.Drawing.Point(16, 260);
+            this.dgvCoeficientes.Name = "dgvCoeficientes";
+            this.dgvCoeficientes.ReadOnly = true;
+            this.dgvCoeficientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCoeficientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvCoeficientes.RowHeadersVisible = false;
+            this.dgvCoeficientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCoeficientes.Size = new System.Drawing.Size(637, 260);
+            this.dgvCoeficientes.TabIndex = 72;
+            this.dgvCoeficientes.TabStop = false;
+            this.dgvCoeficientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCoeficientes_CellMouseClick);
+            // 
             // frmCoeficienteDeAjuste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(800, 532);
+            this.Controls.Add(this.dgvCoeficientes);
+            this.Controls.Add(this.dgvEjercicios);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkEjerciciosAbiertos);
             this.Controls.Add(this.panel2);
@@ -411,32 +489,22 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvCoeficientes);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvEjercicios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCoeficienteDeAjuste";
             this.Text = "frmCoeficienteDeAjuste";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEjercicios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCoeficientes)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEjercicios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCoeficientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvEjercicios;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvCoeficientes;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ejercicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Desde;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hasta;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Cerrado;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label3;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
@@ -448,5 +516,12 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuCheckBox checkEjerciciosAbiertos;
+        private System.Windows.Forms.DataGridView dgvEjercicios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridView dgvCoeficientes;
     }
 }

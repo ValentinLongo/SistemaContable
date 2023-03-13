@@ -86,7 +86,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             }
         }
 
-        private void dgvDetDeMod1_SelectionChanged(object sender, EventArgs e)
+        private void dgvDetDeMod1_SelectionChanged_1(object sender, EventArgs e)
         {
             dgvDetDeMod2.Rows.Clear();
             CargarDGV2();
@@ -143,7 +143,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             }
         }
 
-        private void dgvDetDeMod2_SelectionChanged(object sender, EventArgs e)
+        private void dgvDetDeMod2_SelectionChanged_1(object sender, EventArgs e)
         {
             int seleccionado = dgvDetDeMod2.CurrentCell.RowIndex;
             if (seleccionado != -1)

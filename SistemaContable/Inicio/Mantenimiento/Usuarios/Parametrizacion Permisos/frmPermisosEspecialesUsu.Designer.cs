@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPermisosEspecialesUsu));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
@@ -56,10 +59,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.dgvPEspeciales = new System.Windows.Forms.DataGridView();
-            this.Caja = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Predef = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPEspeciales)).BeginInit();
             this.SuspendLayout();
@@ -495,46 +497,72 @@
             // 
             this.dgvPEspeciales.AllowUserToAddRows = false;
             this.dgvPEspeciales.AllowUserToDeleteRows = false;
+            this.dgvPEspeciales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvPEspeciales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPEspeciales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPEspeciales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.dgvPEspeciales.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPEspeciales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPEspeciales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPEspeciales.ColumnHeadersHeight = 25;
+            this.dgvPEspeciales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPEspeciales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Caja,
-            this.Codigo2,
-            this.Descripcion,
-            this.Predef});
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPEspeciales.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPEspeciales.EnableHeadersVisualStyles = false;
+            this.dgvPEspeciales.GridColor = System.Drawing.Color.White;
             this.dgvPEspeciales.Location = new System.Drawing.Point(15, 127);
             this.dgvPEspeciales.Name = "dgvPEspeciales";
             this.dgvPEspeciales.ReadOnly = true;
+            this.dgvPEspeciales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPEspeciales.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvPEspeciales.RowHeadersVisible = false;
             this.dgvPEspeciales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPEspeciales.Size = new System.Drawing.Size(646, 254);
-            this.dgvPEspeciales.TabIndex = 65;
-            this.dgvPEspeciales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPEspeciales_CellContentClick_1);
-            this.dgvPEspeciales.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvPEspeciales_CurrentCellDirtyStateChanged_1);
+            this.dgvPEspeciales.TabIndex = 66;
+            this.dgvPEspeciales.TabStop = false;
+            this.dgvPEspeciales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPEspeciales_CellContentClick);
+            this.dgvPEspeciales.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvPEspeciales_CurrentCellDirtyStateChanged);
             // 
-            // Caja
+            // Column1
             // 
-            this.Caja.HeaderText = "...";
-            this.Caja.Name = "Caja";
-            this.Caja.ReadOnly = true;
-            this.Caja.Visible = false;
+            this.Column1.HeaderText = "Modulo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // Codigo2
+            // Column2
             // 
-            this.Codigo2.HeaderText = "Modulo";
-            this.Codigo2.Name = "Codigo2";
-            this.Codigo2.ReadOnly = true;
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
-            // Descripcion
+            // Column3
             // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Predef
-            // 
-            this.Predef.HeaderText = "Activo";
-            this.Predef.Name = "Predef";
-            this.Predef.ReadOnly = true;
+            this.Column3.HeaderText = "Activo";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // frmPermisosEspecialesUsu
             // 
@@ -608,9 +636,8 @@
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
         private System.Windows.Forms.DataGridView dgvPEspeciales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Caja;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Predef;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

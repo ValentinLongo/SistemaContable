@@ -67,7 +67,13 @@ namespace SistemaContable.Rubos_Contables
             CargarDGV("");
         }
 
-        private void Click(object sender, DataGridViewCellMouseEventArgs e)
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string busqueda = Negocio.FGenerales.Busqueda(dgvRubrosContables, txtBusqueda.Text, CheckInicio, 1, "ruc_descri");
+            CargarDGV(busqueda);
+        }
+
+        private void dgvRubrosContables_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
@@ -92,12 +98,6 @@ namespace SistemaContable.Rubos_Contables
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
-        {
-            string busqueda = Negocio.FGenerales.Busqueda(dgvRubrosContables, txtBusqueda.Text, CheckInicio, 1, "ruc_descri");
-            CargarDGV(busqueda);
         }
     }
 }

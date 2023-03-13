@@ -29,10 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDetalledeInformes));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.dgvDetalleDeInformes = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new RJCodeAdvance.RJControls.RJButton();
             this.btnModificar = new RJCodeAdvance.RJControls.RJButton();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
@@ -41,18 +46,19 @@
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.label1 = new System.Windows.Forms.Label();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
-            this.dgvDetalledeInformesAux = new System.Windows.Forms.DataGridView();
-            this.Cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CentroCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.dgvAux = new System.Windows.Forms.DataGridView();
+            this.dgvDetalledeInformesAux = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDetalleDeInformes = new System.Windows.Forms.DataGridView();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleDeInformes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalledeInformesAux)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalledeInformesAux)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleDeInformes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -141,22 +147,6 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
-            // dgvDetalleDeInformes
-            // 
-            this.dgvDetalleDeInformes.AllowUserToAddRows = false;
-            this.dgvDetalleDeInformes.AllowUserToDeleteRows = false;
-            this.dgvDetalleDeInformes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvDetalleDeInformes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDetalleDeInformes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalleDeInformes.Location = new System.Drawing.Point(12, 27);
-            this.dgvDetalleDeInformes.Name = "dgvDetalleDeInformes";
-            this.dgvDetalleDeInformes.ReadOnly = true;
-            this.dgvDetalleDeInformes.RowHeadersVisible = false;
-            this.dgvDetalleDeInformes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetalleDeInformes.Size = new System.Drawing.Size(620, 125);
-            this.dgvDetalleDeInformes.TabIndex = 63;
-            this.dgvDetalleDeInformes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleDeInformes_CellClick);
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -170,7 +160,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Dotum", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(638, 127);
+            this.btnEliminar.Location = new System.Drawing.Point(638, 122);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(134, 30);
             this.btnEliminar.TabIndex = 79;
@@ -191,7 +181,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Dotum", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(638, 77);
+            this.btnModificar.Location = new System.Drawing.Point(638, 76);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(134, 30);
             this.btnModificar.TabIndex = 78;
@@ -212,7 +202,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Dotum", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(638, 27);
+            this.btnAgregar.Location = new System.Drawing.Point(638, 31);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(134, 30);
             this.btnAgregar.TabIndex = 77;
@@ -291,49 +281,6 @@
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // dgvDetalledeInformesAux
-            // 
-            this.dgvDetalledeInformesAux.AllowUserToAddRows = false;
-            this.dgvDetalledeInformesAux.AllowUserToDeleteRows = false;
-            this.dgvDetalledeInformesAux.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvDetalledeInformesAux.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDetalledeInformesAux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalledeInformesAux.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cuenta,
-            this.Descripcion,
-            this.CentroCosto,
-            this.Orden});
-            this.dgvDetalledeInformesAux.Location = new System.Drawing.Point(12, 158);
-            this.dgvDetalledeInformesAux.Name = "dgvDetalledeInformesAux";
-            this.dgvDetalledeInformesAux.ReadOnly = true;
-            this.dgvDetalledeInformesAux.RowHeadersVisible = false;
-            this.dgvDetalledeInformesAux.Size = new System.Drawing.Size(620, 176);
-            this.dgvDetalledeInformesAux.TabIndex = 90;
-            // 
-            // Cuenta
-            // 
-            this.Cuenta.HeaderText = "Cuenta";
-            this.Cuenta.Name = "Cuenta";
-            this.Cuenta.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // CentroCosto
-            // 
-            this.CentroCosto.HeaderText = "Centro de Costo";
-            this.CentroCosto.Name = "CentroCosto";
-            this.CentroCosto.ReadOnly = true;
-            // 
-            // Orden
-            // 
-            this.Orden.HeaderText = "Orden";
-            this.Orden.Name = "Orden";
-            this.Orden.ReadOnly = true;
             // 
             // label13
             // 
@@ -416,16 +363,141 @@
             this.dgvAux.TabIndex = 95;
             this.dgvAux.TabStop = false;
             // 
+            // dgvDetalledeInformesAux
+            // 
+            this.dgvDetalledeInformesAux.AllowUserToAddRows = false;
+            this.dgvDetalledeInformesAux.AllowUserToDeleteRows = false;
+            this.dgvDetalledeInformesAux.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvDetalledeInformesAux.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDetalledeInformesAux.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.dgvDetalledeInformesAux.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDetalledeInformesAux.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalledeInformesAux.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvDetalledeInformesAux.ColumnHeadersHeight = 25;
+            this.dgvDetalledeInformesAux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvDetalledeInformesAux.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetalledeInformesAux.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvDetalledeInformesAux.EnableHeadersVisualStyles = false;
+            this.dgvDetalledeInformesAux.GridColor = System.Drawing.Color.White;
+            this.dgvDetalledeInformesAux.Location = new System.Drawing.Point(12, 158);
+            this.dgvDetalledeInformesAux.Name = "dgvDetalledeInformesAux";
+            this.dgvDetalledeInformesAux.ReadOnly = true;
+            this.dgvDetalledeInformesAux.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalledeInformesAux.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvDetalledeInformesAux.RowHeadersVisible = false;
+            this.dgvDetalledeInformesAux.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDetalledeInformesAux.Size = new System.Drawing.Size(620, 176);
+            this.dgvDetalledeInformesAux.TabIndex = 96;
+            this.dgvDetalledeInformesAux.TabStop = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Cuenta";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Centro de Costo";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Orden";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // dgvDetalleDeInformes
+            // 
+            this.dgvDetalleDeInformes.AllowUserToAddRows = false;
+            this.dgvDetalleDeInformes.AllowUserToDeleteRows = false;
+            this.dgvDetalleDeInformes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvDetalleDeInformes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDetalleDeInformes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.dgvDetalleDeInformes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDetalleDeInformes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleDeInformes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvDetalleDeInformes.ColumnHeadersHeight = 25;
+            this.dgvDetalleDeInformes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetalleDeInformes.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvDetalleDeInformes.EnableHeadersVisualStyles = false;
+            this.dgvDetalleDeInformes.GridColor = System.Drawing.Color.White;
+            this.dgvDetalleDeInformes.Location = new System.Drawing.Point(12, 31);
+            this.dgvDetalleDeInformes.Name = "dgvDetalleDeInformes";
+            this.dgvDetalleDeInformes.ReadOnly = true;
+            this.dgvDetalleDeInformes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleDeInformes.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvDetalleDeInformes.RowHeadersVisible = false;
+            this.dgvDetalleDeInformes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDetalleDeInformes.Size = new System.Drawing.Size(620, 121);
+            this.dgvDetalleDeInformes.TabIndex = 97;
+            this.dgvDetalleDeInformes.TabStop = false;
+            this.dgvDetalleDeInformes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleDeInformes_CellClick_1);
+            // 
             // frmDetalledeInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.dgvDetalleDeInformes);
+            this.Controls.Add(this.dgvDetalledeInformesAux);
             this.Controls.Add(this.dgvAux);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.CheckInicio);
-            this.Controls.Add(this.dgvDetalledeInformesAux);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
@@ -434,7 +506,6 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dgvDetalleDeInformes);
             this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDetalledeInformes";
@@ -442,9 +513,9 @@
             this.Text = "frmDetalledeInformes";
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleDeInformes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalledeInformesAux)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalledeInformesAux)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleDeInformes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,7 +526,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
-        private System.Windows.Forms.DataGridView dgvDetalleDeInformes;
         private RJCodeAdvance.RJControls.RJButton btnEliminar;
         private RJCodeAdvance.RJControls.RJButton btnModificar;
         private RJCodeAdvance.RJControls.RJButton btnAgregar;
@@ -464,13 +534,14 @@
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.Label label1;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
-        private System.Windows.Forms.DataGridView dgvDetalledeInformesAux;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
         private System.Windows.Forms.DataGridView dgvAux;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cuenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CentroCosto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Orden;
+        private System.Windows.Forms.DataGridView dgvDetalledeInformesAux;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridView dgvDetalleDeInformes;
     }
 }

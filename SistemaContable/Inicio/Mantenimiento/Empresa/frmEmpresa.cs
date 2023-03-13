@@ -54,7 +54,7 @@ namespace SistemaContable.Empresa
             CargarDGV();
         }
 
-        private void Click(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvSucursales_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {

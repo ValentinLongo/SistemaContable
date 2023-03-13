@@ -34,7 +34,7 @@ namespace SistemaContable.General
             this.Close();
         }
 
-        private void dgvLocalidades_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvLocalidades_CellMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnSeleccionar.Enabled = true;
             CodigoLocalidad = (int)dgvLocalidades.Rows[e.RowIndex].Cells[0].Value;

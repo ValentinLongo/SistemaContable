@@ -68,18 +68,18 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             cargarDGV();
         }
 
-        private void Click(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvCuentas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnSeleccionar.Enabled = true;
-            if(Accion == "Cuenta")
+            if (Accion == "Cuenta")
             {
                 IdCuenta = (int)dgvCuentas.Rows[e.RowIndex].Cells[1].Value;
                 DescriCuenta = dgvCuentas.Rows[e.RowIndex].Cells[2].Value.ToString();
             }
-            else if(Accion == "Contrapartida")
+            else if (Accion == "Contrapartida")
             {
                 IdContrapartida = (int)dgvCuentas.Rows[e.RowIndex].Cells[1].Value;
-            }       
+            }
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)

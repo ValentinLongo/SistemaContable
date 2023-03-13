@@ -67,7 +67,7 @@ namespace SistemaContable.General
             CargarDatos(txtbusqueda);
         }
 
-        private void dgvEjercicioContable_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvEjercicioContable_CellMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             idEjercicio = Convert.ToInt32(dgvEjercicioContable.Rows[e.RowIndex].Cells[0].Value.ToString());
             descriEjercicio = dgvEjercicioContable.Rows[e.RowIndex].Cells[1].Value.ToString();

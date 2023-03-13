@@ -971,6 +971,12 @@
   <ItemGroup>
     <None Include="Resources\contabilidad31.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candado_cerrado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candado_abierto.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

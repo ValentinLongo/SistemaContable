@@ -64,7 +64,7 @@ namespace SistemaContable.Agenda
             imprimirAgenda.ShowDialog();
         }
 
-        private void dataAgenda_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvAgenda_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {

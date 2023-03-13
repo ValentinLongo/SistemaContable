@@ -66,7 +66,7 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
             }
         }
 
-        private void dgvMensajes_SelectionChanged(object sender, EventArgs e)
+        private void dgvMensajes_SelectionChanged_1(object sender, EventArgs e)
         {
             int seleccionado = dgvMensajes.CurrentCell.RowIndex;
 

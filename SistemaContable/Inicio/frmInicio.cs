@@ -42,6 +42,7 @@ using SistemaContable.Inicio.Contabilidad.Libro_Diario;
 using SistemaContable.Inicio.Contabilidad.LibroMayor;
 using SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo;
 using SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe;
+using SistemaContable.Properties;
 
 namespace SistemaContable
 {
@@ -70,7 +71,57 @@ namespace SistemaContable
 
         private void DatosUsuEmp() 
         {
+            string perfil = "";
+
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT usu_perfil FROM Usuario WHERE usu_codigo = {FLogin.IdUsuario}");
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                perfil = dr["usu_perfil"].ToString();
+            }
+
+            if (perfil == "1")
+            {
+                perfil = "SUPERVISOR";
+            }
+            else if (perfil == "2") 
+            {
+                perfil = "ADMINISTRADOR";
+            }
+            else if (perfil == "3")
+            {
+                perfil = "ENCARGADO";
+            }
+            else
+            {
+                perfil = "OPERADOR";
+            }
+
             lblUsu.Text = "Usuario: " + FLogin.NombreUsuario;
+            lblEmpresa.Text = "Empresa: (Nombre Empresa)";
+            lblPerfil.Text = "Perfil: " + perfil;
+        }
+
+        private void btnSesion_Click(object sender, EventArgs e)
+        {
+            if (lblSesion.Text == "Cerrar Sesión")
+            {
+                Negocio.FGenerales.Sesion(this, toolStripADs, 1);
+                lblUsu.Text = "Sesión Cerrada";
+                lblPerfil.Text = "Perfil: NINGUNO";
+
+                lblSesion.Text = "Abrir Sesión";
+                btnSesion.Image = Resources.candado_abierto;
+            }
+            else
+            {
+                Negocio.FGenerales.Sesion(this, toolStripADs, 2);
+                DatosUsuEmp();
+
+                lblSesion.Text = "Cerrar Sesión";
+                btnSesion.Image = Resources.candado_cerrado;
+                //terminar
+            }
         }
 
         //CONTROLBAR
@@ -197,24 +248,6 @@ namespace SistemaContable
         {
             System.Diagnostics.Process calc = new System.Diagnostics.Process { StartInfo = { FileName = @"calc.exe" } };
             calc.Start();
-        }
-
-        private void tsbCerrarSesion_Click(object sender, EventArgs e)
-        {
-            tsbCerrarSesion.Visible = false;
-            Negocio.FGenerales.Sesion(this, toolStripADs, 1);
-            tsbAbrirSesion.Visible = true;
-            lblUsu.Text = "Sesión Cerrada";
-        }
-
-        private void tsbAbrirSesion_Click(object sender, EventArgs e)
-        {
-            tsbAbrirSesion.Visible = false;
-            Negocio.FGenerales.Sesion(this, toolStripADs, 2);
-            tsbCerrarSesion.Visible = true;
-            tsbAbrirSesion.Visible = false;
-            lblUsu.Text = "Usuario: " + FLogin.NombreUsuario;
-            //terminar
         }
 
         private void tsbConfigImpresora_Click(object sender, EventArgs e)

@@ -193,7 +193,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             frm.Show();
         }
 
-        private void dgvAddModVisASIENTO_DoubleClick(object sender, EventArgs e)
+        private void dgvAddModVisASIENTO_DoubleClick_1(object sender, EventArgs e)
         {
             try
             {

@@ -70,6 +70,7 @@
             // 
             this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbEstado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
             "ACTIVO",
@@ -83,6 +84,7 @@
             // 
             this.cbPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbPerfil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbPerfil.FormattingEnabled = true;
             this.cbPerfil.Location = new System.Drawing.Point(151, 249);
             this.cbPerfil.Name = "cbPerfil";
@@ -326,6 +328,7 @@
             // 
             this.cbSeccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbSeccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbSeccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbSeccion.FormattingEnabled = true;
             this.cbSeccion.Location = new System.Drawing.Point(151, 315);
             this.cbSeccion.Name = "cbSeccion";

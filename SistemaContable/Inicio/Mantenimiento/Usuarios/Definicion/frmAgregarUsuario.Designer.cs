@@ -231,6 +231,7 @@
             // 
             this.cbPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbPerfil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbPerfil.FormattingEnabled = true;
             this.cbPerfil.Location = new System.Drawing.Point(157, 254);
             this.cbPerfil.Name = "cbPerfil";
@@ -241,6 +242,7 @@
             // 
             this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbEstado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Location = new System.Drawing.Point(157, 286);
             this.cbEstado.Name = "cbEstado";
@@ -294,6 +296,7 @@
             // 
             this.cbSeccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbSeccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbSeccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbSeccion.FormattingEnabled = true;
             this.cbSeccion.Location = new System.Drawing.Point(157, 318);
             this.cbSeccion.Name = "cbSeccion";
@@ -352,7 +355,7 @@
             this.btnAceptar.BorderSize = 0;
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.Location = new System.Drawing.Point(191, 435);
