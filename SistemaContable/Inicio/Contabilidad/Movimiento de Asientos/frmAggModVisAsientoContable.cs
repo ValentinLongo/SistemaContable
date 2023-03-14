@@ -304,8 +304,9 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 int resultado = AccesoBase.ValidarDatos($"SELECT ast_tipo FROM Asiento WHERE ast_tipo = {cbTipoAsiento.SelectedValue}");
                 if (resultado == 1) 
                 {
-                    DialogResult boton = MessageBox.Show("Atención: El asiento de tipo " + cbTipoAsiento.SelectedText.ToString() + " ya ha sido registrado para este ejercicio. ¿Desea Continuar?", "Mensaje", MessageBoxButtons.OKCancel);
-                    if (boton == DialogResult.OK)
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error en los datos de la conexion", true);
+                    MessageBox.ShowDialog();
+                    if (frmMessageBox.Acepto)
                     {
                         validaciones++;//ADVIERTE SI YA HAY UN TIPO DE ASIENTO DISTINTO DE REGISTRACION
                     }
@@ -320,14 +321,16 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     string asiento_renumera = Negocio.FGenerales.ultimoNumeroID("ast_asiento", "Asiento").ToString();
 
                     AccesoBase.InsertUpdateDatos($"INSERT INTO Asiento(ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_user, ast_hora, ast_ejercicio, ast_fecalta, ast_tipo) VALUES('{asiento_renumera}','{asiento_renumera}','{dtFecha.Value}','{txtComentario.Text}','{FLogin.IdUsuario}','{hora}','{txtCodEjercicio}','{fecha}','{cbTipoAsiento.SelectedValue}'");
-                    MessageBox.Show("Agregado Correctamente!", "Mensaje");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
+                    MessageBox.ShowDialog();
                     this.Close();
                 }
                 else if (add_mod_vis == 2)
                 {
                     //MODIFICÁ TABLA MOVASTO
-                    DialogResult boton = MessageBox.Show("Desea Finalizar la Modificación?", "Mensaje", MessageBoxButtons.OKCancel);
-                    if (boton == DialogResult.OK)
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error en los datos de la conexion", true);
+                    MessageBox.ShowDialog();
+                    if (frmMessageBox.Acepto)
                     {
                         int terminal = 0;
                         int asiento = 0;
@@ -391,30 +394,35 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                         //MODIFICÁ TABLA ASIENTO
                         AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET ast_usumodi = '{Negocio.FLogin.IdUsuario}', ast_fecmodi = '{fecha}', ast_horamodi = '{hora}', ast_tipo = {cbTipoAsiento.SelectedValue}, ast_comenta = '{txtComentario.Text}' WHERE ast_Asiento = '{txtNroAsiento.Text}'");
                         this.Close();
-                    }
+                    }                   
                 }
             }
             else
             {
                 if (MSGValidaciones[0] != 1)
                 {
-                    MessageBox.Show("Atención: Debe agregar un detalle", "Mensaje");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe agregar un detalle", false);
+                    MessageBox.ShowDialog();
                 }
                 else if (MSGValidaciones[1] != 1) 
                 {
-                    MessageBox.Show("Atención: El asiento debe estar balanceado", "Mensaje");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El asiento debe estar balanceado", false);
+                    MessageBox.ShowDialog();
                 }
                 else if (MSGValidaciones[2] != 1)
                 {
-                    MessageBox.Show("Atención: Debe agregar un comentario", "Mensaje");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe agregar un comentario", false);
+                    MessageBox.ShowDialog();
                 }
                 else if (MSGValidaciones[3] != 1)
                 {
-                    MessageBox.Show("Atención: La fecha ingresada no concuerda con los parametros del ejercicio", "Mensaje");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La fecha ingresada no concuerda con los parametros del ejercicio", false);
+                    MessageBox.ShowDialog();
                 }
                 else if (MSGValidaciones[4] != 1)
                 {
-                    MessageBox.Show("Atención: La fecha de cierre no concuerda con la del ejercicio", "Mensaje");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La fecha de cierre no concuerda con la del ejercicio", false);
+                    MessageBox.ShowDialog();
                 }
             }
         }

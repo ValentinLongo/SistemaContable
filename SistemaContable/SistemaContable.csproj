@@ -277,6 +277,12 @@
     <Compile Include="General\frmLocalidades.Designer.cs">
       <DependentUpon>frmLocalidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="General\frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmMessageBox.Designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\frmReporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -541,6 +547,12 @@
     <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.Designer.cs">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Ver\Calendario\frmCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Ver\Calendario\frmCalendario.Designer.cs">
+      <DependentUpon>frmCalendario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Ver\Comunicacion Interna\frmComunicacionInterna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -614,6 +626,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmLocalidades.resx">
       <DependentUpon>frmLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmReporte.resx">
       <DependentUpon>frmReporte.cs</DependentUpon>
@@ -749,6 +764,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.resx">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Ver\Calendario\frmCalendario.resx">
+      <DependentUpon>frmCalendario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Ver\Comunicacion Interna\frmComunicacionInterna.resx">
       <DependentUpon>frmComunicacionInterna.cs</DependentUpon>
@@ -976,6 +994,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\candado_abierto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contabilidad_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llave-n.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

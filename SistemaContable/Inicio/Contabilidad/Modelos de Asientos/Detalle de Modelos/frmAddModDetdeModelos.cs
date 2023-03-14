@@ -115,7 +115,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             }
             else
             {
-                MessageBox.Show("Atención: Falta ingresar datos!","Mensaje");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta ingresar datos!", false);
+                MessageBox.ShowDialog();
                 this.Close();
             }
         }

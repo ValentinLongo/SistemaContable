@@ -1,4 +1,5 @@
 ﻿using Datos;
+using SistemaContable.General;
 using SistemaContable.Inicio.Mantenimiento.Agenda;
 using System;
 using System.Collections.Generic;
@@ -49,12 +50,14 @@ namespace SistemaContable.Agenda
             try
             {
                 AccesoBase.InsertUpdateDatos($"DELETE FROM Agenda WHERE age_codigo = {IdModificar}");
-                MessageBox.Show("Eliminado Correctamente");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Eliminado Correctamente", false);
+                MessageBox.ShowDialog();
                 cargarDatos("");
             }
             catch
             {
-                MessageBox.Show("Ocurrio un error");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Ocurrio un error", false);
+                MessageBox.ShowDialog();
             }
         }
 

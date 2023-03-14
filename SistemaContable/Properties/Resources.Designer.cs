@@ -233,6 +233,16 @@ namespace SistemaContable.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap contabilidad_n {
+            get {
+                object obj = ResourceManager.GetObject("contabilidad_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap contabilidad1 {
             get {
                 object obj = ResourceManager.GetObject("contabilidad1", resourceCulture);
@@ -386,6 +396,16 @@ namespace SistemaContable.Properties {
         internal static System.Drawing.Bitmap llave {
             get {
                 object obj = ResourceManager.GetObject("llave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap llave_n {
+            get {
+                object obj = ResourceManager.GetObject("llave-n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -129,7 +129,8 @@ namespace SistemaContable.Plan_de_Cuentas
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             FPlanDeCuentas.eliminarCuenta(idCuenta);
-            MessageBox.Show("Eliminado Correctamente");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Eliminado Correctamente", false);
+            MessageBox.ShowDialog();
             CargarDGV("");
         }
 

@@ -124,7 +124,8 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxPerfil ( mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema) SELECT mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema From aux_MenuxPerfil Where aux_MenuxPerfil.mxp_sistema = 'CO' AND mxp_terminal = '{terminal}' AND aux_MenuxPerfil.mxp_perfil = {txtNroPerfil.Text}");
 
-            MessageBox.Show("Cambios realizados correctamente!", "Mensaje");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cambios realizados correctamente!", false);
+            MessageBox.ShowDialog();
             this.Close();
         }
 
@@ -161,7 +162,8 @@ namespace SistemaContable.Parametrizacion_Permisos
             }
             else
             {
-                MessageBox.Show("Atención: Debera indicar un perfil.");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debera indicar un perfil.", false);
+                MessageBox.ShowDialog();
             }
         }
 

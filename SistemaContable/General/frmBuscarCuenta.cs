@@ -1,6 +1,7 @@
 ﻿using Datos;
 using Negocio;
 using Negocio.Funciones.Mantenimiento;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,7 +60,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             }
             else
             {
-                MessageBox.Show("Debe seleccionar una cuenta");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe seleccionar una cuenta", false);
+                MessageBox.ShowDialog();
             }
         }
 

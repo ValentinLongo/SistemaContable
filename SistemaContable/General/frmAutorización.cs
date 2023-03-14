@@ -100,8 +100,9 @@ namespace SistemaContable
                     this.Close();
                     frmAutorización.usuario = "";
                     frmAutorización.contraseña = "";
-                    DialogResult boton = MessageBox.Show("Atención: ¿desea recalcular los permisos del menu?", "Contable", MessageBoxButtons.OKCancel);
-                    if (boton == DialogResult.OK)
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: ¿desea recalcular los permisos del menu?", true);
+                    MessageBox.ShowDialog();
+                    if (frmMessageBox.Acepto)
                     {
                         frmEstandar.proceso = 1;
                         frmEstandar.mensaje = "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...";

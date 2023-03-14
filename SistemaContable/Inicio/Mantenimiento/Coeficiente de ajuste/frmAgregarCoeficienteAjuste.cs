@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Negocio;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,12 +43,14 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
                 try
                 {
                     AccesoBase.InsertUpdateDatos($"INSERT INTO DetAjusteInf(aji_ejercicio, aji_periodo,aji_coef,aji_usualta,aji_fecalta,aji_horaalta) values({frmCoeficienteDeAjuste.codigoEjercicio},'{maskPeriodo.Text}',{tbCoeficiente.Text},{FLogin.IdUsuario},'{DateTime.Now.ToString("d")}','{DateTime.Now.ToString("T")}')");
-                    MessageBox.Show("Agregado con éxito");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado con éxito", false);
+                    MessageBox.ShowDialog();
                     this.Close();
                 }
                 catch
                 {
-                    MessageBox.Show("Error");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error", false);
+                    MessageBox.ShowDialog();
                 }
             }
             if (validaFecha && Evento == "Modificar")
@@ -55,12 +58,14 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
                 try
                 {
                     AccesoBase.InsertUpdateDatos($"UPDATE DetAjusteInf SET aji_coef = {tbCoeficiente.Text}, aji_usumodi = {FLogin.IdUsuario}, aji_fecmodi = '{DateTime.Now.ToString("d")}', aji_horamodi = '{DateTime.Now.ToString("T")}' WHERE aji_ejercicio = {frmCoeficienteDeAjuste.codigoEjercicio} and aji_periodo = '{maskPeriodo.Text}'");
-                    MessageBox.Show("Modificado con éxito");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado con éxito", false);
+                    MessageBox.ShowDialog();
                     this.Close();
                 }
                 catch
                 {
-                    MessageBox.Show("Error");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error", false);
+                    MessageBox.ShowDialog();
                 }
             }
         }

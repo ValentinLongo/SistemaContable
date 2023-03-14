@@ -1,4 +1,5 @@
 ﻿using Negocio;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,12 +32,14 @@ namespace SistemaContable.Usuarios
             if (tbNuevaContra.Text == tbConfNuevaContra.Text)
             {
                 Negocio.FUsuarios.ModificarContra(tbNuevaContra.Text);
-                MessageBox.Show("Contraseña modificada correctamente");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Contraseña modificada correctamente", false);
+                MessageBox.ShowDialog();
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Las contraseñas no coinsiden");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Las contraseñas no coinsiden", false);
+                MessageBox.ShowDialog();
             }
         }
     }

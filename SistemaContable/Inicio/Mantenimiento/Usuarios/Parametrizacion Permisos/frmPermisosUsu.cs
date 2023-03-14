@@ -123,7 +123,8 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu ( mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From aux_MenuxUsu Where aux_MenuxUsu.mxu_sistema = 'CO' AND mxu_terminal = '{terminal}' AND aux_MenuxUsu.mxu_usuario = {txtNroUsuario.Text}");
 
-            MessageBox.Show("Cambios realizados correctamente!", "Mensaje");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cambios realizados correctamente!", false);
+            MessageBox.ShowDialog();
             this.Close();
         }
 
@@ -155,7 +156,8 @@ namespace SistemaContable.Parametrizacion_Permisos
             }
             else
             {
-                MessageBox.Show("Atención: Debera indicar un usuario.");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debera indicar un usuario.", false);
+                MessageBox.ShowDialog();
             }
         }
 

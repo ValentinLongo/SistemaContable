@@ -43,6 +43,7 @@ using SistemaContable.Inicio.Contabilidad.LibroMayor;
 using SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo;
 using SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe;
 using SistemaContable.Properties;
+using SistemaContable.Inicio.Ver.Calendario;
 
 namespace SistemaContable
 {
@@ -98,7 +99,7 @@ namespace SistemaContable
             }
 
             lblUsu.Text = "Usuario: " + FLogin.NombreUsuario;
-            lblEmpresa.Text = "Empresa: (Nombre Empresa)";
+            lblEmpresa.Text = "Empresa: (Empresa)";
             lblPerfil.Text = "Perfil: " + perfil;
         }
 
@@ -125,12 +126,13 @@ namespace SistemaContable
         }
 
         //CONTROLBAR
-        public void controlbarCerrar_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
             List<Form> formlist = new List<Form>();
             int cant = Application.OpenForms.Count;
-            DialogResult boton = MessageBox.Show("¿Realmente desea salir?", "Atención!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-            if (boton == DialogResult.OK)
+            frmMessageBox MessageBox = new frmMessageBox("Atención!","¿Realmente Desea Salir?",true);
+            MessageBox.ShowDialog();
+            if (frmMessageBox.Acepto)
             {
                 if (cant > 0)
                 {
@@ -150,14 +152,14 @@ namespace SistemaContable
             }
         }
 
-        private void controlbarCerrar_MouseEnter(object sender, EventArgs e)
+        private void btnCerrar_MouseEnter(object sender, EventArgs e)
         {
-            controlbarCerrar.BackColor = Color.Red;
+            btnCerrar.BackColor = Color.Red;
         }
 
-        private void controlbarCerrar_MouseLeave(object sender, EventArgs e)
+        private void btnCerrar_MouseLeave(object sender, EventArgs e)
         {
-            controlbarCerrar.BackColor = Color.Transparent;
+            btnCerrar.BackColor = Color.Transparent;
         }
         //
 
@@ -250,6 +252,12 @@ namespace SistemaContable
             calc.Start();
         }
 
+        private void tsbNotas_Click(object sender, EventArgs e)
+        {
+            frmCalendario frm = new frmCalendario();
+            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString());
+        }
+
         private void tsbConfigImpresora_Click(object sender, EventArgs e)
         {
 
@@ -304,7 +312,7 @@ namespace SistemaContable
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            Menu_Ayuda.Show(btnArchivos, btnArchivos.Width, 0);
+            Menu_Ayuda.Show(btnAyuda, btnAyuda.Width, 0);
             btnAyuda.Visible = false;
             btnAyuda2.Location = btnAyuda.Location;
             btnAyuda2.Size = btnAyuda.Size;
@@ -590,175 +598,212 @@ namespace SistemaContable
         {
 
         }
+
         private void restauraciónDeInformación_Click(object sender, EventArgs e)
         {
 
         }
+
         private void salir_Click(object sender, EventArgs e)
         {
-            controlbarCerrar_Click(sender, e);
+            btnCerrar_Click(sender, e);
         }
+
         //20
         private void calculadora_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process calc = new System.Diagnostics.Process { StartInfo = { FileName = @"calc.exe" } };
             calc.Start();
         }
+
         private void comunicaciónInterna_Click(object sender, EventArgs e)
         {
             frmComunicacionInterna frm = new frmComunicacionInterna(lblnuevomensaje);
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMensajesInternos.Tag.ToString());
         }
+
         private void notasYObservaciones_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process notepad = new System.Diagnostics.Process { StartInfo = { FileName = @"notepad.exe" } };
             notepad.Start();
         }
+
         private void calendario_Click(object sender, EventArgs e)
         {
-
+            frmCalendario frm = new frmCalendario();
+            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, calendario.Tag.ToString());
         }
+
         //30
         private void movimientoDeAsientos_Click(object sender, EventArgs e)
         {
             frmAsientosContables frm = new frmAsientosContables();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, movimientoDeAsientos.Tag.ToString());
         }
+
         private void actualizaciónMA_Click(object sender, EventArgs e)
         {
             frmEncabezadodeModelos frm = new frmEncabezadodeModelos();
             Negocio.FGenerales.Mostrarfrm(frm, actualizaciónMA.Tag.ToString());
         }
+
         private void detalleDeModelos_Click(object sender, EventArgs e)
         {
             frmDetalledeModelos frm = new frmDetalledeModelos();
             Negocio.FGenerales.Mostrarfrm(frm, detalleDeModelos.Tag.ToString());
         }
+
         private void renumeraciónDeAsientos_Click(object sender, EventArgs e)
         {
 
         }
+
         private void libroDiario_Click(object sender, EventArgs e)
         {
             frmLibroDiario frm = new frmLibroDiario();
             Negocio.FGenerales.Mostrarfrm(frm, libroDiario.Tag.ToString());
         }
+
         private void libroMayor_Click(object sender, EventArgs e)
         {
             frmLibroMayor frm = new frmLibroMayor();
             Negocio.FGenerales.Mostrarfrm(frm, libroMayor.Tag.ToString());
         }
+
         private void libroMayorGrupo_Click(object sender, EventArgs e)
         {
             frmLibroMayorGrupo frm = new frmLibroMayorGrupo();
             Negocio.FGenerales.Mostrarfrm(frm, libroMayorGrupo.Tag.ToString());
 
         }
+
         private void libroMayorInforme_Click(object sender, EventArgs e)
         {
             frmLibroMayorInforme frm = new frmLibroMayorInforme();
             Negocio.FGenerales.Mostrarfrm(frm, libroMayorInforme.Tag.ToString());
         }
+
         private void saldosYAjustados_Click(object sender, EventArgs e)
         {
 
         }
+
         private void balanceDeSumasYSaldos_Click(object sender, EventArgs e)
         {
 
         }
+
         private void balanceGeneral_Click(object sender, EventArgs e)
         {
 
         }
+
         private void actualizaciónDI_Click(object sender, EventArgs e)
         {
             frmDefiniciondeInformes frm = new frmDefiniciondeInformes();
             Negocio.FGenerales.Mostrarfrm(frm, actualizaciónDI.Tag.ToString());
         }
+
         private void detalleInforme_Click(object sender, EventArgs e)
         {
             frmDetalledeInformes frm = new frmDetalledeInformes();
             Negocio.FGenerales.Mostrarfrm(frm, detalleInforme.Tag.ToString());
         }
+
         private void informe_Click(object sender, EventArgs e)
         {
 
         }
+
         private void auditoriaInterna_Click(object sender, EventArgs e)
         {
 
         }
+
         //40
         private void empresa_Click(object sender, EventArgs e)
         {
             frmEmpresa frm = new frmEmpresa();
             Negocio.FGenerales.Mostrarfrm(frm, empresa.Tag.ToString());
         }
+
         private void definición_Click(object sender, EventArgs e)
         {
             frmUsuarios frm = new frmUsuarios();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, definición.Tag.ToString());
         }
+
         private void modificaciónDeContraseña_Click(object sender, EventArgs e)
         {
             frmModificarContra frm = new frmModificarContra();
             Negocio.FGenerales.Mostrarfrm(frm, modificaciónDeContraseña.Tag.ToString());
         }
+
         private void ejercicioContable_Click(object sender, EventArgs e)
         {
             frmEjercicioContable frm = new frmEjercicioContable();
             Negocio.FGenerales.Mostrarfrm(frm, ejercicioContable.Tag.ToString());
         }
+
         private void planDeCuentas_Click(object sender, EventArgs e)
         {
             frmPlanDeCuentas frm = new frmPlanDeCuentas();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, planDeCuentas.Tag.ToString());
         }
+
         private void conceptosContables_Click(object sender, EventArgs e)
         {
             frmConceptosContables frm = new frmConceptosContables();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, conceptosContables.Tag.ToString());
         }
+
         private void rubrosContables_Click(object sender, EventArgs e)
         {
             frmRubrosContables frm = new frmRubrosContables();
             Negocio.FGenerales.Mostrarfrm(frm, rubrosContables.Tag.ToString());
         }
+
         private void coeficienteDeAjuste_Click(object sender, EventArgs e)
         {
             frmCoeficienteDeAjuste frm = new frmCoeficienteDeAjuste();
             Negocio.FGenerales.Mostrarfrm(frm, coeficienteDeAjuste.Tag.ToString());
         }
+
         private void centroDeCosto_Click(object sender, EventArgs e)
         {
             frmCentrodeCostos frm = new frmCentrodeCostos();
             Negocio.FGenerales.Mostrarfrm(frm, centroDeCosto.Tag.ToString());
         }
+
         private void rubricaciónDeSubDiarios_Click(object sender, EventArgs e)
         {
             
         }
+
         private void agenda_Click(object sender, EventArgs e)
         {
             frmAgenda frm = new frmAgenda();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, agenda.Tag.ToString());
         }
+
         private void parametrosContables_Click(object sender, EventArgs e)
         {
             frmParametrosContables frm = new frmParametrosContables();
             Negocio.FGenerales.Mostrarfrm(frm, parametrosContables.Tag.ToString());
         }
+
         private void configurarImpresora_Click(object sender, EventArgs e)
         {
             PrintDialog printDialog1 = new PrintDialog();
             DialogResult result = printDialog1.ShowDialog();
         }
+
         //50
         private void soporteInteractivoDeContable_Click(object sender, EventArgs e)
         {
 
         }
+
         //SIN CODIGO
         private void parametrizacionDePermisosPerfiles_Click(object sender, EventArgs e)
         {
@@ -815,8 +860,10 @@ namespace SistemaContable
                 frmSA.Close();
                 frmAutorización.usuario = "";
                 frmAutorización.contraseña = "";
-                DialogResult boton1 = MessageBox.Show("Atención: ¿desea recalcular los permisos del menu?", "Contable", MessageBoxButtons.OKCancel);
-                if (boton1 == DialogResult.OK)
+
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos del menu?", true);
+                MessageBox.ShowDialog();
+                if (frmMessageBox.Acepto)
                 {
                     frmEstandar.proceso = 1;
                     frmEstandar.mensaje = "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...";
@@ -826,8 +873,10 @@ namespace SistemaContable
                     RecalculaPermisos();
                     estandar.Close();
                 }
-                DialogResult boton2 = MessageBox.Show("Atención: ¿desea recalcular los permisos especiales?", "Contable", MessageBoxButtons.OKCancel);
-                if (boton2 == DialogResult.OK)
+
+                frmMessageBox MessageBox2 = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos del menu?", true);
+                MessageBox2.ShowDialog();
+                if (frmMessageBox.Acepto)
                 {
                     frmEstandar.proceso = 2;
                     frmEstandar.mensaje = "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...";

@@ -73,7 +73,8 @@ namespace SistemaContable.Empresa
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Negocio.FEmpresa.eliminarSucursal(codigoSucursal);
-            MessageBox.Show("Eliminado Correctamente");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Eliminado Correctamente", false);
+            MessageBox.ShowDialog();
             CargarDGV();
         }
 

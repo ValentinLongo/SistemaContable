@@ -99,8 +99,9 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
         {
             int seleccionado = dgvMensajes.CurrentCell.RowIndex;
 
-            DialogResult boton = MessageBox.Show("¿Seguro que desea eliminar el mensaje?", "Atención!", MessageBoxButtons.OKCancel);
-            if (boton == DialogResult.OK)
+            frmMessageBox MessageBox = new frmMessageBox("Atención!", "¿Seguro que desea eliminar el mensaje?", false);
+            MessageBox.ShowDialog();
+            if (frmMessageBox.Acepto)
             {
                 if (seleccionado != -1)
                 {

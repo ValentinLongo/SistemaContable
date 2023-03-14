@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
             this.label3 = new System.Windows.Forms.Label();
             this.txtConstrasenia = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ShapeContra = new Bunifu.UI.WinForms.BunifuShapes();
             this.ShapeUsuario = new Bunifu.UI.WinForms.BunifuShapes();
-            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.bunifuShapes2 = new Bunifu.UI.WinForms.BunifuShapes();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -180,6 +180,22 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 25);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
+            // bunifuShapes1
+            // 
+            this.bunifuShapes1.Angle = 0F;
+            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.bunifuShapes1.BorderThickness = 1;
+            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes1.FillShape = true;
+            this.bunifuShapes1.Location = new System.Drawing.Point(32, 3);
+            this.bunifuShapes1.Name = "bunifuShapes1";
+            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.bunifuShapes1.Sides = 5;
+            this.bunifuShapes1.Size = new System.Drawing.Size(303, 219);
+            this.bunifuShapes1.TabIndex = 51;
+            this.bunifuShapes1.Text = "bunifuShapes1";
+            // 
             // btnAcceder
             // 
             this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -259,7 +275,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Dotum", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(56, 53);
+            this.label1.Location = new System.Drawing.Point(44, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 11);
             this.label1.TabIndex = 31;
@@ -270,7 +286,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Dotum", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(56, 149);
+            this.label2.Location = new System.Drawing.Point(44, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 11);
             this.label2.TabIndex = 32;
@@ -368,7 +384,7 @@
             // pbOcultar
             // 
             this.pbOcultar.Image = global::SistemaContable.Properties.Resources.ocultar;
-            this.pbOcultar.Location = new System.Drawing.Point(288, 177);
+            this.pbOcultar.Location = new System.Drawing.Point(295, 177);
             this.pbOcultar.Name = "pbOcultar";
             this.pbOcultar.Size = new System.Drawing.Size(27, 30);
             this.pbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -390,7 +406,7 @@
             // pbVisibilidad
             // 
             this.pbVisibilidad.Image = global::SistemaContable.Properties.Resources.visible;
-            this.pbVisibilidad.Location = new System.Drawing.Point(287, 177);
+            this.pbVisibilidad.Location = new System.Drawing.Point(296, 177);
             this.pbVisibilidad.Name = "pbVisibilidad";
             this.pbVisibilidad.Size = new System.Drawing.Size(27, 30);
             this.pbVisibilidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -416,11 +432,11 @@
             this.ShapeContra.BorderThickness = 1;
             this.ShapeContra.FillColor = System.Drawing.Color.Transparent;
             this.ShapeContra.FillShape = true;
-            this.ShapeContra.Location = new System.Drawing.Point(49, 154);
+            this.ShapeContra.Location = new System.Drawing.Point(34, 154);
             this.ShapeContra.Name = "ShapeContra";
             this.ShapeContra.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeContra.Sides = 5;
-            this.ShapeContra.Size = new System.Drawing.Size(271, 75);
+            this.ShapeContra.Size = new System.Drawing.Size(303, 75);
             this.ShapeContra.TabIndex = 38;
             // 
             // ShapeUsuario
@@ -431,28 +447,12 @@
             this.ShapeUsuario.BorderThickness = 1;
             this.ShapeUsuario.FillColor = System.Drawing.Color.Transparent;
             this.ShapeUsuario.FillShape = true;
-            this.ShapeUsuario.Location = new System.Drawing.Point(49, 58);
+            this.ShapeUsuario.Location = new System.Drawing.Point(34, 58);
             this.ShapeUsuario.Name = "ShapeUsuario";
             this.ShapeUsuario.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeUsuario.Sides = 5;
-            this.ShapeUsuario.Size = new System.Drawing.Size(271, 75);
+            this.ShapeUsuario.Size = new System.Drawing.Size(303, 75);
             this.ShapeUsuario.TabIndex = 37;
-            // 
-            // bunifuShapes1
-            // 
-            this.bunifuShapes1.Angle = 0F;
-            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.bunifuShapes1.BorderThickness = 1;
-            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(32, 3);
-            this.bunifuShapes1.Name = "bunifuShapes1";
-            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
-            this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(303, 219);
-            this.bunifuShapes1.TabIndex = 51;
-            this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // bunifuShapes2
             // 

@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace Negocio
 {
-    public class MenuGobbato : ContextMenuStrip
+    public class MenuDropDown : ContextMenuStrip
     {
         //Fields
         private bool isMainMenu;
@@ -19,7 +19,7 @@ namespace Negocio
 
         private Bitmap menuItemHeaderSize;
         //Constructor
-        public MenuGobbato(IContainer container)
+        public MenuDropDown(IContainer container)
             : base(container)
         {
         }

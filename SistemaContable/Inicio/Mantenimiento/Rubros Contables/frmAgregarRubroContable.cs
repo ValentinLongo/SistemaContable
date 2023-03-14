@@ -1,4 +1,5 @@
 ﻿using Negocio.Funciones;
+using SistemaContable.General;
 using SistemaContable.Rubos_Contables;
 using System;
 using System.Collections.Generic;
@@ -67,19 +68,22 @@ namespace SistemaContable.Rubros_Contables
                 if (Operacion == "Modificar")
                 {
                     data.ModificarRubroContable(Convert.ToInt32(tbCodigo.Text), tbNombre.Text, vigencia, desde, hasta);
-                    MessageBox.Show("Modificado con éxito");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado con éxito", false);
+                    MessageBox.ShowDialog();
                     this.Close();
                 }
                 else
                 {
                     data.AgregarRubroContable(tbNombre.Text, vigencia, desde, hasta);
-                    MessageBox.Show("Agregado con éxito");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado con éxito", false);
+                    MessageBox.ShowDialog();
                     this.Close();
                 }
             }
             else
             {
-                MessageBox.Show("Debe completar los campos correctamente antes de continuar");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar los campos correctamente antes de continuar", false);
+                MessageBox.ShowDialog();
             }
         }
 
