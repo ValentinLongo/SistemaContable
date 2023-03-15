@@ -547,6 +547,12 @@
     <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.Designer.cs">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Ver\Calendario\frmAggModCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Ver\Calendario\frmAggModCalendario.Designer.cs">
+      <DependentUpon>frmAggModCalendario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Ver\Calendario\frmCalendario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -764,6 +770,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.resx">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Ver\Calendario\frmAggModCalendario.resx">
+      <DependentUpon>frmAggModCalendario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Ver\Calendario\frmCalendario.resx">
       <DependentUpon>frmCalendario.cs</DependentUpon>

@@ -241,6 +241,7 @@
     <Compile Include="Funciones\Mantenimiento\FRubrosContables.cs" />
     <Compile Include="Funciones\Mantenimiento\FUsuarios.cs" />
     <Compile Include="Funciones\Generales\FValidacionesEventos.cs" />
+    <Compile Include="Funciones\Ver\FCalendario.cs" />
     <Compile Include="Funciones\Ver\FComunicacionInterna.cs" />
     <Compile Include="Funciones\ConfiguraciónMenus\MenuDropDown.cs">
       <SubType>Component</SubType>

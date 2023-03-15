@@ -172,11 +172,33 @@ namespace SistemaContable
             Menu_Mantenimiento.IsMainMenu = true;
             Menu_Ayuda.IsMainMenu = true;
 
+            //MENSAJES
             if (Negocio.Funciones.Ver.FComunicacionInterna.NuevosMSGs())
             {
                 lblnuevomensaje.Visible = true;
             }
 
+            //TAREAS
+            if (Negocio.Funciones.Ver.FCalendario.MSGTareas() == 1)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "1 hora para que una tarea expire!, ¿Desea Posponerla?", true);
+                MessageBox.ShowDialog();
+                if (frmMessageBox.Acepto)
+                {
+                    frmCalendario frm = new frmCalendario();
+                    Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString());
+                }
+            }
+            else if (Negocio.Funciones.Ver.FCalendario.MSGTareas() == 2)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "5 minutos para que una tarea expire!, ¿Desea Posponerla?", true);
+                MessageBox.ShowDialog();
+                if (frmMessageBox.Acepto)
+                {
+                    frmCalendario frm = new frmCalendario();
+                    Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString());
+                }
+            }
         }
 
         private void tsbMensajesInternos_MouseEnter(object sender, EventArgs e)
