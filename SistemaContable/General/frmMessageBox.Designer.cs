@@ -133,11 +133,11 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(12, 33);
+            this.bunifuShapes1.Location = new System.Drawing.Point(6, 26);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(374, 94);
+            this.bunifuShapes1.Size = new System.Drawing.Size(386, 107);
             this.bunifuShapes1.TabIndex = 17;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
@@ -176,7 +176,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Dotum", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(211, 92);
+            this.btnCancelar.Location = new System.Drawing.Point(212, 92);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(119, 25);
             this.btnCancelar.TabIndex = 51;
@@ -191,7 +191,7 @@
             this.lblMSG2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.lblMSG2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMSG2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMSG2.Location = new System.Drawing.Point(66, 57);
+            this.lblMSG2.Location = new System.Drawing.Point(21, 54);
             this.lblMSG2.Name = "lblMSG2";
             this.lblMSG2.Size = new System.Drawing.Size(67, 16);
             this.lblMSG2.TabIndex = 52;

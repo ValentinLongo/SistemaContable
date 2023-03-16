@@ -39,12 +39,9 @@ namespace Negocio.Funciones.Ver
 
         public static int MSGTareas()
         {
-            bool unahora = false;
-            bool cincominutos = false;
-
-            string horaActual = DateTime.Now.ToLongTimeString();
-            string horaUnaHora = horaActual.Substring(0,2);
-            string horaCincoMinutos = horaActual.Substring(3, 2);
+            string horactual = DateTime.Now.ToLongTimeString();
+            horactual = horactual.Substring(0,5);
+            DateTime HORACTUAL = Convert.ToDateTime(horactual);
 
             string fechaActual = DateTime.Now.ToShortDateString();
 
@@ -54,7 +51,7 @@ namespace Negocio.Funciones.Ver
             int id = FLogin.IdUsuario;
 
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT cal_fecha, cal_hora FROM Calendario WHERE cal_usuario = {id} ");
+            ds = AccesoBase.ListarDatos($"SELECT cal_fecha, cal_hora FROM Calendario WHERE cal_usuario = {id} AND cal_fin = 0");
 
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
@@ -62,31 +59,38 @@ namespace Negocio.Funciones.Ver
                 fecha = fecha.Substring(0, 10);
 
                 hora = dr["cal_hora"].ToString();
-                string hora1h = hora.Substring(0, 2);
-                string hora5m = hora.Substring(3, 2);
+                hora = hora.Substring(0, 5);
+                DateTime HORA = Convert.ToDateTime(hora);
 
                 if (fecha == fechaActual)
                 {
-                    if (Convert.ToInt32(hora1h) - Convert.ToInt32(horaUnaHora) == 1)
-                    {
-                        unahora = true;
-                    }
-                    if (Convert.ToInt32(hora5m) - Convert.ToInt32(horaCincoMinutos) == 5)
-                    {
-                        cincominutos = true;
-                    }
-                }
-            }
+                    TimeSpan diferencia = HORA - HORACTUAL;
+                    var dif_en_minutos = diferencia.TotalMinutes;
 
-            if (unahora)
-            {
-                return 1;
-            }
-            else
-            {
-                if (cincominutos)
-                {
-                    return 2;
+                    if (dif_en_minutos < 121 && dif_en_minutos > 60)
+                    {
+                        return 1;
+                    }
+                    else if (dif_en_minutos < 61 && dif_en_minutos > 30)
+                    {
+                        return 2;
+                    }
+                    else if (dif_en_minutos < 31 && dif_en_minutos > 15)
+                    {
+                        return 3;
+                    }
+                    else if (dif_en_minutos < 16 && dif_en_minutos > 5)
+                    {
+                        return 4;
+                    }
+                    else if (dif_en_minutos < 6 && dif_en_minutos > 0)
+                    {
+                        return 5;
+                    }
+                    else if (dif_en_minutos <= 0)
+                    {
+                        return 6;
+                    }
                 }
             }
             return 0;

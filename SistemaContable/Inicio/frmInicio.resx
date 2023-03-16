@@ -128,18 +128,6 @@
     <value>False</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tsbUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFOSURBVEhL7ZQ9TsMwHMUjhnaEEcTcXgFOgjgE7THoUlFx
-        IBj5mKh6AFhQYWpSJSHKJ7xHH6ObUFuiqPlJliz7/36uY7tey1ZSVVUXbVgUxUMYhhEb+xgbcE5lboH4
-        GItMPw1g7ok1KncDd7Nu0R+0uLudQzaUuxbUXihmD3byKG8tqL1XzJ4oikJ5a2GtYvbI2RjF7PnNjuM4
-        Xipmz5+dMW7qQN5anN5qvk2+UbmNqKajmBuwOP+5jItzjjUqdwv8HX5KniMvHBv6dxzjnMpa/iE4vz2c
-        42lZliO02zRN33zfT9jQn2PsBu0SNSesVWxzIDqC8ArydwgbwR+FzBjdQ2mag9ABwtdBEHx82zaAWTgm
-        6O5Lux7ssp/n+csqbg9cz3D2pDeDdzlTxhlwTqU3w8uiemdkWfYqvRl8lvMkSXxlrIFrAeeZ9C07g+d9
-        AQAjNe2aZ2n9AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="tsbUsuario.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -152,16 +140,6 @@
   <data name="tsbPlandeCuenta.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="tsbPlandeCuenta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD6SURBVEhL7ZVNDoIwEIVZcgTjFdi68BC60ZOYuJelh1Ev
-        49ojaNyx4M83+DCtUGNkakLSL2lCp/C+dEogCoyaqqo2WZbdiqI443rGsl/quk4xTO6Qz7nsD4jexYLI
-        /e8coo5c2s5lPZAropTTBtZe4MyvXNIBmabAKZcXjuXhIK/TUtAnt2qDYKCLPW/TBcGfpC26cgR+I5Uz
-        3fGR4SAvSC2C9CeQ93+pgMCkLMsT813ofZFMIF9Q0EF9pybInzw1Nl6lLZBMMZZG2/Xbi9AYki2nFqgn
-        XqQCwtfNnnz9XVygnQeK5Rx7d+6FPM8vkB8hXcEdsxwYM1H0AO56w49YxjSaAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="tsbPlandeCuenta.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -173,15 +151,6 @@
   </data>
   <data name="tsbConceptoContable.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="tsbConceptoContable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVEhL7ZVBCsMwDAT9kf6noQ/uf5q+wmC3sphLYA89
-        SA40nluUReNEApfFNei9P2qt708g1m+3vhsKzQiRD8X6vlBoyKWA4oKMr/9p7tH4fzcOc6eWAoqDg9KJ
-        y0UmBRQaMimg0JBJAcV5M+bRobTEsaDQ4hm3EyWHkt/HW7R8SK3vHYUWZ2MHuOF0KOcypK21J06HVxoy
-        KaDQzFg4yYyFW/wzpXwB7TSoHSIP/BUAAAAASUVORK5CYII=
-</value>
   </data>
   <data name="tsbConceptoContable.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -204,8 +173,11 @@
   <data name="tsbAgenda.Text" xml:space="preserve">
     <value>Agenda</value>
   </data>
+  <data name="toolStripSeparator1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 93</value>
+    <value>6, 75</value>
   </data>
   <data name="tsbMovimientodeAsientos.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -284,10 +256,10 @@
   <data name="tsbBalanceDeSumasySaldos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVEhL7ZVBCsIwEEWzynWkLqWez3iG7D2De8+id0hI
-        E//Ub0EQNDJBkTwYOmXI/5ku+k0pxU7TtA8hXNCrEmM84+FQVoykaY0zdC05541RBrKjaIuHvMxwpg7l
-        SzeqhvLdqB7Kd6N6KP/PRmDkTA38qLfUfjBqyhITmnjvsUxeoQbp7zGhHnw0GlBr6ZHgOzGyKNdiM2re
-        ovxd5pNP4FiPlNKJ2gv4JEeOfxzc9MBLVyObU+Y1PPMxlPkGxlwBMoT26uGThWQAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC+SURBVEhL7ZVRCsIwEETzletI/ZR6PpOLeAb/PYveISFN
+        nK1jQShoZIMiebB0y5KZbD86ppRip2nyIYQrelVijBc8HMqKkTStcYauJee8M8pAdhRt8ZCXGc7UoXzp
+        RtVQvhvVQ/luVA/l/9kIjJypgR/1ntpPRk1ZYkIT7z2WyRvUIP0jJtSDj0YDais9EvwgRhblWmxGzXuU
+        v8t8cgWO9Ugpnam9gE9y4vjHwU2PvHQ1sjllXsMzH0OZb2DMDY7r9hJ2aFinAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="tsbBalanceDeSumasySaldos.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -299,8 +271,11 @@
   <data name="tsbBalanceDeSumasySaldos.Text" xml:space="preserve">
     <value>Balance de Sumas y Saldos</value>
   </data>
+  <data name="toolStripSeparator2.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 93</value>
+    <value>6, 75</value>
   </data>
   <data name="toolStripButton9.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -410,8 +385,11 @@
   <data name="toolStripButton12.Text" xml:space="preserve">
     <value>toolStripButton12</value>
   </data>
+  <data name="toolStripSeparator3.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 93</value>
+    <value>6, 75</value>
   </data>
   <data name="toolStripButton13.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -521,8 +499,11 @@
   <data name="toolStripButton16.Text" xml:space="preserve">
     <value>toolStripButton16</value>
   </data>
+  <data name="toolStripSeparator4.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 93</value>
+    <value>6, 75</value>
   </data>
   <data name="tsbBlockdeNotas.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -602,8 +583,11 @@
   <data name="tsbNotas.Text" xml:space="preserve">
     <value>Notas</value>
   </data>
+  <data name="toolStripSeparator5.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 93</value>
+    <value>6, 75</value>
   </data>
   <data name="tsbConfigImpresora.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -652,7 +636,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStripADs.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;btnCerrar.Name" xml:space="preserve">
     <value>btnCerrar</value>
@@ -664,7 +660,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;controlbarMinimizar.Name" xml:space="preserve">
     <value>controlbarMinimizar</value>
@@ -676,7 +672,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;controlbarMinimizar.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -700,13 +696,46 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 19</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="btnCerrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <data name="btnCerrar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Dotum, 12.75pt</value>
+  </data>
+  <data name="btnCerrar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnCerrar.Location" type="System.Drawing.Point, System.Drawing">
     <value>1059, 0</value>
@@ -730,7 +759,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="controlbarMinimizar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -775,7 +804,7 @@
 </value>
   </data>
   <data name="controlbarMinimizar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1023, 0</value>
+    <value>1023, 1</value>
   </data>
   <data name="controlbarMinimizar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -825,7 +854,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;controlbarMinimizar.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="HoraFecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>773, 17</value>
@@ -849,7 +878,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;borde2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="borde3.Location" type="System.Drawing.Point, System.Drawing">
     <value>269, 747</value>
@@ -870,10 +899,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;borde3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="borde1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 117</value>
+    <value>269, 117</value>
   </data>
   <data name="borde1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1160, 3</value>
@@ -891,7 +920,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;borde1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="lblnuevomensaje.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -927,1097 +956,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblnuevomensaje.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 11.25pt</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 3</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 19</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Sistema Integral de Gestión Contable</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblUsu.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblUsu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium, 12pt</value>
-  </data>
-  <data name="lblUsu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblUsu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 481</value>
-  </data>
-  <data name="lblUsu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 21</value>
-  </data>
-  <data name="lblUsu.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="lblUsu.Text" xml:space="preserve">
-    <value>Nombre Usuario</value>
-  </data>
-  <data name="&gt;&gt;lblUsu.Name" xml:space="preserve">
-    <value>lblUsu</value>
-  </data>
-  <data name="&gt;&gt;lblUsu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblUsu.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;lblUsu.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="btnAyuda2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnAyuda2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 15.75pt</value>
-  </data>
-  <data name="btnAyuda2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnAyuda2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAyuda2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 693</value>
-  </data>
-  <data name="btnAyuda2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 40</value>
-  </data>
-  <data name="btnAyuda2.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="btnAyuda2.Text" xml:space="preserve">
-    <value>   Ayuda</value>
-  </data>
-  <data name="btnAyuda2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnAyuda2.Name" xml:space="preserve">
-    <value>btnAyuda2</value>
-  </data>
-  <data name="&gt;&gt;btnAyuda2.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnAyuda2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnAyuda2.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="btnMantenimiento2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnMantenimiento2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 15.75pt</value>
-  </data>
-  <data name="btnMantenimiento2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnMantenimiento2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnMantenimiento2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 642</value>
-  </data>
-  <data name="btnMantenimiento2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 40</value>
-  </data>
-  <data name="btnMantenimiento2.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="btnMantenimiento2.Text" xml:space="preserve">
-    <value>    Mantenimiento</value>
-  </data>
-  <data name="btnMantenimiento2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnMantenimiento2.Name" xml:space="preserve">
-    <value>btnMantenimiento2</value>
-  </data>
-  <data name="&gt;&gt;btnMantenimiento2.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnMantenimiento2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnMantenimiento2.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="btnContabilidad2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnContabilidad2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 15.75pt</value>
-  </data>
-  <data name="btnContabilidad2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnContabilidad2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnContabilidad2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 591</value>
-  </data>
-  <data name="btnContabilidad2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 40</value>
-  </data>
-  <data name="btnContabilidad2.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="btnContabilidad2.Text" xml:space="preserve">
-    <value>   Contabilidad</value>
-  </data>
-  <data name="btnContabilidad2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnContabilidad2.Name" xml:space="preserve">
-    <value>btnContabilidad2</value>
-  </data>
-  <data name="&gt;&gt;btnContabilidad2.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnContabilidad2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnContabilidad2.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="btnVer2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnVer2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 15.75pt</value>
-  </data>
-  <data name="btnVer2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnVer2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnVer2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 543</value>
-  </data>
-  <data name="btnVer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 40</value>
-  </data>
-  <data name="btnVer2.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="btnVer2.Text" xml:space="preserve">
-    <value>  Ver</value>
-  </data>
-  <data name="btnVer2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnVer2.Name" xml:space="preserve">
-    <value>btnVer2</value>
-  </data>
-  <data name="&gt;&gt;btnVer2.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnVer2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnVer2.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="btnArchivos2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnArchivos2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 15.75pt</value>
-  </data>
-  <data name="btnArchivos2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnArchivos2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnArchivos2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 495</value>
-  </data>
-  <data name="btnArchivos2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 40</value>
-  </data>
-  <data name="btnArchivos2.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="btnArchivos2.Text" xml:space="preserve">
-    <value>   Archivos</value>
-  </data>
-  <data name="btnArchivos2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnArchivos2.Name" xml:space="preserve">
-    <value>btnArchivos2</value>
-  </data>
-  <data name="&gt;&gt;btnArchivos2.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnArchivos2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnArchivos2.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="PanelMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQ0AAALtCAYAAAAyvjEXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAiQSURBVHhe7dQ5AcAwEMCwssnBKLQw78Mg3jWIgq611v3Z
-        ACf+NPbMPAAnpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIA
-        EmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEG
-        kEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0
-        gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ik
-        ASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAi
-        DSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gAS
-        aQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQ
-        SANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSA
-        RBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQB
-        JNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCIN
-        IJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJp
-        AIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBI
-        A0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBE
-        GkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk
-        0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0g
-        kQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkA
-        iTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgD
-        SKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQa
-        QCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTS
-        ABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCR
-        BpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJ
-        NIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANI
-        pAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpA
-        Ig0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIA
-        EmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEG
-        kEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0
-        gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ik
-        ASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAi
-        DSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gAS
-        aQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQ
-        SANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSA
-        RBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQB
-        JNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCIN
-        IJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJp
-        AIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBI
-        A0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQDBPC9Q
-        NiDvVgjYOwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="PanelMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 630</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 1</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblPerfil.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPerfil.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium, 12pt</value>
-  </data>
-  <data name="lblPerfil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblPerfil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 538</value>
-  </data>
-  <data name="lblPerfil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 21</value>
-  </data>
-  <data name="lblPerfil.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="lblPerfil.Text" xml:space="preserve">
-    <value>Nombre Perfil</value>
-  </data>
-  <data name="&gt;&gt;lblPerfil.Name" xml:space="preserve">
-    <value>lblPerfil</value>
-  </data>
-  <data name="&gt;&gt;lblPerfil.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPerfil.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;lblPerfil.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblEmpresa.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblEmpresa.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium, 12pt</value>
-  </data>
-  <data name="lblEmpresa.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblEmpresa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 509</value>
-  </data>
-  <data name="lblEmpresa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 21</value>
-  </data>
-  <data name="lblEmpresa.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="lblEmpresa.Text" xml:space="preserve">
-    <value>Nombre Empresa</value>
-  </data>
-  <data name="&gt;&gt;lblEmpresa.Name" xml:space="preserve">
-    <value>lblEmpresa</value>
-  </data>
-  <data name="&gt;&gt;lblEmpresa.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblEmpresa.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;lblEmpresa.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblSesion.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblSesion.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium, 12pt</value>
-  </data>
-  <data name="lblSesion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblSesion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 646</value>
-  </data>
-  <data name="lblSesion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 21</value>
-  </data>
-  <data name="lblSesion.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="lblSesion.Text" xml:space="preserve">
-    <value>Cerrar Sesión</value>
-  </data>
-  <data name="&gt;&gt;lblSesion.Name" xml:space="preserve">
-    <value>lblSesion</value>
-  </data>
-  <data name="&gt;&gt;lblSesion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSesion.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;lblSesion.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnSesion.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnSesion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnSesion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 637</value>
-  </data>
-  <data name="btnSesion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="btnSesion.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="&gt;&gt;btnSesion.Name" xml:space="preserve">
-    <value>btnSesion</value>
-  </data>
-  <data name="&gt;&gt;btnSesion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSesion.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;btnSesion.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="pContabilidad2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 290</value>
-  </data>
-  <data name="pContabilidad2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 40</value>
-  </data>
-  <data name="pContabilidad2.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="pContabilidad2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pContabilidad2.Name" xml:space="preserve">
-    <value>pContabilidad2</value>
-  </data>
-  <data name="&gt;&gt;pContabilidad2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pContabilidad2.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;pContabilidad2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="pVer2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 231</value>
-  </data>
-  <data name="pVer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 40</value>
-  </data>
-  <data name="pVer2.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="pVer2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pVer2.Name" xml:space="preserve">
-    <value>pVer2</value>
-  </data>
-  <data name="&gt;&gt;pVer2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pVer2.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;pVer2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="pAyuda2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 408</value>
-  </data>
-  <data name="pAyuda2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 40</value>
-  </data>
-  <data name="pAyuda2.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="pAyuda2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pAyuda2.Name" xml:space="preserve">
-    <value>pAyuda2</value>
-  </data>
-  <data name="&gt;&gt;pAyuda2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pAyuda2.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;pAyuda2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="pMantenimiento2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 349</value>
-  </data>
-  <data name="pMantenimiento2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 40</value>
-  </data>
-  <data name="pMantenimiento2.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="pMantenimiento2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pMantenimiento2.Name" xml:space="preserve">
-    <value>pMantenimiento2</value>
-  </data>
-  <data name="&gt;&gt;pMantenimiento2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pMantenimiento2.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;pMantenimiento2.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="pArchivos2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 169</value>
-  </data>
-  <data name="pArchivos2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 40</value>
-  </data>
-  <data name="pArchivos2.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="pArchivos2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pArchivos2.Name" xml:space="preserve">
-    <value>pArchivos2</value>
-  </data>
-  <data name="&gt;&gt;pArchivos2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pArchivos2.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;pArchivos2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="pAyuda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 408</value>
-  </data>
-  <data name="pAyuda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 40</value>
-  </data>
-  <data name="pAyuda.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="pAyuda.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pAyuda.Name" xml:space="preserve">
-    <value>pAyuda</value>
-  </data>
-  <data name="&gt;&gt;pAyuda.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pAyuda.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;pAyuda.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="pMantenimiento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 349</value>
-  </data>
-  <data name="pMantenimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 40</value>
-  </data>
-  <data name="pMantenimiento.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="pMantenimiento.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pMantenimiento.Name" xml:space="preserve">
-    <value>pMantenimiento</value>
-  </data>
-  <data name="&gt;&gt;pMantenimiento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pMantenimiento.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;pMantenimiento.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="pContabilidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 290</value>
-  </data>
-  <data name="pContabilidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 40</value>
-  </data>
-  <data name="pContabilidad.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="pContabilidad.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pContabilidad.Name" xml:space="preserve">
-    <value>pContabilidad</value>
-  </data>
-  <data name="&gt;&gt;pContabilidad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pContabilidad.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;pContabilidad.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="pVer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 231</value>
-  </data>
-  <data name="pVer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 40</value>
-  </data>
-  <data name="pVer.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="pVer.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pVer.Name" xml:space="preserve">
-    <value>pVer</value>
-  </data>
-  <data name="&gt;&gt;pVer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pVer.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;pVer.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="pArchivos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 169</value>
-  </data>
-  <data name="pArchivos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 40</value>
-  </data>
-  <data name="pArchivos.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="pArchivos.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pArchivos.Name" xml:space="preserve">
-    <value>pArchivos</value>
-  </data>
-  <data name="&gt;&gt;pArchivos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pArchivos.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;pArchivos.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 685</value>
-  </data>
-  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 1</value>
-  </data>
-  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
-    <value>panel7</value>
-  </data>
-  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 24</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 121</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 25</value>
-  </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="lblFecha.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium, 14.25pt, style=Bold</value>
-  </data>
-  <data name="lblFecha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblFecha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 724</value>
-  </data>
-  <data name="lblFecha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 21</value>
-  </data>
-  <data name="lblFecha.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="lblFecha.Text" xml:space="preserve">
-    <value>Fecha</value>
-  </data>
-  <data name="&gt;&gt;lblFecha.Name" xml:space="preserve">
-    <value>lblFecha</value>
-  </data>
-  <data name="&gt;&gt;lblFecha.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblFecha.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;lblFecha.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="lblHora.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium, 24pt, style=Bold</value>
-  </data>
-  <data name="lblHora.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblHora.Location" type="System.Drawing.Point, System.Drawing">
-    <value>58, 691</value>
-  </data>
-  <data name="lblHora.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 33</value>
-  </data>
-  <data name="lblHora.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="lblHora.Text" xml:space="preserve">
-    <value>Hora</value>
-  </data>
-  <data name="&gt;&gt;lblHora.Name" xml:space="preserve">
-    <value>lblHora</value>
-  </data>
-  <data name="&gt;&gt;lblHora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblHora.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;lblHora.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="btnAyuda.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnAyuda.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 15.75pt</value>
-  </data>
-  <data name="btnAyuda.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnAyuda.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAyuda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 408</value>
-  </data>
-  <data name="btnAyuda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 40</value>
-  </data>
-  <data name="btnAyuda.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="btnAyuda.Text" xml:space="preserve">
-    <value>   Ayuda</value>
-  </data>
-  <data name="&gt;&gt;btnAyuda.Name" xml:space="preserve">
-    <value>btnAyuda</value>
-  </data>
-  <data name="&gt;&gt;btnAyuda.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnAyuda.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;btnAyuda.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="btnMantenimiento.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnMantenimiento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 15.75pt</value>
-  </data>
-  <data name="btnMantenimiento.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnMantenimiento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnMantenimiento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 349</value>
-  </data>
-  <data name="btnMantenimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 40</value>
-  </data>
-  <data name="btnMantenimiento.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="btnMantenimiento.Text" xml:space="preserve">
-    <value>    Mantenimiento</value>
-  </data>
-  <data name="&gt;&gt;btnMantenimiento.Name" xml:space="preserve">
-    <value>btnMantenimiento</value>
-  </data>
-  <data name="&gt;&gt;btnMantenimiento.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnMantenimiento.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;btnMantenimiento.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="btnContabilidad.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnContabilidad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 15.75pt</value>
-  </data>
-  <data name="btnContabilidad.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnContabilidad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnContabilidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 290</value>
-  </data>
-  <data name="btnContabilidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 40</value>
-  </data>
-  <data name="btnContabilidad.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="btnContabilidad.Text" xml:space="preserve">
-    <value>   Contabilidad</value>
-  </data>
-  <data name="&gt;&gt;btnContabilidad.Name" xml:space="preserve">
-    <value>btnContabilidad</value>
-  </data>
-  <data name="&gt;&gt;btnContabilidad.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnContabilidad.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;btnContabilidad.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="btnVer.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnVer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 15.75pt</value>
-  </data>
-  <data name="btnVer.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnVer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnVer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 231</value>
-  </data>
-  <data name="btnVer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 40</value>
-  </data>
-  <data name="btnVer.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="btnVer.Text" xml:space="preserve">
-    <value>  Ver</value>
-  </data>
-  <data name="&gt;&gt;btnVer.Name" xml:space="preserve">
-    <value>btnVer</value>
-  </data>
-  <data name="&gt;&gt;btnVer.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnVer.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;btnVer.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="btnArchivos.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnArchivos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 15.75pt</value>
-  </data>
-  <data name="btnArchivos.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnArchivos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnArchivos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 169</value>
-  </data>
-  <data name="btnArchivos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 40</value>
-  </data>
-  <data name="btnArchivos.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="btnArchivos.Text" xml:space="preserve">
-    <value>   Archivos</value>
-  </data>
-  <data name="&gt;&gt;btnArchivos.Name" xml:space="preserve">
-    <value>btnArchivos</value>
-  </data>
-  <data name="&gt;&gt;btnArchivos.Type" xml:space="preserve">
-    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnArchivos.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;btnArchivos.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="bunifuShapes1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 472</value>
-  </data>
-  <data name="bunifuShapes1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 285</value>
-  </data>
-  <data name="bunifuShapes1.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="bunifuShapes1.Text" xml:space="preserve">
-    <value>bunifuShapes1</value>
-  </data>
-  <data name="&gt;&gt;bunifuShapes1.Name" xml:space="preserve">
-    <value>bunifuShapes1</value>
-  </data>
-  <data name="&gt;&gt;bunifuShapes1.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuShapes, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;bunifuShapes1.Parent" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;bunifuShapes1.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="PanelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="PanelMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="PanelMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="PanelMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 749</value>
-  </data>
-  <data name="PanelMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;PanelMenu.Name" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;PanelMenu.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuGradientPanel, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;PanelMenu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PanelMenu.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="pbLogo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pbLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pbLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>547, 265</value>
-  </data>
-  <data name="pbLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>544, 320</value>
-  </data>
-  <data name="pbLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pbLogo.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.Name" xml:space="preserve">
-    <value>pbLogo</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.ZOrder" xml:space="preserve">
-    <value>12</value>
   </data>
   <metadata name="Menu_Archivos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>129, 17</value>
@@ -2345,6 +1284,1228 @@
   </data>
   <data name="configurarImpresora.Text" xml:space="preserve">
     <value>Configurar Impresoras</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 472</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 19</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="label3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Disparador.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Disparador.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="Disparador.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Disparador.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 467</value>
+  </data>
+  <data name="Disparador.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 19</value>
+  </data>
+  <data name="Disparador.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="Disparador.Text" xml:space="preserve">
+    <value>Disparador</value>
+  </data>
+  <data name="Disparador.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Disparador.Name" xml:space="preserve">
+    <value>Disparador</value>
+  </data>
+  <data name="&gt;&gt;Disparador.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Disparador.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Disparador.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 25</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1101, 1</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 3</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 19</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Sistema Integral de Gestión Contable</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblUsu.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblUsu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium, 12pt</value>
+  </data>
+  <data name="lblUsu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblUsu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 481</value>
+  </data>
+  <data name="lblUsu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="lblUsu.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="lblUsu.Text" xml:space="preserve">
+    <value>Nombre Usuario</value>
+  </data>
+  <data name="&gt;&gt;lblUsu.Name" xml:space="preserve">
+    <value>lblUsu</value>
+  </data>
+  <data name="&gt;&gt;lblUsu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUsu.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;lblUsu.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="btnAyuda2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAyuda2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 15.75pt</value>
+  </data>
+  <data name="btnAyuda2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnAyuda2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAyuda2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 693</value>
+  </data>
+  <data name="btnAyuda2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 40</value>
+  </data>
+  <data name="btnAyuda2.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="btnAyuda2.Text" xml:space="preserve">
+    <value>   Ayuda</value>
+  </data>
+  <data name="btnAyuda2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda2.Name" xml:space="preserve">
+    <value>btnAyuda2</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda2.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda2.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="btnMantenimiento2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnMantenimiento2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 15.75pt</value>
+  </data>
+  <data name="btnMantenimiento2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnMantenimiento2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnMantenimiento2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 642</value>
+  </data>
+  <data name="btnMantenimiento2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 40</value>
+  </data>
+  <data name="btnMantenimiento2.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="btnMantenimiento2.Text" xml:space="preserve">
+    <value>    Mantenimiento</value>
+  </data>
+  <data name="btnMantenimiento2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento2.Name" xml:space="preserve">
+    <value>btnMantenimiento2</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento2.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento2.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="btnContabilidad2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnContabilidad2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 15.75pt</value>
+  </data>
+  <data name="btnContabilidad2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnContabilidad2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnContabilidad2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 591</value>
+  </data>
+  <data name="btnContabilidad2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 40</value>
+  </data>
+  <data name="btnContabilidad2.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="btnContabilidad2.Text" xml:space="preserve">
+    <value>   Contabilidad</value>
+  </data>
+  <data name="btnContabilidad2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad2.Name" xml:space="preserve">
+    <value>btnContabilidad2</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad2.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad2.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="btnVer2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnVer2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 15.75pt</value>
+  </data>
+  <data name="btnVer2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnVer2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnVer2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 543</value>
+  </data>
+  <data name="btnVer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 40</value>
+  </data>
+  <data name="btnVer2.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="btnVer2.Text" xml:space="preserve">
+    <value>  Ver</value>
+  </data>
+  <data name="btnVer2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnVer2.Name" xml:space="preserve">
+    <value>btnVer2</value>
+  </data>
+  <data name="&gt;&gt;btnVer2.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnVer2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnVer2.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="btnArchivos2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnArchivos2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 15.75pt</value>
+  </data>
+  <data name="btnArchivos2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnArchivos2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnArchivos2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 495</value>
+  </data>
+  <data name="btnArchivos2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 40</value>
+  </data>
+  <data name="btnArchivos2.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="btnArchivos2.Text" xml:space="preserve">
+    <value>   Archivos</value>
+  </data>
+  <data name="btnArchivos2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos2.Name" xml:space="preserve">
+    <value>btnArchivos2</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos2.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos2.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="PanelMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQ0AAALtCAYAAAAyvjEXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAiQSURBVHhe7dQ5AcAwEMCwssnBKLQw78Mg3jWIgq611v3Z
+        ACf+NPbMPAAnpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIA
+        EmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEG
+        kEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0
+        gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ik
+        ASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAi
+        DSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gAS
+        aQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQ
+        SANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSA
+        RBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQB
+        JNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCIN
+        IJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJp
+        AIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBI
+        A0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBE
+        GkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk
+        0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0g
+        kQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkA
+        iTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgD
+        SKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQa
+        QCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTS
+        ABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCR
+        BpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJ
+        NIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANI
+        pAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpA
+        Ig0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIA
+        EmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEG
+        kEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0
+        gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ik
+        ASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAi
+        DSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gAS
+        aQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQ
+        SANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSA
+        RBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQB
+        JNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJpAIk0gEQaQCIN
+        IJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBIA0ikASTSABJp
+        AIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQCJNIBEGkAiDSCRBpBI
+        A0ikASTSABJpAIk0gEQaQCINIJEGkEgDSKQBJNIAEmkAiTSARBpAIg0gkQaQSANIpAEk0gASaQDBPC9Q
+        NiDvVgjYOwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PanelMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 112</value>
+  </data>
+  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 5</value>
+  </data>
+  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 1</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 630</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 1</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPerfil.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPerfil.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium, 12pt</value>
+  </data>
+  <data name="lblPerfil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPerfil.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 539</value>
+  </data>
+  <data name="lblPerfil.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="lblPerfil.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="lblPerfil.Text" xml:space="preserve">
+    <value>Nombre Perfil</value>
+  </data>
+  <data name="&gt;&gt;lblPerfil.Name" xml:space="preserve">
+    <value>lblPerfil</value>
+  </data>
+  <data name="&gt;&gt;lblPerfil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPerfil.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;lblPerfil.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblEmpresa.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblEmpresa.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium, 12pt</value>
+  </data>
+  <data name="lblEmpresa.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblEmpresa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 509</value>
+  </data>
+  <data name="lblEmpresa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 21</value>
+  </data>
+  <data name="lblEmpresa.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="lblEmpresa.Text" xml:space="preserve">
+    <value>Nombre Empresa</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.Name" xml:space="preserve">
+    <value>lblEmpresa</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblSesion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSesion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium, 12pt</value>
+  </data>
+  <data name="lblSesion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSesion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 647</value>
+  </data>
+  <data name="lblSesion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="lblSesion.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="lblSesion.Text" xml:space="preserve">
+    <value>Cerrar Sesión</value>
+  </data>
+  <data name="&gt;&gt;lblSesion.Name" xml:space="preserve">
+    <value>lblSesion</value>
+  </data>
+  <data name="&gt;&gt;lblSesion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSesion.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;lblSesion.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnSesion.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSesion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSesion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 637</value>
+  </data>
+  <data name="btnSesion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="btnSesion.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="&gt;&gt;btnSesion.Name" xml:space="preserve">
+    <value>btnSesion</value>
+  </data>
+  <data name="&gt;&gt;btnSesion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSesion.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnSesion.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="pContabilidad2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 290</value>
+  </data>
+  <data name="pContabilidad2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 40</value>
+  </data>
+  <data name="pContabilidad2.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="pContabilidad2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad2.Name" xml:space="preserve">
+    <value>pContabilidad2</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pVer2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 231</value>
+  </data>
+  <data name="pVer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 40</value>
+  </data>
+  <data name="pVer2.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="pVer2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pVer2.Name" xml:space="preserve">
+    <value>pVer2</value>
+  </data>
+  <data name="&gt;&gt;pVer2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pVer2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pVer2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="pAyuda2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 408</value>
+  </data>
+  <data name="pAyuda2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 40</value>
+  </data>
+  <data name="pAyuda2.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="pAyuda2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pAyuda2.Name" xml:space="preserve">
+    <value>pAyuda2</value>
+  </data>
+  <data name="&gt;&gt;pAyuda2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pAyuda2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pAyuda2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="pMantenimiento2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 349</value>
+  </data>
+  <data name="pMantenimiento2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 40</value>
+  </data>
+  <data name="pMantenimiento2.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="pMantenimiento2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento2.Name" xml:space="preserve">
+    <value>pMantenimiento2</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="pArchivos2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 169</value>
+  </data>
+  <data name="pArchivos2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 40</value>
+  </data>
+  <data name="pArchivos2.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="pArchivos2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pArchivos2.Name" xml:space="preserve">
+    <value>pArchivos2</value>
+  </data>
+  <data name="&gt;&gt;pArchivos2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pArchivos2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pArchivos2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="pAyuda.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 408</value>
+  </data>
+  <data name="pAyuda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 40</value>
+  </data>
+  <data name="pAyuda.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="pAyuda.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pAyuda.Name" xml:space="preserve">
+    <value>pAyuda</value>
+  </data>
+  <data name="&gt;&gt;pAyuda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pAyuda.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pAyuda.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="pMantenimiento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 349</value>
+  </data>
+  <data name="pMantenimiento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 40</value>
+  </data>
+  <data name="pMantenimiento.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="pMantenimiento.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento.Name" xml:space="preserve">
+    <value>pMantenimiento</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="pContabilidad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 290</value>
+  </data>
+  <data name="pContabilidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 40</value>
+  </data>
+  <data name="pContabilidad.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="pContabilidad.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad.Name" xml:space="preserve">
+    <value>pContabilidad</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="pVer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 231</value>
+  </data>
+  <data name="pVer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 40</value>
+  </data>
+  <data name="pVer.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="pVer.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pVer.Name" xml:space="preserve">
+    <value>pVer</value>
+  </data>
+  <data name="&gt;&gt;pVer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pVer.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pVer.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="pArchivos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 169</value>
+  </data>
+  <data name="pArchivos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 40</value>
+  </data>
+  <data name="pArchivos.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="pArchivos.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pArchivos.Name" xml:space="preserve">
+    <value>pArchivos</value>
+  </data>
+  <data name="&gt;&gt;pArchivos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pArchivos.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pArchivos.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 685</value>
+  </data>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 1</value>
+  </data>
+  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="pbLogoPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pbLogoPanel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbLogoPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 25</value>
+  </data>
+  <data name="pbLogoPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 121</value>
+  </data>
+  <data name="pbLogoPanel.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pbLogoPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;pbLogoPanel.Name" xml:space="preserve">
+    <value>pbLogoPanel</value>
+  </data>
+  <data name="&gt;&gt;pbLogoPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbLogoPanel.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pbLogoPanel.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 25</value>
+  </data>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="lblFecha.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium, 14.25pt, style=Bold</value>
+  </data>
+  <data name="lblFecha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblFecha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 724</value>
+  </data>
+  <data name="lblFecha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 21</value>
+  </data>
+  <data name="lblFecha.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="lblFecha.Text" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="&gt;&gt;lblFecha.Name" xml:space="preserve">
+    <value>lblFecha</value>
+  </data>
+  <data name="&gt;&gt;lblFecha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblFecha.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;lblFecha.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="lblHora.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium, 24pt, style=Bold</value>
+  </data>
+  <data name="lblHora.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblHora.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 691</value>
+  </data>
+  <data name="lblHora.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 33</value>
+  </data>
+  <data name="lblHora.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="lblHora.Text" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Name" xml:space="preserve">
+    <value>lblHora</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;lblHora.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="btnAyuda.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAyuda.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 15.75pt</value>
+  </data>
+  <data name="btnAyuda.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnAyuda.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAyuda.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 408</value>
+  </data>
+  <data name="btnAyuda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 40</value>
+  </data>
+  <data name="btnAyuda.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="btnAyuda.Text" xml:space="preserve">
+    <value>   Ayuda</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda.Name" xml:space="preserve">
+    <value>btnAyuda</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="btnMantenimiento.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnMantenimiento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 15.75pt</value>
+  </data>
+  <data name="btnMantenimiento.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnMantenimiento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnMantenimiento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 349</value>
+  </data>
+  <data name="btnMantenimiento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 40</value>
+  </data>
+  <data name="btnMantenimiento.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="btnMantenimiento.Text" xml:space="preserve">
+    <value>    Mantenimiento</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento.Name" xml:space="preserve">
+    <value>btnMantenimiento</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="btnContabilidad.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnContabilidad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 15.75pt</value>
+  </data>
+  <data name="btnContabilidad.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnContabilidad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnContabilidad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 290</value>
+  </data>
+  <data name="btnContabilidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 40</value>
+  </data>
+  <data name="btnContabilidad.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="btnContabilidad.Text" xml:space="preserve">
+    <value>   Contabilidad</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad.Name" xml:space="preserve">
+    <value>btnContabilidad</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="btnVer.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnVer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 15.75pt</value>
+  </data>
+  <data name="btnVer.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnVer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnVer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 231</value>
+  </data>
+  <data name="btnVer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 40</value>
+  </data>
+  <data name="btnVer.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="btnVer.Text" xml:space="preserve">
+    <value>  Ver</value>
+  </data>
+  <data name="&gt;&gt;btnVer.Name" xml:space="preserve">
+    <value>btnVer</value>
+  </data>
+  <data name="&gt;&gt;btnVer.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnVer.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnVer.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="btnArchivos.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnArchivos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 15.75pt</value>
+  </data>
+  <data name="btnArchivos.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnArchivos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnArchivos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 169</value>
+  </data>
+  <data name="btnArchivos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 40</value>
+  </data>
+  <data name="btnArchivos.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnArchivos.Text" xml:space="preserve">
+    <value>   Archivos</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos.Name" xml:space="preserve">
+    <value>btnArchivos</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="bunifuShapes1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 472</value>
+  </data>
+  <data name="bunifuShapes1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 285</value>
+  </data>
+  <data name="bunifuShapes1.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="bunifuShapes1.Text" xml:space="preserve">
+    <value>bunifuShapes1</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.Name" xml:space="preserve">
+    <value>bunifuShapes1</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuShapes, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="PanelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="PanelMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="PanelMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="PanelMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 749</value>
+  </data>
+  <data name="PanelMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;PanelMenu.Name" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;PanelMenu.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuGradientPanel, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;PanelMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelMenu.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="pbLogo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pbLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 265</value>
+  </data>
+  <data name="pbLogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>544, 320</value>
+  </data>
+  <data name="pbLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pbLogo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pbLogo.Name" xml:space="preserve">
+    <value>pbLogo</value>
+  </data>
+  <data name="&gt;&gt;pbLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbLogo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbLogo.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

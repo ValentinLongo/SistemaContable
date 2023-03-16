@@ -62,14 +62,7 @@ namespace SistemaContable
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
-        private void frmInicio_MdiChildActivate(object sender, EventArgs e)
-        {
-            //cambiar
-            borde1.BackColor = Color.FromArgb(255, 50, 50, 50);
-            borde2.BackColor = Color.FromArgb(255, 50, 50, 50);
-            borde3.BackColor = Color.FromArgb(255, 50, 50, 50);
-        }
-
+        //SETEO INICIO
         private void DatosUsuEmp() 
         {
             string perfil = "";
@@ -103,6 +96,7 @@ namespace SistemaContable
             lblPerfil.Text = "Perfil: " + perfil;
         }
 
+        //CAMBIAR SESIÓN
         private void btnSesion_Click(object sender, EventArgs e)
         {
             if (lblSesion.Text == "Cerrar Sesión")
@@ -152,6 +146,7 @@ namespace SistemaContable
             }
         }
 
+        //VARIOS
         private void btnCerrar_MouseEnter(object sender, EventArgs e)
         {
             btnCerrar.BackColor = Color.Red;
@@ -161,9 +156,7 @@ namespace SistemaContable
         {
             btnCerrar.BackColor = Color.Transparent;
         }
-        //
 
-        //
         private void frmInicio_Load(object sender, EventArgs e)
         {
             Menu_Archivos.IsMainMenu = true;
@@ -171,34 +164,13 @@ namespace SistemaContable
             Menu_Contabilidad.IsMainMenu = true;
             Menu_Mantenimiento.IsMainMenu = true;
             Menu_Ayuda.IsMainMenu = true;
+        }
 
-            //MENSAJES
-            if (Negocio.Funciones.Ver.FComunicacionInterna.NuevosMSGs())
-            {
-                lblnuevomensaje.Visible = true;
-            }
-
-            //TAREAS
-            if (Negocio.Funciones.Ver.FCalendario.MSGTareas() == 1)
-            {
-                frmMessageBox MessageBox = new frmMessageBox("Atención!", "1 hora para que una tarea expire!, ¿Desea Posponerla?", true);
-                MessageBox.ShowDialog();
-                if (frmMessageBox.Acepto)
-                {
-                    frmCalendario frm = new frmCalendario();
-                    Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString());
-                }
-            }
-            else if (Negocio.Funciones.Ver.FCalendario.MSGTareas() == 2)
-            {
-                frmMessageBox MessageBox = new frmMessageBox("Atención!", "5 minutos para que una tarea expire!, ¿Desea Posponerla?", true);
-                MessageBox.ShowDialog();
-                if (frmMessageBox.Acepto)
-                {
-                    frmCalendario frm = new frmCalendario();
-                    Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString());
-                }
-            }
+        private void frmInicio_MdiChildActivate(object sender, EventArgs e)
+        {
+            Negocio.FFormatoSistema.ColorBordes(borde1);
+            Negocio.FFormatoSistema.ColorBordes(borde2);
+            Negocio.FFormatoSistema.ColorBordes(borde3);
         }
 
         private void tsbMensajesInternos_MouseEnter(object sender, EventArgs e)
@@ -211,6 +183,79 @@ namespace SistemaContable
             lblnuevomensaje.BackColor = Color.FromArgb(255, 40, 40, 40);
         }
 
+        private void HoraFecha_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+            lblFecha.Text = DateTime.Now.ToShortDateString();
+        }
+
+        private void DisparadorInicio(object sender, EventArgs e)
+        {
+            //MENSAJES
+            if (Negocio.Funciones.Ver.FComunicacionInterna.NuevosMSGs())
+            {
+                lblnuevomensaje.Visible = true;
+            }
+
+            //TAREAS
+            string tiempo = "";
+            Negocio.Funciones.Ver.FCalendario.MSGTareas();
+
+            switch (Negocio.Funciones.Ver.FCalendario.MSGTareas())
+            {
+                case 1:
+                    tiempo = "2 horas";
+                    break;
+
+                case 2:
+                    tiempo = "1 hora";
+                    break;
+
+                case 3:
+                    tiempo = "30 minutos";
+                    break;
+
+                case 4:
+                    tiempo = "15 minutos";
+                    break;
+
+                case 5:
+                    tiempo = "5 minutos";
+                    break;
+
+                case 6:
+                    tiempo = "expiro";
+                    break;
+
+                default:
+                    break;
+            }
+
+            if (tiempo != "" || tiempo == "expiro")
+            {
+                if (tiempo == "expiro")
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Atención!", "Una Tarea Expiro, ¿Desea Posponerla?", true);
+                    MessageBox.ShowDialog();
+                    if (frmMessageBox.Acepto)
+                    {
+                        frmCalendario frm = new frmCalendario();
+                        Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString());
+                    }
+                }
+                else
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Atención!", tiempo + " para que una tarea expire!, ¿Desea Posponerla?", true);
+                    MessageBox.ShowDialog();
+                    if (frmMessageBox.Acepto)
+                    {
+                        frmCalendario frm = new frmCalendario();
+                        Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString());
+                    }
+                }
+
+            }
+        }
         //
 
         //ACCESOS DIRECTOS
@@ -218,42 +263,49 @@ namespace SistemaContable
         {
             frmUsuarios frm = new frmUsuarios();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbUsuario.Tag.ToString());
+            DisparadorInicio(sender, e);
         }
 
         private void tsbPlandeCuenta_Click(object sender, EventArgs e)
         {
             frmPlanDeCuentas frm = new frmPlanDeCuentas();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbPlandeCuenta.Tag.ToString());
+            DisparadorInicio(sender, e);
         }
 
         private void tsbConceptoContable_Click(object sender, EventArgs e)
         {
             frmConceptosContables frm = new frmConceptosContables();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbConceptoContable.Tag.ToString());
+            DisparadorInicio(sender, e);
         }
 
         private void tsbAgenda_Click(object sender, EventArgs e)
         {
             frmAgenda frm = new frmAgenda();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbAgenda.Tag.ToString());
+            DisparadorInicio(sender, e);
         }
 
         private void tsbMovimientodeAsientos_Click(object sender, EventArgs e)
         {
             frmAsientosContables frm = new frmAsientosContables();
             Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMovimientodeAsientos.Tag.ToString());
+            DisparadorInicio(sender, e);
         }
 
         private void tsbLibroDiario_Click(object sender, EventArgs e)
         {
             frmLibroDiario frm = new frmLibroDiario();
             Negocio.FGenerales.Mostrarfrm(frm, libroDiario.Tag.ToString());
+            DisparadorInicio(sender, e);
         }
 
         private void tsbLibroMayor_Click(object sender, EventArgs e)
         {
             frmLibroMayor frm = new frmLibroMayor();
             Negocio.FGenerales.Mostrarfrm(frm, libroMayor.Tag.ToString());
+            DisparadorInicio(sender, e);
         }
 
         private void tsbBlockdeNotas_Click(object sender, EventArgs e)
@@ -296,6 +348,7 @@ namespace SistemaContable
             btnArchivos2.Visible = true;
             pArchivos2.Visible = true;
             btnArchivos2.BringToFront();
+            DisparadorInicio(sender, e);
         }
 
         private void btnVer_Click(object sender, EventArgs e)
@@ -307,6 +360,7 @@ namespace SistemaContable
             btnVer2.Visible = true;
             pVer2.Visible = true;
             btnVer2.BringToFront();
+            DisparadorInicio(sender, e);
         }
 
         private void btnContabilidad_Click(object sender, EventArgs e)
@@ -318,7 +372,7 @@ namespace SistemaContable
             btnContabilidad2.Visible = true;
             pContabilidad2.Visible = true;
             btnContabilidad2.BringToFront();
-
+            DisparadorInicio(sender, e);
         }
 
         private void btnMantenimiento_Click(object sender, EventArgs e)
@@ -330,6 +384,7 @@ namespace SistemaContable
             btnMantenimiento2.Visible = true;
             pMantenimiento2.Visible = true;
             btnMantenimiento2.BringToFront();
+            DisparadorInicio(sender, e);
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
@@ -341,6 +396,7 @@ namespace SistemaContable
             btnAyuda2.Visible = true;
             pAyuda2.Visible = true;
             btnAyuda2.BringToFront();
+            DisparadorInicio(sender, e);
         }
 
         private void btnArchivos_MouseEnter(object sender, EventArgs e)
@@ -349,59 +405,60 @@ namespace SistemaContable
             pArchivos.Visible = true;
             
         }
+
         private void btnArchivos_MouseLeave(object sender, EventArgs e)
         {
             btnArchivos.BackColor = Color.FromArgb(40,40,40);
             pArchivos.Visible = false;
         }
+
         private void btnVer_MouseEnter(object sender, EventArgs e)
         {
             Negocio.FFormatoSistema.ColorMDI(btnVer);
             pVer.Visible = true;
         }
+
         private void btnVer_MouseLeave(object sender, EventArgs e)
         {
             btnVer.BackColor = Color.FromArgb(40, 40, 40);
             pVer.Visible = false;
         }
+
         private void btnContabilidad_MouseEnter(object sender, EventArgs e)
         {
             Negocio.FFormatoSistema.ColorMDI(btnContabilidad);
             pContabilidad.Visible = true;
         }
+
         private void btnContabilidad_MouseLeave(object sender, EventArgs e)
         {
             btnContabilidad.BackColor = Color.FromArgb(40, 40, 40);
             pContabilidad.Visible = false;
         }
+
         private void btnMantenimiento_MouseEnter(object sender, EventArgs e)
         {
             Negocio.FFormatoSistema.ColorMDI(btnMantenimiento);
             pMantenimiento.Visible = true;
         }
+
         private void btnMantenimiento_MouseLeave(object sender, EventArgs e)
         {
             btnMantenimiento.BackColor = Color.FromArgb(40, 40, 40);
             pMantenimiento.Visible = false;
         }
+
         private void btnAyuda_MouseEnter(object sender, EventArgs e)
         {
             Negocio.FFormatoSistema.ColorMDI(btnAyuda);
             pAyuda.Visible = true;
         }
+
         private void btnAyuda_MouseLeave(object sender, EventArgs e)
         {
             btnAyuda.BackColor = Color.FromArgb(40, 40, 40);
             pAyuda.Visible = false;
-        }
-        //
-
-        //
-        private void HoraFecha_Tick(object sender, EventArgs e)
-        {
-            lblHora.Text = DateTime.Now.ToLongTimeString();
-            lblFecha.Text = DateTime.Now.ToShortDateString();
-        }
+        }      
 
         private void Menu_Archivos_Closed(object sender, ToolStripDropDownClosedEventArgs e)
         {
@@ -444,7 +501,6 @@ namespace SistemaContable
         }
         //
 
-        //
         //FUNCION RECALCULA PERMISOS - TIENE QUE ESTAR EN EL INICIO SI O SI
         public void RecalculaPermisos()
         {

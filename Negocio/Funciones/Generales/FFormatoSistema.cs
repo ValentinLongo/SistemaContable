@@ -284,5 +284,17 @@ namespace Negocio
             ctrl.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
         }
 
+        public static void ColorBordes(Control ctrl) 
+        {
+            BuscarFormato();
+            foreach (MFormatoSistema MFormato in lista)
+            {
+                if (MFormato.fmt_control == "formulario")
+                {
+                    RGBbackFormulario = MFormato.fmt_rgbBack.ToString();
+                }
+            }
+            ctrl.BackColor = Color.FromArgb(RGB(RGBbackFormulario, 1), RGB(RGBbackFormulario, 2), RGB(RGBbackFormulario, 3));
+        }
     }
 }

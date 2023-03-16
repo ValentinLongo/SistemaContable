@@ -147,7 +147,7 @@ namespace SistemaContable.Inicio.Ver.Calendario
                 bool checkeado = Convert.ToBoolean(dgvCalendario.Rows[seleccionado].Cells["ColumnaCheck"].Value);
                 if (checkeado == false)
                 {
-                    AccesoBase.InsertUpdateDatos($"UPDATE Calendario SET cal_fin = 1 WHERE cal_usuario = {id} AND cal_fecha = '{fecha}' AND cal_hora = '{hora}' AND cal_observa = '{Comentario}'");
+                    AccesoBase.InsertUpdateDatos($"UPDATE Calendario SET cal_fin = 1, cal_visto = 1 WHERE cal_usuario = {id} AND cal_fecha = '{fecha}' AND cal_hora = '{hora}' AND cal_observa = '{Comentario}'");
                     CargarDGV();
                 }
             }

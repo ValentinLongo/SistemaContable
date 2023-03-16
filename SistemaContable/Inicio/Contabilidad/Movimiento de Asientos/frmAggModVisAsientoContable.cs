@@ -472,7 +472,18 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Desea Continuar?", true); //cambiar msg
+            MessageBox.ShowDialog();
+            if (frmMessageBox.Acepto)
+            {
+                int resultado = AccesoBase.ValidarDatos($"SELECT * FROM Asiento WHERE ast_ejercicio = {txtCodEjercicio.Text} AND ast_tipo = {cbTipoAsiento.SelectedValue}");
+                if (resultado == 1)
+                {
+                    frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "El asiento de tipo " + cbTipoAsiento.SelectedText + " ya ha sido registrado para este ejercicio", true);
+                    MessageBox2.ShowDialog();
+                }
 
+            }
         }
 
         private void panel7_MouseDown(object sender, MouseEventArgs e)

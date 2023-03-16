@@ -786,14 +786,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Inicio\Mantenimiento\Rubros Contables\frmAgregarRubroContable.resx">
       <DependentUpon>frmAgregarRubroContable.cs</DependentUpon>
     </EmbeddedResource>
@@ -827,6 +822,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -860,46 +860,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\usuario.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cerrar %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logomaser.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-usuario-30.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-candado-2-30.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logomaser1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-carpeta-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-búsqueda-30.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-calculadora-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-llave-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-ayuda30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LogoMakr-2T5DwH.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menos.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mas.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lupa.png" />
@@ -914,50 +881,11 @@
     <None Include="Resources\LogoMakr-9CmnoW.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\casa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\carpeta_azul.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\carpeta_negra.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lupa_negra.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\calculadora_negra.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\llave_negra.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ayuda_negra.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\binocular.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\binocular2.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Inicio\Archivos\" />
     <Folder Include="Inicio\Ayuda\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad4.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\llave.png" />
@@ -969,33 +897,6 @@
     <None Include="Resources\calculadora2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sobre rojo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sobre.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\usuario4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\llave2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\llave21.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\llave3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contraseña.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad21.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\contabilidad31.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1005,10 +906,25 @@
     <None Include="Resources\candado_abierto.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\contabilidad_n.png" />
+    <None Include="Resources\punta_de_lapiz.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\llave-n.png" />
+    <None Include="Resources\usuario3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carpeta41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contabilidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajuste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobre.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
