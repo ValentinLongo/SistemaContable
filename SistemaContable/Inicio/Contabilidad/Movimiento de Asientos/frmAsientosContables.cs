@@ -71,6 +71,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe seleccionar un Ejercicio!", false);
                 MessageBox.ShowDialog();
             }
+            CargarDGV("", "", "");
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -91,6 +92,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe seleccionar un Ejercicio!", false);
                 MessageBox.ShowDialog();
             }
+            CargarDGV("", "", "");
         }
 
         private void btnVisualizar_Click(object sender, EventArgs e)

@@ -262,6 +262,7 @@
             this.cbTipoAsiento.Name = "cbTipoAsiento";
             this.cbTipoAsiento.Size = new System.Drawing.Size(134, 25);
             this.cbTipoAsiento.TabIndex = 115;
+            this.cbTipoAsiento.SelectedIndexChanged += new System.EventHandler(this.cbTipoAsiento_SelectedIndexChanged);
             // 
             // panel2
             // 

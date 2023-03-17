@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMessageBox));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMSG1 = new System.Windows.Forms.Label();
-            this.btnCerrar = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
             this.btnCancelar = new RJCodeAdvance.RJControls.RJButton();
@@ -43,7 +41,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             this.panel1.Controls.Add(this.lblMSG1);
-            this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -62,68 +59,6 @@
             this.lblMSG1.Size = new System.Drawing.Size(56, 13);
             this.lblMSG1.TabIndex = 30;
             this.lblMSG1.Text = "Mensaje 1";
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BunifuFormDrag = null;
-            this.btnCerrar.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.CloseBoxOptions.BorderRadius = 0;
-            this.btnCerrar.CloseBoxOptions.Enabled = true;
-            this.btnCerrar.CloseBoxOptions.EnableDefaultAction = true;
-            this.btnCerrar.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.btnCerrar.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("btnCerrar.CloseBoxOptions.Icon")));
-            this.btnCerrar.CloseBoxOptions.IconAlt = null;
-            this.btnCerrar.CloseBoxOptions.IconColor = System.Drawing.Color.White;
-            this.btnCerrar.CloseBoxOptions.IconHoverColor = System.Drawing.Color.White;
-            this.btnCerrar.CloseBoxOptions.IconPressedColor = System.Drawing.Color.White;
-            this.btnCerrar.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
-            this.btnCerrar.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.btnCerrar.HelpBox = false;
-            this.btnCerrar.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.HelpBoxOptions.BorderRadius = 0;
-            this.btnCerrar.HelpBoxOptions.Enabled = true;
-            this.btnCerrar.HelpBoxOptions.EnableDefaultAction = true;
-            this.btnCerrar.HelpBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.btnCerrar.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("btnCerrar.HelpBoxOptions.Icon")));
-            this.btnCerrar.HelpBoxOptions.IconAlt = null;
-            this.btnCerrar.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
-            this.btnCerrar.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.btnCerrar.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.btnCerrar.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
-            this.btnCerrar.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.btnCerrar.Location = new System.Drawing.Point(374, 0);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCerrar.MaximizeBox = false;
-            this.btnCerrar.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.MaximizeBoxOptions.BorderRadius = 0;
-            this.btnCerrar.MaximizeBoxOptions.Enabled = true;
-            this.btnCerrar.MaximizeBoxOptions.EnableDefaultAction = true;
-            this.btnCerrar.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.btnCerrar.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("btnCerrar.MaximizeBoxOptions.Icon")));
-            this.btnCerrar.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("btnCerrar.MaximizeBoxOptions.IconAlt")));
-            this.btnCerrar.MaximizeBoxOptions.IconColor = System.Drawing.Color.White;
-            this.btnCerrar.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.btnCerrar.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.btnCerrar.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
-            this.btnCerrar.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.btnCerrar.MinimizeBox = false;
-            this.btnCerrar.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.MinimizeBoxOptions.BorderRadius = 0;
-            this.btnCerrar.MinimizeBoxOptions.Enabled = true;
-            this.btnCerrar.MinimizeBoxOptions.EnableDefaultAction = true;
-            this.btnCerrar.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.btnCerrar.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("btnCerrar.MinimizeBoxOptions.Icon")));
-            this.btnCerrar.MinimizeBoxOptions.IconAlt = null;
-            this.btnCerrar.MinimizeBoxOptions.IconColor = System.Drawing.Color.White;
-            this.btnCerrar.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.btnCerrar.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.btnCerrar.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
-            this.btnCerrar.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.ShowDesignBorders = false;
-            this.btnCerrar.Size = new System.Drawing.Size(24, 21);
-            this.btnCerrar.TabIndex = 29;
             // 
             // bunifuShapes1
             // 
@@ -223,7 +158,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblMSG1;
-        private Bunifu.UI.WinForms.BunifuFormControlBox btnCerrar;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private RJCodeAdvance.RJControls.RJButton btnAceptar;
         private RJCodeAdvance.RJControls.RJButton btnCancelar;
