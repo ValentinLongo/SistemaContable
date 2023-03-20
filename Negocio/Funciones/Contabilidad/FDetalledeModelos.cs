@@ -39,9 +39,7 @@ namespace Negocio.Funciones.Contabilidad
             {
                 AccesoBase.InsertUpdateDatos($"INSERT INTO ModeloDet ( det_asiento, det_fecha, det_cuenta, det_codigo, det_importe, det_comenta, det_cc ) VALUES ( '{asiento}', '{fecha}', '{cuenta}', '{codigo}', '{haber}', '{concepto}', '{centrodecosto}' )");
             }
-            MessageBox.Show("Agregado Correctamente!", "Mensaje");
             frm.Close();
-
         }
 
         public static int AgregarAux_MovAsto(Form frm, string asiento, string cuenta, string debe, string haber, string concepto, string cc, string codigo, string terminal, string descri) 
@@ -72,8 +70,6 @@ namespace Negocio.Funciones.Contabilidad
 
             }
             AccesoBase.InsertUpdateDatosMoney(query, money);
-
-            MessageBox.Show("Agregado Correctamente!", "Mensaje");
 
             return Convert.ToInt32(asiento);
         }
@@ -108,7 +104,6 @@ namespace Negocio.Funciones.Contabilidad
             {
                 AccesoBase.InsertUpdateDatos($"UPDATE ModeloDet SET det_fecha = '{fecha}', det_cuenta = '{txtcuenta}', det_codigo = '{codigo}', det_importe = '{haber}', det_comenta = '{concepto}', det_cc = '{centrodecosto}' WHERE det_asiento = '{asiento}' AND det_cuenta = '{cuenta}' AND det_codigo = '{codigo2}' ");
             }
-            MessageBox.Show("Modificado Correctamente!", "Mensaje");
             frm.Close();
         }
 
@@ -137,7 +132,6 @@ namespace Negocio.Funciones.Contabilidad
             }
             AccesoBase.InsertUpdateDatosMoney(query, money);
 
-            MessageBox.Show("Modificado Correctamente!", "Mensaje");
             frm.Close();
         }
     }

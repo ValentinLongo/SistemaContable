@@ -120,6 +120,36 @@ namespace SistemaContable
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.CapsLock)
+            {
+                if (lblMayus.Visible)
+                {
+                    lblMayus.Visible = false;
+                }
+                else
+                {
+                    lblMayus.Visible = true;
+                }
+            }
+        }
+
+        private void txtConstrasenia_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.CapsLock)
+            {
+                if (lblMayus.Visible)
+                {
+                    lblMayus.Visible = false;
+                }
+                else
+                {
+                    lblMayus.Visible = true;
+                }
+            }
+        }
     }
 }
 

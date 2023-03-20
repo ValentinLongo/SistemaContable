@@ -140,7 +140,6 @@ namespace Negocio
             }
             if (error)
             {
-                MessageBox.Show("Atención: Falta completar campos.");
                 return 1;
             }
             return 0;

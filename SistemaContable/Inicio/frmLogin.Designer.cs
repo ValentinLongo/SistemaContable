@@ -58,6 +58,7 @@
             this.ShapeContra = new Bunifu.UI.WinForms.BunifuShapes();
             this.ShapeUsuario = new Bunifu.UI.WinForms.BunifuShapes();
             this.bunifuShapes2 = new Bunifu.UI.WinForms.BunifuShapes();
+            this.lblMayus = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -241,6 +242,7 @@
             this.txtConstrasenia.Size = new System.Drawing.Size(194, 19);
             this.txtConstrasenia.TabIndex = 1;
             this.txtConstrasenia.Tag = "00000";
+            this.txtConstrasenia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConstrasenia_KeyDown);
             // 
             // panel4
             // 
@@ -261,6 +263,7 @@
             this.txtUsuario.Size = new System.Drawing.Size(194, 19);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.Tag = "00000";
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
             // 
             // panel3
             // 
@@ -295,6 +298,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.panel6.Controls.Add(this.lblMayus);
             this.panel6.Controls.Add(this.panel18);
             this.panel6.Controls.Add(this.panel17);
             this.panel6.Controls.Add(this.panel14);
@@ -470,6 +474,18 @@
             this.bunifuShapes2.TabIndex = 51;
             this.bunifuShapes2.Text = "bunifuShapes2";
             // 
+            // lblMayus
+            // 
+            this.lblMayus.AutoSize = true;
+            this.lblMayus.Font = new System.Drawing.Font("Dotum", 8.25F);
+            this.lblMayus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMayus.Location = new System.Drawing.Point(134, 233);
+            this.lblMayus.Name = "lblMayus";
+            this.lblMayus.Size = new System.Drawing.Size(109, 11);
+            this.lblMayus.TabIndex = 52;
+            this.lblMayus.Text = "Bloq Mayus Activo";
+            this.lblMayus.Visible = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,6 +544,7 @@
         private System.Windows.Forms.Panel panel13;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes2;
+        private System.Windows.Forms.Label lblMayus;
     }
 }
 

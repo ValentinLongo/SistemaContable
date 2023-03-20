@@ -90,6 +90,11 @@ namespace SistemaContable.Plan_de_Cuentas
                     MessageBox.ShowDialog();
                 }
             }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         //BARRA DE CONTROL

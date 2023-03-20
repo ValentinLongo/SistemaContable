@@ -515,7 +515,7 @@
             // Menu_Archivos
             // 
             resources.ApplyResources(this.Menu_Archivos, "Menu_Archivos");
-            this.Menu_Archivos.IsMainMenu = false;
+            this.Menu_Archivos.IsMainMenu = true;
             this.Menu_Archivos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.respaldoDeInformación,
             this.restauraciónDeInformación,
@@ -550,7 +550,7 @@
             // Menu_Ver
             // 
             resources.ApplyResources(this.Menu_Ver, "Menu_Ver");
-            this.Menu_Ver.IsMainMenu = false;
+            this.Menu_Ver.IsMainMenu = true;
             this.Menu_Ver.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.calculadora,
             this.comunicaciónInterna,
@@ -593,7 +593,7 @@
             // Menu_Ayuda
             // 
             resources.ApplyResources(this.Menu_Ayuda, "Menu_Ayuda");
-            this.Menu_Ayuda.IsMainMenu = false;
+            this.Menu_Ayuda.IsMainMenu = true;
             this.Menu_Ayuda.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.soporteInteractivoDeContable});
             this.Menu_Ayuda.MenuItemHeight = 32;
@@ -612,7 +612,7 @@
             // Menu_Contabilidad
             // 
             resources.ApplyResources(this.Menu_Contabilidad, "Menu_Contabilidad");
-            this.Menu_Contabilidad.IsMainMenu = false;
+            this.Menu_Contabilidad.IsMainMenu = true;
             this.Menu_Contabilidad.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.movimientoDeAsientos,
             this.modelosDeAsientos,
@@ -759,7 +759,7 @@
             // Menu_Mantenimiento
             // 
             resources.ApplyResources(this.Menu_Mantenimiento, "Menu_Mantenimiento");
-            this.Menu_Mantenimiento.IsMainMenu = false;
+            this.Menu_Mantenimiento.IsMainMenu = true;
             this.Menu_Mantenimiento.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.empresa,
             this.usuarios,
@@ -1109,61 +1109,61 @@
             // 
             // pContabilidad2
             // 
-            this.pContabilidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.pContabilidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             resources.ApplyResources(this.pContabilidad2, "pContabilidad2");
             this.pContabilidad2.Name = "pContabilidad2";
             // 
             // pVer2
             // 
-            this.pVer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.pVer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             resources.ApplyResources(this.pVer2, "pVer2");
             this.pVer2.Name = "pVer2";
             // 
             // pAyuda2
             // 
-            this.pAyuda2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.pAyuda2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             resources.ApplyResources(this.pAyuda2, "pAyuda2");
             this.pAyuda2.Name = "pAyuda2";
             // 
             // pMantenimiento2
             // 
-            this.pMantenimiento2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.pMantenimiento2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             resources.ApplyResources(this.pMantenimiento2, "pMantenimiento2");
             this.pMantenimiento2.Name = "pMantenimiento2";
             // 
             // pArchivos2
             // 
-            this.pArchivos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.pArchivos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             resources.ApplyResources(this.pArchivos2, "pArchivos2");
             this.pArchivos2.Name = "pArchivos2";
             // 
             // pAyuda
             // 
-            this.pAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.pAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             resources.ApplyResources(this.pAyuda, "pAyuda");
             this.pAyuda.Name = "pAyuda";
             // 
             // pMantenimiento
             // 
-            this.pMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.pMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             resources.ApplyResources(this.pMantenimiento, "pMantenimiento");
             this.pMantenimiento.Name = "pMantenimiento";
             // 
             // pContabilidad
             // 
-            this.pContabilidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.pContabilidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             resources.ApplyResources(this.pContabilidad, "pContabilidad");
             this.pContabilidad.Name = "pContabilidad";
             // 
             // pVer
             // 
-            this.pVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.pVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             resources.ApplyResources(this.pVer, "pVer");
             this.pVer.Name = "pVer";
             // 
             // pArchivos
             // 
-            this.pArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.pArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             resources.ApplyResources(this.pArchivos, "pArchivos");
             this.pArchivos.Name = "pArchivos";
             // 
@@ -1209,7 +1209,7 @@
             this.btnAyuda.BorderRadius = 0;
             this.btnAyuda.BorderSize = 0;
             this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.btnAyuda, "btnAyuda");
             this.btnAyuda.ForeColor = System.Drawing.Color.White;
             this.btnAyuda.Image = global::SistemaContable.Properties.Resources.ayuda;
@@ -1230,7 +1230,7 @@
             this.btnMantenimiento.BorderRadius = 0;
             this.btnMantenimiento.BorderSize = 0;
             this.btnMantenimiento.FlatAppearance.BorderSize = 0;
-            this.btnMantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnMantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.btnMantenimiento, "btnMantenimiento");
             this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
             this.btnMantenimiento.Image = global::SistemaContable.Properties.Resources.llave;
@@ -1251,10 +1251,10 @@
             this.btnContabilidad.BorderRadius = 0;
             this.btnContabilidad.BorderSize = 0;
             this.btnContabilidad.FlatAppearance.BorderSize = 0;
-            this.btnContabilidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnContabilidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.btnContabilidad, "btnContabilidad");
             this.btnContabilidad.ForeColor = System.Drawing.Color.White;
-            this.btnContabilidad.Image = global::SistemaContable.Properties.Resources.carpeta41;
+            this.btnContabilidad.Image = global::SistemaContable.Properties.Resources.contabilidad;
             this.btnContabilidad.Name = "btnContabilidad";
             this.btnContabilidad.TabStop = false;
             this.btnContabilidad.Tag = "30";
@@ -1272,7 +1272,7 @@
             this.btnVer.BorderRadius = 0;
             this.btnVer.BorderSize = 0;
             this.btnVer.FlatAppearance.BorderSize = 0;
-            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.btnVer, "btnVer");
             this.btnVer.ForeColor = System.Drawing.Color.White;
             this.btnVer.Image = global::SistemaContable.Properties.Resources.lupa;
@@ -1293,7 +1293,7 @@
             this.btnArchivos.BorderRadius = 0;
             this.btnArchivos.BorderSize = 0;
             this.btnArchivos.FlatAppearance.BorderSize = 0;
-            this.btnArchivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnArchivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.btnArchivos, "btnArchivos");
             this.btnArchivos.ForeColor = System.Drawing.Color.White;
             this.btnArchivos.Image = global::SistemaContable.Properties.Resources.carpeta41;
@@ -1352,7 +1352,6 @@
             this.IsMdiContainer = true;
             this.Name = "frmInicio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmInicio_Load);
             this.MdiChildActivate += new System.EventHandler(this.frmInicio_MdiChildActivate);
             this.toolStripADs.ResumeLayout(false);
             this.toolStripADs.PerformLayout();

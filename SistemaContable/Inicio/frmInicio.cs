@@ -55,50 +55,16 @@ namespace SistemaContable
         public frmInicio()
         {
             InitializeComponent();
-            DatosUsuEmp();
+            Negocio.FInicio.DatosUsuEmp(lblUsu, lblEmpresa, lblPerfil);
 
             Negocio.FValidacionesEventos.EventosFormulario(this);
             Negocio.FFormatoSistema.FondoMDI(this, borde1, borde2, borde3, pbLogo);
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
-        //SETEO INICIO
-        private void DatosUsuEmp() 
+        private void btnSesion_Click(object sender, EventArgs e) //CAMBIAR SESIÓN
         {
-            string perfil = "";
 
-            DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT usu_perfil FROM Usuario WHERE usu_codigo = {FLogin.IdUsuario}");
-            foreach (DataRow dr in ds.Tables[0].Rows)
-            {
-                perfil = dr["usu_perfil"].ToString();
-            }
-
-            if (perfil == "1")
-            {
-                perfil = "SUPERVISOR";
-            }
-            else if (perfil == "2") 
-            {
-                perfil = "ADMINISTRADOR";
-            }
-            else if (perfil == "3")
-            {
-                perfil = "ENCARGADO";
-            }
-            else
-            {
-                perfil = "OPERADOR";
-            }
-
-            lblUsu.Text = "Usuario: " + FLogin.NombreUsuario;
-            lblEmpresa.Text = "Empresa: (Empresa)";
-            lblPerfil.Text = "Perfil: " + perfil;
-        }
-
-        //CAMBIAR SESIÓN
-        private void btnSesion_Click(object sender, EventArgs e)
-        {
             if (lblSesion.Text == "Cerrar Sesión")
             {
                 Negocio.FGenerales.Sesion(this, toolStripADs, 1);
@@ -111,7 +77,7 @@ namespace SistemaContable
             else
             {
                 Negocio.FGenerales.Sesion(this, toolStripADs, 2);
-                DatosUsuEmp();
+                Negocio.FInicio.DatosUsuEmp(lblUsu, lblEmpresa, lblPerfil);
 
                 lblSesion.Text = "Cerrar Sesión";
                 btnSesion.Image = Resources.candado_cerrado;
@@ -119,8 +85,7 @@ namespace SistemaContable
             }
         }
 
-        //CONTROLBAR
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e) //CONTROLBAR
         {
             List<Form> formlist = new List<Form>();
             int cant = Application.OpenForms.Count;
@@ -155,15 +120,6 @@ namespace SistemaContable
         private void btnCerrar_MouseLeave(object sender, EventArgs e)
         {
             btnCerrar.BackColor = Color.Transparent;
-        }
-
-        private void frmInicio_Load(object sender, EventArgs e)
-        {
-            Menu_Archivos.IsMainMenu = true;
-            Menu_Ver.IsMainMenu = true;
-            Menu_Contabilidad.IsMainMenu = true;
-            Menu_Mantenimiento.IsMainMenu = true;
-            Menu_Ayuda.IsMainMenu = true;
         }
 
         private void frmInicio_MdiChildActivate(object sender, EventArgs e)
@@ -235,12 +191,16 @@ namespace SistemaContable
             {
                 if (tiempo == "expiro")
                 {
-                    frmMessageBox MessageBox = new frmMessageBox("Atención!", "Una Tarea Expiro, ¿Desea Posponerla?", true);
-                    MessageBox.ShowDialog();
+                    frmMessageBox MessageBox1 = new frmMessageBox("Atención!", "Una Tarea Expiro, ¿Desea Posponerla?", true);
+                    MessageBox1.ShowDialog();
                     if (frmMessageBox.Acepto)
                     {
                         frmCalendario frm = new frmCalendario();
-                        Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString());
+                        if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString()))
+                        {
+                            frmMessageBox MessageBox2 = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                            MessageBox2.ShowDialog();
+                        }
                     }
                 }
                 else
@@ -250,7 +210,11 @@ namespace SistemaContable
                     if (frmMessageBox.Acepto)
                     {
                         frmCalendario frm = new frmCalendario();
-                        Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString());
+                        if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString()))
+                        {
+                            frmMessageBox MessageBox3 = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                            MessageBox3.ShowDialog();
+                        }
                     }
                 }
 
@@ -262,35 +226,55 @@ namespace SistemaContable
         private void tsbUsuario_Click(object sender, EventArgs e)
         {
             frmUsuarios frm = new frmUsuarios();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbUsuario.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbUsuario.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
             DisparadorInicio(sender, e);
         }
 
         private void tsbPlandeCuenta_Click(object sender, EventArgs e)
         {
             frmPlanDeCuentas frm = new frmPlanDeCuentas();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbPlandeCuenta.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbPlandeCuenta.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
             DisparadorInicio(sender, e);
         }
 
         private void tsbConceptoContable_Click(object sender, EventArgs e)
         {
             frmConceptosContables frm = new frmConceptosContables();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbConceptoContable.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbConceptoContable.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
             DisparadorInicio(sender, e);
         }
 
         private void tsbAgenda_Click(object sender, EventArgs e)
         {
             frmAgenda frm = new frmAgenda();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbAgenda.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbAgenda.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
             DisparadorInicio(sender, e);
         }
 
         private void tsbMovimientodeAsientos_Click(object sender, EventArgs e)
         {
             frmAsientosContables frm = new frmAsientosContables();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMovimientodeAsientos.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbConceptoContable.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
             DisparadorInicio(sender, e);
         }
 
@@ -317,7 +301,11 @@ namespace SistemaContable
         private void tsbMensajesInternos_Click(object sender, EventArgs e)
         {
             frmComunicacionInterna frm = new frmComunicacionInterna(lblnuevomensaje);
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMensajesInternos.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMensajesInternos.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void tsbCalculadora_Click(object sender, EventArgs e)
@@ -329,7 +317,11 @@ namespace SistemaContable
         private void tsbNotas_Click(object sender, EventArgs e)
         {
             frmCalendario frm = new frmCalendario();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void tsbConfigImpresora_Click(object sender, EventArgs e)
@@ -697,7 +689,11 @@ namespace SistemaContable
         private void comunicaciónInterna_Click(object sender, EventArgs e)
         {
             frmComunicacionInterna frm = new frmComunicacionInterna(lblnuevomensaje);
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMensajesInternos.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMensajesInternos.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void notasYObservaciones_Click(object sender, EventArgs e)
@@ -709,14 +705,22 @@ namespace SistemaContable
         private void calendario_Click(object sender, EventArgs e)
         {
             frmCalendario frm = new frmCalendario();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, calendario.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, calendario.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         //30
         private void movimientoDeAsientos_Click(object sender, EventArgs e)
         {
             frmAsientosContables frm = new frmAsientosContables();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, movimientoDeAsientos.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, movimientoDeAsientos.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void actualizaciónMA_Click(object sender, EventArgs e)
@@ -808,7 +812,11 @@ namespace SistemaContable
         private void definición_Click(object sender, EventArgs e)
         {
             frmUsuarios frm = new frmUsuarios();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, definición.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, definición.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void modificaciónDeContraseña_Click(object sender, EventArgs e)
@@ -826,13 +834,21 @@ namespace SistemaContable
         private void planDeCuentas_Click(object sender, EventArgs e)
         {
             frmPlanDeCuentas frm = new frmPlanDeCuentas();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, planDeCuentas.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, planDeCuentas.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void conceptosContables_Click(object sender, EventArgs e)
         {
             frmConceptosContables frm = new frmConceptosContables();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, conceptosContables.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, conceptosContables.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void rubrosContables_Click(object sender, EventArgs e)
@@ -861,7 +877,11 @@ namespace SistemaContable
         private void agenda_Click(object sender, EventArgs e)
         {
             frmAgenda frm = new frmAgenda();
-            Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, agenda.Tag.ToString());
+            if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, agenda.Tag.ToString()))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void parametrosContables_Click(object sender, EventArgs e)

@@ -66,16 +66,16 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             cargarDGV("");
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            dgvEjercicioContable.Rows.Clear();
-            cargarDGV("");
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Negocio.Funciones.Mantenimiento.FEjercicioContable.Eliminar(dgvEjercicioContable);
-            cargarDGV("");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Seguro que Desea Continuar?", true);
+            MessageBox.ShowDialog();
+            if (frmMessageBox.Acepto)
+            {
+                Negocio.Funciones.Mantenimiento.FEjercicioContable.Eliminar(dgvEjercicioContable);
+                cargarDGV("");
+            }
+
         }
 
         private void rjButton5_Click(object sender, EventArgs e)
@@ -96,8 +96,27 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
         {
             string codigo = (string)dgvEjercicioContable.Rows[e.RowIndex].Cells[0].Value;
             bool estado = (bool)dgvEjercicioContable.Rows[e.RowIndex].Cells[4].Value;
-            Negocio.Funciones.Mantenimiento.FEjercicioContable.EstadoCheckBox(dgvEjercicioContable, codigo, estado);
-            cargarDGV("");
+
+            if (estado)
+            {
+                frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "Atención: El ejercicio contable se encuentra cerrado. ¿Desea abrirlo?", true);
+                MessageBox1.ShowDialog();
+                if (frmMessageBox.Acepto)
+                {
+                    Negocio.Funciones.Mantenimiento.FEjercicioContable.EstadoCheckBox(dgvEjercicioContable, codigo, estado);
+                    cargarDGV("");
+                }
+            }
+            else
+            {
+                frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "Atención: El ejercicio contable se encuentra abierto. ¿Desea cerrarlo?", true);
+                MessageBox1.ShowDialog();
+                if (frmMessageBox.Acepto)
+                {
+                    Negocio.Funciones.Mantenimiento.FEjercicioContable.EstadoCheckBox(dgvEjercicioContable, codigo, estado);
+                    cargarDGV("");
+                }
+            }
         }
 
         private void dgvEjercicioContable_CurrentCellDirtyStateChanged_1(object sender, EventArgs e)

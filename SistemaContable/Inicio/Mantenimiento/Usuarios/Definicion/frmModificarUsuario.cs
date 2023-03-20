@@ -128,6 +128,11 @@ namespace SistemaContable.Usuarios
                 MessageBox.ShowDialog();
                 this.Close();
             }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         //BARRA DE CONTROL

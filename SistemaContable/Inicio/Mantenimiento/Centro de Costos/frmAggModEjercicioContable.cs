@@ -1,4 +1,5 @@
 ﻿using Datos;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,13 +47,22 @@ namespace SistemaContable.Inicio.Mantenimiento.Centro_de_Costos
                 {
                     txtmsg.Text = "ALTA EN CONCEPTO";
                     Negocio.Funciones.Mantenimiento.FCentrodeCostos.Agregar(this, txtDescripcion.Text);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
+                    MessageBox.ShowDialog();
                 }
                 if (agg_o_mod == 1)
                 {
                     int seleccionado = DGV.CurrentCell.RowIndex;
                     txtmsg.Text = DGV.Rows[seleccionado].Cells[0].Value.ToString();
                     Negocio.Funciones.Mantenimiento.FCentrodeCostos.Modificar(this, txtmsg.Text, txtDescripcion.Text);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
+                    MessageBox.ShowDialog();
                 }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
+                MessageBox.ShowDialog();
             }
         }
 

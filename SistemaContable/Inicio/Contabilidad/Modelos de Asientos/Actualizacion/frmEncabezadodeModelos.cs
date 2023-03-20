@@ -68,8 +68,15 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Negocio.Funciones.Contabilidad.FActualizacionMDA.Eliminar(dgvEncabezadodeModelos);
-            CargarDGV("");
+            frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "¿Seguro que Desea Continuar?", true);
+            MessageBox1.ShowDialog();
+            if (frmMessageBox.Acepto)
+            {
+                Negocio.Funciones.Contabilidad.FActualizacionMDA.Eliminar(dgvEncabezadodeModelos);
+                frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "¿Seguro que Desea Continuar?", false);
+                MessageBox2.ShowDialog();
+                CargarDGV("");
+            }
         }
         private void btnActualizar_Click(object sender, EventArgs e)
         {

@@ -38,6 +38,11 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
                 MessageBox.ShowDialog();
                 this.Close();
             }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         //BARRA DE CONTROL

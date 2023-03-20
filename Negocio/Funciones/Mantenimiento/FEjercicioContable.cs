@@ -12,45 +12,33 @@ namespace Negocio.Funciones.Mantenimiento
 {
     public class FEjercicioContable
     {
-        public static void Eliminar(DataGridView DGV) 
+        public static void Eliminar(DataGridView DGV)
         {
-            DialogResult boton = MessageBox.Show("¿Seguro que Desea Continuar?", "Mensaje", MessageBoxButtons.OKCancel);
-            if (boton == DialogResult.OK)
+            int seleccion = DGV.CurrentCell.RowIndex;
+            string codigo;
+            if (seleccion > -1)
             {
-                int seleccion = DGV.CurrentCell.RowIndex;
-                string codigo;
-                if (seleccion > -1)
-                {
-                    codigo = DGV.Rows[seleccion].Cells[0].Value.ToString();
-                    Datos.AccesoBase.InsertUpdateDatos($"DELETE FROM Ejercicio WHERE eje_codigo = '{codigo}'");
-                    MessageBox.Show("Eliminado correctamente!", "Mensaje");
-                    DGV.Rows.Clear();
-                }
+                codigo = DGV.Rows[seleccion].Cells[0].Value.ToString();
+                Datos.AccesoBase.InsertUpdateDatos($"DELETE FROM Ejercicio WHERE eje_codigo = '{codigo}'");
+                MessageBox.Show("Eliminado correctamente!", "Mensaje");
+                DGV.Rows.Clear();
             }
         }
 
-        public static void EstadoCheckBox(DataGridView DGV,string codigo, bool estado) 
+        public static void EstadoCheckBox(DataGridView DGV, string codigo, bool estado)
         {
             if (estado)
             {
-                DialogResult boton2 = MessageBox.Show("Atención: El ejercicio contable se encuentra cerrado. ¿Desea abrirlo?", "Contable", MessageBoxButtons.OKCancel);
-                if (boton2 == DialogResult.OK)
-                {
-                    AccesoBase.InsertUpdateDatos($"UPDATE Ejercicio SET eje_cerrado = '0' WHERE eje_codigo = '{codigo}'");
-                }
+                AccesoBase.InsertUpdateDatos($"UPDATE Ejercicio SET eje_cerrado = '0' WHERE eje_codigo = '{codigo}'");
             }
             else
             {
-                DialogResult boton2 = MessageBox.Show("Atención: El ejercicio contable se encuentra abierto. ¿Desea cerrarlo?", "Contable", MessageBoxButtons.OKCancel);
-                if (boton2 == DialogResult.OK)
-                {
-                    AccesoBase.InsertUpdateDatos($"UPDATE Ejercicio SET eje_cerrado = '1' WHERE eje_codigo = '{codigo}'");
-                }
+                AccesoBase.InsertUpdateDatos($"UPDATE Ejercicio SET eje_cerrado = '1' WHERE eje_codigo = '{codigo}'");
             }
             DGV.Rows.Clear();
         }
 
-        public static string Busqueda(DataGridView DGV,TextBox txt,ComboBox cbBusqueda,BunifuCheckBox cbInicio)
+        public static string Busqueda(DataGridView DGV, TextBox txt, ComboBox cbBusqueda, BunifuCheckBox cbInicio)
         {
             if (txt.Text != "")
             {
