@@ -49,7 +49,16 @@ namespace SistemaContable.Inicio.Mantenimiento
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-            string txtdescri = Negocio.Funciones.Mantenimiento.FCentrodeCostos.Busqueda(dgvCentrodeCosto, txtBusqueda, cbBusqueda, CheckInicio);
+            string txtdescri = "";
+
+            if (cbBusqueda.SelectedIndex == 0)
+            {
+                txtdescri = Negocio.FGenerales.Busqueda(dgvCentrodeCosto, txtBusqueda.Text, CheckInicio, 1, "cec_codigo");
+            }
+            else if (cbBusqueda.SelectedIndex == 1)
+            {
+                txtdescri = Negocio.FGenerales.Busqueda(dgvCentrodeCosto, txtBusqueda.Text, CheckInicio, 1, "cec_descri");
+            }
             CargarDGV(txtdescri);
         }
 

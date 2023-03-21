@@ -62,8 +62,19 @@ namespace SistemaContable.General
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-
-            string txtbusqueda = Negocio.Funciones.Mantenimiento.FEjercicioContable.Busqueda(dgvEjercicioContable, txtBusqueda, cbBusqueda, CheckInicio);
+            string txtbusqueda = "";
+            if (cbBusqueda.SelectedIndex == 0)
+            {
+                txtbusqueda = Negocio.FGenerales.Busqueda(dgvEjercicioContable, txtBusqueda.Text, CheckInicio, 1, "eje_codigo");
+            }
+            else if (cbBusqueda.SelectedIndex == 1)
+            {
+                txtbusqueda = Negocio.FGenerales.Busqueda(dgvEjercicioContable, txtBusqueda.Text, CheckInicio, 1, "eje_descri");
+            }
+            else if (cbBusqueda.SelectedIndex == 2)
+            {
+                txtbusqueda = Negocio.FGenerales.Busqueda(dgvEjercicioContable, txtBusqueda.Text, CheckInicio, 1, "eje_desde");
+            }
             CargarDatos(txtbusqueda);
         }
 

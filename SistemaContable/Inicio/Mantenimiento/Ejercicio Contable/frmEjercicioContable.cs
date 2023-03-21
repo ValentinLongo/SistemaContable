@@ -54,7 +54,19 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
 
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
-            txtbusqueda = Negocio.Funciones.Mantenimiento.FEjercicioContable.Busqueda(dgvEjercicioContable, txtBusqueda, cbBusqueda, CheckInicio);
+            string txtbusqueda = "";
+            if (cbBusqueda.SelectedIndex == 0)
+            {
+                txtbusqueda = Negocio.FGenerales.Busqueda(dgvEjercicioContable, txtBusqueda.Text, CheckInicio, 1, "eje_codigo");
+            }
+            else if (cbBusqueda.SelectedIndex == 1)
+            {
+                txtbusqueda = Negocio.FGenerales.Busqueda(dgvEjercicioContable, txtBusqueda.Text, CheckInicio, 1, "eje_descri");
+            }
+            else if (cbBusqueda.SelectedIndex == 2)
+            {
+                txtbusqueda = Negocio.FGenerales.Busqueda(dgvEjercicioContable, txtBusqueda.Text, CheckInicio, 1, "eje_desde");
+            }
             cargarDGV(txtbusqueda);
         }
 

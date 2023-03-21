@@ -16,31 +16,55 @@ namespace SistemaContable.General
         public static bool Acepto;
         public static bool Cancelo;
 
-        public frmMessageBox(string msg1, string msg2, bool dialogresult)
+        public frmMessageBox(string msg1, string msg2, bool dialogresult, [Optional] bool MsgLargo)
         {
             InitializeComponent();
             Acepto = false;
             Cancelo = false;
-            Seteo(msg1,msg2,dialogresult);
+            Seteo(msg1, msg2, dialogresult, MsgLargo);
         }
 
-        private void Seteo(string msg1, string msg2, bool dialogresult) 
-        {        
+        private void Seteo(string msg1, string msg2, bool dialogresult, bool MsgLargo)
+        {
             if (dialogresult)
             {
                 btnAceptar.Visible = true;
                 btnAceptar.Location = new Point(68, 92);
                 btnCancelar.Visible = true;
                 lblMSG1.Text = msg1;
-                lblMSG2.Text = msg2;
+
+                if (MsgLargo)
+                {
+                    txtMsgLargo.Text = msg2;
+                    txtMsgLargo.Visible = true;
+                    lblMSG2.Visible = false;
+                }
+                else
+                {
+                    lblMSG2.Text = msg2;
+                    txtMsgLargo.Visible = false;
+                    lblMSG2.Visible = true;
+                }
             }
             else
             {
                 btnAceptar.Visible = true;
-                btnAceptar.Location = new Point(142,92);
+                btnAceptar.Location = new Point(142, 92);
                 btnCancelar.Visible = false;
                 lblMSG1.Text = msg1;
-                lblMSG2.Text = msg2;
+
+                if (MsgLargo)
+                {
+                    txtMsgLargo.Text = msg2;
+                    txtMsgLargo.Visible = true;
+                    lblMSG2.Visible = false;
+                }
+                else
+                {
+                    lblMSG2.Text = msg2;
+                    txtMsgLargo.Visible = false;
+                    lblMSG2.Visible = true;
+                }
             }
         }
 

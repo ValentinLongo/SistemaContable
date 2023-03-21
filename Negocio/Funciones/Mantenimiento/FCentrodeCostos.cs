@@ -14,47 +14,6 @@ namespace Negocio.Funciones.Mantenimiento
 {
     public class FCentrodeCostos
     {
-        public static string Busqueda(DataGridView DGV, TextBox txt, ComboBox cbBusqueda, BunifuCheckBox cbInicio)
-        {
-            if (txt.Text != "")
-            {
-                string txtbusqueda;
-
-                if (cbBusqueda.SelectedIndex == 0)
-                {
-                    if (cbInicio.Checked)
-                    {
-                        txtbusqueda = "WHERE cec_codigo LIKE " + "'" + txt.Text + "%'";
-                    }
-                    else
-                    {
-                        txtbusqueda = "WHERE cec_codigo LIKE " + "'%" + txt.Text + "%'";
-                    }
-                    DGV.Rows.Clear();
-                    return txtbusqueda;
-                }
-                else if (cbBusqueda.SelectedIndex == 1)
-                {
-                    if (cbInicio.Checked)
-                    {
-                        txtbusqueda = "WHERE cec_descri LIKE " + "'" + txt.Text + "%'";
-                    }
-                    else
-                    {
-                        txtbusqueda = "WHERE cec_descri LIKE " + "'%" + txt.Text + "%'";
-                    }
-                    DGV.Rows.Clear();
-                    return txtbusqueda;
-                }
-            }
-            else
-            {
-                DGV.Rows.Clear();
-                return "";
-            }
-            return "";
-        }
-
         public static void Agregar(Form frm, string txt)
         {
             int ultimoID = Negocio.FGenerales.ultimoNumeroID("cec_codigo", "CentroC");

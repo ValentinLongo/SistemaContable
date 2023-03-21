@@ -50,7 +50,7 @@ namespace SistemaContable
     public partial class frmInicio : Form
     {
         public static bool permiso;
-        public static string frm;
+        //public static string frm;
 
         public frmInicio()
         {
@@ -905,67 +905,77 @@ namespace SistemaContable
         //SIN CODIGO
         private void parametrizacionDePermisosPerfiles_Click(object sender, EventArgs e)
         {
-            frm = "perfiles";
-            frmAutorización frmSA = new frmAutorización();
+            frmPermisosPerfil permisosperfil = new frmPermisosPerfil();
+            frmAutorización frmAutorizacion = new frmAutorización(permisosperfil);
+
             bool autorizado = frmAutorización.Autoriza(1, false); //cambiar
-            frmSA.Show();
+            frmAutorizacion.Show();
             if (frmAutorización.visibilidad == true)
             {
-                frmSA.SendToBack();
+                frmAutorizacion.SendToBack();
             }
+
             if (autorizado)
             {
-                frmPermisosPerfil permisosperfil = new frmPermisosPerfil();
                 permisosperfil.Show();
-                frmSA.Close();
+                frmAutorizacion.Close();
                 frmAutorización.usuario = "";
                 frmAutorización.contraseña = "";
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Usuario No Autorizado.", false);
+                MessageBox.ShowDialog();
             }
         }
 
         private void parametrizacionDePermisosUsuarios_Click(object sender, EventArgs e)
         {
-            frm = "usuarios";
-            frmAutorización frmSA = new frmAutorización();
+            frmPermisosUsu permisosusuario = new frmPermisosUsu();
+            frmAutorización frmAutorizacion = new frmAutorización(permisosusuario);
+
             bool autorizado = frmAutorización.Autoriza(1, false); //cambiar
-            frmSA.Show();
+            frmAutorizacion.Show();
             if (frmAutorización.visibilidad == true)
             {
-                frmSA.SendToBack();
+                frmAutorizacion.SendToBack();
             }
+
             if (autorizado)
             {
-                frmPermisosUsu permisosusuario = new frmPermisosUsu();
                 permisosusuario.Show();
-                frmSA.Close();
+                frmAutorizacion.Close();
                 frmAutorización.usuario = "";
                 frmAutorización.contraseña = "";
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Usuario No Autorizado.", false);
+                MessageBox.ShowDialog();
             }
         }
 
         private void recalcularPermisos_Click(object sender, EventArgs e)
         {
-            frm = "estandar";
-            frmAutorización frmSA = new frmAutorización();
+            frmAutorización frmAutorizacion = new frmAutorización();
             bool autorizado = frmAutorización.Autoriza(1, false); //cambiar
-            frmSA.Show();
+            frmAutorizacion.Show();
             if (frmAutorización.visibilidad == true)
             {
-                frmSA.SendToBack();
+                frmAutorizacion.SendToBack();
             }
+
             if (autorizado)
             {
-                frmSA.Close();
+                frmAutorizacion.Close();
                 frmAutorización.usuario = "";
                 frmAutorización.contraseña = "";
 
-                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos del menu?", true);
-                MessageBox.ShowDialog();
+                frmMessageBox MessageBox1 = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos del menu?", true);
+                MessageBox1.ShowDialog();
                 if (frmMessageBox.Acepto)
                 {
-                    frmEstandar.proceso = 1;
-                    frmEstandar.mensaje = "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...";
-                    frmEstandar estandar = new frmEstandar();
+                    frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
                     estandar.Show();
                     Application.DoEvents();
                     RecalculaPermisos();
@@ -976,14 +986,17 @@ namespace SistemaContable
                 MessageBox2.ShowDialog();
                 if (frmMessageBox.Acepto)
                 {
-                    frmEstandar.proceso = 2;
-                    frmEstandar.mensaje = "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...";
-                    frmEstandar estandar = new frmEstandar();
+                    frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...");
                     estandar.Show();
                     Application.DoEvents();
                     Negocio.Funciones.FRecalcularPermisos.RecalculaPermisosEspeciales();
                     estandar.Close();
                 }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Usuario No Autorizado.", false);
+                MessageBox.ShowDialog();
             }
         }
     }

@@ -14,9 +14,7 @@ namespace SistemaContable.General
 {
     public partial class frmEstandar : Form
     {
-        public static int proceso; //indica la parte del codigo que se va a ejecutar.
-        public static string mensaje;
-        public frmEstandar()
+        public frmEstandar(int proceso, string mensaje)
         {
             InitializeComponent();
             if (proceso == 1)
@@ -25,9 +23,8 @@ namespace SistemaContable.General
             }
             if (proceso == 2)
             {
-                Mensaje.Text = mensaje;
+                
             }
-
         }
 
         //BARRA DE CONTROL

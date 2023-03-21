@@ -34,6 +34,7 @@
             this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
             this.btnCancelar = new RJCodeAdvance.RJControls.RJButton();
             this.lblMSG2 = new System.Windows.Forms.Label();
+            this.txtMsgLargo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,12 +133,25 @@
             this.lblMSG2.TabIndex = 52;
             this.lblMSG2.Text = "Mensaje 2";
             // 
+            // txtMsgLargo
+            // 
+            this.txtMsgLargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.txtMsgLargo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMsgLargo.ForeColor = System.Drawing.Color.White;
+            this.txtMsgLargo.Location = new System.Drawing.Point(24, 38);
+            this.txtMsgLargo.Multiline = true;
+            this.txtMsgLargo.Name = "txtMsgLargo";
+            this.txtMsgLargo.ReadOnly = true;
+            this.txtMsgLargo.Size = new System.Drawing.Size(351, 48);
+            this.txtMsgLargo.TabIndex = 53;
+            // 
             // frmMessageBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.ClientSize = new System.Drawing.Size(398, 139);
+            this.Controls.Add(this.txtMsgLargo);
             this.Controls.Add(this.lblMSG2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -162,5 +176,6 @@
         private RJCodeAdvance.RJControls.RJButton btnAceptar;
         private RJCodeAdvance.RJControls.RJButton btnCancelar;
         private System.Windows.Forms.Label lblMSG2;
+        private System.Windows.Forms.TextBox txtMsgLargo;
     }
 }
