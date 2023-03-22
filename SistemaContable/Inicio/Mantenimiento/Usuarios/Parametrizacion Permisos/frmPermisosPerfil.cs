@@ -171,5 +171,22 @@ namespace SistemaContable.Parametrizacion_Permisos
         {
             ArmarArbol(txtNroPerfil.Text);
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            if (txtNroPerfil.Text != "")
+            {
+
+                //string query = Select LEFT((REPLICATE('   ', len(mxp_codigo)) + RTRIM(LTRIM(mnu_descri))),65) as Descri, mxp_activo, * From MenuxPerfil Left Join Menu on mxp_codigo = mnu_codigo Where mxp_perfil = 4 Order By mxp_codigo
+
+                //frmReporte freporte = new frmReporte("MenuxUsu", $"{query}", "", "Permisos por Perfil", "Permisos Confirmados", txtNroPerfil.Text + " - " + txtDescriPerfil.Text);
+                //freporte.ShowDialog();
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe Seleccionar un Perfil.", false);
+                MessageBox.ShowDialog();
+            }
+        }
     }
 }

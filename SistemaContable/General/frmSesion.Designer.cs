@@ -1,6 +1,6 @@
-﻿namespace SistemaContable
+﻿namespace SistemaContable.General
 {
-    partial class frmAutorización
+    partial class frmSesion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAutorización));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSesion));
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelcontrolbox = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,8 +52,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 21);
-            this.panel1.TabIndex = 13;
+            this.panel1.Size = new System.Drawing.Size(341, 21);
+            this.panel1.TabIndex = 14;
             this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -66,9 +64,9 @@
             this.labelcontrolbox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelcontrolbox.Location = new System.Drawing.Point(3, 5);
             this.labelcontrolbox.Name = "labelcontrolbox";
-            this.labelcontrolbox.Size = new System.Drawing.Size(123, 13);
+            this.labelcontrolbox.Size = new System.Drawing.Size(92, 13);
             this.labelcontrolbox.TabIndex = 30;
-            this.labelcontrolbox.Text = "Solicitud de Autorizacion";
+            this.labelcontrolbox.Text = "Cambio de Sesión";
             // 
             // bunifuFormControlBox1
             // 
@@ -99,7 +97,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(259, 0);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(317, 0);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = false;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -132,43 +130,53 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
-            // label1
+            // panel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(56, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 20);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Usuario:";
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(128, 114);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(159, 1);
+            this.panel2.TabIndex = 46;
             // 
-            // label2
+            // panel3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(28, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Contraseña:";
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(128, 71);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(159, 1);
+            this.panel3.TabIndex = 45;
             // 
-            // bunifuShapes1
+            // panel7
             // 
-            this.bunifuShapes1.Angle = 0F;
-            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.BorderColor = System.Drawing.Color.White;
-            this.bunifuShapes1.BorderThickness = 1;
-            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(12, 28);
-            this.bunifuShapes1.Name = "bunifuShapes1";
-            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
-            this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(259, 140);
-            this.bunifuShapes1.TabIndex = 16;
-            this.bunifuShapes1.Text = "bunifuShapes1";
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel7.Location = new System.Drawing.Point(30, 138);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(282, 1);
+            this.panel7.TabIndex = 44;
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContraseña.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtContraseña.Location = new System.Drawing.Point(128, 94);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(159, 19);
+            this.txtContraseña.TabIndex = 43;
+            this.txtContraseña.Tag = "00000";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtUsuario.Location = new System.Drawing.Point(128, 51);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(159, 19);
+            this.txtUsuario.TabIndex = 42;
+            this.txtUsuario.Tag = "00000";
             // 
             // btnAcceder
             // 
@@ -181,78 +189,60 @@
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Dotum", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAcceder.Location = new System.Drawing.Point(32, 129);
+            this.btnAcceder.Location = new System.Drawing.Point(30, 152);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(222, 26);
-            this.btnAcceder.TabIndex = 17;
+            this.btnAcceder.Size = new System.Drawing.Size(282, 33);
+            this.btnAcceder.TabIndex = 41;
             this.btnAcceder.Tag = "";
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
-            this.btnAcceder.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
             // 
-            // txtUsuario
+            // label2
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtUsuario.Location = new System.Drawing.Point(123, 45);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(131, 19);
-            this.txtUsuario.TabIndex = 18;
-            this.txtUsuario.Tag = "00000";
-            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(35, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 20);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Contraseña:";
             // 
-            // txtContraseña
+            // label1
             // 
-            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtContraseña.Location = new System.Drawing.Point(123, 75);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(131, 19);
-            this.txtContraseña.TabIndex = 19;
-            this.txtContraseña.Tag = "00000";
-            this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(60, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 20);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Usuario:";
             // 
-            // panel7
+            // bunifuShapes1
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel7.Location = new System.Drawing.Point(32, 113);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(222, 1);
-            this.panel7.TabIndex = 36;
+            this.bunifuShapes1.Angle = 0F;
+            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes1.BorderColor = System.Drawing.Color.White;
+            this.bunifuShapes1.BorderThickness = 1;
+            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes1.FillShape = true;
+            this.bunifuShapes1.Location = new System.Drawing.Point(7, 29);
+            this.bunifuShapes1.Name = "bunifuShapes1";
+            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.bunifuShapes1.Sides = 5;
+            this.bunifuShapes1.Size = new System.Drawing.Size(328, 169);
+            this.bunifuShapes1.TabIndex = 47;
+            this.bunifuShapes1.Text = "bunifuShapes1";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(123, 63);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(131, 1);
-            this.panel3.TabIndex = 37;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(123, 93);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(131, 1);
-            this.panel2.TabIndex = 38;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 2000;
-            this.timer1.Tick += new System.EventHandler(this.Tick);
-            // 
-            // frmAutorización
+            // frmSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(283, 176);
+            this.ClientSize = new System.Drawing.Size(341, 204);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel7);
@@ -264,10 +254,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuShapes1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmAutorización";
+            this.Name = "frmSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCambiarUsuario";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
+            this.Text = "frmSesion";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -280,15 +269,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelcontrolbox;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
-        private RJCodeAdvance.RJControls.RJButton btnAcceder;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private RJCodeAdvance.RJControls.RJButton btnAcceder;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
     }
 }

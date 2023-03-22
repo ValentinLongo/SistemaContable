@@ -49,9 +49,6 @@ namespace SistemaContable
 {
     public partial class frmInicio : Form
     {
-        public static bool permiso;
-        //public static string frm;
-
         public frmInicio()
         {
             InitializeComponent();
@@ -76,12 +73,16 @@ namespace SistemaContable
             }
             else
             {
-                Negocio.FGenerales.Sesion(this, toolStripADs, 2);
-                Negocio.FInicio.DatosUsuEmp(lblUsu, lblEmpresa, lblPerfil);
+                frmSesion frm = new frmSesion();
+                frm.ShowDialog();
+                if (frmSesion.autorizado)
+                {
+                    Negocio.FGenerales.Sesion(this, toolStripADs, 2);
+                    Negocio.FInicio.DatosUsuEmp(lblUsu, lblEmpresa, lblPerfil);
 
-                lblSesion.Text = "Cerrar Sesión";
-                btnSesion.Image = Resources.candado_cerrado;
-                //terminar
+                    lblSesion.Text = "Cerrar Sesión";
+                    btnSesion.Image = Resources.candado_cerrado;
+                }
             }
         }
 
@@ -89,7 +90,7 @@ namespace SistemaContable
         {
             List<Form> formlist = new List<Form>();
             int cant = Application.OpenForms.Count;
-            frmMessageBox MessageBox = new frmMessageBox("Atención!","¿Realmente Desea Salir?",true);
+            frmMessageBox MessageBox = new frmMessageBox("Atención!", "¿Realmente Desea Salir?", true);
             MessageBox.ShowDialog();
             if (frmMessageBox.Acepto)
             {
@@ -326,7 +327,8 @@ namespace SistemaContable
 
         private void tsbConfigImpresora_Click(object sender, EventArgs e)
         {
-
+            PrintDialog printDialog1 = new PrintDialog();
+            DialogResult result = printDialog1.ShowDialog();
         }
         //
 
@@ -395,12 +397,12 @@ namespace SistemaContable
         {
             Negocio.FFormatoSistema.ColorMDI(btnArchivos);
             pArchivos.Visible = true;
-            
+
         }
 
         private void btnArchivos_MouseLeave(object sender, EventArgs e)
         {
-            btnArchivos.BackColor = Color.FromArgb(40,40,40);
+            btnArchivos.BackColor = Color.FromArgb(40, 40, 40);
             pArchivos.Visible = false;
         }
 
@@ -450,7 +452,7 @@ namespace SistemaContable
         {
             btnAyuda.BackColor = Color.FromArgb(40, 40, 40);
             pAyuda.Visible = false;
-        }      
+        }
 
         private void Menu_Archivos_Closed(object sender, ToolStripDropDownClosedEventArgs e)
         {
@@ -491,175 +493,6 @@ namespace SistemaContable
             btnAyuda2.Visible = false;
             pAyuda2.Visible = false;
         }
-        //
-
-        //FUNCION RECALCULA PERMISOS - TIENE QUE ESTAR EN EL INICIO SI O SI
-        public void RecalculaPermisos()
-        {
-            List<MRecalcularPermisos> lista = new List<MRecalcularPermisos>();
-            foreach (ToolStripMenuItem item in Menu_Archivos.Items)
-            {
-                MRecalcularPermisos mrecalcular1 = new MRecalcularPermisos()
-                {
-                    mnu_codigo = item.Tag.ToString(),
-                    mnu_descri = item.Text,
-                };
-                lista.Add(mrecalcular1);
-                foreach (ToolStripMenuItem item2 in item.DropDownItems)
-                {
-                    MRecalcularPermisos mrecalcular2 = new MRecalcularPermisos()
-                    {
-                        mnu_codigo = item.Tag.ToString(),
-                        mnu_descri = item.Text,
-                    };
-                    lista.Add(mrecalcular2);
-                }
-            }
-            foreach (ToolStripMenuItem item in Menu_Ver.Items)
-            {
-                MRecalcularPermisos mrecalcular1 = new MRecalcularPermisos()
-                {
-                    mnu_codigo = item.Tag.ToString(),
-                    mnu_descri = item.Text,
-                };
-                lista.Add(mrecalcular1);
-                foreach (ToolStripMenuItem item2 in item.DropDownItems)
-                {
-                    MRecalcularPermisos mrecalcular2 = new MRecalcularPermisos()
-                    {
-                        mnu_codigo = item.Tag.ToString(),
-                        mnu_descri = item.Text,
-                    };
-                    lista.Add(mrecalcular2);
-                }
-            }
-            foreach (ToolStripMenuItem item in Menu_Contabilidad.Items)
-            {
-                MRecalcularPermisos mrecalcular1 = new MRecalcularPermisos()
-                {
-                    mnu_codigo = item.Tag.ToString(),
-                    mnu_descri = item.Text,
-                };
-                lista.Add(mrecalcular1);
-                foreach (ToolStripMenuItem item2 in item.DropDownItems)
-                {
-                    MRecalcularPermisos mrecalcular2 = new MRecalcularPermisos()
-                    {
-                        mnu_codigo = item.Tag.ToString(),
-                        mnu_descri = item.Text,
-                    };
-                    lista.Add(mrecalcular2);
-                }
-            }
-            foreach (ToolStripMenuItem item in Menu_Mantenimiento.Items)
-            {
-                if (item.Tag != null)
-                {
-                    MRecalcularPermisos mrecalcular1 = new MRecalcularPermisos()
-                    {
-                        mnu_codigo = item.Tag.ToString(),
-                        mnu_descri = item.Text,
-                    };
-                    lista.Add(mrecalcular1);
-                }
-                foreach (ToolStripMenuItem item2 in item.DropDownItems)
-                {
-                    if (item2.Tag != null)
-                    {
-                        MRecalcularPermisos mrecalcular2 = new MRecalcularPermisos()
-                        {
-                            mnu_codigo = item.Tag.ToString(),
-                            mnu_descri = item.Text,
-                        };
-                        lista.Add(mrecalcular2);
-                    }
-                }
-            }
-            foreach (ToolStripMenuItem item in Menu_Ayuda.Items)
-            {
-                MRecalcularPermisos mrecalcular1 = new MRecalcularPermisos()
-                {
-                    mnu_codigo = item.Tag.ToString(),
-                    mnu_descri = item.Text,
-                };
-                lista.Add(mrecalcular1);
-            }
-
-            int resultado;
-            int codigo;
-            int perfil;
-            bool bandera;
-
-            DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT par_permiso FROM Parametro");
-            foreach (DataRow dr in ds.Tables[0].Rows)
-            {
-                int permiso = Convert.ToInt32(dr["par_permiso"]);
-            }
-            foreach (var i in lista)
-            {
-                resultado = 0;
-                resultado = AccesoBase.ValidarDatos($"SELECT mnu_codigo FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' and mnu_sistema = 'CO'");
-
-                if (resultado == 1)
-                {
-                    AccesoBase.InsertUpdateDatos($"UPDATE Menu SET mnu_descri = '{i.mnu_descri}' WHERE mnu_codigo = '{i.mnu_codigo}' AND mnu_sistema = 'CO'");
-                }
-                else
-                {
-                    AccesoBase.InsertUpdateDatos($"INSERT INTO Menu ( mnu_codigo, mnu_descri, mnu_sistema ) VALUES ( '{i.mnu_codigo}', '{i.mnu_descri}', 'CO' )");
-                }
-
-                ds = AccesoBase.ListarDatos($"SELECT usu_codigo FROM Usuario");
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    codigo = Convert.ToInt32(dr["usu_codigo"]);
-
-                    resultado = 0;
-                    resultado = AccesoBase.ValidarDatos($"SELECT mxu_usuario,mxu_codigo,mxu_sistema FROM MenuxUsu WHERE mxu_usuario = {codigo} AND mxu_codigo = '{i.mnu_codigo}' AND mxu_sistema = 'CO'");
-
-                    if (resultado == 0)
-                    {
-                        AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu ( mxu_usuario,mxu_codigo,mxu_activo,mxu_sistema ) VALUES ( {codigo}, '{i.mnu_codigo}', {permiso}, 'CO' )");
-                    }
-                }
-
-                ds = AccesoBase.ListarDatos($"SELECT per_codigo FROM Perfil");
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    perfil = Convert.ToInt32(dr["per_codigo"]);
-
-                    resultado = 0;
-                    resultado = AccesoBase.ValidarDatos($"SELECT mxp_perfil,mxp_codigo,mxp_sistema FROM MenuxPerfil WHERE mxp_perfil = {perfil} AND mxp_codigo = '{i.mnu_codigo}' AND mxp_sistema = 'CO'");
-
-                    if (resultado == 0)
-                    {
-                        AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxPerfil ( mxp_perfil,mxp_codigo,mxp_activo,mxp_sistema ) VALUES ( {perfil}, '{i.mnu_codigo}', {permiso}, 'CO' )");
-                    }
-                }
-
-                bandera = true;
-
-                ds = AccesoBase.ListarDatos($"SELECT mnu_codigo FROM menu WHERE mnu_sistema = 'CO'");
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    int tag = Convert.ToInt32(dr["mnu_codigo"]);
-
-                    if (tag == Convert.ToInt32(i.mnu_codigo))
-                    {
-                        bandera = false;
-                    }
-                    if (bandera)
-                    {
-                        //terminar deletes
-                        //AccesoBase.InsertUpdateDatos($"DELETE FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' AND mnu_descri = '{i.mnu_descri}' AND mnu_sistema = 'CO'");
-                        //AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_usuario = {codigo} AND mxu_codigo = '{i.mnu_codigo}' AND mxu_activo = {permiso} AND mxu_sistema = 'CO'");
-                        //AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxPerfil WHERE mxup_perfil = {perfil} AND mxp_codigo = '{i.mnu_codigo}' AND mxp_activo = {permiso} AND mxp_sistema = 'CO'");
-                    }
-                }
-            }
-        }
-
         //
 
         //PERMISOS PARA CADA BOTON
@@ -871,7 +704,7 @@ namespace SistemaContable
 
         private void rubricaciónDeSubDiarios_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void agenda_Click(object sender, EventArgs e)
@@ -922,11 +755,6 @@ namespace SistemaContable
                 frmAutorización.usuario = "";
                 frmAutorización.contraseña = "";
             }
-            else
-            {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Usuario No Autorizado.", false);
-                MessageBox.ShowDialog();
-            }
         }
 
         private void parametrizacionDePermisosUsuarios_Click(object sender, EventArgs e)
@@ -947,11 +775,6 @@ namespace SistemaContable
                 frmAutorizacion.Close();
                 frmAutorización.usuario = "";
                 frmAutorización.contraseña = "";
-            }
-            else
-            {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Usuario No Autorizado.", false);
-                MessageBox.ShowDialog();
             }
         }
 
@@ -978,7 +801,7 @@ namespace SistemaContable
                     frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
                     estandar.Show();
                     Application.DoEvents();
-                    RecalculaPermisos();
+                    Negocio.Funciones.FRecalcularPermisos.RecalcularPermisos(Menu_Archivos, Menu_Ver, Menu_Contabilidad, Menu_Mantenimiento, Menu_Ayuda);
                     estandar.Close();
                 }
 
@@ -989,14 +812,9 @@ namespace SistemaContable
                     frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...");
                     estandar.Show();
                     Application.DoEvents();
-                    Negocio.Funciones.FRecalcularPermisos.RecalculaPermisosEspeciales();
+                    Negocio.Funciones.FRecalcularPermisos.RecalcularPermisosEspeciales();
                     estandar.Close();
                 }
-            }
-            else
-            {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Usuario No Autorizado.", false);
-                MessageBox.ShowDialog();
             }
         }
     }

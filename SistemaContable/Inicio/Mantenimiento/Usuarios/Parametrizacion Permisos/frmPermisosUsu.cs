@@ -2,6 +2,7 @@
 using Datos.Modelos;
 using SistemaContable.General;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,21 +18,12 @@ namespace SistemaContable.Parametrizacion_Permisos
     public partial class frmPermisosUsu : Form
     {
         public static List<MPermisoUsuario> lista = new List<MPermisoUsuario>();
+
         public frmPermisosUsu()
         {
             InitializeComponent();
         }
 
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             frmConsultaGeneral consultageneral = new frmConsultaGeneral("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo", "frmPermisosUsuarios");
@@ -143,7 +135,7 @@ namespace SistemaContable.Parametrizacion_Permisos
         }
 
         private void btnAbrirArbol_Click(object sender, EventArgs e)
-        { 
+        {
             Tpermisos.ExpandAll();
         }
 
@@ -169,6 +161,33 @@ namespace SistemaContable.Parametrizacion_Permisos
         private void txtNroUsuario_TextChanged(object sender, EventArgs e)
         {
             ArmarArbol(txtNroUsuario.Text);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            if (txtNroUsuario.Text != "")
+            {
+                string query = "Select LEFT((REPLICATE(' ', len(mxu_codigo)) + RTRIM(LTRIM(mnu_descri))) + REPLICATE('.',100),65) as Descri, mxu_activo, * From MenuxUsu Left Join Menu on mxu_codigo = mnu_codigo WHERE mxu_usuario = " + txtNroUsuario.Text + " AND mxu_sistema = 'CO' AND mnu_sistema = 'CO' Order By mxu_codigo";
+
+                frmReporte freporte = new frmReporte("MenuxUsu", $"{query}", "", "Permisos por Usuario", "Confirmados", txtNroUsuario.Text + " - " + txtDescriUsuario.Text);
+                freporte.ShowDialog();
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe Seleccionar un Usuario.", false);
+                MessageBox.ShowDialog();
+            }
+        }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

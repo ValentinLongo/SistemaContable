@@ -29,9 +29,9 @@ namespace SistemaContable
 
         private static int PERFIL;
         private static bool CAMBIA;
-        private static int TIPO; 
-        private static int COD1; 
-        private static int COD2; 
+        private static int TIPO;
+        private static int COD1;
+        private static int COD2;
         private static string COD3;
         private static string DESCRI1;
         private static string DESCRI2;
@@ -39,13 +39,13 @@ namespace SistemaContable
         private static string OBSERVA;
         private static string REFERENCIA;
 
-        public frmAutorización( [Optional] Form frm )
+        public frmAutorización([Optional] Form frm) // AutSinCB = utilizar al ventana autorizacion pero con codigo de barra deshabilitado
         {
             InitializeComponent();
             Inicializar(frm);
         }
 
-        private void Inicializar(Form frm) 
+        private void Inicializar(Form frm)
         {
             this.Select(); //con esto funciona el evento keydown.
 
@@ -92,22 +92,31 @@ namespace SistemaContable
             bool autorizado = Autoriza(PERFIL, CAMBIA, TIPO.ToString(), COD1.ToString(), COD2.ToString(), COD3, DESCRI1, DESCRI2, DESCRI3, OBSERVA, REFERENCIA);
             if (autorizado)
             {
-                if (FRM is frmEstandar)
+                if (FRM != null)
                 {
-                    this.Close();
-                    frmAutorización.usuario = "";
-                    frmAutorización.contraseña = "";
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: ¿desea recalcular los permisos del menu?", true);
-                    MessageBox.ShowDialog();
-                    if (frmMessageBox.Acepto)
+                    if (FRM is frmEstandar)
                     {
-                        frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
-                        estandar.ShowDialog();
+                        this.Close();
+                        frmAutorización.usuario = "";
+                        frmAutorización.contraseña = "";
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: ¿desea recalcular los permisos del menu?", true);
+                        MessageBox.ShowDialog();
+                        if (frmMessageBox.Acepto)
+                        {
+                            frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
+                            estandar.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        FRM.Show();
+                        this.Close();
+                        frmAutorización.usuario = "";
+                        frmAutorización.contraseña = "";
                     }
                 }
                 else
                 {
-                    FRM.Show();
                     this.Close();
                     frmAutorización.usuario = "";
                     frmAutorización.contraseña = "";
@@ -115,7 +124,7 @@ namespace SistemaContable
             }
             else
             {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Usuario No Autorizado.", false);
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Autorización Denegada!", false);
                 MessageBox.ShowDialog();
             }
         }
@@ -160,7 +169,7 @@ namespace SistemaContable
 
                 int resultado = AccesoBase.ValidarDatos($"SELECT usu_login, usu_contraseña FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contraseña}'");
 
-                if(cambia)
+                if (cambia)
                 {
                     Negocio.FLogin.NombreUsuario = usuario;
                     Negocio.FLogin.ContraUsuario = contraseña;
@@ -256,7 +265,6 @@ namespace SistemaContable
 
         private void Tick(object sender, EventArgs e)
         {
-
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT * FROM Autoriza WHERE aut_codigo = {codigo}");
 
@@ -281,9 +289,12 @@ namespace SistemaContable
 
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    bandera = Convert.ToInt32(dr["aut_bandera"]);
-                    usu_autorizo = Convert.ToInt32(dr["aut_usuauto"]);
-                    observacion = dr["aut_observa"].ToString();
+                    if (dr["aut_bandera"] != null && dr["aut_usuauto"] != null)
+                    {
+                        bandera = Convert.ToInt32(dr["aut_bandera"]);
+                        usu_autorizo = Convert.ToInt32(dr["aut_usuauto"]);
+                        observacion = dr["aut_observa"].ToString();
+                    }
                 }
 
                 if (bandera == 1)
@@ -295,16 +306,29 @@ namespace SistemaContable
                     labelcontrolbox.Text = "AUTORIZADO!!!";
 
                     ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_codigo = {usu_autorizo} AND usu_estado = 1 ");
-                    foreach (DataRow dr in ds.Tables[0].Rows) 
+                    foreach (DataRow dr in ds.Tables[0].Rows)
                     {
                         txtUsuario.Text = dr["usu_login"].ToString();
                         txtContraseña.Text = dr["usu_contraseña"].ToString();
                     }
 
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La operación ha sido Autorizada.", false);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La operación ha sido Autorizada. Aclaración: " + observacion, false, true);
                     MessageBox.ShowDialog();
 
                     AccesoBase.InsertUpdateDatos($"DELETE FROM Autoriza WHERE aut_codigo = {codigo}");
+                }
+                else if (bandera == 2)
+                {
+                    timer1.Enabled = false;
+                    txtUsuario.Enabled = true;
+                    txtContraseña.Enabled = true;
+                    btnAcceder.Enabled = true;
+                    labelcontrolbox.Text = "RECHAZADO!!!";
+
+                    AccesoBase.InsertUpdateDatos($"DELETE FROM Autoriza WHERE aut_codigo = {codigo}");
+
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La operación ha sido Rechazada. Aclaración: " + observacion, false, true);
+                    MessageBox.ShowDialog();
                 }
             }
 
