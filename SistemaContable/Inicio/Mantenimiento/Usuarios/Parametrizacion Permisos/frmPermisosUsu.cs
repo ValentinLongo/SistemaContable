@@ -160,6 +160,15 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void txtNroUsuario_TextChanged(object sender, EventArgs e)
         {
+            txtDescriUsuario.Clear();
+
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT usu_nombre FROM Usuario WHERE usu_codigo = '{txtNroUsuario.Text}'");
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                txtDescriUsuario.Text = dr["usu_nombre"].ToString();
+            }
+
             ArmarArbol(txtNroUsuario.Text);
         }
 

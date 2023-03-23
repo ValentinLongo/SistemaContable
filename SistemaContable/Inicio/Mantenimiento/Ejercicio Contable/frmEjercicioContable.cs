@@ -90,11 +90,11 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
 
         }
 
-        private void rjButton5_Click(object sender, EventArgs e)
+        private void Imprimir(object sender, EventArgs e)
         {
-            if(txtbusqueda == null)
+            if (txtbusqueda == null)
             {
-                frmReporte reporte = new frmReporte("Ejercicio", "select * from Ejercicio ORDER BY eje_codigo", "","Informe de Ejercicios Contables","General",DateTime.Now.ToString("d"));
+                frmReporte reporte = new frmReporte("Ejercicio", "select * from Ejercicio ORDER BY eje_codigo", "", "Informe de Ejercicios Contables", "General", DateTime.Now.ToString("d"));
                 reporte.ShowDialog();
             }
             else

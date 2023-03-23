@@ -44,6 +44,9 @@ using SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo;
 using SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe;
 using SistemaContable.Properties;
 using SistemaContable.Inicio.Ver.Calendario;
+using SistemaContable.Inicio.Contabilidad.Renumeración_de_Asientos;
+using SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos;
+using SistemaContable.Inicio.Mantenimiento.Rubricación_de_SubDiarios;
 
 namespace SistemaContable
 {
@@ -282,14 +285,21 @@ namespace SistemaContable
         private void tsbLibroDiario_Click(object sender, EventArgs e)
         {
             frmLibroDiario frm = new frmLibroDiario();
-            Negocio.FGenerales.Mostrarfrm(frm, libroDiario.Tag.ToString());
+            Negocio.FGenerales.Mostrarfrm(frm, tsbLibroDiario.Tag.ToString());
             DisparadorInicio(sender, e);
         }
 
         private void tsbLibroMayor_Click(object sender, EventArgs e)
         {
             frmLibroMayor frm = new frmLibroMayor();
-            Negocio.FGenerales.Mostrarfrm(frm, libroMayor.Tag.ToString());
+            Negocio.FGenerales.Mostrarfrm(frm, tsbLibroMayor.Tag.ToString());
+            DisparadorInicio(sender, e);
+        }
+
+        private void tsbBalanceDeSumasySaldos_Click(object sender, EventArgs e)
+        {
+            frmBalances_Informes frm = new frmBalances_Informes(1);
+            Negocio.FGenerales.Mostrarfrm(frm, tsbBalanceDeSumasySaldos.Tag.ToString());
             DisparadorInicio(sender, e);
         }
 
@@ -570,7 +580,8 @@ namespace SistemaContable
 
         private void renumeraciónDeAsientos_Click(object sender, EventArgs e)
         {
-
+            frmRenumeraciónDeAsientos frm = new frmRenumeraciónDeAsientos();
+            Negocio.FGenerales.Mostrarfrm(frm, renumeraciónDeAsientos.Tag.ToString());
         }
 
         private void libroDiario_Click(object sender, EventArgs e)
@@ -605,12 +616,14 @@ namespace SistemaContable
 
         private void balanceDeSumasYSaldos_Click(object sender, EventArgs e)
         {
-
+            frmBalances_Informes frm = new frmBalances_Informes(1);
+            Negocio.FGenerales.Mostrarfrm(frm, balanceDeSumasYSaldos.Tag.ToString());
         }
 
         private void balanceGeneral_Click(object sender, EventArgs e)
         {
-
+            frmBalances_Informes frm = new frmBalances_Informes(2);
+            Negocio.FGenerales.Mostrarfrm(frm, balanceGeneral.Tag.ToString());
         }
 
         private void actualizaciónDI_Click(object sender, EventArgs e)
@@ -627,7 +640,8 @@ namespace SistemaContable
 
         private void informe_Click(object sender, EventArgs e)
         {
-
+            frmBalances_Informes frm = new frmBalances_Informes(3);
+            Negocio.FGenerales.Mostrarfrm(frm, informe.Tag.ToString());
         }
 
         private void auditoriaInterna_Click(object sender, EventArgs e)
@@ -704,7 +718,8 @@ namespace SistemaContable
 
         private void rubricaciónDeSubDiarios_Click(object sender, EventArgs e)
         {
-
+            frmRubricacionDeSubDiarios frm = new frmRubricacionDeSubDiarios();
+            Negocio.FGenerales.Mostrarfrm(frm, rubricaciónDeSubDiarios.Tag.ToString());
         }
 
         private void agenda_Click(object sender, EventArgs e)

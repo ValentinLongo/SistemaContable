@@ -274,6 +274,7 @@
             this.tsbBalanceDeSumasySaldos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbBalanceDeSumasySaldos.Name = "tsbBalanceDeSumasySaldos";
             this.tsbBalanceDeSumasySaldos.Tag = "3014";
+            this.tsbBalanceDeSumasySaldos.Click += new System.EventHandler(this.tsbBalanceDeSumasySaldos_Click);
             // 
             // toolStripSeparator2
             // 

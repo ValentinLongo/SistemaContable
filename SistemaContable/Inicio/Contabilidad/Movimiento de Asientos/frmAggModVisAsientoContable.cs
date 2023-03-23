@@ -5,6 +5,7 @@ using SistemaContable.General;
 using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_Modelos;
 using SistemaContable.Plan_de_Cuentas;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -709,6 +710,12 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
                 this.Close();
             }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            //frmReporte freporte = new frmReporte("MovAsto", $"{query}", "", "Movimientos de Asiento", txtDescriEjercicio.Text, txtNroAsiento.Text,dtFecha.Value.ToString(), txtComentario.Text);
+            //freporte.ShowDialog();
         }
 
         private void panel7_MouseDown(object sender, MouseEventArgs e)

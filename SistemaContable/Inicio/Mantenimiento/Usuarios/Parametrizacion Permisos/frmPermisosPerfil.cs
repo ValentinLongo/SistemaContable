@@ -29,11 +29,6 @@ namespace SistemaContable.Parametrizacion_Permisos
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
@@ -169,6 +164,15 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void txtNroPerfil_TextChanged(object sender, EventArgs e)
         {
+            txtDescriPerfil.Clear();
+
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT per_descri FROM perfil WHERE per_codigo = '{txtNroPerfil.Text}'");
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                txtDescriPerfil.Text = dr["per_Descri"].ToString();
+            }
+
             ArmarArbol(txtNroPerfil.Text);
         }
 
@@ -176,11 +180,10 @@ namespace SistemaContable.Parametrizacion_Permisos
         {
             if (txtNroPerfil.Text != "")
             {
+                string query = "Select LEFT((REPLICATE('   ', len(mxp_codigo)) + RTRIM(LTRIM(mnu_descri))),65) as Descri, mxp_activo, * From MenuxPerfil Left Join Menu on mxp_codigo = mnu_codigo WHERE mxp_perfil = " + txtNroPerfil.Text + " AND mxp_sistema = 'CO' AND mnu_sistema = 'CO' Order By mxp_codigo";
 
-                //string query = Select LEFT((REPLICATE('   ', len(mxp_codigo)) + RTRIM(LTRIM(mnu_descri))),65) as Descri, mxp_activo, * From MenuxPerfil Left Join Menu on mxp_codigo = mnu_codigo Where mxp_perfil = 4 Order By mxp_codigo
-
-                //frmReporte freporte = new frmReporte("MenuxUsu", $"{query}", "", "Permisos por Perfil", "Permisos Confirmados", txtNroPerfil.Text + " - " + txtDescriPerfil.Text);
-                //freporte.ShowDialog();
+                frmReporte freporte = new frmReporte("MenuxPerfil", $"{query}", "", "Permisos por Perfil", "Permisos Confirmados", txtNroPerfil.Text + " - " + txtDescriPerfil.Text);
+                freporte.ShowDialog();
             }
             else
             {
@@ -188,5 +191,11 @@ namespace SistemaContable.Parametrizacion_Permisos
                 MessageBox.ShowDialog();
             }
         }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
     }
 }

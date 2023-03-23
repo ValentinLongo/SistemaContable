@@ -58,6 +58,7 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetDeMod1)).BeginInit();
@@ -150,6 +151,7 @@
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnResumen
             // 
@@ -464,7 +466,8 @@
             this.Column11,
             this.Column12,
             this.Column13,
-            this.Column14});
+            this.Column14,
+            this.Code});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -530,6 +533,13 @@
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
             // 
+            // Code
+            // 
+            this.Code.HeaderText = "Codigo";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            this.Code.Visible = false;
+            // 
             // frmDetalledeModelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -589,5 +599,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
     }
 }
