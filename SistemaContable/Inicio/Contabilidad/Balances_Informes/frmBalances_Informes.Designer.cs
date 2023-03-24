@@ -184,6 +184,7 @@
             this.txtCodEjercicio.Size = new System.Drawing.Size(70, 19);
             this.txtCodEjercicio.TabIndex = 116;
             this.txtCodEjercicio.Tag = "11000";
+            this.txtCodEjercicio.TextChanged += new System.EventHandler(this.txtCodEjercicio_TextChanged);
             // 
             // label3
             // 
@@ -243,7 +244,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel4.Location = new System.Drawing.Point(424, 21);
+            this.panel4.Location = new System.Drawing.Point(425, 21);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1, 183);
             this.panel4.TabIndex = 124;

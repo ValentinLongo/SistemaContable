@@ -1,9 +1,12 @@
-﻿using SistemaContable.General;
+﻿using Datos;
+using Negocio;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IdentityModel.Metadata;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -25,8 +28,8 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
         private void Seteo(int proceso) 
         {
-            maskDesde.Mask = "00-00-00";
-            maskHasta.Mask = "00-00-00";
+            maskDesde.Mask = "00-00-0000";
+            maskHasta.Mask = "00-00-0000";
 
             if (proceso == 1) //Balance de Sumas y Saldos
             {
@@ -80,17 +83,80 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (Proceso == 1) //Balance de Sumas y Saldos
+            if (txtCodEjercicio.Text != "")
             {
+                string desde = "";
+                string hasta = "";
 
+                DataSet ds = new DataSet();
+                ds = AccesoBase.ListarDatos($"SELECT eje_desde, eje hasta FROM Ejercicio WHERE eje_codigo = {txtCodEjercicio.Text}");
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    desde = dr["eje_desde"].ToString();
+                    hasta = dr["eje_hasta"].ToString();
+                }
+
+                if (maskDesde.MaskFull)
+                {
+                    if (maskHasta.MaskFull)
+                    {
+                        if (Convert.ToDateTime(maskDesde) >= Convert.ToDateTime(desde))
+                        {
+                            if (Convert.ToDateTime(maskHasta) <= Convert.ToDateTime(hasta))
+                            {
+                                int terminal = frmLogin.NumeroTerminal;
+
+                                if (Proceso == 1) //Balance de Sumas y Saldos
+                                {
+
+                                }
+                                else if (Proceso == 2) //Balance General
+                                {
+                                    AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_BalanceGral WHERE bal_terminal = {terminal}");
+
+                                    if (Check1.Checked) // Check1 = Visualizar informe con centro de costo
+                                    {
+                                        AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral(bal_Terminal, bal_codigo, bal_cuenta, bal_descri, bal_superior, bal_hija, bal_tabulador, bal_saldo, bal_col1, bal_col1D, bal_col2, bal_col2D, bal_col3, bal_col3D, bal_col4, bal_col4D) " +
+                                            $" SELECT {terminal}, pcu_codigo, pcu_cuenta, pcu_descri, pcu_superior, pcu_hija, pcu_tabulador, 0, 0, '', 0, '', 0, '', 0, '' FROM PCuenta ORDER BY pcu_codigo");
+                                    }
+                                    else
+                                    {
+                                        
+                                    }                                   
+                                }
+                                else if (Proceso == 3) //Informes 
+                                {
+                                    
+                                }
+                            }
+                            else
+                            {
+                                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "La fecha superior, No se encuentra dentro del periordo habilitado del ejercicio", false, true);
+                                MessageBox.ShowDialog();
+                            }
+                        }
+                        else
+                        {
+                            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "La fecha inferior, No se encuentra dentro del periordo habilitado del ejercicio", false, true);
+                            MessageBox.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debera Indicar la fecha superior.", false);
+                        MessageBox.ShowDialog();
+                    }
+                }
+                else
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debera Indicar la fecha inferior.", false);
+                    MessageBox.ShowDialog();
+                }
             }
-            else if (Proceso == 2) //Balance General
+            else
             {
-
-            }
-            else if (Proceso == 3) //Informes
-            {
-
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debera Seleccionar un Ejercicio Contable.", false);
+                MessageBox.ShowDialog();
             }
         }
 
@@ -108,6 +174,25 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
             frm.ShowDialog();
             txtCodModelo.Text = frmConsultaGeneral.codigoCG;
             txtDescriModelo.Text = frmConsultaGeneral.descripcionCG;
+        }
+
+        private void txtCodEjercicio_TextChanged(object sender, EventArgs e)
+        {
+            txtDescriEjercicio.Clear();
+            maskDesde.Clear();
+            maskHasta.Clear();
+
+            if (txtCodEjercicio.Text != "")
+            {
+                DataSet ds = new DataSet();
+                ds = AccesoBase.ListarDatos($"SELECT eje_descri, eje_desde, eje_hasta FROM Ejercicio WHERE eje_codigo = {txtCodEjercicio.Text}");
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    txtDescriEjercicio.Text = dr["eje_descri"].ToString();
+                    maskDesde.Text = dr["eje_desde"].ToString();
+                    maskHasta.Text = dr["eje_hasta"].ToString();
+                }
+            }
         }
 
         //BARRA DE CONTROL

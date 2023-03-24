@@ -391,6 +391,12 @@
     <Compile Include="Inicio\Contabilidad\Renumeración de Asientos\frmRenumeraciónDeAsientos.Designer.cs">
       <DependentUpon>frmRenumeraciónDeAsientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Contabilidad\Saldos Ajustados\frmSaldosAjustados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Saldos Ajustados\frmSaldosAjustados.Designer.cs">
+      <DependentUpon>frmSaldosAjustados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Mantenimiento\Agenda\frmAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -714,6 +720,9 @@
     <EmbeddedResource Include="Inicio\Contabilidad\Renumeración de Asientos\frmRenumeraciónDeAsientos.resx">
       <DependentUpon>frmRenumeraciónDeAsientos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Saldos Ajustados\frmSaldosAjustados.resx">
+      <DependentUpon>frmSaldosAjustados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Agenda\frmAgenda.resx">
       <DependentUpon>frmAgenda.cs</DependentUpon>
     </EmbeddedResource>
@@ -922,7 +931,6 @@
   <ItemGroup>
     <Folder Include="Inicio\Archivos\" />
     <Folder Include="Inicio\Ayuda\" />
-    <Folder Include="Inicio\Contabilidad\Saldos Ajustados\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\llave.png" />
