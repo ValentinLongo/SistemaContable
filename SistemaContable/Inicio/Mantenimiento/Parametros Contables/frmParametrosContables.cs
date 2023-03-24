@@ -1,4 +1,5 @@
-﻿using Datos;
+﻿using Bunifu.UI.WinForms;
+using Datos;
 using Negocio;
 using SistemaContable.General;
 using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
@@ -37,9 +38,9 @@ namespace SistemaContable.Inicio.Mantenimiento.Parametros_Contables
             {
                 foreach (Control Ctrl in this.Controls)
                 {
-                    if (Ctrl is CheckBox)
+                    if (Ctrl is BunifuCheckBox)
                     {
-                        CheckBox che = (CheckBox)Ctrl;
+                        BunifuCheckBox che = (BunifuCheckBox)Ctrl;
                         int valor;
                         string nombreCheck = Ctrl.Name.Substring(0, Ctrl.Name.Length - 1);
                         try
