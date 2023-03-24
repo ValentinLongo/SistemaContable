@@ -51,9 +51,9 @@
             this.lblModelo = new System.Windows.Forms.Label();
             this.btnModelo = new System.Windows.Forms.Button();
             this.pModelo2 = new System.Windows.Forms.Panel();
-            this.txtModelo2 = new System.Windows.Forms.TextBox();
+            this.txtDescriModelo = new System.Windows.Forms.TextBox();
             this.pModelo1 = new System.Windows.Forms.Panel();
-            this.txtModelo1 = new System.Windows.Forms.TextBox();
+            this.txtCodModelo = new System.Windows.Forms.TextBox();
             this.Check3 = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.lbl3 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
@@ -446,18 +446,18 @@
             this.pModelo2.TabIndex = 137;
             this.pModelo2.Visible = false;
             // 
-            // txtModelo2
+            // txtDescriModelo
             // 
-            this.txtModelo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.txtModelo2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtModelo2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo2.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtModelo2.Location = new System.Drawing.Point(154, 137);
-            this.txtModelo2.Name = "txtModelo2";
-            this.txtModelo2.Size = new System.Drawing.Size(222, 19);
-            this.txtModelo2.TabIndex = 136;
-            this.txtModelo2.Tag = "11000";
-            this.txtModelo2.Visible = false;
+            this.txtDescriModelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txtDescriModelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescriModelo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescriModelo.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtDescriModelo.Location = new System.Drawing.Point(154, 137);
+            this.txtDescriModelo.Name = "txtDescriModelo";
+            this.txtDescriModelo.Size = new System.Drawing.Size(222, 19);
+            this.txtDescriModelo.TabIndex = 136;
+            this.txtDescriModelo.Tag = "11000";
+            this.txtDescriModelo.Visible = false;
             // 
             // pModelo1
             // 
@@ -468,18 +468,18 @@
             this.pModelo1.TabIndex = 135;
             this.pModelo1.Visible = false;
             // 
-            // txtModelo1
+            // txtCodModelo
             // 
-            this.txtModelo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.txtModelo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtModelo1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo1.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtModelo1.Location = new System.Drawing.Point(72, 136);
-            this.txtModelo1.Name = "txtModelo1";
-            this.txtModelo1.Size = new System.Drawing.Size(70, 19);
-            this.txtModelo1.TabIndex = 134;
-            this.txtModelo1.Tag = "11000";
-            this.txtModelo1.Visible = false;
+            this.txtCodModelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txtCodModelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodModelo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodModelo.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtCodModelo.Location = new System.Drawing.Point(72, 136);
+            this.txtCodModelo.Name = "txtCodModelo";
+            this.txtCodModelo.Size = new System.Drawing.Size(70, 19);
+            this.txtCodModelo.TabIndex = 134;
+            this.txtCodModelo.Tag = "11000";
+            this.txtCodModelo.Visible = false;
             // 
             // Check3
             // 
@@ -557,9 +557,9 @@
             this.Controls.Add(this.Check3);
             this.Controls.Add(this.btnModelo);
             this.Controls.Add(this.pModelo2);
-            this.Controls.Add(this.txtModelo2);
+            this.Controls.Add(this.txtDescriModelo);
             this.Controls.Add(this.pModelo1);
-            this.Controls.Add(this.txtModelo1);
+            this.Controls.Add(this.txtCodModelo);
             this.Controls.Add(this.lblModelo);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.Check2);
@@ -613,9 +613,9 @@
         private System.Windows.Forms.Label lblModelo;
         private System.Windows.Forms.Button btnModelo;
         private System.Windows.Forms.Panel pModelo2;
-        private System.Windows.Forms.TextBox txtModelo2;
+        private System.Windows.Forms.TextBox txtDescriModelo;
         private System.Windows.Forms.Panel pModelo1;
-        private System.Windows.Forms.TextBox txtModelo1;
+        private System.Windows.Forms.TextBox txtCodModelo;
         private Bunifu.UI.WinForms.BunifuCheckBox Check3;
         private System.Windows.Forms.Label lbl3;
     }

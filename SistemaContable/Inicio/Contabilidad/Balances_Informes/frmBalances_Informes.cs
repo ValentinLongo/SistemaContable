@@ -57,12 +57,12 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
                 lblModelo.Visible = true;
                 lblModelo.Location = new Point(18, 74);
-                txtModelo1.Visible = true;
-                txtModelo1.Location = new Point(76, 70);
+                txtCodModelo.Visible = true;
+                txtCodModelo.Location = new Point(76, 70);
                 pModelo1.Visible = true;
                 pModelo1.Location = new Point(76, 89);
-                txtModelo2.Visible = true;
-                txtModelo2.Location = new Point(158, 71);
+                txtDescriModelo.Visible = true;
+                txtDescriModelo.Location = new Point(158, 71);
                 pModelo2.Visible = true;
                 pModelo2.Location = new Point(158, 89);
                 btnModelo.Visible = true;
@@ -104,7 +104,10 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
         private void btnModelo_Click(object sender, EventArgs e)
         {
-
+            frmConsultaGeneral frm = new frmConsultaGeneral("bal_codigo as Código, bal_descri as Descripción", "Balance", "", "", "frmBalanceDeSumasySaldos");
+            frm.ShowDialog();
+            txtCodModelo.Text = frmConsultaGeneral.codigoCG;
+            txtDescriModelo.Text = frmConsultaGeneral.descripcionCG;
         }
 
         //BARRA DE CONTROL

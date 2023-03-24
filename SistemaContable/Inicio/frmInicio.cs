@@ -719,7 +719,7 @@ namespace SistemaContable
         private void rubricaciónDeSubDiarios_Click(object sender, EventArgs e)
         {
             frmRubricacionDeSubDiarios frm = new frmRubricacionDeSubDiarios();
-            Negocio.FGenerales.Mostrarfrm(frm, rubricaciónDeSubDiarios.Tag.ToString());
+            frm.ShowDialog();
         }
 
         private void agenda_Click(object sender, EventArgs e)
