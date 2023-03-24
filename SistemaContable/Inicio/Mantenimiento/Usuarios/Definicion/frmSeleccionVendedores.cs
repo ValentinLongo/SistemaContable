@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaContable.General;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +38,8 @@ namespace SistemaContable.Usuarios
         {
             CodigoVendedor = Convert.ToInt32(dgvVendedores.Rows[indice].Cells[0].Value.ToString());
             NombreVendedor = dgvVendedores.Rows[indice].Cells[1].Value.ToString();
-            MessageBox.Show("Vendedor Seleccionado");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Vendedor Seleccionado", false);
+            MessageBox.ShowDialog();
             this.Close();
         }
 

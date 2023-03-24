@@ -29,11 +29,6 @@ namespace SistemaContable.Parametrizacion_Permisos
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
@@ -124,7 +119,8 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxPerfil ( mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema) SELECT mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema From aux_MenuxPerfil Where aux_MenuxPerfil.mxp_sistema = 'CO' AND mxp_terminal = '{terminal}' AND aux_MenuxPerfil.mxp_perfil = {txtNroPerfil.Text}");
 
-            MessageBox.Show("Cambios realizados correctamente!", "Mensaje");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cambios realizados correctamente!", false);
+            MessageBox.ShowDialog();
             this.Close();
         }
 
@@ -161,13 +157,45 @@ namespace SistemaContable.Parametrizacion_Permisos
             }
             else
             {
-                MessageBox.Show("Atención: Debera indicar un perfil.");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debera indicar un perfil.", false);
+                MessageBox.ShowDialog();
             }
         }
 
         private void txtNroPerfil_TextChanged(object sender, EventArgs e)
         {
+            txtDescriPerfil.Clear();
+
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT per_descri FROM perfil WHERE per_codigo = '{txtNroPerfil.Text}'");
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                txtDescriPerfil.Text = dr["per_Descri"].ToString();
+            }
+
             ArmarArbol(txtNroPerfil.Text);
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            if (txtNroPerfil.Text != "")
+            {
+                string query = "Select LEFT((REPLICATE('   ', len(mxp_codigo)) + RTRIM(LTRIM(mnu_descri))),65) as Descri, mxp_activo, * From MenuxPerfil Left Join Menu on mxp_codigo = mnu_codigo WHERE mxp_perfil = " + txtNroPerfil.Text + " AND mxp_sistema = 'CO' AND mnu_sistema = 'CO' Order By mxp_codigo";
+
+                frmReporte freporte = new frmReporte("MenuxPerfil", $"{query}", "", "Permisos por Perfil", "Permisos Confirmados", txtNroPerfil.Text + " - " + txtDescriPerfil.Text);
+                freporte.ShowDialog();
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe Seleccionar un Perfil.", false);
+                MessageBox.ShowDialog();
+            }
+        }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
     }
 }

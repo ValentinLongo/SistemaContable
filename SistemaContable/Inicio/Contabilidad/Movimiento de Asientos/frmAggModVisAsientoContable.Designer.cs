@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAggModVisAsientoContable));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.lblControlBar = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,7 +54,6 @@
             this.txtNroAsiento = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnCancelar = new RJCodeAdvance.RJControls.RJButton();
             this.btnGenerar = new RJCodeAdvance.RJControls.RJButton();
             this.btnPlandeCta = new RJCodeAdvance.RJControls.RJButton();
             this.btnModelo = new RJCodeAdvance.RJControls.RJButton();
@@ -71,6 +73,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel7.Controls.Add(this.btnCerrar);
             this.panel7.Controls.Add(this.lblControlBar);
             this.panel7.Controls.Add(this.bunifuFormControlBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -80,6 +83,24 @@
             this.panel7.TabIndex = 95;
             this.panel7.Tag = "1";
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCerrar.Location = new System.Drawing.Point(761, -4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(40, 25);
+            this.btnCerrar.TabIndex = 131;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.MouseEnter += new System.EventHandler(this.btnCerrar_MouseEnter);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
             // 
             // lblControlBar
             // 
@@ -262,6 +283,7 @@
             this.cbTipoAsiento.Name = "cbTipoAsiento";
             this.cbTipoAsiento.Size = new System.Drawing.Size(134, 25);
             this.cbTipoAsiento.TabIndex = 115;
+            this.cbTipoAsiento.SelectedIndexChanged += new System.EventHandler(this.cbTipoAsiento_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -318,7 +340,7 @@
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfirmar.Location = new System.Drawing.Point(665, 34);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(124, 30);
+            this.btnConfirmar.Size = new System.Drawing.Size(124, 41);
             this.btnConfirmar.TabIndex = 122;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;
@@ -332,27 +354,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(2, 473);
             this.panel6.TabIndex = 123;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnCancelar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnCancelar.BorderColor = System.Drawing.Color.White;
-            this.btnCancelar.BorderRadius = 0;
-            this.btnCancelar.BorderSize = 0;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Dotum", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(665, 76);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(124, 30);
-            this.btnCancelar.TabIndex = 124;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextColor = System.Drawing.Color.White;
-            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnGenerar
             // 
@@ -369,7 +370,7 @@
             this.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerar.Location = new System.Drawing.Point(665, 213);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(124, 30);
+            this.btnGenerar.Size = new System.Drawing.Size(124, 41);
             this.btnGenerar.TabIndex = 125;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.TextColor = System.Drawing.Color.White;
@@ -389,9 +390,9 @@
             this.btnPlandeCta.Font = new System.Drawing.Font("Dotum", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlandeCta.ForeColor = System.Drawing.Color.White;
             this.btnPlandeCta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlandeCta.Location = new System.Drawing.Point(665, 258);
+            this.btnPlandeCta.Location = new System.Drawing.Point(665, 316);
             this.btnPlandeCta.Name = "btnPlandeCta";
-            this.btnPlandeCta.Size = new System.Drawing.Size(124, 30);
+            this.btnPlandeCta.Size = new System.Drawing.Size(124, 41);
             this.btnPlandeCta.TabIndex = 126;
             this.btnPlandeCta.Text = "Plan de Cta";
             this.btnPlandeCta.TextColor = System.Drawing.Color.White;
@@ -411,9 +412,9 @@
             this.btnModelo.Font = new System.Drawing.Font("Dotum", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModelo.ForeColor = System.Drawing.Color.White;
             this.btnModelo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModelo.Location = new System.Drawing.Point(665, 304);
+            this.btnModelo.Location = new System.Drawing.Point(665, 265);
             this.btnModelo.Name = "btnModelo";
-            this.btnModelo.Size = new System.Drawing.Size(124, 30);
+            this.btnModelo.Size = new System.Drawing.Size(124, 41);
             this.btnModelo.TabIndex = 127;
             this.btnModelo.Text = "Modelo";
             this.btnModelo.TextColor = System.Drawing.Color.White;
@@ -433,13 +434,14 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(665, 450);
+            this.btnImprimir.Location = new System.Drawing.Point(664, 439);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(124, 30);
+            this.btnImprimir.Size = new System.Drawing.Size(124, 41);
             this.btnImprimir.TabIndex = 128;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // dtFecha
             // 
@@ -460,14 +462,14 @@
             this.dgvAddModVisASIENTO.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgvAddModVisASIENTO.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAddModVisASIENTO.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAddModVisASIENTO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddModVisASIENTO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAddModVisASIENTO.ColumnHeadersHeight = 25;
             this.dgvAddModVisASIENTO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvAddModVisASIENTO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -477,28 +479,28 @@
             this.Column11,
             this.Column12,
             this.Column13});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAddModVisASIENTO.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAddModVisASIENTO.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvAddModVisASIENTO.EnableHeadersVisualStyles = false;
             this.dgvAddModVisASIENTO.GridColor = System.Drawing.Color.White;
             this.dgvAddModVisASIENTO.Location = new System.Drawing.Point(14, 213);
             this.dgvAddModVisASIENTO.Name = "dgvAddModVisASIENTO";
             this.dgvAddModVisASIENTO.ReadOnly = true;
             this.dgvAddModVisASIENTO.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAddModVisASIENTO.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddModVisASIENTO.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvAddModVisASIENTO.RowHeadersVisible = false;
             this.dgvAddModVisASIENTO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAddModVisASIENTO.Size = new System.Drawing.Size(624, 267);
@@ -520,12 +522,16 @@
             // 
             // Column10
             // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column10.HeaderText = "Debe";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
             // Column11
             // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column11.HeaderText = "Haber";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -554,7 +560,6 @@
             this.Controls.Add(this.btnModelo);
             this.Controls.Add(this.btnPlandeCta);
             this.Controls.Add(this.btnGenerar);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panel4);
@@ -605,7 +610,6 @@
         private System.Windows.Forms.TextBox txtNroAsiento;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
         private System.Windows.Forms.Panel panel6;
-        private RJCodeAdvance.RJControls.RJButton btnCancelar;
         private RJCodeAdvance.RJControls.RJButton btnGenerar;
         private RJCodeAdvance.RJControls.RJButton btnPlandeCta;
         private RJCodeAdvance.RJControls.RJButton btnModelo;
@@ -618,5 +622,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

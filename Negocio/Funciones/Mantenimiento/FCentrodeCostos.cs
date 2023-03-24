@@ -14,77 +14,30 @@ namespace Negocio.Funciones.Mantenimiento
 {
     public class FCentrodeCostos
     {
-        public static string Busqueda(DataGridView DGV, TextBox txt, ComboBox cbBusqueda, BunifuCheckBox cbInicio) 
-        {
-            if (txt.Text != "")
-            {
-                string txtbusqueda;
-
-                if (cbBusqueda.SelectedIndex == 0)
-                {
-                    if (cbInicio.Checked)
-                    {
-                        txtbusqueda = "WHERE cec_codigo LIKE " + "'" + txt.Text + "%'";
-                    }
-                    else
-                    {
-                        txtbusqueda = "WHERE cec_codigo LIKE " + "'%" + txt.Text + "%'";
-                    }
-                    DGV.Rows.Clear();
-                    return txtbusqueda;
-                }
-                else if (cbBusqueda.SelectedIndex == 1)
-                {
-                    if (cbInicio.Checked)
-                    {
-                        txtbusqueda = "WHERE cec_descri LIKE " + "'" + txt.Text + "%'";
-                    }
-                    else
-                    {
-                        txtbusqueda = "WHERE cec_descri LIKE " + "'%" + txt.Text + "%'";
-                    }
-                    DGV.Rows.Clear();
-                    return txtbusqueda;
-                }
-            }
-            else
-            {
-                DGV.Rows.Clear();
-                return "";
-            }
-            return "";
-        }
-
-        public static void Agregar(Form frm,string txt) 
+        public static void Agregar(Form frm, string txt)
         {
             int ultimoID = Negocio.FGenerales.ultimoNumeroID("cec_codigo", "CentroC");
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO CentroC(cec_codigo,cec_descri,cec_predef) VALUES ( '{ultimoID}', '{txt}', 0 )");
-            MessageBox.Show("Agregado Correctamente!", "Mensaje");
             frm.Close();
-        }
-        public static void Modificar(Form frm,string codigo,string txt) 
-        {
-            AccesoBase.InsertUpdateDatos($"UPDATE CentroC SET cec_descri = '{txt}' WHERE cec_codigo = '{codigo}'");
-            MessageBox.Show("Modificado Correctamente!","Mensaje");
-            frm.Close();
-        }
-        public static void Eliminar(DataGridView DGV) 
-        {
-            DialogResult boton = MessageBox.Show("¿Seguro que Desea Continuar?", "Mensaje", MessageBoxButtons.OKCancel);
-            if (boton == DialogResult.OK)
-            {
-                int seleccion = DGV.CurrentCell.RowIndex;
-                string codigo;
-                if (seleccion > -1)
-                {
-                    codigo = DGV.Rows[seleccion].Cells[0].Value.ToString();
-                    Datos.AccesoBase.InsertUpdateDatos($"DELETE FROM CentroC WHERE cec_codigo = '{codigo}'");
-                    MessageBox.Show("Eliminado correctamente!", "Mensaje");
-                    DGV.Rows.Clear();
-                }
-            }
         }
 
+        public static void Modificar(Form frm, string codigo, string txt)
+        {
+            AccesoBase.InsertUpdateDatos($"UPDATE CentroC SET cec_descri = '{txt}' WHERE cec_codigo = '{codigo}'");
+            frm.Close();
+        }
+
+        public static void Eliminar(DataGridView DGV)
+        {
+            int seleccion = DGV.CurrentCell.RowIndex;
+            string codigo;
+            if (seleccion > -1)
+            {
+                codigo = DGV.Rows[seleccion].Cells[0].Value.ToString();
+                Datos.AccesoBase.InsertUpdateDatos($"DELETE FROM CentroC WHERE cec_codigo = '{codigo}'");
+                DGV.Rows.Clear();
+            }
+        }
     }
 }

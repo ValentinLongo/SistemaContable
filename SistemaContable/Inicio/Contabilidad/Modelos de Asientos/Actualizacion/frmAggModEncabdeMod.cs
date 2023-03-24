@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaContable.General;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,12 +37,16 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
             if (agg_o_mod == 0)
             {
                 Negocio.Funciones.Contabilidad.FActualizacionMDA.Agregar(this, txtDescripcion.Text);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
+                MessageBox.ShowDialog();
             }
             else if (agg_o_mod == 1)
             {
                 int seleccionado = DGV.CurrentCell.RowIndex;
                 txtmsg.Text = DGV.Rows[seleccionado].Cells[0].Value.ToString();
                 Negocio.Funciones.Contabilidad.FActualizacionMDA.Modificar(this, txtmsg.Text, txtDescripcion.Text);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
+                MessageBox.ShowDialog();
             }
         }
         //BARRA DE CONTROL

@@ -49,7 +49,16 @@ namespace SistemaContable.Inicio.Mantenimiento
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-            string txtdescri = Negocio.Funciones.Mantenimiento.FCentrodeCostos.Busqueda(dgvCentrodeCosto, txtBusqueda, cbBusqueda, CheckInicio);
+            string txtdescri = "";
+
+            if (cbBusqueda.SelectedIndex == 0)
+            {
+                txtdescri = Negocio.FGenerales.Busqueda(dgvCentrodeCosto, txtBusqueda.Text, CheckInicio, 1, "cec_codigo");
+            }
+            else if (cbBusqueda.SelectedIndex == 1)
+            {
+                txtdescri = Negocio.FGenerales.Busqueda(dgvCentrodeCosto, txtBusqueda.Text, CheckInicio, 1, "cec_descri");
+            }
             CargarDGV(txtdescri);
         }
 
@@ -75,8 +84,15 @@ namespace SistemaContable.Inicio.Mantenimiento
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Negocio.Funciones.Mantenimiento.FCentrodeCostos.Eliminar(dgvCentrodeCosto);
-            CargarDGV("");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Seguro que Desea Continuar?", true);
+            MessageBox.ShowDialog();
+            if (frmMessageBox.Acepto)
+            {
+                Negocio.Funciones.Mantenimiento.FCentrodeCostos.Eliminar(dgvCentrodeCosto);
+                frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "Eliminado Correctamente!", false);
+                MessageBox2.ShowDialog();
+                CargarDGV("");
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

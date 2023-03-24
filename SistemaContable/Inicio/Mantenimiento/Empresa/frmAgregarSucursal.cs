@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaContable.General;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,19 +36,22 @@ namespace SistemaContable.Empresa
                 {
                     int id = Negocio.FGenerales.ultimoNumeroID("suc_codigo", "Sucursal");
                     Datos.AccesoBase.InsertUpdateDatos($"insert into Sucursal(suc_codigo,suc_descri) VALUES({id},'{tbDescripcion.Text}')");
-                    MessageBox.Show("Agregado Correctamente");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+                    MessageBox.ShowDialog();
                     this.Close();
                 }
                 else if(TipoDeOperacion == "Modificar")
                 {
                     Datos.AccesoBase.InsertUpdateDatos($"UPDATE Sucursal SET suc_descri = '{tbDescripcion.Text}' WHERE suc_codigo = {IdSucursal}");
-                    MessageBox.Show("Modificado Correctamente");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+                    MessageBox.ShowDialog();
                     this.Close();
                 }
             }
             else
             {
-                MessageBox.Show("Debe ingresar descripción");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe ingresar descripción", false);
+                MessageBox.ShowDialog();
             }
         }
 

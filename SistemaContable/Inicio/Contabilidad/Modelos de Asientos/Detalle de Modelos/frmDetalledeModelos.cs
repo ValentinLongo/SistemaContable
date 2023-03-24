@@ -1,5 +1,7 @@
 ﻿using Datos;
+using SistemaContable.General;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -155,6 +157,21 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 concepto = dgvDetDeMod2.Rows[seleccionado].Cells[4].Value.ToString();
                 centrodecosto = dgvDetDeMod2.Rows[seleccionado].Cells[5].Value.ToString();
                 Codigo = dgvDetDeMod2.Rows[seleccionado].Cells[6].Value.ToString();
+            }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            int seleccionadoDGV2 = dgvDetDeMod2.CurrentCell.RowIndex;
+            if (seleccionadoDGV2 != -1) 
+            {
+                int seleccionadoDGV1 = dgvDetDeMod1.CurrentCell.RowIndex;
+                string mod_descri = dgvDetDeMod1.Rows[seleccionadoDGV1].Cells[1].Value.ToString();
+
+                string query = "Select *, Case When det_codigo = 1 Then det_importe Else 0 End as det_debe, Case When det_codigo = 2 Then det_importe Else 0 End as det_haber From ModeloDet Left Join Pcuenta on det_cuenta = pcu_cuenta Left Join ModeloEncab on mod_codigo = det_asiento Order By mod_codigo, det_codigo";
+
+                frmReporte freporte = new frmReporte("ModeloDet", $"{query}", "", "Informe de Detalle de Modelos", mod_descri, DateTime.Now.ToString("d"));
+                freporte.ShowDialog();
             }
         }
 

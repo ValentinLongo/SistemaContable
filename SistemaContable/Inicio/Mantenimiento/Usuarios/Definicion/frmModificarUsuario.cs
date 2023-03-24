@@ -1,4 +1,5 @@
 ﻿using Datos.Modelos;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -123,8 +124,14 @@ namespace SistemaContable.Usuarios
 
                 Negocio.FUsuarios.ModificarUsuario(mUsuario);
 
-                MessageBox.Show("Usuario modificado correctamente");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Usuario modificado correctamente", false);
+                MessageBox.ShowDialog();
                 this.Close();
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
+                MessageBox.ShowDialog();
             }
         }
 

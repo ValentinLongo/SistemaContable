@@ -277,11 +277,29 @@
     <Compile Include="General\frmLocalidades.Designer.cs">
       <DependentUpon>frmLocalidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="General\frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmMessageBox.Designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\frmReporte.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="General\frmReporte.Designer.cs">
       <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\frmSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmSesion.Designer.cs">
+      <DependentUpon>frmSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Balances_Informes\frmBalances_Informes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Balances_Informes\frmBalances_Informes.Designer.cs">
+      <DependentUpon>frmBalances_Informes.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmAggModDefdeInf.cs">
       <SubType>Form</SubType>
@@ -366,6 +384,12 @@
     </Compile>
     <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\frmAsientosContables.Designer.cs">
       <DependentUpon>frmAsientosContables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Renumeración de Asientos\frmRenumeraciónDeAsientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Renumeración de Asientos\frmRenumeraciónDeAsientos.Designer.cs">
+      <DependentUpon>frmRenumeraciónDeAsientos.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Mantenimiento\Agenda\frmAgenda.cs">
       <SubType>Form</SubType>
@@ -499,6 +523,12 @@
     <Compile Include="Inicio\Mantenimiento\Parametros Contables\frmParametrosContables.Designer.cs">
       <DependentUpon>frmParametrosContables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Mantenimiento\Rubricación de SubDiarios\frmRubricacionDeSubDiarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Rubricación de SubDiarios\frmRubricacionDeSubDiarios.Designer.cs">
+      <DependentUpon>frmRubricacionDeSubDiarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -540,6 +570,18 @@
     </Compile>
     <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.Designer.cs">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Ver\Calendario\frmAggModCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Ver\Calendario\frmAggModCalendario.Designer.cs">
+      <DependentUpon>frmAggModCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Ver\Calendario\frmCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Ver\Calendario\frmCalendario.Designer.cs">
+      <DependentUpon>frmCalendario.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Ver\Comunicacion Interna\frmComunicacionInterna.cs">
       <SubType>Form</SubType>
@@ -615,8 +657,17 @@
     <EmbeddedResource Include="General\frmLocalidades.resx">
       <DependentUpon>frmLocalidades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="General\frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="General\frmReporte.resx">
       <DependentUpon>frmReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\frmSesion.resx">
+      <DependentUpon>frmSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Balances_Informes\frmBalances_Informes.resx">
+      <DependentUpon>frmBalances_Informes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Definicion de Informes\Actualizacion\frmAggModDefdeInf.resx">
       <DependentUpon>frmAggModDefdeInf.cs</DependentUpon>
@@ -659,6 +710,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Movimiento de Asientos\frmAsientosContables.resx">
       <DependentUpon>frmAsientosContables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Renumeración de Asientos\frmRenumeraciónDeAsientos.resx">
+      <DependentUpon>frmRenumeraciónDeAsientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Agenda\frmAgenda.resx">
       <DependentUpon>frmAgenda.cs</DependentUpon>
@@ -729,6 +783,9 @@
     <EmbeddedResource Include="Inicio\Mantenimiento\Parametros Contables\frmParametrosContables.resx">
       <DependentUpon>frmParametrosContables.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Rubricación de SubDiarios\frmRubricacionDeSubDiarios.resx">
+      <DependentUpon>frmRubricacionDeSubDiarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosEspecialesPerfil.resx">
       <DependentUpon>frmPermisosEspecialesPerfil.cs</DependentUpon>
     </EmbeddedResource>
@@ -750,6 +807,12 @@
     <EmbeddedResource Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.resx">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Ver\Calendario\frmAggModCalendario.resx">
+      <DependentUpon>frmAggModCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Ver\Calendario\frmCalendario.resx">
+      <DependentUpon>frmCalendario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Ver\Comunicacion Interna\frmComunicacionInterna.resx">
       <DependentUpon>frmComunicacionInterna.cs</DependentUpon>
     </EmbeddedResource>
@@ -759,14 +822,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Inicio\Mantenimiento\Rubros Contables\frmAgregarRubroContable.resx">
       <DependentUpon>frmAgregarRubroContable.cs</DependentUpon>
     </EmbeddedResource>
@@ -800,6 +858,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -833,46 +896,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\usuario.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cerrar %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logomaser.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-usuario-30.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-candado-2-30.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logomaser1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-carpeta-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-búsqueda-30.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-calculadora-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-llave-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-ayuda30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LogoMakr-2T5DwH.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menos.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mas.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lupa.png" />
@@ -887,50 +917,12 @@
     <None Include="Resources\LogoMakr-9CmnoW.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\casa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\carpeta_azul.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\carpeta_negra.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lupa_negra.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\calculadora_negra.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\llave_negra.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ayuda_negra.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\binocular.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\binocular2.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Inicio\Archivos\" />
     <Folder Include="Inicio\Ayuda\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad4.png" />
+    <Folder Include="Inicio\Contabilidad\Saldos Ajustados\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\llave.png" />
@@ -942,33 +934,6 @@
     <None Include="Resources\calculadora2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sobre rojo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sobre.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\usuario4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\llave2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\llave21.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\llave3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contraseña.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contabilidad21.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\contabilidad31.png" />
   </ItemGroup>
   <ItemGroup>
@@ -976,6 +941,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\candado_abierto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\punta_de_lapiz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carpeta41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contabilidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajuste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobre.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

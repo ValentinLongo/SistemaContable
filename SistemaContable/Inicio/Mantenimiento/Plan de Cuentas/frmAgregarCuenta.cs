@@ -1,4 +1,5 @@
 ﻿using Datos.Modelos;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,19 +79,26 @@ namespace SistemaContable.Plan_de_Cuentas
 
                         //Establezco los hijos de la cuenta superior
                         Negocio.FPlanDeCuentas.cantidadHijos(mPlanDeCuentas.pcu_superior);
-
-                        MessageBox.Show("Cargado Correctamente");
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cargado Correctamente", false);
+                        MessageBox.ShowDialog();
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Atención: Falta completar campos");
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos", false);
+                        MessageBox.ShowDialog();
                     }
                 }
                 catch
                 {
-                    MessageBox.Show("Ocurrio un Error");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Ocurrio un Error", false);
+                    MessageBox.ShowDialog();
                 }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
+                MessageBox.ShowDialog();
             }
         }
 

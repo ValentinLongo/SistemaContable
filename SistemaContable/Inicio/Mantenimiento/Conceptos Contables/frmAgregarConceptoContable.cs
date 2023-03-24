@@ -1,6 +1,7 @@
 ﻿using Datos.Modelos;
 using Negocio;
 using Negocio.Funciones.Mantenimiento;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -140,14 +141,16 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             if (Accion == "Agregar")
             {
                 data.agregarConceptoCont(mConceptoContable);
-                MessageBox.Show("Agregado Correctamente");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+                MessageBox.ShowDialog();
                 this.Close();
             }
             if (Accion == "Modificar")
             {
                 mConceptoContable.coc_codigo = Convert.ToInt32(tbCodigo.Text);
                 data.modificarConceptoCont(mConceptoContable);
-                MessageBox.Show("Modificado Correctamente");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+                MessageBox.ShowDialog();
                 this.Close();
             }
         }

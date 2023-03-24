@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Negocio;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,8 +68,10 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
             else
             {
-                MessageBox.Show("Atención: Debe seleccionar un Ejercicio!", "Mensaje");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe seleccionar un Ejercicio!", false);
+                MessageBox.ShowDialog();
             }
+            CargarDGV("", "", "");
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -86,8 +89,10 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
             else
             {
-                MessageBox.Show("Atención: Debe seleccionar un Ejercicio!", "Mensaje");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe seleccionar un Ejercicio!", false);
+                MessageBox.ShowDialog();
             }
+            CargarDGV("", "", "");
         }
 
         private void btnVisualizar_Click(object sender, EventArgs e)
@@ -104,7 +109,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
             else
             {
-                MessageBox.Show("Atención: Debe seleccionar un Ejercicio!", "Mensaje");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe seleccionar un Ejercicio!", false);
+                MessageBox.ShowDialog();
             }
         }
 
@@ -208,7 +214,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
             else
             {
-                MessageBox.Show("Atención: Debe seleccionar un Ejercicio!", "Mensaje");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe seleccionar un Ejercicio!", false);
+                MessageBox.ShowDialog();
             }
         }
 
@@ -233,7 +240,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 }
                 else
                 {
-                    MessageBox.Show("Atención: El asiento ha sido generado en forma automatica por el sistema. No podra ser anulado.", "Mensaje");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El asiento ha sido generado en forma automatica por el sistema. No podra ser anulado.", false);
+                    MessageBox.ShowDialog();
                 }
 
                 int ID = FLogin.IdUsuario;
@@ -251,12 +259,14 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 }
                 else
                 {
-                    MessageBox.Show("Atención: No tiene permisos para anular el asiento", "Mensaje");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: No tiene permisos para anular el asiento", false);
+                    MessageBox.ShowDialog();
                 }
                 if (validado == 2)
                 {
-                    DialogResult boton = MessageBox.Show("¿Desea Eliminar el Asiento?", "Mensaje", MessageBoxButtons.OKCancel);
-                    if (boton == DialogResult.OK) 
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error en los datos de la conexion", true);
+                    MessageBox.ShowDialog();
+                    if (frmMessageBox.Acepto)
                     {
                         AccesoBase.InsertUpdateDatos($"DELETE Asiento WHERE ast_asiento = {asiento}");
                     }

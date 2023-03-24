@@ -190,6 +190,7 @@
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnEspeciales
             // 

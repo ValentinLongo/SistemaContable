@@ -35,7 +35,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             }
             else
             {
-                MessageBox.Show("Faltan completar campos", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                frmMessageBox MessageBox = new frmMessageBox("Atención", "Faltan completar campos", false);
+                MessageBox.ShowDialog();
             }
         }
 

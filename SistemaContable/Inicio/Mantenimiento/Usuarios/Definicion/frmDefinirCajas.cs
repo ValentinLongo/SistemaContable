@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaContable.General;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -70,7 +71,8 @@ namespace SistemaContable.Usuarios
             {
                 idCaja = Convert.ToInt32(dgvCajas.Rows[seleccion].Cells[0].Value);
                 Datos.AccesoBase.InsertUpdateDatos($"delete from CajaxUsuario where cxu_usuario = {Negocio.FLogin.IdUsuario} and cxu_caja = {idCaja}");
-                MessageBox.Show("Caja eliminada correctamente");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Caja eliminada correctamente", false);
+                MessageBox.ShowDialog();
                 dgvCajas.Rows.Clear();
                 CargarDGV();
             }

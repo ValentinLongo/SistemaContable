@@ -1,5 +1,6 @@
 ﻿using Datos.Modelos;
 using Negocio.Funciones.Mantenimiento;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -123,12 +124,14 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             try
             {
                 data.eliminarCoeficiente(periodoModificar);
-                MessageBox.Show("Eliminador correctamente");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Eliminador correctamente", false);
+                MessageBox.ShowDialog();
                 CargarDGV();
             }
             catch
             {
-                MessageBox.Show("Error");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error", false);
+                MessageBox.ShowDialog();
             }
         }
 

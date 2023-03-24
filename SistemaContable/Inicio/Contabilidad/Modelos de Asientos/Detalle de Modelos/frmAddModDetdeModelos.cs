@@ -97,6 +97,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                         asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
                         Negocio.Funciones.Contabilidad.FDetalledeModelos.Agregar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText);
                     }
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
+                    MessageBox.ShowDialog();
                 }
                 else if (agg_o_mod == 1)
                 {
@@ -111,11 +113,14 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                         asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
                         Negocio.Funciones.Contabilidad.FDetalledeModelos.Modificar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedText, Cuenta, frmDetalledeModelos.Codigo);
                     }
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
+                    MessageBox.ShowDialog();
                 }
             }
             else
             {
-                MessageBox.Show("Atención: Falta ingresar datos!","Mensaje");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta ingresar datos!", false);
+                MessageBox.ShowDialog();
                 this.Close();
             }
         }

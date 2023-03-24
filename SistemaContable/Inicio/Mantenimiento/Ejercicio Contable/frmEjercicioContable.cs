@@ -54,7 +54,19 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
 
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
-            txtbusqueda = Negocio.Funciones.Mantenimiento.FEjercicioContable.Busqueda(dgvEjercicioContable, txtBusqueda, cbBusqueda, CheckInicio);
+            string txtbusqueda = "";
+            if (cbBusqueda.SelectedIndex == 0)
+            {
+                txtbusqueda = Negocio.FGenerales.Busqueda(dgvEjercicioContable, txtBusqueda.Text, CheckInicio, 1, "eje_codigo");
+            }
+            else if (cbBusqueda.SelectedIndex == 1)
+            {
+                txtbusqueda = Negocio.FGenerales.Busqueda(dgvEjercicioContable, txtBusqueda.Text, CheckInicio, 1, "eje_descri");
+            }
+            else if (cbBusqueda.SelectedIndex == 2)
+            {
+                txtbusqueda = Negocio.FGenerales.Busqueda(dgvEjercicioContable, txtBusqueda.Text, CheckInicio, 1, "eje_desde");
+            }
             cargarDGV(txtbusqueda);
         }
 
@@ -66,23 +78,23 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             cargarDGV("");
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            dgvEjercicioContable.Rows.Clear();
-            cargarDGV("");
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Negocio.Funciones.Mantenimiento.FEjercicioContable.Eliminar(dgvEjercicioContable);
-            cargarDGV("");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Seguro que Desea Continuar?", true);
+            MessageBox.ShowDialog();
+            if (frmMessageBox.Acepto)
+            {
+                Negocio.Funciones.Mantenimiento.FEjercicioContable.Eliminar(dgvEjercicioContable);
+                cargarDGV("");
+            }
+
         }
 
-        private void rjButton5_Click(object sender, EventArgs e)
+        private void Imprimir(object sender, EventArgs e)
         {
-            if(txtbusqueda == null)
+            if (txtbusqueda == null)
             {
-                frmReporte reporte = new frmReporte("Ejercicio", "select * from Ejercicio ORDER BY eje_codigo", "","Informe de Ejercicios Contables","General",DateTime.Now.ToString("d"));
+                frmReporte reporte = new frmReporte("Ejercicio", "select * from Ejercicio ORDER BY eje_codigo", "", "Informe de Ejercicios Contables", "General", DateTime.Now.ToString("d"));
                 reporte.ShowDialog();
             }
             else
@@ -96,8 +108,27 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
         {
             string codigo = (string)dgvEjercicioContable.Rows[e.RowIndex].Cells[0].Value;
             bool estado = (bool)dgvEjercicioContable.Rows[e.RowIndex].Cells[4].Value;
-            Negocio.Funciones.Mantenimiento.FEjercicioContable.EstadoCheckBox(dgvEjercicioContable, codigo, estado);
-            cargarDGV("");
+
+            if (estado)
+            {
+                frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "Atención: El ejercicio contable se encuentra cerrado. ¿Desea abrirlo?", true);
+                MessageBox1.ShowDialog();
+                if (frmMessageBox.Acepto)
+                {
+                    Negocio.Funciones.Mantenimiento.FEjercicioContable.EstadoCheckBox(dgvEjercicioContable, codigo, estado);
+                    cargarDGV("");
+                }
+            }
+            else
+            {
+                frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "Atención: El ejercicio contable se encuentra abierto. ¿Desea cerrarlo?", true);
+                MessageBox1.ShowDialog();
+                if (frmMessageBox.Acepto)
+                {
+                    Negocio.Funciones.Mantenimiento.FEjercicioContable.EstadoCheckBox(dgvEjercicioContable, codigo, estado);
+                    cargarDGV("");
+                }
+            }
         }
 
         private void dgvEjercicioContable_CurrentCellDirtyStateChanged_1(object sender, EventArgs e)

@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Negocio.Funciones;
+using SistemaContable.General;
 using SistemaContable.Rubros_Contables;
 using System;
 using System.Collections.Generic;
@@ -63,7 +64,8 @@ namespace SistemaContable.Rubos_Contables
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             rubrosContables.EliminarRubroContable(codigoRubro);
-            MessageBox.Show("Registro borrado correctamente");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Registro borrado correctamente", false);
+            MessageBox.ShowDialog();
             CargarDGV("");
         }
 

@@ -190,6 +190,7 @@
             this.btnAcceder.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
+            this.btnAcceder.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
             // 
             // txtUsuario
             // 
@@ -202,6 +203,7 @@
             this.txtUsuario.Size = new System.Drawing.Size(131, 19);
             this.txtUsuario.TabIndex = 18;
             this.txtUsuario.Tag = "00000";
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
             // 
             // txtContraseña
             // 
@@ -214,6 +216,7 @@
             this.txtContraseña.Size = new System.Drawing.Size(131, 19);
             this.txtContraseña.TabIndex = 19;
             this.txtContraseña.Tag = "00000";
+            this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
             // 
             // panel7
             // 
@@ -239,6 +242,11 @@
             this.panel2.Size = new System.Drawing.Size(131, 1);
             this.panel2.TabIndex = 38;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 2000;
+            this.timer1.Tick += new System.EventHandler(this.Tick);
+            // 
             // frmAutorización
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,7 +267,7 @@
             this.Name = "frmAutorización";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCambiarUsuario";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAutorización_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

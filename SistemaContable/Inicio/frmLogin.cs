@@ -16,6 +16,7 @@ using Datos;
 using System.Net;
 using System.Collections;
 using Bunifu.UI.WinForms.Helpers.Transitions;
+using SistemaContable.General;
 
 namespace SistemaContable
 {
@@ -49,7 +50,8 @@ namespace SistemaContable
             }
             catch
             {
-                MessageBox.Show("Error en los datos de la conexion");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error en los datos de la conexion",false);
+                MessageBox.ShowDialog();
                 this.Close();
             }
 
@@ -96,12 +98,14 @@ namespace SistemaContable
                 }
                 else
                 {
-                    MessageBox.Show("Datos Incorrectos");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Datos Incorrectos", false);
+                    MessageBox.ShowDialog();
                 }
             }
             else
             {
-                MessageBox.Show("Debe completar todos los campos");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                MessageBox.ShowDialog();
             }
         }
 
@@ -115,6 +119,36 @@ namespace SistemaContable
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.CapsLock)
+            {
+                if (lblMayus.Visible)
+                {
+                    lblMayus.Visible = false;
+                }
+                else
+                {
+                    lblMayus.Visible = true;
+                }
+            }
+        }
+
+        private void txtConstrasenia_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.CapsLock)
+            {
+                if (lblMayus.Visible)
+                {
+                    lblMayus.Visible = false;
+                }
+                else
+                {
+                    lblMayus.Visible = true;
+                }
+            }
         }
     }
 }

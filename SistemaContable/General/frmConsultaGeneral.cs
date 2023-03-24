@@ -110,6 +110,8 @@ namespace SistemaContable.General
                     columna = "mod_descri";
                 }
             }
+
+
             if (txtBusqueda.Text != "")
             {
                 if (cbBusqueda.SelectedIndex == 0)

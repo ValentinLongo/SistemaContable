@@ -581,9 +581,10 @@
             // 
             // maskFecha
             // 
-            this.maskFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.maskFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.maskFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskFecha.ForeColor = System.Drawing.Color.White;
             this.maskFecha.Location = new System.Drawing.Point(270, 590);
             this.maskFecha.Name = "maskFecha";
             this.maskFecha.Size = new System.Drawing.Size(63, 15);
@@ -608,6 +609,7 @@
             this.dgvAsientosContables.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAsientosContables.ColumnHeadersHeight = 25;
             this.dgvAsientosContables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvAsientosContables.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -618,7 +620,7 @@
             this.dgvAsientosContables.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAsientosContables.EnableHeadersVisualStyles = false;
             this.dgvAsientosContables.GridColor = System.Drawing.Color.White;
-            this.dgvAsientosContables.Location = new System.Drawing.Point(12, 74);
+            this.dgvAsientosContables.Location = new System.Drawing.Point(13, 72);
             this.dgvAsientosContables.Name = "dgvAsientosContables";
             this.dgvAsientosContables.ReadOnly = true;
             this.dgvAsientosContables.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -632,8 +634,8 @@
             this.dgvAsientosContables.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAsientosContables.RowHeadersVisible = false;
             this.dgvAsientosContables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAsientosContables.Size = new System.Drawing.Size(896, 490);
-            this.dgvAsientosContables.TabIndex = 121;
+            this.dgvAsientosContables.Size = new System.Drawing.Size(895, 492);
+            this.dgvAsientosContables.TabIndex = 122;
             this.dgvAsientosContables.TabStop = false;
             // 
             // frmAsientosContables
@@ -642,6 +644,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1060, 650);
+            this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.dgvAsientosContables);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.maskFecha);
@@ -665,7 +668,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtBusqueda);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAsientosContables";

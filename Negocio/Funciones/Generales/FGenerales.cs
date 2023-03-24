@@ -45,7 +45,7 @@ namespace Negocio
             Formulario.Show();
         }
 
-        public static void ManejarFormularios(Form Formulario, Form FormPadre, PictureBox logo, string tag)
+        public static bool ManejarFormularios(Form Formulario, Form FormPadre, PictureBox logo, string tag)
         {
             if (Permiso(tag))
             {
@@ -58,6 +58,11 @@ namespace Negocio
                     Formulario.BringToFront();
                 }
             }
+            else
+            {
+                return true;
+            }
+            return false;
         }
 
         private static bool Permiso(string tag)
@@ -75,11 +80,6 @@ namespace Negocio
                 if (resultado == 1)
                 {
                     return true;
-                }
-                else if (resultado == 0)
-                {
-                    MessageBox.Show("Atención: Acceso denegado.");
-                    return false;
                 }
                 else
                 {

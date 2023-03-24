@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaContable.General;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,12 +54,14 @@ namespace SistemaContable.Usuarios
                 data2 = Datos.AccesoBase.ListarDatos($"select * from CajaxUsuario where cxu_usuario = {Negocio.FLogin.IdUsuario} and cxu_caja = {idCaja}");
                 if (data2.Tables[0].Rows.Count > 0)
                 {
-                    MessageBox.Show("Caja ya habilitada para este usuario");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Caja ya habilitada para este usuario", false);
+                    MessageBox.ShowDialog();
                 }
                 else
                 {
                     Datos.AccesoBase.InsertUpdateDatos($"INSERT INTO CajaxUsuario(cxu_usuario,cxu_caja,cxu_predef) VALUES({Negocio.FLogin.IdUsuario},{idCaja},{predef})");
-                    MessageBox.Show("Caja agregada correctamente");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Caja agregada correctamente", false);
+                    MessageBox.ShowDialog();
                 }
             }
         }

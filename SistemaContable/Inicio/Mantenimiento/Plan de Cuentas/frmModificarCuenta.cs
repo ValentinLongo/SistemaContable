@@ -1,4 +1,5 @@
 ﻿using Datos.Modelos;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,13 +80,20 @@ namespace SistemaContable.Plan_de_Cuentas
                         pcu_ajustainf = check
                     };
                     Negocio.FPlanDeCuentas.modificarPlanDeCuentas(mPlanDeCuentas);
-                    MessageBox.Show("Cuenta modificada");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cuenta modificada", false);
+                    MessageBox.ShowDialog();
                     this.Close();
                 }
                 catch
                 {
-                    MessageBox.Show("Ocurrio un error");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Ocurrio un error", false);
+                    MessageBox.ShowDialog();
                 }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
+                MessageBox.ShowDialog();
             }
         }
 

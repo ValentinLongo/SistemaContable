@@ -65,7 +65,8 @@ namespace SistemaContable.Agenda
                 }
                 catch
                 {
-                    MessageBox.Show("Error en el Usuario Seleccionado");
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error en el Usuario Seleccionado", false);
+                    MessageBox.ShowDialog();
                 }
             }
         }
@@ -100,14 +101,16 @@ namespace SistemaContable.Agenda
             if (Accion == "Agregar")
             {
                 data.agregarAgenda(mAgenda);
-                MessageBox.Show("Agregado Correctamente");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+                MessageBox.ShowDialog();
                 this.Close();
             }
             if (Accion == "Modificar")
             {
                 mAgenda.age_codigo = Convert.ToInt32(tbCodigo.Text);
                 data.modificarAgenda(mAgenda);
-                MessageBox.Show("Modificado Correctamente");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+                MessageBox.ShowDialog();
                 this.Close();
             }
         }

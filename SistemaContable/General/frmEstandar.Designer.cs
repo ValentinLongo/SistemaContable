@@ -48,6 +48,7 @@
             this.panel1.Size = new System.Drawing.Size(563, 21);
             this.panel1.TabIndex = 15;
             this.panel1.Tag = "1";
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label1
             // 

@@ -1,4 +1,5 @@
 ﻿using Datos;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,8 +34,14 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             if (validado == 0)
             {
                 AccesoBase.InsertUpdateDatos($"INSERT INTO Ejercicio ( eje_codigo, eje_descri, eje_desde, eje_hasta, eje_renumera, eje_asiento, eje_cerrado ) VALUES ( '{txtCodigo.Text}', '{txtDescri.Text}', '{fechadesde}', '{fechahasta}', '{txtRenumeracion.Text}', {txtAsiento.Text}, '0' )");
-                MessageBox.Show("Agregado Correctamente!", "Mensaje");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+                MessageBox.ShowDialog();
                 this.Close();
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
+                MessageBox.ShowDialog();
             }
         }
 

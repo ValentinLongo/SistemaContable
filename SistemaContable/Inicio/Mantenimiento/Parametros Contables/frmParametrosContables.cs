@@ -1,6 +1,7 @@
 ﻿using Bunifu.UI.WinForms;
 using Datos;
 using Negocio;
+using SistemaContable.General;
 using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
 using SistemaContable.Plan_de_Cuentas;
 using System;
@@ -176,7 +177,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Parametros_Contables
                     }
                 }
             }
-            MessageBox.Show("Modificado Correctamente");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+            MessageBox.ShowDialog();
         }
 
         //BARRA DE CONTROL

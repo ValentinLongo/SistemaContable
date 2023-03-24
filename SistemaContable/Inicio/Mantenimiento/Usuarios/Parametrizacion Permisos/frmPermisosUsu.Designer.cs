@@ -36,7 +36,7 @@
             this.btnAbrirArbol = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
             this.btnEspeciales = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton5 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.Tpermisos = new System.Windows.Forms.TreeView();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.label1 = new System.Windows.Forms.Label();
@@ -220,25 +220,26 @@
             this.btnEspeciales.UseVisualStyleBackColor = false;
             this.btnEspeciales.Click += new System.EventHandler(this.btnEspeciales_Click);
             // 
-            // rjButton5
+            // btnImprimir
             // 
-            this.rjButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton5.BorderColor = System.Drawing.Color.White;
-            this.rjButton5.BorderRadius = 0;
-            this.rjButton5.BorderSize = 0;
-            this.rjButton5.FlatAppearance.BorderSize = 0;
-            this.rjButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton5.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton5.Location = new System.Drawing.Point(406, 467);
-            this.rjButton5.Name = "rjButton5";
-            this.rjButton5.Size = new System.Drawing.Size(120, 26);
-            this.rjButton5.TabIndex = 23;
-            this.rjButton5.Tag = "";
-            this.rjButton5.Text = "Imprimir";
-            this.rjButton5.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton5.UseVisualStyleBackColor = false;
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnImprimir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnImprimir.BorderColor = System.Drawing.Color.White;
+            this.btnImprimir.BorderRadius = 0;
+            this.btnImprimir.BorderSize = 0;
+            this.btnImprimir.FlatAppearance.BorderSize = 0;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnImprimir.Location = new System.Drawing.Point(406, 467);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(120, 26);
+            this.btnImprimir.TabIndex = 23;
+            this.btnImprimir.Tag = "";
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // Tpermisos
             // 
@@ -396,7 +397,7 @@
             this.Controls.Add(this.txtNroUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Tpermisos);
-            this.Controls.Add(this.rjButton5);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnEspeciales);
             this.Controls.Add(this.rjButton3);
             this.Controls.Add(this.btnAbrirArbol);
@@ -423,7 +424,7 @@
         private RJCodeAdvance.RJControls.RJButton btnAbrirArbol;
         private RJCodeAdvance.RJControls.RJButton rjButton3;
         private RJCodeAdvance.RJControls.RJButton btnEspeciales;
-        private RJCodeAdvance.RJControls.RJButton rjButton5;
+        private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private System.Windows.Forms.TreeView Tpermisos;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.Label label1;

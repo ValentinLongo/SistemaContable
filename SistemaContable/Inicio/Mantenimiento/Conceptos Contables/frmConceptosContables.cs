@@ -55,7 +55,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             data.eliminarConceptoCont(Codigo);
-            MessageBox.Show("Eliminado correctamente");
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Eliminado correctamente", false);
+            MessageBox.ShowDialog();
             CargarDGV("");
         }
 
