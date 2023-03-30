@@ -26,6 +26,10 @@ namespace SistemaContable.Inicio.Mantenimiento.Parametros_Contables
         public frmParametrosContables()
         {
             InitializeComponent();
+
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             cargarDatos();
             cargarCheck();
         }

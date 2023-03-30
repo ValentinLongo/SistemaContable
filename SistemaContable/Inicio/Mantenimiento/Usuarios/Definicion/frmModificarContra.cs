@@ -18,6 +18,10 @@ namespace SistemaContable.Usuarios
         public frmModificarContra()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             cargarDatos();
         }
 
@@ -29,16 +33,24 @@ namespace SistemaContable.Usuarios
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (tbNuevaContra.Text == tbConfNuevaContra.Text)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-                Negocio.FUsuarios.ModificarContra(tbNuevaContra.Text);
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Contraseña modificada correctamente", false);
-                MessageBox.ShowDialog();
-                this.Close();
+                if (tbNuevaContra.Text == tbConfNuevaContra.Text)
+                {
+                    Negocio.FUsuarios.ModificarContra(tbNuevaContra.Text);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Contraseña modificada correctamente", false);
+                    MessageBox.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Las contraseñas no coinsiden", false);
+                    MessageBox.ShowDialog();
+                }
             }
             else
             {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Las contraseñas no coinsiden", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
             }
         }

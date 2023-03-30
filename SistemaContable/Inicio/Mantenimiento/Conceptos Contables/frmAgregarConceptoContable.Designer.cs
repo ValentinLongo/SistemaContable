@@ -149,7 +149,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(165, 395);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(142, 43);
-            this.btnConfirmar.TabIndex = 25;
+            this.btnConfirmar.TabIndex = 8;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -173,8 +173,8 @@
             this.tbCodigo.Location = new System.Drawing.Point(100, 30);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(121, 13);
-            this.tbCodigo.TabIndex = 41;
-            this.tbCodigo.Tag = "00000";
+            this.tbCodigo.TabIndex = 0;
+            this.tbCodigo.Tag = "10100";
             // 
             // panel1
             // 
@@ -203,8 +203,8 @@
             this.tbDescripción.Location = new System.Drawing.Point(96, 60);
             this.tbDescripción.Name = "tbDescripción";
             this.tbDescripción.Size = new System.Drawing.Size(305, 13);
-            this.tbDescripción.TabIndex = 44;
-            this.tbDescripción.Tag = "00000";
+            this.tbDescripción.TabIndex = 1;
+            this.tbDescripción.Tag = "11010";
             // 
             // panel4
             // 
@@ -224,8 +224,8 @@
             this.tbNroCuenta.Location = new System.Drawing.Point(97, 97);
             this.tbNroCuenta.Name = "tbNroCuenta";
             this.tbNroCuenta.Size = new System.Drawing.Size(68, 13);
-            this.tbNroCuenta.TabIndex = 46;
-            this.tbNroCuenta.Tag = "00000";
+            this.tbNroCuenta.TabIndex = 2;
+            this.tbNroCuenta.Tag = "10100";
             // 
             // panel5
             // 
@@ -245,8 +245,8 @@
             this.tbDescriCuenta.Location = new System.Drawing.Point(181, 97);
             this.tbDescriCuenta.Name = "tbDescriCuenta";
             this.tbDescriCuenta.Size = new System.Drawing.Size(221, 13);
-            this.tbDescriCuenta.TabIndex = 48;
-            this.tbDescriCuenta.Tag = "00000";
+            this.tbDescriCuenta.TabIndex = 3;
+            this.tbDescriCuenta.Tag = "11010";
             // 
             // panel6
             // 
@@ -266,8 +266,8 @@
             this.tbDescriContrapartida.Location = new System.Drawing.Point(180, 176);
             this.tbDescriContrapartida.Name = "tbDescriContrapartida";
             this.tbDescriContrapartida.Size = new System.Drawing.Size(221, 13);
-            this.tbDescriContrapartida.TabIndex = 52;
-            this.tbDescriContrapartida.Tag = "00000";
+            this.tbDescriContrapartida.TabIndex = 6;
+            this.tbDescriContrapartida.Tag = "11010";
             // 
             // panel7
             // 
@@ -287,8 +287,8 @@
             this.tbNumContrapartida.Location = new System.Drawing.Point(96, 176);
             this.tbNumContrapartida.Name = "tbNumContrapartida";
             this.tbNumContrapartida.Size = new System.Drawing.Size(68, 13);
-            this.tbNumContrapartida.TabIndex = 50;
-            this.tbNumContrapartida.Tag = "00000";
+            this.tbNumContrapartida.TabIndex = 5;
+            this.tbNumContrapartida.Tag = "10100";
             // 
             // cbCentroCostos2
             // 
@@ -301,6 +301,7 @@
             this.cbCentroCostos2.Name = "cbCentroCostos2";
             this.cbCentroCostos2.Size = new System.Drawing.Size(339, 25);
             this.cbCentroCostos2.TabIndex = 117;
+            this.cbCentroCostos2.TabStop = false;
             // 
             // cbCentroCostos1
             // 
@@ -313,6 +314,7 @@
             this.cbCentroCostos1.Name = "cbCentroCostos1";
             this.cbCentroCostos1.Size = new System.Drawing.Size(339, 25);
             this.cbCentroCostos1.TabIndex = 118;
+            this.cbCentroCostos1.TabStop = false;
             // 
             // btnBuscar2
             // 
@@ -323,7 +325,7 @@
             this.btnBuscar2.Location = new System.Drawing.Point(407, 169);
             this.btnBuscar2.Name = "btnBuscar2";
             this.btnBuscar2.Size = new System.Drawing.Size(32, 31);
-            this.btnBuscar2.TabIndex = 119;
+            this.btnBuscar2.TabIndex = 7;
             this.btnBuscar2.UseVisualStyleBackColor = false;
             this.btnBuscar2.Click += new System.EventHandler(this.btnBuscar2_Click);
             // 
@@ -336,7 +338,7 @@
             this.btnBuscar1.Location = new System.Drawing.Point(408, 88);
             this.btnBuscar1.Name = "btnBuscar1";
             this.btnBuscar1.Size = new System.Drawing.Size(32, 31);
-            this.btnBuscar1.TabIndex = 120;
+            this.btnBuscar1.TabIndex = 4;
             this.btnBuscar1.UseVisualStyleBackColor = false;
             this.btnBuscar1.Click += new System.EventHandler(this.btnBuscar1_Click);
             // 
@@ -391,6 +393,7 @@
             this.checkVentas.Size = new System.Drawing.Size(17, 17);
             this.checkVentas.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.checkVentas.TabIndex = 121;
+            this.checkVentas.TabStop = false;
             this.checkVentas.ThreeState = false;
             this.checkVentas.ToolTipText = null;
             // 
@@ -445,6 +448,7 @@
             this.checkCompras.Size = new System.Drawing.Size(17, 17);
             this.checkCompras.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.checkCompras.TabIndex = 122;
+            this.checkCompras.TabStop = false;
             this.checkCompras.ThreeState = false;
             this.checkCompras.ToolTipText = null;
             // 
@@ -499,6 +503,7 @@
             this.checkTesoreria.Size = new System.Drawing.Size(17, 17);
             this.checkTesoreria.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.checkTesoreria.TabIndex = 123;
+            this.checkTesoreria.TabStop = false;
             this.checkTesoreria.ThreeState = false;
             this.checkTesoreria.ToolTipText = null;
             // 
@@ -553,6 +558,7 @@
             this.checkBancos.Size = new System.Drawing.Size(17, 17);
             this.checkBancos.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.checkBancos.TabIndex = 124;
+            this.checkBancos.TabStop = false;
             this.checkBancos.ThreeState = false;
             this.checkBancos.ToolTipText = null;
             // 
@@ -685,6 +691,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // frmAgregarConceptoContable
             // 

@@ -151,6 +151,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label13
             // 
@@ -212,6 +213,7 @@
             this.CheckInicio.Size = new System.Drawing.Size(17, 17);
             this.CheckInicio.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.CheckInicio.TabIndex = 87;
+            this.CheckInicio.TabStop = false;
             this.CheckInicio.ThreeState = false;
             this.CheckInicio.ToolTipText = null;
             // 
@@ -229,7 +231,7 @@
             this.rjButton3.Location = new System.Drawing.Point(664, 248);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(125, 26);
-            this.rjButton3.TabIndex = 86;
+            this.rjButton3.TabIndex = 6;
             this.rjButton3.Tag = "";
             this.rjButton3.Text = "Restab. Perfil";
             this.rjButton3.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -249,7 +251,7 @@
             this.btnSacarTodo.Location = new System.Drawing.Point(664, 206);
             this.btnSacarTodo.Name = "btnSacarTodo";
             this.btnSacarTodo.Size = new System.Drawing.Size(125, 26);
-            this.btnSacarTodo.TabIndex = 85;
+            this.btnSacarTodo.TabIndex = 5;
             this.btnSacarTodo.Tag = "";
             this.btnSacarTodo.Text = "Sacar Todos";
             this.btnSacarTodo.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -270,7 +272,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(664, 124);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(125, 26);
-            this.btnConfirmar.TabIndex = 84;
+            this.btnConfirmar.TabIndex = 3;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -291,7 +293,7 @@
             this.btnAgregarTodo.Location = new System.Drawing.Point(664, 165);
             this.btnAgregarTodo.Name = "btnAgregarTodo";
             this.btnAgregarTodo.Size = new System.Drawing.Size(125, 26);
-            this.btnAgregarTodo.TabIndex = 83;
+            this.btnAgregarTodo.TabIndex = 4;
             this.btnAgregarTodo.Tag = "";
             this.btnAgregarTodo.Text = "Agregar Todos";
             this.btnAgregarTodo.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -315,7 +317,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(112, 394);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(321, 19);
-            this.txtDescripcion.TabIndex = 81;
+            this.txtDescripcion.TabIndex = 2;
             this.txtDescripcion.Tag = "00000";
             this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
@@ -337,6 +339,7 @@
             this.cbModulo.Name = "cbModulo";
             this.cbModulo.Size = new System.Drawing.Size(181, 21);
             this.cbModulo.TabIndex = 80;
+            this.cbModulo.TabStop = false;
             this.cbModulo.SelectedIndexChanged += new System.EventHandler(this.cbModulo_SelectedIndexChanged);
             // 
             // panel5
@@ -427,7 +430,7 @@
             this.txtDescriPerfil.Location = new System.Drawing.Point(283, 51);
             this.txtDescriPerfil.Name = "txtDescriPerfil";
             this.txtDescriPerfil.Size = new System.Drawing.Size(147, 19);
-            this.txtDescriPerfil.TabIndex = 70;
+            this.txtDescriPerfil.TabIndex = 1;
             this.txtDescriPerfil.Tag = "00000";
             // 
             // panel4
@@ -447,7 +450,7 @@
             this.txtNroPerfil.Location = new System.Drawing.Point(160, 52);
             this.txtNroPerfil.Name = "txtNroPerfil";
             this.txtNroPerfil.Size = new System.Drawing.Size(56, 15);
-            this.txtNroPerfil.TabIndex = 68;
+            this.txtNroPerfil.TabIndex = 0;
             this.txtNroPerfil.Tag = "00000";
             // 
             // label1
@@ -475,6 +478,7 @@
             this.bunifuShapes1.Sides = 5;
             this.bunifuShapes1.Size = new System.Drawing.Size(646, 76);
             this.bunifuShapes1.TabIndex = 66;
+            this.bunifuShapes1.TabStop = false;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // bunifuShapes2
@@ -491,6 +495,7 @@
             this.bunifuShapes2.Sides = 5;
             this.bunifuShapes2.Size = new System.Drawing.Size(646, 43);
             this.bunifuShapes2.TabIndex = 77;
+            this.bunifuShapes2.TabStop = false;
             this.bunifuShapes2.Text = "bunifuShapes2";
             // 
             // dgvPEspeciales

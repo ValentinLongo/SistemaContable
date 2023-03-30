@@ -61,7 +61,7 @@
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(252, 13);
             this.tbCodigo.TabIndex = 0;
-            this.tbCodigo.Tag = "10000";
+            this.tbCodigo.Tag = "00000";
             // 
             // btnAceptar
             // 
@@ -113,6 +113,7 @@
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(252, 21);
             this.cbEstado.TabIndex = 92;
+            this.cbEstado.TabStop = false;
             // 
             // cbRubro
             // 
@@ -123,6 +124,7 @@
             this.cbRubro.Name = "cbRubro";
             this.cbRubro.Size = new System.Drawing.Size(252, 21);
             this.cbRubro.TabIndex = 91;
+            this.cbRubro.TabStop = false;
             // 
             // tbDescripcion
             // 
@@ -133,7 +135,7 @@
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(252, 13);
             this.tbDescripcion.TabIndex = 2;
-            this.tbDescripcion.Tag = "10000";
+            this.tbDescripcion.Tag = "11010";
             // 
             // tbCuenta
             // 
@@ -145,7 +147,7 @@
             this.tbCuenta.Name = "tbCuenta";
             this.tbCuenta.Size = new System.Drawing.Size(252, 13);
             this.tbCuenta.TabIndex = 1;
-            this.tbCuenta.Tag = "10000";
+            this.tbCuenta.Tag = "10100";
             // 
             // label10
             // 
@@ -298,6 +300,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label13
             // 
@@ -360,6 +363,7 @@
             this.CheckAjuste.Size = new System.Drawing.Size(17, 17);
             this.CheckAjuste.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.CheckAjuste.TabIndex = 104;
+            this.CheckAjuste.TabStop = false;
             this.CheckAjuste.ThreeState = false;
             this.CheckAjuste.ToolTipText = null;
             // 

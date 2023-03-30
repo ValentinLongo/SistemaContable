@@ -57,7 +57,7 @@ namespace SistemaContable
             InitializeComponent();
             Negocio.FInicio.DatosUsuEmp(lblUsu, lblEmpresa, lblPerfil);
 
-            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
             Negocio.FFormatoSistema.FondoMDI(this, borde1, borde2, borde3, pbLogo);
             //Negocio.FFormatoSistema.SetearFormato(this);
         }

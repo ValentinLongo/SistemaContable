@@ -190,6 +190,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // btnConfirmar
             // 
@@ -207,7 +208,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(134, 258);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(149, 44);
-            this.btnConfirmar.TabIndex = 49;
+            this.btnConfirmar.TabIndex = 3;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -228,6 +229,7 @@
             this.ShapeBusqueda.Sides = 5;
             this.ShapeBusqueda.Size = new System.Drawing.Size(367, 90);
             this.ShapeBusqueda.TabIndex = 61;
+            this.ShapeBusqueda.TabStop = false;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
             // label6
@@ -238,9 +240,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(36, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 15);
+            this.label6.Size = new System.Drawing.Size(100, 15);
             this.label6.TabIndex = 62;
-            this.label6.Text = "Busqueda";
+            this.label6.Text = "Datos Nuevos";
             // 
             // label7
             // 
@@ -269,6 +271,7 @@
             this.bunifuShapes1.Sides = 5;
             this.bunifuShapes1.Size = new System.Drawing.Size(367, 90);
             this.bunifuShapes1.TabIndex = 64;
+            this.bunifuShapes1.TabStop = false;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // panel2
@@ -283,11 +286,12 @@
             // 
             this.tbContraActual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbContraActual.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbContraActual.Enabled = false;
             this.tbContraActual.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbContraActual.Location = new System.Drawing.Point(177, 95);
             this.tbContraActual.Name = "tbContraActual";
             this.tbContraActual.Size = new System.Drawing.Size(173, 13);
-            this.tbContraActual.TabIndex = 65;
+            this.tbContraActual.TabIndex = 0;
             this.tbContraActual.Tag = "10000";
             // 
             // panel3
@@ -306,8 +310,8 @@
             this.tbNuevaContra.Location = new System.Drawing.Point(177, 173);
             this.tbNuevaContra.Name = "tbNuevaContra";
             this.tbNuevaContra.Size = new System.Drawing.Size(175, 13);
-            this.tbNuevaContra.TabIndex = 67;
-            this.tbNuevaContra.Tag = "10000";
+            this.tbNuevaContra.TabIndex = 1;
+            this.tbNuevaContra.Tag = "11000";
             // 
             // panel4
             // 
@@ -325,8 +329,8 @@
             this.tbConfNuevaContra.Location = new System.Drawing.Point(177, 206);
             this.tbConfNuevaContra.Name = "tbConfNuevaContra";
             this.tbConfNuevaContra.Size = new System.Drawing.Size(175, 13);
-            this.tbConfNuevaContra.TabIndex = 69;
-            this.tbConfNuevaContra.Tag = "10000";
+            this.tbConfNuevaContra.TabIndex = 2;
+            this.tbConfNuevaContra.Tag = "11000";
             // 
             // frmModificarContra
             // 

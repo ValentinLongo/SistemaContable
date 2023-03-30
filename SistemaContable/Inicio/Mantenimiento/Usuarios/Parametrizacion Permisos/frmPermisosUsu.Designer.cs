@@ -136,6 +136,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // btnConfirmar
             // 
@@ -151,7 +152,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(406, 100);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(120, 26);
-            this.btnConfirmar.TabIndex = 18;
+            this.btnConfirmar.TabIndex = 3;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -172,7 +173,7 @@
             this.btnAbrirArbol.Location = new System.Drawing.Point(406, 141);
             this.btnAbrirArbol.Name = "btnAbrirArbol";
             this.btnAbrirArbol.Size = new System.Drawing.Size(120, 26);
-            this.btnAbrirArbol.TabIndex = 19;
+            this.btnAbrirArbol.TabIndex = 4;
             this.btnAbrirArbol.Tag = "";
             this.btnAbrirArbol.Text = "Abrir Todo";
             this.btnAbrirArbol.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -193,7 +194,7 @@
             this.rjButton3.Location = new System.Drawing.Point(406, 224);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(120, 26);
-            this.rjButton3.TabIndex = 21;
+            this.rjButton3.TabIndex = 6;
             this.rjButton3.Tag = "";
             this.rjButton3.Text = "Restab. Perfil";
             this.rjButton3.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -213,7 +214,7 @@
             this.btnEspeciales.Location = new System.Drawing.Point(406, 266);
             this.btnEspeciales.Name = "btnEspeciales";
             this.btnEspeciales.Size = new System.Drawing.Size(120, 26);
-            this.btnEspeciales.TabIndex = 22;
+            this.btnEspeciales.TabIndex = 7;
             this.btnEspeciales.Tag = "";
             this.btnEspeciales.Text = "Especiales";
             this.btnEspeciales.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -234,7 +235,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(406, 467);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(120, 26);
-            this.btnImprimir.TabIndex = 23;
+            this.btnImprimir.TabIndex = 8;
             this.btnImprimir.Tag = "";
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -253,6 +254,7 @@
             this.Tpermisos.Name = "Tpermisos";
             this.Tpermisos.Size = new System.Drawing.Size(388, 393);
             this.Tpermisos.TabIndex = 24;
+            this.Tpermisos.TabStop = false;
             this.Tpermisos.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.Tpermisos_AfterCheck);
             // 
             // bunifuShapes1
@@ -269,6 +271,7 @@
             this.bunifuShapes1.Sides = 5;
             this.bunifuShapes1.Size = new System.Drawing.Size(387, 51);
             this.bunifuShapes1.TabIndex = 25;
+            this.bunifuShapes1.TabStop = false;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // label1
@@ -291,8 +294,8 @@
             this.txtNroUsuario.Location = new System.Drawing.Point(79, 63);
             this.txtNroUsuario.Name = "txtNroUsuario";
             this.txtNroUsuario.Size = new System.Drawing.Size(56, 15);
-            this.txtNroUsuario.TabIndex = 27;
-            this.txtNroUsuario.Tag = "00000";
+            this.txtNroUsuario.TabIndex = 0;
+            this.txtNroUsuario.Tag = "10100";
             this.txtNroUsuario.TextChanged += new System.EventHandler(this.txtNroUsuario_TextChanged);
             // 
             // panel4
@@ -315,14 +318,15 @@
             // 
             this.txtDescriUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtDescriUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescriUsuario.Enabled = false;
             this.txtDescriUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescriUsuario.ForeColor = System.Drawing.SystemColors.Window;
             this.txtDescriUsuario.Location = new System.Drawing.Point(202, 62);
             this.txtDescriUsuario.Name = "txtDescriUsuario";
             this.txtDescriUsuario.ReadOnly = true;
             this.txtDescriUsuario.Size = new System.Drawing.Size(147, 19);
-            this.txtDescriUsuario.TabIndex = 30;
-            this.txtDescriUsuario.Tag = "00000";
+            this.txtDescriUsuario.TabIndex = 1;
+            this.txtDescriUsuario.Tag = "11010";
             // 
             // label2
             // 
@@ -356,7 +360,7 @@
             this.btnConsulta.Location = new System.Drawing.Point(362, 57);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(23, 26);
-            this.btnConsulta.TabIndex = 32;
+            this.btnConsulta.TabIndex = 2;
             this.btnConsulta.UseVisualStyleBackColor = false;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
@@ -374,7 +378,7 @@
             this.btnCerrarTodo.Location = new System.Drawing.Point(406, 182);
             this.btnCerrarTodo.Name = "btnCerrarTodo";
             this.btnCerrarTodo.Size = new System.Drawing.Size(120, 26);
-            this.btnCerrarTodo.TabIndex = 35;
+            this.btnCerrarTodo.TabIndex = 5;
             this.btnCerrarTodo.Tag = "";
             this.btnCerrarTodo.Text = "Cerrar Todo";
             this.btnCerrarTodo.TextColor = System.Drawing.SystemColors.ControlLightLight;

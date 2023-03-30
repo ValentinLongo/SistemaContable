@@ -154,7 +154,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(898, 89);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(150, 46);
-            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -176,7 +176,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(899, 585);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(149, 44);
-            this.btnImprimir.TabIndex = 6;
+            this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
@@ -198,7 +198,7 @@
             this.btnDefinirCajas.Location = new System.Drawing.Point(899, 239);
             this.btnDefinirCajas.Name = "btnDefinirCajas";
             this.btnDefinirCajas.Size = new System.Drawing.Size(149, 44);
-            this.btnDefinirCajas.TabIndex = 5;
+            this.btnDefinirCajas.TabIndex = 3;
             this.btnDefinirCajas.Text = "Definir Cajas";
             this.btnDefinirCajas.TextColor = System.Drawing.Color.White;
             this.btnDefinirCajas.UseVisualStyleBackColor = false;
@@ -220,7 +220,7 @@
             this.btnModificar.Location = new System.Drawing.Point(899, 161);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(149, 44);
-            this.btnModificar.TabIndex = 4;
+            this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -299,6 +299,7 @@
             this.CheckUsuario.Size = new System.Drawing.Size(17, 17);
             this.CheckUsuario.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.CheckUsuario.TabIndex = 61;
+            this.CheckUsuario.TabStop = false;
             this.CheckUsuario.ThreeState = false;
             this.CheckUsuario.ToolTipText = null;
             this.CheckUsuario.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckUsuario_CheckedChanged);
@@ -317,6 +318,7 @@
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(169, 25);
             this.cbBusqueda.TabIndex = 63;
+            this.cbBusqueda.TabStop = false;
             // 
             // panel2
             // 
@@ -336,8 +338,8 @@
             this.txtbusqueda.Location = new System.Drawing.Point(236, 46);
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(228, 15);
-            this.txtbusqueda.TabIndex = 64;
-            this.txtbusqueda.Tag = "00000";
+            this.txtbusqueda.TabIndex = 0;
+            this.txtbusqueda.Tag = "01000";
             this.txtbusqueda.TextChanged += new System.EventHandler(this.txtbusqueda_TextChanged);
             // 
             // CheckInicio
@@ -390,6 +392,7 @@
             this.CheckInicio.Size = new System.Drawing.Size(17, 17);
             this.CheckInicio.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.CheckInicio.TabIndex = 66;
+            this.CheckInicio.TabStop = false;
             this.CheckInicio.ThreeState = false;
             this.CheckInicio.ToolTipText = null;
             // 
@@ -419,6 +422,7 @@
             this.ShapeBusqueda.Sides = 5;
             this.ShapeBusqueda.Size = new System.Drawing.Size(874, 69);
             this.ShapeBusqueda.TabIndex = 68;
+            this.ShapeBusqueda.TabStop = false;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
             // frmUsuarios

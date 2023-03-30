@@ -18,10 +18,16 @@ namespace SistemaContable.Parametrizacion_Permisos
     public partial class frmPermisosPerfil : Form
     {
         public static List<MPermisoPerfil> lista = new List<MPermisoPerfil>();
+        public static string NroPerfil;
+        public static string DescriPerfil;
+
 
         public frmPermisosPerfil()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -152,6 +158,9 @@ namespace SistemaContable.Parametrizacion_Permisos
         {
             if (txtNroPerfil.Text != "" && txtDescriPerfil.Text != "")
             {
+                NroPerfil = txtNroPerfil.Text;
+                DescriPerfil = txtDescriPerfil.Text;
+
                 frmPermisosEspecialesPerfil especialperfil = new frmPermisosEspecialesPerfil();
                 especialperfil.Show();
             }

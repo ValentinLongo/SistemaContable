@@ -20,6 +20,10 @@ namespace SistemaContable.Empresa
         public frmEmpresa()
         {
             InitializeComponent();
+
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             CargarDGV();
         }
 

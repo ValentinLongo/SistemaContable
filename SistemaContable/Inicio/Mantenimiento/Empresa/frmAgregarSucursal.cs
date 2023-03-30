@@ -19,6 +19,10 @@ namespace SistemaContable.Empresa
         public frmAgregarSucursal(string tipoOperacion)
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             TipoDeOperacion = tipoOperacion;
             if (tipoOperacion == "Modificar")
             {
@@ -30,7 +34,7 @@ namespace SistemaContable.Empresa
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (tbDescripcion.Text != "")
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
                 if (TipoDeOperacion == "Agregar")
                 {
@@ -40,7 +44,7 @@ namespace SistemaContable.Empresa
                     MessageBox.ShowDialog();
                     this.Close();
                 }
-                else if(TipoDeOperacion == "Modificar")
+                else if (TipoDeOperacion == "Modificar")
                 {
                     Datos.AccesoBase.InsertUpdateDatos($"UPDATE Sucursal SET suc_descri = '{tbDescripcion.Text}' WHERE suc_codigo = {IdSucursal}");
                     frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);

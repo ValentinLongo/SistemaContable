@@ -22,6 +22,10 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         public frmAgregarConceptoContable(string accion)
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             Accion = accion;
             cargarDatos();
         }
@@ -107,51 +111,59 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            MConceptoContable mConceptoContable = new MConceptoContable()
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-                coc_codigo = FGenerales.ultimoNumeroID("coc_codigo", "ConceptoCont"),
-                coc_descri = tbDescripción.Text,
-                coc_vta = 0,
-                coc_cpa = 0,
-                coc_caja = 0,
-                coc_banco = 0,
-                coc_ctacont = Convert.ToInt32(tbNroCuenta.Text),
-                pcu_descriCuenta = tbDescriCuenta.Text,
-                coc_contrap = Convert.ToInt32(tbNumContrapartida.Text),
-                pcu_descriContrap = tbDescriContrapartida.Text,
-                coc_cccontrap = Convert.ToInt32(cbCentroCostos2.SelectedValue),
-                coc_cccta = Convert.ToInt32(cbCentroCostos1.SelectedValue),
-            };
-            if (checkVentas.Checked)
-            {
-                mConceptoContable.coc_vta = 1;
+                MConceptoContable mConceptoContable = new MConceptoContable()
+                {
+                    coc_codigo = FGenerales.ultimoNumeroID("coc_codigo", "ConceptoCont"),
+                    coc_descri = tbDescripción.Text,
+                    coc_vta = 0,
+                    coc_cpa = 0,
+                    coc_caja = 0,
+                    coc_banco = 0,
+                    coc_ctacont = Convert.ToInt32(tbNroCuenta.Text),
+                    pcu_descriCuenta = tbDescriCuenta.Text,
+                    coc_contrap = Convert.ToInt32(tbNumContrapartida.Text),
+                    pcu_descriContrap = tbDescriContrapartida.Text,
+                    coc_cccontrap = Convert.ToInt32(cbCentroCostos2.SelectedValue),
+                    coc_cccta = Convert.ToInt32(cbCentroCostos1.SelectedValue),
+                };
+                if (checkVentas.Checked)
+                {
+                    mConceptoContable.coc_vta = 1;
+                }
+                if (checkCompras.Checked)
+                {
+                    mConceptoContable.coc_cpa = 1;
+                }
+                if (checkTesoreria.Checked)
+                {
+                    mConceptoContable.coc_caja = 1;
+                }
+                if (checkBancos.Checked)
+                {
+                    mConceptoContable.coc_banco = 1;
+                }
+                if (Accion == "Agregar")
+                {
+                    data.agregarConceptoCont(mConceptoContable);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+                    MessageBox.ShowDialog();
+                    this.Close();
+                }
+                if (Accion == "Modificar")
+                {
+                    mConceptoContable.coc_codigo = Convert.ToInt32(tbCodigo.Text);
+                    data.modificarConceptoCont(mConceptoContable);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+                    MessageBox.ShowDialog();
+                    this.Close();
+                }
             }
-            if (checkCompras.Checked)
+            else
             {
-                mConceptoContable.coc_cpa = 1;
-            }
-            if (checkTesoreria.Checked)
-            {
-                mConceptoContable.coc_caja = 1;
-            }
-            if (checkBancos.Checked)
-            {
-                mConceptoContable.coc_banco = 1;
-            }
-            if (Accion == "Agregar")
-            {
-                data.agregarConceptoCont(mConceptoContable);
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
-                this.Close();
-            }
-            if (Accion == "Modificar")
-            {
-                mConceptoContable.coc_codigo = Convert.ToInt32(tbCodigo.Text);
-                data.modificarConceptoCont(mConceptoContable);
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
-                MessageBox.ShowDialog();
-                this.Close();
             }
         }
 

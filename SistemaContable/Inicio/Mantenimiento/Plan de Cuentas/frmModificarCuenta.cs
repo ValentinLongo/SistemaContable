@@ -60,9 +60,7 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            int validado = Negocio.FValidacionesEventos.ValidacionVacio(this);
-
-            if (validado == 0)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
                 try
                 {

@@ -30,6 +30,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
         {
             maskDesde.Mask = "00-00-0000";
             maskHasta.Mask = "00-00-0000";
+            maskHasta.Text = DateTime.Now.ToShortDateString();
 
             if (proceso == 1) //Balance de Sumas y Saldos
             {
@@ -83,7 +84,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (txtCodEjercicio.Text != "")
+            if (txtCodEjercicio.Text != "") //Validacion
             {
                 string desde = "";
                 string hasta = "";
@@ -96,13 +97,13 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                     hasta = dr["eje_hasta"].ToString();
                 }
 
-                if (maskDesde.MaskFull)
+                if (maskDesde.MaskFull) //Validacion
                 {
-                    if (maskHasta.MaskFull)
+                    if (maskHasta.MaskFull) //Validacion
                     {
-                        if (Convert.ToDateTime(maskDesde) >= Convert.ToDateTime(desde))
+                        if (Convert.ToDateTime(maskDesde) >= Convert.ToDateTime(desde)) //Validacion
                         {
-                            if (Convert.ToDateTime(maskHasta) <= Convert.ToDateTime(hasta))
+                            if (Convert.ToDateTime(maskHasta) <= Convert.ToDateTime(hasta)) //Validacion
                             {
                                 int terminal = frmLogin.NumeroTerminal;
 
@@ -117,14 +118,14 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                                     if (Check1.Checked) // Check1 = Visualizar informe con centro de costo
                                     {
                                         AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral(bal_Terminal, bal_codigo, bal_cuenta, bal_descri, bal_superior, bal_hija, bal_tabulador, bal_saldo, bal_col1, bal_col1D, bal_col2, bal_col2D, bal_col3, bal_col3D, bal_col4, bal_col4D) " +
-                                            $" SELECT {terminal}, pcu_codigo, pcu_cuenta, pcu_descri, pcu_superior, pcu_hija, pcu_tabulador, 0, 0, '', 0, '', 0, '', 0, '' FROM PCuenta ORDER BY pcu_codigo");
+                                        $" SELECT {terminal}, pcu_codigo, pcu_cuenta, pcu_descri, pcu_superior, pcu_hija, pcu_tabulador, 0, 0, '', 0, '', 0, '', 0, '' FROM PCuenta ORDER BY pcu_codigo");
                                     }
                                     else
                                     {
                                         
                                     }                                   
                                 }
-                                else if (Proceso == 3) //Informes 
+                                else if (Proceso == 3) //Informes
                                 {
                                     
                                 }

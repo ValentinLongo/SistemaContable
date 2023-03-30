@@ -135,6 +135,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // Tpermisos
             // 
@@ -148,6 +149,7 @@
             this.Tpermisos.Name = "Tpermisos";
             this.Tpermisos.Size = new System.Drawing.Size(388, 393);
             this.Tpermisos.TabIndex = 25;
+            this.Tpermisos.TabStop = false;
             this.Tpermisos.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.Tpermisos_AfterCheck);
             // 
             // btnCerrarArbol
@@ -164,7 +166,7 @@
             this.btnCerrarArbol.Location = new System.Drawing.Point(406, 182);
             this.btnCerrarArbol.Name = "btnCerrarArbol";
             this.btnCerrarArbol.Size = new System.Drawing.Size(120, 26);
-            this.btnCerrarArbol.TabIndex = 41;
+            this.btnCerrarArbol.TabIndex = 5;
             this.btnCerrarArbol.Tag = "";
             this.btnCerrarArbol.Text = "Cerrar Todo";
             this.btnCerrarArbol.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -185,7 +187,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(406, 467);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(120, 26);
-            this.btnImprimir.TabIndex = 40;
+            this.btnImprimir.TabIndex = 7;
             this.btnImprimir.Tag = "";
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -206,7 +208,7 @@
             this.btnEspeciales.Location = new System.Drawing.Point(406, 223);
             this.btnEspeciales.Name = "btnEspeciales";
             this.btnEspeciales.Size = new System.Drawing.Size(120, 26);
-            this.btnEspeciales.TabIndex = 39;
+            this.btnEspeciales.TabIndex = 6;
             this.btnEspeciales.Tag = "";
             this.btnEspeciales.Text = "Especiales";
             this.btnEspeciales.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -227,7 +229,7 @@
             this.btnAbrirArbol.Location = new System.Drawing.Point(406, 141);
             this.btnAbrirArbol.Name = "btnAbrirArbol";
             this.btnAbrirArbol.Size = new System.Drawing.Size(120, 26);
-            this.btnAbrirArbol.TabIndex = 37;
+            this.btnAbrirArbol.TabIndex = 4;
             this.btnAbrirArbol.Tag = "";
             this.btnAbrirArbol.Text = "Abrir Todo";
             this.btnAbrirArbol.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -248,7 +250,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(406, 100);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(120, 26);
-            this.btnConfirmar.TabIndex = 36;
+            this.btnConfirmar.TabIndex = 3;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -287,7 +289,7 @@
             this.btnConsulta.Location = new System.Drawing.Point(362, 57);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(23, 26);
-            this.btnConsulta.TabIndex = 48;
+            this.btnConsulta.TabIndex = 2;
             this.btnConsulta.UseVisualStyleBackColor = false;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
@@ -303,13 +305,14 @@
             // 
             this.txtDescriPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtDescriPerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescriPerfil.Enabled = false;
             this.txtDescriPerfil.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescriPerfil.ForeColor = System.Drawing.SystemColors.Window;
             this.txtDescriPerfil.Location = new System.Drawing.Point(202, 62);
             this.txtDescriPerfil.Name = "txtDescriPerfil";
             this.txtDescriPerfil.ReadOnly = true;
             this.txtDescriPerfil.Size = new System.Drawing.Size(147, 19);
-            this.txtDescriPerfil.TabIndex = 46;
+            this.txtDescriPerfil.TabIndex = 1;
             this.txtDescriPerfil.Tag = "00000";
             // 
             // panel4
@@ -329,8 +332,8 @@
             this.txtNroPerfil.Location = new System.Drawing.Point(79, 63);
             this.txtNroPerfil.Name = "txtNroPerfil";
             this.txtNroPerfil.Size = new System.Drawing.Size(56, 15);
-            this.txtNroPerfil.TabIndex = 44;
-            this.txtNroPerfil.Tag = "00000";
+            this.txtNroPerfil.TabIndex = 0;
+            this.txtNroPerfil.Tag = "10100";
             this.txtNroPerfil.TextChanged += new System.EventHandler(this.txtNroPerfil_TextChanged);
             // 
             // label1
@@ -358,6 +361,7 @@
             this.bunifuShapes1.Sides = 5;
             this.bunifuShapes1.Size = new System.Drawing.Size(387, 51);
             this.bunifuShapes1.TabIndex = 42;
+            this.bunifuShapes1.TabStop = false;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // frmPermisosPerfil

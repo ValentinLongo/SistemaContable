@@ -21,6 +21,7 @@ namespace SistemaContable.Usuarios
         public frmSeleccionVendedores()
         {
             InitializeComponent();
+
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 

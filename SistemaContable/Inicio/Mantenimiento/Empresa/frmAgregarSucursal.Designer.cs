@@ -61,7 +61,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(168, 125);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(127, 32);
-            this.btnAceptar.TabIndex = 4;
+            this.btnAceptar.TabIndex = 1;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -173,6 +173,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -192,8 +193,8 @@
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.ReadOnly = true;
             this.tbDescripcion.Size = new System.Drawing.Size(287, 19);
-            this.tbDescripcion.TabIndex = 48;
-            this.tbDescripcion.Tag = "00000";
+            this.tbDescripcion.TabIndex = 0;
+            this.tbDescripcion.Tag = "11010";
             // 
             // frmAgregarSucursal
             // 

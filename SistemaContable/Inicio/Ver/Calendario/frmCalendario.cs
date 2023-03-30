@@ -23,6 +23,10 @@ namespace SistemaContable.Inicio.Ver.Calendario
         public frmCalendario()
         {
             InitializeComponent();
+
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa para este frm)
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             CargarDGV();
         }
 

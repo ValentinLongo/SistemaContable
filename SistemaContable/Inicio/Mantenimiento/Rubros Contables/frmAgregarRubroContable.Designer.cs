@@ -133,6 +133,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label6
             // 
@@ -188,7 +189,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(309, 105);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(114, 26);
-            this.btnConfirmar.TabIndex = 51;
+            this.btnConfirmar.TabIndex = 4;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -211,8 +212,8 @@
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.ReadOnly = true;
             this.tbCodigo.Size = new System.Drawing.Size(219, 19);
-            this.tbCodigo.TabIndex = 52;
-            this.tbCodigo.Tag = "00000";
+            this.tbCodigo.TabIndex = 0;
+            this.tbCodigo.Tag = "10100";
             // 
             // panel2
             // 
@@ -232,15 +233,15 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.ReadOnly = true;
             this.tbNombre.Size = new System.Drawing.Size(219, 19);
-            this.tbNombre.TabIndex = 54;
-            this.tbNombre.Tag = "00000";
+            this.tbNombre.TabIndex = 1;
+            this.tbNombre.Tag = "11010";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(190, 199);
+            this.label2.Location = new System.Drawing.Point(172, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 56;
@@ -264,7 +265,7 @@
             this.checkVigente.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.checkVigente.Cursor = System.Windows.Forms.Cursors.Default;
             this.checkVigente.CustomCheckmarkImage = null;
-            this.checkVigente.Location = new System.Drawing.Point(167, 198);
+            this.checkVigente.Location = new System.Drawing.Point(149, 194);
             this.checkVigente.MinimumSize = new System.Drawing.Size(17, 17);
             this.checkVigente.Name = "checkVigente";
             this.checkVigente.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -296,6 +297,7 @@
             this.checkVigente.Size = new System.Drawing.Size(17, 17);
             this.checkVigente.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.checkVigente.TabIndex = 62;
+            this.checkVigente.TabStop = false;
             this.checkVigente.ThreeState = false;
             this.checkVigente.ToolTipText = null;
             // 
@@ -307,7 +309,7 @@
             this.maskDesde.Location = new System.Drawing.Point(77, 131);
             this.maskDesde.Name = "maskDesde";
             this.maskDesde.Size = new System.Drawing.Size(219, 13);
-            this.maskDesde.TabIndex = 63;
+            this.maskDesde.TabIndex = 2;
             this.maskDesde.Tag = "10000";
             // 
             // maskHasta
@@ -318,7 +320,7 @@
             this.maskHasta.Location = new System.Drawing.Point(77, 163);
             this.maskHasta.Name = "maskHasta";
             this.maskHasta.Size = new System.Drawing.Size(219, 13);
-            this.maskHasta.TabIndex = 64;
+            this.maskHasta.TabIndex = 3;
             this.maskHasta.Tag = "10000";
             // 
             // frmAgregarRubroContable

@@ -151,6 +151,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label3
             // 
@@ -186,12 +187,13 @@
             // 
             this.txtDescriUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtDescriUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescriUsuario.Enabled = false;
             this.txtDescriUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescriUsuario.ForeColor = System.Drawing.SystemColors.Window;
             this.txtDescriUsuario.Location = new System.Drawing.Point(287, 54);
             this.txtDescriUsuario.Name = "txtDescriUsuario";
             this.txtDescriUsuario.Size = new System.Drawing.Size(147, 19);
-            this.txtDescriUsuario.TabIndex = 39;
+            this.txtDescriUsuario.TabIndex = 1;
             this.txtDescriUsuario.Tag = "00000";
             // 
             // panel4
@@ -206,12 +208,13 @@
             // 
             this.txtNroUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtNroUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNroUsuario.Enabled = false;
             this.txtNroUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNroUsuario.ForeColor = System.Drawing.SystemColors.Window;
             this.txtNroUsuario.Location = new System.Drawing.Point(164, 55);
             this.txtNroUsuario.Name = "txtNroUsuario";
             this.txtNroUsuario.Size = new System.Drawing.Size(56, 15);
-            this.txtNroUsuario.TabIndex = 37;
+            this.txtNroUsuario.TabIndex = 0;
             this.txtNroUsuario.Tag = "00000";
             // 
             // label1
@@ -239,6 +242,7 @@
             this.bunifuShapes1.Sides = 5;
             this.bunifuShapes1.Size = new System.Drawing.Size(646, 76);
             this.bunifuShapes1.TabIndex = 35;
+            this.bunifuShapes1.TabStop = false;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // label5
@@ -288,6 +292,7 @@
             this.bunifuShapes2.Sides = 5;
             this.bunifuShapes2.Size = new System.Drawing.Size(646, 43);
             this.bunifuShapes2.TabIndex = 46;
+            this.bunifuShapes2.TabStop = false;
             this.bunifuShapes2.Text = "bunifuShapes2";
             // 
             // panel2
@@ -323,15 +328,16 @@
             this.cbModulo.Location = new System.Drawing.Point(104, 93);
             this.cbModulo.Name = "cbModulo";
             this.cbModulo.Size = new System.Drawing.Size(181, 21);
-            this.cbModulo.TabIndex = 49;
+            this.cbModulo.TabIndex = 7;
+            this.cbModulo.TabStop = false;
             this.cbModulo.SelectedIndexChanged += new System.EventHandler(this.cbModulo_SelectedIndexChanged);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(113, 415);
+            this.panel6.Location = new System.Drawing.Point(119, 415);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(324, 1);
+            this.panel6.Size = new System.Drawing.Size(454, 1);
             this.panel6.TabIndex = 51;
             // 
             // txtDescripcion
@@ -340,11 +346,11 @@
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtDescripcion.Location = new System.Drawing.Point(116, 397);
+            this.txtDescripcion.Location = new System.Drawing.Point(122, 397);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(321, 19);
-            this.txtDescripcion.TabIndex = 50;
-            this.txtDescripcion.Tag = "00000";
+            this.txtDescripcion.Size = new System.Drawing.Size(451, 19);
+            this.txtDescripcion.TabIndex = 2;
+            this.txtDescripcion.Tag = "11010";
             this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // btnAgregarTodo
@@ -361,7 +367,7 @@
             this.btnAgregarTodo.Location = new System.Drawing.Point(668, 168);
             this.btnAgregarTodo.Name = "btnAgregarTodo";
             this.btnAgregarTodo.Size = new System.Drawing.Size(125, 26);
-            this.btnAgregarTodo.TabIndex = 52;
+            this.btnAgregarTodo.TabIndex = 4;
             this.btnAgregarTodo.Tag = "";
             this.btnAgregarTodo.Text = "Agregar Todos";
             this.btnAgregarTodo.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -382,7 +388,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(668, 127);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(125, 26);
-            this.btnConfirmar.TabIndex = 53;
+            this.btnConfirmar.TabIndex = 3;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -403,7 +409,7 @@
             this.btnSacarTodos.Location = new System.Drawing.Point(668, 209);
             this.btnSacarTodos.Name = "btnSacarTodos";
             this.btnSacarTodos.Size = new System.Drawing.Size(125, 26);
-            this.btnSacarTodos.TabIndex = 54;
+            this.btnSacarTodos.TabIndex = 5;
             this.btnSacarTodos.Tag = "";
             this.btnSacarTodos.Text = "Sacar Todos";
             this.btnSacarTodos.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -424,7 +430,7 @@
             this.rjButton3.Location = new System.Drawing.Point(668, 251);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(125, 26);
-            this.rjButton3.TabIndex = 55;
+            this.rjButton3.TabIndex = 6;
             this.rjButton3.Tag = "";
             this.rjButton3.Text = "Restab. Perfil";
             this.rjButton3.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -434,7 +440,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(469, 403);
+            this.label13.Location = new System.Drawing.Point(616, 402);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(32, 13);
             this.label13.TabIndex = 64;
@@ -458,7 +464,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(449, 399);
+            this.CheckInicio.Location = new System.Drawing.Point(593, 399);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -490,6 +496,7 @@
             this.CheckInicio.Size = new System.Drawing.Size(17, 17);
             this.CheckInicio.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.CheckInicio.TabIndex = 63;
+            this.CheckInicio.TabStop = false;
             this.CheckInicio.ThreeState = false;
             this.CheckInicio.ToolTipText = null;
             // 

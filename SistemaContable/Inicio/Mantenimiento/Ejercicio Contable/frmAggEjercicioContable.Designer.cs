@@ -137,6 +137,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // btnConfirmar
             // 
@@ -312,6 +313,7 @@
             this.dtdesde.Name = "dtdesde";
             this.dtdesde.Size = new System.Drawing.Size(133, 20);
             this.dtdesde.TabIndex = 73;
+            this.dtdesde.TabStop = false;
             // 
             // dthasta
             // 
@@ -320,6 +322,7 @@
             this.dthasta.Name = "dthasta";
             this.dthasta.Size = new System.Drawing.Size(133, 20);
             this.dthasta.TabIndex = 74;
+            this.dthasta.TabStop = false;
             // 
             // frmAggEjercicioContable
             // 

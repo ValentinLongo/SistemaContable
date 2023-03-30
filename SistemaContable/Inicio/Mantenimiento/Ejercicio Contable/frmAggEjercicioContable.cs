@@ -30,8 +30,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             string fechahasta = dthasta.Value.ToString();
             fechahasta = fechahasta.Substring(0, 10);
 
-            int validado = Negocio.FValidacionesEventos.ValidacionVacio(this);
-            if (validado == 0)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
                 AccesoBase.InsertUpdateDatos($"INSERT INTO Ejercicio ( eje_codigo, eje_descri, eje_desde, eje_hasta, eje_renumera, eje_asiento, eje_cerrado ) VALUES ( '{txtCodigo.Text}', '{txtDescri.Text}', '{fechadesde}', '{fechahasta}', '{txtRenumeracion.Text}', {txtAsiento.Text}, '0' )");
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);

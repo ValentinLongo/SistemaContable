@@ -18,8 +18,11 @@ namespace SistemaContable.Usuarios
         public frmAgregarCaja()
         {
             InitializeComponent();
+
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
+
+            cbBusqueda.SelectedIndex = 0;
             ShapeBusqueda.SendToBack();
 
             CargarDGV("");
@@ -71,11 +74,11 @@ namespace SistemaContable.Usuarios
             string busqueda = "";
             if (cbBusqueda.Text == "Codigo")
             {
-                busqueda = Negocio.FGenerales.Busqueda(dgvCajas, txtBusqueda.Text, CheckInicio, 1, "caj_codigo");
+                busqueda = Negocio.FGenerales.Busqueda(dgvAux, txtBusqueda.Text, CheckInicio, 1, "caj_codigo");
             }
             else if (cbBusqueda.Text == "Descripcion")
             {
-                busqueda = Negocio.FGenerales.Busqueda(dgvCajas, txtBusqueda.Text, CheckInicio, 1, "caj_descri");
+                busqueda = Negocio.FGenerales.Busqueda(dgvAux, txtBusqueda.Text, CheckInicio, 1, "caj_descri");
             }
             CargarDGV(busqueda);
         }

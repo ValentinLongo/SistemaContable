@@ -72,7 +72,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(902, 507);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(150, 46);
-            this.btnImprimir.TabIndex = 7;
+            this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
@@ -94,7 +94,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(902, 165);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(150, 46);
-            this.btnEliminar.TabIndex = 8;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -116,7 +116,7 @@
             this.btnModificar.Location = new System.Drawing.Point(902, 96);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(150, 46);
-            this.btnModificar.TabIndex = 9;
+            this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -138,7 +138,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(902, 23);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(150, 46);
-            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -159,6 +159,7 @@
             this.ShapeBusqueda.Sides = 5;
             this.ShapeBusqueda.Size = new System.Drawing.Size(874, 69);
             this.ShapeBusqueda.TabIndex = 53;
+            this.ShapeBusqueda.TabStop = false;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
             // panel2
@@ -176,11 +177,11 @@
             this.tbDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescripcion.Location = new System.Drawing.Point(120, 587);
+            this.tbDescripcion.Location = new System.Drawing.Point(120, 586);
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(759, 13);
-            this.tbDescripcion.TabIndex = 54;
-            this.tbDescripcion.Tag = "00000";
+            this.tbDescripcion.TabIndex = 0;
+            this.tbDescripcion.Tag = "01010";
             // 
             // dgvConceptosContables
             // 

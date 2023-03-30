@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Negocio
 {
@@ -11,11 +12,11 @@ namespace Negocio
     {
         // 1 = true / 0 = false
 
-        //primer numero = Validacion vacio
-        //segundo numero = convierte en mayuscula
-        //tercer numero = solo numero/s
-        //cuarto numero = solo letra/s
-        //quinto numero = numers/s y coma
+        // Primer numero = Validacion Vacio
+        // Segundo numero = Convierte en Mayuscula
+        // Tercer numero = Solo Numero/s
+        // Cuarto numero = Solo Letra/s
+        // Quinto numero = Numero/s y Coma
 
         public static void agregarValidacionesyEventos(TextBox txt, Form formulario)
         {
@@ -120,27 +121,54 @@ namespace Negocio
 
         public static int ValidacionVacio(Form formulario)
         {
-            bool error = false;
             string Tag1 = "";
 
             foreach (Control Ctrl in formulario.Controls)
             {
-                if (Ctrl is TextBox)
+                if (Ctrl is TextBox || Ctrl is MaskedTextBox)
                 {
                     Tag1 = Tags(Ctrl.Tag.ToString(), 1);
 
                     if (Tag1 == "1")
                     {
+                        if (Ctrl is MaskedTextBox)
+                        {
+                            if (((MaskedTextBox)Ctrl).MaskFull == false)
+                            {
+                                return 1;
+                            }
+                        }
                         if (Ctrl.Text == "" || Ctrl.Text == null)
                         {
-                            error = true;
+                            return 1;
                         }
                     }
                 }
-            }
-            if (error)
-            {
-                return 1;
+                else if(Ctrl is Panel) 
+                {
+                    foreach (Control Ctrl2 in Ctrl.Controls)
+                    {
+                        if (Ctrl2 is TextBox || Ctrl2 is MaskedTextBox)
+                        {
+                            Tag1 = Tags(Ctrl2.Tag.ToString(), 1);
+
+                            if (Tag1 == "1")
+                            {
+                                if (Ctrl2 is MaskedTextBox)
+                                {
+                                    if (((MaskedTextBox)Ctrl2).MaskFull == false)
+                                    {
+                                        return 1;
+                                    }
+                                }
+                                if (Ctrl2.Text == "" || Ctrl2.Text == null)
+                                {
+                                    return 1;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             return 0;
         }
@@ -151,23 +179,23 @@ namespace Negocio
 
             if (TagNro == 1)
             {
-                Valor = Cadena.Substring(0, 1);
+                Valor = Cadena.Substring(0, 1); //Validacion Vacio
             }
             if (TagNro == 2)
             {
-                Valor = Cadena.Substring(1, 1);
+                Valor = Cadena.Substring(1, 1); //Convierte en Mayuscula
             }
             if (TagNro == 3)
             {
-                Valor = Cadena.Substring(2, 1);
+                Valor = Cadena.Substring(2, 1);  //Solo Numero/s
             }
             if(TagNro == 4) 
             {
-                Valor = Cadena.Substring(3, 1);
+                Valor = Cadena.Substring(3, 1); //Solo Letra/s
             }
             if (TagNro == 5)
             {
-                Valor = Cadena.Substring(4, 1);
+                Valor = Cadena.Substring(4, 1); //Numero/s y Coma
             }
             return Valor;
         }

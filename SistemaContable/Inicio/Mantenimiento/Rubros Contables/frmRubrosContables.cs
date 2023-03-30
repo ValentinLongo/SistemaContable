@@ -23,6 +23,10 @@ namespace SistemaContable.Rubos_Contables
         public frmRubrosContables()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             CargarDGV("");
         }
 

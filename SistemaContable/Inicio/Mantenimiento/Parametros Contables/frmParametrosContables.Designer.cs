@@ -3656,7 +3656,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(659, 38);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(141, 46);
-            this.btnAceptar.TabIndex = 247;
+            this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;

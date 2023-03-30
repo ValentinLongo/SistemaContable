@@ -16,6 +16,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
     public partial class frmEjercicioContable : Form
     {
         string txtbusqueda;
+
         public frmEjercicioContable()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
         {
             DataSet ds = new DataSet();
 
+            txtbusqueda = txt;
             ds = AccesoBase.ListarDatos($"SELECT eje_codigo as codigo, eje_descri as Descripción ,eje_desde as Desde, eje_hasta as Hasta, eje_cerrado as Cerrado FROM Ejercicio {txt} ORDER BY eje_codigo");
 
             foreach (DataRow dr in ds.Tables[0].Rows)

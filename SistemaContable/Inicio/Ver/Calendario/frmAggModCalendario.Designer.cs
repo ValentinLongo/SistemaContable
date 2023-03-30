@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtFecha = new System.Windows.Forms.TextBox();
-            this.txtHora = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtComentario = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
@@ -130,6 +129,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label1
             // 
@@ -186,17 +186,6 @@
             this.txtFecha.TabIndex = 69;
             this.txtFecha.Tag = "10000";
             // 
-            // txtHora
-            // 
-            this.txtHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.txtHora.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHora.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtHora.Location = new System.Drawing.Point(306, 75);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(115, 13);
-            this.txtHora.TabIndex = 71;
-            this.txtHora.Tag = "10000";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -213,8 +202,8 @@
             this.txtComentario.Location = new System.Drawing.Point(96, 110);
             this.txtComentario.Name = "txtComentario";
             this.txtComentario.Size = new System.Drawing.Size(325, 13);
-            this.txtComentario.TabIndex = 73;
-            this.txtComentario.Tag = "10000";
+            this.txtComentario.TabIndex = 1;
+            this.txtComentario.Tag = "11000";
             // 
             // btnConfirmar
             // 
@@ -231,7 +220,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(136, 147);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(162, 38);
-            this.btnConfirmar.TabIndex = 75;
+            this.btnConfirmar.TabIndex = 2;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -246,7 +235,8 @@
             this.maskHora.Location = new System.Drawing.Point(96, 78);
             this.maskHora.Name = "maskHora";
             this.maskHora.Size = new System.Drawing.Size(100, 13);
-            this.maskHora.TabIndex = 76;
+            this.maskHora.TabIndex = 0;
+            this.maskHora.Tag = "10100";
             // 
             // frmAggModCalendario
             // 
@@ -258,7 +248,6 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtComentario);
-            this.Controls.Add(this.txtHora);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label3);
@@ -286,7 +275,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtFecha;
-        private System.Windows.Forms.TextBox txtHora;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtComentario;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;

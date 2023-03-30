@@ -22,14 +22,18 @@ namespace SistemaContable.Rubros_Contables
         public frmAgregarRubroContable(string operacion)
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             Operacion = operacion;
             CargarDatos();
         }
 
         private void CargarDatos()
         {
-            maskDesde.Mask = "##.##.##.##.##";
-            maskHasta.Mask = "##.##.##.##.##";
+            maskDesde.Mask = "00.00.00.00.00";
+            maskHasta.Mask = "00.00.00.00.00";
             if (Operacion == "Modificar")
             {
                 DataSet ds = new DataSet();
@@ -56,33 +60,41 @@ namespace SistemaContable.Rubros_Contables
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            string desde = maskDesde.Text.Replace(",", ".");
-            string hasta = maskHasta.Text.Replace(",", ".");
-            int vigencia = 0;
-            if (checkVigente.Checked == true)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-                vigencia = 1;
-            }
-            if (desde.Length == 14 && hasta.Length == 14)
-            {
-                if (Operacion == "Modificar")
+                string desde = maskDesde.Text.Replace(",", ".");
+                string hasta = maskHasta.Text.Replace(",", ".");
+                int vigencia = 0;
+                if (checkVigente.Checked == true)
                 {
-                    data.ModificarRubroContable(Convert.ToInt32(tbCodigo.Text), tbNombre.Text, vigencia, desde, hasta);
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado con éxito", false);
-                    MessageBox.ShowDialog();
-                    this.Close();
+                    vigencia = 1;
+                }
+                if (desde.Length == 14 && hasta.Length == 14)
+                {
+                    if (Operacion == "Modificar")
+                    {
+                        data.ModificarRubroContable(Convert.ToInt32(tbCodigo.Text), tbNombre.Text, vigencia, desde, hasta);
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado con éxito", false);
+                        MessageBox.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        data.AgregarRubroContable(tbNombre.Text, vigencia, desde, hasta);
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado con éxito", false);
+                        MessageBox.ShowDialog();
+                        this.Close();
+                    }
                 }
                 else
                 {
-                    data.AgregarRubroContable(tbNombre.Text, vigencia, desde, hasta);
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado con éxito", false);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar los campos (Desde y Hasta) correctamente antes de continuar", false, true);
                     MessageBox.ShowDialog();
-                    this.Close();
                 }
             }
             else
             {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar los campos correctamente antes de continuar", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
             }
         }

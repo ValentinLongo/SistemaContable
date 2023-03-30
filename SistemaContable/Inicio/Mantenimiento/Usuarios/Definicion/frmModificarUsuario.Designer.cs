@@ -79,6 +79,7 @@
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(256, 21);
             this.cbEstado.TabIndex = 34;
+            this.cbEstado.TabStop = false;
             // 
             // cbPerfil
             // 
@@ -90,6 +91,7 @@
             this.cbPerfil.Name = "cbPerfil";
             this.cbPerfil.Size = new System.Drawing.Size(256, 21);
             this.cbPerfil.TabIndex = 33;
+            this.cbPerfil.TabStop = false;
             // 
             // tbLogin
             // 
@@ -100,7 +102,7 @@
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(231, 13);
             this.tbLogin.TabIndex = 4;
-            this.tbLogin.Tag = "10000";
+            this.tbLogin.Tag = "11000";
             // 
             // dtFechaNachimiento
             // 
@@ -108,6 +110,7 @@
             this.dtFechaNachimiento.Name = "dtFechaNachimiento";
             this.dtFechaNachimiento.Size = new System.Drawing.Size(257, 20);
             this.dtFechaNachimiento.TabIndex = 31;
+            this.dtFechaNachimiento.TabStop = false;
             // 
             // tbTelefono
             // 
@@ -118,7 +121,7 @@
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(229, 13);
             this.tbTelefono.TabIndex = 3;
-            this.tbTelefono.Tag = "00000";
+            this.tbTelefono.Tag = "00100";
             // 
             // tbDireccion
             // 
@@ -129,7 +132,7 @@
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(229, 13);
             this.tbDireccion.TabIndex = 2;
-            this.tbDireccion.Tag = "00000";
+            this.tbDireccion.Tag = "01000";
             // 
             // tbNombre
             // 
@@ -140,7 +143,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(229, 13);
             this.tbNombre.TabIndex = 1;
-            this.tbNombre.Tag = "10000";
+            this.tbNombre.Tag = "11010";
             // 
             // label10
             // 
@@ -251,7 +254,7 @@
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(83, 13);
             this.tbCodigo.TabIndex = 0;
-            this.tbCodigo.Tag = "10000";
+            this.tbCodigo.Tag = "10100";
             // 
             // panel3
             // 
@@ -310,7 +313,7 @@
             this.tbVendedor.Name = "tbVendedor";
             this.tbVendedor.Size = new System.Drawing.Size(252, 13);
             this.tbVendedor.TabIndex = 5;
-            this.tbVendedor.Tag = "00000";
+            this.tbVendedor.Tag = "01000";
             // 
             // btnBuscar
             // 
@@ -320,7 +323,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(421, 342);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(31, 27);
-            this.btnBuscar.TabIndex = 53;
+            this.btnBuscar.TabIndex = 6;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -334,6 +337,7 @@
             this.cbSeccion.Name = "cbSeccion";
             this.cbSeccion.Size = new System.Drawing.Size(257, 21);
             this.cbSeccion.TabIndex = 52;
+            this.cbSeccion.TabStop = false;
             // 
             // label12
             // 
@@ -373,7 +377,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(182, 441);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(158, 40);
-            this.btnAceptar.TabIndex = 6;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -464,6 +468,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // Check
             // 
@@ -515,6 +520,7 @@
             this.Check.Size = new System.Drawing.Size(17, 17);
             this.Check.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.Check.TabIndex = 59;
+            this.Check.TabStop = false;
             this.Check.ThreeState = false;
             this.Check.ToolTipText = null;
             this.Check.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.Check_CheckedChanged);

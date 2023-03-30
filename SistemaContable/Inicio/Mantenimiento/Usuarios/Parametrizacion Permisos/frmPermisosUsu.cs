@@ -18,10 +18,15 @@ namespace SistemaContable.Parametrizacion_Permisos
     public partial class frmPermisosUsu : Form
     {
         public static List<MPermisoUsuario> lista = new List<MPermisoUsuario>();
+        public static string NroUsu;
+        public static string DescriUsu;
 
         public frmPermisosUsu()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
         private void btnConsulta_Click(object sender, EventArgs e)
@@ -108,16 +113,24 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            int terminal = frmLogin.NumeroTerminal;
-            DataSet ds = new DataSet();
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
+            {
+                int terminal = frmLogin.NumeroTerminal;
+                DataSet ds = new DataSet();
 
-            AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_sistema = 'CO' AND mxu_usuario = {txtNroUsuario.Text}");
+                AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_sistema = 'CO' AND mxu_usuario = {txtNroUsuario.Text}");
 
-            AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu ( mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From aux_MenuxUsu Where aux_MenuxUsu.mxu_sistema = 'CO' AND mxu_terminal = '{terminal}' AND aux_MenuxUsu.mxu_usuario = {txtNroUsuario.Text}");
+                AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu ( mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From aux_MenuxUsu Where aux_MenuxUsu.mxu_sistema = 'CO' AND mxu_terminal = '{terminal}' AND aux_MenuxUsu.mxu_usuario = {txtNroUsuario.Text}");
 
-            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cambios realizados correctamente!", false);
-            MessageBox.ShowDialog();
-            this.Close();
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cambios realizados correctamente!", false);
+                MessageBox.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void Tpermisos_AfterCheck(object sender, TreeViewEventArgs e)
@@ -143,6 +156,9 @@ namespace SistemaContable.Parametrizacion_Permisos
         {
             if (txtNroUsuario.Text != "" && txtDescriUsuario.Text != "")
             {
+                NroUsu = txtNroUsuario.Text;
+                DescriUsu = txtDescriUsuario.Text;
+
                 frmPermisosEspecialesUsu especialusuario = new frmPermisosEspecialesUsu();
                 especialusuario.Show();
             }

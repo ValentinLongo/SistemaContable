@@ -82,7 +82,7 @@ namespace SistemaContable
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            if ((txtUsuario.Text != null && txtConstrasenia.Text != null) || (txtUsuario.Text != "" && txtConstrasenia.Text != ""))
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
                 txtUsuario.Text = txtUsuario.Text.ToUpper();
                 txtConstrasenia.Text = txtConstrasenia.Text.ToUpper();
@@ -107,18 +107,6 @@ namespace SistemaContable
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
             }
-        }
-
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
@@ -149,6 +137,17 @@ namespace SistemaContable
                     lblMayus.Visible = true;
                 }
             }
+        }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

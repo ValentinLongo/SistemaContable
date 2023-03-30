@@ -22,6 +22,9 @@ namespace SistemaContable.Inicio.Ver.Calendario
         {
             InitializeComponent();
 
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             horavieja = hora;
             comentarioviejo = comentario;
 
@@ -44,19 +47,27 @@ namespace SistemaContable.Inicio.Ver.Calendario
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (proceso == 1)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-                Negocio.Funciones.Ver.FCalendario.Agregar(txtFecha.Text, maskHora.Text, txtComentario.Text);
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
-                MessageBox.ShowDialog();
-                this.Close();
+                if (proceso == 1)
+                {
+                    Negocio.Funciones.Ver.FCalendario.Agregar(txtFecha.Text, maskHora.Text, txtComentario.Text);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+                    MessageBox.ShowDialog();
+                    this.Close();
+                }
+                else if (proceso == 2)
+                {
+                    Negocio.Funciones.Ver.FCalendario.Modificar(txtFecha.Text, maskHora.Text, txtComentario.Text, horavieja, comentarioviejo);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+                    MessageBox.ShowDialog();
+                    this.Close();
+                }
             }
-            else if (proceso == 2)
+            else
             {
-                Negocio.Funciones.Ver.FCalendario.Modificar(txtFecha.Text, maskHora.Text, txtComentario.Text, horavieja, comentarioviejo);
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
-                this.Close();
             }
         }
 

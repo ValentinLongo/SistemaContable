@@ -20,6 +20,9 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
         {
             InitializeComponent();
 
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             lblUsuario.Text = FLogin.NombreUsuario;
             CargarDGV(false,"");
         }

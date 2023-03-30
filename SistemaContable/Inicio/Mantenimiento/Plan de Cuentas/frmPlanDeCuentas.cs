@@ -23,8 +23,9 @@ namespace SistemaContable.Plan_de_Cuentas
         {
             InitializeComponent();
 
-            //Negocio.FValidacionesEventos.EventosFormulario(this);
+            Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
+
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
 
@@ -32,7 +33,6 @@ namespace SistemaContable.Plan_de_Cuentas
             {
                 frmConControlBar();
             }
-
             CargarDGV("");
         }
 
@@ -149,6 +149,11 @@ namespace SistemaContable.Plan_de_Cuentas
         {
             frmReporte freporte = new frmReporte("PCuenta", $"{FPlanDeCuentas.query}","", "Plan de Cuentas", "General", DateTime.Now.ToString("d"));
             freporte.ShowDialog();
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            CargarDGV(txtBusqueda.Text);
         }
     }
 }

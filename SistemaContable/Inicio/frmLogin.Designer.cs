@@ -34,7 +34,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.btnAcceder = new RJCodeAdvance.RJControls.RJButton();
             this.label3 = new System.Windows.Forms.Label();
             this.txtConstrasenia = new System.Windows.Forms.TextBox();
@@ -44,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblMayus = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -58,7 +58,6 @@
             this.ShapeContra = new Bunifu.UI.WinForms.BunifuShapes();
             this.ShapeUsuario = new Bunifu.UI.WinForms.BunifuShapes();
             this.bunifuShapes2 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.lblMayus = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -99,7 +98,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.bunifuFormControlBox1);
-            this.panel1.Controls.Add(this.bunifuShapes1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -181,22 +179,6 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 25);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
-            // bunifuShapes1
-            // 
-            this.bunifuShapes1.Angle = 0F;
-            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.bunifuShapes1.BorderThickness = 1;
-            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(32, 3);
-            this.bunifuShapes1.Name = "bunifuShapes1";
-            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
-            this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(303, 219);
-            this.bunifuShapes1.TabIndex = 51;
-            this.bunifuShapes1.Text = "bunifuShapes1";
-            // 
             // btnAcceder
             // 
             this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -241,7 +223,7 @@
             this.txtConstrasenia.PasswordChar = '*';
             this.txtConstrasenia.Size = new System.Drawing.Size(194, 19);
             this.txtConstrasenia.TabIndex = 1;
-            this.txtConstrasenia.Tag = "00000";
+            this.txtConstrasenia.Tag = "10000";
             this.txtConstrasenia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConstrasenia_KeyDown);
             // 
             // panel4
@@ -262,7 +244,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(194, 19);
             this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.Tag = "00000";
+            this.txtUsuario.Tag = "10000";
             this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
             // 
             // panel3
@@ -327,6 +309,18 @@
             this.panel6.Size = new System.Drawing.Size(366, 309);
             this.panel6.TabIndex = 0;
             this.panel6.Tag = "2";
+            // 
+            // lblMayus
+            // 
+            this.lblMayus.AutoSize = true;
+            this.lblMayus.Font = new System.Drawing.Font("Dotum", 8.25F);
+            this.lblMayus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMayus.Location = new System.Drawing.Point(134, 233);
+            this.lblMayus.Name = "lblMayus";
+            this.lblMayus.Size = new System.Drawing.Size(109, 11);
+            this.lblMayus.TabIndex = 52;
+            this.lblMayus.Text = "Bloq Mayus Activo";
+            this.lblMayus.Visible = false;
             // 
             // panel18
             // 
@@ -474,18 +468,6 @@
             this.bunifuShapes2.TabIndex = 51;
             this.bunifuShapes2.Text = "bunifuShapes2";
             // 
-            // lblMayus
-            // 
-            this.lblMayus.AutoSize = true;
-            this.lblMayus.Font = new System.Drawing.Font("Dotum", 8.25F);
-            this.lblMayus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMayus.Location = new System.Drawing.Point(134, 233);
-            this.lblMayus.Name = "lblMayus";
-            this.lblMayus.Size = new System.Drawing.Size(109, 11);
-            this.lblMayus.TabIndex = 52;
-            this.lblMayus.Text = "Bloq Mayus Activo";
-            this.lblMayus.Visible = false;
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,7 +524,6 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes2;
         private System.Windows.Forms.Label lblMayus;
     }

@@ -17,7 +17,8 @@ namespace SistemaContable.Usuarios
         public frmDefinirCajas()
         {
             InitializeComponent();
-            Negocio.FValidacionesEventos.EventosFormulario(this);
+
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
             //Negocio.FFormatoSistema.SetearFormato(this);
 
             CargarDGV();

@@ -15,7 +15,7 @@ namespace SistemaContable
         public frmCarga()
         {
             InitializeComponent();
-            //Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
 

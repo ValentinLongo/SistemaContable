@@ -19,11 +19,16 @@ namespace SistemaContable.Parametrizacion_Permisos
 {
     public partial class frmPermisosEspecialesUsu : Form
     {
-        string codigo = frmConsultaGeneral.codigoCG;
-        string descri = frmConsultaGeneral.descripcionCG;
+        string codigo = frmPermisosUsu.NroUsu;
+        string descri = frmPermisosUsu.DescriUsu;
+
         public frmPermisosEspecialesUsu()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             if (codigo != "" && descri != "")
             {
                 txtNroUsuario.Text = codigo;

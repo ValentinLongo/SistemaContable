@@ -18,13 +18,19 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
     {
         public static Label nuevomsg;
         string Query;
+
         public frmComunicacionInterna(Label newmsg)
         {
             InitializeComponent();
+
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa para este frm)
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             nuevomsg = newmsg;
             txtComentario.Text = "";
             cbSeleccionar.SelectedIndex = 0;
         }
+
         string fecha;
         string origen;
         string destino;

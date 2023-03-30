@@ -20,6 +20,10 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         public frmConceptosContables()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             CargarDGV("");
         }
 
