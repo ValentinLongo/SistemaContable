@@ -19,6 +19,10 @@ namespace SistemaContable.Agenda
         public frmAgenda()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             cargarDatos("");
         }
 
@@ -85,7 +89,7 @@ namespace SistemaContable.Agenda
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            cargarDatos(textBox1.Text);
+            cargarDatos(tbDescipcion.Text);
         }
     }
 }

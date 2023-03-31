@@ -15,6 +15,9 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
         public frmSaldosAjustados()
         {
             InitializeComponent();
+
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
+            //Negocio.FFormatoSistema.SetearFormato(this);
         }
     }
 }

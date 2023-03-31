@@ -133,6 +133,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label2
             // 
@@ -199,8 +200,8 @@
             this.txtCuenta.Location = new System.Drawing.Point(139, 38);
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.Size = new System.Drawing.Size(229, 19);
-            this.txtCuenta.TabIndex = 85;
-            this.txtCuenta.Tag = "11000";
+            this.txtCuenta.TabIndex = 0;
+            this.txtCuenta.Tag = "10100";
             // 
             // btnConfirmar
             // 
@@ -216,7 +217,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(160, 191);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(159, 34);
-            this.btnConfirmar.TabIndex = 87;
+            this.btnConfirmar.TabIndex = 3;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -260,8 +261,8 @@
             this.txtOrden.Location = new System.Drawing.Point(139, 151);
             this.txtOrden.Name = "txtOrden";
             this.txtOrden.Size = new System.Drawing.Size(74, 19);
-            this.txtOrden.TabIndex = 92;
-            this.txtOrden.Tag = "11000";
+            this.txtOrden.TabIndex = 2;
+            this.txtOrden.Tag = "10100";
             // 
             // txtDescri
             // 
@@ -272,8 +273,8 @@
             this.txtDescri.Location = new System.Drawing.Point(139, 72);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(229, 19);
-            this.txtDescri.TabIndex = 96;
-            this.txtDescri.Tag = "11000";
+            this.txtDescri.TabIndex = 1;
+            this.txtDescri.Tag = "11010";
             // 
             // btnConsulta
             // 
@@ -300,6 +301,7 @@
             this.cbCentroCostos.Name = "cbCentroCostos";
             this.cbCentroCostos.Size = new System.Drawing.Size(229, 25);
             this.cbCentroCostos.TabIndex = 98;
+            this.cbCentroCostos.TabStop = false;
             // 
             // frmAggDetalledeInformes
             // 

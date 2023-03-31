@@ -65,7 +65,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(13, 241);
+            this.label1.Location = new System.Drawing.Point(10, 241);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 16);
             this.label1.TabIndex = 2;
@@ -167,6 +167,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // btnAgregar
             // 
@@ -184,7 +185,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(660, 69);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(128, 38);
-            this.btnAgregar.TabIndex = 61;
+            this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -206,7 +207,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(661, 195);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(128, 38);
-            this.btnEliminar.TabIndex = 62;
+            this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -228,7 +229,7 @@
             this.btnModificar.Location = new System.Drawing.Point(661, 132);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(128, 38);
-            this.btnModificar.TabIndex = 63;
+            this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -250,7 +251,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(454, 31);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 26);
-            this.btnBuscar.TabIndex = 64;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -272,8 +273,8 @@
             this.txtBusqueda.Location = new System.Drawing.Point(103, 38);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(339, 13);
-            this.txtBusqueda.TabIndex = 67;
-            this.txtBusqueda.Tag = "10000";
+            this.txtBusqueda.TabIndex = 0;
+            this.txtBusqueda.Tag = "01000";
             // 
             // label4
             // 
@@ -335,6 +336,7 @@
             this.checkEjerciciosAbiertos.Size = new System.Drawing.Size(17, 17);
             this.checkEjerciciosAbiertos.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.checkEjerciciosAbiertos.TabIndex = 69;
+            this.checkEjerciciosAbiertos.TabStop = false;
             this.checkEjerciciosAbiertos.ThreeState = false;
             this.checkEjerciciosAbiertos.ToolTipText = null;
             this.checkEjerciciosAbiertos.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkEjerciciosAbiertos_CheckedChanged);
@@ -452,7 +454,7 @@
             this.dgvCoeficientes.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCoeficientes.EnableHeadersVisualStyles = false;
             this.dgvCoeficientes.GridColor = System.Drawing.Color.White;
-            this.dgvCoeficientes.Location = new System.Drawing.Point(16, 260);
+            this.dgvCoeficientes.Location = new System.Drawing.Point(11, 260);
             this.dgvCoeficientes.Name = "dgvCoeficientes";
             this.dgvCoeficientes.ReadOnly = true;
             this.dgvCoeficientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -492,6 +494,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCoeficienteDeAjuste";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCoeficienteDeAjuste";
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

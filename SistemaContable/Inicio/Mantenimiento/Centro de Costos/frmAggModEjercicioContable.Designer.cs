@@ -126,6 +126,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label2
             // 
@@ -181,7 +182,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(229, 19);
             this.txtDescripcion.TabIndex = 0;
-            this.txtDescripcion.Tag = "00000";
+            this.txtDescripcion.Tag = "11000";
             // 
             // btnConfirmar
             // 

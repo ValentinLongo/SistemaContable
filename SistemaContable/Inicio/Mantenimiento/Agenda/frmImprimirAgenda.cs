@@ -22,6 +22,10 @@ namespace SistemaContable.Inicio.Mantenimiento.Agenda
         public frmImprimirAgenda()
         {
             InitializeComponent();
+
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             CargarDatos();
         }
 

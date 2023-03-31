@@ -36,6 +36,10 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         public frmAggModVisAsientoContable(int addmodvis, ComboBox cbSeleccion, string asiento, string fecha, string comentario)
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             add_mod_vis = addmodvis;
             Setear(addmodvis, cbSeleccion.SelectedValue.ToString(), cbSeleccion.Text, asiento, fecha, comentario);
         }
@@ -237,247 +241,255 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            string hora = DateTime.Now.ToLongTimeString();
-            string fecha = DateTime.Now.ToShortDateString();
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
+            {
+                string hora = DateTime.Now.ToLongTimeString();
+                string fecha = DateTime.Now.ToShortDateString();
 
-            //VALIDACIONES
-            int validaciones = 0;
-            int[] MSGsErrores = new int[7];
+                //VALIDACIONES
+                int validaciones = 0;
+                int[] MSGsErrores = new int[7];
 
-            DataSet dsV = new DataSet();
-            dsV = AccesoBase.ListarDatos($"SELECT mva_debe, mva_haber FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
-            if (dsV.Tables[0].Rows.Count != 0)
-            {
-                validaciones++; //VALIDA QUE HAYA POR LO MENOS UN DETALLE.
-            }
-            else
-            {
-                MSGsErrores[0] = 1;
-            }
-
-            double totaldebe = 0;
-            double totalhaber = 0;
-            foreach (DataRow drV in dsV.Tables[0].Rows) 
-            {
-                double debe = Convert.ToDouble(drV["mva_debe"]);
-                double haber = Convert.ToDouble(drV["mva_haber"]);
-
-                totaldebe = totaldebe + debe;
-                totalhaber = totalhaber + haber;
-            }
-            if (totaldebe == totalhaber)
-            {
-                validaciones++; //VALIDA QUE EL ASIENTO ESTE BALANCEADO.
-            }
-            else
-            {
-                MSGsErrores[1] = 1;
-            }
-
-            if (txtComentario.Text != "")
-            {
-                validaciones++; //VALIDA QUE EL ASIENTO TENGA COMENTARIO.
-            }
-            else
-            {
-                MSGsErrores[2] = 1;
-            }
-
-            DateTime fechadesde;
-            DateTime fechahasta;
-            dsV = AccesoBase.ListarDatos($"SELECT eje_desde, eje_hasta FROM Ejercicio WHERE eje_codigo = {txtCodEjercicio.Text}");
-            foreach (DataRow drV in dsV.Tables[0].Rows) 
-            {
-                fechadesde = Convert.ToDateTime(drV["eje_desde"]);
-                fechahasta = Convert.ToDateTime(drV["eje_hasta"]);
-
-                if (fechadesde <= dtFecha.Value && fechahasta >= dtFecha.Value)
+                DataSet dsV = new DataSet();
+                dsV = AccesoBase.ListarDatos($"SELECT mva_debe, mva_haber FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
+                if (dsV.Tables[0].Rows.Count != 0)
                 {
-                    validaciones++;//VALIDA QUE LA FECHA DEL ASIENTO SE ENCUENTRE DENTRO DEL EJERCICIO.
+                    validaciones++; //VALIDA QUE HAYA POR LO MENOS UN DETALLE.
                 }
                 else
                 {
-                    MSGsErrores[3] = 1;
+                    MSGsErrores[0] = 1;
                 }
 
-                string dtfecha = dtFecha.Value.ToString();
-                dtfecha = dtfecha.Substring(0, 10);
+                double totaldebe = 0;
+                double totalhaber = 0;
+                foreach (DataRow drV in dsV.Tables[0].Rows)
+                {
+                    double debe = Convert.ToDouble(drV["mva_debe"]);
+                    double haber = Convert.ToDouble(drV["mva_haber"]);
 
-                if (Convert.ToInt32(cbTipoAsiento.SelectedValue) == 4)
-                {                  
-                    string fechacierre = fechahasta.ToString();
-                    fechacierre = fechacierre.Substring(0, 10);
+                    totaldebe = totaldebe + debe;
+                    totalhaber = totalhaber + haber;
+                }
+                if (totaldebe == totalhaber)
+                {
+                    validaciones++; //VALIDA QUE EL ASIENTO ESTE BALANCEADO.
+                }
+                else
+                {
+                    MSGsErrores[1] = 1;
+                }
 
-                    if (Convert.ToDateTime(dtfecha) == Convert.ToDateTime(fechacierre))
+                if (txtComentario.Text != "")
+                {
+                    validaciones++; //VALIDA QUE EL ASIENTO TENGA COMENTARIO.
+                }
+                else
+                {
+                    MSGsErrores[2] = 1;
+                }
+
+                DateTime fechadesde;
+                DateTime fechahasta;
+                dsV = AccesoBase.ListarDatos($"SELECT eje_desde, eje_hasta FROM Ejercicio WHERE eje_codigo = {txtCodEjercicio.Text}");
+                foreach (DataRow drV in dsV.Tables[0].Rows)
+                {
+                    fechadesde = Convert.ToDateTime(drV["eje_desde"]);
+                    fechahasta = Convert.ToDateTime(drV["eje_hasta"]);
+
+                    if (fechadesde <= dtFecha.Value && fechahasta >= dtFecha.Value)
                     {
-                        validaciones++;//VALIDA QUE LA FECHA DEL ASIENTO DE CIERRE SEA IGUAL QUE EL HASTA EL EJERCICIO.
+                        validaciones++;//VALIDA QUE LA FECHA DEL ASIENTO SE ENCUENTRE DENTRO DEL EJERCICIO.
                     }
                     else
                     {
-                        MSGsErrores[4] = 1;
+                        MSGsErrores[3] = 1;
                     }
-                }
-                else if(Convert.ToInt32(cbTipoAsiento.SelectedValue) == 1)
-                {
-                    string fechapertura = fechadesde.ToString();
-                    fechapertura = fechapertura.Substring(0, 10);
 
-                    if (Convert.ToDateTime(dtfecha) == Convert.ToDateTime(fechapertura))
+                    string dtfecha = dtFecha.Value.ToString();
+                    dtfecha = dtfecha.Substring(0, 10);
+
+                    if (Convert.ToInt32(cbTipoAsiento.SelectedValue) == 4)
                     {
-                        validaciones++;//VALIDA QUE LA FECHA DEL ASIENTO DE APERTURA SEA IGUAL QUE EL DESDE EL EJERCICIO.
-                    }
-                    else
-                    {
-                        MSGsErrores[5] = 1;
-                    }
-                }
-            }
+                        string fechacierre = fechahasta.ToString();
+                        fechacierre = fechacierre.Substring(0, 10);
 
-            int asientorepetido = 0;
-
-            int resultado = AccesoBase.ValidarDatos($"SELECT ast_tipo FROM Asiento WHERE ast_tipo = {cbTipoAsiento.SelectedValue}");
-            if (resultado == 1) 
-            {
-                if (Convert.ToInt32(cbTipoAsiento.SelectedValue) == 4)
-                {
-                    asientorepetido = 1; //VALIDA QUE SI YA HAY UN ASIENTO DE CIERRE NO LO DEJA CONTINUAR.
-                    MSGsErrores[6] = 1;
-                }
-                else if (Convert.ToInt32(cbTipoAsiento.SelectedValue) == 1)
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Ya hay un asiento del tipo (apertura), ¿Desea Continuar?", false, true);
-                    MessageBox.ShowDialog();
-                    if (frmMessageBox.Cancelo)
-                    {
-                        asientorepetido = 1; //VALIDA QUE SI YA HAY UN ASIENTO DE APERTURA PREGUNTE SI DESEA CONTINUAR.
-                    }
-                }
-            }         
-            // 
-
-            if (validaciones == 4 || validaciones == 5 && asientorepetido == 0)
-            {
-                if (add_mod_vis == 1)
-                {
-                    string asiento_renumera = Negocio.FGenerales.ultimoNumeroID("ast_asiento", "Asiento").ToString();
-
-                    AccesoBase.InsertUpdateDatos($"INSERT INTO Asiento(ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_user, ast_hora, ast_ejercicio, ast_fecalta, ast_tipo) VALUES('{asiento_renumera}','{asiento_renumera}','{dtFecha.Value}','{txtComentario.Text}','{FLogin.IdUsuario}','{hora}','{txtCodEjercicio.Text}','{fecha}','{cbTipoAsiento.SelectedValue}')");
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
-                    MessageBox.ShowDialog();
-
-                    AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto WHERE mva_terminal = {terminal}");
-
-                    this.Close();
-                }
-                else if (add_mod_vis == 2)
-                {
-                    //MODIFICÁ TABLA MOVASTO
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error en los datos de la conexion", true);
-                    MessageBox.ShowDialog();
-                    if (frmMessageBox.Acepto)
-                    {
-                        int asiento = 0;
-                        string fechasiento = "";
-
-                        DataSet ds = new DataSet();
-                        ds = AccesoBase.ListarDatos($"SELECT mva_asiento, mva_cuenta, mva_debe, mva_haber, mva_concepto, mva_cc FROM Aux_MovAsto");
-
-                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        if (Convert.ToDateTime(dtfecha) == Convert.ToDateTime(fechacierre))
                         {
-                            asiento = Convert.ToInt32(dr["mva_asiento"]);
+                            validaciones++;//VALIDA QUE LA FECHA DEL ASIENTO DE CIERRE SEA IGUAL QUE EL HASTA EL EJERCICIO.
                         }
-                        AccesoBase.InsertUpdateDatos($"DELETE MovAsto WHERE mva_asiento = {asiento}");
-
-                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        else
                         {
-                            int cuenta = Convert.ToInt32(dr["mva_cuenta"]);
-                            double debe = Convert.ToDouble(dr["mva_debe"]);
-                            double haber = Convert.ToDouble(dr["mva_haber"]);
-                            string concepto = dr["mva_concepto"].ToString();
-                            string cc = dr["mva_cc"].ToString();
-                            if (cc != "0")
-                            {
-                                Convert.ToInt32(cc);
-                            }
-
-                            DataSet ds2 = new DataSet();
-                            ds2 = AccesoBase.ListarDatos($"SELECT ast_fecha FROM Asiento WHERE ast_asiento = {asiento}");
-                            foreach (DataRow dr2 in ds2.Tables[0].Rows)
-                            {
-                                fechasiento = dr2["ast_fecha"].ToString();
-                            }
-
-                            string query = "";
-                            string money = "";
-                            int codigo = 0;
-                            if (debe != 0)
-                            {
-                                money = debe.ToString();
-                                codigo = 1;
-                            }
-                            else if (haber != 0)
-                            {
-                                money = haber.ToString();
-                                codigo = 2;
-                            }
-
-                            if (cc == "0")
-                            {
-                                query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{codigo},*,'{concepto}',null)";
-                            }
-                            else
-                            {
-                                query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{codigo},*,'{concepto}',{cc})";
-                            }
-                            AccesoBase.InsertUpdateDatosMoney(query, money);
+                            MSGsErrores[4] = 1;
                         }
+                    }
+                    else if (Convert.ToInt32(cbTipoAsiento.SelectedValue) == 1)
+                    {
+                        string fechapertura = fechadesde.ToString();
+                        fechapertura = fechapertura.Substring(0, 10);
+
+                        if (Convert.ToDateTime(dtfecha) == Convert.ToDateTime(fechapertura))
+                        {
+                            validaciones++;//VALIDA QUE LA FECHA DEL ASIENTO DE APERTURA SEA IGUAL QUE EL DESDE EL EJERCICIO.
+                        }
+                        else
+                        {
+                            MSGsErrores[5] = 1;
+                        }
+                    }
+                }
+
+                int asientorepetido = 0;
+
+                int resultado = AccesoBase.ValidarDatos($"SELECT ast_tipo FROM Asiento WHERE ast_tipo = {cbTipoAsiento.SelectedValue}");
+                if (resultado == 1)
+                {
+                    if (Convert.ToInt32(cbTipoAsiento.SelectedValue) == 4)
+                    {
+                        asientorepetido = 1; //VALIDA QUE SI YA HAY UN ASIENTO DE CIERRE NO LO DEJA CONTINUAR.
+                        MSGsErrores[6] = 1;
+                    }
+                    else if (Convert.ToInt32(cbTipoAsiento.SelectedValue) == 1)
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Ya hay un asiento del tipo (apertura), ¿Desea Continuar?", false, true);
+                        MessageBox.ShowDialog();
+                        if (frmMessageBox.Cancelo)
+                        {
+                            asientorepetido = 1; //VALIDA QUE SI YA HAY UN ASIENTO DE APERTURA PREGUNTE SI DESEA CONTINUAR.
+                        }
+                    }
+                }
+                // 
+
+                if (validaciones == 4 || validaciones == 5 && asientorepetido == 0)
+                {
+                    if (add_mod_vis == 1)
+                    {
+                        string asiento_renumera = Negocio.FGenerales.ultimoNumeroID("ast_asiento", "Asiento").ToString();
+
+                        AccesoBase.InsertUpdateDatos($"INSERT INTO Asiento(ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_user, ast_hora, ast_ejercicio, ast_fecalta, ast_tipo) VALUES('{asiento_renumera}','{asiento_renumera}','{dtFecha.Value}','{txtComentario.Text}','{FLogin.IdUsuario}','{hora}','{txtCodEjercicio.Text}','{fecha}','{cbTipoAsiento.SelectedValue}')");
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
+                        MessageBox.ShowDialog();
 
                         AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto WHERE mva_terminal = {terminal}");
 
-                        //MODIFICÁ TABLA ASIENTO
-                        AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET ast_usumodi = '{Negocio.FLogin.IdUsuario}', ast_fecmodi = '{fecha}', ast_horamodi = '{hora}', ast_tipo = {cbTipoAsiento.SelectedValue}, ast_comenta = '{txtComentario.Text}' WHERE ast_Asiento = '{txtNroAsiento.Text}'");
                         this.Close();
-                    }                   
+                    }
+                    else if (add_mod_vis == 2)
+                    {
+                        //MODIFICÁ TABLA MOVASTO
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error en los datos de la conexion", true);
+                        MessageBox.ShowDialog();
+                        if (frmMessageBox.Acepto)
+                        {
+                            int asiento = 0;
+                            string fechasiento = "";
+
+                            DataSet ds = new DataSet();
+                            ds = AccesoBase.ListarDatos($"SELECT mva_asiento, mva_cuenta, mva_debe, mva_haber, mva_concepto, mva_cc FROM Aux_MovAsto");
+
+                            foreach (DataRow dr in ds.Tables[0].Rows)
+                            {
+                                asiento = Convert.ToInt32(dr["mva_asiento"]);
+                            }
+                            AccesoBase.InsertUpdateDatos($"DELETE MovAsto WHERE mva_asiento = {asiento}");
+
+                            foreach (DataRow dr in ds.Tables[0].Rows)
+                            {
+                                int cuenta = Convert.ToInt32(dr["mva_cuenta"]);
+                                double debe = Convert.ToDouble(dr["mva_debe"]);
+                                double haber = Convert.ToDouble(dr["mva_haber"]);
+                                string concepto = dr["mva_concepto"].ToString();
+                                string cc = dr["mva_cc"].ToString();
+                                if (cc != "0")
+                                {
+                                    Convert.ToInt32(cc);
+                                }
+
+                                DataSet ds2 = new DataSet();
+                                ds2 = AccesoBase.ListarDatos($"SELECT ast_fecha FROM Asiento WHERE ast_asiento = {asiento}");
+                                foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                                {
+                                    fechasiento = dr2["ast_fecha"].ToString();
+                                }
+
+                                string query = "";
+                                string money = "";
+                                int codigo = 0;
+                                if (debe != 0)
+                                {
+                                    money = debe.ToString();
+                                    codigo = 1;
+                                }
+                                else if (haber != 0)
+                                {
+                                    money = haber.ToString();
+                                    codigo = 2;
+                                }
+
+                                if (cc == "0")
+                                {
+                                    query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{codigo},*,'{concepto}',null)";
+                                }
+                                else
+                                {
+                                    query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{fechasiento}',{cuenta},{codigo},*,'{concepto}',{cc})";
+                                }
+                                AccesoBase.InsertUpdateDatosMoney(query, money);
+                            }
+
+                            AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto WHERE mva_terminal = {terminal}");
+
+                            //MODIFICÁ TABLA ASIENTO
+                            AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET ast_usumodi = '{Negocio.FLogin.IdUsuario}', ast_fecmodi = '{fecha}', ast_horamodi = '{hora}', ast_tipo = {cbTipoAsiento.SelectedValue}, ast_comenta = '{txtComentario.Text}' WHERE ast_Asiento = '{txtNroAsiento.Text}'");
+                            this.Close();
+                        }
+                    }
+                }
+                else
+                {
+                    if (MSGsErrores[0] == 1)
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe agregar un detalle", false);
+                        MessageBox.ShowDialog();
+                    }
+                    else if (MSGsErrores[1] == 1)
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El asiento debe estar balanceado", false);
+                        MessageBox.ShowDialog();
+                    }
+                    else if (MSGsErrores[2] == 1)
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe agregar un comentario", false);
+                        MessageBox.ShowDialog();
+                    }
+                    else if (MSGsErrores[3] == 1)
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La fecha ingresada no concuerda con los parametros del ejercicio", false, true);
+                        MessageBox.ShowDialog();
+                    }
+                    else if (MSGsErrores[4] == 1)
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La fecha de cierre no concuerda con la del ejercicio", false, true);
+                        MessageBox.ShowDialog();
+                    }
+                    else if (MSGsErrores[5] == 1)
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La fecha de apertura no concuerda con la del ejercicio", false, true);
+                        MessageBox.ShowDialog();
+                    }
+                    else if (MSGsErrores[6] == 1)
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Ya hay un asiento del tipo (Cierre)", false);
+                        MessageBox.ShowDialog();
+                    }
                 }
             }
             else
             {
-                if (MSGsErrores[0] == 1)
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe agregar un detalle", false);
-                    MessageBox.ShowDialog();
-                }
-                else if (MSGsErrores[1] == 1) 
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El asiento debe estar balanceado", false);
-                    MessageBox.ShowDialog();
-                }
-                else if (MSGsErrores[2] == 1)
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe agregar un comentario", false);
-                    MessageBox.ShowDialog();
-                }
-                else if (MSGsErrores[3] == 1)
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La fecha ingresada no concuerda con los parametros del ejercicio", false, true);
-                    MessageBox.ShowDialog();
-                }
-                else if (MSGsErrores[4] == 1)
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La fecha de cierre no concuerda con la del ejercicio", false, true);
-                    MessageBox.ShowDialog();
-                }
-                else if (MSGsErrores[5] == 1)
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La fecha de apertura no concuerda con la del ejercicio", false, true);
-                    MessageBox.ShowDialog();
-                }
-                else if (MSGsErrores[6] == 1)
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Ya hay un asiento del tipo (Cierre)", false);
-                    MessageBox.ShowDialog();
-                }
-            }
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                MessageBox.ShowDialog();
+            }           
         }
 
         private void btnModelo_Click(object sender, EventArgs e)

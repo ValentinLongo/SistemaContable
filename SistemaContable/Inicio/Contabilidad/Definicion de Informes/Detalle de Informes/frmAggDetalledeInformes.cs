@@ -20,6 +20,10 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
         public frmAggDetalledeInformes(int opcion)
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             this.opcion = opcion;
             if(opcion == 1)
             {
@@ -29,13 +33,13 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if(txtCuenta.Text != string.Empty && txtDescri.Text != string.Empty && txtOrden.Text != string.Empty && cbCentroCostos.Text != string.Empty)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-
+                
             }
             else
             {
-                frmMessageBox MessageBox = new frmMessageBox("Atención", "Faltan completar campos", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
             }
         }

@@ -21,6 +21,10 @@ namespace SistemaContable.Agenda
         public frmAgregarAgenda(string accion)
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             Accion = accion;
             llenarCombo();
         }
@@ -82,36 +86,44 @@ namespace SistemaContable.Agenda
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            MAgenda mAgenda = new MAgenda()
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-                age_codigo = FGenerales.ultimoNumeroID("age_codigo", "Agenda"),
-                age_nombre = tbNombre.Text,
-                age_direccion = tbDireccion.Text,
-                age_codpos1 = Convert.ToInt32(tbLocalidad1.Text),
-                age_codpos2 = Convert.ToInt32(tbLocalidad2.Text),
-                age_telefono = tbTel.Text,
-                age_celular = tbCel.Text,
-                age_email = tbMail.Text,
-                age_web = tbWeb.Text,
-                age_observa = tbObserv.Text,
-                //age_fecnac = Convert.ToDateTime(dtFechaNacimiento.Value),
-                age_fecnac = dtFechaNacimiento.Value.ToString(),
-                age_actividad = cbActividad.SelectedValue.ToString(),
-            };
-            if (Accion == "Agregar")
-            {
-                data.agregarAgenda(mAgenda);
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
-                MessageBox.ShowDialog();
-                this.Close();
+                MAgenda mAgenda = new MAgenda()
+                {
+                    age_codigo = FGenerales.ultimoNumeroID("age_codigo", "Agenda"),
+                    age_nombre = tbNombre.Text,
+                    age_direccion = tbDireccion.Text,
+                    age_codpos1 = Convert.ToInt32(tbLocalidad1.Text),
+                    age_codpos2 = Convert.ToInt32(tbLocalidad2.Text),
+                    age_telefono = tbTel.Text,
+                    age_celular = tbCel.Text,
+                    age_email = tbMail.Text,
+                    age_web = tbWeb.Text,
+                    age_observa = tbObserv.Text,
+                    //age_fecnac = Convert.ToDateTime(dtFechaNacimiento.Value),
+                    age_fecnac = dtFechaNacimiento.Value.ToString(),
+                    age_actividad = cbActividad.SelectedValue.ToString(),
+                };
+                if (Accion == "Agregar")
+                {
+                    data.agregarAgenda(mAgenda);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+                    MessageBox.ShowDialog();
+                    this.Close();
+                }
+                if (Accion == "Modificar")
+                {
+                    mAgenda.age_codigo = Convert.ToInt32(tbCodigo.Text);
+                    data.modificarAgenda(mAgenda);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+                    MessageBox.ShowDialog();
+                    this.Close();
+                }
             }
-            if (Accion == "Modificar")
+            else 
             {
-                mAgenda.age_codigo = Convert.ToInt32(tbCodigo.Text);
-                data.modificarAgenda(mAgenda);
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
-                this.Close();
             }
         }
 

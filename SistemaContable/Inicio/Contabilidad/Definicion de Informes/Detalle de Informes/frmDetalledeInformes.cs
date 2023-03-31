@@ -22,6 +22,10 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
         public frmDetalledeInformes()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             Cargar("");
         }
 

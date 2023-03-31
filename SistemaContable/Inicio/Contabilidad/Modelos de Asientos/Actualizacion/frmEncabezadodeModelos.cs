@@ -20,6 +20,9 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
         {
             InitializeComponent();
 
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             CargarDGV("");
             cbBusqueda.SelectedIndex = 0;
         }

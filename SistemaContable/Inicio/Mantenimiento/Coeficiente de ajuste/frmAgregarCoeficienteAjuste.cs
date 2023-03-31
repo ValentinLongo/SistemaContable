@@ -20,13 +20,17 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
         public frmAgregarCoeficienteAjuste(string evento)
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             Evento = evento;
             cargarDatos();
         }
 
         private void cargarDatos()
         {
-            maskPeriodo.Mask = "##/####";
+            maskPeriodo.Mask = "00/0000";
             if (Evento == "Modificar")
             {
                 maskPeriodo.Text = frmCoeficienteDeAjuste.periodoModificar;
@@ -37,36 +41,44 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            bool validaFecha = validarFecha();
-            if (validaFecha && Evento == "Agregar")
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-                try
+                bool validaFecha = validarFecha();
+                if (validaFecha && Evento == "Agregar")
                 {
-                    AccesoBase.InsertUpdateDatos($"INSERT INTO DetAjusteInf(aji_ejercicio, aji_periodo,aji_coef,aji_usualta,aji_fecalta,aji_horaalta) values({frmCoeficienteDeAjuste.codigoEjercicio},'{maskPeriodo.Text}',{tbCoeficiente.Text},{FLogin.IdUsuario},'{DateTime.Now.ToString("d")}','{DateTime.Now.ToString("T")}')");
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado con éxito", false);
-                    MessageBox.ShowDialog();
-                    this.Close();
+                    try
+                    {
+                        AccesoBase.InsertUpdateDatos($"INSERT INTO DetAjusteInf(aji_ejercicio, aji_periodo,aji_coef,aji_usualta,aji_fecalta,aji_horaalta) values({frmCoeficienteDeAjuste.codigoEjercicio},'{maskPeriodo.Text}',{tbCoeficiente.Text},{FLogin.IdUsuario},'{DateTime.Now.ToString("d")}','{DateTime.Now.ToString("T")}')");
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado con éxito", false);
+                        MessageBox.ShowDialog();
+                        this.Close();
+                    }
+                    catch
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error", false);
+                        MessageBox.ShowDialog();
+                    }
                 }
-                catch
+                if (validaFecha && Evento == "Modificar")
                 {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error", false);
-                    MessageBox.ShowDialog();
+                    try
+                    {
+                        AccesoBase.InsertUpdateDatos($"UPDATE DetAjusteInf SET aji_coef = {tbCoeficiente.Text}, aji_usumodi = {FLogin.IdUsuario}, aji_fecmodi = '{DateTime.Now.ToString("d")}', aji_horamodi = '{DateTime.Now.ToString("T")}' WHERE aji_ejercicio = {frmCoeficienteDeAjuste.codigoEjercicio} and aji_periodo = '{maskPeriodo.Text}'");
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado con éxito", false);
+                        MessageBox.ShowDialog();
+                        this.Close();
+                    }
+                    catch
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error", false);
+                        MessageBox.ShowDialog();
+                    }
                 }
             }
-            if (validaFecha && Evento == "Modificar")
+            else
             {
-                try
-                {
-                    AccesoBase.InsertUpdateDatos($"UPDATE DetAjusteInf SET aji_coef = {tbCoeficiente.Text}, aji_usumodi = {FLogin.IdUsuario}, aji_fecmodi = '{DateTime.Now.ToString("d")}', aji_horamodi = '{DateTime.Now.ToString("T")}' WHERE aji_ejercicio = {frmCoeficienteDeAjuste.codigoEjercicio} and aji_periodo = '{maskPeriodo.Text}'");
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado con éxito", false);
-                    MessageBox.ShowDialog();
-                    this.Close();
-                }
-                catch
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error", false);
-                    MessageBox.ShowDialog();
-                }
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                MessageBox.ShowDialog();
             }
         }
 

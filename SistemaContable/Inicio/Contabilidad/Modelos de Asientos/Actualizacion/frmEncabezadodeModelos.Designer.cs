@@ -139,6 +139,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // btnAgregar
             // 
@@ -156,7 +157,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(650, 36);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(134, 30);
-            this.btnAgregar.TabIndex = 62;
+            this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -178,7 +179,7 @@
             this.btnModificar.Location = new System.Drawing.Point(650, 86);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(134, 30);
-            this.btnModificar.TabIndex = 63;
+            this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -200,7 +201,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(650, 136);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(134, 30);
-            this.btnEliminar.TabIndex = 64;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -222,7 +223,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(650, 361);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(136, 30);
-            this.btnImprimir.TabIndex = 66;
+            this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
@@ -242,6 +243,7 @@
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(134, 25);
             this.cbBusqueda.TabIndex = 72;
+            this.cbBusqueda.TabStop = false;
             // 
             // label13
             // 
@@ -304,6 +306,7 @@
             this.CheckInicio.Size = new System.Drawing.Size(17, 17);
             this.CheckInicio.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.CheckInicio.TabIndex = 70;
+            this.CheckInicio.TabStop = false;
             this.CheckInicio.ThreeState = false;
             this.CheckInicio.ToolTipText = null;
             // 
@@ -324,8 +327,8 @@
             this.txtBusqueda.Location = new System.Drawing.Point(166, 411);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(362, 19);
-            this.txtBusqueda.TabIndex = 67;
-            this.txtBusqueda.Tag = "11000";
+            this.txtBusqueda.TabIndex = 0;
+            this.txtBusqueda.Tag = "01000";
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // bunifuShapes1
@@ -342,6 +345,7 @@
             this.bunifuShapes1.Sides = 5;
             this.bunifuShapes1.Size = new System.Drawing.Size(621, 42);
             this.bunifuShapes1.TabIndex = 68;
+            this.bunifuShapes1.TabStop = false;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // dgvAux

@@ -40,8 +40,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Centro_de_Costos
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            int validado = Negocio.FValidacionesEventos.ValidacionVacio(this);
-            if (validado == 0)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
                 if (agg_o_mod == 0)
                 {

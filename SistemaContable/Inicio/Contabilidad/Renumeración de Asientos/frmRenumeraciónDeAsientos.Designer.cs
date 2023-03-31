@@ -130,6 +130,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label1
             // 
@@ -158,8 +159,9 @@
             this.txtNroEjercicio.Location = new System.Drawing.Point(75, 41);
             this.txtNroEjercicio.Name = "txtNroEjercicio";
             this.txtNroEjercicio.Size = new System.Drawing.Size(67, 13);
-            this.txtNroEjercicio.TabIndex = 62;
-            this.txtNroEjercicio.Tag = "10000";
+            this.txtNroEjercicio.TabIndex = 0;
+            this.txtNroEjercicio.Tag = "10100";
+            this.txtNroEjercicio.TextChanged += new System.EventHandler(this.txtNroEjercicio_TextChanged);
             // 
             // panel1
             // 
@@ -177,8 +179,8 @@
             this.txtDescriEjercicio.Location = new System.Drawing.Point(158, 41);
             this.txtDescriEjercicio.Name = "txtDescriEjercicio";
             this.txtDescriEjercicio.Size = new System.Drawing.Size(196, 13);
-            this.txtDescriEjercicio.TabIndex = 64;
-            this.txtDescriEjercicio.Tag = "10000";
+            this.txtDescriEjercicio.TabIndex = 1;
+            this.txtDescriEjercicio.Tag = "11000";
             // 
             // panel2
             // 
@@ -212,7 +214,7 @@
             this.btnProcesar.Location = new System.Drawing.Point(412, 55);
             this.btnProcesar.Name = "btnProcesar";
             this.btnProcesar.Size = new System.Drawing.Size(111, 31);
-            this.btnProcesar.TabIndex = 68;
+            this.btnProcesar.TabIndex = 3;
             this.btnProcesar.Text = "Procesar";
             this.btnProcesar.TextColor = System.Drawing.Color.White;
             this.btnProcesar.UseVisualStyleBackColor = false;
@@ -240,6 +242,7 @@
             this.bunifuProgressBar1.ProgressColorRight = System.Drawing.Color.DodgerBlue;
             this.bunifuProgressBar1.Size = new System.Drawing.Size(367, 13);
             this.bunifuProgressBar1.TabIndex = 69;
+            this.bunifuProgressBar1.TabStop = false;
             this.bunifuProgressBar1.Value = 0;
             this.bunifuProgressBar1.ValueByTransition = 0;
             // 
@@ -252,7 +255,7 @@
             this.btnEjercicio.Location = new System.Drawing.Point(360, 37);
             this.btnEjercicio.Name = "btnEjercicio";
             this.btnEjercicio.Size = new System.Drawing.Size(22, 21);
-            this.btnEjercicio.TabIndex = 70;
+            this.btnEjercicio.TabIndex = 2;
             this.btnEjercicio.UseVisualStyleBackColor = false;
             this.btnEjercicio.Click += new System.EventHandler(this.btnEjercicio_Click);
             // 

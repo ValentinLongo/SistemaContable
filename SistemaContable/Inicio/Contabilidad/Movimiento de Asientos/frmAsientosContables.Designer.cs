@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsientosContables));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(914, 74);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 46);
-            this.btnAgregar.TabIndex = 96;
+            this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -132,6 +132,7 @@
             this.cbSeleccion.Name = "cbSeleccion";
             this.cbSeleccion.Size = new System.Drawing.Size(190, 25);
             this.cbSeleccion.TabIndex = 103;
+            this.cbSeleccion.TabStop = false;
             this.cbSeleccion.Tag = "0";
             this.cbSeleccion.SelectedIndexChanged += new System.EventHandler(this.cbSeleccion_SelectedIndexChanged);
             // 
@@ -163,7 +164,7 @@
             this.btnModificar.Location = new System.Drawing.Point(914, 137);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(141, 46);
-            this.btnModificar.TabIndex = 105;
+            this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -185,7 +186,7 @@
             this.btnAnular.Location = new System.Drawing.Point(914, 201);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(141, 46);
-            this.btnAnular.TabIndex = 106;
+            this.btnAnular.TabIndex = 3;
             this.btnAnular.Text = "Anular";
             this.btnAnular.TextColor = System.Drawing.Color.White;
             this.btnAnular.UseVisualStyleBackColor = false;
@@ -207,7 +208,7 @@
             this.btnVisualizar.Location = new System.Drawing.Point(914, 265);
             this.btnVisualizar.Name = "btnVisualizar";
             this.btnVisualizar.Size = new System.Drawing.Size(141, 46);
-            this.btnVisualizar.TabIndex = 107;
+            this.btnVisualizar.TabIndex = 4;
             this.btnVisualizar.Text = "Visualizar";
             this.btnVisualizar.TextColor = System.Drawing.Color.White;
             this.btnVisualizar.UseVisualStyleBackColor = false;
@@ -229,6 +230,7 @@
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(154, 25);
             this.cbBusqueda.TabIndex = 113;
+            this.cbBusqueda.TabStop = false;
             this.cbBusqueda.SelectedIndexChanged += new System.EventHandler(this.cbBusqueda_SelectedIndexChanged);
             // 
             // lblinicio
@@ -258,11 +260,11 @@
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBusqueda.Location = new System.Drawing.Point(203, 588);
+            this.txtBusqueda.Location = new System.Drawing.Point(203, 589);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(598, 19);
-            this.txtBusqueda.TabIndex = 108;
-            this.txtBusqueda.Tag = "11000";
+            this.txtBusqueda.TabIndex = 0;
+            this.txtBusqueda.Tag = "01000";
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // bunifuShapes1
@@ -280,6 +282,7 @@
             this.bunifuShapes1.Sides = 5;
             this.bunifuShapes1.Size = new System.Drawing.Size(896, 55);
             this.bunifuShapes1.TabIndex = 109;
+            this.bunifuShapes1.TabStop = false;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // btnImprimir
@@ -298,7 +301,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(914, 518);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(141, 46);
-            this.btnImprimir.TabIndex = 115;
+            this.btnImprimir.TabIndex = 5;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
@@ -408,6 +411,7 @@
             this.CheckModificados.Size = new System.Drawing.Size(17, 17);
             this.CheckModificados.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.CheckModificados.TabIndex = 102;
+            this.CheckModificados.TabStop = false;
             this.CheckModificados.ThreeState = false;
             this.CheckModificados.ToolTipText = null;
             this.CheckModificados.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckModificados_CheckedChanged);
@@ -463,6 +467,7 @@
             this.CheckManuales.Size = new System.Drawing.Size(17, 17);
             this.CheckManuales.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.CheckManuales.TabIndex = 101;
+            this.CheckManuales.TabStop = false;
             this.CheckManuales.ThreeState = false;
             this.CheckManuales.ToolTipText = null;
             this.CheckManuales.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckManuales_CheckedChanged);
@@ -518,6 +523,7 @@
             this.CheckDiferencia.Size = new System.Drawing.Size(17, 17);
             this.CheckDiferencia.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.CheckDiferencia.TabIndex = 100;
+            this.CheckDiferencia.TabStop = false;
             this.CheckDiferencia.ThreeState = false;
             this.CheckDiferencia.ToolTipText = null;
             this.CheckDiferencia.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckDiferencia_CheckedChanged);
@@ -588,7 +594,7 @@
             this.maskFecha.Location = new System.Drawing.Point(270, 590);
             this.maskFecha.Name = "maskFecha";
             this.maskFecha.Size = new System.Drawing.Size(63, 15);
-            this.maskFecha.TabIndex = 120;
+            this.maskFecha.TabIndex = 34;
             // 
             // dgvAsientosContables
             // 
@@ -599,39 +605,39 @@
             this.dgvAsientosContables.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgvAsientosContables.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAsientosContables.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAsientosContables.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAsientosContables.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvAsientosContables.ColumnHeadersHeight = 25;
             this.dgvAsientosContables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvAsientosContables.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAsientosContables.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAsientosContables.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvAsientosContables.EnableHeadersVisualStyles = false;
             this.dgvAsientosContables.GridColor = System.Drawing.Color.White;
             this.dgvAsientosContables.Location = new System.Drawing.Point(13, 72);
             this.dgvAsientosContables.Name = "dgvAsientosContables";
             this.dgvAsientosContables.ReadOnly = true;
             this.dgvAsientosContables.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAsientosContables.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAsientosContables.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvAsientosContables.RowHeadersVisible = false;
             this.dgvAsientosContables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAsientosContables.Size = new System.Drawing.Size(895, 492);

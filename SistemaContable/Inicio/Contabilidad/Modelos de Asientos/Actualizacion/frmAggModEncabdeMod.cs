@@ -20,6 +20,10 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
         public frmAggModEncabdeMod()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             if (agg_o_mod == 0)
             {
                 lblControlBar.Text = "Agregar Encabezado de Modelo";
@@ -34,18 +38,26 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
         }
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (agg_o_mod == 0)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-                Negocio.Funciones.Contabilidad.FActualizacionMDA.Agregar(this, txtDescripcion.Text);
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
-                MessageBox.ShowDialog();
+                if (agg_o_mod == 0)
+                {
+                    Negocio.Funciones.Contabilidad.FActualizacionMDA.Agregar(this, txtDescripcion.Text);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
+                    MessageBox.ShowDialog();
+                }
+                else if (agg_o_mod == 1)
+                {
+                    int seleccionado = DGV.CurrentCell.RowIndex;
+                    txtmsg.Text = DGV.Rows[seleccionado].Cells[0].Value.ToString();
+                    Negocio.Funciones.Contabilidad.FActualizacionMDA.Modificar(this, txtmsg.Text, txtDescripcion.Text);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
+                    MessageBox.ShowDialog();
+                }
             }
-            else if (agg_o_mod == 1)
+            else 
             {
-                int seleccionado = DGV.CurrentCell.RowIndex;
-                txtmsg.Text = DGV.Rows[seleccionado].Cells[0].Value.ToString();
-                Negocio.Funciones.Contabilidad.FActualizacionMDA.Modificar(this, txtmsg.Text, txtDescripcion.Text);
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
             }
         }

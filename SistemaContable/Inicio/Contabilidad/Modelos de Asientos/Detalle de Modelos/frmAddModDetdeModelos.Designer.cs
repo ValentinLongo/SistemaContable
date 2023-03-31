@@ -139,6 +139,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label1
             // 
@@ -166,7 +167,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(162, 272);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(160, 45);
-            this.btnConfirmar.TabIndex = 85;
+            this.btnConfirmar.TabIndex = 6;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -190,8 +191,8 @@
             this.txtCuenta.Location = new System.Drawing.Point(134, 41);
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.Size = new System.Drawing.Size(52, 19);
-            this.txtCuenta.TabIndex = 84;
-            this.txtCuenta.Tag = "11000";
+            this.txtCuenta.TabIndex = 0;
+            this.txtCuenta.Tag = "10100";
             this.txtCuenta.TextChanged += new System.EventHandler(this.txtCuenta_TextChanged);
             // 
             // label2
@@ -271,8 +272,8 @@
             this.txtDescri.Location = new System.Drawing.Point(134, 76);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(220, 19);
-            this.txtDescri.TabIndex = 92;
-            this.txtDescri.Tag = "11000";
+            this.txtDescri.TabIndex = 2;
+            this.txtDescri.Tag = "11010";
             // 
             // panel2
             // 
@@ -291,8 +292,8 @@
             this.txtDebe.Location = new System.Drawing.Point(134, 110);
             this.txtDebe.Name = "txtDebe";
             this.txtDebe.Size = new System.Drawing.Size(107, 19);
-            this.txtDebe.TabIndex = 94;
-            this.txtDebe.Tag = "11000";
+            this.txtDebe.TabIndex = 3;
+            this.txtDebe.Tag = "10001";
             this.txtDebe.Click += new System.EventHandler(this.txtDebe_Click);
             this.txtDebe.Leave += new System.EventHandler(this.txtDebe_Leave);
             // 
@@ -313,8 +314,8 @@
             this.txtHaber.Location = new System.Drawing.Point(134, 149);
             this.txtHaber.Name = "txtHaber";
             this.txtHaber.Size = new System.Drawing.Size(107, 19);
-            this.txtHaber.TabIndex = 96;
-            this.txtHaber.Tag = "11000";
+            this.txtHaber.TabIndex = 4;
+            this.txtHaber.Tag = "10001";
             this.txtHaber.Click += new System.EventHandler(this.txtHaber_Click);
             this.txtHaber.Leave += new System.EventHandler(this.txtHaber_Leave);
             // 
@@ -335,8 +336,8 @@
             this.txtConcepto.Location = new System.Drawing.Point(134, 185);
             this.txtConcepto.Name = "txtConcepto";
             this.txtConcepto.Size = new System.Drawing.Size(220, 19);
-            this.txtConcepto.TabIndex = 98;
-            this.txtConcepto.Tag = "11000";
+            this.txtConcepto.TabIndex = 5;
+            this.txtConcepto.Tag = "11010";
             // 
             // cbCentrodeCosto
             // 
@@ -349,6 +350,7 @@
             this.cbCentrodeCosto.Name = "cbCentrodeCosto";
             this.cbCentrodeCosto.Size = new System.Drawing.Size(188, 25);
             this.cbCentrodeCosto.TabIndex = 100;
+            this.cbCentrodeCosto.TabStop = false;
             // 
             // btnConsulta
             // 
@@ -360,7 +362,7 @@
             this.btnConsulta.Location = new System.Drawing.Point(192, 34);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(23, 26);
-            this.btnConsulta.TabIndex = 102;
+            this.btnConsulta.TabIndex = 1;
             this.btnConsulta.UseVisualStyleBackColor = false;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 

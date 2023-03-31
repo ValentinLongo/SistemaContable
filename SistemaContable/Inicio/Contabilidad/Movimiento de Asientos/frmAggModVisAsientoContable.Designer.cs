@@ -92,10 +92,11 @@
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCerrar.Location = new System.Drawing.Point(761, -4);
+            this.btnCerrar.Location = new System.Drawing.Point(760, -5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(40, 25);
             this.btnCerrar.TabIndex = 131;
+            this.btnCerrar.TabStop = false;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -174,6 +175,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label3
             // 
@@ -248,8 +250,8 @@
             this.txtCodEjercicio.Location = new System.Drawing.Point(74, 32);
             this.txtCodEjercicio.Name = "txtCodEjercicio";
             this.txtCodEjercicio.Size = new System.Drawing.Size(58, 19);
-            this.txtCodEjercicio.TabIndex = 111;
-            this.txtCodEjercicio.Tag = "11000";
+            this.txtCodEjercicio.TabIndex = 0;
+            this.txtCodEjercicio.Tag = "10100";
             // 
             // panel1
             // 
@@ -269,8 +271,8 @@
             this.txtDescriEjercicio.Location = new System.Drawing.Point(150, 32);
             this.txtDescriEjercicio.Name = "txtDescriEjercicio";
             this.txtDescriEjercicio.Size = new System.Drawing.Size(486, 19);
-            this.txtDescriEjercicio.TabIndex = 113;
-            this.txtDescriEjercicio.Tag = "11000";
+            this.txtDescriEjercicio.TabIndex = 1;
+            this.txtDescriEjercicio.Tag = "11010";
             // 
             // cbTipoAsiento
             // 
@@ -283,6 +285,7 @@
             this.cbTipoAsiento.Name = "cbTipoAsiento";
             this.cbTipoAsiento.Size = new System.Drawing.Size(134, 25);
             this.cbTipoAsiento.TabIndex = 115;
+            this.cbTipoAsiento.TabStop = false;
             this.cbTipoAsiento.SelectedIndexChanged += new System.EventHandler(this.cbTipoAsiento_SelectedIndexChanged);
             // 
             // panel2
@@ -302,8 +305,8 @@
             this.txtComentario.Location = new System.Drawing.Point(94, 181);
             this.txtComentario.Name = "txtComentario";
             this.txtComentario.Size = new System.Drawing.Size(542, 19);
-            this.txtComentario.TabIndex = 116;
-            this.txtComentario.Tag = "11000";
+            this.txtComentario.TabIndex = 3;
+            this.txtComentario.Tag = "01010";
             // 
             // panel4
             // 
@@ -322,8 +325,8 @@
             this.txtNroAsiento.Location = new System.Drawing.Point(88, 114);
             this.txtNroAsiento.Name = "txtNroAsiento";
             this.txtNroAsiento.Size = new System.Drawing.Size(140, 19);
-            this.txtNroAsiento.TabIndex = 118;
-            this.txtNroAsiento.Tag = "11000";
+            this.txtNroAsiento.TabIndex = 2;
+            this.txtNroAsiento.Tag = "10100";
             // 
             // btnConfirmar
             // 
@@ -341,7 +344,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(665, 34);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(124, 41);
-            this.btnConfirmar.TabIndex = 122;
+            this.btnConfirmar.TabIndex = 4;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -371,7 +374,7 @@
             this.btnGenerar.Location = new System.Drawing.Point(665, 213);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(124, 41);
-            this.btnGenerar.TabIndex = 125;
+            this.btnGenerar.TabIndex = 5;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.TextColor = System.Drawing.Color.White;
             this.btnGenerar.UseVisualStyleBackColor = false;
@@ -393,7 +396,7 @@
             this.btnPlandeCta.Location = new System.Drawing.Point(665, 316);
             this.btnPlandeCta.Name = "btnPlandeCta";
             this.btnPlandeCta.Size = new System.Drawing.Size(124, 41);
-            this.btnPlandeCta.TabIndex = 126;
+            this.btnPlandeCta.TabIndex = 7;
             this.btnPlandeCta.Text = "Plan de Cta";
             this.btnPlandeCta.TextColor = System.Drawing.Color.White;
             this.btnPlandeCta.UseVisualStyleBackColor = false;
@@ -415,7 +418,7 @@
             this.btnModelo.Location = new System.Drawing.Point(665, 265);
             this.btnModelo.Name = "btnModelo";
             this.btnModelo.Size = new System.Drawing.Size(124, 41);
-            this.btnModelo.TabIndex = 127;
+            this.btnModelo.TabIndex = 6;
             this.btnModelo.Text = "Modelo";
             this.btnModelo.TextColor = System.Drawing.Color.White;
             this.btnModelo.UseVisualStyleBackColor = false;
@@ -437,7 +440,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(664, 439);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(124, 41);
-            this.btnImprimir.TabIndex = 128;
+            this.btnImprimir.TabIndex = 8;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;

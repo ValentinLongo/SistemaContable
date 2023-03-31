@@ -21,6 +21,10 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizaci
         public frmDefiniciondeInformes()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             CargarDGV("");
             cbBusqueda.SelectedIndex = 0;
         }
@@ -87,20 +91,21 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizaci
             CargarDGV("");
         }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void panel7_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             frmReporte reporte = new frmReporte("ModBalance", Query, "", "Informe de Modelos de Balance", "General", DateTime.Now.ToString("d"));
             reporte.ShowDialog();
         }
+
+        //BARRA DE CONTROL
+        private void panel7_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
     }
 }

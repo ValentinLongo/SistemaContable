@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.maskPeriodo = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
@@ -47,7 +46,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(41, 38);
+            this.label1.Location = new System.Drawing.Point(46, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 17);
             this.label1.TabIndex = 0;
@@ -58,10 +57,10 @@
             this.maskPeriodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.maskPeriodo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskPeriodo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.maskPeriodo.Location = new System.Drawing.Point(94, 41);
+            this.maskPeriodo.Location = new System.Drawing.Point(99, 41);
             this.maskPeriodo.Name = "maskPeriodo";
             this.maskPeriodo.Size = new System.Drawing.Size(182, 13);
-            this.maskPeriodo.TabIndex = 1;
+            this.maskPeriodo.TabIndex = 0;
             this.maskPeriodo.Tag = "10000";
             // 
             // label2
@@ -74,16 +73,6 @@
             this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Coeficiente:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(126, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "SOLO NUMERICO (MATI)";
             // 
             // panel7
             // 
@@ -170,6 +159,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -189,8 +179,8 @@
             this.tbCoeficiente.Location = new System.Drawing.Point(105, 68);
             this.tbCoeficiente.Name = "tbCoeficiente";
             this.tbCoeficiente.Size = new System.Drawing.Size(182, 13);
-            this.tbCoeficiente.TabIndex = 97;
-            this.tbCoeficiente.Tag = "00000";
+            this.tbCoeficiente.TabIndex = 1;
+            this.tbCoeficiente.Tag = "10100";
             // 
             // btnConfirmar
             // 
@@ -208,7 +198,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(99, 118);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(130, 34);
-            this.btnConfirmar.TabIndex = 99;
+            this.btnConfirmar.TabIndex = 2;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -224,7 +214,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tbCoeficiente);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.maskPeriodo);
             this.Controls.Add(this.label1);
@@ -244,7 +233,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox maskPeriodo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lblControlBar;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;

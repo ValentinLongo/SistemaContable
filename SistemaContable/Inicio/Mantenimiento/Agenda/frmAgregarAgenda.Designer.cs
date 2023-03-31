@@ -75,7 +75,7 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCodigo.Location = new System.Drawing.Point(106, 41);
+            this.lblCodigo.Location = new System.Drawing.Point(106, 42);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(50, 17);
             this.lblCodigo.TabIndex = 0;
@@ -86,7 +86,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNombre.Location = new System.Drawing.Point(101, 79);
+            this.lblNombre.Location = new System.Drawing.Point(101, 80);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(55, 17);
             this.lblNombre.TabIndex = 1;
@@ -97,7 +97,7 @@
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDireccion.Location = new System.Drawing.Point(95, 120);
+            this.lblDireccion.Location = new System.Drawing.Point(95, 121);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(63, 17);
             this.lblDireccion.TabIndex = 2;
@@ -119,7 +119,7 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTelefono.Location = new System.Drawing.Point(95, 196);
+            this.lblTelefono.Location = new System.Drawing.Point(95, 197);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(59, 17);
             this.lblTelefono.TabIndex = 4;
@@ -130,7 +130,7 @@
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCelular.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCelular.Location = new System.Drawing.Point(104, 237);
+            this.lblCelular.Location = new System.Drawing.Point(104, 238);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(50, 17);
             this.lblCelular.TabIndex = 5;
@@ -152,7 +152,7 @@
             this.lblWeb.AutoSize = true;
             this.lblWeb.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblWeb.Location = new System.Drawing.Point(117, 315);
+            this.lblWeb.Location = new System.Drawing.Point(117, 316);
             this.lblWeb.Name = "lblWeb";
             this.lblWeb.Size = new System.Drawing.Size(36, 17);
             this.lblWeb.TabIndex = 7;
@@ -163,7 +163,7 @@
             this.lblObservaciones.AutoSize = true;
             this.lblObservaciones.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObservaciones.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblObservaciones.Location = new System.Drawing.Point(62, 353);
+            this.lblObservaciones.Location = new System.Drawing.Point(62, 355);
             this.lblObservaciones.Name = "lblObservaciones";
             this.lblObservaciones.Size = new System.Drawing.Size(92, 17);
             this.lblObservaciones.TabIndex = 8;
@@ -174,30 +174,36 @@
             this.tbLocalidad3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.tbLocalidad3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLocalidad3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLocalidad3.ForeColor = System.Drawing.Color.White;
             this.tbLocalidad3.Location = new System.Drawing.Point(239, 165);
             this.tbLocalidad3.Name = "tbLocalidad3";
             this.tbLocalidad3.Size = new System.Drawing.Size(160, 15);
-            this.tbLocalidad3.TabIndex = 14;
+            this.tbLocalidad3.TabIndex = 5;
+            this.tbLocalidad3.Tag = "11010";
             // 
             // tbLocalidad1
             // 
             this.tbLocalidad1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.tbLocalidad1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLocalidad1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLocalidad1.ForeColor = System.Drawing.Color.White;
             this.tbLocalidad1.Location = new System.Drawing.Point(162, 165);
             this.tbLocalidad1.Name = "tbLocalidad1";
             this.tbLocalidad1.Size = new System.Drawing.Size(41, 15);
-            this.tbLocalidad1.TabIndex = 18;
+            this.tbLocalidad1.TabIndex = 3;
+            this.tbLocalidad1.Tag = "10100";
             // 
             // tbLocalidad2
             // 
             this.tbLocalidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.tbLocalidad2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLocalidad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLocalidad2.ForeColor = System.Drawing.Color.White;
             this.tbLocalidad2.Location = new System.Drawing.Point(209, 165);
             this.tbLocalidad2.Name = "tbLocalidad2";
             this.tbLocalidad2.Size = new System.Drawing.Size(24, 15);
-            this.tbLocalidad2.TabIndex = 19;
+            this.tbLocalidad2.TabIndex = 4;
+            this.tbLocalidad2.Tag = "10100";
             // 
             // btnBusLoc
             // 
@@ -208,7 +214,7 @@
             this.btnBusLoc.Location = new System.Drawing.Point(405, 156);
             this.btnBusLoc.Name = "btnBusLoc";
             this.btnBusLoc.Size = new System.Drawing.Size(32, 31);
-            this.btnBusLoc.TabIndex = 20;
+            this.btnBusLoc.TabIndex = 6;
             this.btnBusLoc.UseVisualStyleBackColor = false;
             this.btnBusLoc.Click += new System.EventHandler(this.btnBusLoc_Click);
             // 
@@ -218,6 +224,7 @@
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(235, 20);
             this.dtFechaNacimiento.TabIndex = 24;
+            this.dtFechaNacimiento.TabStop = false;
             // 
             // lblAct
             // 
@@ -254,10 +261,10 @@
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmar.Location = new System.Drawing.Point(162, 497);
+            this.btnConfirmar.Location = new System.Drawing.Point(161, 497);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(153, 44);
-            this.btnConfirmar.TabIndex = 27;
+            this.btnConfirmar.TabIndex = 12;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -287,12 +294,12 @@
             this.tbObserv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbObserv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbObserv.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbObserv.Location = new System.Drawing.Point(162, 350);
+            this.tbObserv.Location = new System.Drawing.Point(162, 357);
             this.tbObserv.Multiline = true;
             this.tbObserv.Name = "tbObserv";
-            this.tbObserv.Size = new System.Drawing.Size(237, 20);
-            this.tbObserv.TabIndex = 57;
-            this.tbObserv.Tag = "00000";
+            this.tbObserv.Size = new System.Drawing.Size(237, 15);
+            this.tbObserv.TabIndex = 11;
+            this.tbObserv.Tag = "01000";
             // 
             // cbActividad
             // 
@@ -305,6 +312,7 @@
             this.cbActividad.Name = "cbActividad";
             this.cbActividad.Size = new System.Drawing.Size(236, 25);
             this.cbActividad.TabIndex = 116;
+            this.cbActividad.TabStop = false;
             // 
             // panel7
             // 
@@ -391,6 +399,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // tbWeb
             // 
@@ -398,11 +407,11 @@
             this.tbWeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbWeb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbWeb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbWeb.Location = new System.Drawing.Point(162, 312);
+            this.tbWeb.Location = new System.Drawing.Point(162, 319);
             this.tbWeb.Multiline = true;
             this.tbWeb.Name = "tbWeb";
-            this.tbWeb.Size = new System.Drawing.Size(237, 20);
-            this.tbWeb.TabIndex = 119;
+            this.tbWeb.Size = new System.Drawing.Size(237, 15);
+            this.tbWeb.TabIndex = 10;
             this.tbWeb.Tag = "00000";
             // 
             // panel3
@@ -420,11 +429,11 @@
             this.tbMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbMail.Location = new System.Drawing.Point(162, 272);
+            this.tbMail.Location = new System.Drawing.Point(162, 279);
             this.tbMail.Multiline = true;
             this.tbMail.Name = "tbMail";
-            this.tbMail.Size = new System.Drawing.Size(237, 20);
-            this.tbMail.TabIndex = 121;
+            this.tbMail.Size = new System.Drawing.Size(237, 15);
+            this.tbMail.TabIndex = 9;
             this.tbMail.Tag = "00000";
             // 
             // panel4
@@ -442,12 +451,12 @@
             this.tbTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbTel.Location = new System.Drawing.Point(162, 193);
+            this.tbTel.Location = new System.Drawing.Point(162, 200);
             this.tbTel.Multiline = true;
             this.tbTel.Name = "tbTel";
-            this.tbTel.Size = new System.Drawing.Size(237, 20);
-            this.tbTel.TabIndex = 123;
-            this.tbTel.Tag = "00000";
+            this.tbTel.Size = new System.Drawing.Size(237, 15);
+            this.tbTel.TabIndex = 7;
+            this.tbTel.Tag = "10100";
             // 
             // panel5
             // 
@@ -464,12 +473,12 @@
             this.tbCel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbCel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCel.Location = new System.Drawing.Point(162, 234);
+            this.tbCel.Location = new System.Drawing.Point(162, 241);
             this.tbCel.Multiline = true;
             this.tbCel.Name = "tbCel";
-            this.tbCel.Size = new System.Drawing.Size(237, 20);
-            this.tbCel.TabIndex = 125;
-            this.tbCel.Tag = "00000";
+            this.tbCel.Size = new System.Drawing.Size(237, 15);
+            this.tbCel.TabIndex = 8;
+            this.tbCel.Tag = "00100";
             // 
             // panel6
             // 
@@ -486,12 +495,12 @@
             this.tbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbNombre.Location = new System.Drawing.Point(162, 76);
+            this.tbNombre.Location = new System.Drawing.Point(162, 83);
             this.tbNombre.Multiline = true;
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(237, 20);
-            this.tbNombre.TabIndex = 127;
-            this.tbNombre.Tag = "00000";
+            this.tbNombre.Size = new System.Drawing.Size(237, 15);
+            this.tbNombre.TabIndex = 1;
+            this.tbNombre.Tag = "11010";
             // 
             // panel8
             // 
@@ -508,12 +517,12 @@
             this.tbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDireccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDireccion.Location = new System.Drawing.Point(162, 117);
+            this.tbDireccion.Location = new System.Drawing.Point(162, 124);
             this.tbDireccion.Multiline = true;
             this.tbDireccion.Name = "tbDireccion";
-            this.tbDireccion.Size = new System.Drawing.Size(237, 20);
-            this.tbDireccion.TabIndex = 129;
-            this.tbDireccion.Tag = "00000";
+            this.tbDireccion.Size = new System.Drawing.Size(237, 15);
+            this.tbDireccion.TabIndex = 2;
+            this.tbDireccion.Tag = "01000";
             // 
             // panel9
             // 
@@ -530,12 +539,12 @@
             this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCodigo.Location = new System.Drawing.Point(162, 38);
+            this.tbCodigo.Location = new System.Drawing.Point(162, 45);
             this.tbCodigo.Multiline = true;
             this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.Size = new System.Drawing.Size(237, 20);
-            this.tbCodigo.TabIndex = 131;
-            this.tbCodigo.Tag = "00000";
+            this.tbCodigo.Size = new System.Drawing.Size(237, 15);
+            this.tbCodigo.TabIndex = 0;
+            this.tbCodigo.Tag = "10100";
             // 
             // panel10
             // 

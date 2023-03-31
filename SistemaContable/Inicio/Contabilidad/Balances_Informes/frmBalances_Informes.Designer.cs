@@ -144,6 +144,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -162,7 +163,7 @@
             this.txtDescriEjercicio.Location = new System.Drawing.Point(159, 40);
             this.txtDescriEjercicio.Name = "txtDescriEjercicio";
             this.txtDescriEjercicio.Size = new System.Drawing.Size(222, 19);
-            this.txtDescriEjercicio.TabIndex = 118;
+            this.txtDescriEjercicio.TabIndex = 1;
             this.txtDescriEjercicio.Tag = "11000";
             // 
             // panel3
@@ -182,8 +183,8 @@
             this.txtCodEjercicio.Location = new System.Drawing.Point(77, 39);
             this.txtCodEjercicio.Name = "txtCodEjercicio";
             this.txtCodEjercicio.Size = new System.Drawing.Size(70, 19);
-            this.txtCodEjercicio.TabIndex = 116;
-            this.txtCodEjercicio.Tag = "11000";
+            this.txtCodEjercicio.TabIndex = 0;
+            this.txtCodEjercicio.Tag = "10100";
             this.txtCodEjercicio.TextChanged += new System.EventHandler(this.txtCodEjercicio_TextChanged);
             // 
             // label3
@@ -235,7 +236,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(434, 96);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(111, 31);
-            this.btnConfirmar.TabIndex = 123;
+            this.btnConfirmar.TabIndex = 8;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -258,7 +259,8 @@
             this.maskDesde.Location = new System.Drawing.Point(77, 78);
             this.maskDesde.Name = "maskDesde";
             this.maskDesde.Size = new System.Drawing.Size(63, 15);
-            this.maskDesde.TabIndex = 125;
+            this.maskDesde.TabIndex = 3;
+            this.maskDesde.Tag = "10000";
             // 
             // maskHasta
             // 
@@ -269,7 +271,8 @@
             this.maskHasta.Location = new System.Drawing.Point(76, 111);
             this.maskHasta.Name = "maskHasta";
             this.maskHasta.Size = new System.Drawing.Size(63, 15);
-            this.maskHasta.TabIndex = 126;
+            this.maskHasta.TabIndex = 4;
+            this.maskHasta.Tag = "10000";
             // 
             // lbl1
             // 
@@ -343,6 +346,7 @@
             this.Check2.Size = new System.Drawing.Size(17, 17);
             this.Check2.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.Check2.TabIndex = 130;
+            this.Check2.TabStop = false;
             this.Check2.ThreeState = false;
             this.Check2.ToolTipText = null;
             // 
@@ -396,6 +400,7 @@
             this.Check1.Size = new System.Drawing.Size(17, 17);
             this.Check1.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.Check1.TabIndex = 127;
+            this.Check1.TabStop = false;
             this.Check1.ThreeState = false;
             this.Check1.ToolTipText = null;
             // 
@@ -408,7 +413,7 @@
             this.btnEjercicio.Location = new System.Drawing.Point(387, 39);
             this.btnEjercicio.Name = "btnEjercicio";
             this.btnEjercicio.Size = new System.Drawing.Size(31, 21);
-            this.btnEjercicio.TabIndex = 122;
+            this.btnEjercicio.TabIndex = 2;
             this.btnEjercicio.UseVisualStyleBackColor = false;
             this.btnEjercicio.Click += new System.EventHandler(this.btnEjercicio_Click);
             // 
@@ -433,7 +438,7 @@
             this.btnModelo.Location = new System.Drawing.Point(382, 135);
             this.btnModelo.Name = "btnModelo";
             this.btnModelo.Size = new System.Drawing.Size(31, 21);
-            this.btnModelo.TabIndex = 138;
+            this.btnModelo.TabIndex = 7;
             this.btnModelo.UseVisualStyleBackColor = false;
             this.btnModelo.Visible = false;
             this.btnModelo.Click += new System.EventHandler(this.btnModelo_Click);
@@ -456,8 +461,8 @@
             this.txtDescriModelo.Location = new System.Drawing.Point(154, 137);
             this.txtDescriModelo.Name = "txtDescriModelo";
             this.txtDescriModelo.Size = new System.Drawing.Size(222, 19);
-            this.txtDescriModelo.TabIndex = 136;
-            this.txtDescriModelo.Tag = "11000";
+            this.txtDescriModelo.TabIndex = 6;
+            this.txtDescriModelo.Tag = "10000";
             this.txtDescriModelo.Visible = false;
             // 
             // pModelo1
@@ -478,8 +483,8 @@
             this.txtCodModelo.Location = new System.Drawing.Point(72, 136);
             this.txtCodModelo.Name = "txtCodModelo";
             this.txtCodModelo.Size = new System.Drawing.Size(70, 19);
-            this.txtCodModelo.TabIndex = 134;
-            this.txtCodModelo.Tag = "11000";
+            this.txtCodModelo.TabIndex = 5;
+            this.txtCodModelo.Tag = "10000";
             this.txtCodModelo.Visible = false;
             // 
             // Check3
@@ -532,6 +537,7 @@
             this.Check3.Size = new System.Drawing.Size(17, 17);
             this.Check3.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.Check3.TabIndex = 139;
+            this.Check3.TabStop = false;
             this.Check3.ThreeState = false;
             this.Check3.ToolTipText = null;
             this.Check3.Visible = false;

@@ -126,6 +126,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // btnConfirmar
             // 
@@ -141,7 +142,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(132, 119);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(153, 33);
-            this.btnConfirmar.TabIndex = 79;
+            this.btnConfirmar.TabIndex = 1;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -165,8 +166,8 @@
             this.txtDescripcion.Location = new System.Drawing.Point(110, 79);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(229, 19);
-            this.txtDescripcion.TabIndex = 78;
-            this.txtDescripcion.Tag = "11000";
+            this.txtDescripcion.TabIndex = 0;
+            this.txtDescripcion.Tag = "11010";
             // 
             // txtmsg
             // 

@@ -30,6 +30,9 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         {
             InitializeComponent();
 
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             CargarDGV1("");
             cbBusqueda.SelectedIndex = 0;
         }
@@ -50,7 +53,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             {
                 asiento = dgvDetDeMod1.Rows[seleccion].Cells[0].Value.ToString();
                 DataSet ds = new DataSet();
-                ds = AccesoBase.ListarDatos($"SELECT det_cuenta as Cuenta,pcu_descri as Descripción,det_importe as Debe,det_importe as Haber,det_comenta as Concepto,det_codigo FROM ModeloEncab " +
+                ds = AccesoBase.ListarDatos($"SELECT det_cuenta as Cuenta, pcu_descri as Descripción, det_importe as Debe, det_importe as Haber, det_comenta as Concepto, det_codigo, det_fecha FROM ModeloEncab " +
                     $"LEFT JOIN ModeloDet on ModeloEncab.mod_codigo = ModeloDet.det_asiento " +
                     $"LEFT JOIN PCuenta on Modelodet.det_cuenta = PCuenta.pcu_cuenta WHERE det_asiento = '{asiento}'");
 
@@ -58,30 +61,27 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 {
                     string debe = "0,0000";
                     string haber = "0,0000";
-                    string cuenta = dr[0].ToString();
-                    string descripcion = dr[1].ToString();
-                    string concepto = dr[4].ToString();
+                    string cuenta = dr["Cuenta"].ToString();
+                    string descripcion = dr["Descripción"].ToString();
+                    string concepto = dr["Concepto"].ToString();
 
-                    string centrodecosto = "NINGUNO";
+                    string centrodecosto = "";
+
                     DataSet ds2 = new DataSet();
                     ds2 = AccesoBase.ListarDatos($"SELECT * FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{cuenta}'");
                     foreach (DataRow dr2 in ds2.Tables[0].Rows)
                     {
-                        centrodecosto = dr2["cec_Descri"].ToString();
+                        centrodecosto = dr2["cec_descri"].ToString();
                     }
 
-                    if (Convert.ToInt32(dr[5]) == 0)
+                    if (Convert.ToInt32(dr["det_codigo"]) == 1)
                     {
-                        dgvDetDeMod2.Rows.Add(cuenta, descripcion, debe, haber, concepto, centrodecosto, "0", asiento);
-                    }
-                    else if (Convert.ToInt32(dr[5]) == 1)
-                    {
-                        debe = dr[2].ToString();
+                        debe = dr["Debe"].ToString();
                         dgvDetDeMod2.Rows.Add(cuenta, descripcion, debe, haber, concepto, centrodecosto,"1", asiento);
                     }
-                    else if (Convert.ToInt32(dr[5]) == 2)
+                    else if (Convert.ToInt32(dr["det_codigo"]) == 2)
                     {
-                        haber = dr[3].ToString();
+                        haber = dr["Haber"].ToString();
                         dgvDetDeMod2.Rows.Add(cuenta, descripcion, debe, haber, concepto, centrodecosto,"2", asiento);
                     }
                 }
@@ -134,12 +134,15 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         {
             int seleccionado = dgvDetDeMod2.CurrentCell.RowIndex;
             if (seleccionado != -1)
-            {
-                string cuenta = dgvDetDeMod2.Rows[seleccionado].Cells[0].Value.ToString();
-                string codigo = dgvDetDeMod2.Rows[seleccionado].Cells[6].Value.ToString();
-                string asiento = dgvDetDeMod2.Rows[seleccionado].Cells[7].Value.ToString();
+            {   
+                //agg messagebox
 
-                AccesoBase.InsertUpdateDatos($"DELETE FROM ModeloDet WHERE det_asiento = '{asiento}' AND det_cuenta = '{cuenta}' AND det_codigo = '{codigo}'");
+                //string asiento = dgvDetDeMod2.Rows[seleccionado].Cells[8].Value.ToString();
+                //string cuenta = dgvDetDeMod2.Rows[seleccionado].Cells[8].Value.ToString();
+                //string importe = dgvDetDeMod2.Rows[seleccionado].Cells[8].Value.ToString();
+                //string codigo = dgvDetDeMod2.Rows[seleccionado].Cells[8].Value.ToString();
+                                   
+                //AccesoBase.InsertUpdateDatos($"DELETE FROM ModeloDet WHERE det_fecha = '{fechahora}'");
                 dgvDetDeMod2.Rows.Clear();
                 CargarDGV2();
             }

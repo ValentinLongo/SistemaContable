@@ -22,6 +22,10 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
         public frmBalances_Informes(int proceso)
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             Seteo(proceso);
             Proceso = proceso;
         }

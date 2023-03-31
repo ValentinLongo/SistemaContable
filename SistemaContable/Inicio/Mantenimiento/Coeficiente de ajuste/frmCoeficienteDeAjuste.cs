@@ -29,6 +29,10 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
         public frmCoeficienteDeAjuste()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             check = 0;
             CargarDGV();
         }

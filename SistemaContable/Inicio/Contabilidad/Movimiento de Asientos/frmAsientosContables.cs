@@ -20,12 +20,16 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         public frmAsientosContables()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             Inicializar();
         }
 
         private void Inicializar()
         {
-            maskFecha.Mask = "##-##-####";
+            maskFecha.Mask = "00-00-0000";
 
             List<DataRow> lista = new List<DataRow>();
 

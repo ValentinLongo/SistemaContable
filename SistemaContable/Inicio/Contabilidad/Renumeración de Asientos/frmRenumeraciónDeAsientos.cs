@@ -1,4 +1,5 @@
-﻿using SistemaContable.General;
+﻿using Datos;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,9 @@ namespace SistemaContable.Inicio.Contabilidad.Renumeración_de_Asientos
         public frmRenumeraciónDeAsientos()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
         private void btnEjercicio_Click(object sender, EventArgs e)
@@ -25,6 +29,24 @@ namespace SistemaContable.Inicio.Contabilidad.Renumeración_de_Asientos
             frm.ShowDialog();
             txtNroEjercicio.Text = frmConsultaGeneral.codigoCG;
             txtDescriEjercicio.Text = frmConsultaGeneral.descripcionCG;
+        }
+
+        private void txtNroEjercicio_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNroEjercicio.Text != "")
+            {
+                DataSet ds = new DataSet();
+
+                ds = AccesoBase.ListarDatos($"SELECT eje_descri FROM Ejercicio WHERE eje_codigo = {txtNroEjercicio.Text}");
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    txtDescriEjercicio.Text = dr["eje_descri"].ToString();
+                }
+            }
+            else
+            {
+                txtDescriEjercicio.Text = "";
+            }
         }
 
         //BARRA DE CONTROL
