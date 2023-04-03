@@ -186,6 +186,7 @@
             this.txtCodEjercicio.TabIndex = 0;
             this.txtCodEjercicio.Tag = "10100";
             this.txtCodEjercicio.TextChanged += new System.EventHandler(this.txtCodEjercicio_TextChanged);
+            this.txtCodEjercicio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodEjercicio_KeyPress);
             // 
             // label3
             // 
@@ -349,6 +350,7 @@
             this.Check2.TabStop = false;
             this.Check2.ThreeState = false;
             this.Check2.ToolTipText = null;
+            this.Check2.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.Check2_CheckedChanged);
             // 
             // Check1
             // 
@@ -403,6 +405,7 @@
             this.Check1.TabStop = false;
             this.Check1.ThreeState = false;
             this.Check1.ToolTipText = null;
+            this.Check1.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.Check1_CheckedChanged);
             // 
             // btnEjercicio
             // 

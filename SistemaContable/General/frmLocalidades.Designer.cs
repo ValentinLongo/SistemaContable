@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.btnSeleccionar = new RJCodeAdvance.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -59,18 +58,6 @@
             this.label13.TabIndex = 110;
             this.label13.Text = "Inicio";
             // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBusqueda.Location = new System.Drawing.Point(96, 424);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(489, 19);
-            this.txtBusqueda.TabIndex = 106;
-            this.txtBusqueda.Tag = "00000";
-            // 
             // bunifuShapes1
             // 
             this.bunifuShapes1.Angle = 0F;
@@ -85,6 +72,7 @@
             this.bunifuShapes1.Sides = 5;
             this.bunifuShapes1.Size = new System.Drawing.Size(671, 55);
             this.bunifuShapes1.TabIndex = 107;
+            this.bunifuShapes1.TabStop = false;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // btnSeleccionar
@@ -101,7 +89,7 @@
             this.btnSeleccionar.Location = new System.Drawing.Point(689, 32);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(142, 44);
-            this.btnSeleccionar.TabIndex = 105;
+            this.btnSeleccionar.TabIndex = 1;
             this.btnSeleccionar.Tag = "";
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -192,6 +180,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // CheckInicio
             // 
@@ -243,6 +232,7 @@
             this.CheckInicio.Size = new System.Drawing.Size(17, 17);
             this.CheckInicio.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.CheckInicio.TabIndex = 109;
+            this.CheckInicio.TabStop = false;
             this.CheckInicio.ThreeState = false;
             this.CheckInicio.ToolTipText = null;
             // 
@@ -252,11 +242,11 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(96, 425);
+            this.textBox1.Location = new System.Drawing.Point(98, 426);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(489, 19);
-            this.textBox1.TabIndex = 106;
-            this.textBox1.Tag = "00000";
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Tag = "00100";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel1
@@ -338,7 +328,6 @@
             this.Controls.Add(this.CheckInicio);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.bunifuShapes1);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.panel7);
@@ -357,7 +346,6 @@
         #endregion
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
-        private System.Windows.Forms.TextBox txtBusqueda;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private RJCodeAdvance.RJControls.RJButton btnSeleccionar;
         private System.Windows.Forms.Panel panel7;

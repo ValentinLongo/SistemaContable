@@ -17,6 +17,10 @@ namespace SistemaContable.General
         public frmEstandar(int proceso, string mensaje)
         {
             InitializeComponent();
+
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             if (proceso == 1)
             {
                 Mensaje.Text = mensaje;

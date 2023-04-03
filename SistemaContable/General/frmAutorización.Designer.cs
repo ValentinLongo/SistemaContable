@@ -43,7 +43,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pbOcultar = new System.Windows.Forms.PictureBox();
+            this.pbVisibilidad = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 21);
+            this.panel1.Size = new System.Drawing.Size(311, 21);
             this.panel1.TabIndex = 13;
             this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -99,7 +103,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(259, 0);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(287, 0);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = false;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -131,6 +135,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label1
             // 
@@ -162,12 +167,13 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(12, 28);
+            this.bunifuShapes1.Location = new System.Drawing.Point(13, 28);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(259, 140);
+            this.bunifuShapes1.Size = new System.Drawing.Size(287, 140);
             this.bunifuShapes1.TabIndex = 16;
+            this.bunifuShapes1.TabStop = false;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // btnAcceder
@@ -183,8 +189,8 @@
             this.btnAcceder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAcceder.Location = new System.Drawing.Point(32, 129);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(222, 26);
-            this.btnAcceder.TabIndex = 17;
+            this.btnAcceder.Size = new System.Drawing.Size(251, 26);
+            this.btnAcceder.TabIndex = 2;
             this.btnAcceder.Tag = "";
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -201,8 +207,8 @@
             this.txtUsuario.Location = new System.Drawing.Point(123, 45);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(131, 19);
-            this.txtUsuario.TabIndex = 18;
-            this.txtUsuario.Tag = "00000";
+            this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.Tag = "10000";
             this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
             // 
             // txtContraseña
@@ -213,17 +219,18 @@
             this.txtContraseña.ForeColor = System.Drawing.SystemColors.Window;
             this.txtContraseña.Location = new System.Drawing.Point(123, 75);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(131, 19);
-            this.txtContraseña.TabIndex = 19;
-            this.txtContraseña.Tag = "00000";
+            this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.Tag = "10000";
             this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel7.Location = new System.Drawing.Point(32, 113);
+            this.panel7.Location = new System.Drawing.Point(32, 112);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(222, 1);
+            this.panel7.Size = new System.Drawing.Size(251, 1);
             this.panel7.TabIndex = 36;
             // 
             // panel3
@@ -247,12 +254,37 @@
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.Tick);
             // 
+            // pbOcultar
+            // 
+            this.pbOcultar.Image = global::SistemaContable.Properties.Resources.ocultar;
+            this.pbOcultar.Location = new System.Drawing.Point(263, 69);
+            this.pbOcultar.Name = "pbOcultar";
+            this.pbOcultar.Size = new System.Drawing.Size(27, 30);
+            this.pbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbOcultar.TabIndex = 39;
+            this.pbOcultar.TabStop = false;
+            this.pbOcultar.Visible = false;
+            this.pbOcultar.Click += new System.EventHandler(this.pbOcultar_Click);
+            // 
+            // pbVisibilidad
+            // 
+            this.pbVisibilidad.Image = global::SistemaContable.Properties.Resources.visible;
+            this.pbVisibilidad.Location = new System.Drawing.Point(263, 69);
+            this.pbVisibilidad.Name = "pbVisibilidad";
+            this.pbVisibilidad.Size = new System.Drawing.Size(27, 30);
+            this.pbVisibilidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbVisibilidad.TabIndex = 40;
+            this.pbVisibilidad.TabStop = false;
+            this.pbVisibilidad.Click += new System.EventHandler(this.pbVisibilidad_Click);
+            // 
             // frmAutorización
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(283, 176);
+            this.ClientSize = new System.Drawing.Size(311, 176);
+            this.Controls.Add(this.pbVisibilidad);
+            this.Controls.Add(this.pbOcultar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel7);
@@ -270,6 +302,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +324,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pbOcultar;
+        private System.Windows.Forms.PictureBox pbVisibilidad;
     }
 }

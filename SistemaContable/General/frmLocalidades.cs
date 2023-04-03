@@ -19,6 +19,10 @@ namespace SistemaContable.General
         public frmLocalidades()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             cargarDGV("");
         }
 

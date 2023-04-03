@@ -34,14 +34,14 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             DataSet ds = new DataSet();
             string query = $"SELECT bal_codigo AS Código, bal_descri AS Descripción FROM Balance {busqueda} ORDER BY bal_codigo";
             ds = AccesoBase.ListarDatos(query);
-            dgvDetalleDeInformes.DataSource = ds.Tables[0];
+            dgvDetalleDeInformes1.DataSource = ds.Tables[0];
         }
 
-        private void dgvDetalleDeInformes_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dgvDetalleDeInformes_SelectionChanged(object sender, EventArgs e)
         {
             btnImprimir.Enabled = true;
-            string codigo;
-            codigo = dgvDetalleDeInformes.Rows[dgvDetalleDeInformes.CurrentRow.Index].Cells[0].Value.ToString();
+            string codigo = "";
+            codigo = dgvDetalleDeInformes1.Rows[dgvDetalleDeInformes1.CurrentRow.Index].Cells[0].Value.ToString();
 
             if (codigo == string.Empty)
             {
@@ -50,7 +50,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             DataSet ds = new DataSet();
             Query = $"SELECT * FROM BalanceDet LEFT JOIN PCuenta ON pcu_cuenta = det_ctacont LEFT JOIN Balance on det_codigo = bal_codigo WHERE det_codigo = {codigo}";
             ds = AccesoBase.ListarDatos(Query);
-            dgvDetalledeInformesAux.Rows.Clear();
+            dgvDetalledeInformes2.Rows.Clear();
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 string cuenta = dr["det_ctacont"].ToString();
@@ -65,7 +65,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
                 {
 
                 }
-                dgvDetalledeInformesAux.Rows.Add(cuenta, descri, cc, orden);
+                dgvDetalledeInformes2.Rows.Add(cuenta, descri, cc, orden);
             }
         }
 
@@ -78,9 +78,70 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAggDetalledeInformes frmAggDetalledeInformes = new frmAggDetalledeInformes(0);
+            int orden = 0;
+            int seleccionado = 0;
+
+            try
+            {
+                seleccionado = dgvDetalledeInformes2.CurrentCell.RowIndex;
+                if (seleccionado != -1)
+                {
+                    orden = Convert.ToInt32(dgvDetalledeInformes2.Rows[seleccionado].Cells[3].Value);
+                    orden = orden + 10;
+                }
+            }
+            catch (Exception)
+            {
+                orden = 10;
+            }
+
+            int seleccionadoDGV1 = dgvDetalleDeInformes1.CurrentCell.RowIndex;
+            int codigo = Convert.ToInt32(dgvDetalleDeInformes1.Rows[seleccionadoDGV1].Cells[0].Value);
+
+            frmAggDetalledeInformes frmAggDetalledeInformes = new frmAggDetalledeInformes(0, orden, 0, codigo);
             frmAggDetalledeInformes.ShowDialog();
             Cargar("");
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            int cuenta = 0;
+            int orden = 0;
+
+            int seleccionado = dgvDetalledeInformes2.CurrentCell.RowIndex;
+            if (seleccionado != -1)
+            {
+                cuenta = Convert.ToInt32(dgvDetalledeInformes2.Rows[seleccionado].Cells[0].Value);
+                orden = Convert.ToInt32(dgvDetalledeInformes2.Rows[seleccionado].Cells[3].Value);
+            }
+
+            int seleccionadoDGV1 = dgvDetalleDeInformes1.CurrentCell.RowIndex;
+            int codigo = Convert.ToInt32(dgvDetalleDeInformes1.Rows[seleccionadoDGV1].Cells[0].Value);
+
+            frmAggDetalledeInformes frmAggDetalledeInformes = new frmAggDetalledeInformes(1, orden,cuenta, codigo);
+            frmAggDetalledeInformes.ShowDialog();
+            Cargar("");
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int seleccionadoDGV2 = dgvDetalledeInformes2.CurrentCell.RowIndex;
+            if (seleccionadoDGV2 != -1) 
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Seguro que Desea Eliminarlo?", true);
+                MessageBox.ShowDialog();
+                if (frmMessageBox.Acepto) 
+                {
+                    int seleccionadoDGV1 = dgvDetalleDeInformes1.CurrentCell.RowIndex;
+                    int codigo = Convert.ToInt32(dgvDetalleDeInformes1.Rows[seleccionadoDGV1].Cells[0].Value);
+
+                    int cuenta = Convert.ToInt32(dgvDetalledeInformes2.Rows[seleccionadoDGV2].Cells[0].Value);
+                    int orden = Convert.ToInt32(dgvDetalledeInformes2.Rows[seleccionadoDGV2].Cells[3].Value);
+
+                    AccesoBase.InsertUpdateDatos($"DELETE FROM BalanceDet WHERE det_codigo = {codigo} AND det_ctacont = {cuenta} AND det_orden = {orden}");
+                    Cargar("");
+                }
+            }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)

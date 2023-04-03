@@ -19,28 +19,59 @@ namespace SistemaContable.General
         public frmSesion()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text.ToUpper();
-            string contraseña = txtContraseña.Text.ToUpper();
-
-            DataSet ds = new DataSet();
-            int resultado = AccesoBase.ValidarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' AND usu_contraseña = '{contraseña}'");
-            if (resultado == 1)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-                Negocio.FLogin.NombreUsuario = usuario;
-                Negocio.FLogin.ContraUsuario = contraseña;
+                string usuario = txtUsuario.Text.ToUpper();
+                string contraseña = txtContraseña.Text.ToUpper();
 
-                autorizado = true;
-                this.Close();
+                DataSet ds = new DataSet();
+                int resultado = AccesoBase.ValidarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' AND usu_contraseña = '{contraseña}'");
+                if (resultado == 1)
+                {
+                    Negocio.FLogin.NombreUsuario = usuario;
+                    Negocio.FLogin.ContraUsuario = contraseña;
+
+                    autorizado = true;
+                    this.Close();
+                }
+                else
+                {
+                    autorizado = false;
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Usuario Incorrecto!", false);
+                    MessageBox.ShowDialog();
+                }
             }
             else
             {
-                autorizado = false;
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Usuario Incorrecto!", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
+            }
+        }
+
+        private void pbVisibilidad_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña.PasswordChar == Convert.ToChar("*"))
+            {
+                txtContraseña.PasswordChar = '\0';
+                pbVisibilidad.Visible = false;
+                pbOcultar.Visible = true;
+            }
+        }
+
+        private void pbOcultar_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña.PasswordChar != Convert.ToChar("*"))
+            {
+                txtContraseña.PasswordChar = Convert.ToChar("*");
+                pbVisibilidad.Visible = true;
+                pbOcultar.Visible = false;
             }
         }
 

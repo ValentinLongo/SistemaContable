@@ -66,16 +66,19 @@ namespace SistemaContable.Usuarios
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int seleccion = dgvCajas.CurrentCell.RowIndex;
-            int idCaja;
-            if (seleccion > -1)
+            frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "¿Desea Eliminar la Caja?", true);
+            MessageBox2.ShowDialog();
+            if (frmMessageBox.Acepto)
             {
-                idCaja = Convert.ToInt32(dgvCajas.Rows[seleccion].Cells[0].Value);
-                Datos.AccesoBase.InsertUpdateDatos($"delete from CajaxUsuario where cxu_usuario = {Negocio.FLogin.IdUsuario} and cxu_caja = {idCaja}");
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Caja eliminada correctamente", false);
-                MessageBox.ShowDialog();
-                dgvCajas.Rows.Clear();
-                CargarDGV();
+                int seleccion = dgvCajas.CurrentCell.RowIndex;
+                int idCaja;
+                if (seleccion > -1)
+                {
+                    idCaja = Convert.ToInt32(dgvCajas.Rows[seleccion].Cells[0].Value);
+                    Datos.AccesoBase.InsertUpdateDatos($"delete from CajaxUsuario where cxu_usuario = {Negocio.FLogin.IdUsuario} and cxu_caja = {idCaja}");
+                    dgvCajas.Rows.Clear();
+                    CargarDGV();
+                }
             }
         }
 

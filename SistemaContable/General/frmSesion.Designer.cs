@@ -41,7 +41,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
+            this.pbOcultar = new System.Windows.Forms.PictureBox();
+            this.pbVisibilidad = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,6 +133,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -162,9 +167,10 @@
             this.txtContraseña.ForeColor = System.Drawing.SystemColors.Window;
             this.txtContraseña.Location = new System.Drawing.Point(128, 94);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(159, 19);
-            this.txtContraseña.TabIndex = 43;
-            this.txtContraseña.Tag = "00000";
+            this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.Tag = "10000";
             // 
             // txtUsuario
             // 
@@ -175,8 +181,8 @@
             this.txtUsuario.Location = new System.Drawing.Point(128, 51);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(159, 19);
-            this.txtUsuario.TabIndex = 42;
-            this.txtUsuario.Tag = "00000";
+            this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.Tag = "10000";
             // 
             // btnAcceder
             // 
@@ -192,7 +198,7 @@
             this.btnAcceder.Location = new System.Drawing.Point(30, 152);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(282, 33);
-            this.btnAcceder.TabIndex = 41;
+            this.btnAcceder.TabIndex = 2;
             this.btnAcceder.Tag = "";
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -229,13 +235,37 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(7, 29);
+            this.bunifuShapes1.Location = new System.Drawing.Point(10, 28);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(328, 169);
+            this.bunifuShapes1.Size = new System.Drawing.Size(323, 169);
             this.bunifuShapes1.TabIndex = 47;
+            this.bunifuShapes1.TabStop = false;
             this.bunifuShapes1.Text = "bunifuShapes1";
+            // 
+            // pbOcultar
+            // 
+            this.pbOcultar.Image = global::SistemaContable.Properties.Resources.ocultar;
+            this.pbOcultar.Location = new System.Drawing.Point(296, 85);
+            this.pbOcultar.Name = "pbOcultar";
+            this.pbOcultar.Size = new System.Drawing.Size(27, 30);
+            this.pbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbOcultar.TabIndex = 48;
+            this.pbOcultar.TabStop = false;
+            this.pbOcultar.Visible = false;
+            this.pbOcultar.Click += new System.EventHandler(this.pbOcultar_Click);
+            // 
+            // pbVisibilidad
+            // 
+            this.pbVisibilidad.Image = global::SistemaContable.Properties.Resources.visible;
+            this.pbVisibilidad.Location = new System.Drawing.Point(296, 85);
+            this.pbVisibilidad.Name = "pbVisibilidad";
+            this.pbVisibilidad.Size = new System.Drawing.Size(27, 30);
+            this.pbVisibilidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbVisibilidad.TabIndex = 49;
+            this.pbVisibilidad.TabStop = false;
+            this.pbVisibilidad.Click += new System.EventHandler(this.pbVisibilidad_Click);
             // 
             // frmSesion
             // 
@@ -243,6 +273,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(341, 204);
+            this.Controls.Add(this.pbVisibilidad);
+            this.Controls.Add(this.pbOcultar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel7);
@@ -259,6 +291,8 @@
             this.Text = "frmSesion";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +312,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
+        private System.Windows.Forms.PictureBox pbOcultar;
+        private System.Windows.Forms.PictureBox pbVisibilidad;
     }
 }

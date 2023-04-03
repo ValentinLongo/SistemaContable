@@ -53,10 +53,13 @@ namespace SistemaContable.Agenda
         {
             try
             {
-                AccesoBase.InsertUpdateDatos($"DELETE FROM Agenda WHERE age_codigo = {IdModificar}");
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Eliminado Correctamente", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Desea Continuar?", true);
                 MessageBox.ShowDialog();
-                cargarDatos("");
+                if (frmMessageBox.Acepto)
+                {
+                    AccesoBase.InsertUpdateDatos($"DELETE FROM Agenda WHERE age_codigo = {IdModificar}");
+                    cargarDatos("");
+                }
             }
             catch
             {

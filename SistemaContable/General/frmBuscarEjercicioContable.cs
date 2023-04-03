@@ -22,6 +22,10 @@ namespace SistemaContable.General
         public frmBuscarEjercicioContable()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             CargarDatos("");
         }
 

@@ -132,6 +132,7 @@
             this.btnCerrar.ShowDesignBorders = false;
             this.btnCerrar.Size = new System.Drawing.Size(24, 21);
             this.btnCerrar.TabIndex = 29;
+            this.btnCerrar.TabStop = false;
             this.btnCerrar.CloseClicked += new System.EventHandler(this.btnCerrar_CloseClicked);
             // 
             // btnSeleccionar
@@ -148,7 +149,7 @@
             this.btnSeleccionar.Location = new System.Drawing.Point(585, 85);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(143, 43);
-            this.btnSeleccionar.TabIndex = 19;
+            this.btnSeleccionar.TabIndex = 1;
             this.btnSeleccionar.Tag = "";
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -169,6 +170,7 @@
             this.bunifuShapes1.Sides = 5;
             this.bunifuShapes1.Size = new System.Drawing.Size(576, 51);
             this.bunifuShapes1.TabIndex = 21;
+            this.bunifuShapes1.TabStop = false;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // cbBusqueda
@@ -185,6 +187,7 @@
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(116, 24);
             this.cbBusqueda.TabIndex = 34;
+            this.cbBusqueda.TabStop = false;
             this.cbBusqueda.SelectedIndexChanged += new System.EventHandler(this.cbBusqueda_SelectedIndexChanged);
             // 
             // txtBusqueda
@@ -196,8 +199,8 @@
             this.txtBusqueda.Location = new System.Drawing.Point(159, 46);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(325, 19);
-            this.txtBusqueda.TabIndex = 35;
-            this.txtBusqueda.Tag = "";
+            this.txtBusqueda.TabIndex = 0;
+            this.txtBusqueda.Tag = "01000";
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // panel3
@@ -270,6 +273,7 @@
             this.CheckInicio.Size = new System.Drawing.Size(17, 17);
             this.CheckInicio.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.CheckInicio.TabIndex = 63;
+            this.CheckInicio.TabStop = false;
             this.CheckInicio.ThreeState = false;
             this.CheckInicio.ToolTipText = null;
             this.CheckInicio.Visible = false;

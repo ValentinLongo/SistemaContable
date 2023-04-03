@@ -89,8 +89,6 @@ namespace SistemaContable.Inicio.Mantenimiento
             if (frmMessageBox.Acepto)
             {
                 Negocio.Funciones.Mantenimiento.FCentrodeCostos.Eliminar(dgvCentrodeCosto);
-                frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "Eliminado Correctamente!", false);
-                MessageBox2.ShowDialog();
                 CargarDGV("");
             }
         }

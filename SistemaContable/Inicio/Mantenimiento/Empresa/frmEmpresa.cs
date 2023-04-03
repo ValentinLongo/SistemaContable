@@ -76,10 +76,13 @@ namespace SistemaContable.Empresa
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Negocio.FEmpresa.eliminarSucursal(codigoSucursal);
-            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Eliminado Correctamente", false);
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Desea Continuar?", true);
             MessageBox.ShowDialog();
-            CargarDGV();
+            if (frmMessageBox.Acepto) 
+            {
+                Negocio.FEmpresa.eliminarSucursal(codigoSucursal);
+                CargarDGV();
+            }
         }
 
         //BARRA DE CONTROL

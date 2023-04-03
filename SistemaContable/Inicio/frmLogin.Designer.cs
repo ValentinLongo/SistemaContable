@@ -178,6 +178,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(24, 25);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // btnAcceder
             // 
@@ -436,6 +437,7 @@
             this.ShapeContra.Sides = 5;
             this.ShapeContra.Size = new System.Drawing.Size(303, 75);
             this.ShapeContra.TabIndex = 38;
+            this.ShapeContra.TabStop = false;
             // 
             // ShapeUsuario
             // 
@@ -451,6 +453,7 @@
             this.ShapeUsuario.Sides = 5;
             this.ShapeUsuario.Size = new System.Drawing.Size(303, 75);
             this.ShapeUsuario.TabIndex = 37;
+            this.ShapeUsuario.TabStop = false;
             // 
             // bunifuShapes2
             // 
@@ -466,6 +469,7 @@
             this.bunifuShapes2.Sides = 5;
             this.bunifuShapes2.Size = new System.Drawing.Size(339, 225);
             this.bunifuShapes2.TabIndex = 51;
+            this.bunifuShapes2.TabStop = false;
             this.bunifuShapes2.Text = "bunifuShapes2";
             // 
             // frmLogin

@@ -29,6 +29,10 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         public frmBuscarCuenta(string accion) 
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             cargarDGV();
             cbBusqueda.SelectedIndex = 0;
             Accion = accion;

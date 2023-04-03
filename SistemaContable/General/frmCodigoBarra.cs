@@ -19,6 +19,9 @@ namespace SistemaContable.General
         public frmCodigoBarra()
         {
             InitializeComponent();
+
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
+            //Negocio.FFormatoSistema.SetearFormato(this);
         }
         private void txtCodigoBarra_TextChanged(object sender, EventArgs e)
         {

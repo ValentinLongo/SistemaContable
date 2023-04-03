@@ -42,6 +42,10 @@ namespace SistemaContable
         public frmAutorización([Optional] Form frm) // AutSinCB = utilizar al ventana autorizacion pero con codigo de barra deshabilitado
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             Inicializar(frm);
         }
 
@@ -86,30 +90,39 @@ namespace SistemaContable
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            usuario = txtUsuario.Text;
-            contraseña = txtContraseña.Text;
-
-            bool autorizado = Autoriza(PERFIL, CAMBIA, TIPO.ToString(), COD1.ToString(), COD2.ToString(), COD3, DESCRI1, DESCRI2, DESCRI3, OBSERVA, REFERENCIA);
-            if (autorizado)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-                if (FRM != null)
+                usuario = txtUsuario.Text;
+                contraseña = txtContraseña.Text;
+
+                bool autorizado = Autoriza(PERFIL, CAMBIA, TIPO.ToString(), COD1.ToString(), COD2.ToString(), COD3, DESCRI1, DESCRI2, DESCRI3, OBSERVA, REFERENCIA);
+                if (autorizado)
                 {
-                    if (FRM is frmEstandar)
+                    if (FRM != null)
                     {
-                        this.Close();
-                        frmAutorización.usuario = "";
-                        frmAutorización.contraseña = "";
-                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: ¿desea recalcular los permisos del menu?", true);
-                        MessageBox.ShowDialog();
-                        if (frmMessageBox.Acepto)
+                        if (FRM is frmEstandar)
                         {
-                            frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
-                            estandar.ShowDialog();
+                            this.Close();
+                            frmAutorización.usuario = "";
+                            frmAutorización.contraseña = "";
+                            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: ¿desea recalcular los permisos del menu?", true);
+                            MessageBox.ShowDialog();
+                            if (frmMessageBox.Acepto)
+                            {
+                                frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
+                                estandar.ShowDialog();
+                            }
+                        }
+                        else
+                        {
+                            FRM.Show();
+                            this.Close();
+                            frmAutorización.usuario = "";
+                            frmAutorización.contraseña = "";
                         }
                     }
                     else
                     {
-                        FRM.Show();
                         this.Close();
                         frmAutorización.usuario = "";
                         frmAutorización.contraseña = "";
@@ -117,14 +130,13 @@ namespace SistemaContable
                 }
                 else
                 {
-                    this.Close();
-                    frmAutorización.usuario = "";
-                    frmAutorización.contraseña = "";
+                    frmMessageBox MessageBox = new frmMessageBox("Atención!", "Autorización Denegada!", false);
+                    MessageBox.ShowDialog();
                 }
             }
             else
             {
-                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Autorización Denegada!", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
             }
         }
@@ -345,6 +357,25 @@ namespace SistemaContable
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        private void pbOcultar_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña.PasswordChar != Convert.ToChar("*"))
+            {
+                txtContraseña.PasswordChar = Convert.ToChar("*");
+                pbVisibilidad.Visible = true;
+                pbOcultar.Visible = false;
+            }
+        }
+
+        private void pbVisibilidad_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña.PasswordChar == Convert.ToChar("*"))
+            {
+                txtContraseña.PasswordChar = '\0';
+                pbVisibilidad.Visible = false;
+                pbOcultar.Visible = true;
+            }
+        }
     }
 
 }

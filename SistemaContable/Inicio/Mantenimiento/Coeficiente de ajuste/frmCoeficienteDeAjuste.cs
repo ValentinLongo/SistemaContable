@@ -127,10 +127,13 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
         {
             try
             {
-                data.eliminarCoeficiente(periodoModificar);
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Eliminador correctamente", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Desea Continuar?", true);
                 MessageBox.ShowDialog();
-                CargarDGV();
+                if (frmMessageBox.Acepto)
+                {
+                    data.eliminarCoeficiente(periodoModificar);
+                    CargarDGV();
+                }
             }
             catch
             {

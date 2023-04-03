@@ -19,6 +19,10 @@ namespace SistemaContable.General
         public frmMessageBox(string msg1, string msg2, bool dialogresult, [Optional] bool MsgLargo)
         {
             InitializeComponent();
+
+            //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             Acepto = false;
             Cancelo = false;
             Seteo(msg1, msg2, dialogresult, MsgLargo);

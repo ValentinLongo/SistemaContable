@@ -67,10 +67,13 @@ namespace SistemaContable.Rubos_Contables
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            rubrosContables.EliminarRubroContable(codigoRubro);
-            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Registro borrado correctamente", false);
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Desea Eliminar el Registro?", true);
             MessageBox.ShowDialog();
-            CargarDGV("");
+            if (frmMessageBox.Acepto)
+            {
+                rubrosContables.EliminarRubroContable(codigoRubro);
+                CargarDGV("");
+            }
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)

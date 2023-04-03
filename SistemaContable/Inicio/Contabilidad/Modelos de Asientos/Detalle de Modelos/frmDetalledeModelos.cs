@@ -134,17 +134,30 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         {
             int seleccionado = dgvDetDeMod2.CurrentCell.RowIndex;
             if (seleccionado != -1)
-            {   
-                //agg messagebox
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Desea Eliminar el concepto para este modelo?", true);
+                MessageBox.ShowDialog();
+                if (frmMessageBox.Acepto)
+                {
+                    int cuenta = Convert.ToInt32(dgvDetDeMod2.Rows[seleccionado].Cells[0].Value);
+                    string concepto = dgvDetDeMod2.Rows[seleccionado].Cells[4].Value.ToString();
+                    int codigo = Convert.ToInt32(dgvDetDeMod2.Rows[seleccionado].Cells[6].Value);
+                    int asiento = Convert.ToInt32(dgvDetDeMod2.Rows[seleccionado].Cells[7].Value);
 
-                //string asiento = dgvDetDeMod2.Rows[seleccionado].Cells[8].Value.ToString();
-                //string cuenta = dgvDetDeMod2.Rows[seleccionado].Cells[8].Value.ToString();
-                //string importe = dgvDetDeMod2.Rows[seleccionado].Cells[8].Value.ToString();
-                //string codigo = dgvDetDeMod2.Rows[seleccionado].Cells[8].Value.ToString();
-                                   
-                //AccesoBase.InsertUpdateDatos($"DELETE FROM ModeloDet WHERE det_fecha = '{fechahora}'");
-                dgvDetDeMod2.Rows.Clear();
-                CargarDGV2();
+                    string importe = "";
+                    if (codigo == 1)
+                    {
+                        importe = dgvDetDeMod2.Rows[seleccionado].Cells[2].Value.ToString();
+                    }
+                    else if (codigo == 2) 
+                    {
+                        importe = dgvDetDeMod2.Rows[seleccionado].Cells[3].Value.ToString();
+                    }
+
+                    AccesoBase.InsertUpdateDatosMoney($"DELETE FROM ModeloDet WHERE det_asiento = {asiento} AND det_cuenta = {cuenta} AND det_codigo = {codigo} AND det_importe = {"*"} AND det_comenta = '{concepto}'", importe);
+                    dgvDetDeMod2.Rows.Clear();
+                    CargarDGV2();
+                }
             }
         }
 

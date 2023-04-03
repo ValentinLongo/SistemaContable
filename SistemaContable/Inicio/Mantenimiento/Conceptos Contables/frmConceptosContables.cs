@@ -58,10 +58,13 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            data.eliminarConceptoCont(Codigo);
-            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Eliminado correctamente", false);
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Seguro que Desea Continuar?", true);
             MessageBox.ShowDialog();
-            CargarDGV("");
+            if (frmMessageBox.Acepto)
+            {
+                data.eliminarConceptoCont(Codigo);
+                CargarDGV("");
+            }
         }
 
         private void dgvConceptosContables_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

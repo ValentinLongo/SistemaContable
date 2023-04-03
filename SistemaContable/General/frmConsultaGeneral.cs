@@ -26,6 +26,10 @@ namespace SistemaContable.General
         public frmConsultaGeneral(string asterisco, string tabla, string where, string orden, string frm)
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             cbBusqueda.SelectedIndex = 0;
             ArmarDGV(asterisco, tabla, where, orden, frm);
         }

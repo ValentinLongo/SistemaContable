@@ -75,13 +75,11 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizaci
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "¿Seguro que Desea Continuar?", true);
-            MessageBox1.ShowDialog();
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Seguro que Desea Continuar?", true);
+            MessageBox.ShowDialog();
             if (frmMessageBox.Acepto)
             {
                 Negocio.Funciones.Contabilidad.FActualizacionDDI.Eliminar(dgvDefiniciondeInformes);
-                frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "Eliminado Correctamente!", false);
-                MessageBox2.ShowDialog();
                 CargarDGV("");
             }
         }

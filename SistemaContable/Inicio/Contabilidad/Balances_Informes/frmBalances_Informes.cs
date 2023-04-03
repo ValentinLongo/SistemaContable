@@ -114,6 +114,19 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                                 if (Proceso == 1) //Balance de Sumas y Saldos
                                 {
 
+                                    AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_BalanceGral WHERE bal_terminal = {terminal}");
+
+                                    if (Check1.Checked == false) // Check1 = Visualizar informe con centro de costo
+                                    {
+                                        
+                                    }
+                                    else
+                                    {
+                                        //AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral (bal_terminal, bal_cuenta, bal_saldo, bal_cc) SELECT {terminal}, mva_cuenta, (Sum(Case When mva_codigo = 1 Then mva_importe Else 0 End) - (Case When mva_codigo = 2 Then mva_importe Else 0 End)) as mva_Saldo, IsNull(mva_cc,0) " +
+                                        //$"FROM MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on mva_asiento = ast_asiento " +
+                                        //$"LEFT JOIN (CentroCxPCuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta AND cxp_centroc = mva_cc " +
+                                        //$"WHERE ast_ejercicio = {} GROUP BY mva_cuenta, IsNull (mva_cc,0)");
+                                    }
                                 }
                                 else if (Proceso == 2) //Balance General
                                 {
@@ -123,10 +136,6 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                                     {
                                         AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral(bal_Terminal, bal_codigo, bal_cuenta, bal_descri, bal_superior, bal_hija, bal_tabulador, bal_saldo, bal_col1, bal_col1D, bal_col2, bal_col2D, bal_col3, bal_col3D, bal_col4, bal_col4D) " +
                                         $" SELECT {terminal}, pcu_codigo, pcu_cuenta, pcu_descri, pcu_superior, pcu_hija, pcu_tabulador, 0, 0, '', 0, '', 0, '', 0, '' FROM PCuenta ORDER BY pcu_codigo");
-                                    }
-                                    else
-                                    {
-                                        
                                     }                                   
                                 }
                                 else if (Proceso == 3) //Informes
@@ -198,6 +207,27 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                     maskHasta.Text = dr["eje_hasta"].ToString();
                 }
             }
+        }
+
+        private void Check1_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e) // Check con CC
+        {
+            if (Check1.Checked)
+            {
+                Check2.Checked = false;
+            }
+        }
+
+        private void Check2_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e) // Check Rubro Contable
+        {
+            if (Check2.Checked)
+            {
+                Check1.Checked = false;
+            }
+        }
+
+        private void txtCodEjercicio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
 
         //BARRA DE CONTROL

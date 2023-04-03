@@ -39,7 +39,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtCuenta = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtOrden = new System.Windows.Forms.TextBox();
@@ -60,6 +59,7 @@
             this.panel1.Size = new System.Drawing.Size(479, 21);
             this.panel1.TabIndex = 50;
             this.panel1.Tag = "1";
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // lblControlBar
             // 
@@ -202,6 +202,7 @@
             this.txtCuenta.Size = new System.Drawing.Size(229, 19);
             this.txtCuenta.TabIndex = 0;
             this.txtCuenta.Tag = "10100";
+            this.txtCuenta.TextChanged += new System.EventHandler(this.txtCuenta_TextChanged);
             // 
             // btnConfirmar
             // 
@@ -223,18 +224,6 @@
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(139, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 19);
-            this.textBox1.TabIndex = 88;
-            this.textBox1.Tag = "11000";
             // 
             // panel4
             // 
@@ -315,7 +304,6 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.txtOrden);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtCuenta);
@@ -347,7 +335,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtCuenta;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtOrden;
