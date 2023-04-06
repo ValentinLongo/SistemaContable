@@ -48,6 +48,9 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                 Check2.Visible = true;
                 lbl2.Visible = true;
 
+                Check2.Enabled = false;
+                lbl2.Enabled = false;
+
                 Check4.Visible = true;
                 lbl4.Visible = true;
             }
@@ -153,7 +156,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                                 {
                                     if (Check4.Checked) // Check4 = Sumar al saldo actual el saldo del ejercicio anterior
                                     {
-                                        if(DESDE != Convert.ToDateTime(maskDesde.Text))
+                                        if (DESDE != Convert.ToDateTime(maskDesde.Text))
                                         {
                                             frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El sistema detecto que ha sido alterada la fecha (DESDE) para emitir el informe. Por ende no podra acular al saldo el resultado del ejercicio anterior.", false, true);
                                             MessageBox.ShowDialog();
@@ -161,7 +164,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                                         else
                                         {
                                             DataSet ds2 = new DataSet();
-                                            ds2 = AccesoBase.ListarDatos($"SELECT * FROM Ejercicio WHERE eje_desde < {DESDE} ORDER BY eje_desde DESC");
+                                            ds2 = AccesoBase.ListarDatos($"SELECT * FROM Ejercicio WHERE eje_desde < '{DESDE}' ORDER BY eje_desde DESC");
 
                                             int EjAnt = 0; //Ejercicio Anterior
                                             if (ds2.Tables[0].Rows.Count != 0)
@@ -175,44 +178,78 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
                                             AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_BalanceGral WHERE bal_terminal = {terminal}");
 
-                                            if (Check1.Checked == false) // Check1 = Visualizar informe con centro de costo
+                                            if (Check1.Checked) // Check1 = Visualizar informe con centro de costo
                                             {
-                                                AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral (bal_terminal, bal_cuenta, bal_saldo) " +
-                                                    $"SELECT {terminal}, mva_cuenta, (sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end) as mva_saldo " +
-                                                    $"FROM MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on mva_asiento = ast_asiento " +
-                                                    $"WHERE ast_ejercicio = {EjAnt} GROUP BY mva_cuenta");
-                                            }
-                                            else
-                                            {
-                                                AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral (bal_terminal, bal_cuenta, bal_saldo, bal_cc) SELECT {terminal}, mva_cuenta, (Sum(Case When mva_codigo = 1 Then mva_importe Else 0 End) - (Case When mva_codigo = 2 Then mva_importe Else 0 End)) as mva_Saldo, IsNull(mva_cc,0) " +
+                                                AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral (bal_terminal, bal_cuenta, bal_saldo, bal_cc) SELECT {terminal}, mva_cuenta, (Sum(Case When mva_codigo = 1 Then mva_importe Else 0 End) - sum(Case When mva_codigo = 2 Then mva_importe Else 0 End)) as mva_Saldo, IsNull(mva_cc,0) " +
                                                 $"FROM MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on mva_asiento = ast_asiento " +
                                                 $"LEFT JOIN (CentroCxPCuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta AND cxp_centroc = mva_cc " +
-                                                $"WHERE ast_ejercicio = {EjAnt} GROUP BY mva_cuenta, IsNull (mva_cc,0)");
-                                            }
-
-                                            if (Check1.Checked) //Check1 = Visualizar informe con centro de costo
-                                            {
-                                                if (Check4.Checked) //Check4 = Sumar al saldo actual el saldo del ejercicio anterior
-                                                {
-                                                    //imprimir (al revez del original)
-                                                }
-                                                else
-                                                {
-                                                    //imprimir
-                                                }
+                                                $"WHERE ast_ejercicio = {EjAnt} GROUP BY mva_cuenta, IsNull(mva_cc,0)");
                                             }
                                             else
                                             {
-                                                if (Check4.Checked) //Check4 = Sumar al saldo actual el saldo del ejercicio anterior
-                                                {
-                                                    //imprimir
-                                                }
-                                                else
-                                                {
-                                                    //imprimir
-                                                }
+                                                AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral (bal_terminal, bal_cuenta, bal_saldo) " +
+                                                $"SELECT {terminal}, mva_cuenta, (sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end)) as mva_saldo " +
+                                                $"FROM MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on mva_asiento = ast_asiento " +
+                                                $"WHERE ast_ejercicio = {EjAnt} GROUP BY mva_cuenta");
                                             }
+                                        }
+                                    }
 
+                                    if (Check1.Checked) //Check1 = Visualizar informe con centro de costo
+                                    {
+                                        if (Check4.Checked) //Check4 = Sumar al saldo actual el saldo del ejercicio anterior
+                                        {
+                                            string query = $"SELECT X.mva_cuenta, X.mva_descri, X.cec_descri, (X.mva_Debe + case when IsNull(bal_saldo,0) >= 0 then IsNull(bal_saldo,0) else 0 end) as mva_debe, " +
+                                            $"(X.mva_haber + ABS(case when IsNull(bal_saldo,0) < 0 then IsNull(bal_saldo,0) else 0 end)) as mva_haber, (X.mva_saldo + IsNull(bal_saldo,0)) as mva_saldo " +
+                                            $"FROM (SELECT mva_cuenta, pcu_descri as mva_descri, pcu_codigo, IsNull(mva_cc,0) as mva_cc, cec_descri, sum(case when mva_codigo = 1 then mva_importe else 0 end) as mva_debe, " +
+                                            $"sum(case when mva_codigo = 2 then mva_importe else 0 end) as mva_haber, (sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end)) " +
+                                            $"as mva_saldo FROM MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on mva_asiento = ast_asiento LEFT JOIN (CentroCxPCuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta AND cxp_centroc = mva_cc " +
+                                            $"WHERE ast_ejercicio = {txtCodEjercicio.Text} AND (ast_fecha >= '{maskDesde.Text}' AND " +
+                                            $"ast_fecha <= '{maskHasta.Text}') GROUP BY mva_cuenta, pcu_codigo, IsNull(mva_cc,0), pcu_descri, cec_descri ) as X " +
+                                            $"LEFT JOIN Aux_BalanceGral on mva_cuenta = bal_cuenta AND IsNull(mva_cc,0) = IsNull(bal_cc,0) AND bal_terminal = {terminal} ORDER BY X.pcu_codigo";
+
+                                            frmReporte freporte = new frmReporte("BalanceCC", $"{query}", "", "Balance de Sumas y Saldos", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text + " - Saldo Inicial Acumulado desde el Ejercicio Anterior");
+                                            freporte.ShowDialog();
+                                        }
+                                        else
+                                        {
+                                            string query = $"SELECT mva_cuenta, pcu_descri as mva_Descri, cec_descri, sum(case when mva_codigo = 1 then mva_importe else 0 end) as mva_debe, " +
+                                            $"sum(case when mva_codigo = 2 then mva_importe else 0 end) as mva_haber, (sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end)) " +
+                                            $"as mva_saldo FROM  MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on mva_asiento = ast_asiento LEFT JOIN " +
+                                            $"(CentroCxPCuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta AND cxp_centroc = mva_cc " +
+                                            $"WHERE ast_ejercicio = {txtCodEjercicio.Text} AND (ast_fecha >= '{maskDesde.Text}' AND " +
+                                            $"ast_fecha <= '{maskHasta.Text}') GROUP BY mva_cuenta, pcu_codigo, pcu_descri, cec_descri ORDER BY pcu_codigo";
+
+                                            frmReporte freporte = new frmReporte("BalanceCC", $"{query}", "", "Balance de Sumas y Saldos", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text);
+                                            freporte.ShowDialog();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (Check4.Checked) //Check4 = Sumar al saldo actual el saldo del ejercicio anterior
+                                        {
+                                            string query = $"SELECT X.mva_cuenta, X.mva_descri, (X.mva_Debe + case when IsNull(bal_saldo,0) >= 0 then IsNull(bal_saldo,0) else 0 end) as mva_debe, " +
+                                            $"(X.mva_haber + ABS(case when IsNull(bal_saldo,0) < 0 then IsNull(bal_saldo,0) else 0 end)) as mva_haber, (X.mva_saldo + IsNull(bal_saldo,0)) as mva_saldo " +
+                                            $"FROM (SELECT mva_cuenta, pcu_descri as mva_descri, pcu_codigo, sum(case when mva_codigo = 1 then mva_importe else 0 end) as mva_debe, " +
+                                            $"sum(case when mva_codigo = 2 then mva_importe else 0 end) as mva_haber, (sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end)) " +
+                                            $"as mva_saldo FROM MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on mva_asiento = ast_asiento " +
+                                            $"WHERE ast_ejercicio = {txtCodEjercicio.Text} AND (ast_fecha >= '{maskDesde.Text}' AND " +
+                                            $"ast_fecha <= '{maskHasta.Text}') GROUP BY mva_cuenta, pcu_codigo, pcu_descri ) as X " +
+                                            $"LEFT JOIN Aux_BalanceGral on mva_cuenta = bal_cuenta AND bal_terminal = {terminal} ORDER BY X.pcu_codigo";
+
+                                            frmReporte freporte = new frmReporte("Balance", $"{query}", "", "Balance de Sumas y Saldos", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text + " - Saldo Inicial Acumulado desde el Ejercicio Anterior");
+                                            freporte.ShowDialog();
+                                        }
+                                        else
+                                        {
+                                            string query = $"SELECT mva_cuenta, pcu_descri as mva_descri, sum(case when mva_codigo = 1 then mva_importe else 0 end) as mva_debe, " +
+                                            $"sum(case when mva_codigo = 2 then mva_importe else 0 end) as mva_haber, (sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end)) " +
+                                            $"as mva_saldo FROM MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on mva_asiento = ast_asiento " +
+                                            $"WHERE ast_ejercicio = {txtCodEjercicio.Text} AND (ast_fecha >= '{maskDesde.Text}' AND " +
+                                            $"ast_fecha <= '{maskHasta.Text}') GROUP BY mva_cuenta, pcu_codigo, pcu_descri ORDER BY pcu_codigo";
+
+                                            frmReporte freporte = new frmReporte("Balance", $"{query}", "", "Balance de Sumas y Saldos", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text);
+                                            freporte.ShowDialog();
                                         }
                                     }
                                 }
@@ -302,16 +339,22 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                                                     }
                                                 }
                                             }
-                                            //imprimir
+                                            string query = $"SELECT * FROM Aux_BalanceGral WHERE bal_terminal = {terminal} ORDER BY bal_codigo";
+
+                                            frmReporte freporte = new frmReporte("BalanceGralRC", $"{query}", "", "Balance General", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text);
+                                            freporte.ShowDialog();
                                         }
                                         else
                                         {
-                                            //imprimir
+                                            string query = $"SELECT * FROM Aux_BalanceGral WHERE bal_terminal = {terminal} ORDER BY bal_codigo";
+
+                                            frmReporte freporte = new frmReporte("BalanceGral", $"{query}", "", "Balance General", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text);
+                                            freporte.ShowDialog();
                                         }
                                     }
                                     else
                                     {
-                                        AccesoBase.InsertUpdateDatos($"INSER INTO Aux_BalanceGral (bal_terminal, bal_codigo, bal_cuenta, bal_descri, bal_superior, " +
+                                        AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral (bal_terminal, bal_codigo, bal_cuenta, bal_descri, bal_superior, " +
                                         $" bal_hija, bal_tabulador, bal_saldo, bal_col1, bal_coli1D, bal_col2, bal_col2D, bal_col3, bal_col3D, bal_col4, bal_col4D) " +
                                         $"SELECT {terminal}, pcu_codigo, pcu_cuenta, pcu_descri, pcu_superior, pcu_hija, pcu_tabulador, 0, 0, '', 0, '', 0, '', 0, '' FROM PCuenta ORDER BY pcu_codigo");
 
@@ -363,17 +406,28 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                                                 }
                                                 n = n - 1;
                                             }
+                                            string query = $"SELECT * FROM Aux_BalanceGral WHERE bal_terminal = {terminal} ORDER BY bal_codigo";
 
-                                            //imprimir
+                                            frmReporte freporte = new frmReporte("BalanceGralCC", $"{query}", "", "Balance General", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text);
+                                            freporte.ShowDialog();
                                         }
-
                                         AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_BalanceGral WHERE bal_terminal = {terminal}");
                                     }
-
                                 }
                                 else if (Proceso == 3) /////INFORMES/////
                                 {
                                     if (Check3.Checked) // Check3 = imprimir informe sin centro de costo
+                                    {
+                                        string query = $"SELECT mva_cuenta, pcu_descri as mva_descri, '' as cec_descri, sum(case when mva_codigo = 1 then mva_importe else 0 end) as mva_debe, " +
+                                        $"sum(case when mva_codigo = 2 then mva_importe else 0 end) as mva_haber, (sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end)) " +
+                                        $"as mva_saldo FROM BalanceDet LEFT JOIN MovAsto on det_ctacont = mva_cuenta  LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE " +
+                                        $"ast_ejercicio = {txtCodEjercicio.Text} AND (ast_fecha >= '{maskDesde.Text}' AND " +
+                                        $"ast_fecha <= '{maskHasta.Text}') AND det_codigo = {txtCodModelo.Text} GROUP BY det_orden, mva_cuenta, pcu_codigo, pcu_descri ORDER BY det_orden, pcu_codigo";
+
+                                        frmReporte freporte = new frmReporte("BalanceCC", $"{query}", "", txtDescriModelo.Text + " - Sin Centro de Costos", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text);
+                                        freporte.ShowDialog();
+                                    }
+                                    else
                                     {
                                         string query = $"SELECT mva_cuenta, pcu_descri as mva_descri, cec_descri, sum(case when mva_codigo = 1 then mva_importe else 0 end) as mva_debe, " +
                                         $"sum(case when mva_codigo = 2 then mva_importe else 0 end) as mva_haber, (sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end)) " +
@@ -384,13 +438,8 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                                         $"ast_fecha <= '{maskHasta.Text}') AND det_codigo = {txtCodModelo.Text} GROUP BY det_orden, mva_cuenta, pcu_codigo, pcu_descri, cec_descri " +
                                         $"ORDER BY det_orden, pcu_codigo";
 
-                                        frmReporte freporte = new frmReporte("BalanceCC", $"{query}", "", txtDescriModelo.Text + " - Sin Centro de Costos", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text);
+                                        frmReporte freporte = new frmReporte("BalanceCC", $"{query}", "", txtDescriModelo.Text, maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text);
                                         freporte.ShowDialog();
-                                    }
-                                    else
-                                    {
-                                        //frmReporte freporte = new frmReporte("BalanceCC", $"{query}", "", txtDescriModelo.Text + " - Sin Centro de Costos", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text);
-                                        //freporte.ShowDialog();
                                     }
                                 }
                             }
@@ -431,7 +480,6 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                     MessageBox.ShowDialog();
                 }
             }
-
             Cursor.Current = Cursors.Default;
         }
 
@@ -459,7 +507,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
         private void txtCodModelo_TextChanged(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            if (txtCodEjercicio.Text != "")
+            if (txtCodModelo.Text != "")
             {
                 DataSet ds = new DataSet();
                 ds = AccesoBase.ListarDatos($"SELECT * FROM Balance WHERE bal_codigo = {txtCodModelo.Text}");
@@ -530,26 +578,26 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
                         DESDE = Convert.ToDateTime(dr["eje_desde"]);
                     }
-
+                    
                     if (Proceso == 1) //Balance de Sumas y Saldos
                     {
                         if (Negocio.Funciones.Contabilidad.FBalances_Informes.EstadoEjercicio(Convert.ToInt32(txtCodEjercicio.Text), 2)) //verifica que el ejercicio tenga asiento del apertura
-                        {
-                            Check4.Enabled = true;
-                            Check4.Checked = true;
-                            lbl4.Enabled = true;
-                        }
-                        else
                         {
                             Check4.Enabled = false;
                             Check4.Checked = false;
                             lbl4.Enabled = false;
                         }
+                        else
+                        {
+                            Check4.Enabled = true;
+                            Check4.Checked = false;
+                            lbl4.Enabled = true;
+                        }
                     }
                     else
                     {
-                        Check4.Enabled = false;
                         Check4.Checked = false;
+                        Check4.Enabled = false;
                         lbl4.Enabled = false;
                     }
                 }
@@ -557,6 +605,8 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                 {
                     frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Ejercicio Contable No Existe.", false);
                     MessageBox.ShowDialog();
+
+                    txtCodEjercicio.Text = "";
 
                     Check4.Enabled = true;
                     Check4.Checked = false;
