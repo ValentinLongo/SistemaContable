@@ -259,15 +259,15 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
                                     if (Check1.Checked == false) // Check1 = Visualizar informe con centro de costo
                                     {
-                                        AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral(bal_Terminal, bal_codigo, bal_cuenta, bal_descri, bal_superior, bal_hija, bal_tabulador, bal_saldo, bal_col1, bal_col1D, bal_col2, bal_col2D, bal_col3, bal_col3D, bal_col4, bal_col4D) " +
+                                        AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral(bal_terminal, bal_codigo, bal_cuenta, bal_descri, bal_superior, bal_hija, bal_tabulador, bal_saldo, bal_col1, bal_col1D, bal_col2, bal_col2D, bal_col3, bal_col3D, bal_col4, bal_col4D) " +
                                         $" SELECT {terminal}, pcu_codigo, pcu_cuenta, pcu_descri, pcu_superior, pcu_hija, pcu_tabulador, 0, 0, '', 0, '', 0, '', 0, '' FROM PCuenta ORDER BY pcu_codigo");
 
                                         DataSet ds2 = new DataSet();
-                                        ds2 = AccesoBase.ListarDatos($"SELECT mva_cuenta, pcu_descri as mva_Descri, pcu_codigo as mva_cod, " +
-                                            $"(sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end) as mva_saldo " +
+                                        ds2 = AccesoBase.ListarDatos($"SELECT mva_cuenta, pcu_descri as mva_descri, pcu_codigo as mva_cod, " +
+                                            $"(sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end)) as mva_saldo " +
                                             $"FROM MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on ast_asiento = mva_asiento " +
-                                            $"WHERE ast_ejercicio = {txtCodEjercicio.Text} AND  (ast_fecha >= {Convert.ToDateTime(maskDesde.Text)} AND ast_fecha <= {Convert.ToDateTime(maskHasta.Text)}) " +
-                                            $"GROUP BT mva_cuenta, pcu_descri, pcu_codigo ORDER BY pcu_codigo");
+                                            $"WHERE ast_ejercicio = {txtCodEjercicio.Text} AND  (ast_fecha >= '{Convert.ToDateTime(maskDesde.Text)}' AND ast_fecha <= '{Convert.ToDateTime(maskHasta.Text)}') " +
+                                            $"GROUP BY mva_cuenta, pcu_descri, pcu_codigo ORDER BY pcu_codigo");
 
                                         if (ds2.Tables[0].Rows.Count != 0)
                                         {
@@ -286,7 +286,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
                                         n = MaxTab;
 
-                                        for (i = 1; i == MaxTab - 1; i++)
+                                        for (i = 1; i < MaxTab; i++)
                                         {
                                             DataSet ds4 = new DataSet();
                                             ds4 = AccesoBase.ListarDatos($"SELECT bal_superior, sum(bal_saldo) as bal_saldoGral FROM Aux_BalanceGral WHERE bal_terminal = {terminal} " +
@@ -294,7 +294,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
                                             foreach (DataRow dr4 in ds4.Tables[0].Rows)
                                             {
-                                                AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_Saldo = {"*"} WHERE bal_terminal = {terminal} AND bal_codigo = {dr4["bal_superior"]}", dr4["mva_saldoGral"].ToString());
+                                                AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_saldo = {"*"} WHERE bal_terminal = {terminal} AND bal_codigo = '{dr4["bal_superior"]}' ", dr4["bal_saldoGral"].ToString());
                                             }
                                             n = n - 1;
                                         }
@@ -307,29 +307,29 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
                                             foreach (DataRow dr5 in ds5.Tables[0].Rows)
                                             {
-                                                if (Convert.ToInt32((dr5["pcu_hija"] == null) ? 0 : dr5["pcu_hija"]) == 0) //if en una linea
+                                                if ((dr5["pcu_hija"].ToString() == "" ? "0" : dr5["pcu_hija"].ToString()) == "0") //if en una linea
                                                 {
-                                                    switch (Convert.ToInt32((dr5["pcu_rubrocont"] == null) ? 0 : dr5["pcu_rubrocont"])) //if en una linea
+                                                    switch ((dr5["pcu_rubrocont"].ToString() == "") ? "0" : dr5["pcu_rubrocont"].ToString()) //if en una linea
                                                     {
-                                                        case 0:
+                                                        case "0":
                                                             break;
 
-                                                        case 1:
+                                                        case "1":
                                                             AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_col1 = {"*"} WHERE bal_terminal = {terminal} AND bal_cuenta = {dr5["pcu_cuenta"]}", dr5["bal_saldo"].ToString());
                                                             AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col1D = UCase(left{dr5["ruc_descri"]}, 1) LCase(right {dr5["ruc_descri"]}, Len({dr5["ruc_descri"]} - 1) WHERE bal_terminal = {terminal}");
                                                             break;
 
-                                                        case 2:
+                                                        case "2":
                                                             AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_col2 = {"*"} WHERE bal_terminal = {terminal} AND bal_cuenta = {dr5["pcu_cuenta"]}", dr5["bal_saldo"].ToString());
                                                             AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col2D = UCase(left{dr5["ruc_descri"]}, 1) LCase(right {dr5["ruc_descri"]}, Len({dr5["ruc_descri"]} - 1) WHERE bal_terminal = {terminal}");
                                                             break;
 
-                                                        case 3:
+                                                        case "3":
                                                             AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_col3 = {"*"} WHERE bal_terminal = {terminal} AND bal_cuenta = {dr5["pcu_cuenta"]}", dr5["bal_saldo"].ToString());
                                                             AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col3D = UCase(left{dr5["ruc_descri"]}, 1) LCase(right {dr5["ruc_descri"]}, Len({dr5["ruc_descri"]} - 1) WHERE bal_terminal = {terminal}");
                                                             break;
 
-                                                        case 4:
+                                                        case "4":
                                                             AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_col4 = {"*"} WHERE bal_terminal = {terminal} AND bal_cuenta = {dr5["pcu_cuenta"]}", dr5["bal_saldo"].ToString());
                                                             AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col4D = UCase(left{dr5["ruc_descri"]}, 1) LCase(right {dr5["ruc_descri"]}, Len({dr5["ruc_descri"]} - 1) WHERE bal_terminal = {terminal}");
                                                             break;
@@ -339,6 +339,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                                                     }
                                                 }
                                             }
+
                                             string query = $"SELECT * FROM Aux_BalanceGral WHERE bal_terminal = {terminal} ORDER BY bal_codigo";
 
                                             frmReporte freporte = new frmReporte("BalanceGralRC", $"{query}", "", "Balance General", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text);
@@ -355,7 +356,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                                     else
                                     {
                                         AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral (bal_terminal, bal_codigo, bal_cuenta, bal_descri, bal_superior, " +
-                                        $" bal_hija, bal_tabulador, bal_saldo, bal_col1, bal_coli1D, bal_col2, bal_col2D, bal_col3, bal_col3D, bal_col4, bal_col4D) " +
+                                        $" bal_hija, bal_tabulador, bal_saldo, bal_col1, bal_col1D, bal_col2, bal_col2D, bal_col3, bal_col3D, bal_col4, bal_col4D) " +
                                         $"SELECT {terminal}, pcu_codigo, pcu_cuenta, pcu_descri, pcu_superior, pcu_hija, pcu_tabulador, 0, 0, '', 0, '', 0, '', 0, '' FROM PCuenta ORDER BY pcu_codigo");
 
                                         AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_BalanceGral (bal_terminal, bal_codigo, bal_cuenta, bal_descri, bal_superior, " +
@@ -364,15 +365,16 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                                         $"on pcu_cuenta = cxp_cuenta WHERE cec_codigo is not null ORDER BY pcu_codigo");
 
                                         DataSet ds2 = new DataSet();
-                                        ds2 = AccesoBase.ListarDatos($"SELECT mva_cuenta, pcu_descri as mva_Descri, pcu_codigo as mva_cod, cec_codigo, cec_descri, " +
-                                        $"sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case( when mva_codigo = 2 then mva_importe else 0 end)) " +
-                                        $"as mva_saldo FROM MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta = mva_cuenta LEFT JOIN Asiento on ast_asiento = mva_asiento " +
-                                        $"WHERE ast_ejercicio = {txtCodEjercicio.Text} AND  (ast_fecha >= {Convert.ToDateTime(maskDesde.Text)} AND ast_fecha {Convert.ToDateTime(maskHasta.Text)}) " +
+                                        ds2 = AccesoBase.ListarDatos($"SELECT mva_cuenta, pcu_descri as mva_descri, pcu_codigo as mva_cod, cec_codigo, cec_descri, " +
+                                        $"(sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end)) " +
+                                        $"as mva_saldo FROM MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on ast_asiento = mva_asiento " +
+                                        $"LEFT JOIN (CentroCxPCuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta AND cxp_centroc = mva_cc " +
+                                        $"WHERE ast_ejercicio = {txtCodEjercicio.Text} AND (ast_fecha >= '{Convert.ToDateTime(maskDesde.Text)}' AND ast_fecha <= '{Convert.ToDateTime(maskHasta.Text)}') " +
                                         $"GROUP by mva_cuenta, pcu_descri, pcu_codigo, cec_codigo, cec_descri ORDER BY pcu_codigo");
 
                                         foreach (DataRow dr2 in ds2.Tables[0].Rows)
                                         {
-                                            if (dr2["cec_codigo"] == null)
+                                            if (dr2["cec_codigo"].ToString() == "")
                                             {
                                                 AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_saldo = {"*"} WHERE bal_terminal = {terminal} AND bal_cuenta = {dr2["mva_cuenta"]} AND bal_cc is null", dr2["mva_saldo"].ToString());
                                             }
@@ -394,7 +396,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
                                             n = MaxTab;
 
-                                            for (i = 1; i == MaxTab - 1; i++)
+                                            for (i = 1; i < MaxTab; i++)
                                             {
                                                 DataSet ds4 = new DataSet();
                                                 ds4 = AccesoBase.ListarDatos($"SELECT bal_superior, sum(bal_saldo) as bal_saldoGral FROM Aux_BalanceGral WHERE bal_terminal = {terminal} " +
@@ -402,10 +404,11 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
                                                 foreach (DataRow dr4 in ds4.Tables[0].Rows)
                                                 {
-                                                    AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_Saldo = {"*"} WHERE bal_terminal = {terminal} AND bal_codigo = {dr4["bal_superior"]}", dr4["bal_saldoGral"].ToString());
+                                                    AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_Saldo = {"*"} WHERE bal_terminal = {terminal} AND bal_codigo = '{dr4["bal_superior"]}'", dr4["bal_saldoGral"].ToString());
                                                 }
                                                 n = n - 1;
                                             }
+
                                             string query = $"SELECT * FROM Aux_BalanceGral WHERE bal_terminal = {terminal} ORDER BY bal_codigo";
 
                                             frmReporte freporte = new frmReporte("BalanceGralCC", $"{query}", "", "Balance General", maskDesde.Text, maskHasta.Text, txtDescriEjercicio.Text);
@@ -564,7 +567,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
                 if (ds.Tables[0].Rows.Count != 0) //si existe el ejercicio
                 {
-                    if (Negocio.Funciones.Contabilidad.FBalances_Informes.EstadoEjercicio(Convert.ToInt32(txtCodEjercicio.Text), 1)) //Funcion para verificar si el ejercicio esta cerrado
+                    if (Negocio.FGenerales.EstadoEjercicio(Convert.ToInt32(txtCodEjercicio.Text), 1)) //Funcion para verificar si el ejercicio esta cerrado
                     {
                         frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Ejercicio Contable se encuentra cerrado.", false);
                         MessageBox.ShowDialog();
@@ -581,7 +584,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                     
                     if (Proceso == 1) //Balance de Sumas y Saldos
                     {
-                        if (Negocio.Funciones.Contabilidad.FBalances_Informes.EstadoEjercicio(Convert.ToInt32(txtCodEjercicio.Text), 2)) //verifica que el ejercicio tenga asiento del apertura
+                        if (Negocio.FGenerales.EstadoEjercicio(Convert.ToInt32(txtCodEjercicio.Text), 2)) //verifica que el ejercicio tenga asiento del apertura
                         {
                             Check4.Enabled = false;
                             Check4.Checked = false;
@@ -624,6 +627,16 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                 lbl4.Enabled = true;
             }
             Cursor.Current = Cursors.Default;
+        }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            maskDesde.Text = dtpDesde.Value.ToString();
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            maskHasta.Text = dtpHasta.Value.ToString();
         }
 
         //BARRA DE CONTROL

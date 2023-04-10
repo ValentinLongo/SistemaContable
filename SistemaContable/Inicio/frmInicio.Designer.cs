@@ -416,7 +416,7 @@
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnCerrar, "btnCerrar");
-            this.btnCerrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -434,9 +434,9 @@
             this.controlbarMinimizar.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.controlbarMinimizar.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.CloseBoxOptions.Icon")));
             this.controlbarMinimizar.CloseBoxOptions.IconAlt = null;
-            this.controlbarMinimizar.CloseBoxOptions.IconColor = System.Drawing.Color.White;
-            this.controlbarMinimizar.CloseBoxOptions.IconHoverColor = System.Drawing.Color.White;
-            this.controlbarMinimizar.CloseBoxOptions.IconPressedColor = System.Drawing.Color.White;
+            this.controlbarMinimizar.CloseBoxOptions.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.controlbarMinimizar.CloseBoxOptions.IconHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.controlbarMinimizar.CloseBoxOptions.IconPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.controlbarMinimizar.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
             this.controlbarMinimizar.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.controlbarMinimizar.HelpBox = false;
@@ -444,7 +444,7 @@
             this.controlbarMinimizar.HelpBoxOptions.BorderRadius = 0;
             this.controlbarMinimizar.HelpBoxOptions.Enabled = true;
             this.controlbarMinimizar.HelpBoxOptions.EnableDefaultAction = true;
-            this.controlbarMinimizar.HelpBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.controlbarMinimizar.HelpBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.controlbarMinimizar.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.HelpBoxOptions.Icon")));
             this.controlbarMinimizar.HelpBoxOptions.IconAlt = null;
             this.controlbarMinimizar.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
@@ -922,7 +922,7 @@
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
             // 
             // lblUsu
@@ -1311,7 +1311,7 @@
             // 
             this.bunifuShapes1.Angle = 0F;
             this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.BorderColor = System.Drawing.Color.White;
+            this.bunifuShapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;

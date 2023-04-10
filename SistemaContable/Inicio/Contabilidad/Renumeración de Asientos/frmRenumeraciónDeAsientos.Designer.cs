@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRenumeraciónDeAsientos));
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblControlBar = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -40,7 +40,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnProcesar = new RJCodeAdvance.RJControls.RJButton();
-            this.bunifuProgressBar1 = new Bunifu.UI.WinForms.BunifuProgressBar();
+            this.ProgressBar = new Bunifu.UI.WinForms.BunifuProgressBar();
             this.btnEjercicio = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.lblControlBar);
             this.panel7.Controls.Add(this.bunifuFormControlBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
@@ -58,16 +58,16 @@
             this.panel7.Tag = "1";
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             // 
-            // label14
+            // lblControlBar
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(5, 2);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(157, 17);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Renumeración de Asientos";
+            this.lblControlBar.AutoSize = true;
+            this.lblControlBar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
+            this.lblControlBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblControlBar.Location = new System.Drawing.Point(5, 2);
+            this.lblControlBar.Name = "lblControlBar";
+            this.lblControlBar.Size = new System.Drawing.Size(157, 17);
+            this.lblControlBar.TabIndex = 31;
+            this.lblControlBar.Text = "Renumeración de Asientos";
             // 
             // bunifuFormControlBox1
             // 
@@ -218,33 +218,34 @@
             this.btnProcesar.Text = "Procesar";
             this.btnProcesar.TextColor = System.Drawing.Color.White;
             this.btnProcesar.UseVisualStyleBackColor = false;
+            this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
             // 
-            // bunifuProgressBar1
+            // ProgressBar
             // 
-            this.bunifuProgressBar1.AllowAnimations = false;
-            this.bunifuProgressBar1.Animation = 0;
-            this.bunifuProgressBar1.AnimationSpeed = 220;
-            this.bunifuProgressBar1.AnimationStep = 10;
-            this.bunifuProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.bunifuProgressBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuProgressBar1.BackgroundImage")));
-            this.bunifuProgressBar1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.bunifuProgressBar1.BorderRadius = 9;
-            this.bunifuProgressBar1.BorderThickness = 1;
-            this.bunifuProgressBar1.Location = new System.Drawing.Point(15, 81);
-            this.bunifuProgressBar1.Maximum = 100;
-            this.bunifuProgressBar1.MaximumValue = 100;
-            this.bunifuProgressBar1.Minimum = 0;
-            this.bunifuProgressBar1.MinimumValue = 0;
-            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
-            this.bunifuProgressBar1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.bunifuProgressBar1.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.bunifuProgressBar1.ProgressColorLeft = System.Drawing.Color.DodgerBlue;
-            this.bunifuProgressBar1.ProgressColorRight = System.Drawing.Color.DodgerBlue;
-            this.bunifuProgressBar1.Size = new System.Drawing.Size(367, 13);
-            this.bunifuProgressBar1.TabIndex = 69;
-            this.bunifuProgressBar1.TabStop = false;
-            this.bunifuProgressBar1.Value = 0;
-            this.bunifuProgressBar1.ValueByTransition = 0;
+            this.ProgressBar.AllowAnimations = false;
+            this.ProgressBar.Animation = 0;
+            this.ProgressBar.AnimationSpeed = 220;
+            this.ProgressBar.AnimationStep = 10;
+            this.ProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.ProgressBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ProgressBar.BackgroundImage")));
+            this.ProgressBar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.ProgressBar.BorderRadius = 9;
+            this.ProgressBar.BorderThickness = 1;
+            this.ProgressBar.Location = new System.Drawing.Point(15, 81);
+            this.ProgressBar.Maximum = 100;
+            this.ProgressBar.MaximumValue = 100;
+            this.ProgressBar.Minimum = 0;
+            this.ProgressBar.MinimumValue = 0;
+            this.ProgressBar.Name = "ProgressBar";
+            this.ProgressBar.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.ProgressBar.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.ProgressBar.ProgressColorLeft = System.Drawing.Color.DodgerBlue;
+            this.ProgressBar.ProgressColorRight = System.Drawing.Color.DodgerBlue;
+            this.ProgressBar.Size = new System.Drawing.Size(367, 13);
+            this.ProgressBar.TabIndex = 69;
+            this.ProgressBar.TabStop = false;
+            this.ProgressBar.Value = 0;
+            this.ProgressBar.ValueByTransition = 0;
             // 
             // btnEjercicio
             // 
@@ -266,7 +267,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(535, 119);
             this.Controls.Add(this.btnEjercicio);
-            this.Controls.Add(this.bunifuProgressBar1);
+            this.Controls.Add(this.ProgressBar);
             this.Controls.Add(this.btnProcesar);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -290,7 +291,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblControlBar;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
@@ -300,7 +301,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private RJCodeAdvance.RJControls.RJButton btnProcesar;
-        private Bunifu.UI.WinForms.BunifuProgressBar bunifuProgressBar1;
+        private Bunifu.UI.WinForms.BunifuProgressBar ProgressBar;
         private System.Windows.Forms.Button btnEjercicio;
     }
 }

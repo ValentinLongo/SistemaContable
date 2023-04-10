@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCalendario));
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
@@ -45,8 +45,8 @@
             this.ColumnaUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtFecha = new RJCodeAdvance.RJControls.RJDatePicker();
             this.CheckFinalizadas = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.dtFecha = new Bunifu.UI.WinForms.BunifuDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalendario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,14 +169,14 @@
             this.dgvCalendario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgvCalendario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCalendario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCalendario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCalendario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvCalendario.ColumnHeadersHeight = 25;
             this.dgvCalendario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCalendario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -185,28 +185,28 @@
             this.ColumnaComentario,
             this.ColumnaCheck,
             this.ColumnaUsuario});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCalendario.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCalendario.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvCalendario.EnableHeadersVisualStyles = false;
             this.dgvCalendario.GridColor = System.Drawing.Color.White;
             this.dgvCalendario.Location = new System.Drawing.Point(18, 89);
             this.dgvCalendario.Name = "dgvCalendario";
             this.dgvCalendario.ReadOnly = true;
             this.dgvCalendario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCalendario.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCalendario.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvCalendario.RowHeadersVisible = false;
             this.dgvCalendario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCalendario.Size = new System.Drawing.Size(811, 540);
@@ -286,20 +286,6 @@
             this.label1.TabIndex = 65;
             this.label1.Text = "Visualizar las tareas Finalizadas";
             // 
-            // dtFecha
-            // 
-            this.dtFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtFecha.BorderColor = System.Drawing.Color.White;
-            this.dtFecha.BorderSize = 0;
-            this.dtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtFecha.Location = new System.Drawing.Point(33, 31);
-            this.dtFecha.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(236, 35);
-            this.dtFecha.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.dtFecha.TabIndex = 67;
-            this.dtFecha.TextColor = System.Drawing.Color.White;
-            // 
             // CheckFinalizadas
             // 
             this.CheckFinalizadas.AllowBindingControlAnimation = true;
@@ -355,6 +341,30 @@
             this.CheckFinalizadas.ToolTipText = null;
             this.CheckFinalizadas.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckFinalizadas_CheckedChanged);
             // 
+            // dtFecha
+            // 
+            this.dtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.dtFecha.BorderColor = System.Drawing.Color.White;
+            this.dtFecha.BorderRadius = 1;
+            this.dtFecha.Color = System.Drawing.Color.White;
+            this.dtFecha.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dtFecha.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtFecha.DisabledColor = System.Drawing.Color.Gray;
+            this.dtFecha.DisplayWeekNumbers = false;
+            this.dtFecha.DPHeight = 0;
+            this.dtFecha.FillDatePicker = false;
+            this.dtFecha.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtFecha.ForeColor = System.Drawing.Color.White;
+            this.dtFecha.Icon = ((System.Drawing.Image)(resources.GetObject("dtFecha.Icon")));
+            this.dtFecha.IconColor = System.Drawing.Color.White;
+            this.dtFecha.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtFecha.LeftTextMargin = 5;
+            this.dtFecha.Location = new System.Drawing.Point(49, 32);
+            this.dtFecha.MinimumSize = new System.Drawing.Size(0, 32);
+            this.dtFecha.Name = "dtFecha";
+            this.dtFecha.Size = new System.Drawing.Size(236, 32);
+            this.dtFecha.TabIndex = 68;
+            // 
             // frmCalendario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,11 +401,11 @@
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckFinalizadas;
         private System.Windows.Forms.Label label1;
-        private RJCodeAdvance.RJControls.RJDatePicker dtFecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaFecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaHora;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaComentario;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnaCheck;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaUsuario;
+        private Bunifu.UI.WinForms.BunifuDatePicker dtFecha;
     }
 }

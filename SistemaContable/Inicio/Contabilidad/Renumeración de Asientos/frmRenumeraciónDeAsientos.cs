@@ -49,6 +49,69 @@ namespace SistemaContable.Inicio.Contabilidad.Renumeración_de_Asientos
             }
         }
 
+        private void btnProcesar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtNroEjercicio.Text != "")
+                {
+                    if (Negocio.FGenerales.EstadoEjercicio(Convert.ToInt32(txtNroEjercicio), 1))
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Ejercicio Contable se encuentra cerrado.", false);
+                        MessageBox.ShowDialog();
+                    }
+                    else
+                    {
+                        btnProcesar.Enabled = false;
+
+                        AccesoBase.InsertUpdateDatos($"UPDATE Caja SET caj_estado = 1");
+
+                        int cant = 0;
+                        int contador = 0;
+
+                        DataSet ds = new DataSet();
+                        ds = AccesoBase.ListarDatos($"SELECT * FROM Ejercicio WHERE eje_codigo = {txtNroEjercicio.Text}");
+                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        {
+                            contador = Convert.ToInt32(dr["eje_renumera"].ToString() == "" ? "1" : dr["eje_renumera"].ToString() == "0" ? "1" : dr["eje_renumera"].ToString());
+                        }
+
+                        DataSet ds2 = new DataSet();
+                        ds2 = AccesoBase.ListarDatos($"SELECT * FROM Asiento WHERE ast_ejercicio = {txtNroEjercicio.Text} ORDER BY ast_tipo, ast_fecha");
+
+                        ProgressBar.Maximum = ds2.Tables[0].Rows.Count;
+
+                        foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                        {
+                            AccesoBase.InsertUpdateDatos($"UPDATE Asiento SET ast_renumera = {contador} WHERE ast_ejercicio = {txtNroEjercicio.Text} AND ast_asiento = {dr2["ast_asiento"]} AND ast_renumera = {dr2["ast_renumera"]}");
+
+                            ProgressBar.Value = ProgressBar.Value + 1;
+
+                            lblControlBar.Text = "Renumerando Asientos (" + ProgressBar.Value.ToString() + " de " + ds2.Tables[0].Rows.Count.ToString() + ")";
+
+                            contador = contador + 1;
+                        }
+
+                        //AccesoBase.InsertUpdateDatos();
+
+                    }
+                }
+                else
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debera seleccionar un Ejercicio Contable.", false);
+                    MessageBox.ShowDialog();
+                }
+            }
+            catch (Exception)
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE Caja SET caj_estado = 0");
+
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Hubi un problema en la Renumeración de Aientos.", false);
+                MessageBox.ShowDialog();
+            }
+
+        }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

@@ -60,6 +60,8 @@
             this.lbl4 = new System.Windows.Forms.Label();
             this.Check4 = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -283,7 +285,7 @@
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl1.Location = new System.Drawing.Point(124, 160);
+            this.lbl1.Location = new System.Drawing.Point(62, 160);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(229, 17);
             this.lbl1.TabIndex = 128;
@@ -294,7 +296,7 @@
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl2.Location = new System.Drawing.Point(124, 181);
+            this.lbl2.Location = new System.Drawing.Point(62, 181);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(251, 17);
             this.lbl2.TabIndex = 132;
@@ -318,7 +320,7 @@
             this.Check2.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Check2.Cursor = System.Windows.Forms.Cursors.Default;
             this.Check2.CustomCheckmarkImage = null;
-            this.Check2.Location = new System.Drawing.Point(101, 181);
+            this.Check2.Location = new System.Drawing.Point(39, 181);
             this.Check2.MinimumSize = new System.Drawing.Size(17, 17);
             this.Check2.Name = "Check2";
             this.Check2.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -373,7 +375,7 @@
             this.Check1.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Check1.Cursor = System.Windows.Forms.Cursors.Default;
             this.Check1.CustomCheckmarkImage = null;
-            this.Check1.Location = new System.Drawing.Point(101, 160);
+            this.Check1.Location = new System.Drawing.Point(39, 160);
             this.Check1.MinimumSize = new System.Drawing.Size(17, 17);
             this.Check1.Name = "Check1";
             this.Check1.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -512,7 +514,7 @@
             this.Check3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Check3.Cursor = System.Windows.Forms.Cursors.Default;
             this.Check3.CustomCheckmarkImage = null;
-            this.Check3.Location = new System.Drawing.Point(101, 166);
+            this.Check3.Location = new System.Drawing.Point(39, 166);
             this.Check3.MinimumSize = new System.Drawing.Size(17, 17);
             this.Check3.Name = "Check3";
             this.Check3.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -554,7 +556,7 @@
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl3.Location = new System.Drawing.Point(124, 166);
+            this.lbl3.Location = new System.Drawing.Point(62, 166);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(231, 17);
             this.lbl3.TabIndex = 140;
@@ -566,7 +568,7 @@
             this.lbl4.AutoSize = true;
             this.lbl4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl4.Location = new System.Drawing.Point(124, 139);
+            this.lbl4.Location = new System.Drawing.Point(62, 139);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(289, 17);
             this.lbl4.TabIndex = 142;
@@ -590,7 +592,7 @@
             this.Check4.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Check4.Cursor = System.Windows.Forms.Cursors.Default;
             this.Check4.CustomCheckmarkImage = null;
-            this.Check4.Location = new System.Drawing.Point(101, 139);
+            this.Check4.Location = new System.Drawing.Point(39, 139);
             this.Check4.MinimumSize = new System.Drawing.Size(17, 17);
             this.Check4.Name = "Check4";
             this.Check4.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -631,12 +633,30 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // dtpDesde
+            // 
+            this.dtpDesde.Location = new System.Drawing.Point(146, 75);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(17, 20);
+            this.dtpDesde.TabIndex = 143;
+            this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
+            // 
+            // dtpHasta
+            // 
+            this.dtpHasta.Location = new System.Drawing.Point(146, 108);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(17, 20);
+            this.dtpHasta.TabIndex = 144;
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpHasta_ValueChanged);
+            // 
             // frmBalances_Informes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(555, 203);
+            this.Controls.Add(this.dtpHasta);
+            this.Controls.Add(this.dtpDesde);
             this.Controls.Add(this.lbl4);
             this.Controls.Add(this.Check4);
             this.Controls.Add(this.lbl3);
@@ -707,5 +727,7 @@
         private System.Windows.Forms.Label lbl4;
         private Bunifu.UI.WinForms.BunifuCheckBox Check4;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
     }
 }
