@@ -227,6 +227,7 @@
     <Compile Include="Funciones\Contabilidad\FDetalledeModelos.cs" />
     <Compile Include="Funciones\Contabilidad\FActualizacionDDI.cs" />
     <Compile Include="Funciones\Contabilidad\FActualizacionMDA.cs" />
+    <Compile Include="Funciones\Contabilidad\FSaldosAjsutados.cs" />
     <Compile Include="Funciones\Mantenimiento\FAgenda.cs" />
     <Compile Include="Funciones\Mantenimiento\FCentrodeCostos.cs" />
     <Compile Include="Funciones\Mantenimiento\FCoeficienteDeAjuste.cs" />

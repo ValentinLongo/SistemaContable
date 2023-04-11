@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRenumeraciónDeAsientos));
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.btnProcesar = new RJCodeAdvance.RJControls.RJButton();
             this.ProgressBar = new Bunifu.UI.WinForms.BunifuProgressBar();
             this.btnEjercicio = new System.Windows.Forms.Button();
+            this.tRenumera = new System.Windows.Forms.Timer(this.components);
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -260,6 +262,11 @@
             this.btnEjercicio.UseVisualStyleBackColor = false;
             this.btnEjercicio.Click += new System.EventHandler(this.btnEjercicio_Click);
             // 
+            // tRenumera
+            // 
+            this.tRenumera.Interval = 1000;
+            this.tRenumera.Tick += new System.EventHandler(this.tRenumera_Tick);
+            // 
             // frmRenumeraciónDeAsientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,5 +310,6 @@
         private RJCodeAdvance.RJControls.RJButton btnProcesar;
         private Bunifu.UI.WinForms.BunifuProgressBar ProgressBar;
         private System.Windows.Forms.Button btnEjercicio;
+        private System.Windows.Forms.Timer tRenumera;
     }
 }

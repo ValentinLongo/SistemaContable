@@ -47,6 +47,7 @@ using SistemaContable.Inicio.Ver.Calendario;
 using SistemaContable.Inicio.Contabilidad.Renumeración_de_Asientos;
 using SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos;
 using SistemaContable.Inicio.Mantenimiento.Rubricación_de_SubDiarios;
+using SistemaContable.Inicio.Contabilidad.Saldos_Ajustados;
 
 namespace SistemaContable
 {
@@ -611,7 +612,8 @@ namespace SistemaContable
 
         private void saldosYAjustados_Click(object sender, EventArgs e)
         {
-
+            frmSaldosAjustados frm = new frmSaldosAjustados();
+            Negocio.FGenerales.Mostrarfrm(frm, saldosYAjustados.Tag.ToString());
         }
 
         private void balanceDeSumasYSaldos_Click(object sender, EventArgs e)
