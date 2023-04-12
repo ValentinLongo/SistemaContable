@@ -23,6 +23,8 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
         {
             InitializeComponent();
 
+            checkValoresdeAjuste.Checked = true;
+
             //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
@@ -61,13 +63,19 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 {
                     cbSeleccion.SelectedIndex = 0;
                 }
+                else
+                {
+                    cbSeleccion.SelectedIndex = -1;
+                }
 
                 DataSet ds3 = new DataSet();
                 ds3 = AccesoBase.ListarDatos($"SELECT * FROM CentroC ORDER BY cec_codigo");
                 cbCC.Items.Add("TODOS");
-                cbCC.DataSource = ds3.Tables[0];
-                cbCC.DisplayMember = "cec_descri";
-                //cbCC.ValueMember = "";
+                foreach (DataRow dr3 in ds3.Tables[0].Rows)
+                {
+                    cbCC.Items.Add(dr3["cec_descri"]);
+                    //cbCC.ValueMember = "";
+                }
                 cbCC.SelectedIndex = 0;
 
                 //(Parte de codigo que creo que es irrelevante) "por posible error"
@@ -144,10 +152,11 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                                 }
                             }
 
+
+                            DataSet ds3 = new DataSet();
+                            ds3 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio1 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal {terminal} AND IsNull(aux_col13,0) <> 0 ORDER BY aux_codigo");
                             if (advertencias == 1)
                             {
-                                DataSet ds3 = new DataSet();
-                                ds3 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio1 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal {terminal} AND IsNull(aux_col13,0) <> 0 ORDER BY aux_codigo");
                                 if (ds3.Tables[0].Rows.Count == 0)
                                 {
                                     frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "Atención: No se han encontrado Datos para Generar el Asiento. Presione Procesar", false, true);
@@ -183,6 +192,83 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                                     CC = Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbCC.Text,"CentroC","cec");
                                 }
 
+                                foreach (DataRow dr3 in ds3.Tables[0].Rows)
+                                {
+                                    DataSet ds4 = new DataSet();
+                                    ds4 = AccesoBase.ListarDatos($"SELECT max(mva_cod) as maximo FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
+                                    foreach (DataRow dr4 in ds4.Tables[0].Rows)
+                                    {
+                                        CA = dr4["maximo"] is null ? 1 : Convert.ToInt32(dr4["maximo"]) + 1;
+                                    }
+
+                                    double money;
+
+                                    if (dr3["aux_col13"] is null)
+                                    {
+                                        money = 0;
+                                    }
+                                    else
+                                    {
+                                        money = Math.Abs(Convert.ToDouble(dr3["aux_col13"]));
+                                    }
+
+                                    if (Convert.ToInt32(dr3["aux_col13"].ToString() == "" ? "0" : dr3["aux_col13"].ToString()) > 0)
+                                    {
+                                        AccesoBase.InsertUpdateDatosMoney($"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES ({terminal}, {dr3["aux_codigo"]}, '{dr3["pcu_descri"]}', {"*"}, 0, '', {CA}, 0, {CC})", money.ToString());
+                                    }
+                                    else
+                                    {
+                                        AccesoBase.InsertUpdateDatosMoney($"INSERT INTO Aux_MovAsto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES ({terminal}, {dr3["aux_codigo"]}, '{dr3["pcu_descri"]}', 0, {"*"}, '', {CA}, 0, {CC})", money.ToString());
+                                    }
+                                }
+
+                                DataSet ds5 = new DataSet();
+                                ds5 = AccesoBase.ListarDatos($"SELECT max(mva_cod) as maximo FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
+                                foreach (DataRow dr5 in ds5.Tables[0].Rows)
+                                {
+                                    CA = dr5["maximo"] is null ? 1 : Convert.ToInt32(dr5["maximo"]) + 1;
+                                }
+
+                                double dif = 0;
+
+                                DataSet ds6 = new DataSet();
+                                ds6 = AccesoBase.ListarDatos($"SELECT (sum(mva_debe) - sum(mva_haber)) as Diferencia FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
+                                foreach (DataRow dr6 in ds6.Tables[0].Rows)
+                                {
+                                    if (ds6.Tables[0].Rows.Count == 0)
+                                    {
+                                        dif = 0;
+                                    }
+                                    else
+                                    {
+                                        dif = Math.Abs(Convert.ToDouble(dr6["Diferencia"]));
+                                    }
+                                }
+
+                                if (dif < 0)
+                                {
+                                    AccesoBase.InsertUpdateDatosMoney($"INSERT INTO Aux_MovAsto (mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES ({terminal}, {ContraP}, '{ContraPDescri}', {"*"}, 0, '', {CA}, 0, 0)", dif.ToString() );
+                                }
+                                else
+                                {
+                                    AccesoBase.InsertUpdateDatosMoney($"INSERT INTO Aux_MovAsto (mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES ({terminal}, {ContraP}, '{ContraPDescri}', 0, {"*"}, '', {CA}, 0, 0)", dif.ToString() );
+                                }
+
+                                DataSet ds7 = new DataSet();
+                                ds7 = AccesoBase.ListarDatos($"SELECT * FROM Aux_MovAsto WHERE mva_terminal = {terminal} ORDER BY mva_haber, mva_debe, mva_cuenta ");
+
+                                CA = 1;
+
+                                foreach (DataRow dr7 in ds7.Tables[0].Rows)
+                                {
+                                    CA = CA + 1;
+
+                                    AccesoBase.InsertUpdateDatos($"UPDATE Aux_MovAsto SET mva_cod = {CA} WHERE mva_terminal = {terminal} AND mva_cod = {dr7["mva_cod"]}");
+                                }
+
+                                DataSet ds8 = new DataSet();
+                                ds8 = AccesoBase.ListarDatos($"SELECT * FROM Ejercicio WHERE eje_codigo = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")}");
+
                                 //terminar
                             }
                             else
@@ -213,7 +299,37 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
         private void Actualizar() 
         {
-            //terminar
+            if (cbSeleccion.Text != "")
+            {
+                //Cursor.Current = Cursors.WaitCursor;
+                //Application.DoEvents();
+
+                DataSet ds = new DataSet();
+                DataSet ds2 = new DataSet();
+
+                if (checkValoresdeAjuste.Checked)
+                {
+                    ds = AccesoBase.ListarDatos($"SELECT sum(aux_col1) as Col1, sum(aux_col2) as Col2, sum(aux_col3) as Col3, sum(aux_col4) as Col4, sum(aux_col5) as Col5, sum(aux_col6) as Col6, sum(aux_col7) as Col7, sum(aux_col8) as Col8, sum(aux_col9) as Col9, sum(aux_col10) as Col10, sum(aux_col11) as Col11, sum(aux_col12) as Col12, sum(aux_col13) as Col13 FROM Aux_PromMesAnio1 WHERE aux_terminal = {terminal}");
+
+                    ds2 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio1 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
+                }
+                else if (checkSaldosConAjuste.Checked)
+                {
+                    ds = AccesoBase.ListarDatos($"SELECT sum(aux_col1) as Col1, sum(aux_col2) as Col2, sum(aux_col3) as Col3, sum(aux_col4) as Col4, sum(aux_col5) as Col5, sum(aux_col6) as Col6, sum(aux_col7) as Col7, sum(aux_col8) as Col8, sum(aux_col9) as Col9, sum(aux_col10) as Col10, sum(aux_col11) as Col11, sum(aux_col12) as Col12, sum(aux_col13) as Col13 FROM Aux_PromMesAnio2 WHERE aux_terminal = {terminal}");
+
+                    ds2 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio2 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
+                }
+                else if (checkSaldosSinAjuste.Checked)
+                {
+                    ds = AccesoBase.ListarDatos($"SELECT sum(aux_col1) as Col1, sum(aux_col2) as Col2, sum(aux_col3) as Col3, sum(aux_col4) as Col4, sum(aux_col5) as Col5, sum(aux_col6) as Col6, sum(aux_col7) as Col7, sum(aux_col8) as Col8, sum(aux_col9) as Col9, sum(aux_col10) as Col10, sum(aux_col11) as Col11, sum(aux_col12) as Col12, sum(aux_col13) as Col13 FROM Aux_PromMesAnio3 WHERE aux_terminal = {terminal}");
+
+                    ds2 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio3 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
+                }
+
+                //terminar
+
+                //Cursor.Current = Cursors.Default;
+            }
         }
 
         private void cbSeleccion_Click(object sender, EventArgs e)
@@ -233,6 +349,10 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
         private void checkVDA(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e) //checkValoresDeAjuste
         {
+            if (checkValoresdeAjuste.Checked == false && checkSaldosConAjuste.Checked == false && checkSaldosSinAjuste.Checked == false)
+            {
+                checkValoresdeAjuste.Checked = true;
+            }
             if (checkValoresdeAjuste.Checked)
             {
                 btnAsiento.Enabled = true;
@@ -246,6 +366,10 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
         private void checkSCA(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e) //checkSaldosConAjuste
         {
+            if (checkValoresdeAjuste.Checked == false && checkSaldosConAjuste.Checked == false && checkSaldosSinAjuste.Checked == false)
+            {
+                checkSaldosConAjuste.Checked = true;
+            }
             if (checkSaldosConAjuste.Checked)
             {
                 btnAsiento.Enabled = false;
@@ -259,6 +383,10 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
         private void checkSSA(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e) //checkSaldosSinAjuste
         {
+            if (checkValoresdeAjuste.Checked == false && checkSaldosConAjuste.Checked == false && checkSaldosSinAjuste.Checked == false)
+            {
+                checkSaldosSinAjuste.Checked = true;
+            }
             if (checkSaldosSinAjuste.Checked)
             {
                 btnAsiento.Enabled = false;

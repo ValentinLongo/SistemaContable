@@ -39,7 +39,7 @@ namespace SistemaContable
         private static string OBSERVA;
         private static string REFERENCIA;
 
-        public frmAutorización([Optional] Form frm) // AutSinCB = utilizar al ventana autorizacion pero con codigo de barra deshabilitado
+        public frmAutorización([Optional] Form frm)
         {
             InitializeComponent();
 
@@ -59,12 +59,12 @@ namespace SistemaContable
             int terminal = frmLogin.NumeroTerminal;
 
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"select ter_pideautcod from terminal where ter_codigo = {terminal}");
+            ds = AccesoBase.ListarDatos($"select ter_pideAutCodBarra from terminal where ter_codigo = {terminal}");
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                if (dr["ter_pideautcod"] != DBNull.Value)
+                if (dr["ter_pideAutCodBarra"] != DBNull.Value)
                 {
-                    resultado = Convert.ToInt32(dr["ter_pideautcod"]);
+                    resultado = Convert.ToInt32(dr["ter_pideAutCodBarra"]);
                 }
             }
             if (resultado == 1)
@@ -231,7 +231,7 @@ namespace SistemaContable
                         txtUsuario.Enabled = false;
                         txtContraseña.Enabled = false;
                         btnAcceder.Enabled = false;
-                        labelcontrolbox.Text = "ESPERANDO AUTORIZACIÓN...";
+                        lblcontrolbox.Text = "ESPERANDO AUTORIZACIÓN...";
 
                         switch (TIPO)
                         {
@@ -262,7 +262,7 @@ namespace SistemaContable
                     }
                     else
                     {
-                        labelcontrolbox.Text = "Solicitud de Autorización";
+                        lblcontrolbox.Text = "Solicitud de Autorización";
                         timer1.Enabled = false;
                         txtUsuario.Enabled = true;
                         txtContraseña.Enabled = true;
@@ -286,7 +286,7 @@ namespace SistemaContable
                 txtUsuario.Enabled = true;
                 txtContraseña.Enabled = true;
                 btnAcceder.Enabled = true;
-                labelcontrolbox.Text = "Solicitud de Autorización";
+                lblcontrolbox.Text = "Solicitud de Autorización";
 
                 AccesoBase.InsertUpdateDatos($"DELETE FROM Autoriza WHERE aut_codigo = {codigo}");
 
@@ -315,7 +315,7 @@ namespace SistemaContable
                     txtUsuario.Enabled = true;
                     txtContraseña.Enabled = true;
                     btnAcceder.Enabled = true;
-                    labelcontrolbox.Text = "AUTORIZADO!!!";
+                    lblcontrolbox.Text = "AUTORIZADO!!!";
 
                     ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_codigo = {usu_autorizo} AND usu_estado = 1 ");
                     foreach (DataRow dr in ds.Tables[0].Rows)
@@ -335,7 +335,7 @@ namespace SistemaContable
                     txtUsuario.Enabled = true;
                     txtContraseña.Enabled = true;
                     btnAcceder.Enabled = true;
-                    labelcontrolbox.Text = "RECHAZADO!!!";
+                    lblcontrolbox.Text = "RECHAZADO!!!";
 
                     AccesoBase.InsertUpdateDatos($"DELETE FROM Autoriza WHERE aut_codigo = {codigo}");
 
@@ -344,17 +344,6 @@ namespace SistemaContable
                 }
             }
 
-        }
-
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void pbOcultar_Click(object sender, EventArgs e)
@@ -376,6 +365,16 @@ namespace SistemaContable
                 pbOcultar.Visible = true;
             }
         }
-    }
 
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+    }
 }

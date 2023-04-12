@@ -10,10 +10,14 @@ namespace Datos
 {
     public class AccesoBase
     {
-        //Cambiar por la base de datos que pidan
+        //Cambiar por la base de datos que pidan//
+
         // Data Source=, ESTE VALOR REPRESENTA EL NOMBRE DEL SERVIDOR QUE APARECE EN EL MANAGEMENT STUDIO
+
         // Initial Catalog=, AQUI SE COLOCA EL NOMBRE DE LA BASE DE DATOS
+
         // Integrated Security=, REPRESENTA SI TIENE INTEGRADA SEGURIDAD, DEJAR EN TRUE (UTILIZA LA VALIDACION DE WINDOWS)
+
         //private static string datosConexion = @"Data Source=DESKTOP-E314JV2\SQLEXPRESS;Initial Catalog=db_testconnect;Integrated Security=true";
         //public static string datosConexion = @"Data Source = SERVERMASER\MASER_INF;Initial Catalog = CoronelApp; User ID = sa; Password=1220;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=true";
         private static SqlConnection sqlConec = new SqlConnection();

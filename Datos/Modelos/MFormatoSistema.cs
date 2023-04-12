@@ -13,6 +13,5 @@ namespace Datos.Modelos
         public string fmt_rgbFore { get; set; }
         public string fmt_fuenteName { get; set; }
         public string fmt_fuenteSize { get; set; }
-
     }
 }
