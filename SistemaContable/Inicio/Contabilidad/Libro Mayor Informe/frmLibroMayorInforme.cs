@@ -1,4 +1,5 @@
-﻿using SistemaContable.General;
+﻿using Datos;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

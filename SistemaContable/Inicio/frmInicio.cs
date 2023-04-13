@@ -834,5 +834,11 @@ namespace SistemaContable
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            prueba frm = new prueba();
+            frm.Show();
+        }
     }
 }
