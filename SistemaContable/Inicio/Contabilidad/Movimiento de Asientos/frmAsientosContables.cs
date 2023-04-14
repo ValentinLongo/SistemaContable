@@ -53,7 +53,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     $"From (Select *, Z.UsuModi1 as UsuModi, Case When mva_codigo = 1 Then mva_importe Else 0 End as Debe, Case When mva_codigo = 2 Then mva_importe Else 0 End as Haber From MovAsto " +
                     $"Left Join Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta Left Join Usuario on ast_user = Usuario.usu_codigo " +
                     $"Left Join Ejercicio on ast_ejercicio = eje_codigo Left Join TipAsto on ast_tipo = tas_codigo Left Join (Select usu_codigo as UsuCod, usu_nombre as UsuModi1 From Usuario) as Z on ast_usumodi = Z.UsuCod Where ast_ejercicio = '{cbSeleccion.SelectedValue}' {busqueda} {filtro} ) as X " +
-                    $"Group By X.ast_asiento, X.ast_renumera, X.ast_fecha, X.ast_ctapro, X.ast_comenta, X.ast_tipocbte, X.ast_cbte, X.ast_ejercicio, X.eje_descri, X.ast_user, X.usu_nombre, X.ast_hora, X.ast_fecalta, X.UsuModi, X.ast_fecmodi, X.ast_horamodi, X.ast_tipo, X.tas_descri {diferencia} Order By X.ast_fecha, X.ast_asiento");            
+                    $"Group By X.ast_asiento, X.ast_renumera, X.ast_fecha, X.ast_ctapro, X.ast_comenta, X.ast_tipocbte, X.ast_cbte, X.ast_ejercicio, X.eje_descri, X.ast_user, X.usu_nombre, X.ast_hora, X.ast_fecalta, X.UsuModi, X.ast_fecmodi, X.ast_horamodi, X.ast_tipo, X.tas_descri {diferencia} Order By X.ast_fecha, X.ast_asiento");
                 //consulta vale
                 //ds = AccesoBase.ListarDatosPaginado($"SELECT ast_asiento as Asiento, ast_fecha as Fecha, ast_comenta as Comentario, Debe as Debe, Debe as Haber, usu_nombre as 'Creó', ast_fecalta as Fecha, ast_hora as Hora, ast_usumodi as 'Modificó', ast_fecmodi as Fecha, ast_horamodi as Hora FROM Asiento as A LEFT JOIN Usuario ON A.ast_user = Usuario.usu_codigo Left Join (SELECT mva_asiento, SUM(mva_importe) / 2 as Debe FROM MovAsto group by mva_asiento) as B on A.ast_asiento = B.mva_asiento where ast_ejercicio = '{cbSeleccion.SelectedValue}' group by ast_asiento, ast_fecha, ast_comenta, ast_user, Debe, usu_nombre,ast_fecalta,ast_hora,ast_usumodi,ast_fecmodi,ast_horamodi order by ast_fecha", valorData);
                 dgvAsientosContables.DataSource = ds.Tables[0];
@@ -67,7 +67,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
-                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(1, cbSeleccion,"","","");
+                frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(1, cbSeleccion, "", "", "");
                 frm.ShowDialog();
             }
             else
@@ -122,7 +122,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.Tag.ToString() != "0")
             {
-                CargarDGV("","","");
+                CargarDGV("", "", "");
             }
             else
             {
@@ -172,7 +172,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         private void CheckDiferencia_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
             string diferencia = "";
-            if (CheckDiferencia.Checked) 
+            if (CheckDiferencia.Checked)
             {
                 diferencia = " HAVING Sum(X.Debe) <> Sum(X.Haber) ";
             }
@@ -214,7 +214,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 {
                     busqueda = Negocio.FGenerales.Busqueda(dgvAux, txtBusqueda.Text, CheckInicio, 2, "ast_comenta");
                 }
-                CargarDGV(busqueda,"","");
+                CargarDGV(busqueda, "", "");
             }
             else
             {
@@ -232,7 +232,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         private void btnAnular_Click(object sender, EventArgs e)
         {
             int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
-            if (seleccionado != -1) 
+            if (seleccionado != -1)
             {
                 int validado = 0;
                 int asiento = Convert.ToInt32(dgvAsientosContables.Rows[seleccionado].Cells[0].Value);

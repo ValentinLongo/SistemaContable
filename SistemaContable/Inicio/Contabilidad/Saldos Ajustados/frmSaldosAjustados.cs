@@ -1,6 +1,7 @@
 ﻿using Datos;
 using Negocio;
 using SistemaContable.General;
+using SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,7 +46,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
             DataSet ds2 = new DataSet();
             ds2 = AccesoBase.ListarDatos($"SELECT * FROM Ejercicio ORDER BY IsNull(eje_cerrado,0), eje_codigo");
-            if (ds2.Tables[0].Rows.Count == 0) 
+            if (ds2.Tables[0].Rows.Count == 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Sistema ha Detectado que No Existen Ejercicio Contables Cargados.", false);
                 MessageBox.ShowDialog();
@@ -78,7 +79,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 }
                 cbCC.SelectedIndex = 0;
 
-                //(Parte de codigo que creo que es irrelevante) "por posible error"
+                //footer
             }
         }
 
@@ -141,7 +142,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
                             //Advertencias
                             DataSet ds2 = new DataSet();
-                            ds2 = AccesoBase.ListarDatos($"SELECT * FROM Asiento WHERE ast_tipo = 3 AND ast_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text,"Ejercicio","eje")}");
+                            ds2 = AccesoBase.ListarDatos($"SELECT * FROM Asiento WHERE ast_tipo = 3 AND ast_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")}");
                             if (ds2.Tables[0].Rows.Count != 0)
                             {
                                 frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "Atención: El Sistema ha Detectado que ya se ha Registrado al menos un Asiento de Ajuste por inflación, ¿Desea Continuar?", true, true);
@@ -189,7 +190,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
                                 if (cbCC.Text != "TODOS")
                                 {
-                                    CC = Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbCC.Text,"CentroC","cec");
+                                    CC = Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbCC.Text, "CentroC", "cec");
                                 }
 
                                 foreach (DataRow dr3 in ds3.Tables[0].Rows)
@@ -247,11 +248,11 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
                                 if (dif < 0)
                                 {
-                                    AccesoBase.InsertUpdateDatosMoney($"INSERT INTO Aux_MovAsto (mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES ({terminal}, {ContraP}, '{ContraPDescri}', {"*"}, 0, '', {CA}, 0, 0)", dif.ToString() );
+                                    AccesoBase.InsertUpdateDatosMoney($"INSERT INTO Aux_MovAsto (mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES ({terminal}, {ContraP}, '{ContraPDescri}', {"*"}, 0, '', {CA}, 0, 0)", dif.ToString());
                                 }
                                 else
                                 {
-                                    AccesoBase.InsertUpdateDatosMoney($"INSERT INTO Aux_MovAsto (mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES ({terminal}, {ContraP}, '{ContraPDescri}', 0, {"*"}, '', {CA}, 0, 0)", dif.ToString() );
+                                    AccesoBase.InsertUpdateDatosMoney($"INSERT INTO Aux_MovAsto (mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) VALUES ({terminal}, {ContraP}, '{ContraPDescri}', 0, {"*"}, '', {CA}, 0, 0)", dif.ToString());
                                 }
 
                                 DataSet ds7 = new DataSet();
@@ -268,8 +269,16 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
                                 DataSet ds8 = new DataSet();
                                 ds8 = AccesoBase.ListarDatos($"SELECT * FROM Ejercicio WHERE eje_codigo = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")}");
+                                string hasta = "";
+                                foreach (DataRow dr8 in ds8.Tables[0].Rows)
+                                {
+                                    hasta = dr8["eje_hasta"].ToString();
+                                }
 
-                                //terminar
+                                //frmaggmodvisasientocontable
+
+                                CargarDGV();
+                                Negocio.Funciones.Contabilidad.FSaldosAjsutados.Habilitar(this);
                             }
                             else
                             {
@@ -285,19 +294,159 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
         {
             if (cbSeleccion.Text == "")
             {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Deberá Seleccionar un para Procesar", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Deberá Seleccionar un Ejercicio antes de Procesar", false);
                 MessageBox.ShowDialog();
             }
             else
             {
                 Negocio.Funciones.Contabilidad.FSaldosAjsutados.Deshabilitar(this);
 
-                //terminar
-            }
+                //seteos para el grid (ver q onda)
 
+                DataSet dsAux = new DataSet();
+                dsAux = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ORDER BY (RIGHT(aji_periodo), 4) + LEFT(aji_periodo,2)) ");
+                DataSet ds = new DataSet();
+                foreach (DataRow drAux in dsAux.Tables[0].Rows)
+                {
+                    ds = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ORDER BY ({Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ORDER BY ({drAux["aji_periodo"].ToString().Substring(drAux["aji_periodo"].ToString().Length - 4)} + {drAux["aji_periodo"].ToString().Substring(0, 2)})");
+                }
+
+                if (ds.Tables[0].Rows.Count == 0)
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: No se ha definido un coeficiente para  el Ejercicio Seleccionado", false, true);
+                    MessageBox.ShowDialog();
+
+                    Negocio.Funciones.Contabilidad.FSaldosAjsutados.Habilitar(this);
+                }
+                else
+                {
+                    int n = 3;
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        dgv1.Columns[n].HeaderText = dr["aji_periodo"].ToString();
+                        n = n + 1;
+                    }
+
+                    DataSet ds2 = new DataSet();
+                    ds2 = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE IsNull(pcu_ajustainf, 0) = 1");
+                    if (ds2.Tables[0].Rows.Count == 0)
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: No se han Definido las Cuentas Contables que van a ser incluidas en este informe.", false, true);
+                        MessageBox.ShowDialog();
+
+                        Negocio.Funciones.Contabilidad.FSaldosAjsutados.Habilitar(this);
+                    }
+                    else
+                    {
+                        AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_PromMesAnio1 WHERE aux_terminal = {terminal}");
+                        AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_PromMesAnio2 WHERE aux_terminal = {terminal}");
+                        AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_PromMesAnio3 WHERE aux_terminal = {terminal}");
+
+                        AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_PromMesAnio1 (aux_terminal, aux_codigo,  aux_col1, aux_col2, aux_col3, aux_col4, aux_col5, aux_col6, aux_col7, aux_col8, aux_col9, aux_col10, aux_col11, aux_col12, aux_col13, aux_col14, aux_col15, aux_col16, aux_col17, aux_col18, aux_col19, aux_col20, aux_col21, aux_col22, aux_col23, aux_col24, aux_col25, aux_col26, aux_col27, aux_col28, aux_col29, aux_col30, aux_col31, aux_col32, aux_col33, aux_col34, aux_col35, aux_col36, aux_col37, aux_col38, aux_col39, aux_col40) " +
+                        $"SELECT ({terminal}, pcu_cuenta, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 FROM PCuenta WHERE IsNull(pcu_ajustainf, 0) = 1");
+
+                        AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_PromMesAnio2 (aux_terminal, aux_codigo,  aux_col1, aux_col2, aux_col3, aux_col4, aux_col5, aux_col6, aux_col7, aux_col8, aux_col9, aux_col10, aux_col11, aux_col12, aux_col13, aux_col14, aux_col15, aux_col16, aux_col17, aux_col18, aux_col19, aux_col20, aux_col21, aux_col22, aux_col23, aux_col24, aux_col25, aux_col26, aux_col27, aux_col28, aux_col29, aux_col30, aux_col31, aux_col32, aux_col33, aux_col34, aux_col35, aux_col36, aux_col37, aux_col38, aux_col39, aux_col40) " +
+                        $"SELECT ({terminal}, pcu_cuenta, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 FROM PCuenta WHERE IsNull(pcu_ajustainf, 0) = 1");
+
+                        AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_PromMesAnio3 (aux_terminal, aux_codigo,  aux_col1, aux_col2, aux_col3, aux_col4, aux_col5, aux_col6, aux_col7, aux_col8, aux_col9, aux_col10, aux_col11, aux_col12, aux_col13, aux_col14, aux_col15, aux_col16, aux_col17, aux_col18, aux_col19, aux_col20, aux_col21, aux_col22, aux_col23, aux_col24, aux_col25, aux_col26, aux_col27, aux_col28, aux_col29, aux_col30, aux_col31, aux_col32, aux_col33, aux_col34, aux_col35, aux_col36, aux_col37, aux_col38, aux_col39, aux_col40) " +
+                        $"SELECT ({terminal}, pcu_cuenta, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 FROM PCuenta WHERE IsNull(pcu_ajustainf, 0) = 1");
+
+                        //Cursor.Current = Cursors.WaitCursor;
+                        //Application.DoEvents();
+
+                        string CC = ""; //Centro de Costo
+                        bool Ctrl;
+
+                        if (cbSeleccion.Text == "TODOS")
+                        {
+                            CC = "";
+                            Ctrl = false;
+                        }
+                        else
+                        {
+                            CC = "mva_cc = " + Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbCC.Text, "CentroC", "cec");
+                            Ctrl = true;
+                        }
+
+                        if (Ctrl)
+                        {
+                            DataSet ds3 = new DataSet();
+                            ds3 = AccesoBase.ListarDatos($"SELECT * FROM MovAsto LEFT JOIN Aux_PromMesAnio1 on aux_codigo = mva_cuenta AND aux_terminal = {terminal} " +
+                            $"LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE aux_terminal = {terminal} AND ast_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} AND IsNull(mva_cc,0) = 0");
+                            if (ds3.Tables[0].Rows.Count != 0)
+                            {
+                                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Sistema ha Detectado que Existen movimientos asociados a las Cuentas Contables incluidas en este informe, que No poseen un Centro de Costo Asociado", false, true);
+                                MessageBox.ShowDialog();
+                            }
+
+                        }
+
+                        int X = 1;
+                        double coeficiente = 0;
+                        //double valor = 0;
+                        double SCA = 0; // Saldo Con Ajuste
+                        double SSA = 0; // Saldo Sin Ajuste
+                        double ajuste = 0;
+
+                        for (n = 3; n < dgv1.Columns.Count; n++)
+                        {
+                            if (dgv1.Columns[n].HeaderText != "")
+                            {
+                                DataSet ds4 = new DataSet();
+                                ds4 = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} AND aji_periodo = '{dgv1.Columns[n].HeaderText}'");
+                                if (ds4.Tables[0].Rows.Count != 0)
+                                {
+                                    foreach (DataRow dr4 in ds4.Tables[0].Rows)
+                                    {
+                                        coeficiente = Convert.ToDouble(dr4["aji_coef"]);
+                                    }
+
+                                    DataSet ds5 = new DataSet();
+                                    ds5 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio1 WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
+                                    foreach (DataRow dr5 in ds5.Tables[0].Rows)
+                                    {
+                                        DataSet ds6 = new DataSet();
+                                        ds6 = AccesoBase.ListarDatos($"SELECT (sum(case when mva_codigo = 1 then mva_importe else 0 end) - sum(case when mva_codigo = 2 then mva_importe else 0 end)) as mva_saldo " +
+                                        $"FROM MovAsto LEFT JOIN PCuenta on pcu_cuenta = mva_cuenta LEFT JOIN Asiento on mva_asiento = ast_asiento " +
+                                        $"WHERE ast_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} AND mva_cuenta = {dr5["aux_codigo"]} " +
+                                        $"AND (MONTH(ast_fecha) = '{dgv1.Columns[n].HeaderText.Substring(0,2)}' AND YEAR(ast_fecha) = '{dgv1.Columns[n].HeaderText.Substring(dgv1.Columns[n].HeaderText.Length - 4)}') {CC}");
+                                        foreach (DataRow dr6 in ds6.Tables[0].Rows)
+                                        {
+                                            SCA = Math.Round( (dr6["mva_saldo"] is null ? 0 : Convert.ToDouble(dr6["mva_saldo"])) * coeficiente);
+                                            SSA = Math.Round( dr6["mva_saldo"] is null ? 0 : Convert.ToDouble(dr6["mva_saldo"]) );
+                                            ajuste = SCA - SSA;
+                                            break;
+                                        }
+
+                                        AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_PromMesAnio1 SET aux_col1{X} = {"*"} WHERE aux_terminal = {terminal} AND aux_codigo = {dr5["aux_codigo"]}", ajuste.ToString() );
+                                        AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_PromMesAnio1 SET aux_col1{X} = {"*"} WHERE aux_terminal = {terminal} AND aux_codigo = {dr5["aux_codigo"]}", SCA.ToString() );
+                                        AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_PromMesAnio1 SET aux_col1{X} = {"*"} WHERE aux_terminal = {terminal} AND aux_codigo = {dr5["aux_codigo"]}", SSA.ToString() );
+                                    }
+                                    X = X + 1;
+                                }
+                            }
+                        }
+
+                        if (Ctrl)
+                        {
+                            AccesoBase.InsertUpdateDatos($"DELETE Aux_PromMesAnio1 FROM Aux_PromMesAnio1 LEFT JOIN (MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento) on aux_codigo = mva_cuenta AND IsNull(mva_cc,0) = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbCC.Text, "CentroC", "cec")} AND ast_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} WHERE mva_asiento is null");
+                            AccesoBase.InsertUpdateDatos($"DELETE Aux_PromMesAnio2 FROM Aux_PromMesAnio2 LEFT JOIN (MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento) on aux_codigo = mva_cuenta AND IsNull(mva_cc,0) = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbCC.Text, "CentroC", "cec")} AND ast_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} WHERE mva_asiento is null");
+                            AccesoBase.InsertUpdateDatos($"DELETE Aux_PromMesAnio3 FROM Aux_PromMesAnio3 LEFT JOIN (MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento) on aux_codigo = mva_cuenta AND IsNull(mva_cc,0) = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbCC.Text, "CentroC", "cec")} AND ast_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} WHERE mva_asiento is null");
+                        }
+
+                        AccesoBase.InsertUpdateDatos($"UPDATE Aux_PromMesAnio1 SET aux_col13 = IsNull(aux_col1, 0) + IsNull(aux_col2, 0) + IsNull(aux_col3, 0) + IsNull(aux_col4, 0) + IsNull(aux_col5, 0) + IsNull(aux_col6, 0) + IsNull(aux_col7, 0) + IsNull(aux_col8, 0) + IsNull(aux_col9, 0) + IsNull(aux_col10, 0) + IsNull(aux_col11, 0) + IsNull(aux_col12, 0) WHERE aux_terminal = {terminal}");
+                        AccesoBase.InsertUpdateDatos($"UPDATE Aux_PromMesAnio2 SET aux_col13 = IsNull(aux_col1, 0) + IsNull(aux_col2, 0) + IsNull(aux_col3, 0) + IsNull(aux_col4, 0) + IsNull(aux_col5, 0) + IsNull(aux_col6, 0) + IsNull(aux_col7, 0) + IsNull(aux_col8, 0) + IsNull(aux_col9, 0) + IsNull(aux_col10, 0) + IsNull(aux_col11, 0) + IsNull(aux_col12, 0) WHERE aux_terminal = {terminal}");
+                        AccesoBase.InsertUpdateDatos($"UPDATE Aux_PromMesAnio3 SET aux_col13 = IsNull(aux_col1, 0) + IsNull(aux_col2, 0) + IsNull(aux_col3, 0) + IsNull(aux_col4, 0) + IsNull(aux_col5, 0) + IsNull(aux_col6, 0) + IsNull(aux_col7, 0) + IsNull(aux_col8, 0) + IsNull(aux_col9, 0) + IsNull(aux_col10, 0) + IsNull(aux_col11, 0) + IsNull(aux_col12, 0) WHERE aux_terminal = {terminal}");
+
+                        CargarDGV();
+                        Negocio.Funciones.Contabilidad.FSaldosAjsutados.Habilitar(this);
+                        //Cursor.Current = Cursors.Default;
+                    }
+                }
+            }
         }
 
-        private void Actualizar() 
+        private void CargarDGV()
         {
             if (cbSeleccion.Text != "")
             {
@@ -326,7 +475,19 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                     ds2 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio3 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
                 }
 
-                //terminar
+                //(footertext)
+
+                dgv1.DataSource = ds2.Tables[0];
+
+                DataSet dsAux = new DataSet();
+                dsAux = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ");
+                DataSet ds3 = new DataSet();
+                foreach (DataRow drAux in dsAux.Tables[0].Rows)
+                {
+                    ds3 = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ORDER BY ({drAux["aji_periodo"].ToString().Substring(drAux["aji_periodo"].ToString().Length - 4)} + {drAux["aji_periodo"].ToString().Substring(0,2)})");
+                }
+
+                dgv1.DataSource = ds3.Tables[0];
 
                 //Cursor.Current = Cursors.Default;
             }
@@ -360,7 +521,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 checkSaldosConAjuste.Checked = false;
                 checkSaldosSinAjuste.Checked = false;
 
-                Actualizar();
+                CargarDGV();
             }
         }
 
@@ -377,7 +538,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 checkValoresdeAjuste.Checked = false;
                 checkSaldosSinAjuste.Checked = false;
 
-                Actualizar();
+                CargarDGV();
             }
         }
 
@@ -394,7 +555,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 checkValoresdeAjuste.Checked = false;
                 checkSaldosConAjuste.Checked = false;
 
-                Actualizar();
+                CargarDGV();
             }
         }
 

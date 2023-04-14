@@ -25,7 +25,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
     public partial class frmAggModVisAsientoContable : Form
     {
         private static int add_mod_vis;
-        private static int terminal = frmLogin.NumeroTerminal; 
+        private static int terminal = frmLogin.NumeroTerminal;
 
         int autoincremental = 1;
         int autoincremental2 = 1;
@@ -33,7 +33,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         public static int nuevoasiento = 0;
 
         //addmodvis = proceso que realiza el frm
-        public frmAggModVisAsientoContable(int addmodvis, ComboBox cbSeleccion, string asiento, string fecha, string comentario)
+        public frmAggModVisAsientoContable(int addmodvis, [Optional] ComboBox cbSeleccion, [Optional] string asiento, [Optional] string fecha, [Optional] string comentario)
         {
             InitializeComponent();
 
@@ -163,7 +163,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (asiento == "ALTA EN CONCEPTO")
             {
-                asiento = Negocio.FGenerales.ultimoNumeroID("ast_asiento","Asiento").ToString();
+                asiento = Negocio.FGenerales.ultimoNumeroID("ast_asiento", "Asiento").ToString();
             }
 
             DataSet ds = new DataSet();
@@ -489,7 +489,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
-            }           
+            }
         }
 
         private void btnModelo_Click(object sender, EventArgs e)
@@ -546,7 +546,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 int resultado = AccesoBase.ValidarDatos($"SELECT * FROM Asiento WHERE ast_ejercicio = {txtCodEjercicio.Text} AND ast_tipo = {cbTipoAsiento.SelectedValue}");
                 if (resultado == 1)
                 {
-                    frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "Atención: El asiento de tipo " + cbTipoAsiento.Text + " ya ha sido registrado para este ejercicio", false, true );
+                    frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "Atención: El asiento de tipo " + cbTipoAsiento.Text + " ya ha sido registrado para este ejercicio", false, true);
                     MessageBox2.Show();
                 }
                 else
@@ -586,7 +586,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
                             AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
 
-                            foreach (DataRow dr2 in ds2.Tables[0].Rows) 
+                            foreach (DataRow dr2 in ds2.Tables[0].Rows)
                             {
                                 DataSet ds3 = new DataSet();
                                 ds3 = AccesoBase.ListarDatos($"SELECT max(mva_cod)as maximo FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
@@ -607,7 +607,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                                 else
                                 {
                                     AccesoBase.InsertUpdateDatosMoney($"INSERT INTO Aux_movasto(mva_terminal, mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cod, mva_asiento, mva_cc) " +
-                                    $"VALUES ({terminal}, {Convert.ToInt32(dr2["mva_cuenta"])}, '{dr2["mva_descri"].ToString()}', 0, * , '', {codautonum}, 0, 0 )" , Math.Abs(Convert.ToDecimal(dr2["mva_saldo"])).ToString());
+                                    $"VALUES ({terminal}, {Convert.ToInt32(dr2["mva_cuenta"])}, '{dr2["mva_descri"].ToString()}', 0, * , '', {codautonum}, 0, 0 )", Math.Abs(Convert.ToDecimal(dr2["mva_saldo"])).ToString());
                                 }
                             }
 
@@ -658,7 +658,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
                                         DataSet ds4 = new DataSet();
                                         ds4 = AccesoBase.ListarDatos($"SELECT * FROM MovAsto LEFT JOIN PCuenta on mva_cuenta = pcu_cuenta WHERE mva_asiento = {asiento} ORDER BY mva_codigo desc, mva_cuenta");
-                                        
+
                                         codautonum = 0;
 
                                         foreach (DataRow dr4 in ds4.Tables[0].Rows)

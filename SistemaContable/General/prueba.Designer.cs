@@ -132,7 +132,7 @@
             this.dgv2.RowHeadersVisible = false;
             this.dgv2.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgv2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv2.Size = new System.Drawing.Size(656, 24);
+            this.dgv2.Size = new System.Drawing.Size(637, 24);
             this.dgv2.TabIndex = 128;
             this.dgv2.TabStop = false;
             this.dgv2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgv2_Scroll);
