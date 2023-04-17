@@ -20,40 +20,18 @@ namespace SistemaContable.General
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario");
             dgv1.DataSource = ds.Tables[0];
+            dgvFooter(dgv1, dgv2);
 
-            DataSet ds2 = new DataSet();
-            ds2 = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_codigo = 1");
-            dgv2.DataSource = ds2.Tables[0];
-
-            dgv2.BringToFront();
-
+            //DataSet ds2 = new DataSet();
+            //ds2 = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_codigo = 1");
+            //dgv2.DataSource = ds2.Tables[0];
+            //dgv2.BringToFront();
         }
 
-        private void SetEqualColumnWidths(DataGridView dgv1, DataGridView dgv2)
+        private void dgvFooter(DataGridView dgv1, DataGridView dgv2) 
         {
-            //foreach(DataGridViewColumn column1 in dgv1.Columns) 
-            //{
-            //    foreach (DataGridViewColumn column2 in dgv1.Columns)
-            //    {
-
-            //    }
-            //}
-
-            //// Obtener el ancho de columna promedio de todas las columnas en el primer DataGridView
-            //double totalColumnWidth = 0;
-            //foreach (DataGridViewColumn column in dgv1.Columns)
-            //{
-            //    totalColumnWidth += column.Width;
-            //}
-            //double averageColumnWidth = totalColumnWidth / dgv1.Columns.Count;
-
-            //// Establecer el mismo ancho de columna promedio para todas las columnas en el segundo DataGridView
-            //foreach (DataGridViewColumn column in dgv2.Columns)
-            //{
-            //    column.Width = (int)averageColumnWidth;
-            //}
+            //sincronizar dgvs
         }
-
 
         private void dgv1_Scroll(object sender, ScrollEventArgs e)
         {

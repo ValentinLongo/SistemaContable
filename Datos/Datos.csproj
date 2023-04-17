@@ -224,6 +224,7 @@
   <ItemGroup>
     <Compile Include="AccesoBase.cs" />
     <Compile Include="Modelos\MAgenda.cs" />
+    <Compile Include="Modelos\MAsiento.cs" />
     <Compile Include="Modelos\MCoeficienteDeAjuste.cs" />
     <Compile Include="Modelos\MConceptoContable.cs" />
     <Compile Include="Modelos\MFormatoSistema.cs" />

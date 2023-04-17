@@ -1,5 +1,6 @@
 ﻿using CrystalDecisions.Shared.Json;
 using Datos;
+using Datos.Modelos;
 using Negocio;
 using SistemaContable.General;
 using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_Modelos;
@@ -33,7 +34,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         public static int nuevoasiento = 0;
 
         //addmodvis = proceso que realiza el frm
-        public frmAggModVisAsientoContable(int addmodvis, [Optional] ComboBox cbSeleccion, [Optional] string asiento, [Optional] string fecha, [Optional] string comentario)
+        public frmAggModVisAsientoContable(int addmodvis, [Optional] ComboBox cbSeleccion, [Optional] string asiento, [Optional] string fecha, [Optional] string comentario, [Optional] MAsiento modelo)
         {
             InitializeComponent();
 
@@ -41,10 +42,18 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             //Negocio.FFormatoSistema.SetearFormato(this);
 
             add_mod_vis = addmodvis;
-            Setear(addmodvis, cbSeleccion.SelectedValue.ToString(), cbSeleccion.Text, asiento, fecha, comentario);
+
+            if (modelo != null)
+            {
+                Setear(1, "", "", "", "", "", modelo);
+            }
+            else
+            {
+                Setear(addmodvis, cbSeleccion.SelectedValue.ToString(), cbSeleccion.Text, asiento, fecha, comentario);
+            }
         }
 
-        private void Setear(int addmodvis, string codejercicio, string descriejercicio, string asiento, string fecha, string comentario)
+        private void Setear(int addmodvis, string codejercicio, string descriejercicio, string asiento, string fecha, string comentario, [Optional] MAsiento modelo)
         {
             txtCodEjercicio.Text = codejercicio;
             txtDescriEjercicio.Text = descriejercicio;
@@ -66,6 +75,18 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
                 //botones
                 btnGenerar.Enabled = false;
+
+                if (modelo != null)
+                {
+                    txtCodEjercicio.Text = modelo.ast_nroEjer.ToString();
+                    txtDescriEjercicio.Text = modelo.ast_descriEjer;
+                    cbTipoAsiento.SelectedIndex = modelo.ast_cbTipoAsientoIndex;
+                    dtFecha.Value = Convert.ToDateTime(modelo.ast_fecha);
+                    cbTipoAsiento.Enabled = modelo.ast_cbTipoAsiento;
+                    btnGenerar.Enabled = modelo.ast_btnGenerar;
+                    btnPlandeCta.Enabled = modelo.ast_btnPlanDeCuenta;
+                    btnModelo.Enabled = modelo.ast_btnModelo;
+                }
             }
             else if (addmodvis == 2) // modificar
             {
