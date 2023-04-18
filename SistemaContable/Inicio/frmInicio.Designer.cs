@@ -153,7 +153,6 @@
             this.btnArchivos = new RJCodeAdvance.RJControls.RJButton();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.toolStripADs.SuspendLayout();
             this.panel5.SuspendLayout();
             this.Menu_Archivos.SuspendLayout();
@@ -1027,7 +1026,6 @@
             this.PanelMenu.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.PanelMenu, "PanelMenu");
             this.PanelMenu.BorderRadius = 0;
-            this.PanelMenu.Controls.Add(this.button1);
             this.PanelMenu.Controls.Add(this.panel6);
             this.PanelMenu.Controls.Add(this.panel2);
             this.PanelMenu.Controls.Add(this.panel1);
@@ -1330,13 +1328,6 @@
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.TabStop = false;
             // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmInicio
             // 
             resources.ApplyResources(this, "$this");
@@ -1507,6 +1498,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button1;
     }
 }

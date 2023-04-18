@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Datos.Modelos;
+using Microsoft.SqlServer.Server;
 using Negocio;
 using SistemaContable.General;
 using SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos;
@@ -12,6 +13,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls.WebParts;
 using System.Windows.Forms;
 
 namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
@@ -24,6 +26,8 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
         public frmSaldosAjustados()
         {
             InitializeComponent();
+
+            SeteoFooter(dgv1, footer);
 
             checkValoresdeAjuste.Checked = true;
 
@@ -49,7 +53,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
             ds2 = AccesoBase.ListarDatos($"SELECT * FROM Ejercicio ORDER BY IsNull(eje_cerrado,0), eje_codigo");
             if (ds2.Tables[0].Rows.Count == 0)
             {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Sistema ha Detectado que No Existen Ejercicio Contables Cargados.", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Sistema ha Detectado que No Existen Ejercicios Contables Cargados.", false);
                 MessageBox.ShowDialog();
                 btnProcesar.Enabled = false;
             }
@@ -61,13 +65,13 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 cbSeleccion.DisplayMember = "eje_descri";
                 //cbSeleccion.ValueMember = "";
 
-                if (Flag == false)
+                if (Flag)
                 {
-                    cbSeleccion.SelectedIndex = 0;
+                    cbSeleccion.SelectedIndex = -1;
                 }
                 else
                 {
-                    cbSeleccion.SelectedIndex = -1;
+                    cbSeleccion.SelectedIndex = 0;
                 }
 
                 DataSet ds3 = new DataSet();
@@ -80,7 +84,10 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 }
                 cbCC.SelectedIndex = 0;
 
-                //(footer)
+                for (int i = 3; i < dgv1.Columns.Count; i++)
+                {
+                    footer.Columns[i].HeaderText = "0,00";
+                }
             }
         }
 
@@ -92,7 +99,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
             Negocio.Funciones.Contabilidad.FSaldosAjsutados.Deshabilitar(this);
 
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT * FROM ParamContab LEFT JOIN PCuenta on par_cta_AjusteInf = pcu_cuenta");
+            ds = AccesoBase.ListarDatos($"SELECT * FROM ParamContab LEFT JOIN PCuenta on par_ctaAjusteInf = pcu_cuenta");
             if (ds.Tables[0].Rows.Count == 0) //Validación
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Deberá definir los Parametros Contables", false);
@@ -156,8 +163,9 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 }
             }
 
+            //hasta aca esta bien
             DataSet ds3 = new DataSet();
-            ds3 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio1 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal {terminal} AND IsNull(aux_col13,0) <> 0 ORDER BY aux_codigo");
+            ds3 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio1 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} AND IsNull(aux_col13,0) <> 0 ORDER BY aux_codigo");
             if (ds3.Tables[0].Rows.Count == 0) //Validación
             {
                 frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "Atención: No se han encontrado Datos para Generar el Asiento. Presione Procesar", false, true);
@@ -301,7 +309,16 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
             Negocio.Funciones.Contabilidad.FSaldosAjsutados.Deshabilitar(this);
 
-            //(seteos para el grid)
+            for (int i = 3; i < dgv1.Columns.Count; i++)
+            {
+                //dgv1.Columns[i].Width = 50;
+                dgv1.Columns[i].HeaderText = "";
+                dgv1.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgv1.Columns[i].DefaultCellStyle.Format = "0.00";
+            }
+            dgv1.Columns[15].HeaderText = "Acumulado";
+
+            //SeteoFooter(dgv1, footer);
 
             DataSet dsAux = new DataSet();
             dsAux = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ORDER BY (RIGHT(aji_periodo), 4) + LEFT(aji_periodo,2)) ");
@@ -472,9 +489,31 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                     ds2 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio3 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
                 }
 
-                //(footertext)
+                for (int i = 3; i < dgv1.Columns.Count; i++)
+                {
+                    dgv1.Columns[i].DefaultCellStyle.Format = "0.00";
+                }
+
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    footer.Columns[3].HeaderText = dr["Col1"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[4].HeaderText = dr["Col2"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[5].HeaderText = dr["Col3"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[6].HeaderText = dr["Col4"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[7].HeaderText = dr["Col5"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[8].HeaderText = dr["Col6"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[9].HeaderText = dr["Col7"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[10].HeaderText = dr["Col8"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[11].HeaderText = dr["Col9"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[12].HeaderText = dr["Col10"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[13].HeaderText = dr["Col12"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[14].HeaderText = dr["Col13"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[15].HeaderText = dr["Col14"] is null ? "0" : dr["Col1"].ToString();
+                    break;
+                }
 
                 dgv1.DataSource = ds2.Tables[0];
+                dgv1.Refresh();
 
                 DataSet dsAux = new DataSet();
                 dsAux = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ");
@@ -505,7 +544,10 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
             dgv2.Rows.Clear();
             dgv2.Refresh();
 
-            //(footertext)
+            for (int i = 3; i < dgv1.Columns.Count; i++)
+            {
+                footer.Columns[i].HeaderText = "0,00";
+            }
 
             //Cursor.Current = Cursors.Default;
         }
@@ -525,7 +567,10 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
             dgv2.Rows.Clear();
             dgv2.Refresh();
 
-            //(footertext)
+            for (int i = 3; i < dgv1.Columns.Count; i++)
+            {
+                footer.Columns[i].HeaderText = "0,00";
+            }
 
             //Cursor.Current = Cursors.Default;
         }
@@ -611,6 +656,34 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 CargarDGV();
             }
         }
+
+        //FOOTER
+        private void SeteoFooter(DataGridView dgv1, DataGridView footer)
+        {
+            foreach (DataGridViewColumn Columna in dgv1.Columns)
+            {
+                DataGridViewColumn col = new DataGridViewColumn();
+                col.Width = Columna.Width;
+                footer.Columns.Add(col);
+            }
+        }
+
+        private void dgv1_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (dgv1.HorizontalScrollingOffset == e.NewValue)
+            {
+                footer.HorizontalScrollingOffset = e.NewValue;
+            }
+            if (Negocio.FGenerales.SincronizarFooter(dgv1))
+            {
+                footer.Location = new Point(9, 142);
+            }
+            else
+            {
+                footer.Location = new Point(9, 473);
+            }
+        }
+        //
 
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

@@ -223,5 +223,27 @@ namespace Negocio
             return false;
         }
 
+        public static bool SincronizarFooter(DataGridView dgv) 
+        {
+            //la posición actual del scrollbar vertical
+            int verticalOffset = dgv.VerticalScrollingOffset;
+
+            //el tamaño del contenido del DataGridView
+            int contentHeight = dgv.RowCount * dgv.Rows[0].Height;
+
+            //el tamaño del área visible del DataGridView
+            int visibleHeight = dgv.ClientSize.Height - dgv.ColumnHeadersHeight;
+
+            //Compara la posición actual con el tamaño del contenido menos el tamaño del área visible
+            if (verticalOffset >= contentHeight - visibleHeight)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

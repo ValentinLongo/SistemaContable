@@ -129,9 +129,9 @@ namespace SistemaContable
 
         private void frmInicio_MdiChildActivate(object sender, EventArgs e)
         {
-            Negocio.FFormatoSistema.ColorBordes(borde1);
-            Negocio.FFormatoSistema.ColorBordes(borde2);
-            Negocio.FFormatoSistema.ColorBordes(borde3);
+            Negocio.FFormatoSistema.ColorBorde(borde1);
+            Negocio.FFormatoSistema.ColorBorde(borde2);
+            Negocio.FFormatoSistema.ColorBorde(borde3);
         }
 
         private void tsbMensajesInternos_MouseEnter(object sender, EventArgs e)
@@ -833,12 +833,6 @@ namespace SistemaContable
                     estandar.Close();
                 }
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            prueba frm = new prueba();
-            frm.Show();
         }
     }
 }
