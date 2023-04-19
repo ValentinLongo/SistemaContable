@@ -56,13 +56,15 @@
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.dgv2 = new System.Windows.Forms.DataGridView();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.footer = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2 = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.footer = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,8 +76,6 @@
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
@@ -502,7 +502,6 @@
             this.dgv1.AllowUserToAddRows = false;
             this.dgv1.AllowUserToDeleteRows = false;
             this.dgv1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgv1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgv1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -520,6 +519,8 @@
             this.Column1,
             this.Column2,
             this.Column3,
+            this.Column4,
+            this.Column5,
             this.Column6,
             this.Column7,
             this.Column8,
@@ -530,10 +531,8 @@
             this.Column13,
             this.Column14,
             this.Column15,
-            this.Column16,
-            this.Column17,
-            this.Column18});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Column16});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
@@ -563,27 +562,6 @@
             this.dgv1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgv1_Scroll);
             this.dgv1.SelectionChanged += new System.EventHandler(this.dgv1_SelectionChanged);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Cuenta";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 78;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descripción";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 108;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Centro de Costo";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 136;
-            // 
             // dgv2
             // 
             this.dgv2.AllowUserToAddRows = false;
@@ -604,8 +582,8 @@
             this.dgv2.ColumnHeadersHeight = 25;
             this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4,
-            this.Column5});
+            this.Column17,
+            this.Column18});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -634,17 +612,19 @@
             this.dgv2.TabIndex = 127;
             this.dgv2.TabStop = false;
             // 
-            // Column4
+            // Column17
             // 
-            this.Column4.HeaderText = "Periodo";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.Column17.DataPropertyName = "aji_periodo";
+            this.Column17.HeaderText = "Periodo";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
             // 
-            // Column5
+            // Column18
             // 
-            this.Column5.HeaderText = "Coeficiente";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.Column18.DataPropertyName = "aji_coef";
+            this.Column18.HeaderText = "Coeficiente";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
             // 
             // footer
             // 
@@ -654,10 +634,11 @@
             this.footer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.footer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.footer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.NullValue = null;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -674,7 +655,7 @@
             this.footer.DefaultCellStyle = dataGridViewCellStyle8;
             this.footer.EnableHeadersVisualStyles = false;
             this.footer.GridColor = System.Drawing.Color.White;
-            this.footer.Location = new System.Drawing.Point(9, 473);
+            this.footer.Location = new System.Drawing.Point(9, 470);
             this.footer.Name = "footer";
             this.footer.ReadOnly = true;
             this.footer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -693,8 +674,49 @@
             this.footer.TabIndex = 129;
             this.footer.TabStop = false;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "aux_codigo";
+            this.Column1.HeaderText = "Cuenta";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "pcu_descri";
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 225;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "pcu_centroC";
+            this.Column3.HeaderText = "Centro de Costo";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "aux_col1";
+            this.Column4.HeaderText = "";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 18;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "aux_col2";
+            this.Column5.HeaderText = "";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 18;
+            // 
             // Column6
             // 
+            this.Column6.DataPropertyName = "aux_col3";
             this.Column6.HeaderText = "";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
@@ -702,6 +724,7 @@
             // 
             // Column7
             // 
+            this.Column7.DataPropertyName = "aux_col4";
             this.Column7.HeaderText = "";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
@@ -709,6 +732,7 @@
             // 
             // Column8
             // 
+            this.Column8.DataPropertyName = "aux_col5";
             this.Column8.HeaderText = "";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
@@ -716,6 +740,7 @@
             // 
             // Column9
             // 
+            this.Column9.DataPropertyName = "aux_col6";
             this.Column9.HeaderText = "";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -723,6 +748,7 @@
             // 
             // Column10
             // 
+            this.Column10.DataPropertyName = "aux_col7";
             this.Column10.HeaderText = "";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
@@ -730,6 +756,7 @@
             // 
             // Column11
             // 
+            this.Column11.DataPropertyName = "aux_col8";
             this.Column11.HeaderText = "";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -737,6 +764,7 @@
             // 
             // Column12
             // 
+            this.Column12.DataPropertyName = "aux_col9";
             this.Column12.HeaderText = "";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
@@ -744,6 +772,7 @@
             // 
             // Column13
             // 
+            this.Column13.DataPropertyName = "aux_col10";
             this.Column13.HeaderText = "";
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
@@ -751,6 +780,7 @@
             // 
             // Column14
             // 
+            this.Column14.DataPropertyName = "aux_col11";
             this.Column14.HeaderText = "";
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
@@ -758,6 +788,7 @@
             // 
             // Column15
             // 
+            this.Column15.DataPropertyName = "aux_col12";
             this.Column15.HeaderText = "";
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
@@ -765,24 +796,11 @@
             // 
             // Column16
             // 
+            this.Column16.DataPropertyName = "(ninguno)";
             this.Column16.HeaderText = "";
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
             this.Column16.Width = 18;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            this.Column17.Width = 18;
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            this.Column18.Width = 18;
             // 
             // frmSaldosAjustados
             // 
@@ -844,12 +862,14 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.DataGridView dgv2;
+        private System.Windows.Forms.DataGridView footer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridView footer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
@@ -861,7 +881,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
     }
 }

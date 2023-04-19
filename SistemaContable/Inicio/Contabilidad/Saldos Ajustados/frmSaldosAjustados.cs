@@ -21,13 +21,10 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
     public partial class frmSaldosAjustados : Form
     {
         int terminal = frmLogin.NumeroTerminal;
-        //int Posicion;
 
         public frmSaldosAjustados()
         {
             InitializeComponent();
-
-            SeteoFooter(dgv1, footer);
 
             checkValoresdeAjuste.Checked = true;
 
@@ -61,6 +58,14 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
             {
                 btnProcesar.Enabled = true;
 
+                for (int i = 3; i < dgv1.Columns.Count; i++)
+                {
+                    dgv1.Columns[i].Width = 125;
+                    dgv1.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                }
+
+                SeteoFooter(dgv1, footer);
+
                 cbSeleccion.DataSource = ds2.Tables[0];
                 cbSeleccion.DisplayMember = "eje_descri";
                 //cbSeleccion.ValueMember = "";
@@ -83,11 +88,6 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                     //cbCC.ValueMember = "";
                 }
                 cbCC.SelectedIndex = 0;
-
-                for (int i = 3; i < dgv1.Columns.Count; i++)
-                {
-                    footer.Columns[i].HeaderText = "0,00";
-                }
             }
         }
 
@@ -163,7 +163,6 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 }
             }
 
-            //hasta aca esta bien
             DataSet ds3 = new DataSet();
             ds3 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio1 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} AND IsNull(aux_col13,0) <> 0 ORDER BY aux_codigo");
             if (ds3.Tables[0].Rows.Count == 0) //Validación
@@ -311,23 +310,17 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
             for (int i = 3; i < dgv1.Columns.Count; i++)
             {
-                //dgv1.Columns[i].Width = 50;
-                dgv1.Columns[i].HeaderText = "";
-                dgv1.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 dgv1.Columns[i].DefaultCellStyle.Format = "0.00";
+                //footer.Columns[i].DefaultCellStyle.Format = "0.00";
             }
-            dgv1.Columns[15].HeaderText = "Acumulado";
+            dgv1.Columns["Column16"].HeaderText = "Acumulado";
 
             //SeteoFooter(dgv1, footer);
 
-            DataSet dsAux = new DataSet();
-            dsAux = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ORDER BY (RIGHT(aji_periodo), 4) + LEFT(aji_periodo,2)) ");
-            DataSet ds = new DataSet();
-            foreach (DataRow drAux in dsAux.Tables[0].Rows)
-            {
-                ds = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ORDER BY ({Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ORDER BY ({drAux["aji_periodo"].ToString().Substring(drAux["aji_periodo"].ToString().Length - 4)} + {drAux["aji_periodo"].ToString().Substring(0, 2)})");
-            }
+            // ORDER BY ({drAux["aji_periodo"].ToString().Substring(drAux["aji_periodo"].ToString().Length - 4)} + {drAux["aji_periodo"].ToString().Substring(0, 2)})
 
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ORDER BY (RIGHT(aji_periodo,4) + LEFT(aji_periodo,2))");           
             if (ds.Tables[0].Rows.Count == 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: No se ha definido un coeficiente para  el Ejercicio Seleccionado", false, true);
@@ -360,28 +353,25 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
             AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_PromMesAnio3 WHERE aux_terminal = {terminal}");
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_PromMesAnio1 (aux_terminal, aux_codigo,  aux_col1, aux_col2, aux_col3, aux_col4, aux_col5, aux_col6, aux_col7, aux_col8, aux_col9, aux_col10, aux_col11, aux_col12, aux_col13, aux_col14, aux_col15, aux_col16, aux_col17, aux_col18, aux_col19, aux_col20, aux_col21, aux_col22, aux_col23, aux_col24, aux_col25, aux_col26, aux_col27, aux_col28, aux_col29, aux_col30, aux_col31, aux_col32, aux_col33, aux_col34, aux_col35, aux_col36, aux_col37, aux_col38, aux_col39, aux_col40) " +
-            $"SELECT ({terminal}, pcu_cuenta, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 FROM PCuenta WHERE IsNull(pcu_ajustainf, 0) = 1");
+            $"SELECT {terminal}, pcu_cuenta, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 FROM PCuenta WHERE IsNull(pcu_ajustainf, 0) = 1");
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_PromMesAnio2 (aux_terminal, aux_codigo,  aux_col1, aux_col2, aux_col3, aux_col4, aux_col5, aux_col6, aux_col7, aux_col8, aux_col9, aux_col10, aux_col11, aux_col12, aux_col13, aux_col14, aux_col15, aux_col16, aux_col17, aux_col18, aux_col19, aux_col20, aux_col21, aux_col22, aux_col23, aux_col24, aux_col25, aux_col26, aux_col27, aux_col28, aux_col29, aux_col30, aux_col31, aux_col32, aux_col33, aux_col34, aux_col35, aux_col36, aux_col37, aux_col38, aux_col39, aux_col40) " +
-            $"SELECT ({terminal}, pcu_cuenta, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 FROM PCuenta WHERE IsNull(pcu_ajustainf, 0) = 1");
+            $"SELECT {terminal}, pcu_cuenta, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 FROM PCuenta WHERE IsNull(pcu_ajustainf, 0) = 1");
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_PromMesAnio3 (aux_terminal, aux_codigo,  aux_col1, aux_col2, aux_col3, aux_col4, aux_col5, aux_col6, aux_col7, aux_col8, aux_col9, aux_col10, aux_col11, aux_col12, aux_col13, aux_col14, aux_col15, aux_col16, aux_col17, aux_col18, aux_col19, aux_col20, aux_col21, aux_col22, aux_col23, aux_col24, aux_col25, aux_col26, aux_col27, aux_col28, aux_col29, aux_col30, aux_col31, aux_col32, aux_col33, aux_col34, aux_col35, aux_col36, aux_col37, aux_col38, aux_col39, aux_col40) " +
-            $"SELECT ({terminal}, pcu_cuenta, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 FROM PCuenta WHERE IsNull(pcu_ajustainf, 0) = 1");
-
-            //Cursor.Current = Cursors.WaitCursor;
-            //Application.DoEvents();
+            $"SELECT {terminal}, pcu_cuenta, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 FROM PCuenta WHERE IsNull(pcu_ajustainf, 0) = 1");
 
             string CC = ""; //Centro de Costo
             bool Ctrl;
 
-            if (cbSeleccion.Text == "TODOS")
+            if (cbCC.Text == "TODOS")
             {
                 CC = "";
                 Ctrl = false;
             }
             else
             {
-                CC = "mva_cc = " + Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbCC.Text, "CentroC", "cec");
+                CC = " AND mva_cc = " + Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbCC.Text, "CentroC", "cec");
                 Ctrl = true;
             }
 
@@ -395,8 +385,10 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                     frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Sistema ha Detectado que Existen movimientos asociados a las Cuentas Contables incluidas en este informe, que No poseen un Centro de Costo Asociado", false, true);
                     MessageBox.ShowDialog();
                 }
-
             }
+
+            Cursor.Current = Cursors.WaitCursor;
+            //Application.DoEvents();
 
             int X = 1;
             double coeficiente = 0;
@@ -429,15 +421,15 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                             $"AND (MONTH(ast_fecha) = '{dgv1.Columns[n].HeaderText.Substring(0, 2)}' AND YEAR(ast_fecha) = '{dgv1.Columns[n].HeaderText.Substring(dgv1.Columns[n].HeaderText.Length - 4)}') {CC}");
                             foreach (DataRow dr6 in ds6.Tables[0].Rows)
                             {
-                                SCA = Math.Round((dr6["mva_saldo"] is null ? 0 : Convert.ToDouble(dr6["mva_saldo"])) * coeficiente);
-                                SSA = Math.Round(dr6["mva_saldo"] is null ? 0 : Convert.ToDouble(dr6["mva_saldo"]));
+                                SCA = (dr6["mva_saldo"] is DBNull ? 0 : Convert.ToDouble(dr6["mva_saldo"]) * coeficiente);
+                                SSA = (dr6["mva_saldo"] is DBNull ? 0 : Convert.ToDouble(dr6["mva_saldo"]));
                                 ajuste = SCA - SSA;
                                 break;
                             }
 
-                            AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_PromMesAnio1 SET aux_col1{X} = {"*"} WHERE aux_terminal = {terminal} AND aux_codigo = {dr5["aux_codigo"]}", ajuste.ToString());
-                            AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_PromMesAnio1 SET aux_col1{X} = {"*"} WHERE aux_terminal = {terminal} AND aux_codigo = {dr5["aux_codigo"]}", SCA.ToString());
-                            AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_PromMesAnio1 SET aux_col1{X} = {"*"} WHERE aux_terminal = {terminal} AND aux_codigo = {dr5["aux_codigo"]}", SSA.ToString());
+                            AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_PromMesAnio1 SET aux_col{X} = {"*"} WHERE aux_terminal = {terminal} AND aux_codigo = {dr5["aux_codigo"]}", ajuste.ToString());
+                            AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_PromMesAnio2 SET aux_col{X} = {"*"} WHERE aux_terminal = {terminal} AND aux_codigo = {dr5["aux_codigo"]}", SCA.ToString());
+                            AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_PromMesAnio3 SET aux_col{X} = {"*"} WHERE aux_terminal = {terminal} AND aux_codigo = {dr5["aux_codigo"]}", SSA.ToString());
                         }
                         X = X + 1;
                     }
@@ -457,16 +449,13 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
             CargarDGV();
             Negocio.Funciones.Contabilidad.FSaldosAjsutados.Habilitar(this);
-            //Cursor.Current = Cursors.Default;
+            Cursor.Current = Cursors.Default;
         }
 
         private void CargarDGV()
         {
             if (cbSeleccion.Text != "")
             {
-                //Cursor.Current = Cursors.WaitCursor;
-                //Application.DoEvents();
-
                 DataSet ds = new DataSet();
                 DataSet ds2 = new DataSet();
 
@@ -474,105 +463,69 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 {
                     ds = AccesoBase.ListarDatos($"SELECT sum(aux_col1) as Col1, sum(aux_col2) as Col2, sum(aux_col3) as Col3, sum(aux_col4) as Col4, sum(aux_col5) as Col5, sum(aux_col6) as Col6, sum(aux_col7) as Col7, sum(aux_col8) as Col8, sum(aux_col9) as Col9, sum(aux_col10) as Col10, sum(aux_col11) as Col11, sum(aux_col12) as Col12, sum(aux_col13) as Col13 FROM Aux_PromMesAnio1 WHERE aux_terminal = {terminal}");
 
-                    ds2 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio1 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
+                    ds2 = AccesoBase.ListarDatos($"SELECT aux_codigo, aux_col1, aux_col2, aux_col3, aux_col4, aux_col5, aux_col6, aux_col7, aux_col8, aux_col9, aux_col10, aux_col11, aux_col12, pcu_descri, pcu_centroC FROM Aux_PromMesAnio1 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
                 }
                 else if (checkSaldosConAjuste.Checked)
                 {
                     ds = AccesoBase.ListarDatos($"SELECT sum(aux_col1) as Col1, sum(aux_col2) as Col2, sum(aux_col3) as Col3, sum(aux_col4) as Col4, sum(aux_col5) as Col5, sum(aux_col6) as Col6, sum(aux_col7) as Col7, sum(aux_col8) as Col8, sum(aux_col9) as Col9, sum(aux_col10) as Col10, sum(aux_col11) as Col11, sum(aux_col12) as Col12, sum(aux_col13) as Col13 FROM Aux_PromMesAnio2 WHERE aux_terminal = {terminal}");
 
-                    ds2 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio2 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
+                    ds2 = AccesoBase.ListarDatos($"SELECT aux_codigo, aux_col1, aux_col2, aux_col3, aux_col4, aux_col5, aux_col6, aux_col7, aux_col8, aux_col9, aux_col10, aux_col11, aux_col12, pcu_descri, pcu_centroC FROM Aux_PromMesAnio2 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
                 }
                 else if (checkSaldosSinAjuste.Checked)
                 {
                     ds = AccesoBase.ListarDatos($"SELECT sum(aux_col1) as Col1, sum(aux_col2) as Col2, sum(aux_col3) as Col3, sum(aux_col4) as Col4, sum(aux_col5) as Col5, sum(aux_col6) as Col6, sum(aux_col7) as Col7, sum(aux_col8) as Col8, sum(aux_col9) as Col9, sum(aux_col10) as Col10, sum(aux_col11) as Col11, sum(aux_col12) as Col12, sum(aux_col13) as Col13 FROM Aux_PromMesAnio3 WHERE aux_terminal = {terminal}");
 
-                    ds2 = AccesoBase.ListarDatos($"SELECT * FROM Aux_PromMesAnio3 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
+                    ds2 = AccesoBase.ListarDatos($"SELECT aux_codigo, aux_col1, aux_col2, aux_col3, aux_col4, aux_col5, aux_col6, aux_col7, aux_col8, aux_col9, aux_col10, aux_col11, aux_col12, pcu_descri, pcu_centroC FROM Aux_PromMesAnio3 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
                 }
 
                 for (int i = 3; i < dgv1.Columns.Count; i++)
                 {
                     dgv1.Columns[i].DefaultCellStyle.Format = "0.00";
+                    footer.ColumnHeadersDefaultCellStyle.Format = "0.00";
                 }
 
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    footer.Columns[3].HeaderText = dr["Col1"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[4].HeaderText = dr["Col2"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[5].HeaderText = dr["Col3"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[6].HeaderText = dr["Col4"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[7].HeaderText = dr["Col5"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[8].HeaderText = dr["Col6"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[9].HeaderText = dr["Col7"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[10].HeaderText = dr["Col8"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[11].HeaderText = dr["Col9"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[12].HeaderText = dr["Col10"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[13].HeaderText = dr["Col12"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[14].HeaderText = dr["Col13"] is null ? "0" : dr["Col1"].ToString();
-                    footer.Columns[15].HeaderText = dr["Col14"] is null ? "0" : dr["Col1"].ToString();
+                    footer.Columns[3].HeaderText = dr["Col1"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col1"])).ToString();
+                    footer.Columns[4].HeaderText = dr["Col2"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col2"])).ToString();
+                    footer.Columns[5].HeaderText = dr["Col3"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col3"])).ToString();
+                    footer.Columns[6].HeaderText = dr["Col4"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col4"])).ToString();
+                    footer.Columns[7].HeaderText = dr["Col5"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col5"])).ToString();
+                    footer.Columns[8].HeaderText = dr["Col6"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col6"])).ToString();
+                    footer.Columns[9].HeaderText = dr["Col7"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col7"])).ToString();
+                    footer.Columns[10].HeaderText = dr["Col8"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col8"])).ToString();
+                    footer.Columns[11].HeaderText = dr["Col9"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col9"])).ToString();
+                    footer.Columns[12].HeaderText = dr["Col10"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col10"])).ToString();
+                    footer.Columns[13].HeaderText = dr["Col11"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col11"])).ToString();
+                    footer.Columns[14].HeaderText = dr["Col12"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col12"])).ToString();
+                    footer.Columns[15].HeaderText = dr["Col13"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col13"])).ToString();
                     break;
                 }
 
                 dgv1.DataSource = ds2.Tables[0];
-                dgv1.Refresh();
 
-                DataSet dsAux = new DataSet();
-                dsAux = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ");
                 DataSet ds3 = new DataSet();
-                foreach (DataRow drAux in dsAux.Tables[0].Rows)
-                {
-                    ds3 = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ORDER BY ({drAux["aji_periodo"].ToString().Substring(drAux["aji_periodo"].ToString().Length - 4)} + {drAux["aji_periodo"].ToString().Substring(0, 2)})");
-                }
-
-                dgv1.DataSource = ds3.Tables[0];
-
-                //Cursor.Current = Cursors.Default;
+                ds3 = AccesoBase.ListarDatos($"SELECT aji_periodo, aji_coef FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} ORDER BY (RIGHT(aji_periodo,4) + LEFT(aji_periodo,2)) ");
+                dgv2.DataSource = ds3.Tables[0];
             }
         }
 
         private void cbSeleccion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Cursor.Current = Cursors.WaitCursor;
-            //Application.DoEvents();
-
             AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_PromMesAnio1 WHERE aux_terminal = {terminal}");
             AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_PromMesAnio2 WHERE aux_terminal = {terminal}");
             AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_PromMesAnio3 WHERE aux_terminal = {terminal}");
 
-            dgv1.Rows.Clear();
-            dgv1.Refresh();
-
-            dgv2.Rows.Clear();
-            dgv2.Refresh();
-
-            for (int i = 3; i < dgv1.Columns.Count; i++)
-            {
-                footer.Columns[i].HeaderText = "0,00";
-            }
-
-            //Cursor.Current = Cursors.Default;
+            Negocio.Funciones.Contabilidad.FSaldosAjsutados.LimpiarDGVs(dgv1, dgv2, footer);
         }
 
         private void cbCC_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Cursor.Current = Cursors.WaitCursor;
-            //Application.DoEvents();
-
             AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_PromMesAnio1 WHERE aux_terminal = {terminal}");
             AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_PromMesAnio2 WHERE aux_terminal = {terminal}");
             AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_PromMesAnio3 WHERE aux_terminal = {terminal}");
 
-            dgv1.Rows.Clear();
-            dgv1.Refresh();
-
-            dgv2.Rows.Clear();
-            dgv2.Refresh();
-
-            for (int i = 3; i < dgv1.Columns.Count; i++)
-            {
-                footer.Columns[i].HeaderText = "0,00";
-            }
-
-            //Cursor.Current = Cursors.Default;
+            Negocio.Funciones.Contabilidad.FSaldosAjsutados.LimpiarDGVs(dgv1, dgv2, footer);
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -674,13 +627,17 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
             {
                 footer.HorizontalScrollingOffset = e.NewValue;
             }
-            if (Negocio.FGenerales.SincronizarFooter(dgv1))
+
+            if (dgv1.Rows.Count != 0)
             {
-                footer.Location = new Point(9, 142);
-            }
-            else
-            {
-                footer.Location = new Point(9, 473);
+                if (Negocio.FGenerales.SincronizarFooter(dgv1))
+                {
+                    footer.Location = new Point(9, 140);
+                }
+                else
+                {
+                    footer.Location = new Point(9, 473);
+                }
             }
         }
         //

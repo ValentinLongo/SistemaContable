@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,7 @@ namespace Negocio.Funciones.Contabilidad
         {
             foreach (Control Ctrl in frm.Controls)
             {
-                if (Ctrl is RJButton || Ctrl is Label || Ctrl is ComboBox || Ctrl is BunifuCheckBox)
+                if (Ctrl is RJButton || Ctrl is ComboBox || Ctrl is BunifuCheckBox)
                 {
                     Ctrl.Enabled = false;
                 }
@@ -28,7 +29,7 @@ namespace Negocio.Funciones.Contabilidad
         {
             foreach (Control Ctrl in frm.Controls)
             {
-                if (Ctrl is RJButton || Ctrl is Label || Ctrl is ComboBox || Ctrl is BunifuCheckBox)
+                if (Ctrl is RJButton || Ctrl is ComboBox || Ctrl is BunifuCheckBox)
                 {
                     Ctrl.Enabled = true;
                 }
@@ -49,6 +50,37 @@ namespace Negocio.Funciones.Contabilidad
             return retorno;
         }
 
+        public static void LimpiarDGVs(DataGridView dgv1, DataGridView dgv2, [Optional] DataGridView footer)        
+        {
+            if (dgv1 != null)
+            {
+                DataTable dt = dgv1.DataSource as DataTable;
+                if (dt != null)
+                {
+                    dt.Rows.Clear();
+                    dgv1.Refresh();
+                }
+            }
+
+            if (dgv2 != null)
+            {
+                DataTable dt2 = dgv2.DataSource as DataTable;
+                if (dt2 != null)
+                {
+                    dt2.Rows.Clear();
+                    dgv2.Refresh();
+                }
+            }
+
+            if (footer != null)
+            {
+                for (int i = 3; i < dgv1.Columns.Count; i++)
+                {
+                    dgv1.Columns[i].HeaderText = "";
+                    footer.Columns[i].HeaderText = "0,00";
+                }
+            }
+        }
 
     }
 }
