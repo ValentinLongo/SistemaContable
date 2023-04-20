@@ -45,7 +45,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
             if (modelo != null)
             {
-                Setear(1, "", "", "", "", "", modelo);
+                Setear(addmodvis, "", "", "", "", "", modelo);
             }
             else
             {
@@ -86,7 +86,10 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     btnGenerar.Enabled = modelo.ast_btnGenerar;
                     btnPlandeCta.Enabled = modelo.ast_btnPlanDeCuenta;
                     btnModelo.Enabled = modelo.ast_btnModelo;
+
+                    CargarDGV("ALTA EN CONCEPTO", modelo);
                 }
+
             }
             else if (addmodvis == 2) // modificar
             {
@@ -180,15 +183,20 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
         }
 
-        public void CargarDGV(string asiento)
+        public void CargarDGV(string asiento, [Optional] MAsiento modelo)
         {
             if (asiento == "ALTA EN CONCEPTO")
             {
                 asiento = Negocio.FGenerales.ultimoNumeroID("ast_asiento", "Asiento").ToString();
             }
 
+            if (modelo != null)
+            {
+                asiento = "0";
+            }
+
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cc FROM Aux_MovAsto WHERE mva_asiento = '{asiento}' ORDER BY mva_haber, mva_debe, mva_cuenta");
+            ds = AccesoBase.ListarDatos($"SELECT mva_cuenta, mva_descri, mva_debe, mva_haber, mva_concepto, mva_cc FROM Aux_MovAsto WHERE mva_asiento = '{asiento}' AND mva_terminal = '{terminal}' ORDER BY mva_haber, mva_debe, mva_cuenta");
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 string cuenta = dr["mva_cuenta"].ToString();

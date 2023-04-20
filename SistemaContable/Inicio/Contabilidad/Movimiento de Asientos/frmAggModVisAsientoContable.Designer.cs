@@ -461,7 +461,6 @@
             this.dgvAddModVisASIENTO.AllowUserToAddRows = false;
             this.dgvAddModVisASIENTO.AllowUserToDeleteRows = false;
             this.dgvAddModVisASIENTO.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvAddModVisASIENTO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAddModVisASIENTO.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgvAddModVisASIENTO.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAddModVisASIENTO.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -516,12 +515,14 @@
             this.Column8.HeaderText = "Cuenta";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.Width = 70;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "Descripción";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
+            this.Column9.Width = 225;
             // 
             // Column10
             // 
@@ -544,12 +545,14 @@
             this.Column12.HeaderText = "Concepto";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
+            this.Column12.Width = 200;
             // 
             // Column13
             // 
             this.Column13.HeaderText = "CentroDeCostos";
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
+            this.Column13.Width = 200;
             // 
             // frmAggModVisAsientoContable
             // 
@@ -619,12 +622,12 @@
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.DataGridView dgvAddModVisASIENTO;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.Button btnCerrar;
     }
 }

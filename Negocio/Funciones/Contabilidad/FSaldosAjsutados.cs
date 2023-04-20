@@ -25,7 +25,7 @@ namespace Negocio.Funciones.Contabilidad
             }
         }
 
-        public static void Habilitar(Form frm) 
+        public static void Habilitar(Form frm)
         {
             foreach (Control Ctrl in frm.Controls)
             {
@@ -50,36 +50,34 @@ namespace Negocio.Funciones.Contabilidad
             return retorno;
         }
 
-        public static void LimpiarDGVs(DataGridView dgv1, DataGridView dgv2, [Optional] DataGridView footer)        
+        // setea propiedades y limpia DGVs
+        public static bool LimpiarDGVs(Form frm,[Optional] DataGridView dgv1, [Optional] DataGridView dgv2, [Optional] DataGridView footer) 
         {
-            if (dgv1 != null)
+            if (dgv1.DataSource != null)
             {
-                DataTable dt = dgv1.DataSource as DataTable;
-                if (dt != null)
-                {
-                    dt.Rows.Clear();
-                    dgv1.Refresh();
-                }
+                return true;              
+            }
+            else
+            {
+                dgv1.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                dgv1.Columns[0].HeaderText = "Cuenta";
+                dgv1.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                dgv1.Columns[1].HeaderText = "Descripción";
+                dgv1.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                dgv1.Columns[2].HeaderText = "Centro de Costo";
             }
 
-            if (dgv2 != null)
+            dgv2.Columns[0].HeaderText = "Periodo";
+            dgv2.Columns[1].HeaderText = "Coeficiente";
+
+            for (int i = 3; i < dgv1.Columns.Count; i++)
             {
-                DataTable dt2 = dgv2.DataSource as DataTable;
-                if (dt2 != null)
-                {
-                    dt2.Rows.Clear();
-                    dgv2.Refresh();
-                }
+                dgv1.Columns[i].DefaultCellStyle.Format = "0.00";
+                dgv1.Columns[i].Width = 125;
+                dgv1.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             }
 
-            if (footer != null)
-            {
-                for (int i = 3; i < dgv1.Columns.Count; i++)
-                {
-                    dgv1.Columns[i].HeaderText = "";
-                    footer.Columns[i].HeaderText = "0,00";
-                }
-            }
+            return false;
         }
 
     }
