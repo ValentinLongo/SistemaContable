@@ -10,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -243,6 +244,30 @@ namespace Negocio
             {
                 return false;
             }
+        }
+
+        //para validar si la fecha ingresada por el usuario se encuentra dentro de los valores permitidos por el ejercicio
+        public static bool DesdeHastaEjercicio(int NroEjer, string DESDE, string HASTA)
+        {
+            string desde = "";
+            string hasta = "";
+
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT eje_desde, eje_hasta FROM Ejercicio WHERE eje_codigo = {NroEjer}");
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                desde = dr["eje_desde"].ToString();
+                hasta = dr["eje_hasta"].ToString();
+            }
+
+            if (Convert.ToDateTime(DESDE) >= Convert.ToDateTime(desde)) 
+            {
+                if (Convert.ToDateTime(HASTA) <= Convert.ToDateTime(hasta)) 
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
     }

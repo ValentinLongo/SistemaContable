@@ -543,8 +543,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 query = $"SELECT * FROM Aux_PromMesAnio3 as Aux_PromMesAnio1 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo";
             }
 
-            //(cambiar valores)
-            frmReporte freporte = new frmReporte("SaldosAjustados", $"{query}", "", "Usuarios del Sistema", "Activos", DateTime.Now.ToString("d"));
+            frmReporte freporte = new frmReporte("SaldosAjustados", $"{query}", "", "Saldos Mensuales Ajustados", (cbCC.Text == "TODOS" ? "" : " - Centro Costos: " + cbCC.Text), cbSeleccion.Text, reporte);
             freporte.ShowDialog();
         }
 
