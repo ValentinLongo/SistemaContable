@@ -24,6 +24,8 @@ namespace SistemaContable.General
         {
             InitializeComponent();
 
+            cbBusqueda.SelectedIndex = 0;
+
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 

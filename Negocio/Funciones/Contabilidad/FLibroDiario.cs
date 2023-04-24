@@ -1,4 +1,6 @@
-﻿using Datos;
+﻿using Bunifu.Framework.UI;
+using Bunifu.UI.WinForms;
+using Datos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -57,7 +59,50 @@ namespace Negocio.Funciones.Contabilidad
             return 0;
         }
 
+        //PARA HACER RADIOBUTTONS LOS CHECKBOX (POR EL DISEÑO)
+        public static void RadioButton(int tipo, BunifuCheckBox check1, BunifuCheckBox check2, BunifuCheckBox check3)
+        {
+            switch (tipo)
+            {
+                case 1:
+                    if (check1.Checked == false && check2.Checked == false && check3.Checked == false)
+                    {
+                        check1.Checked = true;
+                    }
+                    if (check1.Checked)
+                    {
+                        check2.Checked = false;
+                        check3.Checked = false;
+                    }
+                break;
 
+                case 2:
+                    if (check1.Checked == false && check2.Checked == false && check3.Checked == false)
+                    {
+                        check2.Checked = true;
+                    }
+                    if (check2.Checked)
+                    {
+                        check1.Checked = false;
+                        check3.Checked = false;
+                    }
+                    break;
 
+                case 3:
+                    if (check1.Checked == false && check2.Checked == false && check3.Checked == false)
+                    {
+                        check3.Checked = true;
+                    }
+                    if (check3.Checked)
+                    {
+                        check1.Checked = false;
+                        check2.Checked = false;
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
     }
 }

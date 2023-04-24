@@ -47,7 +47,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjercicioContable)).BeginInit();
             this.SuspendLayout();
@@ -362,6 +362,8 @@
             this.Column10.HeaderText = "Cerrado";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
+            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // frmBuscarEjercicioContable
             // 
@@ -407,6 +409,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column10;
     }
 }

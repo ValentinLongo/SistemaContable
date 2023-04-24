@@ -17,16 +17,16 @@ namespace SistemaContable.General
 {
     public partial class frmReporte : Form
     {
-        public frmReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, [Optional] string Param2, [Optional] string Param3, [Optional] string Param4)
+        public frmReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, [Optional] string Param2, [Optional] string Param3, [Optional] string Param4, [Optional] string Param5, [Optional] string Param6, [Optional] string Param7, [Optional] string Param8, [Optional] string Param9, [Optional] string Param10)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            cargarReporte(NombreReporte, Consulta, Comando, Titulo, Param1, Param2, Param3, Param4);
+            cargarReporte(NombreReporte, Consulta, Comando, Titulo, Param1, Param2, Param3, Param4, Param5, Param6, Param7, Param8, Param9, Param10);
         }
 
         //Nombre Reporte = nombre reporte en la carpeta
         //Consulta = Query
-        private void cargarReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, [Optional] string Param2, [Optional] string Param3, [Optional] string Param4)
+        private void cargarReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, [Optional] string Param2, [Optional] string Param3, [Optional] string Param4, [Optional] string Param5, [Optional] string Param6, [Optional] string Param7, [Optional] string Param8, [Optional] string Param9, [Optional] string Param10)
         {
             // Crea un objeto de informe de Crystal Reports
             ReportDocument report = new ReportDocument();
@@ -74,6 +74,30 @@ namespace SistemaContable.General
             if (Param4 != null)
             {
                 report.SetParameterValue("Param4", $"{Param4}");
+            }
+            if (Param5 != null)
+            {
+                report.SetParameterValue("Param5", $"{Param5}");
+            }
+            if (Param6 != null)
+            {
+                report.SetParameterValue("Param6", $"{Param6}");
+            }
+            if (Param7 != null)
+            {
+                report.SetParameterValue("Param7", $"{Param7}");
+            }
+            if (Param8 != null)
+            {
+                report.SetParameterValue("Param8", $"{Param8}");
+            }
+            if (Param9 != null)
+            {
+                report.SetParameterValue("Param9", $"{Param9}");
+            }
+            if (Param10 != null)
+            {
+                report.SetParameterValue("Param10", $"{Param10}");
             }
 
             report.SetParameterValue("Usuario", $"{FLogin.NombreUsuario}");

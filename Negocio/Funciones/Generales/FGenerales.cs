@@ -46,6 +46,7 @@ namespace Negocio
             Formulario.Show();
         }
 
+        //para abrir formularios dentro del Menu Principal
         public static bool ManejarFormularios(Form Formulario, Form FormPadre, PictureBox logo, string tag)
         {
             if (Permiso(tag))
@@ -66,6 +67,7 @@ namespace Negocio
             return false;
         }
 
+        //para verificar si el usuario tiene permisos para acceder
         private static bool Permiso(string tag)
         {
             DataSet ds = new DataSet();
@@ -99,6 +101,7 @@ namespace Negocio
             }
         }
 
+        //para manejar el boton de abrir/cerrar sesión
         public static void Sesion(Form Inicio, ToolStrip tsAccesosDirectos, int proceso) //proceso 1 = cierra sesion, 2 = abre sesion
         {
             if (proceso == 1)
@@ -161,6 +164,7 @@ namespace Negocio
             }
         }
 
+        //para realizar una busqueda en un datagridview
         public static string Busqueda([Optional] DataGridView dgv,string txtbusqueda,BunifuCheckBox inicio,int where_o_and, string columna) //where = 1 / and = 2
         {
             string retorno = "";
@@ -200,7 +204,8 @@ namespace Negocio
             return retorno;
         }
 
-        public static bool EstadoEjercicio(int ejercicio, int tipo) //Para verificar si el ejercicio contable tiene asiento de cierre o apertura
+        //Para verificar si el ejercicio contable tiene asiento de cierre o apertura
+        public static bool EstadoEjercicio(int ejercicio, int tipo)
         {
 
             if (tipo == 1) //CIERRE
@@ -224,6 +229,7 @@ namespace Negocio
             return false;
         }
 
+        //para sincronizar el footer con el datagridview requerido
         public static bool SincronizarFooter(DataGridView dgv) 
         {
             //la posición actual del scrollbar vertical
@@ -268,6 +274,62 @@ namespace Negocio
                 }
             }
             return false;
+        }
+
+        //para obtener la cantidad de dias de un mes
+        public static string DiasDelMes(int mes, int año) 
+        {
+            string dia = "";
+            switch (mes)
+            {
+                case 1:
+                    dia = "31";
+                    break;
+                case 2:
+                    if ((año % 4 == 0 && año % 100 != 0) || año % 400 == 0)
+                    {
+                        dia = "29";
+                    }
+                    else
+                    {
+                        dia = "28";
+                    }
+                    break;
+                case 3:
+                    dia = "31";
+                    break;
+                case 4:
+                    dia = "30";
+                    break;
+                case 5:
+                    dia = "31";
+                    break;
+                case 6:
+                    dia = "30";
+                    break;
+                case 7:
+                    dia = "31";
+                    break;
+                case 8:
+                    dia = "31";
+                    break;
+                case 9:
+                    dia = "30";
+                    break;
+                case 10:
+                    dia = "31";
+                    break;
+                case 11:
+                    dia = "30";
+                    break;
+                case 12:
+                    dia = "31";
+                    break;
+
+                default:
+                    break;
+            }
+            return dia;
         }
 
     }
