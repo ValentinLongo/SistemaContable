@@ -71,5 +71,47 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string centroC;
+            string select;
+            if (cbCentroCosto.Text == "NINGUNO")
+            {
+                centroC = " And IsNull(mva_cc,0) = 0";
+            }
+            else if (cbCentroCosto.Text == "TODOS")
+            {
+                centroC = "";
+            }
+            else
+            {
+                centroC = $" And mva_cc = '{tbIdCuenta}'";
+            }
+
+            double Debe = 0;
+            double Haber = 0;
+            string fechaDesde = "";
+            int EjAnterior = 0;
+            if (ChSumSalEjAnt.Checked == true)
+            {
+                DataSet ds = new DataSet();
+                ds = AccesoBase.ListarDatos($"select * from Ejercicio where eje_codigo = {tbIdEjercicio.Text}");
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    fechaDesde = dr["eje_desde"].ToString();
+                }
+                if (fechaDesde != "")
+                {
+                    DataSet ds2 = new DataSet();
+                    ds2 = AccesoBase.ListarDatos($"select top 1 * from Ejercicio where eje_desde < '{fechaDesde}' order by eje_desde desc");
+                    foreach (DataRow dr in ds2.Tables[0].Rows)
+                    {
+                        EjAnterior = Convert.ToInt32(dr["eje_codigo"].ToString());
+                    }
+
+                }
+            }
+        }
     }
 }
