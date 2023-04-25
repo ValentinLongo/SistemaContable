@@ -265,6 +265,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="General\frmAuditoriaInterna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmAuditoriaInterna.Designer.cs">
+      <DependentUpon>frmAuditoriaInterna.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\frmBuscarEjercicioContable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +288,12 @@
     </Compile>
     <Compile Include="General\frmMessageBox.Designer.cs">
       <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\frmRangoFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmRangoFechas.Designer.cs">
+      <DependentUpon>frmRangoFechas.cs</DependentUpon>
     </Compile>
     <Compile Include="General\frmReporte.cs">
       <SubType>Form</SubType>
@@ -665,6 +677,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmMessageBox.resx">
       <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\frmRangoFechas.resx">
+      <DependentUpon>frmRangoFechas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmReporte.resx">
       <DependentUpon>frmReporte.cs</DependentUpon>

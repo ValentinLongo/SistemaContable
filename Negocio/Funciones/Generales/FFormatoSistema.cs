@@ -13,7 +13,6 @@ namespace Negocio
 {
     public class FFormatoSistema
     {
-
         private static int RGB(string Cadena, int parte)
         {
             int Valor = 0;
