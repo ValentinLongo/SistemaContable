@@ -71,5 +71,24 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string centroC;
+            string select;
+            if(cbCentroCosto.Text == "NINGUNO")
+            {
+                centroC = " And IsNull(mva_cc,0) = 0";
+            }
+            else if(cbCentroCosto.Text == "TODOS")
+            {
+                centroC = "";
+            }
+            else
+            {
+                centroC = $" And mva_cc = '{tbIdCuenta}'";
+            }
+
+        }
     }
 }
