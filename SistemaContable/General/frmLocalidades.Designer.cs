@@ -107,6 +107,7 @@
             this.panel7.Size = new System.Drawing.Size(843, 21);
             this.panel7.TabIndex = 104;
             this.panel7.Tag = "1";
+            this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             // 
             // lblControlBar
             // 

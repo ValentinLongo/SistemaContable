@@ -669,6 +669,9 @@
     <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="General\frmAuditoriaInterna.resx">
+      <DependentUpon>frmAuditoriaInterna.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="General\frmBuscarEjercicioContable.resx">
       <DependentUpon>frmBuscarEjercicioContable.cs</DependentUpon>
     </EmbeddedResource>
@@ -985,6 +988,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sobre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papel2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

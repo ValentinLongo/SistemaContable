@@ -32,13 +32,15 @@ namespace SistemaContable.General
                 string contraseña = txtContraseña.Text.ToUpper();
 
                 DataSet ds = new DataSet();
-                int resultado = AccesoBase.ValidarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' AND usu_contraseña = '{contraseña}'");
-                if (resultado == 1)
+                ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' AND usu_contraseña = '{contraseña}'");
+                if (ds.Tables[0].Rows.Count != 0)
                 {
-                    //Negocio.FLogin.IdUsuario
-                    Negocio.FLogin.NombreUsuario = usuario;
-                    Negocio.FLogin.ContraUsuario = contraseña;
-
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        Negocio.FLogin.IdUsuario = Convert.ToInt32(dr["usu_codigo"]);
+                        Negocio.FLogin.NombreUsuario = dr["usu_login"].ToString();
+                        Negocio.FLogin.ContraUsuario = dr["usu_contraseña"].ToString();
+                    }
                     autorizado = true;
                     this.Close();
                 }

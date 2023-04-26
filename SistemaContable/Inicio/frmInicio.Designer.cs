@@ -31,32 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.toolStripADs = new System.Windows.Forms.ToolStrip();
-            this.tsbUsuario = new System.Windows.Forms.ToolStripButton();
-            this.tsbPlandeCuenta = new System.Windows.Forms.ToolStripButton();
-            this.tsbConceptoContable = new System.Windows.Forms.ToolStripButton();
-            this.tsbAgenda = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbMovimientodeAsientos = new System.Windows.Forms.ToolStripButton();
-            this.tsbLibroDiario = new System.Windows.Forms.ToolStripButton();
-            this.tsbLibroMayor = new System.Windows.Forms.ToolStripButton();
-            this.tsbBalanceDeSumasySaldos = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbBlockdeNotas = new System.Windows.Forms.ToolStripButton();
-            this.tsbMensajesInternos = new System.Windows.Forms.ToolStripButton();
-            this.tsbCalculadora = new System.Windows.Forms.ToolStripButton();
-            this.tsbNotas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbConfigImpresora = new System.Windows.Forms.ToolStripButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -69,46 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Disparador = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblUsu = new System.Windows.Forms.Label();
-            this.btnAyuda2 = new RJCodeAdvance.RJControls.RJButton();
-            this.btnMantenimiento2 = new RJCodeAdvance.RJControls.RJButton();
-            this.btnContabilidad2 = new RJCodeAdvance.RJControls.RJButton();
-            this.btnVer2 = new RJCodeAdvance.RJControls.RJButton();
-            this.btnArchivos2 = new RJCodeAdvance.RJControls.RJButton();
-            this.PanelMenu = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblPerfil = new System.Windows.Forms.Label();
-            this.lblEmpresa = new System.Windows.Forms.Label();
-            this.lblSesion = new System.Windows.Forms.Label();
-            this.btnSesion = new System.Windows.Forms.Button();
-            this.pContabilidad2 = new System.Windows.Forms.Panel();
-            this.pVer2 = new System.Windows.Forms.Panel();
-            this.pAyuda2 = new System.Windows.Forms.Panel();
-            this.pMantenimiento2 = new System.Windows.Forms.Panel();
-            this.pArchivos2 = new System.Windows.Forms.Panel();
-            this.pAyuda = new System.Windows.Forms.Panel();
-            this.pMantenimiento = new System.Windows.Forms.Panel();
-            this.pContabilidad = new System.Windows.Forms.Panel();
-            this.pVer = new System.Windows.Forms.Panel();
-            this.pArchivos = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pbLogoPanel = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.btnAyuda = new RJCodeAdvance.RJControls.RJButton();
-            this.btnMantenimiento = new RJCodeAdvance.RJControls.RJButton();
-            this.btnContabilidad = new RJCodeAdvance.RJControls.RJButton();
-            this.btnVer = new RJCodeAdvance.RJControls.RJButton();
-            this.btnArchivos = new RJCodeAdvance.RJControls.RJButton();
-            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.btnAudInt = new RJCodeAdvance.RJControls.RJButton();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.lblAudInt = new System.Windows.Forms.Label();
             this.Menu_Archivos = new Negocio.MenuDropDown(this.components);
             this.respaldoDeInformación = new System.Windows.Forms.ToolStripMenuItem();
             this.restauraciónDeInformación = new System.Windows.Forms.ToolStripMenuItem();
@@ -156,17 +95,78 @@
             this.agenda = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrosContables = new System.Windows.Forms.ToolStripMenuItem();
             this.configurarImpresora = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbUsuario = new System.Windows.Forms.ToolStripButton();
+            this.tsbPlandeCuenta = new System.Windows.Forms.ToolStripButton();
+            this.tsbConceptoContable = new System.Windows.Forms.ToolStripButton();
+            this.tsbAgenda = new System.Windows.Forms.ToolStripButton();
+            this.tsbMovimientodeAsientos = new System.Windows.Forms.ToolStripButton();
+            this.tsbLibroDiario = new System.Windows.Forms.ToolStripButton();
+            this.tsbLibroMayor = new System.Windows.Forms.ToolStripButton();
+            this.tsbBalanceDeSumasySaldos = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
+            this.tsbBlockdeNotas = new System.Windows.Forms.ToolStripButton();
+            this.tsbMensajesInternos = new System.Windows.Forms.ToolStripButton();
+            this.tsbCalculadora = new System.Windows.Forms.ToolStripButton();
+            this.tsbNotas = new System.Windows.Forms.ToolStripButton();
+            this.tsbConfigImpresora = new System.Windows.Forms.ToolStripButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsu = new System.Windows.Forms.Label();
+            this.btnAyuda2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnMantenimiento2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnContabilidad2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnVer2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnArchivos2 = new RJCodeAdvance.RJControls.RJButton();
+            this.PanelMenu = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.lblAudInt = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnAudInt = new RJCodeAdvance.RJControls.RJButton();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.lblEmpresa = new System.Windows.Forms.Label();
+            this.lblSesion = new System.Windows.Forms.Label();
+            this.btnSesion = new System.Windows.Forms.Button();
+            this.pContabilidad2 = new System.Windows.Forms.Panel();
+            this.pVer2 = new System.Windows.Forms.Panel();
+            this.pAyuda2 = new System.Windows.Forms.Panel();
+            this.pMantenimiento2 = new System.Windows.Forms.Panel();
+            this.pArchivos2 = new System.Windows.Forms.Panel();
+            this.pAyuda = new System.Windows.Forms.Panel();
+            this.pMantenimiento = new System.Windows.Forms.Panel();
+            this.pContabilidad = new System.Windows.Forms.Panel();
+            this.pVer = new System.Windows.Forms.Panel();
+            this.pArchivos = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pbLogoPanel = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.btnAyuda = new RJCodeAdvance.RJControls.RJButton();
+            this.btnMantenimiento = new RJCodeAdvance.RJControls.RJButton();
+            this.btnContabilidad = new RJCodeAdvance.RJControls.RJButton();
+            this.btnVer = new RJCodeAdvance.RJControls.RJButton();
+            this.btnArchivos = new RJCodeAdvance.RJControls.RJButton();
+            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.toolStripADs.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.PanelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoPanel)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.Menu_Archivos.SuspendLayout();
             this.Menu_Ver.SuspendLayout();
             this.Menu_Ayuda.SuspendLayout();
             this.Menu_Contabilidad.SuspendLayout();
             this.Menu_Mantenimiento.SuspendLayout();
+            this.PanelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoPanel)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripADs
@@ -205,198 +205,31 @@
             this.toolStripADs.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStripADs.Name = "toolStripADs";
             // 
-            // tsbUsuario
-            // 
-            resources.ApplyResources(this.tsbUsuario, "tsbUsuario");
-            this.tsbUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbUsuario.Image = global::SistemaContable.Properties.Resources.usuario3;
-            this.tsbUsuario.Name = "tsbUsuario";
-            this.tsbUsuario.Tag = "400402";
-            this.tsbUsuario.Click += new System.EventHandler(this.tsbUsuario_Click);
-            // 
-            // tsbPlandeCuenta
-            // 
-            resources.ApplyResources(this.tsbPlandeCuenta, "tsbPlandeCuenta");
-            this.tsbPlandeCuenta.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbPlandeCuenta.Image = global::SistemaContable.Properties.Resources.punta_de_lapiz;
-            this.tsbPlandeCuenta.Name = "tsbPlandeCuenta";
-            this.tsbPlandeCuenta.Tag = "4008";
-            this.tsbPlandeCuenta.Click += new System.EventHandler(this.tsbPlandeCuenta_Click);
-            // 
-            // tsbConceptoContable
-            // 
-            resources.ApplyResources(this.tsbConceptoContable, "tsbConceptoContable");
-            this.tsbConceptoContable.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbConceptoContable.Image = global::SistemaContable.Properties.Resources.tarjeta;
-            this.tsbConceptoContable.Name = "tsbConceptoContable";
-            this.tsbConceptoContable.Tag = "4010";
-            this.tsbConceptoContable.Click += new System.EventHandler(this.tsbConceptoContable_Click);
-            // 
-            // tsbAgenda
-            // 
-            resources.ApplyResources(this.tsbAgenda, "tsbAgenda");
-            this.tsbAgenda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbAgenda.Image = global::SistemaContable.Properties.Resources.ajuste;
-            this.tsbAgenda.Name = "tsbAgenda";
-            this.tsbAgenda.Tag = "4012";
-            this.tsbAgenda.Click += new System.EventHandler(this.tsbAgenda_Click);
-            // 
             // toolStripSeparator1
             // 
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             // 
-            // tsbMovimientodeAsientos
-            // 
-            resources.ApplyResources(this.tsbMovimientodeAsientos, "tsbMovimientodeAsientos");
-            this.tsbMovimientodeAsientos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbMovimientodeAsientos.Name = "tsbMovimientodeAsientos";
-            this.tsbMovimientodeAsientos.Tag = "3002";
-            this.tsbMovimientodeAsientos.Click += new System.EventHandler(this.tsbMovimientodeAsientos_Click);
-            // 
-            // tsbLibroDiario
-            // 
-            resources.ApplyResources(this.tsbLibroDiario, "tsbLibroDiario");
-            this.tsbLibroDiario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbLibroDiario.Name = "tsbLibroDiario";
-            this.tsbLibroDiario.Tag = "3008";
-            this.tsbLibroDiario.Click += new System.EventHandler(this.tsbLibroDiario_Click);
-            // 
-            // tsbLibroMayor
-            // 
-            resources.ApplyResources(this.tsbLibroMayor, "tsbLibroMayor");
-            this.tsbLibroMayor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbLibroMayor.Name = "tsbLibroMayor";
-            this.tsbLibroMayor.Tag = "3010";
-            this.tsbLibroMayor.Click += new System.EventHandler(this.tsbLibroMayor_Click);
-            // 
-            // tsbBalanceDeSumasySaldos
-            // 
-            resources.ApplyResources(this.tsbBalanceDeSumasySaldos, "tsbBalanceDeSumasySaldos");
-            this.tsbBalanceDeSumasySaldos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbBalanceDeSumasySaldos.Name = "tsbBalanceDeSumasySaldos";
-            this.tsbBalanceDeSumasySaldos.Tag = "3014";
-            this.tsbBalanceDeSumasySaldos.Click += new System.EventHandler(this.tsbBalanceDeSumasySaldos_Click);
-            // 
             // toolStripSeparator2
             // 
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            // 
-            // toolStripButton9
-            // 
-            resources.ApplyResources(this.toolStripButton9, "toolStripButton9");
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Tag = "0";
-            // 
-            // toolStripButton10
-            // 
-            resources.ApplyResources(this.toolStripButton10, "toolStripButton10");
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Tag = "0";
-            // 
-            // toolStripButton11
-            // 
-            resources.ApplyResources(this.toolStripButton11, "toolStripButton11");
-            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Tag = "0";
-            // 
-            // toolStripButton12
-            // 
-            resources.ApplyResources(this.toolStripButton12, "toolStripButton12");
-            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Tag = "0";
             // 
             // toolStripSeparator3
             // 
             resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             // 
-            // toolStripButton13
-            // 
-            resources.ApplyResources(this.toolStripButton13, "toolStripButton13");
-            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Tag = "0";
-            // 
-            // toolStripButton14
-            // 
-            resources.ApplyResources(this.toolStripButton14, "toolStripButton14");
-            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Tag = "0";
-            // 
-            // toolStripButton15
-            // 
-            resources.ApplyResources(this.toolStripButton15, "toolStripButton15");
-            this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton15.Name = "toolStripButton15";
-            this.toolStripButton15.Tag = "0";
-            // 
-            // toolStripButton16
-            // 
-            resources.ApplyResources(this.toolStripButton16, "toolStripButton16");
-            this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton16.Name = "toolStripButton16";
-            this.toolStripButton16.Tag = "0";
-            // 
             // toolStripSeparator4
             // 
             resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             // 
-            // tsbBlockdeNotas
-            // 
-            resources.ApplyResources(this.tsbBlockdeNotas, "tsbBlockdeNotas");
-            this.tsbBlockdeNotas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbBlockdeNotas.Name = "tsbBlockdeNotas";
-            this.tsbBlockdeNotas.Tag = "0";
-            this.tsbBlockdeNotas.Click += new System.EventHandler(this.tsbBlockdeNotas_Click);
-            // 
-            // tsbMensajesInternos
-            // 
-            resources.ApplyResources(this.tsbMensajesInternos, "tsbMensajesInternos");
-            this.tsbMensajesInternos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbMensajesInternos.Image = global::SistemaContable.Properties.Resources.sobre;
-            this.tsbMensajesInternos.Name = "tsbMensajesInternos";
-            this.tsbMensajesInternos.Tag = "2004";
-            this.tsbMensajesInternos.Click += new System.EventHandler(this.tsbMensajesInternos_Click);
-            this.tsbMensajesInternos.MouseEnter += new System.EventHandler(this.tsbMensajesInternos_MouseEnter);
-            this.tsbMensajesInternos.MouseLeave += new System.EventHandler(this.tsbMensajesInternos_MouseLeave);
-            // 
-            // tsbCalculadora
-            // 
-            resources.ApplyResources(this.tsbCalculadora, "tsbCalculadora");
-            this.tsbCalculadora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbCalculadora.Name = "tsbCalculadora";
-            this.tsbCalculadora.Tag = "2002";
-            this.tsbCalculadora.Click += new System.EventHandler(this.tsbCalculadora_Click);
-            // 
-            // tsbNotas
-            // 
-            resources.ApplyResources(this.tsbNotas, "tsbNotas");
-            this.tsbNotas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbNotas.Name = "tsbNotas";
-            this.tsbNotas.Tag = "2006";
-            this.tsbNotas.Click += new System.EventHandler(this.tsbNotas_Click);
-            // 
             // toolStripSeparator5
             // 
             resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            // 
-            // tsbConfigImpresora
-            // 
-            resources.ApplyResources(this.tsbConfigImpresora, "tsbConfigImpresora");
-            this.tsbConfigImpresora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbConfigImpresora.Name = "tsbConfigImpresora";
-            this.tsbConfigImpresora.Tag = "0";
-            this.tsbConfigImpresora.Click += new System.EventHandler(this.tsbConfigImpresora_Click);
             // 
             // panel5
             // 
@@ -534,447 +367,6 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
-            // 
-            // lblUsu
-            // 
-            resources.ApplyResources(this.lblUsu, "lblUsu");
-            this.lblUsu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUsu.Name = "lblUsu";
-            // 
-            // btnAyuda2
-            // 
-            this.btnAyuda2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnAyuda2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnAyuda2.BorderColor = System.Drawing.Color.White;
-            this.btnAyuda2.BorderRadius = 0;
-            this.btnAyuda2.BorderSize = 0;
-            this.btnAyuda2.FlatAppearance.BorderSize = 0;
-            this.btnAyuda2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.btnAyuda2, "btnAyuda2");
-            this.btnAyuda2.ForeColor = System.Drawing.Color.White;
-            this.btnAyuda2.Image = global::SistemaContable.Properties.Resources.ayuda;
-            this.btnAyuda2.Name = "btnAyuda2";
-            this.btnAyuda2.TabStop = false;
-            this.btnAyuda2.Tag = "50";
-            this.btnAyuda2.TextColor = System.Drawing.Color.White;
-            this.btnAyuda2.UseVisualStyleBackColor = false;
-            // 
-            // btnMantenimiento2
-            // 
-            this.btnMantenimiento2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnMantenimiento2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnMantenimiento2.BorderColor = System.Drawing.Color.White;
-            this.btnMantenimiento2.BorderRadius = 0;
-            this.btnMantenimiento2.BorderSize = 0;
-            this.btnMantenimiento2.FlatAppearance.BorderSize = 0;
-            this.btnMantenimiento2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.btnMantenimiento2, "btnMantenimiento2");
-            this.btnMantenimiento2.ForeColor = System.Drawing.Color.White;
-            this.btnMantenimiento2.Image = global::SistemaContable.Properties.Resources.llave;
-            this.btnMantenimiento2.Name = "btnMantenimiento2";
-            this.btnMantenimiento2.TabStop = false;
-            this.btnMantenimiento2.Tag = "40";
-            this.btnMantenimiento2.TextColor = System.Drawing.Color.White;
-            this.btnMantenimiento2.UseVisualStyleBackColor = false;
-            // 
-            // btnContabilidad2
-            // 
-            this.btnContabilidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnContabilidad2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnContabilidad2.BorderColor = System.Drawing.Color.White;
-            this.btnContabilidad2.BorderRadius = 0;
-            this.btnContabilidad2.BorderSize = 0;
-            this.btnContabilidad2.FlatAppearance.BorderSize = 0;
-            this.btnContabilidad2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.btnContabilidad2, "btnContabilidad2");
-            this.btnContabilidad2.ForeColor = System.Drawing.Color.White;
-            this.btnContabilidad2.Image = global::SistemaContable.Properties.Resources.contabilidad;
-            this.btnContabilidad2.Name = "btnContabilidad2";
-            this.btnContabilidad2.TabStop = false;
-            this.btnContabilidad2.Tag = "30";
-            this.btnContabilidad2.TextColor = System.Drawing.Color.White;
-            this.btnContabilidad2.UseVisualStyleBackColor = false;
-            // 
-            // btnVer2
-            // 
-            this.btnVer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnVer2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnVer2.BorderColor = System.Drawing.Color.White;
-            this.btnVer2.BorderRadius = 0;
-            this.btnVer2.BorderSize = 0;
-            this.btnVer2.FlatAppearance.BorderSize = 0;
-            this.btnVer2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.btnVer2, "btnVer2");
-            this.btnVer2.ForeColor = System.Drawing.Color.White;
-            this.btnVer2.Image = global::SistemaContable.Properties.Resources.lupa;
-            this.btnVer2.Name = "btnVer2";
-            this.btnVer2.TabStop = false;
-            this.btnVer2.Tag = "20";
-            this.btnVer2.TextColor = System.Drawing.Color.White;
-            this.btnVer2.UseVisualStyleBackColor = false;
-            // 
-            // btnArchivos2
-            // 
-            this.btnArchivos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnArchivos2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnArchivos2.BorderColor = System.Drawing.Color.White;
-            this.btnArchivos2.BorderRadius = 0;
-            this.btnArchivos2.BorderSize = 0;
-            this.btnArchivos2.FlatAppearance.BorderSize = 0;
-            this.btnArchivos2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.btnArchivos2, "btnArchivos2");
-            this.btnArchivos2.ForeColor = System.Drawing.Color.White;
-            this.btnArchivos2.Image = global::SistemaContable.Properties.Resources.carpeta41;
-            this.btnArchivos2.Name = "btnArchivos2";
-            this.btnArchivos2.TabStop = false;
-            this.btnArchivos2.Tag = "10";
-            this.btnArchivos2.TextColor = System.Drawing.Color.White;
-            this.btnArchivos2.UseVisualStyleBackColor = false;
-            // 
-            // PanelMenu
-            // 
-            this.PanelMenu.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.PanelMenu, "PanelMenu");
-            this.PanelMenu.BorderRadius = 0;
-            this.PanelMenu.Controls.Add(this.lblAudInt);
-            this.PanelMenu.Controls.Add(this.panel8);
-            this.PanelMenu.Controls.Add(this.btnAudInt);
-            this.PanelMenu.Controls.Add(this.panel6);
-            this.PanelMenu.Controls.Add(this.panel2);
-            this.PanelMenu.Controls.Add(this.panel1);
-            this.PanelMenu.Controls.Add(this.lblPerfil);
-            this.PanelMenu.Controls.Add(this.lblEmpresa);
-            this.PanelMenu.Controls.Add(this.lblSesion);
-            this.PanelMenu.Controls.Add(this.btnSesion);
-            this.PanelMenu.Controls.Add(this.pContabilidad2);
-            this.PanelMenu.Controls.Add(this.pVer2);
-            this.PanelMenu.Controls.Add(this.pAyuda2);
-            this.PanelMenu.Controls.Add(this.pMantenimiento2);
-            this.PanelMenu.Controls.Add(this.pArchivos2);
-            this.PanelMenu.Controls.Add(this.pAyuda);
-            this.PanelMenu.Controls.Add(this.pMantenimiento);
-            this.PanelMenu.Controls.Add(this.pContabilidad);
-            this.PanelMenu.Controls.Add(this.pVer);
-            this.PanelMenu.Controls.Add(this.pArchivos);
-            this.PanelMenu.Controls.Add(this.panel7);
-            this.PanelMenu.Controls.Add(this.pbLogoPanel);
-            this.PanelMenu.Controls.Add(this.lblUsu);
-            this.PanelMenu.Controls.Add(this.panel4);
-            this.PanelMenu.Controls.Add(this.lblFecha);
-            this.PanelMenu.Controls.Add(this.lblHora);
-            this.PanelMenu.Controls.Add(this.btnAyuda);
-            this.PanelMenu.Controls.Add(this.btnMantenimiento);
-            this.PanelMenu.Controls.Add(this.btnContabilidad);
-            this.PanelMenu.Controls.Add(this.btnVer);
-            this.PanelMenu.Controls.Add(this.btnArchivos);
-            this.PanelMenu.Controls.Add(this.bunifuShapes1);
-            this.PanelMenu.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.PanelMenu.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.PanelMenu.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.PanelMenu.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Quality = 10;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            resources.ApplyResources(this.panel6, "panel6");
-            this.panel6.Name = "panel6";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
-            // lblPerfil
-            // 
-            resources.ApplyResources(this.lblPerfil, "lblPerfil");
-            this.lblPerfil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPerfil.Name = "lblPerfil";
-            // 
-            // lblEmpresa
-            // 
-            resources.ApplyResources(this.lblEmpresa, "lblEmpresa");
-            this.lblEmpresa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEmpresa.Name = "lblEmpresa";
-            // 
-            // lblSesion
-            // 
-            resources.ApplyResources(this.lblSesion, "lblSesion");
-            this.lblSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSesion.Name = "lblSesion";
-            // 
-            // btnSesion
-            // 
-            this.btnSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnSesion.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btnSesion, "btnSesion");
-            this.btnSesion.Image = global::SistemaContable.Properties.Resources.candado_cerrado;
-            this.btnSesion.Name = "btnSesion";
-            this.btnSesion.UseVisualStyleBackColor = false;
-            this.btnSesion.Click += new System.EventHandler(this.btnSesion_Click);
-            // 
-            // pContabilidad2
-            // 
-            this.pContabilidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.pContabilidad2, "pContabilidad2");
-            this.pContabilidad2.Name = "pContabilidad2";
-            // 
-            // pVer2
-            // 
-            this.pVer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.pVer2, "pVer2");
-            this.pVer2.Name = "pVer2";
-            // 
-            // pAyuda2
-            // 
-            this.pAyuda2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.pAyuda2, "pAyuda2");
-            this.pAyuda2.Name = "pAyuda2";
-            // 
-            // pMantenimiento2
-            // 
-            this.pMantenimiento2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.pMantenimiento2, "pMantenimiento2");
-            this.pMantenimiento2.Name = "pMantenimiento2";
-            // 
-            // pArchivos2
-            // 
-            this.pArchivos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.pArchivos2, "pArchivos2");
-            this.pArchivos2.Name = "pArchivos2";
-            // 
-            // pAyuda
-            // 
-            this.pAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.pAyuda, "pAyuda");
-            this.pAyuda.Name = "pAyuda";
-            // 
-            // pMantenimiento
-            // 
-            this.pMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.pMantenimiento, "pMantenimiento");
-            this.pMantenimiento.Name = "pMantenimiento";
-            // 
-            // pContabilidad
-            // 
-            this.pContabilidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.pContabilidad, "pContabilidad");
-            this.pContabilidad.Name = "pContabilidad";
-            // 
-            // pVer
-            // 
-            this.pVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.pVer, "pVer");
-            this.pVer.Name = "pVer";
-            // 
-            // pArchivos
-            // 
-            this.pArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.pArchivos, "pArchivos");
-            this.pArchivos.Name = "pArchivos";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.panel7, "panel7");
-            this.panel7.Name = "panel7";
-            // 
-            // pbLogoPanel
-            // 
-            resources.ApplyResources(this.pbLogoPanel, "pbLogoPanel");
-            this.pbLogoPanel.BackColor = System.Drawing.Color.Transparent;
-            this.pbLogoPanel.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pbLogoPanel.Name = "pbLogoPanel";
-            this.pbLogoPanel.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel4.Controls.Add(this.label1);
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
-            this.panel4.Tag = "1";
-            // 
-            // lblFecha
-            // 
-            resources.ApplyResources(this.lblFecha, "lblFecha");
-            this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Name = "lblFecha";
-            // 
-            // lblHora
-            // 
-            resources.ApplyResources(this.lblHora, "lblHora");
-            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.lblHora.Name = "lblHora";
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
-            this.btnAyuda.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnAyuda.BorderColor = System.Drawing.Color.White;
-            this.btnAyuda.BorderRadius = 0;
-            this.btnAyuda.BorderSize = 0;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.btnAyuda, "btnAyuda");
-            this.btnAyuda.ForeColor = System.Drawing.Color.White;
-            this.btnAyuda.Image = global::SistemaContable.Properties.Resources.ayuda;
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.TabStop = false;
-            this.btnAyuda.Tag = "50";
-            this.btnAyuda.TextColor = System.Drawing.Color.White;
-            this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
-            this.btnAyuda.MouseEnter += new System.EventHandler(this.btnAyuda_MouseEnter);
-            this.btnAyuda.MouseLeave += new System.EventHandler(this.btnAyuda_MouseLeave);
-            // 
-            // btnMantenimiento
-            // 
-            this.btnMantenimiento.BackColor = System.Drawing.Color.Transparent;
-            this.btnMantenimiento.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnMantenimiento.BorderColor = System.Drawing.Color.White;
-            this.btnMantenimiento.BorderRadius = 0;
-            this.btnMantenimiento.BorderSize = 0;
-            this.btnMantenimiento.FlatAppearance.BorderSize = 0;
-            this.btnMantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.btnMantenimiento, "btnMantenimiento");
-            this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
-            this.btnMantenimiento.Image = global::SistemaContable.Properties.Resources.llave;
-            this.btnMantenimiento.Name = "btnMantenimiento";
-            this.btnMantenimiento.TabStop = false;
-            this.btnMantenimiento.Tag = "40";
-            this.btnMantenimiento.TextColor = System.Drawing.Color.White;
-            this.btnMantenimiento.UseVisualStyleBackColor = false;
-            this.btnMantenimiento.Click += new System.EventHandler(this.btnMantenimiento_Click);
-            this.btnMantenimiento.MouseEnter += new System.EventHandler(this.btnMantenimiento_MouseEnter);
-            this.btnMantenimiento.MouseLeave += new System.EventHandler(this.btnMantenimiento_MouseLeave);
-            // 
-            // btnContabilidad
-            // 
-            this.btnContabilidad.BackColor = System.Drawing.Color.Transparent;
-            this.btnContabilidad.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnContabilidad.BorderColor = System.Drawing.Color.White;
-            this.btnContabilidad.BorderRadius = 0;
-            this.btnContabilidad.BorderSize = 0;
-            this.btnContabilidad.FlatAppearance.BorderSize = 0;
-            this.btnContabilidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.btnContabilidad, "btnContabilidad");
-            this.btnContabilidad.ForeColor = System.Drawing.Color.White;
-            this.btnContabilidad.Image = global::SistemaContable.Properties.Resources.contabilidad;
-            this.btnContabilidad.Name = "btnContabilidad";
-            this.btnContabilidad.TabStop = false;
-            this.btnContabilidad.Tag = "30";
-            this.btnContabilidad.TextColor = System.Drawing.Color.White;
-            this.btnContabilidad.UseVisualStyleBackColor = false;
-            this.btnContabilidad.Click += new System.EventHandler(this.btnContabilidad_Click);
-            this.btnContabilidad.MouseEnter += new System.EventHandler(this.btnContabilidad_MouseEnter);
-            this.btnContabilidad.MouseLeave += new System.EventHandler(this.btnContabilidad_MouseLeave);
-            // 
-            // btnVer
-            // 
-            this.btnVer.BackColor = System.Drawing.Color.Transparent;
-            this.btnVer.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnVer.BorderColor = System.Drawing.Color.White;
-            this.btnVer.BorderRadius = 0;
-            this.btnVer.BorderSize = 0;
-            this.btnVer.FlatAppearance.BorderSize = 0;
-            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.btnVer, "btnVer");
-            this.btnVer.ForeColor = System.Drawing.Color.White;
-            this.btnVer.Image = global::SistemaContable.Properties.Resources.lupa;
-            this.btnVer.Name = "btnVer";
-            this.btnVer.TabStop = false;
-            this.btnVer.Tag = "20";
-            this.btnVer.TextColor = System.Drawing.Color.White;
-            this.btnVer.UseVisualStyleBackColor = false;
-            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
-            this.btnVer.MouseEnter += new System.EventHandler(this.btnVer_MouseEnter);
-            this.btnVer.MouseLeave += new System.EventHandler(this.btnVer_MouseLeave);
-            // 
-            // btnArchivos
-            // 
-            this.btnArchivos.BackColor = System.Drawing.Color.Transparent;
-            this.btnArchivos.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnArchivos.BorderColor = System.Drawing.Color.White;
-            this.btnArchivos.BorderRadius = 0;
-            this.btnArchivos.BorderSize = 0;
-            this.btnArchivos.FlatAppearance.BorderSize = 0;
-            this.btnArchivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.btnArchivos, "btnArchivos");
-            this.btnArchivos.ForeColor = System.Drawing.Color.White;
-            this.btnArchivos.Image = global::SistemaContable.Properties.Resources.carpeta41;
-            this.btnArchivos.Name = "btnArchivos";
-            this.btnArchivos.TabStop = false;
-            this.btnArchivos.Tag = "10";
-            this.btnArchivos.TextColor = System.Drawing.Color.White;
-            this.btnArchivos.UseVisualStyleBackColor = false;
-            this.btnArchivos.Click += new System.EventHandler(this.btnArchivos_Click);
-            this.btnArchivos.MouseEnter += new System.EventHandler(this.btnArchivos_MouseEnter);
-            this.btnArchivos.MouseLeave += new System.EventHandler(this.btnArchivos_MouseLeave);
-            // 
-            // bunifuShapes1
-            // 
-            this.bunifuShapes1.Angle = 0F;
-            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.bunifuShapes1.BorderThickness = 1;
-            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.FillShape = true;
-            resources.ApplyResources(this.bunifuShapes1, "bunifuShapes1");
-            this.bunifuShapes1.Name = "bunifuShapes1";
-            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
-            this.bunifuShapes1.Sides = 5;
-            // 
-            // pbLogo
-            // 
-            resources.ApplyResources(this.pbLogo, "pbLogo");
-            this.pbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pbLogo.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.TabStop = false;
-            // 
-            // btnAudInt
-            // 
-            this.btnAudInt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnAudInt.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnAudInt.BorderColor = System.Drawing.Color.White;
-            this.btnAudInt.BorderRadius = 1;
-            this.btnAudInt.BorderSize = 1;
-            this.btnAudInt.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btnAudInt, "btnAudInt");
-            this.btnAudInt.ForeColor = System.Drawing.Color.White;
-            this.btnAudInt.Name = "btnAudInt";
-            this.btnAudInt.TabStop = false;
-            this.btnAudInt.Tag = "20";
-            this.btnAudInt.TextColor = System.Drawing.Color.White;
-            this.btnAudInt.UseVisualStyleBackColor = false;
-            this.btnAudInt.Click += new System.EventHandler(this.btnAudInt_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
-            // 
-            // lblAudInt
-            // 
-            resources.ApplyResources(this.lblAudInt, "lblAudInt");
-            this.lblAudInt.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAudInt.Name = "lblAudInt";
             // 
             // Menu_Archivos
             // 
@@ -1363,6 +755,615 @@
             this.configurarImpresora.Tag = "4014";
             this.configurarImpresora.Click += new System.EventHandler(this.configurarImpresora_Click);
             // 
+            // tsbUsuario
+            // 
+            resources.ApplyResources(this.tsbUsuario, "tsbUsuario");
+            this.tsbUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbUsuario.Image = global::SistemaContable.Properties.Resources.usuario3;
+            this.tsbUsuario.Name = "tsbUsuario";
+            this.tsbUsuario.Tag = "400402";
+            this.tsbUsuario.Click += new System.EventHandler(this.tsbUsuario_Click);
+            // 
+            // tsbPlandeCuenta
+            // 
+            resources.ApplyResources(this.tsbPlandeCuenta, "tsbPlandeCuenta");
+            this.tsbPlandeCuenta.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPlandeCuenta.Image = global::SistemaContable.Properties.Resources.punta_de_lapiz;
+            this.tsbPlandeCuenta.Name = "tsbPlandeCuenta";
+            this.tsbPlandeCuenta.Tag = "4008";
+            this.tsbPlandeCuenta.Click += new System.EventHandler(this.tsbPlandeCuenta_Click);
+            // 
+            // tsbConceptoContable
+            // 
+            resources.ApplyResources(this.tsbConceptoContable, "tsbConceptoContable");
+            this.tsbConceptoContable.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbConceptoContable.Image = global::SistemaContable.Properties.Resources.tarjeta;
+            this.tsbConceptoContable.Name = "tsbConceptoContable";
+            this.tsbConceptoContable.Tag = "4010";
+            this.tsbConceptoContable.Click += new System.EventHandler(this.tsbConceptoContable_Click);
+            // 
+            // tsbAgenda
+            // 
+            resources.ApplyResources(this.tsbAgenda, "tsbAgenda");
+            this.tsbAgenda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAgenda.Image = global::SistemaContable.Properties.Resources.ajuste;
+            this.tsbAgenda.Name = "tsbAgenda";
+            this.tsbAgenda.Tag = "4012";
+            this.tsbAgenda.Click += new System.EventHandler(this.tsbAgenda_Click);
+            // 
+            // tsbMovimientodeAsientos
+            // 
+            resources.ApplyResources(this.tsbMovimientodeAsientos, "tsbMovimientodeAsientos");
+            this.tsbMovimientodeAsientos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbMovimientodeAsientos.Name = "tsbMovimientodeAsientos";
+            this.tsbMovimientodeAsientos.Tag = "3002";
+            this.tsbMovimientodeAsientos.Click += new System.EventHandler(this.tsbMovimientodeAsientos_Click);
+            // 
+            // tsbLibroDiario
+            // 
+            resources.ApplyResources(this.tsbLibroDiario, "tsbLibroDiario");
+            this.tsbLibroDiario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbLibroDiario.Name = "tsbLibroDiario";
+            this.tsbLibroDiario.Tag = "3008";
+            this.tsbLibroDiario.Click += new System.EventHandler(this.tsbLibroDiario_Click);
+            // 
+            // tsbLibroMayor
+            // 
+            resources.ApplyResources(this.tsbLibroMayor, "tsbLibroMayor");
+            this.tsbLibroMayor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbLibroMayor.Name = "tsbLibroMayor";
+            this.tsbLibroMayor.Tag = "3010";
+            this.tsbLibroMayor.Click += new System.EventHandler(this.tsbLibroMayor_Click);
+            // 
+            // tsbBalanceDeSumasySaldos
+            // 
+            resources.ApplyResources(this.tsbBalanceDeSumasySaldos, "tsbBalanceDeSumasySaldos");
+            this.tsbBalanceDeSumasySaldos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbBalanceDeSumasySaldos.Name = "tsbBalanceDeSumasySaldos";
+            this.tsbBalanceDeSumasySaldos.Tag = "3014";
+            this.tsbBalanceDeSumasySaldos.Click += new System.EventHandler(this.tsbBalanceDeSumasySaldos_Click);
+            // 
+            // toolStripButton9
+            // 
+            resources.ApplyResources(this.toolStripButton9, "toolStripButton9");
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Tag = "0";
+            // 
+            // toolStripButton10
+            // 
+            resources.ApplyResources(this.toolStripButton10, "toolStripButton10");
+            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Tag = "0";
+            // 
+            // toolStripButton11
+            // 
+            resources.ApplyResources(this.toolStripButton11, "toolStripButton11");
+            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.Tag = "0";
+            // 
+            // toolStripButton12
+            // 
+            resources.ApplyResources(this.toolStripButton12, "toolStripButton12");
+            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.Tag = "0";
+            // 
+            // toolStripButton13
+            // 
+            resources.ApplyResources(this.toolStripButton13, "toolStripButton13");
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.Tag = "0";
+            // 
+            // toolStripButton14
+            // 
+            resources.ApplyResources(this.toolStripButton14, "toolStripButton14");
+            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton14.Name = "toolStripButton14";
+            this.toolStripButton14.Tag = "0";
+            // 
+            // toolStripButton15
+            // 
+            resources.ApplyResources(this.toolStripButton15, "toolStripButton15");
+            this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton15.Name = "toolStripButton15";
+            this.toolStripButton15.Tag = "0";
+            // 
+            // toolStripButton16
+            // 
+            resources.ApplyResources(this.toolStripButton16, "toolStripButton16");
+            this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton16.Name = "toolStripButton16";
+            this.toolStripButton16.Tag = "0";
+            // 
+            // tsbBlockdeNotas
+            // 
+            resources.ApplyResources(this.tsbBlockdeNotas, "tsbBlockdeNotas");
+            this.tsbBlockdeNotas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbBlockdeNotas.Name = "tsbBlockdeNotas";
+            this.tsbBlockdeNotas.Tag = "0";
+            this.tsbBlockdeNotas.Click += new System.EventHandler(this.tsbBlockdeNotas_Click);
+            // 
+            // tsbMensajesInternos
+            // 
+            resources.ApplyResources(this.tsbMensajesInternos, "tsbMensajesInternos");
+            this.tsbMensajesInternos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbMensajesInternos.Image = global::SistemaContable.Properties.Resources.sobre;
+            this.tsbMensajesInternos.Name = "tsbMensajesInternos";
+            this.tsbMensajesInternos.Tag = "2004";
+            this.tsbMensajesInternos.Click += new System.EventHandler(this.tsbMensajesInternos_Click);
+            this.tsbMensajesInternos.MouseEnter += new System.EventHandler(this.tsbMensajesInternos_MouseEnter);
+            this.tsbMensajesInternos.MouseLeave += new System.EventHandler(this.tsbMensajesInternos_MouseLeave);
+            // 
+            // tsbCalculadora
+            // 
+            resources.ApplyResources(this.tsbCalculadora, "tsbCalculadora");
+            this.tsbCalculadora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbCalculadora.Name = "tsbCalculadora";
+            this.tsbCalculadora.Tag = "2002";
+            this.tsbCalculadora.Click += new System.EventHandler(this.tsbCalculadora_Click);
+            // 
+            // tsbNotas
+            // 
+            resources.ApplyResources(this.tsbNotas, "tsbNotas");
+            this.tsbNotas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbNotas.Name = "tsbNotas";
+            this.tsbNotas.Tag = "2006";
+            this.tsbNotas.Click += new System.EventHandler(this.tsbNotas_Click);
+            // 
+            // tsbConfigImpresora
+            // 
+            resources.ApplyResources(this.tsbConfigImpresora, "tsbConfigImpresora");
+            this.tsbConfigImpresora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbConfigImpresora.Name = "tsbConfigImpresora";
+            this.tsbConfigImpresora.Tag = "0";
+            this.tsbConfigImpresora.Click += new System.EventHandler(this.tsbConfigImpresora_Click);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
+            // 
+            // lblUsu
+            // 
+            resources.ApplyResources(this.lblUsu, "lblUsu");
+            this.lblUsu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblUsu.Name = "lblUsu";
+            // 
+            // btnAyuda2
+            // 
+            this.btnAyuda2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAyuda2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAyuda2.BorderColor = System.Drawing.Color.White;
+            this.btnAyuda2.BorderRadius = 0;
+            this.btnAyuda2.BorderSize = 0;
+            this.btnAyuda2.FlatAppearance.BorderSize = 0;
+            this.btnAyuda2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.btnAyuda2, "btnAyuda2");
+            this.btnAyuda2.ForeColor = System.Drawing.Color.White;
+            this.btnAyuda2.Image = global::SistemaContable.Properties.Resources.ayuda;
+            this.btnAyuda2.Name = "btnAyuda2";
+            this.btnAyuda2.TabStop = false;
+            this.btnAyuda2.Tag = "50";
+            this.btnAyuda2.TextColor = System.Drawing.Color.White;
+            this.btnAyuda2.UseVisualStyleBackColor = false;
+            // 
+            // btnMantenimiento2
+            // 
+            this.btnMantenimiento2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnMantenimiento2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnMantenimiento2.BorderColor = System.Drawing.Color.White;
+            this.btnMantenimiento2.BorderRadius = 0;
+            this.btnMantenimiento2.BorderSize = 0;
+            this.btnMantenimiento2.FlatAppearance.BorderSize = 0;
+            this.btnMantenimiento2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.btnMantenimiento2, "btnMantenimiento2");
+            this.btnMantenimiento2.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimiento2.Image = global::SistemaContable.Properties.Resources.llave;
+            this.btnMantenimiento2.Name = "btnMantenimiento2";
+            this.btnMantenimiento2.TabStop = false;
+            this.btnMantenimiento2.Tag = "40";
+            this.btnMantenimiento2.TextColor = System.Drawing.Color.White;
+            this.btnMantenimiento2.UseVisualStyleBackColor = false;
+            // 
+            // btnContabilidad2
+            // 
+            this.btnContabilidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnContabilidad2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnContabilidad2.BorderColor = System.Drawing.Color.White;
+            this.btnContabilidad2.BorderRadius = 0;
+            this.btnContabilidad2.BorderSize = 0;
+            this.btnContabilidad2.FlatAppearance.BorderSize = 0;
+            this.btnContabilidad2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.btnContabilidad2, "btnContabilidad2");
+            this.btnContabilidad2.ForeColor = System.Drawing.Color.White;
+            this.btnContabilidad2.Image = global::SistemaContable.Properties.Resources.contabilidad;
+            this.btnContabilidad2.Name = "btnContabilidad2";
+            this.btnContabilidad2.TabStop = false;
+            this.btnContabilidad2.Tag = "30";
+            this.btnContabilidad2.TextColor = System.Drawing.Color.White;
+            this.btnContabilidad2.UseVisualStyleBackColor = false;
+            // 
+            // btnVer2
+            // 
+            this.btnVer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnVer2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnVer2.BorderColor = System.Drawing.Color.White;
+            this.btnVer2.BorderRadius = 0;
+            this.btnVer2.BorderSize = 0;
+            this.btnVer2.FlatAppearance.BorderSize = 0;
+            this.btnVer2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.btnVer2, "btnVer2");
+            this.btnVer2.ForeColor = System.Drawing.Color.White;
+            this.btnVer2.Image = global::SistemaContable.Properties.Resources.lupa;
+            this.btnVer2.Name = "btnVer2";
+            this.btnVer2.TabStop = false;
+            this.btnVer2.Tag = "20";
+            this.btnVer2.TextColor = System.Drawing.Color.White;
+            this.btnVer2.UseVisualStyleBackColor = false;
+            // 
+            // btnArchivos2
+            // 
+            this.btnArchivos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnArchivos2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnArchivos2.BorderColor = System.Drawing.Color.White;
+            this.btnArchivos2.BorderRadius = 0;
+            this.btnArchivos2.BorderSize = 0;
+            this.btnArchivos2.FlatAppearance.BorderSize = 0;
+            this.btnArchivos2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.btnArchivos2, "btnArchivos2");
+            this.btnArchivos2.ForeColor = System.Drawing.Color.White;
+            this.btnArchivos2.Image = global::SistemaContable.Properties.Resources.carpeta41;
+            this.btnArchivos2.Name = "btnArchivos2";
+            this.btnArchivos2.TabStop = false;
+            this.btnArchivos2.Tag = "10";
+            this.btnArchivos2.TextColor = System.Drawing.Color.White;
+            this.btnArchivos2.UseVisualStyleBackColor = false;
+            // 
+            // PanelMenu
+            // 
+            this.PanelMenu.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.PanelMenu, "PanelMenu");
+            this.PanelMenu.BorderRadius = 0;
+            this.PanelMenu.Controls.Add(this.lblAudInt);
+            this.PanelMenu.Controls.Add(this.panel8);
+            this.PanelMenu.Controls.Add(this.btnAudInt);
+            this.PanelMenu.Controls.Add(this.panel6);
+            this.PanelMenu.Controls.Add(this.panel2);
+            this.PanelMenu.Controls.Add(this.panel1);
+            this.PanelMenu.Controls.Add(this.lblPerfil);
+            this.PanelMenu.Controls.Add(this.lblEmpresa);
+            this.PanelMenu.Controls.Add(this.lblSesion);
+            this.PanelMenu.Controls.Add(this.btnSesion);
+            this.PanelMenu.Controls.Add(this.pContabilidad2);
+            this.PanelMenu.Controls.Add(this.pVer2);
+            this.PanelMenu.Controls.Add(this.pAyuda2);
+            this.PanelMenu.Controls.Add(this.pMantenimiento2);
+            this.PanelMenu.Controls.Add(this.pArchivos2);
+            this.PanelMenu.Controls.Add(this.pAyuda);
+            this.PanelMenu.Controls.Add(this.pMantenimiento);
+            this.PanelMenu.Controls.Add(this.pContabilidad);
+            this.PanelMenu.Controls.Add(this.pVer);
+            this.PanelMenu.Controls.Add(this.pArchivos);
+            this.PanelMenu.Controls.Add(this.panel7);
+            this.PanelMenu.Controls.Add(this.pbLogoPanel);
+            this.PanelMenu.Controls.Add(this.lblUsu);
+            this.PanelMenu.Controls.Add(this.panel4);
+            this.PanelMenu.Controls.Add(this.lblFecha);
+            this.PanelMenu.Controls.Add(this.lblHora);
+            this.PanelMenu.Controls.Add(this.btnAyuda);
+            this.PanelMenu.Controls.Add(this.btnMantenimiento);
+            this.PanelMenu.Controls.Add(this.btnContabilidad);
+            this.PanelMenu.Controls.Add(this.btnVer);
+            this.PanelMenu.Controls.Add(this.btnArchivos);
+            this.PanelMenu.Controls.Add(this.bunifuShapes1);
+            this.PanelMenu.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.PanelMenu.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.PanelMenu.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.PanelMenu.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.PanelMenu.Name = "PanelMenu";
+            this.PanelMenu.Quality = 10;
+            // 
+            // lblAudInt
+            // 
+            resources.ApplyResources(this.lblAudInt, "lblAudInt");
+            this.lblAudInt.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAudInt.Name = "lblAudInt";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.Name = "panel8";
+            // 
+            // btnAudInt
+            // 
+            this.btnAudInt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAudInt.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnAudInt.BorderColor = System.Drawing.Color.White;
+            this.btnAudInt.BorderRadius = 1;
+            this.btnAudInt.BorderSize = 1;
+            this.btnAudInt.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btnAudInt, "btnAudInt");
+            this.btnAudInt.ForeColor = System.Drawing.Color.White;
+            this.btnAudInt.Image = global::SistemaContable.Properties.Resources.papel2;
+            this.btnAudInt.Name = "btnAudInt";
+            this.btnAudInt.TabStop = false;
+            this.btnAudInt.Tag = "20";
+            this.btnAudInt.TextColor = System.Drawing.Color.White;
+            this.btnAudInt.UseVisualStyleBackColor = false;
+            this.btnAudInt.Click += new System.EventHandler(this.btnAudInt_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // lblPerfil
+            // 
+            resources.ApplyResources(this.lblPerfil, "lblPerfil");
+            this.lblPerfil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblPerfil.Name = "lblPerfil";
+            // 
+            // lblEmpresa
+            // 
+            resources.ApplyResources(this.lblEmpresa, "lblEmpresa");
+            this.lblEmpresa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblEmpresa.Name = "lblEmpresa";
+            // 
+            // lblSesion
+            // 
+            resources.ApplyResources(this.lblSesion, "lblSesion");
+            this.lblSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSesion.Name = "lblSesion";
+            // 
+            // btnSesion
+            // 
+            this.btnSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnSesion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btnSesion, "btnSesion");
+            this.btnSesion.Image = global::SistemaContable.Properties.Resources.candado_cerrado;
+            this.btnSesion.Name = "btnSesion";
+            this.btnSesion.UseVisualStyleBackColor = false;
+            this.btnSesion.Click += new System.EventHandler(this.btnSesion_Click);
+            // 
+            // pContabilidad2
+            // 
+            this.pContabilidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.pContabilidad2, "pContabilidad2");
+            this.pContabilidad2.Name = "pContabilidad2";
+            // 
+            // pVer2
+            // 
+            this.pVer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.pVer2, "pVer2");
+            this.pVer2.Name = "pVer2";
+            // 
+            // pAyuda2
+            // 
+            this.pAyuda2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.pAyuda2, "pAyuda2");
+            this.pAyuda2.Name = "pAyuda2";
+            // 
+            // pMantenimiento2
+            // 
+            this.pMantenimiento2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.pMantenimiento2, "pMantenimiento2");
+            this.pMantenimiento2.Name = "pMantenimiento2";
+            // 
+            // pArchivos2
+            // 
+            this.pArchivos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.pArchivos2, "pArchivos2");
+            this.pArchivos2.Name = "pArchivos2";
+            // 
+            // pAyuda
+            // 
+            this.pAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.pAyuda, "pAyuda");
+            this.pAyuda.Name = "pAyuda";
+            // 
+            // pMantenimiento
+            // 
+            this.pMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.pMantenimiento, "pMantenimiento");
+            this.pMantenimiento.Name = "pMantenimiento";
+            // 
+            // pContabilidad
+            // 
+            this.pContabilidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.pContabilidad, "pContabilidad");
+            this.pContabilidad.Name = "pContabilidad";
+            // 
+            // pVer
+            // 
+            this.pVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.pVer, "pVer");
+            this.pVer.Name = "pVer";
+            // 
+            // pArchivos
+            // 
+            this.pArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.pArchivos, "pArchivos");
+            this.pArchivos.Name = "pArchivos";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
+            // 
+            // pbLogoPanel
+            // 
+            resources.ApplyResources(this.pbLogoPanel, "pbLogoPanel");
+            this.pbLogoPanel.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogoPanel.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
+            this.pbLogoPanel.Name = "pbLogoPanel";
+            this.pbLogoPanel.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel4.Controls.Add(this.label1);
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            this.panel4.Tag = "1";
+            // 
+            // lblFecha
+            // 
+            resources.ApplyResources(this.lblFecha, "lblFecha");
+            this.lblFecha.ForeColor = System.Drawing.Color.White;
+            this.lblFecha.Name = "lblFecha";
+            // 
+            // lblHora
+            // 
+            resources.ApplyResources(this.lblHora, "lblHora");
+            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.lblHora.Name = "lblHora";
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.BorderColor = System.Drawing.Color.White;
+            this.btnAyuda.BorderRadius = 0;
+            this.btnAyuda.BorderSize = 0;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.btnAyuda, "btnAyuda");
+            this.btnAyuda.ForeColor = System.Drawing.Color.White;
+            this.btnAyuda.Image = global::SistemaContable.Properties.Resources.ayuda;
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.TabStop = false;
+            this.btnAyuda.Tag = "50";
+            this.btnAyuda.TextColor = System.Drawing.Color.White;
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            this.btnAyuda.MouseEnter += new System.EventHandler(this.btnAyuda_MouseEnter);
+            this.btnAyuda.MouseLeave += new System.EventHandler(this.btnAyuda_MouseLeave);
+            // 
+            // btnMantenimiento
+            // 
+            this.btnMantenimiento.BackColor = System.Drawing.Color.Transparent;
+            this.btnMantenimiento.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnMantenimiento.BorderColor = System.Drawing.Color.White;
+            this.btnMantenimiento.BorderRadius = 0;
+            this.btnMantenimiento.BorderSize = 0;
+            this.btnMantenimiento.FlatAppearance.BorderSize = 0;
+            this.btnMantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.btnMantenimiento, "btnMantenimiento");
+            this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimiento.Image = global::SistemaContable.Properties.Resources.llave;
+            this.btnMantenimiento.Name = "btnMantenimiento";
+            this.btnMantenimiento.TabStop = false;
+            this.btnMantenimiento.Tag = "40";
+            this.btnMantenimiento.TextColor = System.Drawing.Color.White;
+            this.btnMantenimiento.UseVisualStyleBackColor = false;
+            this.btnMantenimiento.Click += new System.EventHandler(this.btnMantenimiento_Click);
+            this.btnMantenimiento.MouseEnter += new System.EventHandler(this.btnMantenimiento_MouseEnter);
+            this.btnMantenimiento.MouseLeave += new System.EventHandler(this.btnMantenimiento_MouseLeave);
+            // 
+            // btnContabilidad
+            // 
+            this.btnContabilidad.BackColor = System.Drawing.Color.Transparent;
+            this.btnContabilidad.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnContabilidad.BorderColor = System.Drawing.Color.White;
+            this.btnContabilidad.BorderRadius = 0;
+            this.btnContabilidad.BorderSize = 0;
+            this.btnContabilidad.FlatAppearance.BorderSize = 0;
+            this.btnContabilidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.btnContabilidad, "btnContabilidad");
+            this.btnContabilidad.ForeColor = System.Drawing.Color.White;
+            this.btnContabilidad.Image = global::SistemaContable.Properties.Resources.contabilidad;
+            this.btnContabilidad.Name = "btnContabilidad";
+            this.btnContabilidad.TabStop = false;
+            this.btnContabilidad.Tag = "30";
+            this.btnContabilidad.TextColor = System.Drawing.Color.White;
+            this.btnContabilidad.UseVisualStyleBackColor = false;
+            this.btnContabilidad.Click += new System.EventHandler(this.btnContabilidad_Click);
+            this.btnContabilidad.MouseEnter += new System.EventHandler(this.btnContabilidad_MouseEnter);
+            this.btnContabilidad.MouseLeave += new System.EventHandler(this.btnContabilidad_MouseLeave);
+            // 
+            // btnVer
+            // 
+            this.btnVer.BackColor = System.Drawing.Color.Transparent;
+            this.btnVer.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnVer.BorderColor = System.Drawing.Color.White;
+            this.btnVer.BorderRadius = 0;
+            this.btnVer.BorderSize = 0;
+            this.btnVer.FlatAppearance.BorderSize = 0;
+            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.btnVer, "btnVer");
+            this.btnVer.ForeColor = System.Drawing.Color.White;
+            this.btnVer.Image = global::SistemaContable.Properties.Resources.lupa;
+            this.btnVer.Name = "btnVer";
+            this.btnVer.TabStop = false;
+            this.btnVer.Tag = "20";
+            this.btnVer.TextColor = System.Drawing.Color.White;
+            this.btnVer.UseVisualStyleBackColor = false;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
+            this.btnVer.MouseEnter += new System.EventHandler(this.btnVer_MouseEnter);
+            this.btnVer.MouseLeave += new System.EventHandler(this.btnVer_MouseLeave);
+            // 
+            // btnArchivos
+            // 
+            this.btnArchivos.BackColor = System.Drawing.Color.Transparent;
+            this.btnArchivos.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnArchivos.BorderColor = System.Drawing.Color.White;
+            this.btnArchivos.BorderRadius = 0;
+            this.btnArchivos.BorderSize = 0;
+            this.btnArchivos.FlatAppearance.BorderSize = 0;
+            this.btnArchivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.btnArchivos, "btnArchivos");
+            this.btnArchivos.ForeColor = System.Drawing.Color.White;
+            this.btnArchivos.Image = global::SistemaContable.Properties.Resources.carpeta41;
+            this.btnArchivos.Name = "btnArchivos";
+            this.btnArchivos.TabStop = false;
+            this.btnArchivos.Tag = "10";
+            this.btnArchivos.TextColor = System.Drawing.Color.White;
+            this.btnArchivos.UseVisualStyleBackColor = false;
+            this.btnArchivos.Click += new System.EventHandler(this.btnArchivos_Click);
+            this.btnArchivos.MouseEnter += new System.EventHandler(this.btnArchivos_MouseEnter);
+            this.btnArchivos.MouseLeave += new System.EventHandler(this.btnArchivos_MouseLeave);
+            // 
+            // bunifuShapes1
+            // 
+            this.bunifuShapes1.Angle = 0F;
+            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.bunifuShapes1.BorderThickness = 1;
+            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes1.FillShape = true;
+            resources.ApplyResources(this.bunifuShapes1, "bunifuShapes1");
+            this.bunifuShapes1.Name = "bunifuShapes1";
+            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.bunifuShapes1.Sides = 5;
+            // 
+            // pbLogo
+            // 
+            resources.ApplyResources(this.pbLogo, "pbLogo");
+            this.pbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pbLogo.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.TabStop = false;
+            // 
             // frmInicio
             // 
             resources.ApplyResources(this, "$this");
@@ -1393,17 +1394,17 @@
             this.toolStripADs.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.Menu_Archivos.ResumeLayout(false);
+            this.Menu_Ver.ResumeLayout(false);
+            this.Menu_Ayuda.ResumeLayout(false);
+            this.Menu_Contabilidad.ResumeLayout(false);
+            this.Menu_Mantenimiento.ResumeLayout(false);
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoPanel)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            this.Menu_Archivos.ResumeLayout(false);
-            this.Menu_Ver.ResumeLayout(false);
-            this.Menu_Ayuda.ResumeLayout(false);
-            this.Menu_Contabilidad.ResumeLayout(false);
-            this.Menu_Mantenimiento.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

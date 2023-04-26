@@ -76,6 +76,7 @@ namespace SistemaContable.General
         string frm1 = "frmPermisosUsuarios";
         string frm2 = "frmPermisosPerfil";
         string frm3 = "frmAggModVisAsientoContable";
+        string frm4 = "frmAuditoriaInterna";
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             if (formulario == frm1)
@@ -112,6 +113,18 @@ namespace SistemaContable.General
                 else if (cbBusqueda.SelectedIndex == 1)
                 {
                     columna = "mod_descri";
+                }
+            }
+            else if (formulario == frm4)
+            {
+                frm4 = "";
+                if (cbBusqueda.SelectedIndex == 0)
+                {
+                    columna = "pcu_cuenta";
+                }
+                else if (cbBusqueda.SelectedIndex == 1)
+                {
+                    columna = "pcu_descri";
                 }
             }
 
