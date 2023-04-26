@@ -68,7 +68,7 @@ namespace SistemaContable
 
             if (lblSesion.Text == "Cerrar Sesión")
             {
-                Negocio.FGenerales.Sesion(this, toolStripADs, 1);
+                Negocio.FInicio.Sesion(this, toolStripADs, 1);
                 lblUsu.Text = "Sesión Cerrada";
                 lblPerfil.Text = "Perfil: NINGUNO";
 
@@ -81,7 +81,7 @@ namespace SistemaContable
                 frm.ShowDialog();
                 if (frmSesion.autorizado)
                 {
-                    Negocio.FGenerales.Sesion(this, toolStripADs, 2);
+                    Negocio.FInicio.Sesion(this, toolStripADs, 2);
                     Negocio.FInicio.DatosUsuEmp(lblUsu, lblEmpresa, lblPerfil);
 
                     lblSesion.Text = "Cerrar Sesión";
@@ -113,6 +113,20 @@ namespace SistemaContable
                     }
                     Application.Exit();
                 }
+            }
+        }
+
+        private void btnAudInt_Click(object sender, EventArgs e)
+        {
+            if (Negocio.FInicio.ValidacionSupervisor())
+            {
+                frmAuditoriaInterna frm = new frmAuditoriaInterna();
+                frm.Show();
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                MessageBox.ShowDialog();
             }
         }
 
@@ -152,77 +166,40 @@ namespace SistemaContable
 
         private void DisparadorInicio(object sender, EventArgs e)
         {
-            //MENSAJES
-            if (Negocio.Funciones.Ver.FComunicacionInterna.NuevosMSGs())
+            string tiempo = Negocio.FInicio.DisparadorInicio(lblnuevomensaje);
+
+            if (tiempo == "" || tiempo != "expiro")
             {
-                lblnuevomensaje.Visible = true;
+                return;
             }
 
-            //TAREAS
-            string tiempo = "";
-            Negocio.Funciones.Ver.FCalendario.MSGTareas();
-
-            switch (Negocio.Funciones.Ver.FCalendario.MSGTareas())
+            if (tiempo == "expiro")
             {
-                case 1:
-                    tiempo = "2 horas";
-                    break;
-
-                case 2:
-                    tiempo = "1 hora";
-                    break;
-
-                case 3:
-                    tiempo = "30 minutos";
-                    break;
-
-                case 4:
-                    tiempo = "15 minutos";
-                    break;
-
-                case 5:
-                    tiempo = "5 minutos";
-                    break;
-
-                case 6:
-                    tiempo = "expiro";
-                    break;
-
-                default:
-                    break;
+                frmMessageBox MessageBox1 = new frmMessageBox("Atención!", "Una Tarea Expiro, ¿Desea Posponerla?", true);
+                MessageBox1.ShowDialog();
+                if (frmMessageBox.Acepto)
+                {
+                    frmCalendario frm = new frmCalendario();
+                    if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString()))
+                    {
+                        frmMessageBox MessageBox2 = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                        MessageBox2.ShowDialog();
+                    }
+                }
             }
-
-            if (tiempo != "" || tiempo == "expiro")
+            else
             {
-                if (tiempo == "expiro")
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", tiempo + " para que una tarea expire!, ¿Desea Posponerla?", true);
+                MessageBox.ShowDialog();
+                if (frmMessageBox.Acepto)
                 {
-                    frmMessageBox MessageBox1 = new frmMessageBox("Atención!", "Una Tarea Expiro, ¿Desea Posponerla?", true);
-                    MessageBox1.ShowDialog();
-                    if (frmMessageBox.Acepto)
+                    frmCalendario frm = new frmCalendario();
+                    if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString()))
                     {
-                        frmCalendario frm = new frmCalendario();
-                        if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString()))
-                        {
-                            frmMessageBox MessageBox2 = new frmMessageBox("Atención!", "Acceso Denegado.", false);
-                            MessageBox2.ShowDialog();
-                        }
+                        frmMessageBox MessageBox3 = new frmMessageBox("Atención!", "Acceso Denegado.", false);
+                        MessageBox3.ShowDialog();
                     }
                 }
-                else
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Atención!", tiempo + " para que una tarea expire!, ¿Desea Posponerla?", true);
-                    MessageBox.ShowDialog();
-                    if (frmMessageBox.Acepto)
-                    {
-                        frmCalendario frm = new frmCalendario();
-                        if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbNotas.Tag.ToString()))
-                        {
-                            frmMessageBox MessageBox3 = new frmMessageBox("Atención!", "Acceso Denegado.", false);
-                            MessageBox3.ShowDialog();
-                        }
-                    }
-                }
-
             }
         }
         //
@@ -648,7 +625,13 @@ namespace SistemaContable
 
         private void auditoriaInterna_Click(object sender, EventArgs e)
         {
-
+            frmMessageBox MessageBox1 = new frmMessageBox("Atención!", "Atención: El Proceso de Auditoria Interna Contable puede tardar algunos minutos, y NO podra ser cancelado. ¿Desea Continuar?", true, true);
+            MessageBox1.ShowDialog();
+            if (frmMessageBox.Acepto)
+            {
+                frmRangoFechas frm = new frmRangoFechas(2);
+                frm.Show();
+            }
         }
 
         //40

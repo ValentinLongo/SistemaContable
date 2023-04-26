@@ -35,6 +35,7 @@ namespace SistemaContable.General
                 int resultado = AccesoBase.ValidarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' AND usu_contraseña = '{contraseña}'");
                 if (resultado == 1)
                 {
+                    //Negocio.FLogin.IdUsuario
                     Negocio.FLogin.NombreUsuario = usuario;
                     Negocio.FLogin.ContraUsuario = contraseña;
 

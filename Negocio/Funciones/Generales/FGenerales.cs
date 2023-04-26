@@ -101,69 +101,6 @@ namespace Negocio
             }
         }
 
-        //para manejar el boton de abrir/cerrar sesión
-        public static void Sesion(Form Inicio, ToolStrip tsAccesosDirectos, int proceso) //proceso 1 = cierra sesion, 2 = abre sesion
-        {
-            if (proceso == 1)
-            {
-                foreach (Control Ctrl in Inicio.Controls)
-                {
-                    if (Ctrl is BunifuGradientPanel)
-                    {
-                        foreach (Control Ctrl2 in Ctrl.Controls)
-                        {
-                            if (Ctrl2 is RJButton)
-                            {
-                                Ctrl2.Enabled = false;
-                            }
-                        }
-                    }
-                    if (Ctrl is ToolStrip)
-                    {
-                        foreach (ToolStripItem botones in tsAccesosDirectos.Items)
-                        {
-                            if (botones is ToolStripButton)
-                            {
-                                if (botones.Tag.ToString() != "12345")
-                                {
-                                    botones.Enabled = false;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            else if (proceso == 2)
-            {
-                foreach (Control Ctrl in Inicio.Controls)
-                {
-                    if (Ctrl is BunifuGradientPanel)
-                    {
-                        foreach (Control Ctrl2 in Ctrl.Controls)
-                        {
-                            if (Ctrl2 is RJButton)
-                            {
-                                Ctrl2.Enabled = true;
-                            }
-                        }
-                    }
-                    if (Ctrl is ToolStrip)
-                    {
-                        foreach (ToolStripItem botones in tsAccesosDirectos.Items)
-                        {
-                            if (botones is ToolStripButton)
-                            {
-                                if (botones.Tag.ToString() != "12345")
-                                {
-                                    botones.Enabled = true;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         //para realizar una busqueda en un datagridview
         public static string Busqueda([Optional] DataGridView dgv,string txtbusqueda,BunifuCheckBox inicio,int where_o_and, string columna) //where = 1 / and = 2
         {
