@@ -677,13 +677,11 @@
             this.cbCentroCosto.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCentroCosto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbCentroCosto.FormattingEnabled = true;
-            this.cbCentroCosto.Items.AddRange(new object[] {
-            "Codigo",
-            "Nombre"});
             this.cbCentroCosto.Location = new System.Drawing.Point(184, 109);
             this.cbCentroCosto.Name = "cbCentroCosto";
             this.cbCentroCosto.Size = new System.Drawing.Size(250, 23);
             this.cbCentroCosto.TabIndex = 174;
+            this.cbCentroCosto.SelectedIndexChanged += new System.EventHandler(this.cbCentroCosto_SelectedIndexChanged);
             // 
             // label10
             // 

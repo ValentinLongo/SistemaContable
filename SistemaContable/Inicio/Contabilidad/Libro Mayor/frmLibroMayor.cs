@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IdentityModel.Tokens;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -27,15 +28,12 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
         {
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos("SELECT * FROM CentroC");
-            if (ds.Tables[0].Rows.Count != 0)
+            foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    cbCentroCosto.DataSource = ds.Tables[0];
-                    cbCentroCosto.ValueMember = "cec_codigo";
-                    cbCentroCosto.DisplayMember = "cec_descri";
-                }
+                cbCentroCosto.Items.Add(dr["cec_descri"].ToString());
             }
+            cbCentroCosto.Items.Add("NINGUNO");
+            cbCentroCosto.Items.Add("TODOS");
         }
 
         private void btnBuscarEjercicio_Click(object sender, EventArgs e)
@@ -82,15 +80,16 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
             }
             else if (cbCentroCosto.Text == "TODOS")
             {
-                centroC = "";
+                centroC = " ";
             }
             else
             {
-                centroC = $" And mva_cc = '{tbIdCuenta}'";
+                centroC = $" And mva_cc = {cbCentroCosto.SelectedIndex + 1}";
             }
 
             double Debe = 0;
             double Haber = 0;
+            double Saldo = 0;
             string fechaDesde = "";
             int EjAnterior = 0;
             if (ChSumSalEjAnt.Checked == true)
@@ -109,8 +108,155 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
                     {
                         EjAnterior = Convert.ToInt32(dr["eje_codigo"].ToString());
                     }
-
+                    DataSet ds3 = new DataSet();
+                    ds3 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Debe FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {EjAnterior} and mva_codigo = 1 and mva_cuenta = {tbIdCuenta.Text}");
+                    foreach (DataRow dr in ds3.Tables[0].Rows)
+                    {
+                        Debe = Convert.ToDouble(dr["Debe"].ToString());
+                    }
+                    DataSet ds4 = new DataSet();
+                    ds4 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {EjAnterior} and mva_codigo = 2 and mva_cuenta = {tbIdCuenta.Text}");
+                    foreach (DataRow dr in ds4.Tables[0].Rows)
+                    {
+                        Haber = Convert.ToDouble(dr["Haber"].ToString());
+                    }
                 }
+            }
+            DataSet ds5 = new DataSet();
+            ds5 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Debe FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 1 and mva_cuenta = {tbIdCuenta.Text} and ast_fecha < '{dtDesde.Value.ToShortDateString()}' {centroC}");
+            foreach (DataRow dr in ds5.Tables[0].Rows)
+            {
+                double debeSaldo;
+                try
+                {
+                    debeSaldo = Convert.ToDouble(dr["Debe"].ToString());
+                }
+                catch
+                {
+                    debeSaldo = 0;
+                }
+                Debe = Debe + debeSaldo;
+            }
+            DataSet ds6 = new DataSet();
+            ds6 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 2 and mva_cuenta = {tbIdCuenta.Text} and ast_fecha < '{dtDesde.Value.ToShortDateString()}' {centroC}");
+            foreach (DataRow dr in ds6.Tables[0].Rows)
+            {
+                double haberSaldo;
+                try
+                {
+                    haberSaldo = Convert.ToDouble(dr["Haber"].ToString());
+                }
+                catch
+                {
+                    haberSaldo = 0;
+                }
+                Haber = Haber + haberSaldo;
+            }
+            Saldo = Debe - Haber;
+
+            if (ChInCentroCosto.Checked)
+            {
+                //Visualizar unicamente comprobante
+                string UnicamenteComprobante = "ast_comenta";
+                if (ChUnicComp.Checked)
+                {
+                    UnicamenteComprobante = "Case When len(ISNULL(as_cbte,'')) = 0 Then as_comenta Else (Case When ast_tipocbte = 1 Then (Case When len(ISNULL(ast_cbte,''))< 14 Then tba_abrev Else tmo_abrev End) Else tmo_abrev End + '' + ast_cbte) End as ast_comenta";
+                }
+                string ArticulosManuales = "";
+                if (ChAsiMan.Checked)
+                {
+                    ArticulosManuales = "And (IsNull(ast_cbte,'') = '')";
+                }
+                string AsientosConImpAlDebe = "";
+                if (ChImpDebe.Checked)
+                {
+                    AsientosConImpAlDebe = "And mva_codigo <> 2";
+                }
+                string AsientosConImpAlHaber = "";
+                if (ChImpHaber.Checked)
+                {
+                    AsientosConImpAlHaber = "And mva_codigo <> 1";
+                }
+
+                string query = $"select ast_fecha as mva_fecha, ast_renumera, mva_comenta," +
+                    $"{UnicamenteComprobante}, " +
+                    $"Case When mva_codigo = 1 Then mva_importe Else 0 End as mva_debe," +
+                    $"Case When mva_codigo = 2 Then mva_importe Else 0 End as mva_haber, pcu_descri as mva_descri, cec_descri " +
+                    $"From MovAsto Left Join PCuenta on pcu_cuenta = mva_cuenta Left Join (Asiento Left Join TipMov on ast_tipocbte = tmo_codigo Left Join " +
+                    $"TipMovBan on ast_tipocbte = tba_codigo) on mva_asiento = ast_asiento " +
+                    $"Left Join (CentroCxPCuenta Left Join CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta and cxp_centroc = mva_cc " +
+                    $"Where ast_ejercicio = {tbIdEjercicio.Text} and mva_cuenta = {tbIdCuenta.Text} and ast_fecha >= '{dtDesde.Value.ToShortDateString()}' and ast_fecha <= '{dtHasta.Value.ToShortDateString()}' " +
+                    $"{ArticulosManuales} " +
+                    $"{AsientosConImpAlDebe} " +
+                    $" {AsientosConImpAlHaber} " +
+                    $"{centroC} " +
+                    $"ORDER BY ast_tipo, ast_fecha, mva_asiento";
+                frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor", $"{dtDesde.Text}", $"{dtHasta.Text}", $"{tbDescriCuenta.Text}", $"{Debe}", $"{Haber}", $"{tbDescriEjercicio.Text}");
+                reporte.Show();
+            }
+            else
+            {
+                //Visualizar unicamente comprobante
+                string UnicamenteComprobante = "ast_comenta";
+                if (ChUnicComp.Checked)
+                {
+                    UnicamenteComprobante = "Case When len(ISNULL(as_cbte,'')) = 0 Then as_comenta Else (Case When ast_tipocbte = 1 Then (Case When len(ISNULL(ast_cbte,''))< 14 Then tba_abrev Else tmo_abrev End) Else tmo_abrev End + '' + ast_cbte) End as ast_comenta";
+                }
+                string ArticulosManuales = "";
+                if (ChAsiMan.Checked)
+                {
+                    ArticulosManuales = "And (IsNull(ast_cbte,'') = '')";
+                }
+                string AsientosConImpAlDebe = "";
+                if (ChImpDebe.Checked)
+                {
+                    AsientosConImpAlDebe = "And mva_codigo <> 2";
+                }
+                string AsientosConImpAlHaber = "";
+                if (ChImpHaber.Checked)
+                {
+                    AsientosConImpAlHaber = "And mva_codigo <> 1";
+                }
+
+                string query = $"select ast_fecha as mva_fecha, ast_renumera, mva_comenta," +
+                    $"{UnicamenteComprobante}, " +
+                    $"Case When mva_codigo = 1 Then mva_importe Else 0 End as mva_debe," +
+                    $"Case When mva_codigo = 2 Then mva_importe Else 0 End as mva_haber, pcu_descri as mva_descri, cec_descri " +
+                    $"From MovAsto Left Join PCuenta on pcu_cuenta = mva_cuenta Left Join (Asiento Left Join TipMov on ast_tipocbte = tmo_codigo Left Join " +
+                    $"TipMovBan on ast_tipocbte = tba_codigo) on mva_asiento = ast_asiento " +
+                    $"Left Join (CentroCxPCuenta Left Join CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta and cxp_centroc = mva_cc " +
+                    $"Where ast_ejercicio = {tbIdEjercicio.Text} and mva_cuenta = {tbIdCuenta.Text} and ast_fecha >= '{dtDesde.Value.ToShortDateString()}' and ast_fecha <= '{dtHasta.Value.ToShortDateString()}' " +
+                    $"{ArticulosManuales} " +
+                    $"{AsientosConImpAlDebe} " +
+                    $" {AsientosConImpAlHaber} " +
+                    $"{centroC} " +
+                    $"ORDER BY ast_tipo, ast_fecha, mva_asiento";
+                frmReporte reporte = new frmReporte("LibroMayor", query, "", "Libro Mayor", $"{dtDesde.Text}", $"{dtHasta.Text}", $"{tbDescriCuenta.Text}", "0", "0", $"{tbDescriEjercicio.Text}");
+                reporte.Show();
+            }
+        }
+
+        private void cbCentroCosto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbCentroCosto.SelectedIndex != 4)
+            {
+                ChAsiMan.Enabled = true;
+                ChInCentroCosto.Enabled = false;
+                ChImpDebe.Enabled = true;
+                ChImpHaber.Enabled = true;
+                ChUnicComp.Enabled = true;
+                ChSumSalEjAnt.Enabled = false;
+            }
+            else
+            {
+
+                ChAsiMan.Enabled = true;
+                ChInCentroCosto.Enabled = true;
+                ChImpDebe.Enabled = true;
+                ChImpHaber.Enabled = true;
+                ChUnicComp.Enabled = true;
+                ChSumSalEjAnt.Enabled = false;
+
             }
         }
     }
