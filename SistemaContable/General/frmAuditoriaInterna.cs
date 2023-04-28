@@ -1491,7 +1491,7 @@ namespace SistemaContable.General
                 //de aca para abajo
                 if ((ds.Tables[0].Rows[0]["mba_efectivo"] is DBNull ? 0 : Convert.ToDouble(ds.Tables[0].Rows[0]["mba_efectivo"])) != 0)
                 {
-                    AccesoBase.InsertUpdateDatosMoney($"Insert Into Aux_Asiento (aux_terminal, aux_asiento, aux_fecha, aux_cuenta, aux_codigo, aux_importe, aux_comenta, aux_orden) Values ({terminal}, 1, '{ds.Tables[0].Rows[0]["mba_fecemi"]}', {CtaCaja}, 2, {"*"}, '', 1)", );
+                    //AccesoBase.InsertUpdateDatosMoney($"Insert Into Aux_Asiento (aux_terminal, aux_asiento, aux_fecha, aux_cuenta, aux_codigo, aux_importe, aux_comenta, aux_orden) Values ({terminal}, 1, '{ds.Tables[0].Rows[0]["mba_fecemi"]}', {CtaCaja}, 2, {"*"}, '', 1)", );
                 }
 
                 if ((ds.Tables[0].Rows[0]["mba_chet"] is DBNull ? 0 : Convert.ToDouble(ds.Tables[0].Rows[0]["mba_chet"])) != 0)
