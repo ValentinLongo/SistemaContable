@@ -269,5 +269,56 @@ namespace Negocio
             return dia;
         }
 
+        //se usa en auditoria interna menu
+        public static bool FiltroSeccion() 
+        {
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT par_FiltroSeccion FROM Parametro");
+
+            if ((ds.Tables[0].Rows[0]["par_FiltroSeccion"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["par_FiltroSeccion"])) == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        //se usa en auditoria interna menu
+        public static bool FechaCont()
+        {
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT par_FechaCont FROM Parametro");
+            if (ds.Tables[0].Rows.Count == 0)
+            {
+                return false;
+            }
+
+            if ((ds.Tables[0].Rows[0]["par_FechaCont"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["par_FechaCont"])) == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //se usa en auditoria interna menu
+        public static bool ConceptoACuenta()
+        {
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT par_ConceptoACuenta FROM Parametro");
+            if ((ds.Tables[0].Rows[0]["par_ConceptoACuenta"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["par_ConceptoACuenta"])) == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
     }
 }
