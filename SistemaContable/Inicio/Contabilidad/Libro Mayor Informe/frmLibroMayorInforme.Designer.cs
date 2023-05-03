@@ -51,6 +51,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnBuscarModelo = new System.Windows.Forms.Button();
             this.btnBuscarEjercicio = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ChSumSalEjAnt = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -213,7 +215,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(205, 216);
+            this.btnConfirmar.Location = new System.Drawing.Point(205, 269);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(142, 47);
             this.btnConfirmar.TabIndex = 163;
@@ -221,6 +223,7 @@
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // label9
             // 
@@ -386,12 +389,78 @@
             this.btnBuscarEjercicio.UseVisualStyleBackColor = false;
             this.btnBuscarEjercicio.Click += new System.EventHandler(this.btnBuscarEjercicio_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(175, 223);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(315, 16);
+            this.label10.TabIndex = 180;
+            this.label10.Text = "Sumar al Saldo inicial el Saldo del Ejercicio Anterior";
+            // 
+            // ChSumSalEjAnt
+            // 
+            this.ChSumSalEjAnt.AllowBindingControlAnimation = true;
+            this.ChSumSalEjAnt.AllowBindingControlColorChanges = false;
+            this.ChSumSalEjAnt.AllowBindingControlLocation = true;
+            this.ChSumSalEjAnt.AllowCheckBoxAnimation = false;
+            this.ChSumSalEjAnt.AllowCheckmarkAnimation = true;
+            this.ChSumSalEjAnt.AllowOnHoverStates = true;
+            this.ChSumSalEjAnt.AutoCheck = true;
+            this.ChSumSalEjAnt.BackColor = System.Drawing.Color.Transparent;
+            this.ChSumSalEjAnt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChSumSalEjAnt.BackgroundImage")));
+            this.ChSumSalEjAnt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ChSumSalEjAnt.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.ChSumSalEjAnt.BorderRadius = 12;
+            this.ChSumSalEjAnt.Checked = false;
+            this.ChSumSalEjAnt.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.ChSumSalEjAnt.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ChSumSalEjAnt.CustomCheckmarkImage = null;
+            this.ChSumSalEjAnt.Location = new System.Drawing.Point(155, 222);
+            this.ChSumSalEjAnt.MinimumSize = new System.Drawing.Size(17, 17);
+            this.ChSumSalEjAnt.Name = "ChSumSalEjAnt";
+            this.ChSumSalEjAnt.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.ChSumSalEjAnt.OnCheck.BorderRadius = 12;
+            this.ChSumSalEjAnt.OnCheck.BorderThickness = 2;
+            this.ChSumSalEjAnt.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.ChSumSalEjAnt.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.ChSumSalEjAnt.OnCheck.CheckmarkThickness = 2;
+            this.ChSumSalEjAnt.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.ChSumSalEjAnt.OnDisable.BorderRadius = 12;
+            this.ChSumSalEjAnt.OnDisable.BorderThickness = 2;
+            this.ChSumSalEjAnt.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.ChSumSalEjAnt.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.ChSumSalEjAnt.OnDisable.CheckmarkThickness = 2;
+            this.ChSumSalEjAnt.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.ChSumSalEjAnt.OnHoverChecked.BorderRadius = 12;
+            this.ChSumSalEjAnt.OnHoverChecked.BorderThickness = 2;
+            this.ChSumSalEjAnt.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.ChSumSalEjAnt.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.ChSumSalEjAnt.OnHoverChecked.CheckmarkThickness = 2;
+            this.ChSumSalEjAnt.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.ChSumSalEjAnt.OnHoverUnchecked.BorderRadius = 12;
+            this.ChSumSalEjAnt.OnHoverUnchecked.BorderThickness = 1;
+            this.ChSumSalEjAnt.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.ChSumSalEjAnt.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.ChSumSalEjAnt.OnUncheck.BorderRadius = 12;
+            this.ChSumSalEjAnt.OnUncheck.BorderThickness = 1;
+            this.ChSumSalEjAnt.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.ChSumSalEjAnt.Size = new System.Drawing.Size(17, 17);
+            this.ChSumSalEjAnt.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.ChSumSalEjAnt.TabIndex = 179;
+            this.ChSumSalEjAnt.ThreeState = false;
+            this.ChSumSalEjAnt.ToolTipText = null;
+            // 
             // frmLibroMayorInforme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(553, 275);
+            this.ClientSize = new System.Drawing.Size(553, 328);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.ChSumSalEjAnt);
             this.Controls.Add(this.btnBuscarEjercicio);
             this.Controls.Add(this.btnBuscarModelo);
             this.Controls.Add(this.panel5);
@@ -447,5 +516,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnBuscarModelo;
         private System.Windows.Forms.Button btnBuscarEjercicio;
+        private System.Windows.Forms.Label label10;
+        private Bunifu.UI.WinForms.BunifuCheckBox ChSumSalEjAnt;
     }
 }
