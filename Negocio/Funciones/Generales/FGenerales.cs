@@ -220,8 +220,15 @@ namespace Negocio
             switch (mes)
             {
                 case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
                     dia = "31";
                     break;
+
                 case 2:
                     if ((año % 4 == 0 && año % 100 != 0) || año % 400 == 0)
                     {
@@ -232,35 +239,12 @@ namespace Negocio
                         dia = "28";
                     }
                     break;
-                case 3:
-                    dia = "31";
-                    break;
+
                 case 4:
-                    dia = "30";
-                    break;
-                case 5:
-                    dia = "31";
-                    break;
                 case 6:
-                    dia = "30";
-                    break;
-                case 7:
-                    dia = "31";
-                    break;
-                case 8:
-                    dia = "31";
-                    break;
                 case 9:
-                    dia = "30";
-                    break;
-                case 10:
-                    dia = "31";
-                    break;
                 case 11:
                     dia = "30";
-                    break;
-                case 12:
-                    dia = "31";
                     break;
 
                 default:
@@ -268,57 +252,5 @@ namespace Negocio
             }
             return dia;
         }
-
-        //se usa en auditoria interna menu
-        public static bool FiltroSeccion() 
-        {
-            DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT par_FiltroSeccion FROM Parametro");
-
-            if ((ds.Tables[0].Rows[0]["par_FiltroSeccion"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["par_FiltroSeccion"])) == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        //se usa en auditoria interna menu
-        public static bool FechaCont()
-        {
-            DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT par_FechaCont FROM Parametro");
-            if (ds.Tables[0].Rows.Count == 0)
-            {
-                return false;
-            }
-
-            if ((ds.Tables[0].Rows[0]["par_FechaCont"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["par_FechaCont"])) == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        //se usa en auditoria interna menu
-        public static bool ConceptoACuenta()
-        {
-            DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT par_ConceptoACuenta FROM Parametro");
-            if ((ds.Tables[0].Rows[0]["par_ConceptoACuenta"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["par_ConceptoACuenta"])) == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
     }
 }

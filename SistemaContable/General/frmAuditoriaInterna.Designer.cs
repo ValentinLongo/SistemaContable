@@ -39,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblConteo = new System.Windows.Forms.Label();
             this.ProgressBar = new Bunifu.UI.WinForms.BunifuProgressBar();
             this.checkCpa = new Bunifu.UI.WinForms.BunifuCheckBox();
@@ -168,6 +167,7 @@
             this.dtpHasta.Size = new System.Drawing.Size(17, 20);
             this.dtpHasta.TabIndex = 150;
             this.dtpHasta.TabStop = false;
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpHasta_ValueChanged);
             // 
             // dtpDesde
             // 
@@ -176,6 +176,7 @@
             this.dtpDesde.Size = new System.Drawing.Size(17, 20);
             this.dtpDesde.TabIndex = 149;
             this.dtpDesde.TabStop = false;
+            this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
             // maskHasta
             // 
@@ -234,23 +235,12 @@
             this.label3.TabIndex = 151;
             this.label3.Text = "Cuenta Contable:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(25, 396);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 17);
-            this.label4.TabIndex = 152;
-            this.label4.Text = "Proceso:";
-            // 
             // lblConteo
             // 
             this.lblConteo.AutoSize = true;
             this.lblConteo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConteo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblConteo.Location = new System.Drawing.Point(149, 379);
+            this.lblConteo.Location = new System.Drawing.Point(130, 379);
             this.lblConteo.Name = "lblConteo";
             this.lblConteo.Size = new System.Drawing.Size(150, 17);
             this.lblConteo.TabIndex = 153;
@@ -267,7 +257,7 @@
             this.ProgressBar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.ProgressBar.BorderRadius = 9;
             this.ProgressBar.BorderThickness = 1;
-            this.ProgressBar.Location = new System.Drawing.Point(84, 399);
+            this.ProgressBar.Location = new System.Drawing.Point(58, 401);
             this.ProgressBar.Maximum = 100;
             this.ProgressBar.MaximumValue = 100;
             this.ProgressBar.Minimum = 0;
@@ -1022,7 +1012,7 @@
             this.btnProcesar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcesar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcesar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProcesar.Location = new System.Drawing.Point(108, 441);
+            this.btnProcesar.Location = new System.Drawing.Point(109, 441);
             this.btnProcesar.Name = "btnProcesar";
             this.btnProcesar.Size = new System.Drawing.Size(175, 44);
             this.btnProcesar.TabIndex = 183;
@@ -1069,7 +1059,6 @@
             this.Controls.Add(this.checkCpa);
             this.Controls.Add(this.ProgressBar);
             this.Controls.Add(this.lblConteo);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.dtpDesde);
@@ -1101,7 +1090,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblConteo;
         private Bunifu.UI.WinForms.BunifuProgressBar ProgressBar;
         private Bunifu.UI.WinForms.BunifuCheckBox checkCpa;
