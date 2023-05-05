@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Negocio.Funciones.Contabilidad;
 using SistemaContable.General;
 using System;
 using System.Collections.Generic;
@@ -56,100 +57,117 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            bool BanderaCC;
-            DataSet datos = new DataSet();
-            datos = AccesoBase.ListarDatos($"Select * from BalanceDet Left Join PCuenta on det_ctacont = pcu_cuenta Left Join CentroC on det_cc = cec_codigo WHERE det_codigo = {tbIdModelo.Text}");
-            foreach (DataRow dataRow in datos.Tables[0].Rows)
-            {
-                string pcuCodigo = dataRow["pcu_codigo"].ToString();
-                string pcuCuenta = dataRow["pcu_cuenta"].ToString();
-                string pcuDescri = dataRow["pcu_descri"].ToString();
+            if (dtDesde.Value <= dtHasta.Value)
+            { 
+                bool BanderaCC;
+                DataSet datos = new DataSet();
+                datos = AccesoBase.ListarDatos($"Select * from BalanceDet Left Join PCuenta on det_ctacont = pcu_cuenta Left Join CentroC on det_cc = cec_codigo WHERE det_codigo = {tbIdModelo.Text}");
+                foreach (DataRow dataRow in datos.Tables[0].Rows)
+                {
+                    string pcuCodigo = dataRow["pcu_codigo"].ToString();
+                    string pcuCuenta = dataRow["pcu_cuenta"].ToString();
+                    string pcuDescri = dataRow["pcu_descri"].ToString();
 
-                double Debe = 0;
-                double Haber = 0;
-                double Saldo = 0;
-                string fechaDesde = "";
-                int EjAnterior = 0;
-                if (ChSumSalEjAnt.Checked == true)
-                {
-                    DataSet ds = new DataSet();
-                    ds = AccesoBase.ListarDatos($"select * from Ejercicio where eje_codigo = {tbIdEjercicio.Text}");
-                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    double Debe = 0;
+                    double Haber = 0;
+                    double Saldo = 0;
+                    string fechaDesde = "";
+                    int EjAnterior = 0;
+                    if (ChSumSalEjAnt.Checked == true)
                     {
-                        fechaDesde = dr["eje_desde"].ToString();
+                        DataSet ds = new DataSet();
+                        ds = AccesoBase.ListarDatos($"select * from Ejercicio where eje_codigo = {tbIdEjercicio.Text}");
+                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        {
+                            fechaDesde = dr["eje_desde"].ToString();
+                        }
+                        if (fechaDesde != "")
+                        {
+                            DataSet ds2 = new DataSet();
+                            ds2 = AccesoBase.ListarDatos($"select top 1 * from Ejercicio where eje_desde < '{fechaDesde}' order by eje_desde desc");
+                            foreach (DataRow dr in ds2.Tables[0].Rows)
+                            {
+                                EjAnterior = Convert.ToInt32(dr["eje_codigo"].ToString());
+                            }
+                            DataSet ds3 = new DataSet();
+                            ds3 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Debe FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {EjAnterior} and mva_codigo = 1 and mva_cuenta = {pcuCuenta}");
+                            foreach (DataRow dr in ds3.Tables[0].Rows)
+                            {
+                                Debe = Convert.ToDouble(dr["Debe"].ToString());
+                            }
+                            DataSet ds4 = new DataSet();
+                            ds4 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {EjAnterior} and mva_codigo = 2 and mva_cuenta = {pcuCuenta}");
+                            foreach (DataRow dr in ds4.Tables[0].Rows)
+                            {
+                                Haber = Convert.ToDouble(dr["Haber"].ToString());
+                            }
+                        }
                     }
-                    if (fechaDesde != "")
-                    {
-                        DataSet ds2 = new DataSet();
-                        ds2 = AccesoBase.ListarDatos($"select top 1 * from Ejercicio where eje_desde < '{fechaDesde}' order by eje_desde desc");
-                        foreach (DataRow dr in ds2.Tables[0].Rows)
-                        {
-                            EjAnterior = Convert.ToInt32(dr["eje_codigo"].ToString());
-                        }
-                        DataSet ds3 = new DataSet();
-                        ds3 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Debe FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {EjAnterior} and mva_codigo = 1 and mva_cuenta = {pcuCuenta}");
-                        foreach (DataRow dr in ds3.Tables[0].Rows)
-                        {
-                            Debe = Convert.ToDouble(dr["Debe"].ToString());
-                        }
-                        DataSet ds4 = new DataSet();
-                        ds4 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {EjAnterior} and mva_codigo = 2 and mva_cuenta = {pcuCuenta}");
-                        foreach (DataRow dr in ds4.Tables[0].Rows)
-                        {
-                            Haber = Convert.ToDouble(dr["Haber"].ToString());
-                        }
-                    }
-                }
 
-                DataSet ds5 = new DataSet();
-                ds5 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Debe FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 1 and pcu_codigo = '{pcuCodigo}' and ast_fecha < '{dtDesde.Value.ToShortDateString()}'");
-                foreach (DataRow dr in ds5.Tables[0].Rows)
-                {
-                    double debeSaldo;
-                    try
+                    DataSet ds5 = new DataSet();
+                    ds5 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Debe FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 1 and pcu_codigo = '{pcuCodigo}' and ast_fecha < '{dtDesde.Value.ToShortDateString()}'");
+                    foreach (DataRow dr in ds5.Tables[0].Rows)
                     {
-                        debeSaldo = Convert.ToDouble(dr["Debe"].ToString());
+                        double debeSaldo;
+                        try
+                        {
+                            debeSaldo = Convert.ToDouble(dr["Debe"].ToString());
+                        }
+                        catch
+                        {
+                            debeSaldo = 0;
+                        }
+                        Debe = Debe + debeSaldo;
                     }
-                    catch
+                    DataSet ds6 = new DataSet();
+                    ds6 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 2 and pcu_codigo = '{pcuCodigo}' and ast_fecha < '{dtDesde.Value.ToShortDateString()}'");
+                    foreach (DataRow dr in ds6.Tables[0].Rows)
                     {
-                        debeSaldo = 0;
+                        double haberSaldo;
+                        try
+                        {
+                            haberSaldo = Convert.ToDouble(dr["Haber"].ToString());
+                        }
+                        catch
+                        {
+                            haberSaldo = 0;
+                        }
+                        Haber = Haber + haberSaldo;
                     }
-                    Debe = Debe + debeSaldo;
-                }
-                DataSet ds6 = new DataSet();
-                ds6 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 2 and pcu_codigo = '{pcuCodigo}' and ast_fecha < '{dtDesde.Value.ToShortDateString()}'");
-                foreach (DataRow dr in ds6.Tables[0].Rows)
-                {
-                    double haberSaldo;
-                    try
-                    {
-                        haberSaldo = Convert.ToDouble(dr["Haber"].ToString());
-                    }
-                    catch
-                    {
-                        haberSaldo = 0;
-                    }
-                    Haber = Haber + haberSaldo;
-                }
-                Saldo = Debe - Haber;
+                    Saldo = Debe - Haber;
 
-                string saldoEjAnterior = "ast_comenta";
-                if (ChSumSalEjAnt.Checked)
-                {
-                    saldoEjAnterior = "Case When len(ISNULL(ast_cbte,'')) = 0 Then ast_comenta Else (Case When ast_tipocbte = 1 Then (Case When LEN(ISNULL(ast_cbte,'')) < 14 Then tba_abrev Else tmo_abrev End) Else tmo_abrev End + ' ' + ast_cbte) End AS ast_comenta";
+                    string saldoEjAnterior = "ast_comenta";
+                    if (ChSumSalEjAnt.Checked)
+                    {
+                        saldoEjAnterior = "Case When len(ISNULL(ast_cbte,'')) = 0 Then ast_comenta Else (Case When ast_tipocbte = 1 Then (Case When LEN(ISNULL(ast_cbte,'')) < 14 Then tba_abrev Else tmo_abrev End) Else tmo_abrev End + ' ' + ast_cbte) End AS ast_comenta";
+                    }
+                    string query = $"select ast_fecha as mva_fecha, ast_renumera, mva_comenta, {saldoEjAnterior}, " +
+                    $"Case When mva_codigo = 1 Then mva_importe Else 0 End as mva_debe," +
+                    $"Case When mva_codigo = 2 Then mva_importe Else 0 End as mva_haber, pcu_descri as mva_descri, cec_descri " +
+                    $"From BalanceDet Left Join MovAsto on det_ctacont = mva_cuenta And IsNull (mva_cc,0) = IsNull (det_cc,0) Left Join PCuenta on pcu_cuenta = mva_cuenta Left Join (Asiento Left Join TipMov on ast_tipocbte = tmo_codigo Left Join " +
+                    $"TipMovBan on ast_tipocbte = tba_codigo) on mva_asiento = ast_asiento " +
+                    $"Left Join (CentroCxPCuenta Left Join CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta and cxp_centroc = mva_cc " +
+                    $"Where det_codigo = {tbIdModelo.Text} and ast_ejercicio = {tbIdEjercicio.Text} and mva_cuenta = {pcuCuenta} and ast_fecha >= '{dtDesde.Value.ToShortDateString()}' and ast_fecha <= '{dtHasta.Value.ToShortDateString()}' " +
+                    $"ORDER BY ast_tipo, ast_fecha, mva_asiento";
+                    frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor - Por Informe", $"{dtDesde.Text}", $"{dtHasta.Text}", pcuDescri, "0", "0", $"{tbDescriEjercicio.Text}");
+                    reporte.Show();
                 }
-                string query = $"select ast_fecha as mva_fecha, ast_renumera, mva_comenta, {saldoEjAnterior}, " +
-                $"Case When mva_codigo = 1 Then mva_importe Else 0 End as mva_debe," +
-                $"Case When mva_codigo = 2 Then mva_importe Else 0 End as mva_haber, pcu_descri as mva_descri, cec_descri " +
-                $"From BalanceDet Left Join MovAsto on det_ctacont = mva_cuenta And IsNull (mva_cc,0) = IsNull (det_cc,0) Left Join PCuenta on pcu_cuenta = mva_cuenta Left Join (Asiento Left Join TipMov on ast_tipocbte = tmo_codigo Left Join " +
-                $"TipMovBan on ast_tipocbte = tba_codigo) on mva_asiento = ast_asiento " +
-                $"Left Join (CentroCxPCuenta Left Join CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta and cxp_centroc = mva_cc " +
-                $"Where det_codigo = {tbIdModelo.Text} and ast_ejercicio = {tbIdEjercicio.Text} and mva_cuenta = {pcuCuenta} and ast_fecha >= '{dtDesde.Value.ToShortDateString()}' and ast_fecha <= '{dtHasta.Value.ToShortDateString()}' " +
-                $"ORDER BY ast_tipo, ast_fecha, mva_asiento";
-                frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor - Por Informe", $"{dtDesde.Text}", $"{dtHasta.Text}", pcuDescri, "0", "0", $"{tbDescriEjercicio.Text}");
-                reporte.Show();
             }
+            else
+            {
+                MessageBox.Show("La fecha 'Desde' tiene que se menor que la fecha 'Hasta'");
+            }
+            
 
+        }
+
+        private void tbIdEjercicio_TextChanged(object sender, EventArgs e)
+        {
+            FLibroMayor fLibroMayor = new FLibroMayor();
+            string[] fechas;
+            fechas = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
+            dtDesde.Value = Convert.ToDateTime(fechas[0]);
+            dtHasta.Value = Convert.ToDateTime(fechas[1]);
         }
     }
 }
