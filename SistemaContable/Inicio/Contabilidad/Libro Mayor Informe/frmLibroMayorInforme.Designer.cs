@@ -161,6 +161,7 @@
             this.tbIdEjercicio.Name = "tbIdEjercicio";
             this.tbIdEjercicio.Size = new System.Drawing.Size(78, 13);
             this.tbIdEjercicio.TabIndex = 139;
+            this.tbIdEjercicio.TextChanged += new System.EventHandler(this.tbIdEjercicio_TextChanged);
             // 
             // Mensaje
             // 

@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Negocio.Funciones.Contabilidad;
 using SistemaContable.General;
 using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
 using System;
@@ -168,6 +169,15 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
             {
                 MessageBox.Show("La fecha desde tiene que se menor que la fecha hasta.");
             }
+        }
+
+        private void tbIdEjercicio_TextChanged(object sender, EventArgs e)
+        {
+            FLibroMayor fLibroMayor = new FLibroMayor();
+            string[] fechas;
+            fechas = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
+            dtDesde.Value = Convert.ToDateTime(fechas[0]);
+            dtHasta.Value = Convert.ToDateTime(fechas[1]);
         }
     }
 }

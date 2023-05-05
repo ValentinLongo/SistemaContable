@@ -228,6 +228,7 @@
     <Compile Include="Funciones\Contabilidad\FActualizacionDDI.cs" />
     <Compile Include="Funciones\Contabilidad\FActualizacionMDA.cs" />
     <Compile Include="Funciones\Contabilidad\FLibroDiario.cs" />
+    <Compile Include="Funciones\Contabilidad\FLibroMayor.cs" />
     <Compile Include="Funciones\Contabilidad\FSaldosAjsutados.cs" />
     <Compile Include="Funciones\Generales\FEstandar.cs" />
     <Compile Include="Funciones\Mantenimiento\FAgenda.cs" />
