@@ -37,7 +37,7 @@ namespace Negocio.Funciones.Generales
 
         public static void InsertAux(int terminal, int asiento, string fecha, long cuenta, int codigo, string money, string comenta, int orden, [Optional] int cc) // Insert Aux_Asiento (porque se repite mucho).
         {
-            if (cc.ToString() == "")
+            if (cc == 0)
             {
                 AccesoBase.InsertUpdateDatosMoney($"Insert Into Aux_Asiento (aux_terminal, aux_asiento, aux_fecha, aux_cuenta, aux_codigo, aux_importe, aux_comenta, aux_orden) Values ({terminal}, {asiento}, '{fecha}', {cuenta}, {codigo}, {"*"}, '{comenta}', {orden})", money);
             }
@@ -53,11 +53,18 @@ namespace Negocio.Funciones.Generales
             ds = AccesoBase.ListarDatos($"Select Max(ast_asiento) as maximo From Asiento");
             long Asiento = ds.Tables[0].Rows[0]["maximo"] is DBNull ? 1 : Convert.ToInt32(ds.Tables[0].Rows[0]["maximo"]) + 1;
 
-            ds = AccesoBase.ListarDatos($"Select * From TipMov Where tmo_codigo = 16");
-            string Abreviado = ds.Tables[0].Rows[0]["tmo_abrev"].ToString();
-            comenta = comenta.Replace("Abreviado", Abreviado);
+            try
+            {
+                ds = AccesoBase.ListarDatos($"Select * From TipMov Where tmo_codigo = 16");
+                string Abreviado = ds.Tables[0].Rows[0]["tmo_abrev"].ToString();
+                comenta = comenta.Replace("Abreviado", Abreviado.ToUpper() + " ");
+            }
+            catch (Exception)
+            {
+                comenta = "";
+            }           
 
-            AccesoBase.InsertUpdateDatos($"Insert Into Asiento (ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_codigo, ast_numero, ast_tipocbte, ast_cbte, ast_ctapro, ast_user, ast_hora, ast_fecalta, ast_tipo) Values ({Asiento}, {Asiento}, '{fecha}', '{comenta}', {codigo}, {nro}, {tipocbte}, '{cpbte}', {ctapro}, '{FLogin.NombreUsuario}', '{DateTime.Now.ToString().Substring(DateTime.Now.ToString().Length - 8)}', '{DateTime.Now.ToString().Substring(0, 10)}', 2)");
+            AccesoBase.InsertUpdateDatos($"Insert Into Asiento (ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_codigo, ast_numero, ast_tipocbte, ast_cbte, ast_ctapro, ast_user, ast_hora, ast_fecalta, ast_tipo) Values ({Asiento}, {Asiento}, '{fecha}', '{comenta}', {codigo}, {nro}, {tipocbte}, '{cpbte}', {ctapro}, {FLogin.IdUsuario}, '{DateTime.Now.ToString().Substring(DateTime.Now.ToString().Length - 8)}', '{DateTime.Now.ToString().Substring(0, 10)}', 2)");
             AccesoBase.InsertUpdateDatos($"Insert Into MovAsto (mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta) Select {Asiento} as Asto, '{fecha}' as Fec, aux_cuenta, aux_codigo, aux_importe, aux_comenta From Aux_Asiento Where aux_terminal = {terminal}");
             AccesoBase.InsertUpdateDatos($"Delete From Aux_Asiento Where aux_terminal = {terminal}");
 
