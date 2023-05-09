@@ -49,8 +49,12 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
                 string horaL = dr["obs_horaL"].ToString();
                 string comentario = dr["obs_comentario"].ToString();
 
-                fechaL = fechaL.Substring(0, 10);
-                fecha = fecha.Substring(0, 10);
+                if (fechaL != "" && fecha != "")
+                {
+                    fechaL = fechaL.Substring(0, 10);
+                    fecha = fecha.Substring(0, 10);
+                }
+                
                 dgvMensajes.Rows.Add(fecha, hora, origen, destino, fechaL, horaL, comentario);
             }
         }
