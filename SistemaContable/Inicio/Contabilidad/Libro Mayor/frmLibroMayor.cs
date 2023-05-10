@@ -264,7 +264,6 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
                 ChImpHaber.Enabled = true;
                 ChUnicComp.Enabled = true;
                 ChSumSalEjAnt.Enabled = false;
-
             }
         }
 
