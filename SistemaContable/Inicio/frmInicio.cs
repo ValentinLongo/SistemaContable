@@ -61,6 +61,7 @@ namespace SistemaContable
             //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
             Negocio.FFormatoSistema.FondoMDI(this, borde1, borde2, borde3, pbLogo);
             //Negocio.FFormatoSistema.SetearFormato(this);
+
         }
 
         private void btnSesion_Click(object sender, EventArgs e) //CAMBIAR SESIÓN
@@ -131,6 +132,11 @@ namespace SistemaContable
         }
 
         //VARIOS
+        private void frmInicio_Load(object sender, EventArgs e)
+        {
+            DisparadorInicio(sender, e);
+        }
+
         private void btnCerrar_MouseEnter(object sender, EventArgs e)
         {
             btnCerrar.BackColor = Color.Red;

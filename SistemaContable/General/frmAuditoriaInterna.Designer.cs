@@ -188,7 +188,7 @@
             this.maskHasta.Name = "maskHasta";
             this.maskHasta.Size = new System.Drawing.Size(63, 15);
             this.maskHasta.TabIndex = 1;
-            this.maskHasta.Tag = "10100";
+            this.maskHasta.Tag = "10000";
             // 
             // maskDesde
             // 
@@ -200,7 +200,7 @@
             this.maskDesde.Name = "maskDesde";
             this.maskDesde.Size = new System.Drawing.Size(63, 15);
             this.maskDesde.TabIndex = 0;
-            this.maskDesde.Tag = "10100";
+            this.maskDesde.Tag = "10000";
             // 
             // label2
             // 

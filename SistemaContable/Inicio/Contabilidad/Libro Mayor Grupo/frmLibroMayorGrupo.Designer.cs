@@ -44,8 +44,6 @@
             this.tbDescriCuenta2 = new System.Windows.Forms.TextBox();
             this.tbIdCuenta2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtHasta = new System.Windows.Forms.DateTimePicker();
-            this.dtDesde = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -59,6 +57,10 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.ChSumSalEjAnt = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
+            this.maskHasta = new System.Windows.Forms.MaskedTextBox();
+            this.maskDesde = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +72,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 21);
+            this.panel1.Size = new System.Drawing.Size(429, 21);
             this.panel1.TabIndex = 18;
             this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -115,7 +117,7 @@
             this.btnCerrar.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.btnCerrar.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.btnCerrar.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.btnCerrar.Location = new System.Drawing.Point(648, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(405, 0);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCerrar.MaximizeBox = false;
             this.btnCerrar.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -147,6 +149,7 @@
             this.btnCerrar.ShowDesignBorders = false;
             this.btnCerrar.Size = new System.Drawing.Size(24, 21);
             this.btnCerrar.TabIndex = 29;
+            this.btnCerrar.TabStop = false;
             // 
             // btnBuscarCuenta
             // 
@@ -154,10 +157,10 @@
             this.btnBuscarCuenta.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta.Image")));
-            this.btnBuscarCuenta.Location = new System.Drawing.Point(635, 72);
+            this.btnBuscarCuenta.Location = new System.Drawing.Point(379, 71);
             this.btnBuscarCuenta.Name = "btnBuscarCuenta";
             this.btnBuscarCuenta.Size = new System.Drawing.Size(25, 23);
-            this.btnBuscarCuenta.TabIndex = 141;
+            this.btnBuscarCuenta.TabIndex = 5;
             this.btnBuscarCuenta.UseVisualStyleBackColor = false;
             this.btnBuscarCuenta.Click += new System.EventHandler(this.btnBuscarCuenta_Click);
             // 
@@ -166,27 +169,29 @@
             this.tbDescriCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDescriCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescriCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescriCuenta.Location = new System.Drawing.Point(253, 77);
+            this.tbDescriCuenta.Location = new System.Drawing.Point(161, 77);
             this.tbDescriCuenta.Name = "tbDescriCuenta";
-            this.tbDescriCuenta.Size = new System.Drawing.Size(376, 13);
-            this.tbDescriCuenta.TabIndex = 140;
+            this.tbDescriCuenta.Size = new System.Drawing.Size(212, 13);
+            this.tbDescriCuenta.TabIndex = 4;
+            this.tbDescriCuenta.Tag = "11000";
             // 
             // tbIdCuenta
             // 
             this.tbIdCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbIdCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbIdCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbIdCuenta.Location = new System.Drawing.Point(99, 77);
+            this.tbIdCuenta.Location = new System.Drawing.Point(85, 77);
             this.tbIdCuenta.Name = "tbIdCuenta";
-            this.tbIdCuenta.Size = new System.Drawing.Size(135, 13);
-            this.tbIdCuenta.TabIndex = 139;
+            this.tbIdCuenta.Size = new System.Drawing.Size(66, 13);
+            this.tbIdCuenta.TabIndex = 3;
+            this.tbIdCuenta.Tag = "10100";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(42, 77);
+            this.label2.Location = new System.Drawing.Point(28, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 138;
@@ -198,10 +203,10 @@
             this.btnBuscarEjercicio.FlatAppearance.BorderSize = 0;
             this.btnBuscarEjercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarEjercicio.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarEjercicio.Image")));
-            this.btnBuscarEjercicio.Location = new System.Drawing.Point(635, 37);
+            this.btnBuscarEjercicio.Location = new System.Drawing.Point(379, 36);
             this.btnBuscarEjercicio.Name = "btnBuscarEjercicio";
             this.btnBuscarEjercicio.Size = new System.Drawing.Size(25, 23);
-            this.btnBuscarEjercicio.TabIndex = 137;
+            this.btnBuscarEjercicio.TabIndex = 2;
             this.btnBuscarEjercicio.UseVisualStyleBackColor = false;
             this.btnBuscarEjercicio.Click += new System.EventHandler(this.btnBuscarEjercicio_Click);
             // 
@@ -210,20 +215,22 @@
             this.tbDescriEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDescriEjercicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescriEjercicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescriEjercicio.Location = new System.Drawing.Point(253, 42);
+            this.tbDescriEjercicio.Location = new System.Drawing.Point(161, 42);
             this.tbDescriEjercicio.Name = "tbDescriEjercicio";
-            this.tbDescriEjercicio.Size = new System.Drawing.Size(376, 13);
-            this.tbDescriEjercicio.TabIndex = 136;
+            this.tbDescriEjercicio.Size = new System.Drawing.Size(212, 13);
+            this.tbDescriEjercicio.TabIndex = 1;
+            this.tbDescriEjercicio.Tag = "11000";
             // 
             // tbIdEjercicio
             // 
             this.tbIdEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbIdEjercicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbIdEjercicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbIdEjercicio.Location = new System.Drawing.Point(99, 42);
+            this.tbIdEjercicio.Location = new System.Drawing.Point(85, 42);
             this.tbIdEjercicio.Name = "tbIdEjercicio";
-            this.tbIdEjercicio.Size = new System.Drawing.Size(135, 13);
-            this.tbIdEjercicio.TabIndex = 135;
+            this.tbIdEjercicio.Size = new System.Drawing.Size(66, 13);
+            this.tbIdEjercicio.TabIndex = 0;
+            this.tbIdEjercicio.Tag = "10100";
             this.tbIdEjercicio.TextChanged += new System.EventHandler(this.tbIdEjercicio_TextChanged);
             // 
             // Mensaje
@@ -231,7 +238,7 @@
             this.Mensaje.AutoSize = true;
             this.Mensaje.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Mensaje.Location = new System.Drawing.Point(42, 42);
+            this.Mensaje.Location = new System.Drawing.Point(22, 40);
             this.Mensaje.Name = "Mensaje";
             this.Mensaje.Size = new System.Drawing.Size(57, 17);
             this.Mensaje.TabIndex = 134;
@@ -243,10 +250,10 @@
             this.btnBuscarCuenta2.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta2.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta2.Image")));
-            this.btnBuscarCuenta2.Location = new System.Drawing.Point(635, 107);
+            this.btnBuscarCuenta2.Location = new System.Drawing.Point(379, 106);
             this.btnBuscarCuenta2.Name = "btnBuscarCuenta2";
             this.btnBuscarCuenta2.Size = new System.Drawing.Size(25, 23);
-            this.btnBuscarCuenta2.TabIndex = 145;
+            this.btnBuscarCuenta2.TabIndex = 8;
             this.btnBuscarCuenta2.UseVisualStyleBackColor = false;
             this.btnBuscarCuenta2.Click += new System.EventHandler(this.btnBuscarCuenta2_Click);
             // 
@@ -255,54 +262,40 @@
             this.tbDescriCuenta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDescriCuenta2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescriCuenta2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescriCuenta2.Location = new System.Drawing.Point(253, 112);
+            this.tbDescriCuenta2.Location = new System.Drawing.Point(161, 112);
             this.tbDescriCuenta2.Name = "tbDescriCuenta2";
-            this.tbDescriCuenta2.Size = new System.Drawing.Size(376, 13);
-            this.tbDescriCuenta2.TabIndex = 144;
+            this.tbDescriCuenta2.Size = new System.Drawing.Size(212, 13);
+            this.tbDescriCuenta2.TabIndex = 7;
+            this.tbDescriCuenta2.Tag = "11000";
             // 
             // tbIdCuenta2
             // 
             this.tbIdCuenta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbIdCuenta2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbIdCuenta2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbIdCuenta2.Location = new System.Drawing.Point(99, 112);
+            this.tbIdCuenta2.Location = new System.Drawing.Point(85, 112);
             this.tbIdCuenta2.Name = "tbIdCuenta2";
-            this.tbIdCuenta2.Size = new System.Drawing.Size(135, 13);
-            this.tbIdCuenta2.TabIndex = 143;
+            this.tbIdCuenta2.Size = new System.Drawing.Size(66, 13);
+            this.tbIdCuenta2.TabIndex = 6;
+            this.tbIdCuenta2.Tag = "10100";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(42, 112);
+            this.label3.Location = new System.Drawing.Point(28, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 142;
             this.label3.Text = "Cuenta:";
-            // 
-            // dtHasta
-            // 
-            this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtHasta.Location = new System.Drawing.Point(99, 179);
-            this.dtHasta.Name = "dtHasta";
-            this.dtHasta.Size = new System.Drawing.Size(101, 20);
-            this.dtHasta.TabIndex = 149;
-            // 
-            // dtDesde
-            // 
-            this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDesde.Location = new System.Drawing.Point(99, 146);
-            this.dtDesde.Name = "dtDesde";
-            this.dtDesde.Size = new System.Drawing.Size(101, 20);
-            this.dtDesde.TabIndex = 148;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(49, 179);
+            this.label6.Location = new System.Drawing.Point(35, 188);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 147;
@@ -313,7 +306,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(45, 146);
+            this.label7.Location = new System.Drawing.Point(32, 155);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 17);
             this.label7.TabIndex = 146;
@@ -324,7 +317,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(225, 222);
+            this.label9.Location = new System.Drawing.Point(58, 225);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(222, 16);
             this.label9.TabIndex = 155;
@@ -348,7 +341,7 @@
             this.bunifuCheckBox4.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.bunifuCheckBox4.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox4.CustomCheckmarkImage = null;
-            this.bunifuCheckBox4.Location = new System.Drawing.Point(205, 220);
+            this.bunifuCheckBox4.Location = new System.Drawing.Point(38, 223);
             this.bunifuCheckBox4.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox4.Name = "bunifuCheckBox4";
             this.bunifuCheckBox4.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -380,6 +373,7 @@
             this.bunifuCheckBox4.Size = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox4.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.bunifuCheckBox4.TabIndex = 154;
+            this.bunifuCheckBox4.TabStop = false;
             this.bunifuCheckBox4.ThreeState = false;
             this.bunifuCheckBox4.ToolTipText = null;
             // 
@@ -394,10 +388,10 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(253, 291);
+            this.btnConfirmar.Location = new System.Drawing.Point(145, 284);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(144, 43);
-            this.btnConfirmar.TabIndex = 156;
+            this.btnConfirmar.TabIndex = 11;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -408,54 +402,54 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(253, 127);
+            this.panel3.Location = new System.Drawing.Point(161, 127);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(376, 1);
+            this.panel3.Size = new System.Drawing.Size(212, 1);
             this.panel3.TabIndex = 166;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(253, 57);
+            this.panel2.Location = new System.Drawing.Point(161, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(376, 1);
+            this.panel2.Size = new System.Drawing.Size(212, 1);
             this.panel2.TabIndex = 167;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(253, 92);
+            this.panel4.Location = new System.Drawing.Point(161, 92);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(376, 1);
+            this.panel4.Size = new System.Drawing.Size(212, 1);
             this.panel4.TabIndex = 168;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(100, 127);
+            this.panel5.Location = new System.Drawing.Point(86, 127);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(135, 1);
+            this.panel5.Size = new System.Drawing.Size(66, 1);
             this.panel5.TabIndex = 169;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(99, 57);
+            this.panel6.Location = new System.Drawing.Point(85, 57);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(135, 1);
+            this.panel6.Size = new System.Drawing.Size(66, 1);
             this.panel6.TabIndex = 170;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(99, 92);
+            this.panel7.Location = new System.Drawing.Point(85, 92);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(135, 1);
+            this.panel7.Size = new System.Drawing.Size(66, 1);
             this.panel7.TabIndex = 171;
             // 
             // label10
@@ -463,7 +457,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(225, 257);
+            this.label10.Location = new System.Drawing.Point(58, 246);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(315, 16);
             this.label10.TabIndex = 178;
@@ -487,7 +481,7 @@
             this.ChSumSalEjAnt.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.ChSumSalEjAnt.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChSumSalEjAnt.CustomCheckmarkImage = null;
-            this.ChSumSalEjAnt.Location = new System.Drawing.Point(205, 256);
+            this.ChSumSalEjAnt.Location = new System.Drawing.Point(38, 245);
             this.ChSumSalEjAnt.MinimumSize = new System.Drawing.Size(17, 17);
             this.ChSumSalEjAnt.Name = "ChSumSalEjAnt";
             this.ChSumSalEjAnt.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -519,15 +513,60 @@
             this.ChSumSalEjAnt.Size = new System.Drawing.Size(17, 17);
             this.ChSumSalEjAnt.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.ChSumSalEjAnt.TabIndex = 177;
+            this.ChSumSalEjAnt.TabStop = false;
             this.ChSumSalEjAnt.ThreeState = false;
             this.ChSumSalEjAnt.ToolTipText = null;
+            // 
+            // dtpHasta
+            // 
+            this.dtpHasta.Location = new System.Drawing.Point(154, 186);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(17, 20);
+            this.dtpHasta.TabIndex = 184;
+            this.dtpHasta.TabStop = false;
+            // 
+            // dtpDesde
+            // 
+            this.dtpDesde.Location = new System.Drawing.Point(154, 153);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(17, 20);
+            this.dtpDesde.TabIndex = 183;
+            this.dtpDesde.TabStop = false;
+            // 
+            // maskHasta
+            // 
+            this.maskHasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.maskHasta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskHasta.ForeColor = System.Drawing.Color.White;
+            this.maskHasta.Location = new System.Drawing.Point(84, 188);
+            this.maskHasta.Name = "maskHasta";
+            this.maskHasta.Size = new System.Drawing.Size(63, 15);
+            this.maskHasta.TabIndex = 10;
+            this.maskHasta.Tag = "10000";
+            // 
+            // maskDesde
+            // 
+            this.maskDesde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.maskDesde.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskDesde.ForeColor = System.Drawing.Color.White;
+            this.maskDesde.Location = new System.Drawing.Point(85, 155);
+            this.maskDesde.Name = "maskDesde";
+            this.maskDesde.Size = new System.Drawing.Size(63, 15);
+            this.maskDesde.TabIndex = 9;
+            this.maskDesde.Tag = "10000";
             // 
             // frmLibroMayorGrupo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(672, 387);
+            this.ClientSize = new System.Drawing.Size(429, 350);
+            this.Controls.Add(this.dtpHasta);
+            this.Controls.Add(this.dtpDesde);
+            this.Controls.Add(this.maskHasta);
+            this.Controls.Add(this.maskDesde);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.ChSumSalEjAnt);
             this.Controls.Add(this.panel7);
@@ -539,8 +578,6 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.bunifuCheckBox4);
-            this.Controls.Add(this.dtHasta);
-            this.Controls.Add(this.dtDesde);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnBuscarCuenta2);
@@ -584,8 +621,6 @@
         private System.Windows.Forms.TextBox tbDescriCuenta2;
         private System.Windows.Forms.TextBox tbIdCuenta2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtHasta;
-        private System.Windows.Forms.DateTimePicker dtDesde;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
@@ -599,5 +634,9 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label10;
         private Bunifu.UI.WinForms.BunifuCheckBox ChSumSalEjAnt;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
+        private System.Windows.Forms.MaskedTextBox maskHasta;
+        private System.Windows.Forms.MaskedTextBox maskDesde;
     }
 }

@@ -18,6 +18,9 @@ namespace SistemaContable.Inicio.Mantenimiento.Rubricación_de_SubDiarios
         public frmRubricacionDeSubDiarios()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
         private void panel7_MouseDown(object sender, MouseEventArgs e)

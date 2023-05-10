@@ -19,6 +19,13 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
         public frmLibroMayorInforme()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
+            maskDesde.Mask = "00-00-0000";
+            maskHasta.Mask = "00-00-0000";
+            maskHasta.Text = DateTime.Now.ToShortDateString();
         }
 
         private void btnBuscarModelo_Click(object sender, EventArgs e)
@@ -43,21 +50,16 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
             }
         }
 
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (dtDesde.Value <= dtHasta.Value)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            if (Convert.ToDateTime(maskDesde.Text) <= Convert.ToDateTime(maskHasta.Text))
             { 
                 bool BanderaCC;
                 DataSet datos = new DataSet();
@@ -105,7 +107,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
                     }
 
                     DataSet ds5 = new DataSet();
-                    ds5 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Debe FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 1 and pcu_codigo = '{pcuCodigo}' and ast_fecha < '{dtDesde.Value.ToShortDateString()}'");
+                    ds5 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Debe FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 1 and pcu_codigo = '{pcuCodigo}' and ast_fecha < '{maskDesde.Text}'");
                     foreach (DataRow dr in ds5.Tables[0].Rows)
                     {
                         double debeSaldo;
@@ -120,7 +122,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
                         Debe = Debe + debeSaldo;
                     }
                     DataSet ds6 = new DataSet();
-                    ds6 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 2 and pcu_codigo = '{pcuCodigo}' and ast_fecha < '{dtDesde.Value.ToShortDateString()}'");
+                    ds6 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 2 and pcu_codigo = '{pcuCodigo}' and ast_fecha < '{maskDesde.Text}'");
                     foreach (DataRow dr in ds6.Tables[0].Rows)
                     {
                         double haberSaldo;
@@ -147,27 +149,47 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
                     $"From BalanceDet Left Join MovAsto on det_ctacont = mva_cuenta And IsNull (mva_cc,0) = IsNull (det_cc,0) Left Join PCuenta on pcu_cuenta = mva_cuenta Left Join (Asiento Left Join TipMov on ast_tipocbte = tmo_codigo Left Join " +
                     $"TipMovBan on ast_tipocbte = tba_codigo) on mva_asiento = ast_asiento " +
                     $"Left Join (CentroCxPCuenta Left Join CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta and cxp_centroc = mva_cc " +
-                    $"Where det_codigo = {tbIdModelo.Text} and ast_ejercicio = {tbIdEjercicio.Text} and mva_cuenta = {pcuCuenta} and ast_fecha >= '{dtDesde.Value.ToShortDateString()}' and ast_fecha <= '{dtHasta.Value.ToShortDateString()}' " +
+                    $"Where det_codigo = {tbIdModelo.Text} and ast_ejercicio = {tbIdEjercicio.Text} and mva_cuenta = {pcuCuenta} and ast_fecha >= '{maskDesde.Text}' and ast_fecha <= '{maskHasta.Text}' " +
                     $"ORDER BY ast_tipo, ast_fecha, mva_asiento";
-                    frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor - Por Informe", $"{dtDesde.Text}", $"{dtHasta.Text}", pcuDescri, "0", "0", $"{tbDescriEjercicio.Text}");
+                    frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor - Por Informe", $"{maskDesde.Text}", $"{maskHasta.Text}", pcuDescri, "0", "0", $"{tbDescriEjercicio.Text}");
                     reporte.Show();
                 }
             }
             else
             {
                 MessageBox.Show("La fecha 'Desde' tiene que se menor que la fecha 'Hasta'");
-            }
-            
-
+            }           
         }
 
         private void tbIdEjercicio_TextChanged(object sender, EventArgs e)
         {
-            FLibroMayor fLibroMayor = new FLibroMayor();
-            string[] fechas;
-            fechas = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
-            dtDesde.Value = Convert.ToDateTime(fechas[0]);
-            dtHasta.Value = Convert.ToDateTime(fechas[1]);
+            if (tbIdEjercicio.Text != "")
+            {
+                FLibroMayor fLibroMayor = new FLibroMayor();
+                string[] fechasydescri;
+                fechasydescri = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
+                maskDesde.Text = fechasydescri[0].ToString();
+                maskHasta.Text = fechasydescri[1].ToString();
+                tbDescriEjercicio.Text = fechasydescri[2].ToString();
+            }
+            else
+            {
+                tbDescriEjercicio.Text = "";
+                maskDesde.Text = "";
+                maskHasta.Text = "";
+            }
+        }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

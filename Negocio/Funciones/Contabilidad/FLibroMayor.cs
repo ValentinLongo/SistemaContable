@@ -14,17 +14,18 @@ namespace Negocio.Funciones.Contabilidad
         public static string[] fechasDesdeHasta(int NroEjer) // tipo 1 = DEBE / tipo 2 = HABER
         {
             DataSet ds = new DataSet();
-            string[] fechas = new string[2];
+            string[] fechasydescri = new string[3];
             ds = AccesoBase.ListarDatos($"SELECT * FROM Ejercicio WHERE eje_codigo = {NroEjer}");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    fechas[0] = dr["eje_desde"].ToString();
-                    fechas[1] = dr["eje_hasta"].ToString();
+                    fechasydescri[0] = dr["eje_desde"].ToString();
+                    fechasydescri[1] = dr["eje_hasta"].ToString();
+                    fechasydescri[2] = dr["eje_descri"].ToString();
                 }
             }
-            return fechas;
+            return fechasydescri;
         }
     }
 }
