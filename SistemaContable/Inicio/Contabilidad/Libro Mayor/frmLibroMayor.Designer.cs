@@ -41,8 +41,6 @@
             this.tbIdCuenta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtHasta = new System.Windows.Forms.DateTimePicker();
-            this.dtDesde = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.ChAsiMan = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,6 +61,10 @@
             this.cbCentroCosto = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.ChSumSalEjAnt = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
+            this.maskHasta = new System.Windows.Forms.MaskedTextBox();
+            this.maskDesde = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +76,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(556, 21);
+            this.panel1.Size = new System.Drawing.Size(482, 21);
             this.panel1.TabIndex = 17;
             this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -119,7 +121,7 @@
             this.btnCerrar.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.btnCerrar.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.btnCerrar.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.btnCerrar.Location = new System.Drawing.Point(532, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(458, 0);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCerrar.MaximizeBox = false;
             this.btnCerrar.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -151,6 +153,7 @@
             this.btnCerrar.ShowDesignBorders = false;
             this.btnCerrar.Size = new System.Drawing.Size(24, 21);
             this.btnCerrar.TabIndex = 29;
+            this.btnCerrar.TabStop = false;
             // 
             // btnBuscarEjercicio
             // 
@@ -158,10 +161,10 @@
             this.btnBuscarEjercicio.FlatAppearance.BorderSize = 0;
             this.btnBuscarEjercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarEjercicio.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarEjercicio.Image")));
-            this.btnBuscarEjercicio.Location = new System.Drawing.Point(507, 36);
+            this.btnBuscarEjercicio.Location = new System.Drawing.Point(434, 36);
             this.btnBuscarEjercicio.Name = "btnBuscarEjercicio";
             this.btnBuscarEjercicio.Size = new System.Drawing.Size(23, 23);
-            this.btnBuscarEjercicio.TabIndex = 129;
+            this.btnBuscarEjercicio.TabIndex = 2;
             this.btnBuscarEjercicio.UseVisualStyleBackColor = false;
             this.btnBuscarEjercicio.Click += new System.EventHandler(this.btnBuscarEjercicio_Click);
             // 
@@ -171,10 +174,11 @@
             this.tbDescriEjercicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescriEjercicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDescriEjercicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescriEjercicio.Location = new System.Drawing.Point(273, 38);
+            this.tbDescriEjercicio.Location = new System.Drawing.Point(200, 38);
             this.tbDescriEjercicio.Name = "tbDescriEjercicio";
             this.tbDescriEjercicio.Size = new System.Drawing.Size(229, 15);
-            this.tbDescriEjercicio.TabIndex = 128;
+            this.tbDescriEjercicio.TabIndex = 1;
+            this.tbDescriEjercicio.Tag = "11000";
             // 
             // tbIdEjercicio
             // 
@@ -182,10 +186,11 @@
             this.tbIdEjercicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbIdEjercicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbIdEjercicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbIdEjercicio.Location = new System.Drawing.Point(184, 38);
+            this.tbIdEjercicio.Location = new System.Drawing.Point(111, 38);
             this.tbIdEjercicio.Name = "tbIdEjercicio";
             this.tbIdEjercicio.Size = new System.Drawing.Size(78, 15);
-            this.tbIdEjercicio.TabIndex = 127;
+            this.tbIdEjercicio.TabIndex = 0;
+            this.tbIdEjercicio.Tag = "10100";
             this.tbIdEjercicio.TextChanged += new System.EventHandler(this.tbIdEjercicio_TextChanged);
             // 
             // Mensaje
@@ -193,7 +198,7 @@
             this.Mensaje.AutoSize = true;
             this.Mensaje.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Mensaje.Location = new System.Drawing.Point(125, 39);
+            this.Mensaje.Location = new System.Drawing.Point(52, 39);
             this.Mensaje.Name = "Mensaje";
             this.Mensaje.Size = new System.Drawing.Size(57, 17);
             this.Mensaje.TabIndex = 126;
@@ -205,10 +210,10 @@
             this.btnBuscarCuenta.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta.Image")));
-            this.btnBuscarCuenta.Location = new System.Drawing.Point(507, 71);
+            this.btnBuscarCuenta.Location = new System.Drawing.Point(434, 71);
             this.btnBuscarCuenta.Name = "btnBuscarCuenta";
             this.btnBuscarCuenta.Size = new System.Drawing.Size(23, 23);
-            this.btnBuscarCuenta.TabIndex = 133;
+            this.btnBuscarCuenta.TabIndex = 5;
             this.btnBuscarCuenta.UseVisualStyleBackColor = false;
             this.btnBuscarCuenta.Click += new System.EventHandler(this.btnBuscarCuenta_Click);
             // 
@@ -218,10 +223,11 @@
             this.tbDescriCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescriCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDescriCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescriCuenta.Location = new System.Drawing.Point(273, 73);
+            this.tbDescriCuenta.Location = new System.Drawing.Point(200, 73);
             this.tbDescriCuenta.Name = "tbDescriCuenta";
             this.tbDescriCuenta.Size = new System.Drawing.Size(229, 15);
-            this.tbDescriCuenta.TabIndex = 132;
+            this.tbDescriCuenta.TabIndex = 4;
+            this.tbDescriCuenta.Tag = "11000";
             // 
             // tbIdCuenta
             // 
@@ -229,17 +235,18 @@
             this.tbIdCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbIdCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbIdCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbIdCuenta.Location = new System.Drawing.Point(184, 73);
+            this.tbIdCuenta.Location = new System.Drawing.Point(111, 73);
             this.tbIdCuenta.Name = "tbIdCuenta";
             this.tbIdCuenta.Size = new System.Drawing.Size(78, 15);
-            this.tbIdCuenta.TabIndex = 131;
+            this.tbIdCuenta.TabIndex = 3;
+            this.tbIdCuenta.Tag = "10100";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(130, 74);
+            this.label2.Location = new System.Drawing.Point(57, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 130;
@@ -250,34 +257,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(99, 112);
+            this.label3.Location = new System.Drawing.Point(26, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 17);
             this.label3.TabIndex = 134;
             this.label3.Text = "Centro Costo:";
-            // 
-            // dtHasta
-            // 
-            this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtHasta.Location = new System.Drawing.Point(185, 185);
-            this.dtHasta.Name = "dtHasta";
-            this.dtHasta.Size = new System.Drawing.Size(101, 20);
-            this.dtHasta.TabIndex = 145;
-            // 
-            // dtDesde
-            // 
-            this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDesde.Location = new System.Drawing.Point(185, 152);
-            this.dtDesde.Name = "dtDesde";
-            this.dtDesde.Size = new System.Drawing.Size(101, 20);
-            this.dtDesde.TabIndex = 144;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(161, 229);
+            this.label13.Location = new System.Drawing.Point(88, 229);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(254, 16);
             this.label13.TabIndex = 139;
@@ -301,7 +292,7 @@
             this.ChAsiMan.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.ChAsiMan.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChAsiMan.CustomCheckmarkImage = null;
-            this.ChAsiMan.Location = new System.Drawing.Point(141, 228);
+            this.ChAsiMan.Location = new System.Drawing.Point(68, 228);
             this.ChAsiMan.MinimumSize = new System.Drawing.Size(17, 17);
             this.ChAsiMan.Name = "ChAsiMan";
             this.ChAsiMan.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -333,6 +324,7 @@
             this.ChAsiMan.Size = new System.Drawing.Size(17, 17);
             this.ChAsiMan.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.ChAsiMan.TabIndex = 138;
+            this.ChAsiMan.TabStop = false;
             this.ChAsiMan.ThreeState = false;
             this.ChAsiMan.ToolTipText = null;
             // 
@@ -341,7 +333,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(138, 185);
+            this.label6.Location = new System.Drawing.Point(65, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 137;
@@ -352,7 +344,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(135, 152);
+            this.label7.Location = new System.Drawing.Point(62, 152);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 17);
             this.label7.TabIndex = 136;
@@ -363,7 +355,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(161, 256);
+            this.label4.Location = new System.Drawing.Point(88, 256);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(237, 16);
             this.label4.TabIndex = 147;
@@ -387,7 +379,7 @@
             this.ChInCentroCosto.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.ChInCentroCosto.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChInCentroCosto.CustomCheckmarkImage = null;
-            this.ChInCentroCosto.Location = new System.Drawing.Point(141, 255);
+            this.ChInCentroCosto.Location = new System.Drawing.Point(68, 255);
             this.ChInCentroCosto.MinimumSize = new System.Drawing.Size(17, 17);
             this.ChInCentroCosto.Name = "ChInCentroCosto";
             this.ChInCentroCosto.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -419,6 +411,7 @@
             this.ChInCentroCosto.Size = new System.Drawing.Size(17, 17);
             this.ChInCentroCosto.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.ChInCentroCosto.TabIndex = 146;
+            this.ChInCentroCosto.TabStop = false;
             this.ChInCentroCosto.ThreeState = false;
             this.ChInCentroCosto.ToolTipText = null;
             // 
@@ -427,7 +420,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(161, 279);
+            this.label5.Location = new System.Drawing.Point(88, 279);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(323, 16);
             this.label5.TabIndex = 149;
@@ -451,7 +444,7 @@
             this.ChImpDebe.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.ChImpDebe.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChImpDebe.CustomCheckmarkImage = null;
-            this.ChImpDebe.Location = new System.Drawing.Point(141, 278);
+            this.ChImpDebe.Location = new System.Drawing.Point(68, 278);
             this.ChImpDebe.MinimumSize = new System.Drawing.Size(17, 17);
             this.ChImpDebe.Name = "ChImpDebe";
             this.ChImpDebe.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -483,6 +476,7 @@
             this.ChImpDebe.Size = new System.Drawing.Size(17, 17);
             this.ChImpDebe.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.ChImpDebe.TabIndex = 148;
+            this.ChImpDebe.TabStop = false;
             this.ChImpDebe.ThreeState = false;
             this.ChImpDebe.ToolTipText = null;
             // 
@@ -491,7 +485,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(161, 302);
+            this.label8.Location = new System.Drawing.Point(88, 302);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(327, 16);
             this.label8.TabIndex = 151;
@@ -515,7 +509,7 @@
             this.ChImpHaber.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.ChImpHaber.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChImpHaber.CustomCheckmarkImage = null;
-            this.ChImpHaber.Location = new System.Drawing.Point(141, 301);
+            this.ChImpHaber.Location = new System.Drawing.Point(68, 301);
             this.ChImpHaber.MinimumSize = new System.Drawing.Size(17, 17);
             this.ChImpHaber.Name = "ChImpHaber";
             this.ChImpHaber.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -547,6 +541,7 @@
             this.ChImpHaber.Size = new System.Drawing.Size(17, 17);
             this.ChImpHaber.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.ChImpHaber.TabIndex = 150;
+            this.ChImpHaber.TabStop = false;
             this.ChImpHaber.ThreeState = false;
             this.ChImpHaber.ToolTipText = null;
             // 
@@ -555,7 +550,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(161, 325);
+            this.label9.Location = new System.Drawing.Point(88, 325);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(222, 16);
             this.label9.TabIndex = 153;
@@ -579,7 +574,7 @@
             this.ChUnicComp.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.ChUnicComp.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChUnicComp.CustomCheckmarkImage = null;
-            this.ChUnicComp.Location = new System.Drawing.Point(141, 324);
+            this.ChUnicComp.Location = new System.Drawing.Point(68, 324);
             this.ChUnicComp.MinimumSize = new System.Drawing.Size(17, 17);
             this.ChUnicComp.Name = "ChUnicComp";
             this.ChUnicComp.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -611,6 +606,7 @@
             this.ChUnicComp.Size = new System.Drawing.Size(17, 17);
             this.ChUnicComp.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.ChUnicComp.TabIndex = 152;
+            this.ChUnicComp.TabStop = false;
             this.ChUnicComp.ThreeState = false;
             this.ChUnicComp.ToolTipText = null;
             // 
@@ -625,10 +621,10 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(204, 386);
+            this.btnConfirmar.Location = new System.Drawing.Point(168, 385);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(148, 44);
-            this.btnConfirmar.TabIndex = 154;
+            this.btnConfirmar.TabIndex = 8;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.SystemColors.ControlLightLight;
@@ -639,7 +635,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(273, 90);
+            this.panel4.Location = new System.Drawing.Point(200, 90);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 1);
             this.panel4.TabIndex = 170;
@@ -648,7 +644,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(273, 56);
+            this.panel2.Location = new System.Drawing.Point(200, 56);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(229, 1);
             this.panel2.TabIndex = 171;
@@ -657,7 +653,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(184, 90);
+            this.panel3.Location = new System.Drawing.Point(111, 90);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(78, 1);
             this.panel3.TabIndex = 172;
@@ -666,7 +662,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(184, 56);
+            this.panel5.Location = new System.Drawing.Point(111, 56);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(78, 1);
             this.panel5.TabIndex = 173;
@@ -678,10 +674,11 @@
             this.cbCentroCosto.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCentroCosto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbCentroCosto.FormattingEnabled = true;
-            this.cbCentroCosto.Location = new System.Drawing.Point(184, 109);
+            this.cbCentroCosto.Location = new System.Drawing.Point(111, 109);
             this.cbCentroCosto.Name = "cbCentroCosto";
             this.cbCentroCosto.Size = new System.Drawing.Size(250, 23);
             this.cbCentroCosto.TabIndex = 174;
+            this.cbCentroCosto.TabStop = false;
             this.cbCentroCosto.SelectedIndexChanged += new System.EventHandler(this.cbCentroCosto_SelectedIndexChanged);
             // 
             // label10
@@ -689,7 +686,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(161, 348);
+            this.label10.Location = new System.Drawing.Point(88, 348);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(315, 16);
             this.label10.TabIndex = 176;
@@ -713,7 +710,7 @@
             this.ChSumSalEjAnt.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.ChSumSalEjAnt.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChSumSalEjAnt.CustomCheckmarkImage = null;
-            this.ChSumSalEjAnt.Location = new System.Drawing.Point(141, 347);
+            this.ChSumSalEjAnt.Location = new System.Drawing.Point(68, 347);
             this.ChSumSalEjAnt.MinimumSize = new System.Drawing.Size(17, 17);
             this.ChSumSalEjAnt.Name = "ChSumSalEjAnt";
             this.ChSumSalEjAnt.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -745,15 +742,60 @@
             this.ChSumSalEjAnt.Size = new System.Drawing.Size(17, 17);
             this.ChSumSalEjAnt.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.ChSumSalEjAnt.TabIndex = 175;
+            this.ChSumSalEjAnt.TabStop = false;
             this.ChSumSalEjAnt.ThreeState = false;
             this.ChSumSalEjAnt.ToolTipText = null;
+            // 
+            // dtpHasta
+            // 
+            this.dtpHasta.Location = new System.Drawing.Point(184, 184);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(17, 20);
+            this.dtpHasta.TabIndex = 180;
+            this.dtpHasta.TabStop = false;
+            // 
+            // dtpDesde
+            // 
+            this.dtpDesde.Location = new System.Drawing.Point(184, 151);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(17, 20);
+            this.dtpDesde.TabIndex = 179;
+            this.dtpDesde.TabStop = false;
+            // 
+            // maskHasta
+            // 
+            this.maskHasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.maskHasta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskHasta.ForeColor = System.Drawing.Color.White;
+            this.maskHasta.Location = new System.Drawing.Point(114, 187);
+            this.maskHasta.Name = "maskHasta";
+            this.maskHasta.Size = new System.Drawing.Size(63, 15);
+            this.maskHasta.TabIndex = 7;
+            this.maskHasta.Tag = "10000";
+            // 
+            // maskDesde
+            // 
+            this.maskDesde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.maskDesde.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskDesde.ForeColor = System.Drawing.Color.White;
+            this.maskDesde.Location = new System.Drawing.Point(115, 154);
+            this.maskDesde.Name = "maskDesde";
+            this.maskDesde.Size = new System.Drawing.Size(63, 15);
+            this.maskDesde.TabIndex = 6;
+            this.maskDesde.Tag = "10000";
             // 
             // frmLibroMayor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(556, 451);
+            this.ClientSize = new System.Drawing.Size(482, 451);
+            this.Controls.Add(this.dtpHasta);
+            this.Controls.Add(this.dtpDesde);
+            this.Controls.Add(this.maskHasta);
+            this.Controls.Add(this.maskDesde);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.ChSumSalEjAnt);
             this.Controls.Add(this.cbCentroCosto);
@@ -770,8 +812,6 @@
             this.Controls.Add(this.ChImpDebe);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ChInCentroCosto);
-            this.Controls.Add(this.dtHasta);
-            this.Controls.Add(this.dtDesde);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.ChAsiMan);
             this.Controls.Add(this.label6);
@@ -811,8 +851,6 @@
         private System.Windows.Forms.TextBox tbIdCuenta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtHasta;
-        private System.Windows.Forms.DateTimePicker dtDesde;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox ChAsiMan;
         private System.Windows.Forms.Label label6;
@@ -833,5 +871,9 @@
         private System.Windows.Forms.ComboBox cbCentroCosto;
         private System.Windows.Forms.Label label10;
         private Bunifu.UI.WinForms.BunifuCheckBox ChSumSalEjAnt;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
+        private System.Windows.Forms.MaskedTextBox maskHasta;
+        private System.Windows.Forms.MaskedTextBox maskDesde;
     }
 }

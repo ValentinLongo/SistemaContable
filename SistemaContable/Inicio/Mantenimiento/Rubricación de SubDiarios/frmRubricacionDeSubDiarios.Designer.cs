@@ -141,6 +141,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
+            this.bunifuFormControlBox1.TabStop = false;
             // 
             // label1
             // 
@@ -203,7 +204,7 @@
             this.txtComentario.Location = new System.Drawing.Point(154, 275);
             this.txtComentario.Name = "txtComentario";
             this.txtComentario.Size = new System.Drawing.Size(542, 19);
-            this.txtComentario.TabIndex = 119;
+            this.txtComentario.TabIndex = 5;
             this.txtComentario.Tag = "11000";
             // 
             // textBox1
@@ -215,7 +216,7 @@
             this.textBox1.Location = new System.Drawing.Point(154, 232);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(542, 19);
-            this.textBox1.TabIndex = 121;
+            this.textBox1.TabIndex = 4;
             this.textBox1.Tag = "11000";
             // 
             // panel1
@@ -235,7 +236,7 @@
             this.textBox2.Location = new System.Drawing.Point(154, 188);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(542, 19);
-            this.textBox2.TabIndex = 123;
+            this.textBox2.TabIndex = 3;
             this.textBox2.Tag = "11000";
             // 
             // panel3
@@ -255,7 +256,7 @@
             this.textBox3.Location = new System.Drawing.Point(154, 145);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(542, 19);
-            this.textBox3.TabIndex = 125;
+            this.textBox3.TabIndex = 2;
             this.textBox3.Tag = "11000";
             // 
             // panel4
@@ -305,8 +306,8 @@
             this.textBox4.Location = new System.Drawing.Point(154, 83);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(113, 19);
-            this.textBox4.TabIndex = 134;
-            this.textBox4.Tag = "11000";
+            this.textBox4.TabIndex = 1;
+            this.textBox4.Tag = "10100";
             // 
             // panel6
             // 
@@ -325,8 +326,8 @@
             this.textBox5.Location = new System.Drawing.Point(154, 49);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(113, 19);
-            this.textBox5.TabIndex = 136;
-            this.textBox5.Tag = "11000";
+            this.textBox5.TabIndex = 0;
+            this.textBox5.Tag = "10100";
             // 
             // panel8
             // 

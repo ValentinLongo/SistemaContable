@@ -22,11 +22,19 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
         public frmLibroMayor()
         {
             InitializeComponent();
+
+            Negocio.FValidacionesEventos.EventosFormulario(this);
+            //Negocio.FFormatoSistema.SetearFormato(this);
+
             cargarDatos();
         }
 
         private void cargarDatos()
         {
+            maskDesde.Mask = "00-00-0000";
+            maskHasta.Mask = "00-00-0000";
+            maskHasta.Text = DateTime.Now.ToShortDateString();
+
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos("SELECT * FROM CentroC");
             foreach (DataRow dr in ds.Tables[0].Rows)
@@ -73,7 +81,14 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (dtDesde.Value <= dtHasta.Value)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            if (Convert.ToDateTime(maskDesde.Text) <= Convert.ToDateTime(maskHasta.Text))
             {
                 string centroC;
                 string select;
@@ -126,7 +141,7 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
                     }
                 }
                 DataSet ds5 = new DataSet();
-                ds5 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Debe FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 1 and mva_cuenta = {tbIdCuenta.Text} and ast_fecha < '{dtDesde.Value.ToShortDateString()}' {centroC}");
+                ds5 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Debe FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 1 and mva_cuenta = {tbIdCuenta.Text} and ast_fecha < '{maskDesde.Text}' {centroC}");
                 foreach (DataRow dr in ds5.Tables[0].Rows)
                 {
                     double debeSaldo;
@@ -141,7 +156,7 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
                     Debe = Debe + debeSaldo;
                 }
                 DataSet ds6 = new DataSet();
-                ds6 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 2 and mva_cuenta = {tbIdCuenta.Text} and ast_fecha < '{dtDesde.Value.ToShortDateString()}' {centroC}");
+                ds6 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 2 and mva_cuenta = {tbIdCuenta.Text} and ast_fecha < '{maskHasta.Text}' {centroC}");
                 foreach (DataRow dr in ds6.Tables[0].Rows)
                 {
                     double haberSaldo;
@@ -188,13 +203,13 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
                         $"From MovAsto Left Join PCuenta on pcu_cuenta = mva_cuenta Left Join (Asiento Left Join TipMov on ast_tipocbte = tmo_codigo Left Join " +
                         $"TipMovBan on ast_tipocbte = tba_codigo) on mva_asiento = ast_asiento " +
                         $"Left Join (CentroCxPCuenta Left Join CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta and cxp_centroc = mva_cc " +
-                        $"Where ast_ejercicio = {tbIdEjercicio.Text} and mva_cuenta = {tbIdCuenta.Text} and ast_fecha >= '{dtDesde.Value.ToShortDateString()}' and ast_fecha <= '{dtHasta.Value.ToShortDateString()}' " +
+                        $"Where ast_ejercicio = {tbIdEjercicio.Text} and mva_cuenta = {tbIdCuenta.Text} and ast_fecha >= '{maskDesde.Text}' and ast_fecha <= '{maskHasta.Text}' " +
                         $"{ArticulosManuales} " +
                         $"{AsientosConImpAlDebe} " +
                         $" {AsientosConImpAlHaber} " +
                         $"{centroC} " +
                         $"ORDER BY ast_tipo, ast_fecha, mva_asiento";
-                    frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor", $"{dtDesde.Text}", $"{dtHasta.Text}", $"{tbDescriCuenta.Text}", $"{Debe}", $"{Haber}", $"{tbDescriEjercicio.Text}");
+                    frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor", $"{maskDesde.Text}", $"{maskHasta.Text}", $"{tbDescriCuenta.Text}", $"{Debe}", $"{Haber}", $"{tbDescriEjercicio.Text}");
                     reporte.Show();
                 }
                 else
@@ -228,13 +243,13 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
                         $"From MovAsto Left Join PCuenta on pcu_cuenta = mva_cuenta Left Join (Asiento Left Join TipMov on ast_tipocbte = tmo_codigo Left Join " +
                         $"TipMovBan on ast_tipocbte = tba_codigo) on mva_asiento = ast_asiento " +
                         $"Left Join (CentroCxPCuenta Left Join CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta and cxp_centroc = mva_cc " +
-                        $"Where ast_ejercicio = {tbIdEjercicio.Text} and mva_cuenta = {tbIdCuenta.Text} and ast_fecha >= '{dtDesde.Value.ToShortDateString()}' and ast_fecha <= '{dtHasta.Value.ToShortDateString()}' " +
+                        $"Where ast_ejercicio = {tbIdEjercicio.Text} and mva_cuenta = {tbIdCuenta.Text} and ast_fecha >= '{maskDesde.Text}' and ast_fecha <= '{maskHasta.Text}' " +
                         $"{ArticulosManuales} " +
                         $"{AsientosConImpAlDebe} " +
                         $" {AsientosConImpAlHaber} " +
                         $"{centroC} " +
                         $"ORDER BY ast_tipo, ast_fecha, mva_asiento";
-                    frmReporte reporte = new frmReporte("LibroMayor", query, "", "Libro Mayor", $"{dtDesde.Text}", $"{dtHasta.Text}", $"{tbDescriCuenta.Text}", "0", "0", $"{tbDescriEjercicio.Text}");
+                    frmReporte reporte = new frmReporte("LibroMayor", query, "", "Libro Mayor", $"{maskDesde.Text}", $"{maskHasta.Text}", $"{tbDescriCuenta.Text}", "0", "0", $"{tbDescriEjercicio.Text}");
                     reporte.Show();
                 }
             }
@@ -270,11 +285,21 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
 
         private void tbIdEjercicio_TextChanged(object sender, EventArgs e)
         {
-            FLibroMayor fLibroMayor = new FLibroMayor();
-            string[] fechas;
-            fechas = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
-            dtDesde.Value = Convert.ToDateTime(fechas[0]);
-            dtHasta.Value = Convert.ToDateTime(fechas[1]);
+            if (tbIdEjercicio.Text != "")
+            {
+                FLibroMayor fLibroMayor = new FLibroMayor();
+                string[] fechasydescri;
+                fechasydescri = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
+                maskDesde.Text = fechasydescri[0].ToString();
+                maskHasta.Text = fechasydescri[1].ToString();
+                tbDescriEjercicio.Text = fechasydescri[2].ToString();
+            }
+            else
+            {
+                tbDescriEjercicio.Text = "";
+                maskDesde.Text = "";
+                maskHasta.Text = "";
+            }
         }
     }
 }

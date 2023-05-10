@@ -80,6 +80,8 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Diario
                 }
             }
 
+            Cursor.Current = Cursors.WaitCursor;
+
             int CantPag = 0;
             string Leyenda = "";
 
@@ -309,6 +311,8 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Diario
             freporte.ShowDialog();
 
             lblControlBar.Text = "Libro Diario (reporte)";
+
+            Cursor.Current = Cursors.Default;
         }
 
         private void AsientoMensual()
