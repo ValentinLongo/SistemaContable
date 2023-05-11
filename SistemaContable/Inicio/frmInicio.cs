@@ -126,7 +126,7 @@ namespace SistemaContable
             }
             else
             {
-                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado. Solo Supervisores pueden Acceder.", false);
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado! Solo Supervisores pueden Acceder.", false);
                 MessageBox.ShowDialog();
             }
         }

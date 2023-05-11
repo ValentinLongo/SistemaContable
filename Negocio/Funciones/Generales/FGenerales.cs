@@ -252,5 +252,11 @@ namespace Negocio
             }
             return dia;
         }
+
+        public static void CantElementos(Label lbl,DataGridView dgv) //para mostrar en un lbl la cantidad de elementos que tiene un dgv
+        {
+            lbl.Text = "Elementos: " + dgv.RowCount;
+            lbl.BringToFront();
+        }
     }
 }

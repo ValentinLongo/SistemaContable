@@ -1012,7 +1012,7 @@
             this.btnProcesar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcesar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcesar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProcesar.Location = new System.Drawing.Point(109, 441);
+            this.btnProcesar.Location = new System.Drawing.Point(108, 441);
             this.btnProcesar.Name = "btnProcesar";
             this.btnProcesar.Size = new System.Drawing.Size(175, 44);
             this.btnProcesar.TabIndex = 183;

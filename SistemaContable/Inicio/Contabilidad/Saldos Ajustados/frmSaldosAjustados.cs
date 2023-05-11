@@ -181,7 +181,6 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
             AccesoBase.InsertUpdateDatos($"DELETE FROM aux_MovAsto WHERE mva_terminal = {terminal}");
 
-            int n = 0;
             int CA = 0; //Codigo Autoincremental
             int CC = 0; //Centro de Costo
 
@@ -467,7 +466,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                     ds2 = AccesoBase.ListarDatos($"SELECT aux_codigo, aux_col1, aux_col2, aux_col3, aux_col4, aux_col5, aux_col6, aux_col7, aux_col8, aux_col9, aux_col10, aux_col11, aux_col12, aux_col13, pcu_descri, pcu_centroC FROM Aux_PromMesAnio3 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo");
                 }
 
-                foreach (DataRow dr in ds.Tables[0].Rows) // asigno los total al footer
+                foreach (DataRow dr in ds.Tables[0].Rows) // asigno los totales al footer
                 {
                     footer.Columns[2].HeaderText = "Totales";
                     footer.Columns[3].HeaderText = dr["Col1"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col1"]),2).ToString();

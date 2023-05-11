@@ -66,6 +66,8 @@ namespace SistemaContable.Usuarios
                 string telefono = dr["usu_telefono"].ToString();
                 dgvUsuarios.Rows.Add(codigo, nombre, login, perfil, telefono);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvUsuarios);
         }
 
         private void Click(object sender, DataGridViewCellMouseEventArgs e)
