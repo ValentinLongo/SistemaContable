@@ -57,10 +57,50 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 //consulta vale
                 //ds = AccesoBase.ListarDatosPaginado($"SELECT ast_asiento as Asiento, ast_fecha as Fecha, ast_comenta as Comentario, Debe as Debe, Debe as Haber, usu_nombre as 'Creó', ast_fecalta as Fecha, ast_hora as Hora, ast_usumodi as 'Modificó', ast_fecmodi as Fecha, ast_horamodi as Hora FROM Asiento as A LEFT JOIN Usuario ON A.ast_user = Usuario.usu_codigo Left Join (SELECT mva_asiento, SUM(mva_importe) / 2 as Debe FROM MovAsto group by mva_asiento) as B on A.ast_asiento = B.mva_asiento where ast_ejercicio = '{cbSeleccion.SelectedValue}' group by ast_asiento, ast_fecha, ast_comenta, ast_user, Debe, usu_nombre,ast_fecalta,ast_hora,ast_usumodi,ast_fecmodi,ast_horamodi order by ast_fecha", ValorData);
                 dgvAsientosContables.DataSource = ds.Tables[0];
+
+                //propiedades por codigo porque no se asignaban de otra forma
+                dgvAsientosContables.DefaultCellStyle.ForeColor = Color.White;
+                DataGridViewColumn columna = dgvAsientosContables.Columns["Debe"];
+                columna.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                DataGridViewColumn columna2 = dgvAsientosContables.Columns["Haber"];
+                columna2.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             }
             Cursor.Current = Cursors.Default;
 
+            SeteoFooter(dgvAsientosContables,footer);
+            ActualizarFooter();
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvAsientosContables);
+        }
+
+        private void ActualizarFooter() 
+        {
+            //da mal los valores del footer
+            if (dgvAsientosContables.Rows.Count != 0)
+            {
+                DataSet ds = new DataSet();
+                ds = AccesoBase.ListarDatos($"SELECT sum(X.Debe) as mva_debe, Sum(X.Haber) as mva_haber FROM(SELECT ast_asiento, sum(case when mva_codigo = 1 then mva_importe else 0 end) as Debe, sum(case when mva_codigo = 2 then mva_importe else 0 end) as Haber FROM MovAsto left join Asiento on mva_asiento = ast_asiento left join Ejercicio on ast_ejercicio = eje_codigo left join TipAsto on ast_tipo = tas_codigo left join (select usu_codigo as UsuCod, usu_nombre as UsuModi1 FROM Usuario) as Z on ast_usumodi = Z.UsuCod WHERE ast_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} {(CheckManuales.Checked ? "AND (ast_cbte is null or ast_cbte = '')" : "")} {(CheckModificados.Checked ? "AND NOT (ast_fecmodi is null or ast_fecmodi = '01/01/1900')" : "")} {RangoFecha()} GROUP BY ast_asiento {(CheckDiferencia.Checked ? "HAVING sum(case when mva_codigo = 1 then mva_importe else 0 end) <> sum(case when mva_codigo = 2 then mva_importe else 0 end)" : "")} ) as X");
+                if (dgvAsientosContables.Rows.Count != 0)
+                {
+                    footer.Columns[2].HeaderText = "Totales:";
+                    footer.Columns[3].HeaderText = ds.Tables[0].Rows[0]["mva_debe"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["mva_debe"]), 2).ToString();
+                    footer.Columns[4].HeaderText = ds.Tables[0].Rows[0]["mva_haber"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["mva_haber"]), 2).ToString();
+                }
+                else
+                {
+                    footer.Columns[2].HeaderText = "Totales:";
+                    footer.Columns[3].HeaderText = "0,00";
+                    footer.Columns[4].HeaderText = "0,00";
+                }
+            }           
+        }
+
+        private string RangoFecha() 
+        {
+            frmRangoFechas frm = new frmRangoFechas(1);
+            frm.ShowDialog();
+            DateTime desde = frmRangoFechas.Desde;
+            DateTime hasta = frmRangoFechas.Hasta;
+            return $"AND (ast_fecha >= '{desde}' AND ast_fecha <= '{hasta}')";
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -277,5 +317,42 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 }
             }
         }
+
+        //FOOTER
+        private void SeteoFooter(DataGridView dgv1, DataGridView footer)
+        {
+            foreach (DataGridViewColumn Columna in dgv1.Columns)
+            {
+                DataGridViewColumn col = new DataGridViewColumn();
+                col.Width = Columna.Width;
+                footer.Columns.Add(col);
+            }
+        }
+
+        private void dgvAsientosContables_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (dgvAsientosContables.HorizontalScrollingOffset == e.NewValue)
+            {
+                footer.HorizontalScrollingOffset = e.NewValue;
+            }
+
+            bool scrollVerticalActivo = dgvAsientosContables.DisplayedRowCount(false) < dgvAsientosContables.RowCount;
+            if (scrollVerticalActivo)
+            {
+                if (dgvAsientosContables.Rows.Count != 0)
+                {
+                    if (Negocio.FGenerales.SincronizarFooter(dgvAsientosContables))
+                    {
+                        footer.Location = new Point(29, 95);
+                    }
+                    else
+                    {
+                        footer.Location = new Point(29, 527);
+                    }
+                }
+            }
+        }
+        //
+
     }
 }

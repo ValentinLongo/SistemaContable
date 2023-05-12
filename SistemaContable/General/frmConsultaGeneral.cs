@@ -54,6 +54,8 @@ namespace SistemaContable.General
             tab = tabla;
             whe = where;
             ord = orden;
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvConsulta);
         }       
 
         private void cbBusqueda_SelectedIndexChanged(object sender, EventArgs e)

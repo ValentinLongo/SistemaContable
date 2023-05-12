@@ -41,6 +41,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizaci
                 string descri = dr["bal_descri"].ToString();
                 dgvDefiniciondeInformes.Rows.Add(codigo, descri);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvDefiniciondeInformes);
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)

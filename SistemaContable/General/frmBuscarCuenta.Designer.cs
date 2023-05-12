@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.checkActivas = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.dgvCuentas = new System.Windows.Forms.DataGridView();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             this.SuspendLayout();
@@ -148,7 +149,7 @@
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSeleccionar.Location = new System.Drawing.Point(694, 68);
+            this.btnSeleccionar.Location = new System.Drawing.Point(690, 53);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(142, 44);
             this.btnSeleccionar.TabIndex = 1;
@@ -168,7 +169,7 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Cuenta",
             "Descripción"});
-            this.cbBusqueda.Location = new System.Drawing.Point(28, 459);
+            this.cbBusqueda.Location = new System.Drawing.Point(28, 444);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(190, 25);
             this.cbBusqueda.TabIndex = 92;
@@ -179,7 +180,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(633, 464);
+            this.label13.Location = new System.Drawing.Point(633, 449);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(38, 16);
             this.label13.TabIndex = 91;
@@ -203,7 +204,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(610, 463);
+            this.CheckInicio.Location = new System.Drawing.Point(610, 448);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -242,7 +243,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(224, 483);
+            this.panel3.Location = new System.Drawing.Point(224, 468);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(370, 1);
             this.panel3.TabIndex = 89;
@@ -253,7 +254,7 @@
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBusqueda.Location = new System.Drawing.Point(227, 465);
+            this.txtBusqueda.Location = new System.Drawing.Point(227, 450);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(367, 19);
             this.txtBusqueda.TabIndex = 0;
@@ -268,7 +269,7 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(13, 443);
+            this.bunifuShapes1.Location = new System.Drawing.Point(13, 428);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
@@ -282,7 +283,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(35, 38);
+            this.label1.Location = new System.Drawing.Point(35, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 16);
             this.label1.TabIndex = 93;
@@ -306,7 +307,7 @@
             this.checkActivas.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.checkActivas.Cursor = System.Windows.Forms.Cursors.Default;
             this.checkActivas.CustomCheckmarkImage = null;
-            this.checkActivas.Location = new System.Drawing.Point(13, 37);
+            this.checkActivas.Location = new System.Drawing.Point(13, 28);
             this.checkActivas.MinimumSize = new System.Drawing.Size(17, 17);
             this.checkActivas.Name = "checkActivas";
             this.checkActivas.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -372,7 +373,7 @@
             this.dgvCuentas.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCuentas.EnableHeadersVisualStyles = false;
             this.dgvCuentas.GridColor = System.Drawing.Color.White;
-            this.dgvCuentas.Location = new System.Drawing.Point(13, 68);
+            this.dgvCuentas.Location = new System.Drawing.Point(12, 53);
             this.dgvCuentas.Name = "dgvCuentas";
             this.dgvCuentas.ReadOnly = true;
             this.dgvCuentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -391,12 +392,25 @@
             this.dgvCuentas.TabStop = false;
             this.dgvCuentas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCuentas_CellMouseClick);
             // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(12, 488);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
+            this.lblCantElementos.TabIndex = 96;
+            this.lblCantElementos.Text = "Elementos";
+            // 
             // frmBuscarCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(844, 505);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvCuentas);
             this.Controls.Add(this.checkActivas);
             this.Controls.Add(this.label1);
@@ -434,5 +448,6 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuCheckBox checkActivas;
         private System.Windows.Forms.DataGridView dgvCuentas;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

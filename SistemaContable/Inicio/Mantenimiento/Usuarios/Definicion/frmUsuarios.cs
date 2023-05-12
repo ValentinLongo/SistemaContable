@@ -37,6 +37,8 @@ namespace SistemaContable.Usuarios
 
         public void llenarDGV(string busqueda)
         {
+            dgvUsuarios.Rows.Clear();
+
             DataSet data = new DataSet();
             //query = "SELECT usu_codigo as Codigo, usu_nombre as Nombre, usu_login as Login, Perfil.per_descri as Perfil, usu_telefono as Telefono FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo ORDER BY usu_codigo";
             if (CheckUsuario.Checked)

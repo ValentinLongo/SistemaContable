@@ -43,6 +43,7 @@
             this.lblInicio = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
             this.SuspendLayout();
@@ -321,9 +322,21 @@
             this.dgvConsulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvConsulta.RowHeadersVisible = false;
             this.dgvConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsulta.Size = new System.Drawing.Size(576, 353);
+            this.dgvConsulta.Size = new System.Drawing.Size(576, 343);
             this.dgvConsulta.TabIndex = 65;
             this.dgvConsulta.TabStop = false;
+            // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(3, 433);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
+            this.lblCantElementos.TabIndex = 70;
+            this.lblCantElementos.Text = "Elementos";
             // 
             // frmConsultaGeneral
             // 
@@ -331,6 +344,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(731, 450);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvConsulta);
             this.Controls.Add(this.lblInicio);
             this.Controls.Add(this.CheckInicio);
@@ -365,5 +379,6 @@
         private System.Windows.Forms.Label lblInicio;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
         private System.Windows.Forms.DataGridView dgvConsulta;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

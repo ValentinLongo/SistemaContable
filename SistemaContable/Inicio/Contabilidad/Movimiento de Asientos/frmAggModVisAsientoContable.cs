@@ -181,6 +181,9 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 }
                 CargarDGV(asiento);
             }
+
+            SeteoFooter(dgvAddModVisASIENTO, footer);
+            ActualizarFooter();
         }
 
         public void CargarDGV(string asiento, [Optional] MAsiento modelo)
@@ -226,6 +229,24 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvAddModVisASIENTO);
         }
 
+        private void ActualizarFooter()
+        {
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT sum(mva_debe) as SumaDebe, sum(mva_haber) as SumaHaber FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
+            if (dgvAddModVisASIENTO.Rows.Count != 0)
+            {
+                footer.Columns[1].HeaderText = "Totales:";
+                footer.Columns[2].HeaderText = ds.Tables[0].Rows[0]["SumaDebe"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["SumaDebe"]), 2).ToString();
+                footer.Columns[3].HeaderText = ds.Tables[0].Rows[0]["SumaHaber"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["SumaHaber"]), 2).ToString();
+            }
+            else
+            {
+                footer.Columns[1].HeaderText = "Totales:";
+                footer.Columns[2].HeaderText = "0,00";
+                footer.Columns[3].HeaderText = "0,00";
+            }
+        }
+
         private void btnPlandeCta_Click(object sender, EventArgs e)
         {
             frmPlanDeCuentas.MostrarControlBar = true;
@@ -268,6 +289,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 dgvAddModVisASIENTO.Rows.Clear();
                 CargarDGV(nuevoasiento.ToString());
             }
+
+            ActualizarFooter();
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -760,6 +783,42 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             //frmReporte freporte = new frmReporte("MovAsto", $"{query}", "", "Movimientos de Asiento", txtDescriEjercicio.Text, txtNroAsiento.Text,dtFecha.Value.ToString(), txtComentario.Text);
             //freporte.ShowDialog();
         }
+
+        //FOOTER
+        private void SeteoFooter(DataGridView dgv1, DataGridView footer) //sincroniza las columnas del dgv con el footer
+        {
+            foreach (DataGridViewColumn Columna in dgv1.Columns)
+            {
+                DataGridViewColumn col = new DataGridViewColumn();
+                col.Width = Columna.Width;
+                footer.Columns.Add(col);
+            }
+        }
+
+        private void dgvAddModVisASIENTO_Scroll(object sender, ScrollEventArgs e) //sincroniza el scroll del dgv con el footer
+        {
+            if (dgvAddModVisASIENTO.HorizontalScrollingOffset == e.NewValue)
+            {
+                footer.HorizontalScrollingOffset = e.NewValue;
+            }
+
+            bool scrollVerticalActivo = dgvAddModVisASIENTO.DisplayedRowCount(false) < dgvAddModVisASIENTO.RowCount;
+            if (scrollVerticalActivo)
+            {
+                if (dgvAddModVisASIENTO.Rows.Count != 0)
+                {
+                    if (Negocio.FGenerales.SincronizarFooter(dgvAddModVisASIENTO))
+                    {
+                        footer.Location = new Point(14, 238);
+                    }
+                    else
+                    {
+                        footer.Location = new Point(14, 431);
+                    }
+                }
+            }
+        }
+        //
 
         private void panel7_MouseDown(object sender, MouseEventArgs e)
         {

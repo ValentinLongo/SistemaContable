@@ -62,6 +62,7 @@
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetDeMod1)).BeginInit();
@@ -147,7 +148,7 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(654, 446);
+            this.btnImprimir.Location = new System.Drawing.Point(654, 430);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(134, 30);
             this.btnImprimir.TabIndex = 5;
@@ -169,7 +170,7 @@
             this.btnResumen.Font = new System.Drawing.Font("Dotum", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResumen.ForeColor = System.Drawing.Color.White;
             this.btnResumen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResumen.Location = new System.Drawing.Point(654, 397);
+            this.btnResumen.Location = new System.Drawing.Point(654, 381);
             this.btnResumen.Name = "btnResumen";
             this.btnResumen.Size = new System.Drawing.Size(134, 30);
             this.btnResumen.TabIndex = 4;
@@ -187,7 +188,7 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Codigo",
             "Descripcion"});
-            this.cbBusqueda.Location = new System.Drawing.Point(21, 495);
+            this.cbBusqueda.Location = new System.Drawing.Point(21, 481);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(134, 25);
             this.cbBusqueda.TabIndex = 92;
@@ -198,7 +199,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(564, 500);
+            this.label13.Location = new System.Drawing.Point(564, 486);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(38, 16);
             this.label13.TabIndex = 91;
@@ -222,7 +223,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(543, 499);
+            this.CheckInicio.Location = new System.Drawing.Point(543, 485);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -261,7 +262,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(161, 515);
+            this.panel3.Location = new System.Drawing.Point(161, 501);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(365, 1);
             this.panel3.TabIndex = 89;
@@ -272,7 +273,7 @@
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBusqueda.Location = new System.Drawing.Point(164, 497);
+            this.txtBusqueda.Location = new System.Drawing.Point(164, 483);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(362, 19);
             this.txtBusqueda.TabIndex = 0;
@@ -287,7 +288,7 @@
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(12, 485);
+            this.bunifuShapes1.Location = new System.Drawing.Point(12, 471);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
@@ -389,7 +390,7 @@
             this.dgvAux.AllowUserToDeleteRows = false;
             this.dgvAux.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvAux.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAux.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.dgvAux.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.dgvAux.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAux.Location = new System.Drawing.Point(778, 516);
@@ -443,7 +444,7 @@
             this.dgvDetDeMod1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDetDeMod1.RowHeadersVisible = false;
             this.dgvDetDeMod1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetDeMod1.Size = new System.Drawing.Size(630, 167);
+            this.dgvDetDeMod1.Size = new System.Drawing.Size(630, 161);
             this.dgvDetDeMod1.TabIndex = 95;
             this.dgvDetDeMod1.TabStop = false;
             this.dgvDetDeMod1.SelectionChanged += new System.EventHandler(this.dgvDetDeMod1_SelectionChanged_1);
@@ -486,7 +487,7 @@
             this.dgvDetDeMod2.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDetDeMod2.EnableHeadersVisualStyles = false;
             this.dgvDetDeMod2.GridColor = System.Drawing.Color.White;
-            this.dgvDetDeMod2.Location = new System.Drawing.Point(12, 207);
+            this.dgvDetDeMod2.Location = new System.Drawing.Point(12, 198);
             this.dgvDetDeMod2.Name = "dgvDetDeMod2";
             this.dgvDetDeMod2.ReadOnly = true;
             this.dgvDetDeMod2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -500,7 +501,7 @@
             this.dgvDetDeMod2.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvDetDeMod2.RowHeadersVisible = false;
             this.dgvDetDeMod2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetDeMod2.Size = new System.Drawing.Size(630, 272);
+            this.dgvDetDeMod2.Size = new System.Drawing.Size(630, 262);
             this.dgvDetDeMod2.TabIndex = 96;
             this.dgvDetDeMod2.TabStop = false;
             this.dgvDetDeMod2.SelectionChanged += new System.EventHandler(this.dgvDetDeMod2_SelectionChanged_1);
@@ -559,12 +560,25 @@
             this.Asiento.ReadOnly = true;
             this.Asiento.Visible = false;
             // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(9, 518);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
+            this.lblCantElementos.TabIndex = 97;
+            this.lblCantElementos.Text = "Elementos";
+            // 
             // frmDetalledeModelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(800, 536);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvDetDeMod2);
             this.Controls.Add(this.dgvDetDeMod1);
             this.Controls.Add(this.dgvAux);
@@ -620,5 +634,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asiento;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

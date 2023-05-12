@@ -33,6 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,8 +62,10 @@
             this.maskFecha = new System.Windows.Forms.MaskedTextBox();
             this.dgvAsientosContables = new System.Windows.Forms.DataGridView();
             this.lblCantElementos = new System.Windows.Forms.Label();
+            this.footer = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footer)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgregar
@@ -602,7 +607,7 @@
             this.dgvAsientosContables.AllowUserToAddRows = false;
             this.dgvAsientosContables.AllowUserToDeleteRows = false;
             this.dgvAsientosContables.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvAsientosContables.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAsientosContables.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvAsientosContables.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgvAsientosContables.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAsientosContables.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -644,6 +649,7 @@
             this.dgvAsientosContables.Size = new System.Drawing.Size(895, 492);
             this.dgvAsientosContables.TabIndex = 122;
             this.dgvAsientosContables.TabStop = false;
+            this.dgvAsientosContables.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgvAsientosContables_Scroll);
             // 
             // lblCantElementos
             // 
@@ -657,12 +663,63 @@
             this.lblCantElementos.TabIndex = 123;
             this.lblCantElementos.Text = "Elementos";
             // 
+            // footer
+            // 
+            this.footer.AllowUserToAddRows = false;
+            this.footer.AllowUserToDeleteRows = false;
+            this.footer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.footer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.footer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.footer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(22)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.NullValue = null;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(22)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.footer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.footer.ColumnHeadersHeight = 21;
+            this.footer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.footer.DefaultCellStyle = dataGridViewCellStyle5;
+            this.footer.EnableHeadersVisualStyles = false;
+            this.footer.GridColor = System.Drawing.Color.White;
+            this.footer.Location = new System.Drawing.Point(13, 529);
+            this.footer.Name = "footer";
+            this.footer.ReadOnly = true;
+            this.footer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.footer.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.footer.RowHeadersVisible = false;
+            this.footer.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.footer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.footer.Size = new System.Drawing.Size(878, 20);
+            this.footer.TabIndex = 130;
+            this.footer.TabStop = false;
+            // 
             // frmAsientosContables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1060, 650);
+            this.Controls.Add(this.footer);
             this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.dgvAsientosContables);
@@ -695,6 +752,7 @@
             this.Text = "frmAsientosContables";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -727,5 +785,6 @@
         private System.Windows.Forms.MaskedTextBox maskFecha;
         private System.Windows.Forms.DataGridView dgvAsientosContables;
         private System.Windows.Forms.Label lblCantElementos;
+        private System.Windows.Forms.DataGridView footer;
     }
 }

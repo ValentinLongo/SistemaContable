@@ -86,6 +86,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                     }
                 }
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos,dgvDetDeMod2);
         }
 
         private void dgvDetDeMod1_SelectionChanged_1(object sender, EventArgs e)

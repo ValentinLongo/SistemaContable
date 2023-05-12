@@ -35,6 +35,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             string query = $"SELECT bal_codigo AS Código, bal_descri AS Descripción FROM Balance {busqueda} ORDER BY bal_codigo";
             ds = AccesoBase.ListarDatos(query);
             dgvDetalleDeInformes1.DataSource = ds.Tables[0];
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvDetalledeInformes2);
         }
 
         private void dgvDetalleDeInformes_SelectionChanged(object sender, EventArgs e)

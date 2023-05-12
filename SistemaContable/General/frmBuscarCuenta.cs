@@ -54,6 +54,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
                 dgvCuentas.DataSource = ds.Tables[0];
             }
 
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvCuentas);
         }
 
         private void btnSeleccionar_Click_1(object sender, EventArgs e)

@@ -61,7 +61,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
                 Negocio.Funciones.Contabilidad.FSaldosAjsutados.LimpiarDGVs(this, dgv1, dgv2, footer);
 
-                SeteoFooter(dgv1, footer); // sincroniza el footer
+                SeteoFooter(dgv1, footer);
 
                 cbSeleccion.DataSource = ds2.Tables[0];
                 cbSeleccion.DisplayMember = "eje_descri";
@@ -468,7 +468,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
                 foreach (DataRow dr in ds.Tables[0].Rows) // asigno los totales al footer
                 {
-                    footer.Columns[2].HeaderText = "Totales";
+                    footer.Columns[2].HeaderText = "Totales:";
                     footer.Columns[3].HeaderText = dr["Col1"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col1"]),2).ToString();
                     footer.Columns[4].HeaderText = dr["Col2"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col2"]), 2).ToString();
                     footer.Columns[5].HeaderText = dr["Col3"] is DBNull ? "0" : Math.Round(Convert.ToDouble(dr["Col3"]),2).ToString();
@@ -617,17 +617,21 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 footer.HorizontalScrollingOffset = e.NewValue;
             }
 
-            if (dgv1.Rows.Count != 0)
+            bool scrollVerticalActivo = dgv1.DisplayedRowCount(false) < dgv1.RowCount;
+            if (scrollVerticalActivo) 
             {
-                if (Negocio.FGenerales.SincronizarFooter(dgv1))
+                if (dgv1.Rows.Count != 0)
                 {
-                    footer.Location = new Point(9, 140);
+                    if (Negocio.FGenerales.SincronizarFooter(dgv1))
+                    {
+                        footer.Location = new Point(9, 140);
+                    }
+                    else
+                    {
+                        footer.Location = new Point(9, 461);
+                    }
                 }
-                else
-                {
-                    footer.Location = new Point(9, 461);
-                }
-            }
+            }        
         }
         //
 

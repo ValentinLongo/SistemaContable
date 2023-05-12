@@ -39,6 +39,8 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
                 string descri = dr["mod_descri"].ToString();
                 dgvEncabezadodeModelos.Rows.Add(codigo, descri);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvEncabezadodeModelos);
         }
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {

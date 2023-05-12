@@ -32,6 +32,8 @@ namespace SistemaContable.General
             btnSeleccionar.Enabled = false;
             DataSet ds = ds = AccesoBase.ListarDatos($"SELECT loc_cod1 as Código, loc_cod2 as 'Sub-Código', loc_nombre as Nombre FROM Localidad WHERE loc_cod1 LIKE'%{codigopostal}%'");
             dgvLocalidades.DataSource = ds.Tables[0];
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvLocalidades);
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
