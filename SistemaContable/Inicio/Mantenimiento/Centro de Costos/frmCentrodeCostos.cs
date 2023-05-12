@@ -45,6 +45,8 @@ namespace SistemaContable.Inicio.Mantenimiento
                 }
                 dgvCentrodeCosto.Rows.Add(codigo, descri, estado);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvCentrodeCosto);
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)

@@ -38,6 +38,8 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
 
                 dgvUsuarios.Rows.Add(codigo, nombre, incluye);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvUsuarios);
         }
 
         private void AgregarTodo_Click(object sender, EventArgs e)

@@ -23,17 +23,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Rubricación_de_SubDiarios
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
-        private void panel7_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -55,13 +44,25 @@ namespace SistemaContable.Inicio.Mantenimiento.Rubricación_de_SubDiarios
                 {
                     archivo.WriteLine($"{FolioDesde.Text}");
                     archivo.WriteLine($"{FolioHasta.Text}");
-                    archivo.WriteLine($"{campo1.Text}");
-                    archivo.WriteLine($"{campo2.Text}");
-                    archivo.WriteLine($"{campo3.Text}");
-                    archivo.WriteLine($"{campo4.Text}");
+                    archivo.WriteLine($"{Campo1.Text}");
+                    archivo.WriteLine($"{Campo2.Text}");
+                    archivo.WriteLine($"{Campo3.Text}");
+                    archivo.WriteLine($"{Campo4.Text}");
                     // Agregar más líneas aquí si es necesario
                 }
             }
         }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel7_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
     }
 }

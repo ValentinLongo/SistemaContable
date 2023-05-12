@@ -33,6 +33,8 @@ namespace SistemaContable.Usuarios
             DataSet data = new DataSet();
             data = Datos.AccesoBase.ListarDatos($"select caj_codigo as Código, caj_descri as Descipción from Caja " + busqueda);
             dgvCajas.DataSource = data.Tables[0];
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvCajas);
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

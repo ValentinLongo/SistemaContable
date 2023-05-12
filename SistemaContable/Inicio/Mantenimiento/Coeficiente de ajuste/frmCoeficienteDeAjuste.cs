@@ -53,6 +53,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
                 }
                 dgvEjercicios.Rows.Add(datos.eje_codigo,datos.eje_descri,datos.eje_desde,datos.eje_hasta,cerrado);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos,dgvCoeficientes);
         }
 
         private void checkEjerciciosAbiertos_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)

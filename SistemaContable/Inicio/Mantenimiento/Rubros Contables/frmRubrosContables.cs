@@ -49,6 +49,8 @@ namespace SistemaContable.Rubos_Contables
                 }
                 dgvRubrosContables.Rows.Add(Codigo, Descripcion, check);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvRubrosContables);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

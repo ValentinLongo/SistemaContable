@@ -33,6 +33,8 @@ namespace SistemaContable.Usuarios
             DataSet ds = new DataSet();
             ds = Negocio.FUsuarios.Vendedores();
             dgvVendedores.DataSource = ds.Tables[0];
+
+            Negocio.FGenerales.CantElementos(lblCantElementos,dgvVendedores);
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

@@ -52,6 +52,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
                 }
                 dgvEjercicioContable.Rows.Add(codigo, descri, desde, hasta, estado);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvEjercicioContable);
         }
 
         private void txtDescripcion_TextChanged(object sender, EventArgs e)

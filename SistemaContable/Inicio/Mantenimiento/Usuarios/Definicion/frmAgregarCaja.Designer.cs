@@ -48,6 +48,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dgvCajas = new System.Windows.Forms.DataGridView();
             this.dgvAux = new System.Windows.Forms.DataGridView();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
@@ -59,7 +60,7 @@
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtBusqueda.Location = new System.Drawing.Point(209, 416);
+            this.txtBusqueda.Location = new System.Drawing.Point(209, 409);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(263, 15);
             this.txtBusqueda.TabIndex = 0;
@@ -70,7 +71,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(209, 432);
+            this.panel3.Location = new System.Drawing.Point(209, 425);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(263, 1);
             this.panel3.TabIndex = 39;
@@ -193,7 +194,7 @@
             this.ShapeBusqueda.BorderThickness = 1;
             this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.FillShape = true;
-            this.ShapeBusqueda.Location = new System.Drawing.Point(12, 399);
+            this.ShapeBusqueda.Location = new System.Drawing.Point(12, 392);
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
@@ -208,7 +209,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Dotum", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(21, 392);
+            this.label4.Location = new System.Drawing.Point(21, 385);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 13);
             this.label4.TabIndex = 61;
@@ -224,7 +225,7 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Codigo",
             "Descripcion"});
-            this.cbBusqueda.Location = new System.Drawing.Point(24, 414);
+            this.cbBusqueda.Location = new System.Drawing.Point(24, 407);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(169, 23);
             this.cbBusqueda.TabIndex = 64;
@@ -248,7 +249,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(491, 416);
+            this.CheckInicio.Location = new System.Drawing.Point(491, 409);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -288,7 +289,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(512, 418);
+            this.label5.Location = new System.Drawing.Point(512, 411);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 68;
@@ -388,12 +389,24 @@
             this.dgvAux.TabIndex = 70;
             this.dgvAux.TabStop = false;
             // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(10, 445);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(58, 15);
+            this.lblCantElementos.TabIndex = 148;
+            this.lblCantElementos.Text = "Elementos";
+            // 
             // frmAgregarCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(718, 463);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvAux);
             this.Controls.Add(this.dgvCajas);
             this.Controls.Add(this.label5);
@@ -433,5 +446,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvCajas;
         private System.Windows.Forms.DataGridView dgvAux;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

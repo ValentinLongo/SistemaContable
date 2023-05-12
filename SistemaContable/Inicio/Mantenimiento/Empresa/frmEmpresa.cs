@@ -42,6 +42,8 @@ namespace SistemaContable.Empresa
                 string descripcion = dr["suc_descri"].ToString();
                 dgvSucursales.Rows.Add(codigo, descripcion);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos,dgvEmpresa);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

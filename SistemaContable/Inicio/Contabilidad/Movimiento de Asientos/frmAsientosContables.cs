@@ -57,10 +57,10 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 //consulta vale
                 //ds = AccesoBase.ListarDatosPaginado($"SELECT ast_asiento as Asiento, ast_fecha as Fecha, ast_comenta as Comentario, Debe as Debe, Debe as Haber, usu_nombre as 'Creó', ast_fecalta as Fecha, ast_hora as Hora, ast_usumodi as 'Modificó', ast_fecmodi as Fecha, ast_horamodi as Hora FROM Asiento as A LEFT JOIN Usuario ON A.ast_user = Usuario.usu_codigo Left Join (SELECT mva_asiento, SUM(mva_importe) / 2 as Debe FROM MovAsto group by mva_asiento) as B on A.ast_asiento = B.mva_asiento where ast_ejercicio = '{cbSeleccion.SelectedValue}' group by ast_asiento, ast_fecha, ast_comenta, ast_user, Debe, usu_nombre,ast_fecalta,ast_hora,ast_usumodi,ast_fecmodi,ast_horamodi order by ast_fecha", ValorData);
                 dgvAsientosContables.DataSource = ds.Tables[0];
-
-                //FALTA ALINEAR DEBE Y HABER A LA DERECHA
             }
             Cursor.Current = Cursors.Default;
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvAsientosContables);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

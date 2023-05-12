@@ -76,6 +76,7 @@
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.footer = new System.Windows.Forms.DataGridView();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
@@ -556,7 +557,7 @@
             this.dgv1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv1.RowHeadersVisible = false;
             this.dgv1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv1.Size = new System.Drawing.Size(548, 392);
+            this.dgv1.Size = new System.Drawing.Size(548, 383);
             this.dgv1.TabIndex = 126;
             this.dgv1.TabStop = false;
             this.dgv1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgv1_Scroll);
@@ -722,7 +723,7 @@
             this.dgv2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv2.RowHeadersVisible = false;
             this.dgv2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv2.Size = new System.Drawing.Size(214, 392);
+            this.dgv2.Size = new System.Drawing.Size(214, 383);
             this.dgv2.TabIndex = 127;
             this.dgv2.TabStop = false;
             // 
@@ -771,7 +772,7 @@
             this.footer.DefaultCellStyle = dataGridViewCellStyle8;
             this.footer.EnableHeadersVisualStyles = false;
             this.footer.GridColor = System.Drawing.Color.White;
-            this.footer.Location = new System.Drawing.Point(9, 470);
+            this.footer.Location = new System.Drawing.Point(9, 461);
             this.footer.Name = "footer";
             this.footer.ReadOnly = true;
             this.footer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -790,12 +791,25 @@
             this.footer.TabIndex = 129;
             this.footer.TabStop = false;
             // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(6, 503);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
+            this.lblCantElementos.TabIndex = 130;
+            this.lblCantElementos.Text = "Elementos";
+            // 
             // frmSaldosAjustados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(960, 520);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.footer);
             this.Controls.Add(this.dgv2);
             this.Controls.Add(this.dgv1);
@@ -869,5 +883,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Acumulado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

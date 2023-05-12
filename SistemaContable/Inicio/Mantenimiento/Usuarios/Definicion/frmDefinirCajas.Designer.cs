@@ -42,6 +42,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).BeginInit();
             this.SuspendLayout();
@@ -224,7 +225,7 @@
             this.dgvCajas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCajas.RowHeadersVisible = false;
             this.dgvCajas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCajas.Size = new System.Drawing.Size(663, 430);
+            this.dgvCajas.Size = new System.Drawing.Size(663, 421);
             this.dgvCajas.TabIndex = 60;
             this.dgvCajas.TabStop = false;
             this.dgvCajas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCajas_CellDoubleClick);
@@ -253,12 +254,24 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(12, 458);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(58, 15);
+            this.lblCantElementos.TabIndex = 148;
+            this.lblCantElementos.Text = "Elementos";
+            // 
             // frmDefinirCajas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(833, 476);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvCajas);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnEliminar);
@@ -272,6 +285,7 @@
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCajas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -286,5 +300,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

@@ -258,5 +258,6 @@ namespace Negocio
             lbl.Text = "Elementos: " + dgv.RowCount;
             lbl.BringToFront();
         }
+
     }
 }

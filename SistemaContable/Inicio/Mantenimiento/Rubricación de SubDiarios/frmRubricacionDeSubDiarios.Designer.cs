@@ -37,19 +37,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtComentario = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Campo4 = new System.Windows.Forms.TextBox();
+            this.Campo3 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Campo2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Campo1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.FolioHasta = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.FolioDesde = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.label7 = new System.Windows.Forms.Label();
@@ -195,29 +195,29 @@
             this.panel2.Size = new System.Drawing.Size(542, 1);
             this.panel2.TabIndex = 118;
             // 
-            // txtComentario
+            // Campo4
             // 
-            this.txtComentario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.txtComentario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtComentario.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComentario.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtComentario.Location = new System.Drawing.Point(154, 275);
-            this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(542, 19);
-            this.txtComentario.TabIndex = 5;
-            this.txtComentario.Tag = "11000";
+            this.Campo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Campo4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Campo4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Campo4.ForeColor = System.Drawing.SystemColors.Window;
+            this.Campo4.Location = new System.Drawing.Point(154, 275);
+            this.Campo4.Name = "Campo4";
+            this.Campo4.Size = new System.Drawing.Size(542, 19);
+            this.Campo4.TabIndex = 5;
+            this.Campo4.Tag = "11000";
             // 
-            // textBox1
+            // Campo3
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(154, 232);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(542, 19);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Tag = "11000";
+            this.Campo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Campo3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Campo3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Campo3.ForeColor = System.Drawing.SystemColors.Window;
+            this.Campo3.Location = new System.Drawing.Point(154, 232);
+            this.Campo3.Name = "Campo3";
+            this.Campo3.Size = new System.Drawing.Size(542, 19);
+            this.Campo3.TabIndex = 4;
+            this.Campo3.Tag = "11000";
             // 
             // panel1
             // 
@@ -227,17 +227,17 @@
             this.panel1.Size = new System.Drawing.Size(542, 1);
             this.panel1.TabIndex = 120;
             // 
-            // textBox2
+            // Campo2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(154, 188);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(542, 19);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Tag = "11000";
+            this.Campo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Campo2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Campo2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Campo2.ForeColor = System.Drawing.SystemColors.Window;
+            this.Campo2.Location = new System.Drawing.Point(154, 188);
+            this.Campo2.Name = "Campo2";
+            this.Campo2.Size = new System.Drawing.Size(542, 19);
+            this.Campo2.TabIndex = 3;
+            this.Campo2.Tag = "11000";
             // 
             // panel3
             // 
@@ -247,17 +247,17 @@
             this.panel3.Size = new System.Drawing.Size(542, 1);
             this.panel3.TabIndex = 122;
             // 
-            // textBox3
+            // Campo1
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(154, 145);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(542, 19);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Tag = "11000";
+            this.Campo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Campo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Campo1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Campo1.ForeColor = System.Drawing.SystemColors.Window;
+            this.Campo1.Location = new System.Drawing.Point(154, 145);
+            this.Campo1.Name = "Campo1";
+            this.Campo1.Size = new System.Drawing.Size(542, 19);
+            this.Campo1.TabIndex = 2;
+            this.Campo1.Tag = "11000";
             // 
             // panel4
             // 
@@ -297,17 +297,17 @@
             this.panel5.Size = new System.Drawing.Size(750, 1);
             this.panel5.TabIndex = 132;
             // 
-            // textBox4
+            // FolioHasta
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox4.Location = new System.Drawing.Point(154, 83);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(113, 19);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.Tag = "10100";
+            this.FolioHasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.FolioHasta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FolioHasta.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FolioHasta.ForeColor = System.Drawing.SystemColors.Window;
+            this.FolioHasta.Location = new System.Drawing.Point(154, 83);
+            this.FolioHasta.Name = "FolioHasta";
+            this.FolioHasta.Size = new System.Drawing.Size(113, 19);
+            this.FolioHasta.TabIndex = 1;
+            this.FolioHasta.Tag = "10100";
             // 
             // panel6
             // 
@@ -317,17 +317,17 @@
             this.panel6.Size = new System.Drawing.Size(113, 1);
             this.panel6.TabIndex = 133;
             // 
-            // textBox5
+            // FolioDesde
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox5.Location = new System.Drawing.Point(154, 49);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(113, 19);
-            this.textBox5.TabIndex = 0;
-            this.textBox5.Tag = "10100";
+            this.FolioDesde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.FolioDesde.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FolioDesde.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FolioDesde.ForeColor = System.Drawing.SystemColors.Window;
+            this.FolioDesde.Location = new System.Drawing.Point(154, 49);
+            this.FolioDesde.Name = "FolioDesde";
+            this.FolioDesde.Size = new System.Drawing.Size(113, 19);
+            this.FolioDesde.TabIndex = 0;
+            this.FolioDesde.Tag = "10100";
             // 
             // panel8
             // 
@@ -372,20 +372,20 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(775, 313);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.FolioDesde);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.FolioHasta);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.Campo1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Campo2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Campo3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtComentario);
+            this.Controls.Add(this.Campo4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -414,19 +414,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtComentario;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Campo4;
+        private System.Windows.Forms.TextBox Campo3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Campo2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Campo1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox FolioHasta;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox FolioDesde;
         private System.Windows.Forms.Panel panel8;
         private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
         private System.Windows.Forms.Label label7;

@@ -222,6 +222,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 dgvAddModVisASIENTO.Rows.Add(cuenta, descri, debe, haber, concepto, cc, autoincremental2);
                 autoincremental2++;
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvAddModVisASIENTO);
         }
 
         private void btnPlandeCta_Click(object sender, EventArgs e)

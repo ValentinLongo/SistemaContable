@@ -57,6 +57,8 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
                 
                 dgvMensajes.Rows.Add(fecha, hora, origen, destino, fechaL, horaL, comentario);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos,dgvMensajes);
         }
 
         private void cbSeleccionar_SelectedIndexChanged(object sender, EventArgs e)

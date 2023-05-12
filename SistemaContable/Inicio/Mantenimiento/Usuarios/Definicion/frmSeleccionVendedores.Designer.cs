@@ -37,6 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.dgvVendedores = new System.Windows.Forms.DataGridView();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendedores)).BeginInit();
             this.SuspendLayout();
@@ -193,10 +194,21 @@
             this.dgvVendedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVendedores.RowHeadersVisible = false;
             this.dgvVendedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVendedores.Size = new System.Drawing.Size(627, 404);
+            this.dgvVendedores.Size = new System.Drawing.Size(627, 392);
             this.dgvVendedores.TabIndex = 52;
             this.dgvVendedores.TabStop = false;
             this.dgvVendedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVendedores_CellContentClick);
+            // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(10, 430);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(58, 15);
+            this.lblCantElementos.TabIndex = 148;
+            this.lblCantElementos.Text = "Elementos";
             // 
             // frmSeleccionVendedores
             // 
@@ -204,6 +216,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvVendedores);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSeleccionar);
@@ -216,6 +229,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendedores)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -225,5 +239,6 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvVendedores;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

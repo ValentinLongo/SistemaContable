@@ -58,6 +58,7 @@
             this.btnBuscar = new RJCodeAdvance.RJControls.RJButton();
             this.maskFecha = new System.Windows.Forms.MaskedTextBox();
             this.dgvAsientosContables = new System.Windows.Forms.DataGridView();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).BeginInit();
             this.SuspendLayout();
@@ -619,7 +620,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -644,12 +645,25 @@
             this.dgvAsientosContables.TabIndex = 122;
             this.dgvAsientosContables.TabStop = false;
             // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(9, 631);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
+            this.lblCantElementos.TabIndex = 123;
+            this.lblCantElementos.Text = "Elementos";
+            // 
             // frmAsientosContables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1060, 650);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.dgvAsientosContables);
             this.Controls.Add(this.btnBuscar);
@@ -712,5 +726,6 @@
         private RJCodeAdvance.RJControls.RJButton btnBuscar;
         private System.Windows.Forms.MaskedTextBox maskFecha;
         private System.Windows.Forms.DataGridView dgvAsientosContables;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

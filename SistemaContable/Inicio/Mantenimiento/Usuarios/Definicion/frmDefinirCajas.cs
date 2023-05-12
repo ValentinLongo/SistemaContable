@@ -41,6 +41,8 @@ namespace SistemaContable.Usuarios
                 }
                 dgvCajas.Rows.Add(caja, descripcion, moneda, check);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvCajas);
         }
 
         private void dgvCajas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

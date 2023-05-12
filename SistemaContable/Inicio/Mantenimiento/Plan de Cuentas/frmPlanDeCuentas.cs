@@ -68,6 +68,8 @@ namespace SistemaContable.Plan_de_Cuentas
                 }
                 dgvCuentas.Rows.Add(codigo, cuenta, descripcion, superior, hija, tabulador, ajusta);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvCuentas);
         }
 
         private void frmConControlBar()

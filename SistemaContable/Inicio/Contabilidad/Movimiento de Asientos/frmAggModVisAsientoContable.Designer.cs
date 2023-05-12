@@ -66,6 +66,7 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddModVisASIENTO)).BeginInit();
             this.SuspendLayout();
@@ -437,7 +438,7 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(664, 439);
+            this.btnImprimir.Location = new System.Drawing.Point(664, 429);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(124, 41);
             this.btnImprimir.TabIndex = 8;
@@ -505,7 +506,7 @@
             this.dgvAddModVisASIENTO.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvAddModVisASIENTO.RowHeadersVisible = false;
             this.dgvAddModVisASIENTO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAddModVisASIENTO.Size = new System.Drawing.Size(624, 267);
+            this.dgvAddModVisASIENTO.Size = new System.Drawing.Size(624, 256);
             this.dgvAddModVisASIENTO.TabIndex = 130;
             this.dgvAddModVisASIENTO.TabStop = false;
             this.dgvAddModVisASIENTO.DoubleClick += new System.EventHandler(this.dgvAddModVisASIENTO_DoubleClick_1);
@@ -554,12 +555,25 @@
             this.Column13.ReadOnly = true;
             this.Column13.Width = 200;
             // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(11, 474);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
+            this.lblCantElementos.TabIndex = 131;
+            this.lblCantElementos.Text = "Elementos";
+            // 
             // frmAggModVisAsientoContable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(800, 492);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvAddModVisASIENTO);
             this.Controls.Add(this.dtFecha);
             this.Controls.Add(this.btnImprimir);
@@ -629,5 +643,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

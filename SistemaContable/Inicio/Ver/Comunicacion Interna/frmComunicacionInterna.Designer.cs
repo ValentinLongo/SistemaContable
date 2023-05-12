@@ -45,6 +45,7 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMensajes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -256,12 +257,24 @@
             this.Comentario.ReadOnly = true;
             this.Comentario.Visible = false;
             // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(12, 631);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(58, 15);
+            this.lblCantElementos.TabIndex = 145;
+            this.lblCantElementos.Text = "Elementos";
+            // 
             // frmComunicacionInterna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1060, 650);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvMensajes);
             this.Controls.Add(this.cbSeleccionar);
             this.Controls.Add(this.label1);
@@ -294,5 +307,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Comentario;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

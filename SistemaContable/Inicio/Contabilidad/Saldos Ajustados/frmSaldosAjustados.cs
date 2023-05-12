@@ -491,6 +491,8 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
                 dgv2.DataSource = ds3.Tables[0];
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgv1);
         }
 
         private void cbSeleccion_SelectedIndexChanged(object sender, EventArgs e)
@@ -623,7 +625,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 }
                 else
                 {
-                    footer.Location = new Point(9, 470);
+                    footer.Location = new Point(9, 461);
                 }
             }
         }

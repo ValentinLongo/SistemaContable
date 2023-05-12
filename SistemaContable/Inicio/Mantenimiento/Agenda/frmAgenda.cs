@@ -33,6 +33,8 @@ namespace SistemaContable.Agenda
             DataSet ds = new DataSet();
             ds = Negocio.FAgenda.listaAgenda(Nombre);
             dgvAgenda.DataSource = ds.Tables[0];
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvAgenda);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

@@ -48,6 +48,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRubrosContables)).BeginInit();
             this.SuspendLayout();
@@ -347,7 +348,7 @@
             this.dgvRubrosContables.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRubrosContables.RowHeadersVisible = false;
             this.dgvRubrosContables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRubrosContables.Size = new System.Drawing.Size(646, 381);
+            this.dgvRubrosContables.Size = new System.Drawing.Size(646, 372);
             this.dgvRubrosContables.TabIndex = 71;
             this.dgvRubrosContables.TabStop = false;
             this.dgvRubrosContables.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRubrosContables_CellMouseClick);
@@ -370,12 +371,24 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(9, 464);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(58, 15);
+            this.lblCantElementos.TabIndex = 148;
+            this.lblCantElementos.Text = "Elementos";
+            // 
             // frmRubrosContables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(797, 482);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvRubrosContables);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtBusqueda);
@@ -416,5 +429,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

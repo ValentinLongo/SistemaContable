@@ -42,6 +42,7 @@
             this.dgvConceptosContables = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConceptosContables)).BeginInit();
             this.SuspendLayout();
             // 
@@ -246,12 +247,25 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(19, 633);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
+            this.lblCantElementos.TabIndex = 70;
+            this.lblCantElementos.Text = "Elementos";
+            // 
             // frmConceptosContables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1060, 650);
+            this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvConceptosContables);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tbDescripcion);
@@ -283,5 +297,6 @@
         private System.Windows.Forms.DataGridView dgvConceptosContables;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Label lblCantElementos;
     }
 }

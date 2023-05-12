@@ -40,6 +40,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
                 string descripcion = dr["coc_descri"].ToString();
                 dgvConceptosContables.Rows.Add(codigo, descripcion);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvConceptosContables);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

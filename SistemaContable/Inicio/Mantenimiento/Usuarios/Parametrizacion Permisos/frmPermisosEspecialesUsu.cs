@@ -66,7 +66,8 @@ namespace SistemaContable.Parametrizacion_Permisos
                 }
                 dgvPEspeciales.Rows.Add(codigo2, modulo, descri, check);
             }
-            //dgvPEspeciales.DataSource = data.Tables[0];
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvPEspeciales);
         }
 
         private void cbModulo_SelectedIndexChanged(object sender, EventArgs e)

@@ -61,6 +61,8 @@ namespace SistemaContable.Inicio.Ver.Calendario
                 }
                 dgvCalendario.Rows.Add(fecha,hora,observa,fin);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvCalendario);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
