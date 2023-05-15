@@ -25,7 +25,7 @@ namespace SistemaContable.Inicio.Contabilidad.Renumeración_de_Asientos
 
         private void btnEjercicio_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral frm = new frmConsultaGeneral("eje_codigo as Código, eje_descri as Descripción", "Ejercicio", "", "", "frmRenumeraDeAsientos");
+            frmConsultaGeneral frm = new frmConsultaGeneral("eje_codigo as Código, eje_descri as Descripción", "Ejercicio", "", "", "eje", "codigo", "descri");
             frm.ShowDialog();
             txtNroEjercicio.Text = frmConsultaGeneral.codigoCG;
             txtDescriEjercicio.Text = frmConsultaGeneral.descripcionCG;

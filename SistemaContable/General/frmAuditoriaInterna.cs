@@ -4246,7 +4246,7 @@ namespace SistemaContable.General
 
         private void btnCtaCont_Click(object sender, EventArgs e) //para traer el nº de cuenta con su descripción.
         {
-            frmConsultaGeneral frm = new frmConsultaGeneral("pcu_cuenta as Cuenta, pcu_descri as Descripción", "PCuenta", "", "", "frmAuditoriaInterna");
+            frmConsultaGeneral frm = new frmConsultaGeneral("pcu_cuenta as Cuenta, pcu_descri as Descripción", "PCuenta", "", "", "pcu", "cuenta", "descri");
             frm.ShowDialog();
             txtNroCuenta.Text = frmConsultaGeneral.codigoCG;
             txtDescriCuenta.Text = frmConsultaGeneral.descripcionCG;

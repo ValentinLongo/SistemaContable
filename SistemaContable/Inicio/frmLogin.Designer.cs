@@ -224,7 +224,7 @@
             this.txtConstrasenia.PasswordChar = '*';
             this.txtConstrasenia.Size = new System.Drawing.Size(194, 19);
             this.txtConstrasenia.TabIndex = 1;
-            this.txtConstrasenia.Tag = "10000";
+            this.txtConstrasenia.Tag = "00000";
             this.txtConstrasenia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConstrasenia_KeyDown);
             // 
             // panel4

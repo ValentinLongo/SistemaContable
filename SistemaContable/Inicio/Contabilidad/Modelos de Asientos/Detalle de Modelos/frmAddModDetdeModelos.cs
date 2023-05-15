@@ -103,6 +103,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                             asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
                             Negocio.Funciones.Contabilidad.FDetalledeModelos.Agregar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString());
                         }
+
                         frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
                         MessageBox.ShowDialog();
                     }
@@ -135,6 +136,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
             }
+            this.Close();
         }
 
         private void btnConsulta_Click(object sender, EventArgs e)
@@ -214,6 +216,12 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             {
                 txtDescri.Text = "";
             }
+        }
+
+        private void Close(object sender, EventArgs e)
+        {
+            frmAggModVisAsientoContable.flag = false;
+            frmDetalledeModelos.flag = false;
         }
 
         //BARRA DE CONTROL

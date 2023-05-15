@@ -33,6 +33,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         public static int nuevoasiento = 0;
 
+        public static bool flag = true; //para repetir la carga de detalles y que se valla actualizando el dgv
+
         //addmodvis = proceso que realiza el frm
         public frmAggModVisAsientoContable(int addmodvis, [Optional] ComboBox cbSeleccion, [Optional] string asiento, [Optional] string fecha, [Optional] string comentario, [Optional] MAsiento modelo)
         {
@@ -225,8 +227,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 dgvAddModVisASIENTO.Rows.Add(cuenta, descri, debe, haber, concepto, cc, autoincremental2);
                 autoincremental2++;
             }
-
-            Negocio.FGenerales.CantElementos(lblCantElementos, dgvAddModVisASIENTO);
+            ActualizarFooter();
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvAddModVisASIENTO);           
         }
 
         private void ActualizarFooter()
@@ -281,15 +283,16 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
             catch (NullReferenceException)
             {
-                frmAddModDetdeModelos.desdeotrofrm = true;
-                frmAddModDetdeModelos.asientofrm = txtNroAsiento.Text;
-                frmAddModDetdeModelos frm = new frmAddModDetdeModelos(0);
-                frm.ShowDialog();
-                frmAddModDetdeModelos.desdeotrofrm = false;
-                dgvAddModVisASIENTO.Rows.Clear();
-                CargarDGV(nuevoasiento.ToString());
+                while (flag)
+                {
+                    frmAddModDetdeModelos.desdeotrofrm = true;
+                    frmAddModDetdeModelos.asientofrm = txtNroAsiento.Text;
+                    frmAddModDetdeModelos frm = new frmAddModDetdeModelos(0);
+                    frm.ShowDialog();
+                    dgvAddModVisASIENTO.Rows.Clear();
+                    CargarDGV(nuevoasiento.ToString());
+                }
             }
-
             ActualizarFooter();
         }
 
@@ -548,7 +551,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnModelo_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral frm = new frmConsultaGeneral("mod_codigo, mod_descri", "ModeloEncab", "", "ORDER BY mod_codigo", "frmAggModVisAsientoContable");
+            frmConsultaGeneral frm = new frmConsultaGeneral("mod_codigo, mod_descri", "ModeloEncab", "", "ORDER BY mod_codigo", "mod", "codigo", "descri");
             //frm.ArmarDGV("mod_codigo, mod_descri", "ModeloEncab", "", "ORDER BY mod_codigo", "frmAggModVisAsientoContable");
             frm.ShowDialog();
             string codigoCG = frmConsultaGeneral.codigoCG;

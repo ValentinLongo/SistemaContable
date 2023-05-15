@@ -43,7 +43,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
 
         private void btnBuscarCuenta_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral consultaGeneral = new frmConsultaGeneral("pcu_codigo as Codigo, pcu_descri as Descripcion", "PCuenta", "", "", "frmLibroMayorGrupo");
+            frmConsultaGeneral consultaGeneral = new frmConsultaGeneral("pcu_codigo as Codigo, pcu_descri as Descripcion", "PCuenta", "", "", "pcu", "codigo", "descri");
             consultaGeneral.ShowDialog();
             if (frmConsultaGeneral.codigoCG != null)
             {
@@ -54,7 +54,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
 
         private void btnBuscarCuenta2_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral consultaGeneral = new frmConsultaGeneral("pcu_codigo as Codigo, pcu_descri as Descripcion", "PCuenta", "", "", "frmLibroMayorGrupo");
+            frmConsultaGeneral consultaGeneral = new frmConsultaGeneral("pcu_codigo as Codigo, pcu_descri as Descripcion", "PCuenta", "", "", "pcu", "codigo", "descri");
             consultaGeneral.ShowDialog();
             if (frmConsultaGeneral.codigoCG != null)
             {

@@ -83,6 +83,7 @@ namespace SistemaContable
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+            
             if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
                 txtUsuario.Text = txtUsuario.Text.ToUpper();

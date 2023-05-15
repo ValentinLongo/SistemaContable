@@ -31,7 +31,7 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral consultageneral = new frmConsultaGeneral("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo", "frmPermisosUsuarios");
+            frmConsultaGeneral consultageneral = new frmConsultaGeneral("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo", "usu", "codigo", "nombre");
             //consultageneral.ArmarDGV("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo", "frmPermisosUsuarios");
             consultageneral.ShowDialog();
 

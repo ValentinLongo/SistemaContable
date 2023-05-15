@@ -170,7 +170,7 @@
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(159, 19);
             this.txtContraseña.TabIndex = 1;
-            this.txtContraseña.Tag = "10000";
+            this.txtContraseña.Tag = "00000";
             // 
             // txtUsuario
             // 

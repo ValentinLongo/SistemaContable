@@ -470,7 +470,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
         private void btnEjercicio_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral frm = new frmConsultaGeneral("eje_codigo as Código, eje_descri as Descripción", "Ejercicio", "", "", "frmBalanceDeSumasySaldos");
+            frmConsultaGeneral frm = new frmConsultaGeneral("eje_codigo as Código, eje_descri as Descripción", "Ejercicio", "", "", "eje", "codigo", "descri");
             frm.ShowDialog();
             txtCodEjercicio.Text = frmConsultaGeneral.codigoCG;
             txtDescriEjercicio.Text = frmConsultaGeneral.descripcionCG;
@@ -478,7 +478,7 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
         private void btnModelo_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral frm = new frmConsultaGeneral("bal_codigo as Código, bal_descri as Descripción", "Balance", "", "", "frmBalanceDeSumasySaldos");
+            frmConsultaGeneral frm = new frmConsultaGeneral("bal_codigo as Código, bal_descri as Descripción", "Balance", "", "", "bal", "codigo", "descri");
             frm.ShowDialog();
             txtCodModelo.Text = frmConsultaGeneral.codigoCG;
             txtDescriModelo.Text = frmConsultaGeneral.descripcionCG;
