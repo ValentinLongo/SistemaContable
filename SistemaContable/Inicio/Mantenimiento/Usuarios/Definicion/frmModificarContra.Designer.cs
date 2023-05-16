@@ -102,9 +102,9 @@
             this.lbUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbUsuario.Location = new System.Drawing.Point(174, 63);
             this.lbUsuario.Name = "lbUsuario";
-            this.lbUsuario.Size = new System.Drawing.Size(49, 17);
+            this.lbUsuario.Size = new System.Drawing.Size(57, 17);
             this.lbUsuario.TabIndex = 4;
-            this.lbUsuario.Text = "label5";
+            this.lbUsuario.Text = "Usuario";
             // 
             // panel1
             // 
@@ -292,7 +292,7 @@
             this.tbContraActual.Name = "tbContraActual";
             this.tbContraActual.Size = new System.Drawing.Size(173, 13);
             this.tbContraActual.TabIndex = 0;
-            this.tbContraActual.Tag = "10000";
+            this.tbContraActual.Tag = "00000";
             // 
             // panel3
             // 

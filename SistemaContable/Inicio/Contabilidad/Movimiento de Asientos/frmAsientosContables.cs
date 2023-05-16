@@ -67,34 +67,35 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
             Cursor.Current = Cursors.Default;
 
-            SeteoFooter(dgvAsientosContables,footer);
+            SeteoFooter(dgvAsientosContables, footer);
             ActualizarFooter();
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvAsientosContables);
         }
 
-        private void ActualizarFooter() 
+        private void ActualizarFooter()
         {
-            //da mal los valores del footer
             if (dgvAsientosContables.Rows.Count != 0)
             {
                 DataSet ds = new DataSet();
                 ds = AccesoBase.ListarDatos($"SELECT sum(X.Debe) as mva_debe, Sum(X.Haber) as mva_haber FROM(SELECT ast_asiento, sum(case when mva_codigo = 1 then mva_importe else 0 end) as Debe, sum(case when mva_codigo = 2 then mva_importe else 0 end) as Haber FROM MovAsto left join Asiento on mva_asiento = ast_asiento left join Ejercicio on ast_ejercicio = eje_codigo left join TipAsto on ast_tipo = tas_codigo left join (select usu_codigo as UsuCod, usu_nombre as UsuModi1 FROM Usuario) as Z on ast_usumodi = Z.UsuCod WHERE ast_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} {(CheckManuales.Checked ? "AND (ast_cbte is null or ast_cbte = '')" : "")} {(CheckModificados.Checked ? "AND NOT (ast_fecmodi is null or ast_fecmodi = '01/01/1900')" : "")} {RangoFecha()} GROUP BY ast_asiento {(CheckDiferencia.Checked ? "HAVING sum(case when mva_codigo = 1 then mva_importe else 0 end) <> sum(case when mva_codigo = 2 then mva_importe else 0 end)" : "")} ) as X");
-                if (dgvAsientosContables.Rows.Count != 0)
-                {
-                    footer.Columns[2].HeaderText = "Totales:";
-                    footer.Columns[3].HeaderText = ds.Tables[0].Rows[0]["mva_debe"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["mva_debe"]), 2).ToString();
-                    footer.Columns[4].HeaderText = ds.Tables[0].Rows[0]["mva_haber"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["mva_haber"]), 2).ToString();
-                }
-                else
-                {
-                    footer.Columns[2].HeaderText = "Totales:";
-                    footer.Columns[3].HeaderText = "0,00";
-                    footer.Columns[4].HeaderText = "0,00";
-                }
-            }           
+                
+                footer.Columns[2].HeaderText = "Totales:";
+                footer.Columns[3].HeaderText = ds.Tables[0].Rows[0]["mva_debe"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["mva_debe"]), 2).ToString();
+                footer.Columns[4].HeaderText = ds.Tables[0].Rows[0]["mva_haber"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["mva_haber"]), 2).ToString();
+
+                footer.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                footer.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                DataGridViewColumn columna = dgvAsientosContables.Columns["Debe"];
+                columna.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                columna.Width = footer.Columns[3].Width;
+                DataGridViewColumn columna2 = dgvAsientosContables.Columns["Haber"];
+                columna2.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                columna2.Width = footer.Columns[4].Width;
+            }
         }
 
-        private string RangoFecha() 
+        private string RangoFecha()
         {
             frmRangoFechas frm = new frmRangoFechas(1);
             frm.ShowDialog();

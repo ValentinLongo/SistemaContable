@@ -51,8 +51,6 @@ namespace SistemaContable
 
         private void Inicializar(Form frm)
         {
-            this.Select(); //con esto funciona el evento keydown.
-
             FRM = frm; //formulario del cual fue llamada la autorización
 
             int resultado = 0;
@@ -231,7 +229,7 @@ namespace SistemaContable
                         txtUsuario.Enabled = false;
                         txtContraseña.Enabled = false;
                         btnAcceder.Enabled = false;
-                        lblcontrolbox.Text = "ESPERANDO AUTORIZACIÓN...";
+                        label1.Text = "ESPERANDO AUTORIZACIÓN...";
 
                         switch (TIPO)
                         {
@@ -262,7 +260,7 @@ namespace SistemaContable
                     }
                     else
                     {
-                        lblcontrolbox.Text = "Solicitud de Autorización";
+                        label1.Text = "Solicitud de Autorización";
                         timer1.Enabled = false;
                         txtUsuario.Enabled = true;
                         txtContraseña.Enabled = true;
@@ -286,7 +284,7 @@ namespace SistemaContable
                 txtUsuario.Enabled = true;
                 txtContraseña.Enabled = true;
                 btnAcceder.Enabled = true;
-                lblcontrolbox.Text = "Solicitud de Autorización";
+                label1.Text = "Solicitud de Autorización";
 
                 AccesoBase.InsertUpdateDatos($"DELETE FROM Autoriza WHERE aut_codigo = {codigo}");
 
@@ -315,7 +313,7 @@ namespace SistemaContable
                     txtUsuario.Enabled = true;
                     txtContraseña.Enabled = true;
                     btnAcceder.Enabled = true;
-                    lblcontrolbox.Text = "AUTORIZADO!!!";
+                    label1.Text = "AUTORIZADO!!!";
 
                     ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_codigo = {usu_autorizo} AND usu_estado = 1 ");
                     foreach (DataRow dr in ds.Tables[0].Rows)
@@ -335,7 +333,7 @@ namespace SistemaContable
                     txtUsuario.Enabled = true;
                     txtContraseña.Enabled = true;
                     btnAcceder.Enabled = true;
-                    lblcontrolbox.Text = "RECHAZADO!!!";
+                    label1.Text = "RECHAZADO!!!";
 
                     AccesoBase.InsertUpdateDatos($"DELETE FROM Autoriza WHERE aut_codigo = {codigo}");
 

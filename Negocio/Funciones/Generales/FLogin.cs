@@ -26,7 +26,17 @@ namespace Negocio
         public static int buscarUsuario(string usuario, string contrasenia)
         {
             int resultado = 0;
-            resultado = AccesoBase.ValidarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contrasenia}'");
+            if (contrasenia == "")
+            {
+                resultado = AccesoBase.ValidarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}'");
+
+            }
+            else
+            {
+                resultado = AccesoBase.ValidarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contrasenia}'");
+
+            }
+
             if (resultado == 1)
             {
                 BuscarIdUsuario(usuario, contrasenia);
@@ -41,7 +51,16 @@ namespace Negocio
         public static void BuscarIdUsuario(string usuario, string contrasenia)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contrasenia}'");
+            if (contrasenia == "")
+            {
+                ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}'");
+
+            }
+            else
+            {
+                ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contrasenia}'");
+
+            }
             
             foreach (DataRow dr in ds.Tables[0].Rows)
             {

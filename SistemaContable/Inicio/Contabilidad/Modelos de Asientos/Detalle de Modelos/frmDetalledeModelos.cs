@@ -26,6 +26,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
         public static string Codigo;
 
+        public static bool flag = true; //para repetir la carga de detalles y que se valla actualizando el dgv
+
         public frmDetalledeModelos()
         {
             InitializeComponent();
@@ -112,13 +114,16 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos(0,"","","","","","");
+            while (flag)
+            {
+                frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos(0, "", "", "", "", "", "");
 
-            frmAddModDetdeModelos.DGV1 = dgvDetDeMod1;
-            frmAddModDetdeModelos.DGV2 = dgvDetDeMod2;
-            frmAddModDetdeModelos.ShowDialog();
-            dgvDetDeMod2.Rows.Clear();
-            CargarDGV2();
+                frmAddModDetdeModelos.DGV1 = dgvDetDeMod1;
+                frmAddModDetdeModelos.DGV2 = dgvDetDeMod2;
+                frmAddModDetdeModelos.ShowDialog();
+                dgvDetDeMod2.Rows.Clear();
+                CargarDGV2();
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

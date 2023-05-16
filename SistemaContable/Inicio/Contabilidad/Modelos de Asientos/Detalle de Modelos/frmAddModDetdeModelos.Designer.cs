@@ -140,6 +140,7 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(114, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             this.bunifuFormControlBox1.TabStop = false;
+            this.bunifuFormControlBox1.CloseClicked += new System.EventHandler(this.Close);
             // 
             // label1
             // 

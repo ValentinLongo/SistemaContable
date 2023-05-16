@@ -17,24 +17,31 @@ namespace SistemaContable.General
     {
         public static string codigoCG;
         public static string descripcionCG;
-        private static string formulario;
+
         private static string ast; //asterisco
         private static string tab; //tabla
         private static string whe; //where
         private static string ord; //orden
-        private static string columna;
-        public frmConsultaGeneral(string asterisco, string tabla, string where, string orden, string frm)
+
+        private static string prefijo;
+        private static string columnaCod;
+        private static string columnaDescri;
+        public frmConsultaGeneral(string asterisco, string tabla, string where, string orden, string pref, string colCod, string colDescri)
         {
             InitializeComponent();
 
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
+            prefijo = pref;
+            columnaCod = colCod;
+            columnaDescri = colDescri;
+
             cbBusqueda.SelectedIndex = 0;
-            ArmarDGV(asterisco, tabla, where, orden, frm);
+            ArmarDGV(asterisco, tabla, where, orden);
         }
 
-        public void ArmarDGV(string asterisco, string tabla, string where, string orden, string frm) //frm = desde que formulario fue llamado
+        public void ArmarDGV(string asterisco, string tabla, string where, string orden)
         {
             DataSet data = new DataSet();
 
@@ -49,7 +56,6 @@ namespace SistemaContable.General
                 dgvConsulta.DataSource = data.Tables[0];
             }
 
-            formulario = frm;
             ast = asterisco;
             tab = tabla;
             whe = where;
@@ -75,86 +81,42 @@ namespace SistemaContable.General
             Negocio.FValidacionesEventos.EventosFormulario(this);
         }
 
-        string frm1 = "frmPermisosUsuarios";
-        string frm2 = "frmPermisosPerfil";
-        string frm3 = "frmAggModVisAsientoContable";
-        string frm4 = "frmAuditoriaInterna";
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-            if (formulario == frm1)
+            string col = "";
+            if (cbBusqueda.SelectedIndex == 0)
             {
-                frm1 = "";
-                if (cbBusqueda.SelectedIndex == 0)
-                {
-                    columna = "usu_codigo";
-                }
-                else if (cbBusqueda.SelectedIndex == 1)
-                {
-                    columna = "usu_nombre";
-                }
+                col = $"{prefijo}_{columnaCod}";
             }
-            else if (formulario == frm2) 
+            else if (cbBusqueda.SelectedIndex == 1)
             {
-                frm2 = "";
-                if (cbBusqueda.SelectedIndex == 0)
-                {
-                    columna = "per_codigo";
-                }
-                else if (cbBusqueda.SelectedIndex == 1)
-                {
-                    columna = "per_descri";
-                }
+                col = $"{prefijo}_{columnaDescri}";
             }
-            else if (formulario == frm3)
-            {
-                frm3 = "";
-                if (cbBusqueda.SelectedIndex == 0)
-                {
-                    columna = "mod_codigo";
-                }
-                else if (cbBusqueda.SelectedIndex == 1)
-                {
-                    columna = "mod_descri";
-                }
-            }
-            else if (formulario == frm4)
-            {
-                frm4 = "";
-                if (cbBusqueda.SelectedIndex == 0)
-                {
-                    columna = "pcu_cuenta";
-                }
-                else if (cbBusqueda.SelectedIndex == 1)
-                {
-                    columna = "pcu_descri";
-                }
-            }
-
 
             if (txtBusqueda.Text != "")
             {
                 if (cbBusqueda.SelectedIndex == 0)
                 {
-                    whe = "WHERE " + columna + " LIKE " + "'%" + txtBusqueda.Text + "%'";
-                    ArmarDGV(ast, tab, whe, "", "");
+                    whe = "WHERE " + col + " LIKE " + "'%" + txtBusqueda.Text + "%'";
+                    ArmarDGV(ast, tab, whe, "");
                 }
                 else if (cbBusqueda.SelectedIndex == 1)
                 {
                     if (CheckInicio.Checked)
                     {
-                        whe = "WHERE " + columna +  " LIKE " + "'" + txtBusqueda.Text + "%'";
-                        ArmarDGV(ast, tab, whe, "", "");
+                        whe = "WHERE " + col +  " LIKE " + "'" + txtBusqueda.Text + "%'";
+                        ArmarDGV(ast, tab, whe, "");
                     }
                     else
                     {
-                        whe = "WHERE " + columna + " LIKE " + "'%" + txtBusqueda.Text + "%'";
-                        ArmarDGV(ast, tab, whe, "", "");
+                        whe = "WHERE " + col + " LIKE " + "'%" + txtBusqueda.Text + "%'";
+                        ArmarDGV(ast, tab, whe, "");
                     }
                 }
             }
             else
             {
-                ArmarDGV(ast, tab, "", ord, "");
+                ArmarDGV(ast, tab, "", ord);
             }
         }
 

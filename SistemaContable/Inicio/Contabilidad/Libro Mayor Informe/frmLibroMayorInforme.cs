@@ -30,7 +30,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
 
         private void btnBuscarModelo_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral consultaGeneral = new frmConsultaGeneral("*", "Balance", "", "", "frmModelos");
+            frmConsultaGeneral consultaGeneral = new frmConsultaGeneral("*", "Balance", "", "", "bal", "codigo", "descri");
             consultaGeneral.ShowDialog();
             if (Convert.ToInt32(frmConsultaGeneral.codigoCG) > 0)
             {
