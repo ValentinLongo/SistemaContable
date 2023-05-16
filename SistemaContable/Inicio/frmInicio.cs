@@ -784,9 +784,21 @@ namespace SistemaContable
             }
         }
 
+        public static MenuDropDown m1;
+        public static MenuDropDown m2;
+        public static MenuDropDown m3;
+        public static MenuDropDown m4;
+        public static MenuDropDown m5;
         private void recalcularPermisos_Click(object sender, EventArgs e)
         {
-            frmAutorización frmAutorizacion = new frmAutorización();
+            m1 = Menu_Archivos;
+            m2 = Menu_Ver;
+            m3 = Menu_Contabilidad;
+            m4 = Menu_Mantenimiento;
+            m5 = Menu_Ayuda;
+
+            frmAutorización frmAutorizacion = new frmAutorización(this);
+
             bool autorizado = frmAutorización.Autoriza(1, false); //cambiar
             frmAutorizacion.Show();
             if (frmAutorización.visibilidad == true)
@@ -811,7 +823,7 @@ namespace SistemaContable
                     estandar.Close();
                 }
 
-                frmMessageBox MessageBox2 = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos del menu?", true);
+                frmMessageBox MessageBox2 = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos especiales?", true);
                 MessageBox2.ShowDialog();
                 if (frmMessageBox.Acepto)
                 {

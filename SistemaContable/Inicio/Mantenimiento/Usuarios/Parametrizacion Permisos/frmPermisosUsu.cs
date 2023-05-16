@@ -51,6 +51,8 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void ArmarArbol(string nrousu)
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             lista.Clear();
 
             DataSet ds = new DataSet();
@@ -61,7 +63,7 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MenuxUsu ( mxu_terminal, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT  {terminal}, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From MenuxUsu Where MenuxUsu.mxu_sistema = 'CO' And MenuxUsu.mxu_usuario = {nrousu}");
 
-            ds = AccesoBase.ListarDatos($"select mxu_codigo, mxu_activo, mnu_descri from aux_MenuxUsu left join Menu on mxu_codigo = mnu_codigo and mxu_sistema = mnu_sistema where mxu_usuario = '{nrousu}' and mxu_sistema = 'CO' order by mnu_codigo");
+            ds = AccesoBase.ListarDatos($"select mxu_codigo, mxu_activo, mnu_descri from aux_MenuxUsu left join Menu on mxu_codigo = mnu_codigo and mxu_sistema = mnu_sistema where mxu_usuario = '{nrousu}' and mxu_sistema = 'CO' and mxu_terminal = {terminal} order by mnu_codigo");
 
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
@@ -109,6 +111,7 @@ namespace SistemaContable.Parametrizacion_Permisos
                     subgrupo2.Tag = i.mxu_codigo;
                 }
             }
+            Cursor.Current = Cursors.Default;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)

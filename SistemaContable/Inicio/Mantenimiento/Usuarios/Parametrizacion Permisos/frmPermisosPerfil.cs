@@ -56,6 +56,8 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void ArmarArbol(string nroperfil) 
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             lista.Clear();
 
             DataSet ds = new DataSet();
@@ -66,7 +68,7 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MenuxPerfil ( mxp_terminal, mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema) SELECT  {terminal}, mxp_perfil, mxp_codigo, mxp_activo, mxp_sistema From MenuxPerfil Where MenuxPerfil.mxp_sistema = 'CO' And MenuxPerfil.mxp_perfil = {nroperfil}");
 
-            ds = AccesoBase.ListarDatos($"select mxp_codigo, mxp_activo, mnu_descri from aux_MenuxPerfil left join Menu on mxp_codigo = mnu_codigo and mxp_sistema = mnu_sistema where mxp_perfil = '{nroperfil}' and mxp_sistema = 'CO' order by mnu_codigo");
+            ds = AccesoBase.ListarDatos($"select mxp_codigo, mxp_activo, mnu_descri from aux_MenuxPerfil left join Menu on mxp_codigo = mnu_codigo and mxp_sistema = mnu_sistema where mxp_perfil = '{nroperfil}' and mxp_sistema = 'CO' and mxp_terminal = {terminal} order by mnu_codigo");
 
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
@@ -114,6 +116,7 @@ namespace SistemaContable.Parametrizacion_Permisos
                     subgrupo2.Tag = i.mxp_codigo;
                 }
             }
+            Cursor.Current = Cursors.Default;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)

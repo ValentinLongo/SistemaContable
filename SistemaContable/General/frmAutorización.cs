@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Datos.Modelos;
+using Negocio;
 using SistemaContable.General;
 using SistemaContable.Parametrizacion_Permisos;
 using System;
@@ -39,7 +40,7 @@ namespace SistemaContable
         private static string OBSERVA;
         private static string REFERENCIA;
 
-        public frmAutorización([Optional] Form frm)
+        public frmAutorización(Form frm)
         {
             InitializeComponent();
 
@@ -53,19 +54,12 @@ namespace SistemaContable
         {
             FRM = frm; //formulario del cual fue llamada la autorización
 
-            int resultado = 0;
             int terminal = frmLogin.NumeroTerminal;
 
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"select ter_pideAutCodBarra from terminal where ter_codigo = {terminal}");
-            foreach (DataRow dr in ds.Tables[0].Rows)
-            {
-                if (dr["ter_pideAutCodBarra"] != DBNull.Value)
-                {
-                    resultado = Convert.ToInt32(dr["ter_pideAutCodBarra"]);
-                }
-            }
-            if (resultado == 1)
+
+            if ((ds.Tables[0].Rows[0]["ter_pideAutCodBarra"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["ter_pideAutCodBarra"])) == 1)
             {
                 frmCodigoBarra codigobarra = new frmCodigoBarra();
 
@@ -88,39 +82,51 @@ namespace SistemaContable
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
             {
-                usuario = txtUsuario.Text;
-                contraseña = txtContraseña.Text;
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                MessageBox.ShowDialog();
+            }
 
-                bool autorizado = Autoriza(PERFIL, CAMBIA, TIPO.ToString(), COD1.ToString(), COD2.ToString(), COD3, DESCRI1, DESCRI2, DESCRI3, OBSERVA, REFERENCIA);
-                if (autorizado)
+            usuario = txtUsuario.Text;
+            contraseña = txtContraseña.Text;
+
+            bool autorizado = Autoriza(PERFIL, CAMBIA, TIPO.ToString(), COD1.ToString(), COD2.ToString(), COD3, DESCRI1, DESCRI2, DESCRI3, OBSERVA, REFERENCIA);
+            if (autorizado)
+            {
+                if (FRM != null)
                 {
-                    if (FRM != null)
+                    if (FRM is frmInicio)
                     {
-                        if (FRM is frmEstandar)
+                        this.Close();
+                        frmAutorización.usuario = "";
+                        frmAutorización.contraseña = "";
+
+                        frmMessageBox MessageBox1 = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos del menu?", true);
+                        MessageBox1.ShowDialog();
+                        if (frmMessageBox.Acepto)
                         {
-                            this.Close();
-                            frmAutorización.usuario = "";
-                            frmAutorización.contraseña = "";
-                            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: ¿desea recalcular los permisos del menu?", true);
-                            MessageBox.ShowDialog();
-                            if (frmMessageBox.Acepto)
-                            {
-                                frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
-                                estandar.ShowDialog();
-                            }
+                            frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
+                            estandar.Show();
+                            Application.DoEvents();
+                            Negocio.Funciones.FRecalcularPermisos.RecalcularPermisos(frmInicio.m1, frmInicio.m2, frmInicio.m3, frmInicio.m4, frmInicio.m5);
+                            estandar.Close();
                         }
-                        else
+
+                        frmMessageBox MessageBox2 = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos especiales?", true);
+                        MessageBox2.ShowDialog();
+                        if (frmMessageBox.Acepto)
                         {
-                            FRM.Show();
-                            this.Close();
-                            frmAutorización.usuario = "";
-                            frmAutorización.contraseña = "";
+                            frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...");
+                            estandar.Show();
+                            Application.DoEvents();
+                            Negocio.Funciones.FRecalcularPermisos.RecalcularPermisosEspeciales();
+                            estandar.Close();
                         }
                     }
                     else
                     {
+                        FRM.Show();
                         this.Close();
                         frmAutorización.usuario = "";
                         frmAutorización.contraseña = "";
@@ -128,13 +134,14 @@ namespace SistemaContable
                 }
                 else
                 {
-                    frmMessageBox MessageBox = new frmMessageBox("Atención!", "Autorización Denegada!", false);
-                    MessageBox.ShowDialog();
+                    this.Close();
+                    frmAutorización.usuario = "";
+                    frmAutorización.contraseña = "";
                 }
             }
             else
             {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Autorización Denegada!", false);
                 MessageBox.ShowDialog();
             }
         }
