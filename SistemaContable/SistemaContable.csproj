@@ -301,6 +301,12 @@
     <Compile Include="General\frmReporte.Designer.cs">
       <DependentUpon>frmReporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="General\frmReporte2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmReporte2.Designer.cs">
+      <DependentUpon>frmReporte2.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\frmSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -686,6 +692,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmReporte.resx">
       <DependentUpon>frmReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\frmReporte2.resx">
+      <DependentUpon>frmReporte2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmSesion.resx">
       <DependentUpon>frmSesion.cs</DependentUpon>
