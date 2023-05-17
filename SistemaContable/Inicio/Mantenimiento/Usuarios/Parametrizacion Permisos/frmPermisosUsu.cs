@@ -61,7 +61,7 @@ namespace SistemaContable.Parametrizacion_Permisos
 
             AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_MenuxUsu WHERE mxu_terminal = {terminal}");
 
-            AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MenuxUsu ( mxu_terminal, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT  {terminal}, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From MenuxUsu Where MenuxUsu.mxu_sistema = 'CO' And MenuxUsu.mxu_usuario = {nrousu}");
+            AccesoBase.InsertUpdateDatos($"INSERT INTO Aux_MenuxUsu (mxu_terminal, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT  {terminal}, mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From MenuxUsu Where MenuxUsu.mxu_sistema = 'CO' And MenuxUsu.mxu_usuario = {nrousu}");
 
             ds = AccesoBase.ListarDatos($"select mxu_codigo, mxu_activo, mnu_descri from aux_MenuxUsu left join Menu on mxu_codigo = mnu_codigo and mxu_sistema = mnu_sistema where mxu_usuario = '{nrousu}' and mxu_sistema = 'CO' and mxu_terminal = {terminal} order by mnu_codigo");
 
@@ -123,7 +123,7 @@ namespace SistemaContable.Parametrizacion_Permisos
 
                 AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_sistema = 'CO' AND mxu_usuario = {txtNroUsuario.Text}");
 
-                AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu ( mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From aux_MenuxUsu Where aux_MenuxUsu.mxu_sistema = 'CO' AND mxu_terminal = '{terminal}' AND aux_MenuxUsu.mxu_usuario = {txtNroUsuario.Text}");
+                AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu (mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From aux_MenuxUsu Where aux_MenuxUsu.mxu_sistema = 'CO' AND mxu_terminal = '{terminal}' AND aux_MenuxUsu.mxu_usuario = {txtNroUsuario.Text}");
 
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cambios realizados correctamente!", false);
                 MessageBox.ShowDialog();
@@ -138,6 +138,19 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void Tpermisos_AfterCheck(object sender, TreeViewEventArgs e)
         {
+            if (e.Node.Parent == null)
+            {
+                foreach (TreeNode Nodo in e.Node.Nodes)
+                {
+                    Nodo.Checked = e.Node.Checked;
+
+                    foreach (TreeNode Nodo2 in Nodo.Nodes)
+                    {
+                        Nodo2.Checked = Nodo.Checked;
+                    }
+                }
+            }
+
             int terminal = frmLogin.NumeroTerminal;
             var codigo = e.Node.Tag;
             if (e.Node.Checked)

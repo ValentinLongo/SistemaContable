@@ -135,6 +135,19 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void Tpermisos_AfterCheck(object sender, TreeViewEventArgs e)
         {
+            if (e.Node.Parent == null)
+            {
+                foreach (TreeNode Nodo in e.Node.Nodes)
+                {
+                    Nodo.Checked = e.Node.Checked;
+
+                    foreach (TreeNode Nodo2 in Nodo.Nodes)
+                    {
+                        Nodo2.Checked = Nodo.Checked;
+                    }
+                }
+            }
+
             int terminal = frmLogin.NumeroTerminal;
             var codigo = e.Node.Tag;
             if (e.Node.Checked)

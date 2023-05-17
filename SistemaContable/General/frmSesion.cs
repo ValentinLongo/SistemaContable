@@ -32,7 +32,7 @@ namespace SistemaContable.General
                 string contraseña = txtContraseña.Text.ToUpper();
 
                 DataSet ds = new DataSet();
-                ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' AND usu_contraseña = '{contraseña}'");
+                ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}'");
                 if (ds.Tables[0].Rows.Count != 0)
                 {
                     foreach (DataRow dr in ds.Tables[0].Rows)

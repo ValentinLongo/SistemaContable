@@ -1,10 +1,12 @@
-﻿using Datos.Modelos;
+﻿using Datos;
+using Datos.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Negocio
 {
@@ -95,5 +97,50 @@ namespace Negocio
         {
             Datos.AccesoBase.InsertUpdateDatos($"UPDATE Usuario SET usu_contraseña = '{nuevaContra}' WHERE usu_codigo = {FLogin.IdUsuario}");
         }
+
+        //Agrega los permisos correspondientes al nuevo usuario
+        public static void AgregarPermisos(MenuDropDown m1, MenuDropDown m2, MenuDropDown m3, MenuDropDown m4, MenuDropDown m5, Form frm)
+        {
+            int nrousu = (Negocio.FGenerales.ultimoNumeroID("usu_codigo", "Usuario")) - 1;
+
+            List<MRecalcularPermisos> lista = new List<MRecalcularPermisos>();
+            lista = Negocio.Funciones.FRecalcularPermisos.ListaMenu(m1, m2, m3, m4, m5, frm);
+
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT * FROM Parametro");
+            int permiso = ds.Tables[0].Rows[0]["par_permiso"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["par_permiso"]);
+
+            int resultado;
+            int codigo;
+
+            foreach (var i in lista)
+            {
+                resultado = AccesoBase.ValidarDatos($"SELECT * FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' and mnu_sistema = 'CO'");
+
+                if (resultado == 1)
+                {
+                    AccesoBase.InsertUpdateDatos($"UPDATE Menu SET mnu_descri = '{i.mnu_descri}' WHERE mnu_codigo = '{i.mnu_codigo}' AND mnu_sistema = 'CO'");
+                }
+                else
+                {
+                    AccesoBase.InsertUpdateDatos($"INSERT INTO Menu (mnu_codigo, mnu_descri, mnu_sistema) VALUES ( '{i.mnu_codigo}', '{i.mnu_descri}', 'CO' )");
+                }
+
+                DataSet ds2 = new DataSet();
+                ds2 = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_codigo = {nrousu}");
+                foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                {
+                    codigo = Convert.ToInt32(dr2["usu_codigo"]);
+
+                    resultado = AccesoBase.ValidarDatos($"SELECT * FROM MenuxUsu WHERE mxu_usuario = {codigo} AND mxu_codigo = '{i.mnu_codigo}' AND mxu_sistema = 'CO'");
+
+                    if (resultado == 0)
+                    {
+                        AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu (mxu_usuario,mxu_codigo,mxu_activo,mxu_sistema) VALUES ( {codigo}, '{i.mnu_codigo}', {permiso}, 'CO' )");
+                    }
+                }
+            }
+        }
+
     }
 }

@@ -170,8 +170,24 @@ namespace SistemaContable
             lblFecha.Text = DateTime.Now.ToShortDateString();
         }
 
+        private int UltimoUsuarioAnterior = Negocio.FGenerales.ultimoNumeroID("usu_codigo", "Usuario");
         private void DisparadorInicio(object sender, EventArgs e)
         {
+            int UltimoUsuarioNuevo = Negocio.FGenerales.ultimoNumeroID("usu_codigo", "Usuario");
+
+            if (UltimoUsuarioAnterior != UltimoUsuarioNuevo)
+            {
+                m1 = Menu_Archivos;
+                m2 = Menu_Ver;
+                m3 = Menu_Contabilidad;
+                m4 = Menu_Mantenimiento;
+                m5 = Menu_Ayuda;
+
+                Negocio.FUsuarios.AgregarPermisos(m1, m2, m3, m4, m5, this);
+
+                UltimoUsuarioAnterior = UltimoUsuarioNuevo;
+            }
+
             string tiempo = Negocio.FInicio.DisparadorInicio(lblnuevomensaje);
 
             if (tiempo == "" || tiempo != "expiro")
@@ -660,7 +676,8 @@ namespace SistemaContable
         private void modificaciónDeContraseña_Click(object sender, EventArgs e)
         {
             frmModificarContra frm = new frmModificarContra();
-            Negocio.FGenerales.Mostrarfrm(frm, modificaciónDeContraseña.Tag.ToString());
+            //Negocio.FGenerales.Mostrarfrm(frm, modificaciónDeContraseña.Tag.ToString());
+            frm.Show();
         }
 
         private void ejercicioContable_Click(object sender, EventArgs e)
@@ -789,6 +806,7 @@ namespace SistemaContable
         public static MenuDropDown m3;
         public static MenuDropDown m4;
         public static MenuDropDown m5;
+
         private void recalcularPermisos_Click(object sender, EventArgs e)
         {
             m1 = Menu_Archivos;
@@ -819,7 +837,7 @@ namespace SistemaContable
                     frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
                     estandar.Show();
                     Application.DoEvents();
-                    Negocio.Funciones.FRecalcularPermisos.RecalcularPermisos(Menu_Archivos, Menu_Ver, Menu_Contabilidad, Menu_Mantenimiento, Menu_Ayuda);
+                    Negocio.Funciones.FRecalcularPermisos.RecalcularPermisos(Menu_Archivos, Menu_Ver, Menu_Contabilidad, Menu_Mantenimiento, Menu_Ayuda, this);
                     estandar.Close();
                 }
 

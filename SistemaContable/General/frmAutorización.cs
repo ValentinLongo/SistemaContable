@@ -109,7 +109,7 @@ namespace SistemaContable
                             frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
                             estandar.Show();
                             Application.DoEvents();
-                            Negocio.Funciones.FRecalcularPermisos.RecalcularPermisos(frmInicio.m1, frmInicio.m2, frmInicio.m3, frmInicio.m4, frmInicio.m5);
+                            Negocio.Funciones.FRecalcularPermisos.RecalcularPermisos(frmInicio.m1, frmInicio.m2, frmInicio.m3, frmInicio.m4, frmInicio.m5, FRM);
                             estandar.Close();
                         }
 

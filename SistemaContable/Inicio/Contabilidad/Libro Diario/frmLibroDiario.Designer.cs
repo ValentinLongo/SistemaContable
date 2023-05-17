@@ -120,7 +120,7 @@
             this.btnCerrar.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.btnCerrar.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.btnCerrar.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.btnCerrar.Location = new System.Drawing.Point(439, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(395, 0);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCerrar.MaximizeBox = false;
             this.btnCerrar.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -135,7 +135,7 @@
             this.btnCerrar.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.btnCerrar.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
             this.btnCerrar.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.btnCerrar.MinimizeBox = false;
+            this.btnCerrar.MinimizeBox = true;
             this.btnCerrar.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.MinimizeBoxOptions.BorderRadius = 0;
             this.btnCerrar.MinimizeBoxOptions.Enabled = true;
@@ -150,7 +150,7 @@
             this.btnCerrar.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.ShowDesignBorders = false;
-            this.btnCerrar.Size = new System.Drawing.Size(24, 21);
+            this.btnCerrar.Size = new System.Drawing.Size(68, 21);
             this.btnCerrar.TabIndex = 29;
             this.btnCerrar.TabStop = false;
             // 

@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Datos.Modelos;
+using RJCodeAdvance.RJControls;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,7 +16,7 @@ namespace Negocio.Funciones
     {
         private static int permiso;
 
-        public static void RecalcularPermisos(MenuDropDown mArchivos, MenuDropDown mVer, MenuDropDown mContabilidad, MenuDropDown mMantenimiento, MenuDropDown mAyuda)
+        public static List<MRecalcularPermisos> ListaMenu(MenuDropDown mArchivos, MenuDropDown mVer, MenuDropDown mContabilidad, MenuDropDown mMantenimiento, MenuDropDown mAyuda, Form frm)
         {
             List<MRecalcularPermisos> lista = new List<MRecalcularPermisos>();
             foreach (ToolStripMenuItem item in mArchivos.Items)
@@ -105,6 +106,35 @@ namespace Negocio.Funciones
                 };
                 lista.Add(mrecalcular1);
             }
+            foreach (Control Ctrl in frm.Controls) //para agregar el nivel raiz a la lista, ya que no forma parte de los menus
+            {
+                if (Ctrl.Name == "PanelMenu")
+                {
+                    foreach (Control Ctrl2 in Ctrl.Controls)
+                    {
+                        if (Ctrl2.Tag == null)
+                        {
+                            break;
+                        }
+                        if (Ctrl2.Tag.ToString() == "10" || Ctrl2.Tag.ToString() == "20" || Ctrl2.Tag.ToString() == "30" || Ctrl2.Tag.ToString() == "40" || Ctrl2.Tag.ToString() == "50")
+                        {
+                            MRecalcularPermisos mrecalcular1 = new MRecalcularPermisos()
+                            {
+                                mnu_codigo = Ctrl2.Tag.ToString(),
+                                mnu_descri = Ctrl2.Text.Trim(),
+                            };
+                            lista.Add(mrecalcular1);
+                        }
+                    }
+                }
+            }
+            return lista;
+        }
+
+        public static void RecalcularPermisos(MenuDropDown mArchivos, MenuDropDown mVer, MenuDropDown mContabilidad, MenuDropDown mMantenimiento, MenuDropDown mAyuda, Form frm)
+        {
+            List<MRecalcularPermisos> lista = new List<MRecalcularPermisos>();
+            lista = ListaMenu(mArchivos, mVer, mContabilidad, mMantenimiento, mAyuda, frm);
 
             int resultado;
             int codigo;
@@ -118,7 +148,7 @@ namespace Negocio.Funciones
             Cursor.Current = Cursors.WaitCursor;
             foreach (var i in lista)
             {
-                resultado = AccesoBase.ValidarDatos($"SELECT mnu_codigo FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' and mnu_sistema = 'CO'");
+                resultado = AccesoBase.ValidarDatos($"SELECT * FROM Menu WHERE mnu_codigo = '{i.mnu_codigo}' and mnu_sistema = 'CO'");
 
                 if (resultado == 1)
                 {
@@ -126,7 +156,7 @@ namespace Negocio.Funciones
                 }
                 else
                 {
-                    AccesoBase.InsertUpdateDatos($"INSERT INTO Menu ( mnu_codigo, mnu_descri, mnu_sistema ) VALUES ( '{i.mnu_codigo}', '{i.mnu_descri}', 'CO' )");
+                    AccesoBase.InsertUpdateDatos($"INSERT INTO Menu (mnu_codigo, mnu_descri, mnu_sistema) VALUES ( '{i.mnu_codigo}', '{i.mnu_descri}', 'CO' )");
                 }
 
                 DataSet ds2 = new DataSet();
@@ -144,7 +174,7 @@ namespace Negocio.Funciones
                 }
 
                 DataSet ds3 = new DataSet();
-                ds3 = AccesoBase.ListarDatos($"SELECT per_codigo FROM Perfil");
+                ds3 = AccesoBase.ListarDatos($"SELECT * FROM Perfil");
                 foreach (DataRow dr3 in ds3.Tables[0].Rows)
                 {
                     perfil = Convert.ToInt32(dr3["per_codigo"]);
@@ -153,7 +183,7 @@ namespace Negocio.Funciones
 
                     if (resultado == 0)
                     {
-                        AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxPerfil (mxp_perfil,mxp_codigo,mxp_activo,mxp_sistema) VALUES ( {perfil}, '{i.mnu_codigo}', {permiso}, 'CO' )");
+                        AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxPerfil (mxp_perfil,mxp_codigo,mxp_activo,mxp_sistema) VALUES ({perfil}, '{i.mnu_codigo}', {permiso}, 'CO')");
                     }
                 }
             }
