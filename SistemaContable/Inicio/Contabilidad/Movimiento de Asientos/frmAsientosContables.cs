@@ -42,7 +42,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             cbBusqueda.SelectedIndex = 0;
         }
 
-        private void CargarDGV(string busqueda, string filtro, string filtro2, string diferencia)
+        private void CargarDGV(string busqueda, string manuales, string modificados, string diferencia)
         {
             Cursor.Current = Cursors.WaitCursor;
             if (cbSeleccion.SelectedIndex > -1)
@@ -52,7 +52,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 ds = AccesoBase.ListarDatos($"Select X.ast_asiento as Asiento, X.ast_fecha as Fecha,X.ast_comenta as Comentario,Sum(X.Debe) as Debe,Sum(X.Haber) as Haber,X.usu_nombre as Creó,X.ast_fecalta as FechaCreó,X.ast_hora as HoraCreó, X.UsuModi as Modificó, X.ast_fecmodi as FechaModi, X.ast_horamodi as HoraModi " +
                     $"From (Select *, Z.UsuModi1 as UsuModi, Case When mva_codigo = 1 Then mva_importe Else 0 End as Debe, Case When mva_codigo = 2 Then mva_importe Else 0 End as Haber From MovAsto " +
                     $"Left Join Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta Left Join Usuario on ast_user = Usuario.usu_codigo " +
-                    $"Left Join Ejercicio on ast_ejercicio = eje_codigo Left Join TipAsto on ast_tipo = tas_codigo Left Join (Select usu_codigo as UsuCod, usu_nombre as UsuModi1 From Usuario) as Z on ast_usumodi = Z.UsuCod Where ast_ejercicio = '{cbSeleccion.SelectedValue}' {busqueda} {filtro} {filtro2} ) as X " +
+                    $"Left Join Ejercicio on ast_ejercicio = eje_codigo Left Join TipAsto on ast_tipo = tas_codigo Left Join (Select usu_codigo as UsuCod, usu_nombre as UsuModi1 From Usuario) as Z on ast_usumodi = Z.UsuCod Where ast_ejercicio = '{cbSeleccion.SelectedValue}' {busqueda} {manuales} {modificados} ) as X " +
                     $"Group By X.ast_asiento, X.ast_renumera, X.ast_fecha, X.ast_ctapro, X.ast_comenta, X.ast_tipocbte, X.ast_cbte, X.ast_ejercicio, X.eje_descri, X.ast_user, X.usu_nombre, X.ast_hora, X.ast_fecalta, X.UsuModi, X.ast_fecmodi, X.ast_horamodi, X.ast_tipo, X.tas_descri {diferencia} Order By X.ast_fecha, X.ast_asiento");
                 //consulta vale
                 //ds = AccesoBase.ListarDatosPaginado($"SELECT ast_asiento as Asiento, ast_fecha as Fecha, ast_comenta as Comentario, Debe as Debe, Debe as Haber, usu_nombre as 'Creó', ast_fecalta as Fecha, ast_hora as Hora, ast_usumodi as 'Modificó', ast_fecmodi as Fecha, ast_horamodi as Hora FROM Asiento as A LEFT JOIN Usuario ON A.ast_user = Usuario.usu_codigo Left Join (SELECT mva_asiento, SUM(mva_importe) / 2 as Debe FROM MovAsto group by mva_asiento) as B on A.ast_asiento = B.mva_asiento where ast_ejercicio = '{cbSeleccion.SelectedValue}' group by ast_asiento, ast_fecha, ast_comenta, ast_user, Debe, usu_nombre,ast_fecalta,ast_hora,ast_usumodi,ast_fecmodi,ast_horamodi order by ast_fecha", ValorData);
@@ -60,28 +60,32 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
                 //propiedades por codigo porque no se asignaban de otra forma
                 dgvAsientosContables.DefaultCellStyle.ForeColor = Color.White;
-                DataGridViewColumn columna = dgvAsientosContables.Columns["Debe"];
-                columna.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                DataGridViewColumn columna2 = dgvAsientosContables.Columns["Haber"];
-                columna2.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                //DataGridViewColumn columna = dgvAsientosContables.Columns["Debe"];
+                //columna.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                //DataGridViewColumn columna2 = dgvAsientosContables.Columns["Haber"];
+                //columna2.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             }       
             SeteoFooter(dgvAsientosContables, footer);
-            ActualizarFooter();
+            ActualizarFooter(busqueda, manuales, modificados,   diferencia);
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvAsientosContables);
-
             Cursor.Current = Cursors.Default;
         }
 
-        private void ActualizarFooter()
+        private void ActualizarFooter(string busqueda, string manuales, string modificados, string diferencia)
         {
+            if (diferencia != "")
+            {
+                diferencia = "HAVING sum(case when mva_codigo = 1 then mva_importe else 0 end) <> sum(case when mva_codigo = 2 then mva_importe else 0 end)";
+            }
+
             if (dgvAsientosContables.Rows.Count != 0)
             {
                 DataSet ds = new DataSet();
-                ds = AccesoBase.ListarDatos($"SELECT sum(X.Debe) as mva_debe, Sum(X.Haber) as mva_haber FROM(SELECT ast_asiento, sum(case when mva_codigo = 1 then mva_importe else 0 end) as Debe, sum(case when mva_codigo = 2 then mva_importe else 0 end) as Haber FROM MovAsto left join Asiento on mva_asiento = ast_asiento left join Ejercicio on ast_ejercicio = eje_codigo left join TipAsto on ast_tipo = tas_codigo left join (select usu_codigo as UsuCod, usu_nombre as UsuModi1 FROM Usuario) as Z on ast_usumodi = Z.UsuCod WHERE ast_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} {(CheckManuales.Checked ? "AND (ast_cbte is null or ast_cbte = '')" : "")} {(CheckModificados.Checked ? "AND NOT (ast_fecmodi is null or ast_fecmodi = '01/01/1900')" : "")} {RangoFecha()} GROUP BY ast_asiento {(CheckDiferencia.Checked ? "HAVING sum(case when mva_codigo = 1 then mva_importe else 0 end) <> sum(case when mva_codigo = 2 then mva_importe else 0 end)" : "")} ) as X");
-                
+                ds = AccesoBase.ListarDatos($"SELECT sum(X.Debe) as Debe, Sum(X.Haber) as Haber FROM(SELECT ast_asiento, sum(case when mva_codigo = 1 then mva_importe else 0 end) as Debe, sum(case when mva_codigo = 2 then mva_importe else 0 end) as Haber FROM MovAsto left join Asiento on mva_asiento = ast_asiento left join Ejercicio on ast_ejercicio = eje_codigo left join TipAsto on ast_tipo = tas_codigo left join (select usu_codigo as UsuCod, usu_nombre as UsuModi1 FROM Usuario) as Z on ast_usumodi = Z.UsuCod WHERE ast_ejercicio = '{cbSeleccion.SelectedValue}' {busqueda} {manuales} {modificados} Group By ast_asiento {diferencia} ) as X");
+
                 footer.Columns[2].HeaderText = "Totales:";
-                footer.Columns[3].HeaderText = ds.Tables[0].Rows[0]["mva_debe"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["mva_debe"]), 2).ToString();
-                footer.Columns[4].HeaderText = ds.Tables[0].Rows[0]["mva_haber"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["mva_haber"]), 2).ToString();
+                footer.Columns[3].HeaderText = ds.Tables[0].Rows[0]["Debe"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["Debe"]), 2).ToString();
+                footer.Columns[4].HeaderText = ds.Tables[0].Rows[0]["Haber"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["Haber"]), 2).ToString();
 
                 footer.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 footer.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -93,15 +97,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 columna2.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
                 columna2.Width = footer.Columns[4].Width;
             }
-        }
-
-        private string RangoFecha()
-        {
-            frmRangoFechas frm = new frmRangoFechas(1);
-            frm.ShowDialog();
-            DateTime desde = frmRangoFechas.Desde;
-            DateTime hasta = frmRangoFechas.Hasta;
-            return $"AND (ast_fecha >= '{desde}' AND ast_fecha <= '{hasta}')";
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -210,34 +205,25 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
         }
 
-        private void CheckDiferencia_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        private void Click(object sender, EventArgs e)
         {
             string diferencia = "";
+            string manuales = "";
+            string modificados = "";
+
             if (CheckDiferencia.Checked)
             {
                 diferencia = " HAVING Sum(X.Debe) <> Sum(X.Haber) ";
             }
-            CargarDGV("", "", "", diferencia);
-        }
-
-        private void CheckManuales_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
-        {
-            string filtro = "";
             if (CheckManuales.Checked)
             {
-                filtro = " And (ast_cbte is null or ast_cbte = '') ";
+                manuales = " And (ast_cbte is null or ast_cbte = '') ";
             }
-            CargarDGV("", filtro, "","");
-        }
-
-        private void CheckModificados_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
-        {
-            string filtro = "";
             if (CheckModificados.Checked)
             {
-                filtro = " And not (ast_fecmodi is null or ast_fecmodi = '01/01/1900') ";
+                modificados = " And not (ast_fecmodi is null or ast_fecmodi = '01/01/1900') ";
             }
-            CargarDGV("", "", filtro, "");
+            CargarDGV("", manuales, modificados, diferencia);
         }
 
         private void timerBusqueda_Tick(object sender, EventArgs e)
@@ -323,7 +309,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         private void SeteoFooter(DataGridView dgv1, DataGridView footer)
         {
             footer.Columns.Clear();
-
             foreach (DataGridViewColumn Columna in dgv1.Columns)
             {
                 DataGridViewColumn col = new DataGridViewColumn();
@@ -350,7 +335,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     }
                     else
                     {
-                        footer.Location = new Point(29, 527);
+                        footer.Location = new Point(29, 525);
                     }
                 }
             }

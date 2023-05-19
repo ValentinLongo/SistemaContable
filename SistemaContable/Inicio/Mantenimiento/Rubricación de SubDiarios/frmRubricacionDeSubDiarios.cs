@@ -102,7 +102,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Rubricación_de_SubDiarios
 
         private void imprimirPorPantallaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReporte2 reporte = new frmReporte2("Libro IVA","Folio");
+            frmReporte2 reporte = new frmReporte2("ReporteMatias", 2);
             reporte.ShowDialog();
         }
     }

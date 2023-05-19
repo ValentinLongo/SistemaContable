@@ -420,7 +420,7 @@
             this.CheckModificados.TabStop = false;
             this.CheckModificados.ThreeState = false;
             this.CheckModificados.ToolTipText = null;
-            this.CheckModificados.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckModificados_CheckedChanged);
+            this.CheckModificados.Click += new System.EventHandler(this.Click);
             // 
             // CheckManuales
             // 
@@ -476,7 +476,7 @@
             this.CheckManuales.TabStop = false;
             this.CheckManuales.ThreeState = false;
             this.CheckManuales.ToolTipText = null;
-            this.CheckManuales.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckManuales_CheckedChanged);
+            this.CheckManuales.Click += new System.EventHandler(this.Click);
             // 
             // CheckDiferencia
             // 
@@ -532,7 +532,7 @@
             this.CheckDiferencia.TabStop = false;
             this.CheckDiferencia.ThreeState = false;
             this.CheckDiferencia.ToolTipText = null;
-            this.CheckDiferencia.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckDiferencia_CheckedChanged);
+            this.CheckDiferencia.Click += new System.EventHandler(this.Click);
             // 
             // dgvAux
             // 
@@ -694,7 +694,7 @@
             this.footer.DefaultCellStyle = dataGridViewCellStyle5;
             this.footer.EnableHeadersVisualStyles = false;
             this.footer.GridColor = System.Drawing.Color.White;
-            this.footer.Location = new System.Drawing.Point(13, 529);
+            this.footer.Location = new System.Drawing.Point(13, 525);
             this.footer.Name = "footer";
             this.footer.ReadOnly = true;
             this.footer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
