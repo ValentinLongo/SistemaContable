@@ -17,11 +17,19 @@ namespace SistemaContable.General
 {
     public partial class frmReporte : Form
     {
-        public frmReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, [Optional] string Param2, [Optional] string Param3, [Optional] string Param4, [Optional] string Param5, [Optional] string Param6, [Optional] string Param7, [Optional] string Param8, [Optional] string Param9, [Optional] string Param10)
+        public frmReporte(string NombreReporte, string Consulta, string Comando, string Titulo, string Param1, [Optional] string Param2, [Optional] string Param3, [Optional] string Param4, [Optional] string Param5, [Optional] string Param6, [Optional] string Param7, [Optional] string Param8, [Optional] string Param9, [Optional] string Param10, [Optional] string Folio, [Optional] string campo1, [Optional] string campo2, [Optional] string campo3, [Optional] string campo4)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            cargarReporte(NombreReporte, Consulta, Comando, Titulo, Param1, Param2, Param3, Param4, Param5, Param6, Param7, Param8, Param9, Param10);
+
+            if (NombreReporte != "Libro IVA 2")
+            {
+                cargarReporte(NombreReporte, Consulta, Comando, Titulo, Param1, Param2, Param3, Param4, Param5, Param6, Param7, Param8, Param9, Param10);
+            }
+            else
+            {
+                CargarReporteRubSub(NombreReporte, Folio, campo1, campo2, campo3, campo4);
+            }
         }
 
         //Nombre Reporte = nombre reporte en la carpeta
@@ -106,5 +114,24 @@ namespace SistemaContable.General
             // Actualiza el informe de Crystal Reports para que muestre los datos del conjunto de datos asignado
             crystalReportViewer1.ReportSource = report;
         }
+
+        private void CargarReporteRubSub(string NombreReporte, string Folio, string Campo1, string Campo2, string Campo3, string Campo4) //Para el reporte de Rubricación de Subdiarios
+        {
+            // Crea un objeto de informe de Crystal Reports
+            ReportDocument report = new ReportDocument();
+
+            // Carga el informe externo en el objeto de informe de Crystal Reports
+            report.Load($@"..\..\Reportes\{NombreReporte}.rpt");
+
+            report.SetParameterValue("Folio", Convert.ToInt32(Folio));
+            report.SetParameterValue("Campo1", Campo1);
+            report.SetParameterValue("Campo2", Campo2);
+            report.SetParameterValue("Campo3", Campo3);
+            report.SetParameterValue("Campo4", Campo4);
+
+            // Actualiza el informe de Crystal Reports para que muestre los datos del conjunto de datos asignado
+            crystalReportViewer1.ReportSource = report;
+        }
+
     }
 }

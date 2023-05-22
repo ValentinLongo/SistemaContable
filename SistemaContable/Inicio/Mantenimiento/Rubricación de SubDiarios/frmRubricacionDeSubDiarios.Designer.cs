@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRubricacionDeSubDiarios));
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
@@ -37,31 +38,33 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Campo4 = new System.Windows.Forms.TextBox();
-            this.Campo3 = new System.Windows.Forms.TextBox();
+            this.txtCampo4 = new System.Windows.Forms.TextBox();
+            this.txtCampo3 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Campo2 = new System.Windows.Forms.TextBox();
+            this.txtCampo2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Campo1 = new System.Windows.Forms.TextBox();
+            this.txtCampo1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.FolioHasta = new System.Windows.Forms.TextBox();
+            this.txtFolioHasta = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.FolioDesde = new System.Windows.Forms.TextBox();
+            this.txtFolioDesde = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
-            this.label7 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.impresiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imprimirPorPantallaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imprimirPorImpresoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnArchivos = new RJCodeAdvance.RJControls.RJButton();
+            this.btnImpresion = new RJCodeAdvance.RJControls.RJButton();
+            this.MenuArchivo = new Negocio.MenuDropDown(this.components);
+            this.btnAbrir = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGuardar = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuImpresion = new Negocio.MenuDropDown(this.components);
+            this.btnPantalla = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnImpresora = new System.Windows.Forms.ToolStripMenuItem();
+            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.panel7.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.MenuArchivo.SuspendLayout();
+            this.MenuImpresion.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel7
@@ -70,7 +73,7 @@
             this.panel7.Controls.Add(this.lblControlBar);
             this.panel7.Controls.Add(this.bunifuFormControlBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 24);
+            this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(775, 21);
             this.panel7.TabIndex = 96;
@@ -203,29 +206,29 @@
             this.panel2.Size = new System.Drawing.Size(542, 1);
             this.panel2.TabIndex = 118;
             // 
-            // Campo4
+            // txtCampo4
             // 
-            this.Campo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.Campo4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Campo4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Campo4.ForeColor = System.Drawing.SystemColors.Window;
-            this.Campo4.Location = new System.Drawing.Point(148, 295);
-            this.Campo4.Name = "Campo4";
-            this.Campo4.Size = new System.Drawing.Size(542, 19);
-            this.Campo4.TabIndex = 5;
-            this.Campo4.Tag = "11000";
+            this.txtCampo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txtCampo4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCampo4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCampo4.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtCampo4.Location = new System.Drawing.Point(148, 295);
+            this.txtCampo4.Name = "txtCampo4";
+            this.txtCampo4.Size = new System.Drawing.Size(542, 19);
+            this.txtCampo4.TabIndex = 5;
+            this.txtCampo4.Tag = "00000";
             // 
-            // Campo3
+            // txtCampo3
             // 
-            this.Campo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.Campo3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Campo3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Campo3.ForeColor = System.Drawing.SystemColors.Window;
-            this.Campo3.Location = new System.Drawing.Point(148, 252);
-            this.Campo3.Name = "Campo3";
-            this.Campo3.Size = new System.Drawing.Size(542, 19);
-            this.Campo3.TabIndex = 4;
-            this.Campo3.Tag = "11000";
+            this.txtCampo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txtCampo3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCampo3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCampo3.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtCampo3.Location = new System.Drawing.Point(148, 252);
+            this.txtCampo3.Name = "txtCampo3";
+            this.txtCampo3.Size = new System.Drawing.Size(542, 19);
+            this.txtCampo3.TabIndex = 4;
+            this.txtCampo3.Tag = "00000";
             // 
             // panel1
             // 
@@ -235,17 +238,17 @@
             this.panel1.Size = new System.Drawing.Size(542, 1);
             this.panel1.TabIndex = 120;
             // 
-            // Campo2
+            // txtCampo2
             // 
-            this.Campo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.Campo2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Campo2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Campo2.ForeColor = System.Drawing.SystemColors.Window;
-            this.Campo2.Location = new System.Drawing.Point(148, 208);
-            this.Campo2.Name = "Campo2";
-            this.Campo2.Size = new System.Drawing.Size(542, 19);
-            this.Campo2.TabIndex = 3;
-            this.Campo2.Tag = "11000";
+            this.txtCampo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txtCampo2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCampo2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCampo2.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtCampo2.Location = new System.Drawing.Point(148, 208);
+            this.txtCampo2.Name = "txtCampo2";
+            this.txtCampo2.Size = new System.Drawing.Size(542, 19);
+            this.txtCampo2.TabIndex = 3;
+            this.txtCampo2.Tag = "00000";
             // 
             // panel3
             // 
@@ -255,17 +258,17 @@
             this.panel3.Size = new System.Drawing.Size(542, 1);
             this.panel3.TabIndex = 122;
             // 
-            // Campo1
+            // txtCampo1
             // 
-            this.Campo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.Campo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Campo1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Campo1.ForeColor = System.Drawing.SystemColors.Window;
-            this.Campo1.Location = new System.Drawing.Point(148, 165);
-            this.Campo1.Name = "Campo1";
-            this.Campo1.Size = new System.Drawing.Size(542, 19);
-            this.Campo1.TabIndex = 2;
-            this.Campo1.Tag = "11000";
+            this.txtCampo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txtCampo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCampo1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCampo1.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtCampo1.Location = new System.Drawing.Point(148, 165);
+            this.txtCampo1.Name = "txtCampo1";
+            this.txtCampo1.Size = new System.Drawing.Size(542, 19);
+            this.txtCampo1.TabIndex = 2;
+            this.txtCampo1.Tag = "00000";
             // 
             // panel4
             // 
@@ -280,7 +283,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(28, 73);
+            this.label5.Location = new System.Drawing.Point(28, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 17);
             this.label5.TabIndex = 126;
@@ -291,7 +294,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(40, 106);
+            this.label6.Location = new System.Drawing.Point(40, 100);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 17);
             this.label6.TabIndex = 127;
@@ -300,156 +303,217 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel5.Location = new System.Drawing.Point(7, 154);
+            this.panel5.Location = new System.Drawing.Point(7, 146);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(750, 1);
             this.panel5.TabIndex = 132;
             // 
-            // FolioHasta
+            // txtFolioHasta
             // 
-            this.FolioHasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.FolioHasta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FolioHasta.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FolioHasta.ForeColor = System.Drawing.SystemColors.Window;
-            this.FolioHasta.Location = new System.Drawing.Point(148, 103);
-            this.FolioHasta.Name = "FolioHasta";
-            this.FolioHasta.Size = new System.Drawing.Size(113, 19);
-            this.FolioHasta.TabIndex = 1;
-            this.FolioHasta.Tag = "10100";
+            this.txtFolioHasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txtFolioHasta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFolioHasta.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFolioHasta.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtFolioHasta.Location = new System.Drawing.Point(148, 97);
+            this.txtFolioHasta.Name = "txtFolioHasta";
+            this.txtFolioHasta.Size = new System.Drawing.Size(113, 19);
+            this.txtFolioHasta.TabIndex = 1;
+            this.txtFolioHasta.Tag = "10100";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(148, 124);
+            this.panel6.Location = new System.Drawing.Point(148, 118);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(113, 1);
             this.panel6.TabIndex = 133;
             // 
-            // FolioDesde
+            // txtFolioDesde
             // 
-            this.FolioDesde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.FolioDesde.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FolioDesde.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FolioDesde.ForeColor = System.Drawing.SystemColors.Window;
-            this.FolioDesde.Location = new System.Drawing.Point(148, 69);
-            this.FolioDesde.Name = "FolioDesde";
-            this.FolioDesde.Size = new System.Drawing.Size(113, 19);
-            this.FolioDesde.TabIndex = 0;
-            this.FolioDesde.Tag = "10100";
+            this.txtFolioDesde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txtFolioDesde.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFolioDesde.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFolioDesde.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtFolioDesde.Location = new System.Drawing.Point(148, 63);
+            this.txtFolioDesde.Name = "txtFolioDesde";
+            this.txtFolioDesde.Size = new System.Drawing.Size(113, 19);
+            this.txtFolioDesde.TabIndex = 0;
+            this.txtFolioDesde.Tag = "10100";
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(148, 90);
+            this.panel8.Location = new System.Drawing.Point(148, 84);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(113, 1);
             this.panel8.TabIndex = 135;
             // 
             // ShapeBusqueda
             // 
-            this.ShapeBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ShapeBusqueda.Angle = 0F;
             this.ShapeBusqueda.BackColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.BorderColor = System.Drawing.Color.White;
             this.ShapeBusqueda.BorderThickness = 1;
             this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.FillShape = true;
-            this.ShapeBusqueda.Location = new System.Drawing.Point(6, 64);
+            this.ShapeBusqueda.Location = new System.Drawing.Point(6, 55);
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
             this.ShapeBusqueda.Size = new System.Drawing.Size(751, 81);
             this.ShapeBusqueda.TabIndex = 137;
+            this.ShapeBusqueda.TabStop = false;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
-            // label7
+            // btnArchivos
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(18, 47);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 17);
-            this.label7.TabIndex = 138;
-            this.label7.Text = "Imprimir";
+            this.btnArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            this.btnArchivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            this.btnArchivos.BorderColor = System.Drawing.Color.White;
+            this.btnArchivos.BorderRadius = 0;
+            this.btnArchivos.BorderSize = 0;
+            this.btnArchivos.FlatAppearance.BorderSize = 0;
+            this.btnArchivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnArchivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArchivos.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArchivos.ForeColor = System.Drawing.Color.White;
+            this.btnArchivos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnArchivos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnArchivos.Location = new System.Drawing.Point(-1, 21);
+            this.btnArchivos.Name = "btnArchivos";
+            this.btnArchivos.Size = new System.Drawing.Size(76, 23);
+            this.btnArchivos.TabIndex = 140;
+            this.btnArchivos.TabStop = false;
+            this.btnArchivos.Tag = "10";
+            this.btnArchivos.Text = "Archivos";
+            this.btnArchivos.TextColor = System.Drawing.Color.White;
+            this.btnArchivos.UseVisualStyleBackColor = false;
+            this.btnArchivos.Click += new System.EventHandler(this.btnArchivos_Click);
+            this.btnArchivos.MouseEnter += new System.EventHandler(this.btnArchivos_MouseEnter);
+            this.btnArchivos.MouseLeave += new System.EventHandler(this.btnArchivos_MouseLeave);
             // 
-            // menuStrip1
+            // btnImpresion
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem,
-            this.impresiónToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(775, 24);
-            this.menuStrip1.TabIndex = 139;
-            this.menuStrip1.Text = "menuStrip1";
+            this.btnImpresion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            this.btnImpresion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            this.btnImpresion.BorderColor = System.Drawing.Color.White;
+            this.btnImpresion.BorderRadius = 0;
+            this.btnImpresion.BorderSize = 0;
+            this.btnImpresion.FlatAppearance.BorderSize = 0;
+            this.btnImpresion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnImpresion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImpresion.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImpresion.ForeColor = System.Drawing.Color.White;
+            this.btnImpresion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImpresion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnImpresion.Location = new System.Drawing.Point(75, 21);
+            this.btnImpresion.Name = "btnImpresion";
+            this.btnImpresion.Size = new System.Drawing.Size(76, 23);
+            this.btnImpresion.TabIndex = 141;
+            this.btnImpresion.TabStop = false;
+            this.btnImpresion.Tag = "10";
+            this.btnImpresion.Text = "Impresión";
+            this.btnImpresion.TextColor = System.Drawing.Color.White;
+            this.btnImpresion.UseVisualStyleBackColor = false;
+            this.btnImpresion.Click += new System.EventHandler(this.btnImpresion_Click);
+            this.btnImpresion.MouseEnter += new System.EventHandler(this.btnImpresion_MouseEnter);
+            this.btnImpresion.MouseLeave += new System.EventHandler(this.btnImpresion_MouseLeave);
             // 
-            // archivoToolStripMenuItem
+            // MenuArchivo
             // 
-            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.abrirToolStripMenuItem,
-            this.guardarToolStripMenuItem});
-            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.archivoToolStripMenuItem.Text = "Archivo";
+            this.MenuArchivo.Font = new System.Drawing.Font("Gadugi", 11.25F);
+            this.MenuArchivo.IsMainMenu = true;
+            this.MenuArchivo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAbrir,
+            this.btnGuardar});
+            this.MenuArchivo.MenuItemHeight = 12;
+            this.MenuArchivo.MenuItemTextColor = System.Drawing.Color.White;
+            this.MenuArchivo.Name = "Menu_Ayuda";
+            this.MenuArchivo.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            this.MenuArchivo.Size = new System.Drawing.Size(132, 52);
             // 
-            // abrirToolStripMenuItem
+            // btnAbrir
             // 
-            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.abrirToolStripMenuItem.Text = "Abrir";
-            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
+            this.btnAbrir.Name = "btnAbrir";
+            this.btnAbrir.Size = new System.Drawing.Size(131, 24);
+            this.btnAbrir.Tag = "5002";
+            this.btnAbrir.Text = "Abrir";
+            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
-            // guardarToolStripMenuItem
+            // btnGuardar
             // 
-            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.guardarToolStripMenuItem.Text = "Guardar";
-            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click_1);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(131, 24);
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // impresiónToolStripMenuItem
+            // MenuImpresion
             // 
-            this.impresiónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.imprimirPorPantallaToolStripMenuItem,
-            this.imprimirPorImpresoraToolStripMenuItem});
-            this.impresiónToolStripMenuItem.Name = "impresiónToolStripMenuItem";
-            this.impresiónToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.impresiónToolStripMenuItem.Text = "Impresión";
+            this.MenuImpresion.Font = new System.Drawing.Font("Gadugi", 11.25F);
+            this.MenuImpresion.IsMainMenu = true;
+            this.MenuImpresion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnPantalla,
+            this.btnImpresora});
+            this.MenuImpresion.MenuItemHeight = 12;
+            this.MenuImpresion.MenuItemTextColor = System.Drawing.Color.White;
+            this.MenuImpresion.Name = "Menu_Ayuda";
+            this.MenuImpresion.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            this.MenuImpresion.Size = new System.Drawing.Size(233, 52);
             // 
-            // imprimirPorPantallaToolStripMenuItem
+            // btnPantalla
             // 
-            this.imprimirPorPantallaToolStripMenuItem.Name = "imprimirPorPantallaToolStripMenuItem";
-            this.imprimirPorPantallaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.imprimirPorPantallaToolStripMenuItem.Text = "Imprimir por Pantalla";
-            this.imprimirPorPantallaToolStripMenuItem.Click += new System.EventHandler(this.imprimirPorPantallaToolStripMenuItem_Click);
+            this.btnPantalla.Name = "btnPantalla";
+            this.btnPantalla.Size = new System.Drawing.Size(232, 24);
+            this.btnPantalla.Tag = "5002";
+            this.btnPantalla.Text = "Imprimir Por Pantalla";
+            this.btnPantalla.Click += new System.EventHandler(this.btnPantalla_Click);
             // 
-            // imprimirPorImpresoraToolStripMenuItem
+            // btnImpresora
             // 
-            this.imprimirPorImpresoraToolStripMenuItem.Name = "imprimirPorImpresoraToolStripMenuItem";
-            this.imprimirPorImpresoraToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.imprimirPorImpresoraToolStripMenuItem.Text = "Imprimir por Impresora";
+            this.btnImpresora.Name = "btnImpresora";
+            this.btnImpresora.Size = new System.Drawing.Size(232, 24);
+            this.btnImpresora.Text = "Imprimir Por Impresora";
+            this.btnImpresora.Click += new System.EventHandler(this.btnImpresora_Click);
+            // 
+            // bunifuShapes1
+            // 
+            this.bunifuShapes1.Angle = 0F;
+            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes1.BorderColor = System.Drawing.Color.White;
+            this.bunifuShapes1.BorderThickness = 1;
+            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes1.FillShape = true;
+            this.bunifuShapes1.Location = new System.Drawing.Point(6, 157);
+            this.bunifuShapes1.Name = "bunifuShapes1";
+            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.bunifuShapes1.Sides = 5;
+            this.bunifuShapes1.Size = new System.Drawing.Size(751, 174);
+            this.bunifuShapes1.TabIndex = 142;
+            this.bunifuShapes1.TabStop = false;
+            this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // frmRubricacionDeSubDiarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(775, 327);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.FolioDesde);
+            this.ClientSize = new System.Drawing.Size(775, 345);
+            this.Controls.Add(this.btnImpresion);
+            this.Controls.Add(this.btnArchivos);
+            this.Controls.Add(this.txtFolioDesde);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.FolioHasta);
+            this.Controls.Add(this.txtFolioHasta);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Campo1);
+            this.Controls.Add(this.txtCampo1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.Campo2);
+            this.Controls.Add(this.txtCampo2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.Campo3);
+            this.Controls.Add(this.txtCampo3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Campo4);
+            this.Controls.Add(this.txtCampo4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -457,16 +521,15 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.ShapeBusqueda);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.bunifuShapes1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmRubricacionDeSubDiarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRubricacionDeSubDiarios";
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.MenuArchivo.ResumeLayout(false);
+            this.MenuImpresion.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,28 +545,29 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox Campo4;
-        private System.Windows.Forms.TextBox Campo3;
+        private System.Windows.Forms.TextBox txtCampo4;
+        private System.Windows.Forms.TextBox txtCampo3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox Campo2;
+        private System.Windows.Forms.TextBox txtCampo2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox Campo1;
+        private System.Windows.Forms.TextBox txtCampo1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox FolioHasta;
+        private System.Windows.Forms.TextBox txtFolioHasta;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox FolioDesde;
+        private System.Windows.Forms.TextBox txtFolioDesde;
         private System.Windows.Forms.Panel panel8;
         private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem impresiónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem imprimirPorPantallaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem imprimirPorImpresoraToolStripMenuItem;
+        private RJCodeAdvance.RJControls.RJButton btnArchivos;
+        private RJCodeAdvance.RJControls.RJButton btnImpresion;
+        private Negocio.MenuDropDown MenuArchivo;
+        private System.Windows.Forms.ToolStripMenuItem btnAbrir;
+        private System.Windows.Forms.ToolStripMenuItem btnGuardar;
+        private Negocio.MenuDropDown MenuImpresion;
+        private System.Windows.Forms.ToolStripMenuItem btnPantalla;
+        private System.Windows.Forms.ToolStripMenuItem btnImpresora;
+        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
     }
 }

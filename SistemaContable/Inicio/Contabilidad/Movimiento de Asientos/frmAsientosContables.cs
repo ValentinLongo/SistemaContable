@@ -1,4 +1,5 @@
-﻿using Datos;
+﻿using CrystalDecisions.ReportAppServer;
+using Datos;
 using Negocio;
 using SistemaContable.General;
 using System;
@@ -303,6 +304,18 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     }
                 }
             }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmRangoFechas frm = new frmRangoFechas(1);
+            frm.ShowDialog();
+
+            string query = $"Select X.ast_asiento, X.ast_renumera, X.ast_fecha, X.ast_ctapro, X.ast_comenta, X.ast_tipocbte, X.ast_cbte, X.ast_ejercicio, X.eje_descri, X.ast_user, X.usu_nombre, X.UsuModi as UsuModi, X.ast_hora, X.ast_fecalta, X.ast_fecmodi, X.ast_horamodi, X.ast_tipo, X.tas_descri, Sum(X.Debe) as mva_debe, Sum(X.Haber) as mva_haber From (Select *, Z.UsuModi1 as UsuModi, Case When mva_codigo = 1 Then mva_importe Else 0 End as Debe, Case When mva_codigo = 2 Then mva_importe Else 0 End as Haber From MovAsto Left Join Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta Left Join Usuario on ast_user = Usuario.usu_codigo Left Join Ejercicio on ast_ejercicio = eje_codigo Left Join TipAsto on ast_tipo = tas_codigo Left Join (Select usu_codigo as UsuCod, usu_nombre as UsuModi1 From Usuario) as Z on ast_usumodi = Z.UsuCod ) as X " +
+            $"WHERE ast_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text,"Ejercicio","eje")} AND (ast_fecha >= '{frmRangoFechas.Desde}') AND (ast_fecha <= '{frmRangoFechas.Hasta}') Group By X.ast_asiento, X.ast_renumera, X.ast_fecha, X.ast_ctapro, X.ast_comenta, X.ast_tipocbte, X.ast_cbte, X.ast_ejercicio, X.eje_descri, X.ast_user, X.usu_nombre, X.ast_hora, X.ast_fecalta, X.UsuModi, X.ast_fecmodi, X.ast_horamodi, X.ast_tipo, X.tas_descri Order By X.ast_tipo, X.ast_fecha, X.ast_asiento, X.ast_renumera";
+
+            frmReporte reporte = new frmReporte("ResumAsto", $"{query}", "", "Resumen de Asientos", frmRangoFechas.Desde.ToString().Substring(0,10) + " al " + frmRangoFechas.Hasta.ToString().Substring(0,10), cbSeleccion.Text);
+            reporte.ShowDialog();
         }
 
         //FOOTER

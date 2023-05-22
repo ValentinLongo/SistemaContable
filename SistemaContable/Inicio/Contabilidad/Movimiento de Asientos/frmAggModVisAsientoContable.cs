@@ -131,6 +131,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
             if (addmodvis == 2 || addmodvis == 3)
             {
+                AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto");
+
                 DataSet ds2 = new DataSet();
                 ds2 = AccesoBase.ListarDatos($"SELECT mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc FROM MovAsto WHERE mva_asiento = {asiento}");
                 foreach (DataRow dr2 in ds2.Tables[0].Rows)
@@ -227,6 +229,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 dgvAddModVisASIENTO.Rows.Add(cuenta, descri, debe, haber, concepto, cc, autoincremental2);
                 autoincremental2++;
             }
+            SeteoFooter(dgvAddModVisASIENTO, footer);
             ActualizarFooter();
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvAddModVisASIENTO);           
         }
@@ -783,8 +786,10 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            //frmReporte freporte = new frmReporte("MovAsto", $"{query}", "", "Movimientos de Asiento", txtDescriEjercicio.Text, txtNroAsiento.Text,dtFecha.Value.ToString(), txtComentario.Text);
-            //freporte.ShowDialog();
+            string query = $"SELECT mva_cuenta, mva_descri, mva_haber, mva_debe, mva_concepto FROM Aux_MovAsto WHERE mva_asiento = {txtNroAsiento.Text}";
+
+            frmReporte freporte = new frmReporte("MovAsto", $"{query}", "", "Movimientos de Asiento", txtNroAsiento.Text, dtFecha.Value.ToString().Substring(0,10), txtComentario.Text, txtDescriEjercicio.Text);
+            freporte.ShowDialog();
         }
 
         //FOOTER
