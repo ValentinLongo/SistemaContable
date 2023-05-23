@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bunifu.Framework.UI;
+using Bunifu.UI.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,7 @@ namespace SistemaContable.General
     {
         public static DateTime Desde;
         public static DateTime Hasta;
+        public static int CheckValue;
 
         private static int PROCESO = 1; //para utilizar el frm como lo requiera otro frm
 
@@ -24,8 +27,25 @@ namespace SistemaContable.General
 
             PROCESO = proceso;
 
-            dtDesde.Value = Convert.ToDateTime("01/01/1900");
-            dtHasta.Value = DateTime.Now;
+            seteo(proceso);
+        }
+
+        private void seteo(int proceso) 
+        {
+            if (proceso == 3) //Asiento Contable
+            {
+                CheckInformeDetallado.Visible = true;
+                lblInformeDetallado.Visible = true;
+                this.Size = new Size(360, 251);
+                ShapeMarco.Size = new Size(349, 209);
+                btnConfirmar.Location = new Point(27, 187);
+                pLinea.Location = new Point(12, 174);
+            }
+            else
+            {
+                dtDesde.Value = Convert.ToDateTime("01/01/1900");
+                dtHasta.Value = DateTime.Now;
+            }
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -54,7 +74,7 @@ namespace SistemaContable.General
             Desde = Convert.ToDateTime(dtDesde.Value);
             Hasta = Convert.ToDateTime(dtHasta.Value);
 
-            if (PROCESO == 1)
+            if (PROCESO == 1) //Uso General
             {
                 this.Close();
                 return;
@@ -65,7 +85,23 @@ namespace SistemaContable.General
                 frmEstandar frm = new frmEstandar(2, "");
                 frm.Show();
                 this.Close();
+                return;
             }
+
+            if (PROCESO == 3) //Asiento Contable
+            {
+                if (CheckInformeDetallado.Checked)
+                {
+                    CheckValue = 1;
+                }
+                else
+                {
+                    CheckValue = 0;
+                }
+                this.Close();
+                return;
+            }
+
         }
 
         //BARRA DE CONTROL

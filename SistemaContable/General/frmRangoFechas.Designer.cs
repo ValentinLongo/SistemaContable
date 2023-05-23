@@ -34,11 +34,13 @@
             this.btnCerrar = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
+            this.ShapeMarco = new Bunifu.UI.WinForms.BunifuShapes();
             this.dtDesde = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.dtHasta = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pLinea = new System.Windows.Forms.Panel();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
+            this.CheckInformeDetallado = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.lblInformeDetallado = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,7 +136,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(41, 50);
+            this.label2.Location = new System.Drawing.Point(20, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 21);
             this.label2.TabIndex = 116;
@@ -145,28 +147,28 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(44, 95);
+            this.label3.Location = new System.Drawing.Point(23, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 21);
             this.label3.TabIndex = 117;
             this.label3.Text = "Hasta:";
             // 
-            // bunifuShapes1
+            // ShapeMarco
             // 
-            this.bunifuShapes1.Angle = 0F;
-            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.BorderColor = System.Drawing.Color.White;
-            this.bunifuShapes1.BorderThickness = 1;
-            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(6, 30);
-            this.bunifuShapes1.Name = "bunifuShapes1";
-            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
-            this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(349, 180);
-            this.bunifuShapes1.TabIndex = 118;
-            this.bunifuShapes1.TabStop = false;
-            this.bunifuShapes1.Text = "bunifuShapes1";
+            this.ShapeMarco.Angle = 0F;
+            this.ShapeMarco.BackColor = System.Drawing.Color.Transparent;
+            this.ShapeMarco.BorderColor = System.Drawing.Color.White;
+            this.ShapeMarco.BorderThickness = 1;
+            this.ShapeMarco.FillColor = System.Drawing.Color.Transparent;
+            this.ShapeMarco.FillShape = true;
+            this.ShapeMarco.Location = new System.Drawing.Point(6, 30);
+            this.ShapeMarco.Name = "ShapeMarco";
+            this.ShapeMarco.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.ShapeMarco.Sides = 5;
+            this.ShapeMarco.Size = new System.Drawing.Size(349, 180);
+            this.ShapeMarco.TabIndex = 118;
+            this.ShapeMarco.TabStop = false;
+            this.ShapeMarco.Text = "bunifuShapes1";
             // 
             // dtDesde
             // 
@@ -187,11 +189,11 @@
             this.dtDesde.IconColor = System.Drawing.Color.White;
             this.dtDesde.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtDesde.LeftTextMargin = 5;
-            this.dtDesde.Location = new System.Drawing.Point(126, 44);
+            this.dtDesde.Location = new System.Drawing.Point(89, 44);
             this.dtDesde.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtDesde.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtDesde.Name = "dtDesde";
-            this.dtDesde.Size = new System.Drawing.Size(187, 32);
+            this.dtDesde.Size = new System.Drawing.Size(245, 32);
             this.dtDesde.TabIndex = 119;
             // 
             // dtHasta
@@ -213,20 +215,20 @@
             this.dtHasta.IconColor = System.Drawing.Color.White;
             this.dtHasta.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtHasta.LeftTextMargin = 5;
-            this.dtHasta.Location = new System.Drawing.Point(126, 91);
+            this.dtHasta.Location = new System.Drawing.Point(89, 91);
             this.dtHasta.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtHasta.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtHasta.Name = "dtHasta";
-            this.dtHasta.Size = new System.Drawing.Size(187, 32);
+            this.dtHasta.Size = new System.Drawing.Size(245, 32);
             this.dtHasta.TabIndex = 120;
             // 
-            // panel2
+            // pLinea
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel2.Location = new System.Drawing.Point(12, 138);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(336, 1);
-            this.panel2.TabIndex = 121;
+            this.pLinea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.pLinea.Location = new System.Drawing.Point(12, 138);
+            this.pLinea.Name = "pLinea";
+            this.pLinea.Size = new System.Drawing.Size(336, 1);
+            this.pLinea.TabIndex = 121;
             // 
             // btnConfirmar
             // 
@@ -239,9 +241,9 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(46, 156);
+            this.btnConfirmar.Location = new System.Drawing.Point(27, 156);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(267, 39);
+            this.btnConfirmar.Size = new System.Drawing.Size(307, 39);
             this.btnConfirmar.TabIndex = 122;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
@@ -249,20 +251,91 @@
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
+            // CheckInformeDetallado
+            // 
+            this.CheckInformeDetallado.AllowBindingControlAnimation = true;
+            this.CheckInformeDetallado.AllowBindingControlColorChanges = false;
+            this.CheckInformeDetallado.AllowBindingControlLocation = true;
+            this.CheckInformeDetallado.AllowCheckBoxAnimation = false;
+            this.CheckInformeDetallado.AllowCheckmarkAnimation = true;
+            this.CheckInformeDetallado.AllowOnHoverStates = true;
+            this.CheckInformeDetallado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CheckInformeDetallado.AutoCheck = true;
+            this.CheckInformeDetallado.BackColor = System.Drawing.Color.Transparent;
+            this.CheckInformeDetallado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckInformeDetallado.BackgroundImage")));
+            this.CheckInformeDetallado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CheckInformeDetallado.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.CheckInformeDetallado.BorderRadius = 12;
+            this.CheckInformeDetallado.Checked = false;
+            this.CheckInformeDetallado.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.CheckInformeDetallado.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CheckInformeDetallado.CustomCheckmarkImage = null;
+            this.CheckInformeDetallado.Location = new System.Drawing.Point(98, 126);
+            this.CheckInformeDetallado.MinimumSize = new System.Drawing.Size(17, 17);
+            this.CheckInformeDetallado.Name = "CheckInformeDetallado";
+            this.CheckInformeDetallado.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckInformeDetallado.OnCheck.BorderRadius = 12;
+            this.CheckInformeDetallado.OnCheck.BorderThickness = 2;
+            this.CheckInformeDetallado.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckInformeDetallado.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckInformeDetallado.OnCheck.CheckmarkThickness = 2;
+            this.CheckInformeDetallado.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.CheckInformeDetallado.OnDisable.BorderRadius = 12;
+            this.CheckInformeDetallado.OnDisable.BorderThickness = 2;
+            this.CheckInformeDetallado.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckInformeDetallado.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.CheckInformeDetallado.OnDisable.CheckmarkThickness = 2;
+            this.CheckInformeDetallado.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckInformeDetallado.OnHoverChecked.BorderRadius = 12;
+            this.CheckInformeDetallado.OnHoverChecked.BorderThickness = 2;
+            this.CheckInformeDetallado.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckInformeDetallado.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckInformeDetallado.OnHoverChecked.CheckmarkThickness = 2;
+            this.CheckInformeDetallado.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckInformeDetallado.OnHoverUnchecked.BorderRadius = 12;
+            this.CheckInformeDetallado.OnHoverUnchecked.BorderThickness = 1;
+            this.CheckInformeDetallado.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckInformeDetallado.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.CheckInformeDetallado.OnUncheck.BorderRadius = 12;
+            this.CheckInformeDetallado.OnUncheck.BorderThickness = 1;
+            this.CheckInformeDetallado.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckInformeDetallado.Size = new System.Drawing.Size(17, 17);
+            this.CheckInformeDetallado.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.CheckInformeDetallado.TabIndex = 124;
+            this.CheckInformeDetallado.TabStop = false;
+            this.CheckInformeDetallado.ThreeState = false;
+            this.CheckInformeDetallado.ToolTipText = null;
+            this.CheckInformeDetallado.Visible = false;
+            // 
+            // lblInformeDetallado
+            // 
+            this.lblInformeDetallado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblInformeDetallado.AutoSize = true;
+            this.lblInformeDetallado.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformeDetallado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblInformeDetallado.Location = new System.Drawing.Point(121, 126);
+            this.lblInformeDetallado.Name = "lblInformeDetallado";
+            this.lblInformeDetallado.Size = new System.Drawing.Size(155, 17);
+            this.lblInformeDetallado.TabIndex = 123;
+            this.lblInformeDetallado.Text = "Imprimir informe detallado";
+            this.lblInformeDetallado.Visible = false;
+            // 
             // frmRangoFechas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(360, 216);
+            this.Controls.Add(this.lblInformeDetallado);
+            this.Controls.Add(this.CheckInformeDetallado);
             this.Controls.Add(this.btnConfirmar);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pLinea);
             this.Controls.Add(this.dtHasta);
             this.Controls.Add(this.dtDesde);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.bunifuShapes1);
+            this.Controls.Add(this.ShapeMarco);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRangoFechas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -281,10 +354,12 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox btnCerrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
+        private Bunifu.UI.WinForms.BunifuShapes ShapeMarco;
         private Bunifu.UI.WinForms.BunifuDatePicker dtDesde;
         private Bunifu.UI.WinForms.BunifuDatePicker dtHasta;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pLinea;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
+        private Bunifu.UI.WinForms.BunifuCheckBox CheckInformeDetallado;
+        private System.Windows.Forms.Label lblInformeDetallado;
     }
 }

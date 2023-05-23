@@ -695,7 +695,7 @@
             this.footer.DefaultCellStyle = dataGridViewCellStyle5;
             this.footer.EnableHeadersVisualStyles = false;
             this.footer.GridColor = System.Drawing.Color.White;
-            this.footer.Location = new System.Drawing.Point(13, 525);
+            this.footer.Location = new System.Drawing.Point(13, 527);
             this.footer.Name = "footer";
             this.footer.ReadOnly = true;
             this.footer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;

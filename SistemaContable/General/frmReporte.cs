@@ -64,6 +64,19 @@ namespace SistemaContable.General
 
             // Asigna el conjunto de datos al informe de Crystal Reports
             report.SetDataSource(dt);
+
+            if (report.Subreports.Count != 0)
+            {
+                ReportDocument subreport = report.Subreports["Sub1"];
+
+                foreach (Table table in subreport.Database.Tables)
+                {
+                    table.ApplyLogOnInfo(tableLogOnInfo);
+                }
+
+                //subreport.SetDataSource(dt);
+            }
+
             if (Comando != "")
             {
                 report.SetParameterValue(6, $"{Comando}");
