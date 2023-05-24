@@ -21,16 +21,16 @@ namespace SistemaContable.General
 
         private static int PROCESO = 1; //para utilizar el frm como lo requiera otro frm
 
-        public frmRangoFechas(int proceso)
+        public frmRangoFechas(int proceso,[Optional] int NroEjercicio)
         {
             InitializeComponent();
 
             PROCESO = proceso;
 
-            seteo(proceso);
+            seteo(proceso, NroEjercicio);
         }
 
-        private void seteo(int proceso) 
+        private void seteo(int proceso, [Optional] int NroEjercicio) 
         {
             if (proceso == 3) //Asiento Contable
             {
@@ -40,6 +40,10 @@ namespace SistemaContable.General
                 ShapeMarco.Size = new Size(349, 209);
                 btnConfirmar.Location = new Point(27, 187);
                 pLinea.Location = new Point(12, 174);
+
+                string[] fechas = Negocio.Funciones.Contabilidad.FLibroMayor.fechasDesdeHasta(NroEjercicio);
+                dtDesde.Value = Convert.ToDateTime(fechas[0]);
+                dtHasta.Value = DateTime.Now;
             }
             else
             {

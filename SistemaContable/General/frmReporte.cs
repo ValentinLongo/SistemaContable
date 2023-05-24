@@ -55,31 +55,32 @@ namespace SistemaContable.General
                 table.ApplyLogOnInfo(tableLogOnInfo);
             }
 
-            // Crea un conjunto de datos en C#
-            DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"{Consulta}");
-
-            DataTable dt = new DataTable();
-            dt = ds.Tables[0];
-
-            // Asigna el conjunto de datos al informe de Crystal Reports
-            report.SetDataSource(dt);
-
-            if (report.Subreports.Count != 0)
+            //Crea un conjunto de datos en C#
+            if (Consulta != "")
             {
-                ReportDocument subreport = report.Subreports["Sub1"];
+                DataSet ds = new DataSet();
+                ds = AccesoBase.ListarDatos($"{Consulta}");
 
-                foreach (Table table in subreport.Database.Tables)
+                DataTable dt = new DataTable();
+                dt = ds.Tables[0];
+
+                // Asigna el conjunto de datos al informe de Crystal Reports
+                report.SetDataSource(dt);
+
+                if (report.Subreports.Count != 0)
                 {
-                    table.ApplyLogOnInfo(tableLogOnInfo);
-                }
+                    ReportDocument subreport = report.Subreports[0];
 
-                //subreport.SetDataSource(dt);
+                    foreach (Table table in subreport.Database.Tables)
+                    {
+                        table.ApplyLogOnInfo(tableLogOnInfo);
+                    }
+                }
             }
 
             if (Comando != "")
             {
-                report.SetParameterValue(6, $"{Comando}");
+                report.SetParameterValue("Cons", $"{Comando}");
             }
             report.SetParameterValue("Empresa", $"{FLogin.NombreEmpresa}");
             report.SetParameterValue("Titulo", $"{Titulo}");
