@@ -544,7 +544,8 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 query = $"SELECT * FROM Aux_PromMesAnio3 as Aux_PromMesAnio1 LEFT JOIN PCuenta on aux_codigo = pcu_cuenta WHERE aux_terminal = {terminal} ORDER BY aux_codigo";
             }
 
-            frmReporte frmreporte = new frmReporte("SaldosAjustados", $"{query}", "", "Saldos Mensuales Ajustados", (cbCC.Text == "TODOS" ? "" : " - Centro Costos: " + cbCC.Text), cbSeleccion.Text, reporte);
+            //(cbCC.Text == "TODOS" ? "" : " - Centro Costos: " + cbCC.Text)
+            frmReporte frmreporte = new frmReporte("SaldosAjustados2", "", $"{query}", "Saldos Mensuales Ajustados", cbSeleccion.Text, reporte, dgv1.Columns["Column4"].HeaderText, dgv1.Columns["Column5"].HeaderText, dgv1.Columns["Column6"].HeaderText, dgv1.Columns["Column7"].HeaderText, dgv1.Columns["Column8"].HeaderText, dgv1.Columns["Column9"].HeaderText, dgv1.Columns["Column10"].HeaderText, dgv1.Columns["Column11"].HeaderText, dgv1.Columns["Column12"].HeaderText, dgv1.Columns["Column13"].HeaderText, dgv1.Columns["Column14"].HeaderText, dgv1.Columns["Column15"].HeaderText);
             frmreporte.ShowDialog();
         }
 

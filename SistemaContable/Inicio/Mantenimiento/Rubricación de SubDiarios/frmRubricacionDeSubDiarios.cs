@@ -146,7 +146,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Rubricación_de_SubDiarios
         {
             for (int i = Convert.ToInt32(txtFolioDesde.Text); i <= Convert.ToInt32(txtFolioHasta.Text); i++)
             {
-                frmReporte reporte = new frmReporte("Libro IVA 2", "", "", "", "", "", "", "", "", "", "", "", "", "", i.ToString(), txtCampo1.Text, txtCampo2.Text, txtCampo3.Text, txtCampo3.Text);
+                frmReporte reporte = new frmReporte("Libro IVA 2", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", i.ToString(), txtCampo1.Text, txtCampo2.Text, txtCampo3.Text, txtCampo3.Text);
                 reporte.ShowDialog();
             }
         }

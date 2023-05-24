@@ -118,10 +118,6 @@ namespace Negocio.Funciones.Generales
                 AccesoBase.InsertUpdateDatos($"Insert Into Aux_AuditInt (aux_terminal, aux_secuencia, aux_descri, aux_codigo, aux_fecemi, aux_ctacli, aux_cpbte, aux_tipmov, aux_vtatotal, aux_vtaneto, aux_iva, aux_ctatotal, aux_histotal, aux_marca, aux_condvta) SELECT {terminal}, 52, 'ASIENTO DE IMPUTACION SIN ASIENTO ORIGINAL', 1, A.ast_fecha, 0, A.ast_cbte, A.ast_tipocbte, 0, 0, 0, 0, 0, 1, 0 FROM Asiento as A Left Join (Select * From Asiento Where (ast_fecha >= '{desde}' And ast_fecha <= '{hasta}') And ast_comenta NOT like '%IMPUTACION S/%') as B on A.ast_tipocbte = B.ast_tipocbte And A.ast_cbte = B.ast_cbte Where (A.ast_fecha >= '{desde}' And A.ast_fecha <= '{hasta}') And A.ast_comenta like '%IMPUTACION S/%' And B.ast_asiento is NULL Order BY A.ast_fecha, A.ast_asiento ");
 
                 Cursor.Current = Cursors.Default;
-
-                //reporte
-
-                AccesoBase.InsertUpdateDatos($"Delete From Aux_AuditInt Where aux_terminal = {terminal}");
             }
         }
     }

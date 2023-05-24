@@ -1,4 +1,5 @@
-﻿using RJCodeAdvance.RJControls;
+﻿using Datos;
+using RJCodeAdvance.RJControls;
 using SistemaContable.Inicio.Ver.Comunicacion_Interna;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,13 @@ namespace SistemaContable.General
             if (proceso == 2) // Auditoria Interna
             {
                 Negocio.Funciones.Generales.FEstandar.Procesos(2, Mensaje, terminal, frmRangoFechas.Desde, frmRangoFechas.Hasta);
+
+                string query = $"SELECT * FROM Aux_AuditInt LEFT JOIN TipMov on aux_tipmov=tmo_codigo LEFT JOIN Cliente on aux_ctacli=cli_codigo  WHERE aux_terminal = {terminal}";
+
+                frmReporte reporte = new frmReporte("AudIntCont", $"{query}", "", "Auditoria Interna");
+                reporte.ShowDialog();
+
+                AccesoBase.InsertUpdateDatos($"Delete From Aux_AuditInt Where aux_terminal = {terminal}");
             }
         }
 
