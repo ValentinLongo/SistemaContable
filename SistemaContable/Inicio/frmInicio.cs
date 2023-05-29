@@ -48,6 +48,7 @@ using SistemaContable.Inicio.Contabilidad.Renumeración_de_Asientos;
 using SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos;
 using SistemaContable.Inicio.Mantenimiento.Rubricación_de_SubDiarios;
 using SistemaContable.Inicio.Contabilidad.Saldos_Ajustados;
+using SistemaContable.Inicio.Ayuda;
 
 namespace SistemaContable
 {
@@ -755,7 +756,8 @@ namespace SistemaContable
         //50
         private void soporteInteractivoDeContable_Click(object sender, EventArgs e)
         {
-
+            frmSoporteInteractivo FrmSoporteInteractivo = new frmSoporteInteractivo();
+            FrmSoporteInteractivo.ShowDialog();
         }
 
         //SIN CODIGO

@@ -84,7 +84,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            frmReporte freporte = new frmReporte("ConceptoCont", $"{FConceptosContables.query}", $"{FConceptosContables.query}", "Lista de Conceptos Contables", "General", DateTime.Now.ToString("d"));
+            frmReporte freporte = new frmReporte("ConceptoCont", $"", $"{FConceptosContables.query}", "Lista de Conceptos Contables", "General", DateTime.Now.ToString("d"));
             freporte.ShowDialog();
         }
     }
