@@ -77,6 +77,11 @@
             this.btnVer2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnArchivos2 = new RJCodeAdvance.RJControls.RJButton();
             this.PanelMenu = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.btnAyuda = new RJCodeAdvance.RJControls.RJButton();
+            this.btnMantenimiento = new RJCodeAdvance.RJControls.RJButton();
+            this.btnContabilidad = new RJCodeAdvance.RJControls.RJButton();
+            this.btnVer = new RJCodeAdvance.RJControls.RJButton();
+            this.btnArchivos = new RJCodeAdvance.RJControls.RJButton();
             this.lblAudInt = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnAudInt = new RJCodeAdvance.RJControls.RJButton();
@@ -102,11 +107,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.btnAyuda = new RJCodeAdvance.RJControls.RJButton();
-            this.btnMantenimiento = new RJCodeAdvance.RJControls.RJButton();
-            this.btnContabilidad = new RJCodeAdvance.RJControls.RJButton();
-            this.btnVer = new RJCodeAdvance.RJControls.RJButton();
-            this.btnArchivos = new RJCodeAdvance.RJControls.RJButton();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.Menu_Archivos = new Negocio.MenuDropDown(this.components);
@@ -681,6 +681,111 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Quality = 10;
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.BorderColor = System.Drawing.Color.White;
+            this.btnAyuda.BorderRadius = 0;
+            this.btnAyuda.BorderSize = 0;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.btnAyuda, "btnAyuda");
+            this.btnAyuda.ForeColor = System.Drawing.Color.White;
+            this.btnAyuda.Image = global::SistemaContable.Properties.Resources.ayuda;
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.TabStop = false;
+            this.btnAyuda.Tag = "50";
+            this.btnAyuda.TextColor = System.Drawing.Color.White;
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            this.btnAyuda.MouseEnter += new System.EventHandler(this.btnAyuda_MouseEnter);
+            this.btnAyuda.MouseLeave += new System.EventHandler(this.btnAyuda_MouseLeave);
+            // 
+            // btnMantenimiento
+            // 
+            this.btnMantenimiento.BackColor = System.Drawing.Color.Transparent;
+            this.btnMantenimiento.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnMantenimiento.BorderColor = System.Drawing.Color.White;
+            this.btnMantenimiento.BorderRadius = 0;
+            this.btnMantenimiento.BorderSize = 0;
+            this.btnMantenimiento.FlatAppearance.BorderSize = 0;
+            this.btnMantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.btnMantenimiento, "btnMantenimiento");
+            this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimiento.Image = global::SistemaContable.Properties.Resources.llave;
+            this.btnMantenimiento.Name = "btnMantenimiento";
+            this.btnMantenimiento.TabStop = false;
+            this.btnMantenimiento.Tag = "40";
+            this.btnMantenimiento.TextColor = System.Drawing.Color.White;
+            this.btnMantenimiento.UseVisualStyleBackColor = false;
+            this.btnMantenimiento.Click += new System.EventHandler(this.btnMantenimiento_Click);
+            this.btnMantenimiento.MouseEnter += new System.EventHandler(this.btnMantenimiento_MouseEnter);
+            this.btnMantenimiento.MouseLeave += new System.EventHandler(this.btnMantenimiento_MouseLeave);
+            // 
+            // btnContabilidad
+            // 
+            this.btnContabilidad.BackColor = System.Drawing.Color.Transparent;
+            this.btnContabilidad.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnContabilidad.BorderColor = System.Drawing.Color.White;
+            this.btnContabilidad.BorderRadius = 0;
+            this.btnContabilidad.BorderSize = 0;
+            this.btnContabilidad.FlatAppearance.BorderSize = 0;
+            this.btnContabilidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.btnContabilidad, "btnContabilidad");
+            this.btnContabilidad.ForeColor = System.Drawing.Color.White;
+            this.btnContabilidad.Image = global::SistemaContable.Properties.Resources.contabilidad;
+            this.btnContabilidad.Name = "btnContabilidad";
+            this.btnContabilidad.TabStop = false;
+            this.btnContabilidad.Tag = "30";
+            this.btnContabilidad.TextColor = System.Drawing.Color.White;
+            this.btnContabilidad.UseVisualStyleBackColor = false;
+            this.btnContabilidad.Click += new System.EventHandler(this.btnContabilidad_Click);
+            this.btnContabilidad.MouseEnter += new System.EventHandler(this.btnContabilidad_MouseEnter);
+            this.btnContabilidad.MouseLeave += new System.EventHandler(this.btnContabilidad_MouseLeave);
+            // 
+            // btnVer
+            // 
+            this.btnVer.BackColor = System.Drawing.Color.Transparent;
+            this.btnVer.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnVer.BorderColor = System.Drawing.Color.White;
+            this.btnVer.BorderRadius = 0;
+            this.btnVer.BorderSize = 0;
+            this.btnVer.FlatAppearance.BorderSize = 0;
+            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.btnVer, "btnVer");
+            this.btnVer.ForeColor = System.Drawing.Color.White;
+            this.btnVer.Image = global::SistemaContable.Properties.Resources.lupa;
+            this.btnVer.Name = "btnVer";
+            this.btnVer.TabStop = false;
+            this.btnVer.Tag = "20";
+            this.btnVer.TextColor = System.Drawing.Color.White;
+            this.btnVer.UseVisualStyleBackColor = false;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
+            this.btnVer.MouseEnter += new System.EventHandler(this.btnVer_MouseEnter);
+            this.btnVer.MouseLeave += new System.EventHandler(this.btnVer_MouseLeave);
+            // 
+            // btnArchivos
+            // 
+            this.btnArchivos.BackColor = System.Drawing.Color.Transparent;
+            this.btnArchivos.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnArchivos.BorderColor = System.Drawing.Color.White;
+            this.btnArchivos.BorderRadius = 0;
+            this.btnArchivos.BorderSize = 0;
+            this.btnArchivos.FlatAppearance.BorderSize = 0;
+            this.btnArchivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            resources.ApplyResources(this.btnArchivos, "btnArchivos");
+            this.btnArchivos.ForeColor = System.Drawing.Color.White;
+            this.btnArchivos.Image = global::SistemaContable.Properties.Resources.carpeta41;
+            this.btnArchivos.Name = "btnArchivos";
+            this.btnArchivos.TabStop = false;
+            this.btnArchivos.Tag = "10";
+            this.btnArchivos.TextColor = System.Drawing.Color.White;
+            this.btnArchivos.UseVisualStyleBackColor = false;
+            this.btnArchivos.Click += new System.EventHandler(this.btnArchivos_Click);
+            this.btnArchivos.MouseEnter += new System.EventHandler(this.btnArchivos_MouseEnter);
+            this.btnArchivos.MouseLeave += new System.EventHandler(this.btnArchivos_MouseLeave);
+            // 
             // lblAudInt
             // 
             resources.ApplyResources(this.lblAudInt, "lblAudInt");
@@ -850,111 +955,6 @@
             resources.ApplyResources(this.lblHora, "lblHora");
             this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.lblHora.Name = "lblHora";
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
-            this.btnAyuda.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnAyuda.BorderColor = System.Drawing.Color.White;
-            this.btnAyuda.BorderRadius = 0;
-            this.btnAyuda.BorderSize = 0;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.btnAyuda, "btnAyuda");
-            this.btnAyuda.ForeColor = System.Drawing.Color.White;
-            this.btnAyuda.Image = global::SistemaContable.Properties.Resources.ayuda;
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.TabStop = false;
-            this.btnAyuda.Tag = "50";
-            this.btnAyuda.TextColor = System.Drawing.Color.White;
-            this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
-            this.btnAyuda.MouseEnter += new System.EventHandler(this.btnAyuda_MouseEnter);
-            this.btnAyuda.MouseLeave += new System.EventHandler(this.btnAyuda_MouseLeave);
-            // 
-            // btnMantenimiento
-            // 
-            this.btnMantenimiento.BackColor = System.Drawing.Color.Transparent;
-            this.btnMantenimiento.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnMantenimiento.BorderColor = System.Drawing.Color.White;
-            this.btnMantenimiento.BorderRadius = 0;
-            this.btnMantenimiento.BorderSize = 0;
-            this.btnMantenimiento.FlatAppearance.BorderSize = 0;
-            this.btnMantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.btnMantenimiento, "btnMantenimiento");
-            this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
-            this.btnMantenimiento.Image = global::SistemaContable.Properties.Resources.llave;
-            this.btnMantenimiento.Name = "btnMantenimiento";
-            this.btnMantenimiento.TabStop = false;
-            this.btnMantenimiento.Tag = "40";
-            this.btnMantenimiento.TextColor = System.Drawing.Color.White;
-            this.btnMantenimiento.UseVisualStyleBackColor = false;
-            this.btnMantenimiento.Click += new System.EventHandler(this.btnMantenimiento_Click);
-            this.btnMantenimiento.MouseEnter += new System.EventHandler(this.btnMantenimiento_MouseEnter);
-            this.btnMantenimiento.MouseLeave += new System.EventHandler(this.btnMantenimiento_MouseLeave);
-            // 
-            // btnContabilidad
-            // 
-            this.btnContabilidad.BackColor = System.Drawing.Color.Transparent;
-            this.btnContabilidad.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnContabilidad.BorderColor = System.Drawing.Color.White;
-            this.btnContabilidad.BorderRadius = 0;
-            this.btnContabilidad.BorderSize = 0;
-            this.btnContabilidad.FlatAppearance.BorderSize = 0;
-            this.btnContabilidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.btnContabilidad, "btnContabilidad");
-            this.btnContabilidad.ForeColor = System.Drawing.Color.White;
-            this.btnContabilidad.Image = global::SistemaContable.Properties.Resources.contabilidad;
-            this.btnContabilidad.Name = "btnContabilidad";
-            this.btnContabilidad.TabStop = false;
-            this.btnContabilidad.Tag = "30";
-            this.btnContabilidad.TextColor = System.Drawing.Color.White;
-            this.btnContabilidad.UseVisualStyleBackColor = false;
-            this.btnContabilidad.Click += new System.EventHandler(this.btnContabilidad_Click);
-            this.btnContabilidad.MouseEnter += new System.EventHandler(this.btnContabilidad_MouseEnter);
-            this.btnContabilidad.MouseLeave += new System.EventHandler(this.btnContabilidad_MouseLeave);
-            // 
-            // btnVer
-            // 
-            this.btnVer.BackColor = System.Drawing.Color.Transparent;
-            this.btnVer.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnVer.BorderColor = System.Drawing.Color.White;
-            this.btnVer.BorderRadius = 0;
-            this.btnVer.BorderSize = 0;
-            this.btnVer.FlatAppearance.BorderSize = 0;
-            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.btnVer, "btnVer");
-            this.btnVer.ForeColor = System.Drawing.Color.White;
-            this.btnVer.Image = global::SistemaContable.Properties.Resources.lupa;
-            this.btnVer.Name = "btnVer";
-            this.btnVer.TabStop = false;
-            this.btnVer.Tag = "20";
-            this.btnVer.TextColor = System.Drawing.Color.White;
-            this.btnVer.UseVisualStyleBackColor = false;
-            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
-            this.btnVer.MouseEnter += new System.EventHandler(this.btnVer_MouseEnter);
-            this.btnVer.MouseLeave += new System.EventHandler(this.btnVer_MouseLeave);
-            // 
-            // btnArchivos
-            // 
-            this.btnArchivos.BackColor = System.Drawing.Color.Transparent;
-            this.btnArchivos.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnArchivos.BorderColor = System.Drawing.Color.White;
-            this.btnArchivos.BorderRadius = 0;
-            this.btnArchivos.BorderSize = 0;
-            this.btnArchivos.FlatAppearance.BorderSize = 0;
-            this.btnArchivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.btnArchivos, "btnArchivos");
-            this.btnArchivos.ForeColor = System.Drawing.Color.White;
-            this.btnArchivos.Image = global::SistemaContable.Properties.Resources.carpeta41;
-            this.btnArchivos.Name = "btnArchivos";
-            this.btnArchivos.TabStop = false;
-            this.btnArchivos.Tag = "10";
-            this.btnArchivos.TextColor = System.Drawing.Color.White;
-            this.btnArchivos.UseVisualStyleBackColor = false;
-            this.btnArchivos.Click += new System.EventHandler(this.btnArchivos_Click);
-            this.btnArchivos.MouseEnter += new System.EventHandler(this.btnArchivos_MouseEnter);
-            this.btnArchivos.MouseLeave += new System.EventHandler(this.btnArchivos_MouseLeave);
             // 
             // bunifuShapes1
             // 

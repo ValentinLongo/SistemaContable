@@ -54,10 +54,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblCantElementos = new System.Windows.Forms.Label();
+            this.ColumnaCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -467,7 +467,7 @@
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.ColumnaCheck});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -497,6 +497,17 @@
             this.dgvUsuarios.TabStop = false;
             this.dgvUsuarios.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentDoubleClick_1);
             // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(24, 304);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(58, 15);
+            this.lblCantElementos.TabIndex = 144;
+            this.lblCantElementos.Text = "Elementos";
+            // 
             // Column3
             // 
             this.Column3.HeaderText = "Codigo";
@@ -509,22 +520,13 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // Column5
+            // ColumnaCheck
             // 
-            this.Column5.HeaderText = "Incluye";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // lblCantElementos
-            // 
-            this.lblCantElementos.AutoSize = true;
-            this.lblCantElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCantElementos.Location = new System.Drawing.Point(24, 304);
-            this.lblCantElementos.Name = "lblCantElementos";
-            this.lblCantElementos.Size = new System.Drawing.Size(58, 15);
-            this.lblCantElementos.TabIndex = 144;
-            this.lblCantElementos.Text = "Elementos";
+            this.ColumnaCheck.HeaderText = "Incluye";
+            this.ColumnaCheck.Name = "ColumnaCheck";
+            this.ColumnaCheck.ReadOnly = true;
+            this.ColumnaCheck.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnaCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // frmMensajes
             // 
@@ -589,9 +591,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.Label lblCantElementos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Label lblCantElementos;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnaCheck;
     }
 }

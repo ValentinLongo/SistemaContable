@@ -212,7 +212,7 @@
             this.dgvMensajes.Size = new System.Drawing.Size(880, 275);
             this.dgvMensajes.TabIndex = 130;
             this.dgvMensajes.TabStop = false;
-            this.dgvMensajes.SelectionChanged += new System.EventHandler(this.dgvMensajes_SelectionChanged_1);
+            this.dgvMensajes.SelectionChanged += new System.EventHandler(this.dgvMensajes_SelectionChanged);
             // 
             // Column8
             // 
@@ -259,6 +259,7 @@
             // 
             // lblCantElementos
             // 
+            this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCantElementos.AutoSize = true;
             this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;

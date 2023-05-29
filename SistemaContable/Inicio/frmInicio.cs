@@ -770,7 +770,7 @@ namespace SistemaContable
             frmPermisosPerfil permisosperfil = new frmPermisosPerfil();
             frmAutorización frmAutorizacion = new frmAutorización(permisosperfil);
 
-            bool autorizado = frmAutorización.Autoriza(1, false); //cambiar
+            bool autorizado = frmAutorización.Autoriza(4, false);
             frmAutorizacion.Show();
             if (frmAutorización.visibilidad == true)
             {
@@ -791,7 +791,7 @@ namespace SistemaContable
             frmPermisosUsu permisosusuario = new frmPermisosUsu();
             frmAutorización frmAutorizacion = new frmAutorización(permisosusuario);
 
-            bool autorizado = frmAutorización.Autoriza(1, false); //cambiar
+            bool autorizado = frmAutorización.Autoriza(4, false);
             frmAutorizacion.Show();
             if (frmAutorización.visibilidad == true)
             {
@@ -823,7 +823,7 @@ namespace SistemaContable
 
             frmAutorización frmAutorizacion = new frmAutorización(this);
 
-            bool autorizado = frmAutorización.Autoriza(1, false); //cambiar
+            bool autorizado = frmAutorización.Autoriza(1, false);
             frmAutorizacion.Show();
             if (frmAutorización.visibilidad == true)
             {

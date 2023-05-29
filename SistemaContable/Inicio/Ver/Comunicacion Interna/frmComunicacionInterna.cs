@@ -16,8 +16,7 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
 {
     public partial class frmComunicacionInterna : Form
     {
-        public static Label nuevomsg;
-        string Query;
+        public static Label nuevomsg; //para mostrar
 
         public frmComunicacionInterna(Label newmsg)
         {
@@ -31,14 +30,17 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
             cbSeleccionar.SelectedIndex = 0;
         }
 
+        string Query;
         string fecha;
         string origen;
         string destino;
+
         private void CargarDGV(string where)
         {
             DataSet ds = new DataSet();
-            Query = $"SELECT * FROM Observaciones {where}";
+            Query = $"SELECT * FROM Observaciones {where} ORDER BY obs_fecha DESC";
             ds = AccesoBase.ListarDatos(Query);
+
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 fecha = dr["obs_fecha"].ToString();
@@ -53,18 +55,16 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
                 {
                     fechaL = fechaL.Substring(0, 10);
                     fecha = fecha.Substring(0, 10);
-                }
-                
+                }               
                 dgvMensajes.Rows.Add(fecha, hora, origen, destino, fechaL, horaL, comentario);
             }
-
             Negocio.FGenerales.CantElementos(lblCantElementos,dgvMensajes);
         }
 
         private void cbSeleccionar_SelectedIndexChanged(object sender, EventArgs e)
         {
             dgvMensajes.Rows.Clear();
-            string where;
+            string where = "";
 
             if (cbSeleccionar.Text == "Bandeja de Entrada")
             {
@@ -78,7 +78,7 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
             }
         }
 
-        private void dgvMensajes_SelectionChanged_1(object sender, EventArgs e)
+        private void dgvMensajes_SelectionChanged(object sender, EventArgs e)
         {
             int seleccionado = dgvMensajes.CurrentCell.RowIndex;
 
@@ -97,7 +97,6 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
             if (cbSeleccionar.Text == "Bandeja de Entrada")
             {
                 Negocio.Funciones.Ver.FComunicacionInterna.VerMSGs(dgvMensajes, nuevomsg);
-                cbSeleccionar_SelectedIndexChanged(sender, e);
             }
         }
 
@@ -117,6 +116,8 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
             {
                 if (seleccionado != -1)
                 {
+                    Cursor = Cursors.WaitCursor;
+
                     string fecha = dgvMensajes.Rows[seleccionado].Cells[0].Value.ToString();
                     string hora = dgvMensajes.Rows[seleccionado].Cells[1].Value.ToString();
                     string origen = dgvMensajes.Rows[seleccionado].Cells[2].Value.ToString();
@@ -124,6 +125,8 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
 
                     AccesoBase.InsertUpdateDatos($"DELETE Observaciones WHERE obs_fecha = '{fecha}' AND obs_hora = '{hora}' AND obs_origen = '{origen}' AND obs_nomdest = '{destino}'");
                     cbSeleccionar_SelectedIndexChanged(sender, e);
+
+                    Cursor = Cursors.Default;
                 }
             }
         }

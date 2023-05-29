@@ -70,7 +70,7 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
                     AccesoBase.InsertUpdateDatos($"INSERT INTO Observaciones(obs_codori, obs_origen, obs_destino, obs_nomdest, obs_comentario, obs_estado, obs_fecha, obs_ctrle, obs_ctrlr, obs_hora) VALUES ('{FLogin.IdUsuario}', '{FLogin.NombreUsuario}', '{destino}', '{nombredestino}', '{txtMensaje.Text}', '0', '{fecha}', '0', '0', '{hora}')");
                 }
             }
-            frmMessageBox MessageBox = new frmMessageBox("Atención", "Mensaje enviado Correctamente!, Podra visualizarlo en su bandeja de salida", false);
+            frmMessageBox MessageBox = new frmMessageBox("Atención", "Mensaje enviado Correctamente!, Podra visualizarlo en su bandeja de salida", false, true);
             MessageBox.ShowDialog();
             this.Close();
         }
