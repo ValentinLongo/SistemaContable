@@ -48,7 +48,9 @@ using SistemaContable.Inicio.Contabilidad.Renumeración_de_Asientos;
 using SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos;
 using SistemaContable.Inicio.Mantenimiento.Rubricación_de_SubDiarios;
 using SistemaContable.Inicio.Contabilidad.Saldos_Ajustados;
-using SistemaContable.Inicio.Ayuda;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium;
+using System.Diagnostics;
 
 namespace SistemaContable
 {
@@ -62,7 +64,6 @@ namespace SistemaContable
             //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
             Negocio.FFormatoSistema.FondoMDI(this, borde1, borde2, borde3, pbLogo);
             //Negocio.FFormatoSistema.SetearFormato(this);
-
         }
 
         private void btnSesion_Click(object sender, EventArgs e) //CAMBIAR SESIÓN
@@ -756,9 +757,12 @@ namespace SistemaContable
         //50
         private void soporteInteractivoDeContable_Click(object sender, EventArgs e)
         {
-            frmSoporteInteractivo FrmSoporteInteractivo = new frmSoporteInteractivo();
-            FrmSoporteInteractivo.ShowDialog();
+            string chromePath = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe";
+            string whatsappUrl = "https://wa.me/3534289818";
+
+            Process.Start(chromePath, whatsappUrl);
         }
+
 
         //SIN CODIGO
         private void parametrizacionDePermisosPerfiles_Click(object sender, EventArgs e)

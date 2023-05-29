@@ -310,12 +310,6 @@
     <Compile Include="General\frmSesion.Designer.cs">
       <DependentUpon>frmSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Ayuda\frmSoporteInteractivo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inicio\Ayuda\frmSoporteInteractivo.Designer.cs">
-      <DependentUpon>frmSoporteInteractivo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inicio\Contabilidad\Balances_Informes\frmBalances_Informes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -699,9 +693,6 @@
     <EmbeddedResource Include="General\frmSesion.resx">
       <DependentUpon>frmSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Ayuda\frmSoporteInteractivo.resx">
-      <DependentUpon>frmSoporteInteractivo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Contabilidad\Balances_Informes\frmBalances_Informes.resx">
       <DependentUpon>frmBalances_Informes.cs</DependentUpon>
     </EmbeddedResource>
@@ -960,6 +951,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Inicio\Archivos\" />
+    <Folder Include="Inicio\Ayuda\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\llave.png" />
