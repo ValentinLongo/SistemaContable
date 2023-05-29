@@ -86,8 +86,8 @@ namespace SistemaContable.General
 
             if (PROCESO == 2) //Auditoria Interna
             {
+                this.WindowState = FormWindowState.Minimized;
                 frmEstandar frm = new frmEstandar(2, "");
-                frm.Show();
                 this.Close();
                 return;
             }

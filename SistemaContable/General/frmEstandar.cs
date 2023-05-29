@@ -34,20 +34,23 @@ namespace SistemaContable.General
             if (proceso == 1)
             {
                 Mensaje.Text = msg;
-                return;
             }
 
             if (proceso == 2) // Auditoria Interna
             {
+                this.Show();
+
                 Negocio.Funciones.Generales.FEstandar.Procesos(2, Mensaje, terminal, frmRangoFechas.Desde, frmRangoFechas.Hasta);
 
-                string query = $"SELECT * FROM Aux_AuditInt LEFT JOIN TipMov on aux_tipmov=tmo_codigo LEFT JOIN Cliente on aux_ctacli=cli_codigo  WHERE aux_terminal = {terminal}";
+                string query = $"Select * From Aux_AuditInt Left Join TipMov on aux_tipmov = tmo_codigo Left Join Cliente on aux_ctacli = cli_codigo Left Join FormPag on aux_condvta = for_codigo Where aux_terminal = {terminal} And aux_marca = 1 Order By aux_secuencia, aux_fecemi, aux_tipmov, aux_cpbte";
 
                 frmReporte reporte = new frmReporte("AudIntCont", $"{query}", "", "Auditoria Interna");
                 reporte.ShowDialog();
 
                 AccesoBase.InsertUpdateDatos($"Delete From Aux_AuditInt Where aux_terminal = {terminal}");
             }
+
+            this.Close();
         }
 
         //BARRA DE CONTROL
