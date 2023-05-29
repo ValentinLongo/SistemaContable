@@ -260,11 +260,11 @@
             // lblCantElementos
             // 
             this.lblCantElementos.AutoSize = true;
-            this.lblCantElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCantElementos.Location = new System.Drawing.Point(12, 631);
             this.lblCantElementos.Name = "lblCantElementos";
-            this.lblCantElementos.Size = new System.Drawing.Size(58, 15);
+            this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
             this.lblCantElementos.TabIndex = 145;
             this.lblCantElementos.Text = "Elementos";
             // 

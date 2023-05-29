@@ -27,7 +27,7 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
             cbBusqueda.SelectedIndex = 0;
         }
 
-        public void CargarDGV(string busqueda) 
+        public void CargarDGV(string busqueda)
         {
             dgvEncabezadodeModelos.Rows.Clear();
             DataSet ds = new DataSet();
