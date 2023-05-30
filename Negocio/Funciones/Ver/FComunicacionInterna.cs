@@ -12,12 +12,12 @@ namespace Negocio.Funciones.Ver
 {
     public class FComunicacionInterna
     {
-        public static void VerMSGs(DataGridView dgv, Label nuevomsg)
+        public static void VerMSGs(DataGridView dgv, Label nuevomsg) //para modificar los valores fecha lectura, hora lectura y tambien actualizar el aviso en el menu principal
         {
-            int seleccionado = dgv.CurrentCell.RowIndex;
-
-            if (seleccionado != -1)
+            if (dgv.CurrentCell != null)
             {
+                int seleccionado = dgv.CurrentCell.RowIndex;
+
                 string horaL = DateTime.Now.ToLongTimeString();
                 string fechaL = DateTime.Now.ToShortDateString();
 
@@ -32,11 +32,10 @@ namespace Negocio.Funciones.Ver
                 {
                     nuevomsg.Visible = false;
                 }
-
             }
         }
 
-        public static bool NuevosMSGs()
+        public static bool NuevosMSGs() //para controlar si hay nuevos msg para mostrar el aviso en el menu principal
         {
             string estado = "";
             bool flag = false;

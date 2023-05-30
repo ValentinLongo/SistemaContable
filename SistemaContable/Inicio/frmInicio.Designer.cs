@@ -794,19 +794,19 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel8.Name = "panel8";
             // 
             // btnAudInt
             // 
+            resources.ApplyResources(this.btnAudInt, "btnAudInt");
             this.btnAudInt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnAudInt.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnAudInt.BorderColor = System.Drawing.Color.White;
             this.btnAudInt.BorderRadius = 1;
             this.btnAudInt.BorderSize = 1;
             this.btnAudInt.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btnAudInt, "btnAudInt");
             this.btnAudInt.ForeColor = System.Drawing.Color.White;
             this.btnAudInt.Image = global::SistemaContable.Properties.Resources.papel2;
             this.btnAudInt.Name = "btnAudInt";
@@ -830,8 +830,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel1.Name = "panel1";
             // 
             // lblPerfil
@@ -854,9 +854,9 @@
             // 
             // btnSesion
             // 
+            resources.ApplyResources(this.btnSesion, "btnSesion");
             this.btnSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnSesion.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btnSesion, "btnSesion");
             this.btnSesion.Image = global::SistemaContable.Properties.Resources.candado_cerrado;
             this.btnSesion.Name = "btnSesion";
             this.btnSesion.UseVisualStyleBackColor = false;
@@ -924,8 +924,8 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel7.Name = "panel7";
             // 
             // pbLogoPanel
@@ -958,13 +958,13 @@
             // 
             // bunifuShapes1
             // 
+            resources.ApplyResources(this.bunifuShapes1, "bunifuShapes1");
             this.bunifuShapes1.Angle = 0F;
             this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.bunifuShapes1.BorderThickness = 1;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            resources.ApplyResources(this.bunifuShapes1, "bunifuShapes1");
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
@@ -1388,6 +1388,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "frmInicio";
+            this.Tag = "x";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.MdiChildActivate += new System.EventHandler(this.frmInicio_MdiChildActivate);

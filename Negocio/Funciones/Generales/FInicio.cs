@@ -1,4 +1,5 @@
 ﻿using Bunifu.Framework.UI;
+using Bunifu.UI.WinForms;
 using Datos;
 using RJCodeAdvance.RJControls;
 using System;
@@ -7,16 +8,18 @@ using System.Data;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Resources;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BunifuGradientPanel = Bunifu.UI.WinForms.BunifuGradientPanel;
 
 namespace Negocio
 {
     public class FInicio
     {
         //DEVUELVE EL TIEMPO QUE FALTA PARA QUE UNA TAREA FINALIZE
-        public static string DisparadorInicio(Control lblnuevomensaje) 
+        public static string DisparadorInicio(Control lblnuevomensaje)
         {
             if (Negocio.Funciones.Ver.FComunicacionInterna.NuevosMSGs()) //PARA VER SI HAY NUEVOS MSG
             {
@@ -57,17 +60,24 @@ namespace Negocio
         }
 
         //PARA ABRIR/CERRAR SESIÓN
-        public static void Sesion(Form Inicio, ToolStrip tsAccesosDirectos, int proceso)
+        public static void Sesion(Form Inicio, ToolStrip tsAccesosDirectos, int proceso, [Optional] Control Excepcion)
         {
             if (proceso == 1) //ABRE
             {
+                foreach (Form frm in Application.OpenForms)
+                {
+                    if (frm != Inicio)
+                    {
+                        frm.Enabled = false;
+                    }
+                }
                 foreach (Control Ctrl in Inicio.Controls)
                 {
                     if (Ctrl is BunifuGradientPanel)
                     {
                         foreach (Control Ctrl2 in Ctrl.Controls)
                         {
-                            if (Ctrl2 is RJButton)
+                            if (!(Ctrl2.Name == "btnSesion" || Ctrl2.Name == "lblSesion"))
                             {
                                 Ctrl2.Enabled = false;
                             }
@@ -90,16 +100,20 @@ namespace Negocio
             }
             else if (proceso == 2) //CIERRA
             {
+                foreach (Form frm in Application.OpenForms)
+                {
+                    if (frm != Inicio)
+                    {
+                        frm.Enabled = true;
+                    }
+                }
                 foreach (Control Ctrl in Inicio.Controls)
                 {
                     if (Ctrl is BunifuGradientPanel)
                     {
                         foreach (Control Ctrl2 in Ctrl.Controls)
                         {
-                            if (Ctrl2 is RJButton)
-                            {
-                                Ctrl2.Enabled = true;
-                            }
+                            Ctrl2.Enabled = true;
                         }
                     }
                     if (Ctrl is ToolStrip)
@@ -113,7 +127,7 @@ namespace Negocio
                                     botones.Enabled = true;
                                 }
                             }
-                        }                      
+                        }
                     }
                 }
             }
@@ -149,14 +163,14 @@ namespace Negocio
             }
 
             lblusuario.Text = "Usuario: " + FLogin.NombreUsuario;
-            lblempresa.Text = "Empresa: (Empresa)";
+            lblempresa.Text = "Empresa: " + FLogin.NombreEmpresa;
             lblperfil.Text = "Perfil: " + perfil;
         }
 
-        public static bool ValidacionSupervisor() 
+        public static bool ValidacionSupervisor()
         {
             int resultado = AccesoBase.ValidarDatos($"SELECT * FROM Usuario WHERE usu_codigo = {FLogin.IdUsuario} AND usu_perfil = 1");
-            if (resultado == 1) 
+            if (resultado == 1)
             {
                 return true;
             }
@@ -164,6 +178,35 @@ namespace Negocio
             {
                 return false;
             }
-        }        
+        }
+
+        public static void CerrarPestañas()
+        {
+            List<Form> formlist = new List<Form>();
+
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.Tag is null)
+                {
+                    frm.Tag = "z";
+                }
+                if (frm.Tag.ToString() != "x")
+                {
+                    formlist.Add(frm);
+                }
+            }
+            foreach (Form frm in formlist)
+            {
+                frm.Close();
+            }
+        }
+
+        public static void CerrarMDIhijos(Form FRM)
+        {
+            foreach (Form frmHijo in FRM.MdiChildren)
+            {
+                frmHijo.Close();
+            }
+        }
     }
 }

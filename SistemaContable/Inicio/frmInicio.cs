@@ -66,14 +66,17 @@ namespace SistemaContable
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
+        string UsuAnterior = FLogin.NombreUsuario;
+
         private void btnSesion_Click(object sender, EventArgs e) //CAMBIAR SESIÓN
         {
-
             if (lblSesion.Text == "Cerrar Sesión")
             {
                 Negocio.FInicio.Sesion(this, toolStripADs, 1);
+
                 lblUsu.Text = "Sesión Cerrada";
                 lblPerfil.Text = "Perfil: NINGUNO";
+                lblEmpresa.Text = "Empresa: NINGUNA";
 
                 lblSesion.Text = "Abrir Sesión";
                 btnSesion.Image = Resources.candado_abierto;
@@ -87,6 +90,18 @@ namespace SistemaContable
                     Negocio.FInicio.Sesion(this, toolStripADs, 2);
                     Negocio.FInicio.DatosUsuEmp(lblUsu, lblEmpresa, lblPerfil);
 
+                    if (UsuAnterior != FLogin.NombreUsuario)
+                    {
+                        int cant = Application.OpenForms.Count;
+                        if (cant > 0)
+                        {
+                            Negocio.FInicio.CerrarPestañas();
+                            Negocio.FInicio.CerrarMDIhijos(this);
+                            //this.Close();
+                        }
+                    }
+                    UsuAnterior = FLogin.NombreUsuario;
+
                     lblSesion.Text = "Cerrar Sesión";
                     btnSesion.Image = Resources.candado_cerrado;
                 }
@@ -95,7 +110,6 @@ namespace SistemaContable
 
         private void btnCerrar_Click(object sender, EventArgs e) //CONTROLBAR
         {
-            List<Form> formlist = new List<Form>();
             int cant = Application.OpenForms.Count;
             frmMessageBox MessageBox = new frmMessageBox("Atención!", "¿Realmente Desea Salir?", true);
             MessageBox.ShowDialog();
@@ -103,17 +117,7 @@ namespace SistemaContable
             {
                 if (cant > 0)
                 {
-                    foreach (Form frm in Application.OpenForms)
-                    {
-                        if (frm != this)
-                        {
-                            formlist.Add(frm);
-                        }
-                    }
-                    foreach (Form frm in formlist)
-                    {
-                        frm.Close();
-                    }
+                    Negocio.FInicio.CerrarPestañas();
                     Application.Exit();
                 }
             }
@@ -653,7 +657,7 @@ namespace SistemaContable
             MessageBox1.ShowDialog();
             if (frmMessageBox.Acepto)
             {
-                frmRangoFechas frm = new frmRangoFechas(2);
+                frmRangoFechas frm = new frmRangoFechas(2,Convert.ToDateTime("01/01/2000"), DateTime.Now);
                 frm.Show();
             }
         }

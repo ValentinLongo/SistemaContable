@@ -38,7 +38,7 @@ namespace SistemaContable.General
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
                         Negocio.FLogin.IdUsuario = Convert.ToInt32(dr["usu_codigo"]);
-                        Negocio.FLogin.NombreUsuario = dr["usu_login"].ToString();
+                        Negocio.FLogin.NombreUsuario = dr["usu_nombre"].ToString();
                         Negocio.FLogin.ContraUsuario = dr["usu_contraseña"].ToString();
                     }
                     autorizado = true;

@@ -29,12 +29,6 @@ namespace SistemaContable.Usuarios
             btnModificar.Enabled = false;
         }
 
-        private void Cerrar(object sender, FormClosingEventArgs e)
-        {
-            frmInicio frmInicio = new frmInicio();
-            frmInicio.Show();
-        }
-
         public void llenarDGV(string busqueda)
         {
             dgvUsuarios.Rows.Clear();

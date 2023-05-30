@@ -21,16 +21,16 @@ namespace SistemaContable.General
 
         private static int PROCESO = 1; //para utilizar el frm como lo requiera otro frm
 
-        public frmRangoFechas(int proceso,[Optional] int NroEjercicio)
+        public frmRangoFechas(int proceso, DateTime desde, DateTime hasta)
         {
             InitializeComponent();
 
             PROCESO = proceso;
 
-            seteo(proceso, NroEjercicio);
+            seteo(proceso, desde, hasta);
         }
 
-        private void seteo(int proceso, [Optional] int NroEjercicio) 
+        private void seteo(int proceso, DateTime desde, DateTime hasta) 
         {
             if (proceso == 3) //Asiento Contable
             {
@@ -41,14 +41,13 @@ namespace SistemaContable.General
                 btnConfirmar.Location = new Point(27, 187);
                 pLinea.Location = new Point(12, 174);
 
-                string[] fechas = Negocio.Funciones.Contabilidad.FLibroMayor.fechasDesdeHasta(NroEjercicio);
-                dtDesde.Value = Convert.ToDateTime(fechas[0]);
-                dtHasta.Value = DateTime.Now;
+                dtDesde.Value = desde;
+                dtHasta.Value = hasta;
             }
-            else
+            else //Uso General
             {
-                dtDesde.Value = Convert.ToDateTime("01/01/1900");
-                dtHasta.Value = DateTime.Now;
+                dtDesde.Value = desde;
+                dtHasta.Value = hasta;
             }
         }
 
@@ -105,7 +104,6 @@ namespace SistemaContable.General
                 this.Close();
                 return;
             }
-
         }
 
         //BARRA DE CONTROL
