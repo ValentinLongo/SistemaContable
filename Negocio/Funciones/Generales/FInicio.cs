@@ -208,5 +208,28 @@ namespace Negocio
                 frmHijo.Close();
             }
         }
+
+        public static bool FormActivo(string NombreForm)
+        {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.Name == NombreForm)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static void MostrarForm(string NombreForm)
+        {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.Name == NombreForm)
+                {
+                    frm.BringToFront();
+                }
+            }
+        }
     }
 }
