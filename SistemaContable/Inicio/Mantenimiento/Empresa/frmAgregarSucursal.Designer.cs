@@ -191,10 +191,9 @@
             this.tbDescripcion.ForeColor = System.Drawing.SystemColors.Window;
             this.tbDescripcion.Location = new System.Drawing.Point(106, 77);
             this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.ReadOnly = true;
             this.tbDescripcion.Size = new System.Drawing.Size(287, 19);
             this.tbDescripcion.TabIndex = 0;
-            this.tbDescripcion.Tag = "11010";
+            this.tbDescripcion.Tag = "11000";
             // 
             // frmAgregarSucursal
             // 

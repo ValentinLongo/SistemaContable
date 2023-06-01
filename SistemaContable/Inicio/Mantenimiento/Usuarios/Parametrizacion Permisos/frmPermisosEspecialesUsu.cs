@@ -33,8 +33,6 @@ namespace SistemaContable.Parametrizacion_Permisos
             {
                 txtNroUsuario.Text = codigo;
                 txtDescriUsuario.Text = descri;
-                txtNroUsuario.ReadOnly = true;
-                txtDescriUsuario.ReadOnly = true;
                 cbModulo.SelectedIndex = 0;
             }
         }
@@ -66,7 +64,6 @@ namespace SistemaContable.Parametrizacion_Permisos
                 }
                 dgvPEspeciales.Rows.Add(codigo2, modulo, descri, check);
             }
-
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvPEspeciales);
         }
 
@@ -81,7 +78,6 @@ namespace SistemaContable.Parametrizacion_Permisos
             {
                 modulobusqueda = "AND pef_modulo = " + "'" + modulobusqueda + "'";
             }
-
             dgvPEspeciales.Rows.Clear();
             cargarDGV(modulobusqueda,"","");
         }
@@ -107,6 +103,11 @@ namespace SistemaContable.Parametrizacion_Permisos
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnRestabPerfil_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void dgvPEspeciales_CellContentClick(object sender, DataGridViewCellEventArgs e)

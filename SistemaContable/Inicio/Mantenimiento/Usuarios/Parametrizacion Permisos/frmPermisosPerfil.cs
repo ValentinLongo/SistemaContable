@@ -30,16 +30,9 @@ namespace SistemaContable.Parametrizacion_Permisos
             //Negocio.FFormatoSistema.SetearFormato(this);
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             frmConsultaGeneral consultageneral = new frmConsultaGeneral("per_codigo as Codigo, per_descri as Descripcion", "Perfil", "", "ORDER BY per_codigo", "per", "codigo", "descri");
-            //consultageneral.ArmarDGV("per_codigo as Codigo, per_descri as Descripcion", "Perfil", "", "ORDER BY per_codigo","frmPermisosPerfil");
             consultageneral.ShowDialog();
 
             string cod = frmConsultaGeneral.codigoCG;
@@ -50,7 +43,6 @@ namespace SistemaContable.Parametrizacion_Permisos
                 txtNroPerfil.Text = cod.ToString();
                 txtDescriPerfil.Text = descri;
             }
-
             ArmarArbol(txtNroPerfil.Text);
         }
 
@@ -197,7 +189,6 @@ namespace SistemaContable.Parametrizacion_Permisos
             {
                 txtDescriPerfil.Text = dr["per_Descri"].ToString();
             }
-
             ArmarArbol(txtNroPerfil.Text);
         }
 
@@ -222,5 +213,10 @@ namespace SistemaContable.Parametrizacion_Permisos
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }

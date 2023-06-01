@@ -32,7 +32,6 @@ namespace SistemaContable.Parametrizacion_Permisos
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             frmConsultaGeneral consultageneral = new frmConsultaGeneral("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo", "usu", "codigo", "nombre");
-            //consultageneral.ArmarDGV("usu_codigo as Codigo, usu_nombre as Nombre", "usuario", "", "ORDER BY usu_codigo", "frmPermisosUsuarios");
             consultageneral.ShowDialog();
 
             string cod = frmConsultaGeneral.codigoCG;
@@ -43,9 +42,6 @@ namespace SistemaContable.Parametrizacion_Permisos
                 txtNroUsuario.Text = cod.ToString();
                 txtDescriUsuario.Text = descri;
             }
-
-            //
-
             ArmarArbol(txtNroUsuario.Text);
         }
 
@@ -116,24 +112,23 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
-            {
-                int terminal = frmLogin.NumeroTerminal;
-                DataSet ds = new DataSet();
-
-                AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_sistema = 'CO' AND mxu_usuario = {txtNroUsuario.Text}");
-
-                AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu (mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From aux_MenuxUsu Where aux_MenuxUsu.mxu_sistema = 'CO' AND mxu_terminal = '{terminal}' AND aux_MenuxUsu.mxu_usuario = {txtNroUsuario.Text}");
-
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cambios realizados correctamente!", false);
-                MessageBox.ShowDialog();
-                this.Close();
-            }
-            else
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
+                return;
             }
+
+            int terminal = frmLogin.NumeroTerminal;
+            DataSet ds = new DataSet();
+
+            AccesoBase.InsertUpdateDatos($"DELETE FROM MenuxUsu WHERE mxu_sistema = 'CO' AND mxu_usuario = {txtNroUsuario.Text}");
+
+            AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu (mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema) SELECT mxu_usuario, mxu_codigo, mxu_activo, mxu_sistema From aux_MenuxUsu Where aux_MenuxUsu.mxu_sistema = 'CO' AND mxu_terminal = '{terminal}' AND aux_MenuxUsu.mxu_usuario = {txtNroUsuario.Text}");
+
+            frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "Cambios realizados correctamente!", false);
+            MessageBox2.ShowDialog();
+            this.Close();
         }
 
         private void Tpermisos_AfterCheck(object sender, TreeViewEventArgs e)
@@ -200,7 +195,6 @@ namespace SistemaContable.Parametrizacion_Permisos
             {
                 txtDescriUsuario.Text = dr["usu_nombre"].ToString();
             }
-
             ArmarArbol(txtNroUsuario.Text);
         }
 
@@ -218,6 +212,11 @@ namespace SistemaContable.Parametrizacion_Permisos
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe Seleccionar un Usuario.", false);
                 MessageBox.ShowDialog();
             }
+        }
+
+        private void btnRestabPerfil_Click(object sender, EventArgs e)
+        {
+
         }
 
         //BARRA DE CONTROL

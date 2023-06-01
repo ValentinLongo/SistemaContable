@@ -34,7 +34,7 @@
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
             this.btnAbrirArbol = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnRestabPerfil = new RJCodeAdvance.RJControls.RJButton();
             this.btnEspeciales = new RJCodeAdvance.RJControls.RJButton();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.Tpermisos = new System.Windows.Forms.TreeView();
@@ -180,25 +180,26 @@
             this.btnAbrirArbol.UseVisualStyleBackColor = false;
             this.btnAbrirArbol.Click += new System.EventHandler(this.btnAbrirArbol_Click);
             // 
-            // rjButton3
+            // btnRestabPerfil
             // 
-            this.rjButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton3.BorderColor = System.Drawing.Color.White;
-            this.rjButton3.BorderRadius = 0;
-            this.rjButton3.BorderSize = 0;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton3.Location = new System.Drawing.Point(406, 224);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(120, 26);
-            this.rjButton3.TabIndex = 6;
-            this.rjButton3.Tag = "";
-            this.rjButton3.Text = "Restab. Perfil";
-            this.rjButton3.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton3.UseVisualStyleBackColor = false;
+            this.btnRestabPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnRestabPerfil.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnRestabPerfil.BorderColor = System.Drawing.Color.White;
+            this.btnRestabPerfil.BorderRadius = 0;
+            this.btnRestabPerfil.BorderSize = 0;
+            this.btnRestabPerfil.FlatAppearance.BorderSize = 0;
+            this.btnRestabPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestabPerfil.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestabPerfil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRestabPerfil.Location = new System.Drawing.Point(406, 224);
+            this.btnRestabPerfil.Name = "btnRestabPerfil";
+            this.btnRestabPerfil.Size = new System.Drawing.Size(120, 26);
+            this.btnRestabPerfil.TabIndex = 6;
+            this.btnRestabPerfil.Tag = "";
+            this.btnRestabPerfil.Text = "Restab. Perfil";
+            this.btnRestabPerfil.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRestabPerfil.UseVisualStyleBackColor = false;
+            this.btnRestabPerfil.Click += new System.EventHandler(this.btnRestabPerfil_Click);
             // 
             // btnEspeciales
             // 
@@ -403,7 +404,7 @@
             this.Controls.Add(this.Tpermisos);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnEspeciales);
-            this.Controls.Add(this.rjButton3);
+            this.Controls.Add(this.btnRestabPerfil);
             this.Controls.Add(this.btnAbrirArbol);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panel1);
@@ -426,7 +427,7 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
         private RJCodeAdvance.RJControls.RJButton btnAbrirArbol;
-        private RJCodeAdvance.RJControls.RJButton rjButton3;
+        private RJCodeAdvance.RJControls.RJButton btnRestabPerfil;
         private RJCodeAdvance.RJControls.RJButton btnEspeciales;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private System.Windows.Forms.TreeView Tpermisos;

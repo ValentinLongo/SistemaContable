@@ -55,7 +55,7 @@
             this.btnAgregarTodo = new RJCodeAdvance.RJControls.RJButton();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
             this.btnSacarTodos = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnRestabPerfil = new RJCodeAdvance.RJControls.RJButton();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.dgvPEspeciales = new System.Windows.Forms.DataGridView();
@@ -194,6 +194,7 @@
             this.txtDescriUsuario.ForeColor = System.Drawing.SystemColors.Window;
             this.txtDescriUsuario.Location = new System.Drawing.Point(287, 54);
             this.txtDescriUsuario.Name = "txtDescriUsuario";
+            this.txtDescriUsuario.ReadOnly = true;
             this.txtDescriUsuario.Size = new System.Drawing.Size(147, 19);
             this.txtDescriUsuario.TabIndex = 1;
             this.txtDescriUsuario.Tag = "00000";
@@ -215,6 +216,7 @@
             this.txtNroUsuario.ForeColor = System.Drawing.SystemColors.Window;
             this.txtNroUsuario.Location = new System.Drawing.Point(164, 55);
             this.txtNroUsuario.Name = "txtNroUsuario";
+            this.txtNroUsuario.ReadOnly = true;
             this.txtNroUsuario.Size = new System.Drawing.Size(56, 15);
             this.txtNroUsuario.TabIndex = 0;
             this.txtNroUsuario.Tag = "00000";
@@ -418,25 +420,26 @@
             this.btnSacarTodos.UseVisualStyleBackColor = false;
             this.btnSacarTodos.Click += new System.EventHandler(this.btnSacarTodos_Click);
             // 
-            // rjButton3
+            // btnRestabPerfil
             // 
-            this.rjButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton3.BorderColor = System.Drawing.Color.White;
-            this.rjButton3.BorderRadius = 0;
-            this.rjButton3.BorderSize = 0;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton3.Location = new System.Drawing.Point(668, 251);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(125, 26);
-            this.rjButton3.TabIndex = 6;
-            this.rjButton3.Tag = "";
-            this.rjButton3.Text = "Restab. Perfil";
-            this.rjButton3.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton3.UseVisualStyleBackColor = false;
+            this.btnRestabPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnRestabPerfil.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnRestabPerfil.BorderColor = System.Drawing.Color.White;
+            this.btnRestabPerfil.BorderRadius = 0;
+            this.btnRestabPerfil.BorderSize = 0;
+            this.btnRestabPerfil.FlatAppearance.BorderSize = 0;
+            this.btnRestabPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestabPerfil.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestabPerfil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRestabPerfil.Location = new System.Drawing.Point(668, 251);
+            this.btnRestabPerfil.Name = "btnRestabPerfil";
+            this.btnRestabPerfil.Size = new System.Drawing.Size(125, 26);
+            this.btnRestabPerfil.TabIndex = 6;
+            this.btnRestabPerfil.Tag = "";
+            this.btnRestabPerfil.Text = "Restab. Perfil";
+            this.btnRestabPerfil.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRestabPerfil.UseVisualStyleBackColor = false;
+            this.btnRestabPerfil.Click += new System.EventHandler(this.btnRestabPerfil_Click);
             // 
             // label13
             // 
@@ -604,7 +607,7 @@
             this.Controls.Add(this.dgvPEspeciales);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.CheckInicio);
-            this.Controls.Add(this.rjButton3);
+            this.Controls.Add(this.btnRestabPerfil);
             this.Controls.Add(this.btnSacarTodos);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.btnAgregarTodo);
@@ -663,7 +666,7 @@
         private RJCodeAdvance.RJControls.RJButton btnAgregarTodo;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
         private RJCodeAdvance.RJControls.RJButton btnSacarTodos;
-        private RJCodeAdvance.RJControls.RJButton rjButton3;
+        private RJCodeAdvance.RJControls.RJButton btnRestabPerfil;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
         private System.Windows.Forms.DataGridView dgvPEspeciales;

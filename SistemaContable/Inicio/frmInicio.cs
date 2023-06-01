@@ -209,7 +209,7 @@ namespace SistemaContable
 
             string tiempo = Negocio.FInicio.DisparadorInicio(lblnuevomensaje);
 
-            if (tiempo == "" || tiempo != "expiro")
+            if (tiempo == "")
             {
                 return;
             }
@@ -441,17 +441,20 @@ namespace SistemaContable
 
         private void tsbCerrarFrmHijo_Click(object sender, EventArgs e)
         {
-            frmMessageBox MessageBox = new frmMessageBox("Atención!", "Al aceptar Cerrara el formulario activo. ¿Desea Continuar?", true, true);
-            MessageBox.ShowDialog();
-            if (frmMessageBox.Acepto)
+            if (Application.OpenForms.Count > 2)
             {
-                Form frmHijoAcivo = this.ActiveMdiChild;
-                frmHijoAcivo.Close();
-                if (Application.OpenForms.Count == 2)
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Al aceptar, Cerrara el formulario activo. ¿Desea Continuar?", true, true);
+                MessageBox.ShowDialog();
+                if (frmMessageBox.Acepto)
                 {
-                    pbLogo.BringToFront();
+                    Form frmHijoAcivo = this.ActiveMdiChild;
+                    frmHijoAcivo.Close();
+                    if (Application.OpenForms.Count == 2)
+                    {
+                        pbLogo.BringToFront();
+                    }
                 }
-            }         
+            }
         }
         //
 
@@ -644,6 +647,12 @@ namespace SistemaContable
 
         private void comunicaciónInterna_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmComunicacionInterna"))
+            {
+                Negocio.FInicio.MostrarForm("frmComunicacionInterna");
+                return;
+            }
+
             frmComunicacionInterna frm = new frmComunicacionInterna(lblnuevomensaje);
             if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, tsbMensajesInternos.Tag.ToString()))
             {
@@ -660,6 +669,12 @@ namespace SistemaContable
 
         private void calendario_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmCalendario"))
+            {
+                Negocio.FInicio.MostrarForm("frmCalendario");
+                return;
+            }
+
             frmCalendario frm = new frmCalendario();
             if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, calendario.Tag.ToString()))
             {
@@ -671,6 +686,12 @@ namespace SistemaContable
         //30
         private void movimientoDeAsientos_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmAsientosContables"))
+            {
+                Negocio.FInicio.MostrarForm("frmAsientosContables");
+                return;
+            }
+
             frmAsientosContables frm = new frmAsientosContables();
             if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, movimientoDeAsientos.Tag.ToString()))
             {
@@ -681,36 +702,72 @@ namespace SistemaContable
 
         private void actualizaciónMA_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmEncabezadodeModelos"))
+            {
+                Negocio.FInicio.MostrarForm("frmEncabezadodeModelos");
+                return;
+            }
+
             frmEncabezadodeModelos frm = new frmEncabezadodeModelos();
             Negocio.FGenerales.Mostrarfrm(frm, actualizaciónMA.Tag.ToString());
         }
 
         private void detalleDeModelos_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmDetalledeModelos"))
+            {
+                Negocio.FInicio.MostrarForm("frmDetalledeModelos");
+                return;
+            }
+
             frmDetalledeModelos frm = new frmDetalledeModelos();
             Negocio.FGenerales.Mostrarfrm(frm, detalleDeModelos.Tag.ToString());
         }
 
         private void renumeraciónDeAsientos_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmRenumeraciónDeAsientos"))
+            {
+                Negocio.FInicio.MostrarForm("frmRenumeraciónDeAsientos");
+                return;
+            }
+
             frmRenumeraciónDeAsientos frm = new frmRenumeraciónDeAsientos();
             Negocio.FGenerales.Mostrarfrm(frm, renumeraciónDeAsientos.Tag.ToString());
         }
 
         private void libroDiario_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmLibroDiario"))
+            {
+                Negocio.FInicio.MostrarForm("frmLibroDiario");
+                return;
+            }
+
             frmLibroDiario frm = new frmLibroDiario();
             Negocio.FGenerales.Mostrarfrm(frm, libroDiario.Tag.ToString());
         }
 
         private void libroMayor_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmLibroMayor"))
+            {
+                Negocio.FInicio.MostrarForm("frmLibroMayor");
+                return;
+            }
+
             frmLibroMayor frm = new frmLibroMayor();
             Negocio.FGenerales.Mostrarfrm(frm, libroMayor.Tag.ToString());
         }
 
         private void libroMayorGrupo_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmLibroMayorGrupo"))
+            {
+                Negocio.FInicio.MostrarForm("frmLibroMayorGrupo");
+                return;
+            }
+
             frmLibroMayorGrupo frm = new frmLibroMayorGrupo();
             Negocio.FGenerales.Mostrarfrm(frm, libroMayorGrupo.Tag.ToString());
 
@@ -718,42 +775,84 @@ namespace SistemaContable
 
         private void libroMayorInforme_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmLibroMayorInforme"))
+            {
+                Negocio.FInicio.MostrarForm("frmLibroMayorInforme");
+                return;
+            }
+
             frmLibroMayorInforme frm = new frmLibroMayorInforme();
             Negocio.FGenerales.Mostrarfrm(frm, libroMayorInforme.Tag.ToString());
         }
 
         private void saldosYAjustados_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmSaldosAjustados"))
+            {
+                Negocio.FInicio.MostrarForm("frmSaldosAjustados");
+                return;
+            }
+
             frmSaldosAjustados frm = new frmSaldosAjustados();
             Negocio.FGenerales.Mostrarfrm(frm, saldosYAjustados.Tag.ToString());
         }
 
         private void balanceDeSumasYSaldos_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmBalances_Informes"))
+            {
+                Negocio.FInicio.MostrarForm("frmBalances_Informes");
+                return;
+            }
+
             frmBalances_Informes frm = new frmBalances_Informes(1);
             Negocio.FGenerales.Mostrarfrm(frm, balanceDeSumasYSaldos.Tag.ToString());
         }
 
         private void balanceGeneral_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmBalances_Informes"))
+            {
+                Negocio.FInicio.MostrarForm("frmBalances_Informes");
+                return;
+            }
+
             frmBalances_Informes frm = new frmBalances_Informes(2);
             Negocio.FGenerales.Mostrarfrm(frm, balanceGeneral.Tag.ToString());
         }
 
         private void actualizaciónDI_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmDefiniciondeInformes"))
+            {
+                Negocio.FInicio.MostrarForm("frmDefiniciondeInformes");
+                return;
+            }
+
             frmDefiniciondeInformes frm = new frmDefiniciondeInformes();
             Negocio.FGenerales.Mostrarfrm(frm, actualizaciónDI.Tag.ToString());
         }
 
         private void detalleInforme_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmDetalledeInformes"))
+            {
+                Negocio.FInicio.MostrarForm("frmDetalledeInformes");
+                return;
+            }
+
             frmDetalledeInformes frm = new frmDetalledeInformes();
             Negocio.FGenerales.Mostrarfrm(frm, detalleInforme.Tag.ToString());
         }
 
         private void informe_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmBalances_Informes"))
+            {
+                Negocio.FInicio.MostrarForm("frmBalances_Informes");
+                return;
+            }
+
             frmBalances_Informes frm = new frmBalances_Informes(3);
             Negocio.FGenerales.Mostrarfrm(frm, informe.Tag.ToString());
         }
@@ -764,6 +863,12 @@ namespace SistemaContable
             MessageBox1.ShowDialog();
             if (frmMessageBox.Acepto)
             {
+                if (Negocio.FInicio.FormActivo("frmRangoFechas"))
+                {
+                    Negocio.FInicio.MostrarForm("frmRangoFechas");
+                    return;
+                }
+
                 frmRangoFechas frm = new frmRangoFechas(2, Convert.ToDateTime("01/01/2000"), DateTime.Now);
                 frm.Show();
             }
@@ -772,12 +877,24 @@ namespace SistemaContable
         //40
         private void empresa_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmEmpresa"))
+            {
+                Negocio.FInicio.MostrarForm("frmEmpresa");
+                return;
+            }
+
             frmEmpresa frm = new frmEmpresa();
             Negocio.FGenerales.Mostrarfrm(frm, empresa.Tag.ToString());
         }
 
         private void definición_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmUsuarios"))
+            {
+                Negocio.FInicio.MostrarForm("frmUsuarios");
+                return;
+            }
+
             frmUsuarios frm = new frmUsuarios();
             if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, definición.Tag.ToString()))
             {
@@ -788,19 +905,36 @@ namespace SistemaContable
 
         private void modificaciónDeContraseña_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmModificarContra"))
+            {
+                Negocio.FInicio.MostrarForm("frmModificarContra");
+                return;
+            }
+
             frmModificarContra frm = new frmModificarContra();
-            //Negocio.FGenerales.Mostrarfrm(frm, modificaciónDeContraseña.Tag.ToString());
             frm.Show();
         }
 
         private void ejercicioContable_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmEjercicioContable"))
+            {
+                Negocio.FInicio.MostrarForm("frmEjercicioContable");
+                return;
+            }
+
             frmEjercicioContable frm = new frmEjercicioContable();
             Negocio.FGenerales.Mostrarfrm(frm, ejercicioContable.Tag.ToString());
         }
 
         private void planDeCuentas_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmPlanDeCuentas"))
+            {
+                Negocio.FInicio.MostrarForm("frmPlanDeCuentas");
+                return;
+            }
+
             frmPlanDeCuentas frm = new frmPlanDeCuentas();
             if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, planDeCuentas.Tag.ToString()))
             {
@@ -811,6 +945,12 @@ namespace SistemaContable
 
         private void conceptosContables_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmConceptosContables"))
+            {
+                Negocio.FInicio.MostrarForm("frmConceptosContables");
+                return;
+            }
+
             frmConceptosContables frm = new frmConceptosContables();
             if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, conceptosContables.Tag.ToString()))
             {
@@ -821,30 +961,60 @@ namespace SistemaContable
 
         private void rubrosContables_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmRubrosContables"))
+            {
+                Negocio.FInicio.MostrarForm("frmRubrosContables");
+                return;
+            }
+
             frmRubrosContables frm = new frmRubrosContables();
             Negocio.FGenerales.Mostrarfrm(frm, rubrosContables.Tag.ToString());
         }
 
         private void coeficienteDeAjuste_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmCoeficienteDeAjuste"))
+            {
+                Negocio.FInicio.MostrarForm("frmCoeficienteDeAjuste");
+                return;
+            }
+
             frmCoeficienteDeAjuste frm = new frmCoeficienteDeAjuste();
             Negocio.FGenerales.Mostrarfrm(frm, coeficienteDeAjuste.Tag.ToString());
         }
 
         private void centroDeCosto_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmCentrodeCostos"))
+            {
+                Negocio.FInicio.MostrarForm("frmCentrodeCostos");
+                return;
+            }
+
             frmCentrodeCostos frm = new frmCentrodeCostos();
             Negocio.FGenerales.Mostrarfrm(frm, centroDeCosto.Tag.ToString());
         }
 
         private void rubricaciónDeSubDiarios_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmRubricacionDeSubDiarios"))
+            {
+                Negocio.FInicio.MostrarForm("frmRubricacionDeSubDiarios");
+                return;
+            }
+
             frmRubricacionDeSubDiarios frm = new frmRubricacionDeSubDiarios();
             frm.ShowDialog();
         }
 
         private void agenda_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmAgenda"))
+            {
+                Negocio.FInicio.MostrarForm("frmAgenda");
+                return;
+            }
+
             frmAgenda frm = new frmAgenda();
             if (Negocio.FGenerales.ManejarFormularios(frm, this, pbLogo, agenda.Tag.ToString()))
             {
@@ -855,6 +1025,12 @@ namespace SistemaContable
 
         private void parametrosContables_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmParametrosContables"))
+            {
+                Negocio.FInicio.MostrarForm("frmParametrosContables");
+                return;
+            }
+
             frmParametrosContables frm = new frmParametrosContables();
             Negocio.FGenerales.Mostrarfrm(frm, parametrosContables.Tag.ToString());
         }

@@ -135,7 +135,6 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnConfirmar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.btnConfirmar.BorderColor = System.Drawing.Color.White;
@@ -146,7 +145,7 @@
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmar.Location = new System.Drawing.Point(165, 395);
+            this.btnConfirmar.Location = new System.Drawing.Point(165, 365);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(142, 43);
             this.btnConfirmar.TabIndex = 8;
@@ -157,7 +156,6 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(100, 44);
             this.panel2.Name = "panel2";
@@ -166,7 +164,6 @@
             // 
             // tbCodigo
             // 
-            this.tbCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -178,7 +175,6 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel1.Location = new System.Drawing.Point(12, 253);
             this.panel1.Name = "panel1";
@@ -187,7 +183,6 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(96, 74);
             this.panel3.Name = "panel3";
@@ -196,7 +191,6 @@
             // 
             // tbDescripción
             // 
-            this.tbDescripción.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbDescripción.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDescripción.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescripción.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -208,7 +202,6 @@
             // 
             // panel4
             // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Location = new System.Drawing.Point(97, 111);
             this.panel4.Name = "panel4";
@@ -217,7 +210,6 @@
             // 
             // tbNroCuenta
             // 
-            this.tbNroCuenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNroCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbNroCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNroCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -229,7 +221,6 @@
             // 
             // panel5
             // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Location = new System.Drawing.Point(181, 111);
             this.panel5.Name = "panel5";
@@ -238,7 +229,6 @@
             // 
             // tbDescriCuenta
             // 
-            this.tbDescriCuenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbDescriCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDescriCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescriCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -250,7 +240,6 @@
             // 
             // panel6
             // 
-            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Location = new System.Drawing.Point(180, 190);
             this.panel6.Name = "panel6";
@@ -259,7 +248,6 @@
             // 
             // tbDescriContrapartida
             // 
-            this.tbDescriContrapartida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbDescriContrapartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDescriContrapartida.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescriContrapartida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -271,7 +259,6 @@
             // 
             // panel7
             // 
-            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Location = new System.Drawing.Point(96, 190);
             this.panel7.Name = "panel7";
@@ -280,7 +267,6 @@
             // 
             // tbNumContrapartida
             // 
-            this.tbNumContrapartida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNumContrapartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbNumContrapartida.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNumContrapartida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -350,7 +336,6 @@
             this.checkVentas.AllowCheckBoxAnimation = false;
             this.checkVentas.AllowCheckmarkAnimation = true;
             this.checkVentas.AllowOnHoverStates = true;
-            this.checkVentas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkVentas.AutoCheck = true;
             this.checkVentas.BackColor = System.Drawing.Color.Transparent;
             this.checkVentas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkVentas.BackgroundImage")));
@@ -405,7 +390,6 @@
             this.checkCompras.AllowCheckBoxAnimation = false;
             this.checkCompras.AllowCheckmarkAnimation = true;
             this.checkCompras.AllowOnHoverStates = true;
-            this.checkCompras.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkCompras.AutoCheck = true;
             this.checkCompras.BackColor = System.Drawing.Color.Transparent;
             this.checkCompras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkCompras.BackgroundImage")));
@@ -416,7 +400,7 @@
             this.checkCompras.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.checkCompras.Cursor = System.Windows.Forms.Cursors.Default;
             this.checkCompras.CustomCheckmarkImage = null;
-            this.checkCompras.Location = new System.Drawing.Point(142, 297);
+            this.checkCompras.Location = new System.Drawing.Point(142, 288);
             this.checkCompras.MinimumSize = new System.Drawing.Size(17, 17);
             this.checkCompras.Name = "checkCompras";
             this.checkCompras.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -460,7 +444,6 @@
             this.checkTesoreria.AllowCheckBoxAnimation = false;
             this.checkTesoreria.AllowCheckmarkAnimation = true;
             this.checkTesoreria.AllowOnHoverStates = true;
-            this.checkTesoreria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkTesoreria.AutoCheck = true;
             this.checkTesoreria.BackColor = System.Drawing.Color.Transparent;
             this.checkTesoreria.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkTesoreria.BackgroundImage")));
@@ -471,7 +454,7 @@
             this.checkTesoreria.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.checkTesoreria.Cursor = System.Windows.Forms.Cursors.Default;
             this.checkTesoreria.CustomCheckmarkImage = null;
-            this.checkTesoreria.Location = new System.Drawing.Point(142, 329);
+            this.checkTesoreria.Location = new System.Drawing.Point(142, 312);
             this.checkTesoreria.MinimumSize = new System.Drawing.Size(17, 17);
             this.checkTesoreria.Name = "checkTesoreria";
             this.checkTesoreria.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -515,7 +498,6 @@
             this.checkBancos.AllowCheckBoxAnimation = false;
             this.checkBancos.AllowCheckmarkAnimation = true;
             this.checkBancos.AllowOnHoverStates = true;
-            this.checkBancos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBancos.AutoCheck = true;
             this.checkBancos.BackColor = System.Drawing.Color.Transparent;
             this.checkBancos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkBancos.BackgroundImage")));
@@ -526,7 +508,7 @@
             this.checkBancos.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.checkBancos.Cursor = System.Windows.Forms.Cursors.Default;
             this.checkBancos.CustomCheckmarkImage = null;
-            this.checkBancos.Location = new System.Drawing.Point(142, 365);
+            this.checkBancos.Location = new System.Drawing.Point(142, 336);
             this.checkBancos.MinimumSize = new System.Drawing.Size(17, 17);
             this.checkBancos.Name = "checkBancos";
             this.checkBancos.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -578,7 +560,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(165, 299);
+            this.label8.Location = new System.Drawing.Point(165, 290);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(188, 15);
             this.label8.TabIndex = 126;
@@ -589,7 +571,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(165, 331);
+            this.label9.Location = new System.Drawing.Point(165, 314);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(191, 15);
             this.label9.TabIndex = 127;
@@ -600,7 +582,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(165, 367);
+            this.label10.Location = new System.Drawing.Point(165, 338);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(181, 15);
             this.label10.TabIndex = 128;
@@ -698,7 +680,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(469, 450);
+            this.ClientSize = new System.Drawing.Size(469, 423);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);

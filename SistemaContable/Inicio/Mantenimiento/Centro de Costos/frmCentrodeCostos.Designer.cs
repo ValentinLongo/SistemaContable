@@ -48,7 +48,7 @@
             this.dgvCentrodeCosto = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCentrodeCosto)).BeginInit();
@@ -393,6 +393,7 @@
             this.dgvCentrodeCosto.Size = new System.Drawing.Size(621, 342);
             this.dgvCentrodeCosto.TabIndex = 73;
             this.dgvCentrodeCosto.TabStop = false;
+            this.dgvCentrodeCosto.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCentrodeCosto_CellContentDoubleClick);
             // 
             // Column4
             // 
@@ -411,6 +412,8 @@
             this.Column6.HeaderText = "Predefinido";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // lblCantElementos
             // 
@@ -471,9 +474,9 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
         private System.Windows.Forms.DataGridView dgvCentrodeCosto;
+        private System.Windows.Forms.Label lblCantElementos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Label lblCantElementos;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column6;
     }
 }

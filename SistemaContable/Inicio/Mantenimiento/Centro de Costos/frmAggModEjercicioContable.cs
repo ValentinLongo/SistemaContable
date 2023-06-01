@@ -40,35 +40,28 @@ namespace SistemaContable.Inicio.Mantenimiento.Centro_de_Costos
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
-            {
-                if (agg_o_mod == 0)
-                {
-                    txtmsg.Text = "ALTA EN CONCEPTO";
-                    Negocio.Funciones.Mantenimiento.FCentrodeCostos.Agregar(this, txtDescripcion.Text);
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
-                    MessageBox.ShowDialog();
-                }
-                if (agg_o_mod == 1)
-                {
-                    int seleccionado = DGV.CurrentCell.RowIndex;
-                    txtmsg.Text = DGV.Rows[seleccionado].Cells[0].Value.ToString();
-                    Negocio.Funciones.Mantenimiento.FCentrodeCostos.Modificar(this, txtmsg.Text, txtDescripcion.Text);
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
-                    MessageBox.ShowDialog();
-                }
-            }
-            else
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
                 MessageBox.ShowDialog();
+                return;
             }
-        }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            if (agg_o_mod == 0)
+            {
+                txtmsg.Text = "ALTA EN CONCEPTO";
+                Negocio.Funciones.Mantenimiento.FCentrodeCostos.Agregar(this, txtDescripcion.Text);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
+                MessageBox.ShowDialog();
+            }
+            if (agg_o_mod == 1)
+            {
+                int seleccionado = DGV.CurrentCell.RowIndex;
+                txtmsg.Text = DGV.Rows[seleccionado].Cells[0].Value.ToString();
+                Negocio.Funciones.Mantenimiento.FCentrodeCostos.Modificar(this, txtmsg.Text, txtDescripcion.Text);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         //BARRA DE CONTROL
@@ -76,5 +69,10 @@ namespace SistemaContable.Inicio.Mantenimiento.Centro_de_Costos
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }

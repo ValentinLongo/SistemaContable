@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(435, 21);
+            this.panel1.Size = new System.Drawing.Size(341, 21);
             this.panel1.TabIndex = 46;
             this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -101,7 +101,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(367, 0);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(273, 0);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = false;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -140,7 +140,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(3, 54);
+            this.label6.Location = new System.Drawing.Point(20, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 17);
             this.label6.TabIndex = 47;
@@ -151,7 +151,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(0, 90);
+            this.label1.Location = new System.Drawing.Point(17, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 17);
             this.label1.TabIndex = 48;
@@ -162,7 +162,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(9, 127);
+            this.label7.Location = new System.Drawing.Point(30, 127);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 17);
             this.label7.TabIndex = 49;
@@ -173,7 +173,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(11, 162);
+            this.label8.Location = new System.Drawing.Point(33, 162);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 17);
             this.label8.TabIndex = 50;
@@ -186,9 +186,9 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(309, 105);
+            this.btnConfirmar.Location = new System.Drawing.Point(90, 226);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(114, 26);
+            this.btnConfirmar.Size = new System.Drawing.Size(160, 30);
             this.btnConfirmar.TabIndex = 4;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -197,7 +197,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(76, 70);
+            this.panel3.Location = new System.Drawing.Point(93, 70);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(219, 1);
             this.panel3.TabIndex = 53;
@@ -208,7 +208,7 @@
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbCodigo.Location = new System.Drawing.Point(76, 52);
+            this.tbCodigo.Location = new System.Drawing.Point(93, 52);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.ReadOnly = true;
             this.tbCodigo.Size = new System.Drawing.Size(219, 19);
@@ -218,7 +218,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(76, 107);
+            this.panel2.Location = new System.Drawing.Point(93, 107);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(219, 1);
             this.panel2.TabIndex = 55;
@@ -229,7 +229,7 @@
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNombre.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombre.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbNombre.Location = new System.Drawing.Point(76, 89);
+            this.tbNombre.Location = new System.Drawing.Point(93, 89);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.ReadOnly = true;
             this.tbNombre.Size = new System.Drawing.Size(219, 19);
@@ -241,7 +241,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(172, 195);
+            this.label2.Location = new System.Drawing.Point(132, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 56;
@@ -265,7 +265,7 @@
             this.checkVigente.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.checkVigente.Cursor = System.Windows.Forms.Cursors.Default;
             this.checkVigente.CustomCheckmarkImage = null;
-            this.checkVigente.Location = new System.Drawing.Point(149, 194);
+            this.checkVigente.Location = new System.Drawing.Point(109, 194);
             this.checkVigente.MinimumSize = new System.Drawing.Size(17, 17);
             this.checkVigente.Name = "checkVigente";
             this.checkVigente.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -306,7 +306,7 @@
             this.maskDesde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.maskDesde.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskDesde.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.maskDesde.Location = new System.Drawing.Point(77, 131);
+            this.maskDesde.Location = new System.Drawing.Point(91, 130);
             this.maskDesde.Name = "maskDesde";
             this.maskDesde.Size = new System.Drawing.Size(219, 13);
             this.maskDesde.TabIndex = 2;
@@ -317,7 +317,7 @@
             this.maskHasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.maskHasta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskHasta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.maskHasta.Location = new System.Drawing.Point(77, 163);
+            this.maskHasta.Location = new System.Drawing.Point(91, 163);
             this.maskHasta.Name = "maskHasta";
             this.maskHasta.Size = new System.Drawing.Size(219, 13);
             this.maskHasta.TabIndex = 3;
@@ -328,7 +328,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(435, 231);
+            this.ClientSize = new System.Drawing.Size(341, 273);
             this.Controls.Add(this.maskHasta);
             this.Controls.Add(this.maskDesde);
             this.Controls.Add(this.checkVigente);

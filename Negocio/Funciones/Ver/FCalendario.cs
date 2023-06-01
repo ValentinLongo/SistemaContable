@@ -37,11 +37,9 @@ namespace Negocio.Funciones.Ver
             AccesoBase.InsertUpdateDatos($"UPDATE Calendario SET cal_fecha = '{fechanueva}' WHERE cal_usuario = {id} AND cal_fecha = '{fecha}' AND cal_hora = '{hora}' AND cal_observa = '{comentario}'");
         }
 
-        public static int MSGTareas()
+        public static int MSGTareas() //RETORNA UN INT DEPENDIENDO LA DIFERENCIA EN MINUTOS ENTRE LA FECHA ACTUAL Y LA TAREA QUE ESTA POR FINALIZAR
         {
-            string horactual = DateTime.Now.ToLongTimeString();
-            horactual = horactual.Substring(0,5);
-            DateTime HORACTUAL = Convert.ToDateTime(horactual);
+            DateTime HORACTUAL = Convert.ToDateTime(DateTime.Now.ToLongTimeString().Substring(0, 5));
 
             string fechaActual = DateTime.Now.ToShortDateString();
 
@@ -52,14 +50,11 @@ namespace Negocio.Funciones.Ver
 
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT cal_fecha, cal_hora FROM Calendario WHERE cal_usuario = {id} AND cal_fin = 0");
-
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                fecha = dr["cal_fecha"].ToString();
-                fecha = fecha.Substring(0, 10);
+                fecha = dr["cal_fecha"].ToString().Substring(0,10);
+                hora = dr["cal_hora"].ToString().Substring(0,5);
 
-                hora = dr["cal_hora"].ToString();
-                hora = hora.Substring(0, 5);
                 DateTime HORA = Convert.ToDateTime(hora);
 
                 if (fecha == fechaActual)

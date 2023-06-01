@@ -42,7 +42,6 @@
             this.tbLocalidad1 = new System.Windows.Forms.TextBox();
             this.tbLocalidad2 = new System.Windows.Forms.TextBox();
             this.btnBusLoc = new System.Windows.Forms.Button();
-            this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.lblAct = new System.Windows.Forms.Label();
             this.lblFecNac = new System.Windows.Forms.Label();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
@@ -67,6 +66,10 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.dtFechaNacimiento = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +89,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNombre.Location = new System.Drawing.Point(101, 80);
+            this.lblNombre.Location = new System.Drawing.Point(101, 81);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(55, 17);
             this.lblNombre.TabIndex = 1;
@@ -171,7 +174,7 @@
             // 
             // tbLocalidad3
             // 
-            this.tbLocalidad3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.tbLocalidad3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbLocalidad3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLocalidad3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLocalidad3.ForeColor = System.Drawing.Color.White;
@@ -183,7 +186,7 @@
             // 
             // tbLocalidad1
             // 
-            this.tbLocalidad1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.tbLocalidad1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbLocalidad1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLocalidad1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLocalidad1.ForeColor = System.Drawing.Color.White;
@@ -195,7 +198,7 @@
             // 
             // tbLocalidad2
             // 
-            this.tbLocalidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.tbLocalidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbLocalidad2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLocalidad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLocalidad2.ForeColor = System.Drawing.Color.White;
@@ -211,27 +214,19 @@
             this.btnBusLoc.FlatAppearance.BorderSize = 0;
             this.btnBusLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBusLoc.Image = global::SistemaContable.Properties.Resources.lupa;
-            this.btnBusLoc.Location = new System.Drawing.Point(405, 156);
+            this.btnBusLoc.Location = new System.Drawing.Point(405, 152);
             this.btnBusLoc.Name = "btnBusLoc";
             this.btnBusLoc.Size = new System.Drawing.Size(32, 31);
             this.btnBusLoc.TabIndex = 6;
             this.btnBusLoc.UseVisualStyleBackColor = false;
             this.btnBusLoc.Click += new System.EventHandler(this.btnBusLoc_Click);
             // 
-            // dtFechaNacimiento
-            // 
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(171, 407);
-            this.dtFechaNacimiento.Name = "dtFechaNacimiento";
-            this.dtFechaNacimiento.Size = new System.Drawing.Size(235, 20);
-            this.dtFechaNacimiento.TabIndex = 24;
-            this.dtFechaNacimiento.TabStop = false;
-            // 
             // lblAct
             // 
             this.lblAct.AutoSize = true;
             this.lblAct.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAct.Location = new System.Drawing.Point(90, 452);
+            this.lblAct.Location = new System.Drawing.Point(105, 461);
             this.lblAct.Name = "lblAct";
             this.lblAct.Size = new System.Drawing.Size(62, 17);
             this.lblAct.TabIndex = 22;
@@ -242,7 +237,7 @@
             this.lblFecNac.AutoSize = true;
             this.lblFecNac.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecNac.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblFecNac.Location = new System.Drawing.Point(42, 409);
+            this.lblFecNac.Location = new System.Drawing.Point(56, 413);
             this.lblFecNac.Name = "lblFecNac";
             this.lblFecNac.Size = new System.Drawing.Size(111, 17);
             this.lblFecNac.TabIndex = 21;
@@ -261,7 +256,7 @@
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmar.Location = new System.Drawing.Point(161, 497);
+            this.btnConfirmar.Location = new System.Drawing.Point(161, 496);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(153, 44);
             this.btnConfirmar.TabIndex = 12;
@@ -308,7 +303,7 @@
             this.cbActividad.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActividad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbActividad.FormattingEnabled = true;
-            this.cbActividad.Location = new System.Drawing.Point(170, 446);
+            this.cbActividad.Location = new System.Drawing.Point(170, 458);
             this.cbActividad.Name = "cbActividad";
             this.cbActividad.Size = new System.Drawing.Size(236, 25);
             this.cbActividad.TabIndex = 116;
@@ -555,12 +550,69 @@
             this.panel10.Size = new System.Drawing.Size(237, 1);
             this.panel10.TabIndex = 130;
             // 
+            // panel11
+            // 
+            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Location = new System.Drawing.Point(162, 181);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(41, 1);
+            this.panel11.TabIndex = 131;
+            // 
+            // panel12
+            // 
+            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Location = new System.Drawing.Point(209, 181);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(24, 1);
+            this.panel12.TabIndex = 132;
+            // 
+            // panel13
+            // 
+            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Location = new System.Drawing.Point(239, 181);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(160, 1);
+            this.panel13.TabIndex = 133;
+            // 
+            // dtFechaNacimiento
+            // 
+            this.dtFechaNacimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtFechaNacimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.dtFechaNacimiento.BorderColor = System.Drawing.Color.White;
+            this.dtFechaNacimiento.BorderRadius = 1;
+            this.dtFechaNacimiento.Color = System.Drawing.Color.White;
+            this.dtFechaNacimiento.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dtFechaNacimiento.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtFechaNacimiento.DisabledColor = System.Drawing.Color.Gray;
+            this.dtFechaNacimiento.DisplayWeekNumbers = false;
+            this.dtFechaNacimiento.DPHeight = 0;
+            this.dtFechaNacimiento.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtFechaNacimiento.FillDatePicker = false;
+            this.dtFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtFechaNacimiento.ForeColor = System.Drawing.Color.White;
+            this.dtFechaNacimiento.Icon = ((System.Drawing.Image)(resources.GetObject("dtFechaNacimiento.Icon")));
+            this.dtFechaNacimiento.IconColor = System.Drawing.Color.White;
+            this.dtFechaNacimiento.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtFechaNacimiento.LeftTextMargin = 5;
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(170, 407);
+            this.dtFechaNacimiento.MinimumSize = new System.Drawing.Size(4, 32);
+            this.dtFechaNacimiento.Name = "dtFechaNacimiento";
+            this.dtFechaNacimiento.Size = new System.Drawing.Size(236, 32);
+            this.dtFechaNacimiento.TabIndex = 134;
+            // 
             // frmAgregarAgenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(474, 553);
+            this.Controls.Add(this.dtFechaNacimiento);
+            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel11);
             this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.tbDireccion);
@@ -581,7 +633,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnConfirmar);
-            this.Controls.Add(this.dtFechaNacimiento);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblAct);
             this.Controls.Add(this.lblFecNac);
@@ -625,7 +676,6 @@
         private System.Windows.Forms.Button btnBusLoc;
         private System.Windows.Forms.Label lblAct;
         private System.Windows.Forms.Label lblFecNac;
-        private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
@@ -648,5 +698,9 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel13;
+        private Bunifu.UI.WinForms.BunifuDatePicker dtFechaNacimiento;
     }
 }

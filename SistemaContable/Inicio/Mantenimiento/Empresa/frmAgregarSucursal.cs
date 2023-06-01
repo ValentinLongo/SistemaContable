@@ -16,6 +16,7 @@ namespace SistemaContable.Empresa
     {
         string TipoDeOperacion;
         int IdSucursal;
+
         public frmAgregarSucursal(string tipoOperacion)
         {
             InitializeComponent();
@@ -34,28 +35,27 @@ namespace SistemaContable.Empresa
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
-            {
-                if (TipoDeOperacion == "Agregar")
-                {
-                    int id = Negocio.FGenerales.ultimoNumeroID("suc_codigo", "Sucursal");
-                    Datos.AccesoBase.InsertUpdateDatos($"insert into Sucursal(suc_codigo,suc_descri) VALUES({id},'{tbDescripcion.Text}')");
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
-                    MessageBox.ShowDialog();
-                    this.Close();
-                }
-                else if (TipoDeOperacion == "Modificar")
-                {
-                    Datos.AccesoBase.InsertUpdateDatos($"UPDATE Sucursal SET suc_descri = '{tbDescripcion.Text}' WHERE suc_codigo = {IdSucursal}");
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
-                    MessageBox.ShowDialog();
-                    this.Close();
-                }
-            }
-            else
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe ingresar descripción", false);
                 MessageBox.ShowDialog();
+                return;
+            }
+
+            if (TipoDeOperacion == "Agregar")
+            {
+                int id = Negocio.FGenerales.ultimoNumeroID("suc_codigo", "Sucursal");
+                Datos.AccesoBase.InsertUpdateDatos($"insert into Sucursal(suc_codigo,suc_descri) VALUES({id},'{tbDescripcion.Text}')");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+                MessageBox.ShowDialog();
+                this.Close();
+            }
+            else if (TipoDeOperacion == "Modificar")
+            {
+                Datos.AccesoBase.InsertUpdateDatos($"UPDATE Sucursal SET suc_descri = '{tbDescripcion.Text}' WHERE suc_codigo = {IdSucursal}");
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+                MessageBox.ShowDialog();
+                this.Close();
             }
         }
 

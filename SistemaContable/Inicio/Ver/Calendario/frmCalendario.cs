@@ -34,21 +34,21 @@ namespace SistemaContable.Inicio.Ver.Calendario
         {
             dgvCalendario.Rows.Clear();
 
-            bool fin = false;
+            bool fin;
+
             int Finalizadas = 0;
             if (CheckFinalizadas.Checked)
-
             {
                 Finalizadas = 1;
             }
 
+            query = "SELECT cal_usuario, cal_fecha, cal_hora, cal_observa, cal_fin, cal_marcaO, cal_visto FROM Calendario WHERE cal_usuario = " + FLogin.IdUsuario + "AND cal_fin = " + Finalizadas;
+
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT cal_fecha, cal_hora, cal_observa, cal_fin FROM Calendario WHERE cal_usuario = {FLogin.IdUsuario} AND cal_fin = {Finalizadas}");
-            query = "SELECT cal_usuario, cal_fecha, cal_hora, cal_observa, cal_fin, cal_marcaO, cal_visto FROM Calendario WHERE cal_usuario = " + FLogin.IdUsuario + "AND cal_fin = " + Finalizadas;
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                string fecha = dr["cal_fecha"].ToString();
-                fecha = fecha.Substring(0, 10);
+                string fecha = dr["cal_fecha"].ToString().Substring(0,10);
                 string hora = dr["cal_hora"].ToString();
                 string observa = dr["cal_observa"].ToString();
                 if (Convert.ToInt32(dr["cal_fin"]) == 0)
@@ -67,9 +67,7 @@ namespace SistemaContable.Inicio.Ver.Calendario
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            string fecha = dtFecha.Value.ToString();
-            fecha = fecha.Substring(0, 10);
-
+            string fecha = dtFecha.Value.ToString().Substring(0,10);
 
             frmAggModCalendario frm = new frmAggModCalendario(1,fecha);
             frm.ShowDialog();
@@ -143,7 +141,7 @@ namespace SistemaContable.Inicio.Ver.Calendario
             CargarDGV();
         }
 
-        private void dgvCalendario_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvCalendario_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) //PARA FINALIZAR UNA TAREA
         {
             int seleccionado = dgvCalendario.CurrentCell.RowIndex;
             if (seleccionado != -1) 

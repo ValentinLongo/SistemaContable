@@ -37,7 +37,6 @@
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
             this.btnSacarTodo = new RJCodeAdvance.RJControls.RJButton();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
             this.btnAgregarTodo = new RJCodeAdvance.RJControls.RJButton();
@@ -218,26 +217,6 @@
             this.CheckInicio.TabStop = false;
             this.CheckInicio.ThreeState = false;
             this.CheckInicio.ToolTipText = null;
-            // 
-            // rjButton3
-            // 
-            this.rjButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.rjButton3.BorderColor = System.Drawing.Color.White;
-            this.rjButton3.BorderRadius = 0;
-            this.rjButton3.BorderSize = 0;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton3.Location = new System.Drawing.Point(664, 248);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(125, 26);
-            this.rjButton3.TabIndex = 6;
-            this.rjButton3.Tag = "";
-            this.rjButton3.Text = "Restab. Perfil";
-            this.rjButton3.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton3.UseVisualStyleBackColor = false;
             // 
             // btnSacarTodo
             // 
@@ -431,6 +410,7 @@
             this.txtDescriPerfil.ForeColor = System.Drawing.SystemColors.Window;
             this.txtDescriPerfil.Location = new System.Drawing.Point(283, 51);
             this.txtDescriPerfil.Name = "txtDescriPerfil";
+            this.txtDescriPerfil.ReadOnly = true;
             this.txtDescriPerfil.Size = new System.Drawing.Size(147, 19);
             this.txtDescriPerfil.TabIndex = 1;
             this.txtDescriPerfil.Tag = "00000";
@@ -451,6 +431,7 @@
             this.txtNroPerfil.ForeColor = System.Drawing.SystemColors.Window;
             this.txtNroPerfil.Location = new System.Drawing.Point(160, 52);
             this.txtNroPerfil.Name = "txtNroPerfil";
+            this.txtNroPerfil.ReadOnly = true;
             this.txtNroPerfil.Size = new System.Drawing.Size(56, 15);
             this.txtNroPerfil.TabIndex = 0;
             this.txtNroPerfil.Tag = "00000";
@@ -602,7 +583,6 @@
             this.Controls.Add(this.dgvPEspeciales);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.CheckInicio);
-            this.Controls.Add(this.rjButton3);
             this.Controls.Add(this.btnSacarTodo);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.btnAgregarTodo);
@@ -643,7 +623,6 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
-        private RJCodeAdvance.RJControls.RJButton rjButton3;
         private RJCodeAdvance.RJControls.RJButton btnSacarTodo;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
         private RJCodeAdvance.RJControls.RJButton btnAgregarTodo;

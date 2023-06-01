@@ -21,27 +21,26 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
 
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
+
+            maskDesde.Mask = "00/00/0000";
+            maskHasta.Mask = "00/00/0000";
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            string fechadesde = dtdesde.Value.ToString();
-            fechadesde = fechadesde.Substring(0, 10);
-            string fechahasta = dthasta.Value.ToString();
-            fechahasta = fechahasta.Substring(0, 10);
+            string fechadesde = maskDesde.Text.ToString().Substring(0, 10);
+            string fechahasta = maskHasta.Text.ToString().Substring(0, 10);
 
-            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
-            {
-                AccesoBase.InsertUpdateDatos($"INSERT INTO Ejercicio ( eje_codigo, eje_descri, eje_desde, eje_hasta, eje_renumera, eje_asiento, eje_cerrado ) VALUES ( '{txtCodigo.Text}', '{txtDescri.Text}', '{fechadesde}', '{fechahasta}', '{txtRenumeracion.Text}', {txtAsiento.Text}, '0' )");
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
-                MessageBox.ShowDialog();
-                this.Close();
-            }
-            else
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
                 MessageBox.ShowDialog();
             }
+
+            AccesoBase.InsertUpdateDatos($"INSERT INTO Ejercicio (eje_codigo, eje_descri, eje_desde, eje_hasta, eje_renumera, eje_asiento, eje_cerrado) VALUES ('{txtCodigo.Text}', '{txtDescri.Text}', '{fechadesde}', '{fechahasta}', '{txtRenumeracion.Text}', {txtAsiento.Text}, '0')");
+            frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+            MessageBox2.ShowDialog();
+            this.Close();
         }
 
         //BARRA DE CONTROL
@@ -53,6 +52,16 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            maskDesde.Text = dtpDesde.Value.ToString();
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            maskHasta.Text = dtpHasta.Value.ToString();
         }
     }
 }

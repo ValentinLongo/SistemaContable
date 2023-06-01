@@ -47,8 +47,10 @@
             this.txtRenumeracion = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtAsiento = new System.Windows.Forms.TextBox();
-            this.dtdesde = new System.Windows.Forms.DateTimePicker();
-            this.dthasta = new System.Windows.Forms.DateTimePicker();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
+            this.maskHasta = new System.Windows.Forms.MaskedTextBox();
+            this.maskDesde = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -306,23 +308,47 @@
             this.txtAsiento.TabIndex = 3;
             this.txtAsiento.Tag = "10100";
             // 
-            // dtdesde
+            // dtpHasta
             // 
-            this.dtdesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtdesde.Location = new System.Drawing.Point(129, 101);
-            this.dtdesde.Name = "dtdesde";
-            this.dtdesde.Size = new System.Drawing.Size(133, 20);
-            this.dtdesde.TabIndex = 73;
-            this.dtdesde.TabStop = false;
+            this.dtpHasta.Location = new System.Drawing.Point(198, 136);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(17, 20);
+            this.dtpHasta.TabIndex = 179;
+            this.dtpHasta.TabStop = false;
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpHasta_ValueChanged);
             // 
-            // dthasta
+            // dtpDesde
             // 
-            this.dthasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dthasta.Location = new System.Drawing.Point(129, 135);
-            this.dthasta.Name = "dthasta";
-            this.dthasta.Size = new System.Drawing.Size(133, 20);
-            this.dthasta.TabIndex = 74;
-            this.dthasta.TabStop = false;
+            this.dtpDesde.Location = new System.Drawing.Point(198, 103);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(17, 20);
+            this.dtpDesde.TabIndex = 178;
+            this.dtpDesde.TabStop = false;
+            this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
+            // 
+            // maskHasta
+            // 
+            this.maskHasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.maskHasta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskHasta.ForeColor = System.Drawing.Color.White;
+            this.maskHasta.Location = new System.Drawing.Point(128, 139);
+            this.maskHasta.Name = "maskHasta";
+            this.maskHasta.Size = new System.Drawing.Size(63, 15);
+            this.maskHasta.TabIndex = 177;
+            this.maskHasta.Tag = "10000";
+            // 
+            // maskDesde
+            // 
+            this.maskDesde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.maskDesde.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskDesde.ForeColor = System.Drawing.Color.White;
+            this.maskDesde.Location = new System.Drawing.Point(129, 106);
+            this.maskDesde.Name = "maskDesde";
+            this.maskDesde.Size = new System.Drawing.Size(63, 15);
+            this.maskDesde.TabIndex = 176;
+            this.maskDesde.Tag = "10000";
             // 
             // frmAggEjercicioContable
             // 
@@ -330,8 +356,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(446, 301);
-            this.Controls.Add(this.dthasta);
-            this.Controls.Add(this.dtdesde);
+            this.Controls.Add(this.dtpHasta);
+            this.Controls.Add(this.dtpDesde);
+            this.Controls.Add(this.maskHasta);
+            this.Controls.Add(this.maskDesde);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.txtAsiento);
             this.Controls.Add(this.panel4);
@@ -379,7 +407,9 @@
         private System.Windows.Forms.TextBox txtRenumeracion;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtAsiento;
-        private System.Windows.Forms.DateTimePicker dtdesde;
-        private System.Windows.Forms.DateTimePicker dthasta;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
+        private System.Windows.Forms.MaskedTextBox maskHasta;
+        private System.Windows.Forms.MaskedTextBox maskDesde;
     }
 }

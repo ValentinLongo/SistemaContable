@@ -24,7 +24,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
         //datos de los coeficientes
         public static int codigoCoeficiente;
         public static string periodoModificar;
-        public static double coeficienteModificar;
+        public static string coeficienteModificar;
 
         public frmCoeficienteDeAjuste()
         {
@@ -44,17 +44,16 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             dgvEjercicios.Rows.Clear();
             List<MCoeficienteDeAjuste> mCoeficienteDeAjuste = new List<MCoeficienteDeAjuste>();
             mCoeficienteDeAjuste = data.listaEjercicios(check);
-            foreach(var datos in mCoeficienteDeAjuste)
+            foreach (var datos in mCoeficienteDeAjuste)
             {
                 bool cerrado = false;
-                if(datos.eje_cerrado == 1)
+                if (datos.eje_cerrado == 1)
                 {
                     cerrado = true;
                 }
-                dgvEjercicios.Rows.Add(datos.eje_codigo,datos.eje_descri,datos.eje_desde,datos.eje_hasta,cerrado);
+                dgvEjercicios.Rows.Add(datos.eje_codigo, datos.eje_descri, datos.eje_desde, datos.eje_hasta, cerrado);
             }
-
-            Negocio.FGenerales.CantElementos(lblCantElementos,dgvCoeficientes);
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvCoeficientes);
         }
 
         private void checkEjerciciosAbiertos_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
@@ -85,14 +84,11 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
         {
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
-            int codigoEjercicio;
             int indice = e.RowIndex;
             if (indice >= 0)
             {
-                codigoEjercicio = Convert.ToInt32(dgvCoeficientes.Rows[indice].Cells[0].Value.ToString());
-                codigoCoeficiente = codigoEjercicio;
-                periodoModificar = dgvCoeficientes.Rows[indice].Cells[1].Value.ToString();
-                coeficienteModificar = Convert.ToDouble(dgvCoeficientes.Rows[indice].Cells[2].Value.ToString());
+                periodoModificar = dgvCoeficientes.Rows[indice].Cells[0].Value.ToString();
+                coeficienteModificar = dgvCoeficientes.Rows[indice].Cells[1].Value.ToString();
             }
         }
 
@@ -117,12 +113,14 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
         {
             frmAgregarCoeficienteAjuste agregarCoeficienteAjuste = new frmAgregarCoeficienteAjuste("Agregar");
             agregarCoeficienteAjuste.ShowDialog();
+            CargarDGV();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             frmAgregarCoeficienteAjuste agregarCoeficienteAjuste = new frmAgregarCoeficienteAjuste("Modificar");
             agregarCoeficienteAjuste.ShowDialog();
+            CargarDGV();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

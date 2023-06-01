@@ -17,6 +17,7 @@ namespace SistemaContable.Empresa
     {
         public static int codigoSucursal;
         public static string descripcionSucursal;
+
         public frmEmpresa()
         {
             InitializeComponent();
@@ -29,6 +30,8 @@ namespace SistemaContable.Empresa
 
         private void CargarDGV()
         {
+            dgvSucursales.Rows.Clear();
+
             btnModificar.Enabled = false;
 
             DataSet ds = new DataSet();
@@ -87,6 +90,12 @@ namespace SistemaContable.Empresa
             }
         }
 
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte reporte = new frmReporte("Sucursal", FEmpresa.querySucursales, "", "Sucursales", "Todas", DateTime.Now.ToString("d"));
+            reporte.ShowDialog();
+        }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -97,12 +106,6 @@ namespace SistemaContable.Empresa
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-            frmReporte reporte = new frmReporte("Sucursal", FEmpresa.querySucursales, "", "Sucursales", "Todas",DateTime.Now.ToString("d"));
-            reporte.ShowDialog();
         }
     }
 }

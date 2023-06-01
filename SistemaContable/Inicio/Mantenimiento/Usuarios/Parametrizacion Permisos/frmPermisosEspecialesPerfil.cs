@@ -29,8 +29,6 @@ namespace SistemaContable.Parametrizacion_Permisos
             {
                 txtNroPerfil.Text = codigo;
                 txtDescriPerfil.Text = descri;
-                txtNroPerfil.ReadOnly = true;
-                txtDescriPerfil.ReadOnly = true;
                 cbModulo.SelectedIndex = 0;
             }
         }
@@ -63,7 +61,6 @@ namespace SistemaContable.Parametrizacion_Permisos
                 }
                 dgvPEspeciales.Rows.Add(codigo2, modulo, descri, check);
             }
-
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvPEspeciales);
         }
 
@@ -124,7 +121,6 @@ namespace SistemaContable.Parametrizacion_Permisos
             dgvPEspeciales.Rows.Clear();
             cargarDGV("", "", "0");
         }
-
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {

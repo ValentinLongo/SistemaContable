@@ -56,6 +56,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgvCoeficientes = new System.Windows.Forms.DataGridView();
             this.lblCantElementos = new System.Windows.Forms.Label();
+            this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjercicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCoeficientes)).BeginInit();
@@ -66,7 +67,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(10, 241);
+            this.label1.Location = new System.Drawing.Point(10, 274);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 16);
             this.label1.TabIndex = 2;
@@ -77,7 +78,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(15, 36);
+            this.label2.Location = new System.Drawing.Point(15, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 6;
@@ -183,7 +184,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(660, 69);
+            this.btnAgregar.Location = new System.Drawing.Point(660, 83);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(128, 38);
             this.btnAgregar.TabIndex = 2;
@@ -205,7 +206,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(661, 195);
+            this.btnEliminar.Location = new System.Drawing.Point(661, 209);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(128, 38);
             this.btnEliminar.TabIndex = 4;
@@ -227,7 +228,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(661, 132);
+            this.btnModificar.Location = new System.Drawing.Point(661, 146);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(128, 38);
             this.btnModificar.TabIndex = 3;
@@ -249,9 +250,9 @@
             this.btnBuscar.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(454, 31);
+            this.btnBuscar.Location = new System.Drawing.Point(275, 40);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 26);
+            this.btnBuscar.Size = new System.Drawing.Size(100, 22);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
@@ -261,9 +262,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(103, 50);
+            this.panel2.Location = new System.Drawing.Point(103, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(339, 1);
+            this.panel2.Size = new System.Drawing.Size(166, 1);
             this.panel2.TabIndex = 68;
             // 
             // txtBusqueda
@@ -271,9 +272,9 @@
             this.txtBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtBusqueda.Location = new System.Drawing.Point(103, 38);
+            this.txtBusqueda.Location = new System.Drawing.Point(103, 48);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(339, 13);
+            this.txtBusqueda.Size = new System.Drawing.Size(166, 13);
             this.txtBusqueda.TabIndex = 0;
             this.txtBusqueda.Tag = "01000";
             // 
@@ -281,7 +282,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(587, 39);
+            this.label4.Location = new System.Drawing.Point(423, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(204, 13);
             this.label4.TabIndex = 70;
@@ -305,7 +306,7 @@
             this.checkEjerciciosAbiertos.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.checkEjerciciosAbiertos.Cursor = System.Windows.Forms.Cursors.Default;
             this.checkEjerciciosAbiertos.CustomCheckmarkImage = null;
-            this.checkEjerciciosAbiertos.Location = new System.Drawing.Point(569, 36);
+            this.checkEjerciciosAbiertos.Location = new System.Drawing.Point(405, 42);
             this.checkEjerciciosAbiertos.MinimumSize = new System.Drawing.Size(17, 17);
             this.checkEjerciciosAbiertos.Name = "checkEjerciciosAbiertos";
             this.checkEjerciciosAbiertos.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -377,7 +378,7 @@
             this.dgvEjercicios.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEjercicios.EnableHeadersVisualStyles = false;
             this.dgvEjercicios.GridColor = System.Drawing.Color.White;
-            this.dgvEjercicios.Location = new System.Drawing.Point(12, 69);
+            this.dgvEjercicios.Location = new System.Drawing.Point(12, 83);
             this.dgvEjercicios.Name = "dgvEjercicios";
             this.dgvEjercicios.ReadOnly = true;
             this.dgvEjercicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -391,7 +392,7 @@
             this.dgvEjercicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEjercicios.RowHeadersVisible = false;
             this.dgvEjercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEjercicios.Size = new System.Drawing.Size(637, 164);
+            this.dgvEjercicios.Size = new System.Drawing.Size(637, 188);
             this.dgvEjercicios.TabIndex = 71;
             this.dgvEjercicios.TabStop = false;
             this.dgvEjercicios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEjercicios_CellMouseClick);
@@ -433,7 +434,7 @@
             this.dgvCoeficientes.AllowUserToAddRows = false;
             this.dgvCoeficientes.AllowUserToDeleteRows = false;
             this.dgvCoeficientes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvCoeficientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCoeficientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvCoeficientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgvCoeficientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCoeficientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -457,7 +458,7 @@
             this.dgvCoeficientes.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCoeficientes.EnableHeadersVisualStyles = false;
             this.dgvCoeficientes.GridColor = System.Drawing.Color.White;
-            this.dgvCoeficientes.Location = new System.Drawing.Point(11, 260);
+            this.dgvCoeficientes.Location = new System.Drawing.Point(12, 293);
             this.dgvCoeficientes.Name = "dgvCoeficientes";
             this.dgvCoeficientes.ReadOnly = true;
             this.dgvCoeficientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -482,18 +483,36 @@
             this.lblCantElementos.AutoSize = true;
             this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCantElementos.Location = new System.Drawing.Point(10, 514);
+            this.lblCantElementos.Location = new System.Drawing.Point(10, 544);
             this.lblCantElementos.Name = "lblCantElementos";
             this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
             this.lblCantElementos.TabIndex = 73;
             this.lblCantElementos.Text = "Elementos";
+            // 
+            // ShapeBusqueda
+            // 
+            this.ShapeBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ShapeBusqueda.Angle = 0F;
+            this.ShapeBusqueda.BackColor = System.Drawing.Color.Transparent;
+            this.ShapeBusqueda.BorderColor = System.Drawing.Color.White;
+            this.ShapeBusqueda.BorderThickness = 1;
+            this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
+            this.ShapeBusqueda.FillShape = true;
+            this.ShapeBusqueda.Location = new System.Drawing.Point(12, 27);
+            this.ShapeBusqueda.Name = "ShapeBusqueda";
+            this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.ShapeBusqueda.Sides = 5;
+            this.ShapeBusqueda.Size = new System.Drawing.Size(637, 49);
+            this.ShapeBusqueda.TabIndex = 74;
+            this.ShapeBusqueda.TabStop = false;
+            this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
             // frmCoeficienteDeAjuste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(800, 532);
+            this.ClientSize = new System.Drawing.Size(800, 561);
             this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvCoeficientes);
             this.Controls.Add(this.dgvEjercicios);
@@ -508,6 +527,7 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.ShapeBusqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCoeficienteDeAjuste";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -543,5 +563,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column5;
         private System.Windows.Forms.Label lblCantElementos;
+        private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
     }
 }

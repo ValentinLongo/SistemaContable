@@ -23,10 +23,10 @@ namespace SistemaContable.Agenda
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
-            cargarDatos("");
+            cargarDGV("");
         }
 
-        private void cargarDatos(string Nombre)
+        private void cargarDGV(string Nombre)
         {
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
@@ -41,14 +41,14 @@ namespace SistemaContable.Agenda
         {
             frmAgregarAgenda frmAgregarAgenda = new frmAgregarAgenda("Agregar");
             frmAgregarAgenda.ShowDialog();
-            cargarDatos("");
+            cargarDGV("");
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             frmAgregarAgenda frmAgregarAgenda = new frmAgregarAgenda("Modificar");
             frmAgregarAgenda.ShowDialog();
-            cargarDatos("");
+            cargarDGV("");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace SistemaContable.Agenda
                 if (frmMessageBox.Acepto)
                 {
                     AccesoBase.InsertUpdateDatos($"DELETE FROM Agenda WHERE age_codigo = {IdModificar}");
-                    cargarDatos("");
+                    cargarDGV("");
                 }
             }
             catch
@@ -94,7 +94,7 @@ namespace SistemaContable.Agenda
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            cargarDatos(tbDescipcion.Text);
+            cargarDGV(tbDescipcion.Text);
         }
     }
 }

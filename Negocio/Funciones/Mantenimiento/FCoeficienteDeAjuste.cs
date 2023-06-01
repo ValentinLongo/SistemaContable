@@ -29,8 +29,8 @@ namespace Negocio.Funciones.Mantenimiento
                 {
                     eje_codigo = Convert.ToInt32(dr["eje_codigo"].ToString()),
                     eje_descri = dr["eje_descri"].ToString(),
-                    eje_desde = dr["eje_desde"].ToString(),
-                    eje_hasta = dr["eje_hasta"].ToString(),
+                    eje_desde = dr["eje_desde"].ToString().Substring(0,10),
+                    eje_hasta = dr["eje_hasta"].ToString().Substring(0, 10),
                     eje_renumera = Convert.ToInt32(dr["eje_renumera"].ToString()),
                     eje_asiento = Convert.ToInt32(dr["eje_asiento"].ToString()),
                     eje_cerrado = Convert.ToInt32(dr["eje_cerrado"].ToString())
@@ -70,7 +70,7 @@ namespace Negocio.Funciones.Mantenimiento
 
         public DataSet listaCoeficientes(int idEjercicio) 
         {
-            DataSet ds = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {idEjercicio}");
+            DataSet ds = AccesoBase.ListarDatos($"SELECT aji_periodo as Periodo, aji_coef as 'Coeficiente de Ajuste', usu_nombre as Creó, aji_fecalta as Fecha, aji_horaalta as Hora, aji_usumodi as Modificó, aji_fecmodi as FechaModi, aji_horamodi as HoraModi FROM DetAjusteInf LEFT JOIN Usuario on aji_usualta = usu_codigo WHERE aji_ejercicio = {idEjercicio}");
             return ds;
         }
 

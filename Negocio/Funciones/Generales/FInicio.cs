@@ -59,8 +59,7 @@ namespace Negocio
             return tiempo;
         }
 
-        //PARA ABRIR/CERRAR SESIÓN
-        public static void Sesion(Form Inicio, ToolStrip tsAccesosDirectos, int proceso, [Optional] Control Excepcion)
+        public static void Sesion(Form Inicio, ToolStrip tsAccesosDirectos, int proceso, [Optional] Control Excepcion) //PARA ABRIR/CERRAR SESIÓN
         {
             if (proceso == 1) //ABRE
             {

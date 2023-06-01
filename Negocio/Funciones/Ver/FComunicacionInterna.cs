@@ -57,7 +57,6 @@ namespace Negocio.Funciones.Ver
             {
                 return true;
             }
-
             return false;
         }
     }

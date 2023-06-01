@@ -15,8 +15,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
 {
     public partial class frmEjercicioContable : Form
     {
-        string txtbusqueda;
-
         public frmEjercicioContable()
         {
             InitializeComponent();
@@ -28,22 +26,21 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             cbBusqueda.SelectedIndex = 0;
         }
 
+        string txtbusqueda;
+
         public void cargarDGV(string txt)
         {
-            DataSet ds = new DataSet();
-
             txtbusqueda = txt;
-            ds = AccesoBase.ListarDatos($"SELECT eje_codigo as codigo, eje_descri as Descripción ,eje_desde as Desde, eje_hasta as Hasta, eje_cerrado as Cerrado FROM Ejercicio {txt} ORDER BY eje_codigo");
 
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT eje_codigo as codigo, eje_descri as Descripción ,eje_desde as Desde, eje_hasta as Hasta, eje_cerrado as Cerrado FROM Ejercicio {txt} ORDER BY eje_codigo");
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 bool estado = false;
                 string codigo = dr[0].ToString();
                 string descri = dr[1].ToString();
-                string desde = dr[2].ToString();
-                desde = desde.Substring(0, 10);
-                string hasta = dr[3].ToString();
-                hasta = hasta.Substring(0, 10);
+                string desde = dr[2].ToString().Substring(0, 10);
+                string hasta = dr[3].ToString().Substring(0, 10);
                 int cerrado = Convert.ToInt32(dr[4]);
 
                 if (cerrado == 1)
@@ -52,7 +49,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
                 }
                 dgvEjercicioContable.Rows.Add(codigo, descri, desde, hasta, estado);
             }
-
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvEjercicioContable);
         }
 
@@ -108,14 +104,14 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             }
         }
 
-        private void dgvEjercicioContable_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dgvEjercicioContable_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e) //PARA CAMBIAR EL ESTADO DEL EJERCICIO
         {
             string codigo = (string)dgvEjercicioContable.Rows[e.RowIndex].Cells[0].Value;
             bool estado = (bool)dgvEjercicioContable.Rows[e.RowIndex].Cells[4].Value;
 
             if (estado)
             {
-                frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "Atención: El ejercicio contable se encuentra cerrado. ¿Desea abrirlo?", true);
+                frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "Atención: El ejercicio contable se encuentra cerrado. ¿Desea abrirlo?", true, true);
                 MessageBox1.ShowDialog();
                 if (frmMessageBox.Acepto)
                 {
@@ -125,7 +121,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
             }
             else
             {
-                frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "Atención: El ejercicio contable se encuentra abierto. ¿Desea cerrarlo?", true);
+                frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "Atención: El ejercicio contable se encuentra abierto. ¿Desea cerrarlo?", true, true);
                 MessageBox1.ShowDialog();
                 if (frmMessageBox.Acepto)
                 {

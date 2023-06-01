@@ -49,6 +49,24 @@ namespace SistemaContable.Inicio.Mantenimiento
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvCentrodeCosto);
         }
 
+        private void dgvCentrodeCosto_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string codigo = (string)dgvCentrodeCosto.Rows[e.RowIndex].Cells[0].Value;
+            string descri = (string)dgvCentrodeCosto.Rows[e.RowIndex].Cells[1].Value;
+            bool estado = (bool)dgvCentrodeCosto.Rows[e.RowIndex].Cells[2].Value;
+
+            if (estado)
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE CentroC SET cec_predef = '0' WHERE cec_codigo = '{codigo}' AND cec_descri = '{descri}'");
+            }
+            else
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE CentroC SET cec_predef = '1' WHERE cec_codigo = '{codigo}' AND cec_descri = '{descri}'");
+            }
+            dgvCentrodeCosto.Rows.Clear();
+            CargarDGV("");
+        }
+
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             string txtdescri = "";
@@ -101,10 +119,10 @@ namespace SistemaContable.Inicio.Mantenimiento
             CargarDGV("");
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void btnImprimir_Click(object sender, EventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            frmReporte reporte = new frmReporte("CentroC", query, "", "Centro de Costos", "Todos", DateTime.Now.ToString(""));
+            reporte.ShowDialog();
         }
 
         //BARRA DE CONTROL
@@ -112,11 +130,10 @@ namespace SistemaContable.Inicio.Mantenimiento
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-        private void btnImprimir_Click(object sender, EventArgs e)
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            frmReporte reporte = new frmReporte("CentroC", query,"","Centro de Costos","Todos",DateTime.Now.ToString(""));
-            reporte.ShowDialog();
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

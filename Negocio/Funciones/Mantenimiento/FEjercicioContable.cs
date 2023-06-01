@@ -20,7 +20,6 @@ namespace Negocio.Funciones.Mantenimiento
             {
                 codigo = DGV.Rows[seleccion].Cells[0].Value.ToString();
                 Datos.AccesoBase.InsertUpdateDatos($"DELETE FROM Ejercicio WHERE eje_codigo = '{codigo}'");
-                MessageBox.Show("Eliminado correctamente!", "Mensaje");
                 DGV.Rows.Clear();
             }
         }
@@ -36,60 +35,6 @@ namespace Negocio.Funciones.Mantenimiento
                 AccesoBase.InsertUpdateDatos($"UPDATE Ejercicio SET eje_cerrado = '1' WHERE eje_codigo = '{codigo}'");
             }
             DGV.Rows.Clear();
-        }
-
-        public static string Busqueda(DataGridView DGV, TextBox txt, ComboBox cbBusqueda, BunifuCheckBox cbInicio)
-        {
-            if (txt.Text != "")
-            {
-                string txtbusqueda;
-
-                if (cbBusqueda.SelectedIndex == 0)
-                {
-                    if (cbInicio.Checked)
-                    {
-                        txtbusqueda = "WHERE eje_codigo LIKE " + "'" + txt.Text + "%'";
-                    }
-                    else
-                    {
-                        txtbusqueda = "WHERE eje_codigo LIKE " + "'%" + txt.Text + "%'";
-                    }
-                    DGV.Rows.Clear();
-                    return txtbusqueda;
-                }
-                else if (cbBusqueda.SelectedIndex == 1)
-                {
-                    if (cbInicio.Checked)
-                    {
-                        txtbusqueda = "WHERE eje_descri LIKE " + "'" + txt.Text + "%'";
-                    }
-                    else
-                    {
-                        txtbusqueda = "WHERE eje_descri LIKE " + "'%" + txt.Text + "%'";
-                    }
-                    DGV.Rows.Clear();
-                    return txtbusqueda;
-                }
-                else if (cbBusqueda.SelectedIndex == 2)
-                {
-                    if (cbInicio.Checked)
-                    {
-                        txtbusqueda = "WHERE eje_desde LIKE " + "'" + txt.Text + "%'";
-                    }
-                    else
-                    {
-                        txtbusqueda = "WHERE eje_desde LIKE " + "'%" + txt.Text + "%'";
-                    }
-                    DGV.Rows.Clear();
-                    return txtbusqueda;
-                }
-            }
-            else
-            {
-                DGV.Rows.Clear();
-                return "";
-            }
-            return "";
         }
     }
 }
