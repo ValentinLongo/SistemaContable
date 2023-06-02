@@ -67,18 +67,6 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
             }
         }
 
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
@@ -272,7 +260,6 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
             }
             else
             {
-
                 ChAsiMan.Enabled = true;
                 ChInCentroCosto.Enabled = true;
                 ChImpDebe.Enabled = true;
@@ -284,11 +271,19 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
 
         private void tbIdEjercicio_TextChanged(object sender, EventArgs e)
         {
-            if (tbIdEjercicio.Text != "")
+            if (tbIdEjercicio.Text == "")
             {
-                FLibroMayor fLibroMayor = new FLibroMayor();
-                string[] fechasydescri;
-                fechasydescri = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
+                tbDescriEjercicio.Text = "";
+                maskDesde.Text = "";
+                maskHasta.Text = "";
+                return;
+            }
+
+            FLibroMayor fLibroMayor = new FLibroMayor();
+            string[] fechasydescri;
+            fechasydescri = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
+            if (fechasydescri[0] != null && fechasydescri[1] != null && fechasydescri[2] != null)
+            {
                 maskDesde.Text = fechasydescri[0].ToString();
                 maskHasta.Text = fechasydescri[1].ToString();
                 tbDescriEjercicio.Text = fechasydescri[2].ToString();
@@ -299,6 +294,45 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
                 maskDesde.Text = "";
                 maskHasta.Text = "";
             }
+        }
+
+        private void tbIdCuenta_TextChanged(object sender, EventArgs e)
+        {
+            if (tbIdCuenta.Text == "")
+            {
+                tbDescriCuenta.Text = "";
+                cbCentroCosto.SelectedIndex = 0;
+                return;
+            }
+
+            DataSet ds = new DataSet();
+            ds = Negocio.FPlanDeCuentas.BusquedaCuentaPorCuenta(tbIdCuenta.Text);
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                tbDescriCuenta.Text = dr["pcu_descri"].ToString();
+            }
+            cbCentroCosto.SelectedIndex = 2;
+        }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            maskDesde.Text = dtpDesde.Value.ToString();
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            maskDesde.Text = dtpHasta.Value.ToString();
+        }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

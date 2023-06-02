@@ -39,14 +39,14 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             cbBusqueda.SelectedIndex = 0;
         }
 
-        public void CargarDGV1(string busqueda) 
+        public void CargarDGV1(string busqueda)
         {
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT mod_codigo as Codigo, mod_descri as Descripción FROM ModeloEncab {busqueda} ORDER BY mod_codigo");
             dgvDetDeMod1.DataSource = ds.Tables[0];
         }
 
-        public void CargarDGV2() 
+        public void CargarDGV2()
         {
             int seleccion = dgvDetDeMod1.CurrentCell.RowIndex;
             string asiento;
@@ -79,17 +79,17 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                     if (Convert.ToInt32(dr["det_codigo"]) == 1)
                     {
                         debe = dr["Debe"].ToString();
-                        dgvDetDeMod2.Rows.Add(cuenta, descripcion, debe, haber, concepto, centrodecosto,"1", asiento);
+                        dgvDetDeMod2.Rows.Add(cuenta, descripcion, debe, haber, concepto, centrodecosto, "1", asiento);
                     }
                     else if (Convert.ToInt32(dr["det_codigo"]) == 2)
                     {
                         haber = dr["Haber"].ToString();
-                        dgvDetDeMod2.Rows.Add(cuenta, descripcion, debe, haber, concepto, centrodecosto,"2", asiento);
+                        dgvDetDeMod2.Rows.Add(cuenta, descripcion, debe, haber, concepto, centrodecosto, "2", asiento);
                     }
                 }
             }
 
-            Negocio.FGenerales.CantElementos(lblCantElementos,dgvDetDeMod2);
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvDetDeMod2);
         }
 
         private void dgvDetDeMod1_SelectionChanged_1(object sender, EventArgs e)
@@ -128,7 +128,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos(1,cuenta,descri,debe,haber,concepto,centrodecosto);
+            frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos(1, cuenta, descri, debe, haber, concepto, centrodecosto);
 
             frmAddModDetdeModelos.DGV1 = dgvDetDeMod1;
             frmAddModDetdeModelos.DGV2 = dgvDetDeMod2;
@@ -156,7 +156,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                     {
                         importe = dgvDetDeMod2.Rows[seleccionado].Cells[2].Value.ToString();
                     }
-                    else if (codigo == 2) 
+                    else if (codigo == 2)
                     {
                         importe = dgvDetDeMod2.Rows[seleccionado].Cells[3].Value.ToString();
                     }
@@ -185,17 +185,28 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            int seleccionadoDGV2 = dgvDetDeMod2.CurrentCell.RowIndex;
-            if (seleccionadoDGV2 != -1) 
+            if (dgvDetDeMod2.Rows.Count == 0)
             {
-                int seleccionadoDGV1 = dgvDetDeMod1.CurrentCell.RowIndex;
-                string mod_descri = dgvDetDeMod1.Rows[seleccionadoDGV1].Cells[1].Value.ToString();
-
-                string query = "Select *, Case When det_codigo = 1 Then det_importe Else 0 End as det_debe, Case When det_codigo = 2 Then det_importe Else 0 End as det_haber From ModeloDet Left Join Pcuenta on det_cuenta = pcu_cuenta Left Join ModeloEncab on mod_codigo = det_asiento Order By mod_codigo, det_codigo";
-
-                frmReporte freporte = new frmReporte("ModeloDet", $"{query}", "", "Informe de Detalle de Modelos", mod_descri, DateTime.Now.ToString("d"));
-                freporte.ShowDialog();
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error: No hay concepto/s para este modelo.", true);
+                MessageBox.ShowDialog();
+                return;
             }
+
+            int seleccionado = dgvDetDeMod2.CurrentCell.RowIndex;
+            int asiento = Convert.ToInt32(dgvDetDeMod2.Rows[seleccionado].Cells[7].Value);
+
+            string query = $"Select *, Case When det_codigo = 1 Then det_importe Else 0 End as det_debe, Case When det_codigo = 2 Then det_importe Else 0 End as det_haber From ModeloDet Left Join Pcuenta on det_cuenta = pcu_cuenta Left Join ModeloEncab on mod_codigo = det_asiento WHERE det_asiento = {asiento} Order By mod_codigo, det_codigo";
+
+            frmReporte freporte = new frmReporte("ModeloDet", $"{query}", "", "Informe de Detalle de Modelos", "General", DateTime.Now.ToString("d"));
+            freporte.ShowDialog();
+        }
+
+        private void btnResumen_Click(object sender, EventArgs e)
+        {
+            string query = "Select *, Case When det_codigo = 1 Then det_importe Else 0 End as det_debe, Case When det_codigo = 2 Then det_importe Else 0 End as det_haber From ModeloDet Left Join Pcuenta on det_cuenta = pcu_cuenta Left Join ModeloEncab on mod_codigo = det_asiento Order By mod_codigo, det_codigo";
+
+            frmReporte freporte = new frmReporte("ModeloDet", $"{query}", "", "Informe de Detalle de Modelos", "General", DateTime.Now.ToString("d"));
+            freporte.ShowDialog();
         }
 
         //BARRA DE CONTROL

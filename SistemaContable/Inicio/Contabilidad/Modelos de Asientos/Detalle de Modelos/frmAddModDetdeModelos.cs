@@ -28,7 +28,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         public static string asientofrm;
         public static string codigofrm;
 
-        public frmAddModDetdeModelos(int aggmod, [Optional] string cuenta, [Optional] string descri, [Optional] string debe,[Optional] string haber,[Optional] string concepto,[Optional] string centrodecosto)
+        public frmAddModDetdeModelos(int aggmod, [Optional] string cuenta, [Optional] string descri, [Optional] string debe, [Optional] string haber, [Optional] string concepto, [Optional] string centrodecosto)
         {
             InitializeComponent();
 
@@ -60,82 +60,81 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
-            {
-                string asiento;
-                int seleccionado;
-                int contador = 0;
-
-                if (Convert.ToDecimal(txtDebe.Text) > 0)
-                {
-                    contador++;
-                }
-                else
-                {
-                    txtDebe.Text = "0";
-                }
-                if (Convert.ToDecimal(txtHaber.Text) > 0)
-                {
-                    contador++;
-                }
-                else
-                {
-                    txtHaber.Text = "0";
-                }
-
-                if (contador == 1)
-                {
-                    string terminal = frmLogin.NumeroTerminal.ToString();
-
-                    if (agg_o_mod == 0)
-                    {
-                        if (desdeotrofrm)
-                        {
-                            frmAggModVisAsientoContable.nuevoasiento = Negocio.Funciones.Contabilidad.FDetalledeModelos.AgregarAux_MovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString(), codigofrm, terminal, txtDescri.Text);
-                            txtCuenta.Text = "";
-                            txtConcepto.Text = "";
-                            txtDebe.Text = "0,0000";
-                            txtHaber.Text = "0,0000";
-                        }
-                        else
-                        {
-                            seleccionado = DGV1.CurrentCell.RowIndex;
-                            asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
-                            Negocio.Funciones.Contabilidad.FDetalledeModelos.Agregar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString());
-                        }
-
-                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
-                        MessageBox.ShowDialog();
-                    }
-                    else if (agg_o_mod == 1)
-                    {
-                        if (desdeotrofrm)
-                        {
-                            Negocio.Funciones.Contabilidad.FDetalledeModelos.ModificarAux_MovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString(), codigofrm, terminal, txtDescri.Text);
-                            desdeotrofrm = false;
-                        }
-                        else
-                        {
-                            seleccionado = DGV1.CurrentCell.RowIndex;
-                            asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
-                            Negocio.Funciones.Contabilidad.FDetalledeModelos.Modificar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString(), Cuenta, frmDetalledeModelos.Codigo);
-                        }
-                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
-                        MessageBox.ShowDialog();
-                    }
-                }
-                else
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Error en la carga de datos (Debe y Haber)", false);
-                    MessageBox.ShowDialog();
-                    this.Close();
-                }
-            }
-            else
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
+                return;
             }
+
+            string asiento;
+            int seleccionado;
+            int contador = 0;
+
+            if (Convert.ToDecimal(txtDebe.Text) > 0)
+            {
+                contador++;
+            }
+            else
+            {
+                txtDebe.Text = "0";
+            }
+
+            if (Convert.ToDecimal(txtHaber.Text) > 0)
+            {
+                contador++;
+            }
+            else
+            {
+                txtHaber.Text = "0";
+            }
+
+            if (contador != 1)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Error en la carga de datos (Debe y Haber)", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            string terminal = frmLogin.NumeroTerminal.ToString();
+
+            if (agg_o_mod == 0)
+            {
+                if (desdeotrofrm)
+                {
+                    frmAggModVisAsientoContable.nuevoasiento = Negocio.Funciones.Contabilidad.FDetalledeModelos.AgregarAux_MovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString(), codigofrm, terminal, txtDescri.Text);
+                    txtCuenta.Text = "";
+                    txtConcepto.Text = "";
+                    txtDebe.Text = "0,0000";
+                    txtHaber.Text = "0,0000";
+                }
+                else
+                {
+                    seleccionado = DGV1.CurrentCell.RowIndex;
+                    asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
+                    Negocio.Funciones.Contabilidad.FDetalledeModelos.Agregar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString());
+                }
+
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
+                MessageBox.ShowDialog();
+            }
+            else if (agg_o_mod == 1)
+            {
+                if (desdeotrofrm)
+                {
+                    Negocio.Funciones.Contabilidad.FDetalledeModelos.ModificarAux_MovAsto(this, asientofrm, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString(), codigofrm, terminal, txtDescri.Text);
+                    desdeotrofrm = false;
+                }
+                else
+                {
+                    seleccionado = DGV1.CurrentCell.RowIndex;
+                    asiento = DGV1.Rows[seleccionado].Cells[0].Value.ToString();
+                    Negocio.Funciones.Contabilidad.FDetalledeModelos.Modificar(this, asiento, txtCuenta.Text, txtDebe.Text, txtHaber.Text, txtConcepto.Text, cbCentrodeCosto.SelectedValue.ToString(), Cuenta, frmDetalledeModelos.Codigo);
+                }
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
+                MessageBox.ShowDialog();
+            }
+
             this.Close();
         }
 
@@ -186,7 +185,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             ds = AccesoBase.ListarDatos($"SELECT cec_codigo, cec_descri FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{txtCuenta.Text}' AND cec_codigo is not null");
             if (ds.Tables[0].Rows.Count != 0)
             {
-                foreach (DataRow dr in ds.Tables[0].Rows) 
+                foreach (DataRow dr in ds.Tables[0].Rows)
                 {
                     cbCentrodeCosto.DataSource = ds.Tables[0];
                     cbCentrodeCosto.ValueMember = "cec_codigo";

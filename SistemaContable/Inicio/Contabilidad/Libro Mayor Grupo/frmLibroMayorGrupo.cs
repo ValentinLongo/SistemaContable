@@ -103,12 +103,14 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
                             {
                                 EjAnterior = Convert.ToInt32(dr["eje_codigo"].ToString());
                             }
+
                             DataSet ds3 = new DataSet();
                             ds3 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Debe FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {EjAnterior} and mva_codigo = 1 and mva_cuenta = {pcuCuenta}");
                             foreach (DataRow dr in ds3.Tables[0].Rows)
                             {
                                 Debe = Convert.ToDouble(dr["Debe"].ToString());
                             }
+
                             DataSet ds4 = new DataSet();
                             ds4 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {EjAnterior} and mva_codigo = 2 and mva_cuenta = {pcuCuenta}");
                             foreach (DataRow dr in ds4.Tables[0].Rows)
@@ -133,6 +135,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
                         }
                         Debe = Debe + debeSaldo;
                     }
+
                     DataSet ds6 = new DataSet();
                     ds6 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 2 and pcu_codigo = '{pcuCodigo}' and ast_fecha < '{maskDesde.Text}'");
                     foreach (DataRow dr in ds6.Tables[0].Rows)
@@ -155,6 +158,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
                     {
                         saldoEjAnterior = "Case When len(ISNULL(ast_cbte,'')) = 0 Then ast_comenta Else (Case When ast_tipocbte = 1 Then (Case When LEN(ISNULL(ast_cbte,'')) < 14 Then tba_abrev Else tmo_abrev End) Else tmo_abrev End + ' ' + ast_cbte) End AS ast_comenta";
                     }
+
                     string query = $"select ast_fecha as mva_fecha, ast_renumera, mva_comenta, {saldoEjAnterior}, " +
                     $"Case When mva_codigo = 1 Then mva_importe Else 0 End as mva_debe," +
                     $"Case When mva_codigo = 2 Then mva_importe Else 0 End as mva_haber, pcu_descri as mva_descri, cec_descri " +
@@ -163,6 +167,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
                     $"Left Join (CentroCxPCuenta Left Join CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta and cxp_centroc = mva_cc " +
                     $"Where ast_ejercicio = {tbIdEjercicio.Text} and pcu_codigo = '{pcuCodigo}' and ast_fecha >= '{maskDesde.Text}' and ast_fecha <= '{maskHasta.Text}' " +
                     $"ORDER BY ast_tipo, ast_fecha, mva_asiento";
+
                     frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor - Por Grupo", $"{maskDesde.Text}", $"{maskHasta.Text}", pcuDescri, "0", "0", $"{tbDescriEjercicio.Text}");
                     reporte.Show();
                 }
@@ -175,11 +180,19 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
 
         private void tbIdEjercicio_TextChanged(object sender, EventArgs e)
         {
-            if (tbIdEjercicio.Text != "")
+            if (tbIdEjercicio.Text == "")
             {
-                FLibroMayor fLibroMayor = new FLibroMayor();
-                string[] fechasydescri;
-                fechasydescri = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
+                tbDescriEjercicio.Text = "";
+                maskDesde.Text = "";
+                maskHasta.Text = "";
+                return;
+            }
+
+            FLibroMayor fLibroMayor = new FLibroMayor();
+            string[] fechasydescri;
+            fechasydescri = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
+            if (fechasydescri[0] != null && fechasydescri[1] != null && fechasydescri[2] != null)
+            {
                 maskDesde.Text = fechasydescri[0].ToString();
                 maskHasta.Text = fechasydescri[1].ToString();
                 tbDescriEjercicio.Text = fechasydescri[2].ToString();
@@ -192,17 +205,25 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
             }
         }
 
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            maskDesde.Text = dtpDesde.Value.ToString();
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            maskHasta.Text = dtpHasta.Value.ToString();
+        }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
     }
 }

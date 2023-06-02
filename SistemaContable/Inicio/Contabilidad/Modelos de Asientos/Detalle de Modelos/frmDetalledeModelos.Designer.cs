@@ -54,6 +54,7 @@
             this.dgvAux = new System.Windows.Forms.DataGridView();
             this.dgvDetDeMod1 = new System.Windows.Forms.DataGridView();
             this.dgvDetDeMod2 = new System.Windows.Forms.DataGridView();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +63,6 @@
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetDeMod1)).BeginInit();
@@ -177,6 +177,7 @@
             this.btnResumen.Text = "Resumen";
             this.btnResumen.TextColor = System.Drawing.Color.White;
             this.btnResumen.UseVisualStyleBackColor = false;
+            this.btnResumen.Click += new System.EventHandler(this.btnResumen_Click);
             // 
             // cbBusqueda
             // 
@@ -188,7 +189,7 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Codigo",
             "Descripcion"});
-            this.cbBusqueda.Location = new System.Drawing.Point(21, 481);
+            this.cbBusqueda.Location = new System.Drawing.Point(21, 480);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(134, 25);
             this.cbBusqueda.TabIndex = 92;
@@ -454,7 +455,7 @@
             this.dgvDetDeMod2.AllowUserToAddRows = false;
             this.dgvDetDeMod2.AllowUserToDeleteRows = false;
             this.dgvDetDeMod2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvDetDeMod2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDetDeMod2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDetDeMod2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgvDetDeMod2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDetDeMod2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -506,60 +507,6 @@
             this.dgvDetDeMod2.TabStop = false;
             this.dgvDetDeMod2.SelectionChanged += new System.EventHandler(this.dgvDetDeMod2_SelectionChanged_1);
             // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Cuenta";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Descripción";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column11.HeaderText = "Debe";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column12.HeaderText = "Haber";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Concepto";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "CentrodeCosto";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Code
-            // 
-            this.Code.HeaderText = "Codigo";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            this.Code.Visible = false;
-            // 
-            // Asiento
-            // 
-            this.Asiento.HeaderText = "Asiento";
-            this.Asiento.Name = "Asiento";
-            this.Asiento.ReadOnly = true;
-            this.Asiento.Visible = false;
-            // 
             // lblCantElementos
             // 
             this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -571,6 +518,68 @@
             this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
             this.lblCantElementos.TabIndex = 97;
             this.lblCantElementos.Text = "Elementos";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Cuenta";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 78;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Descripción";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 108;
+            // 
+            // Column11
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column11.HeaderText = "Debe";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 66;
+            // 
+            // Column12
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column12.HeaderText = "Haber";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 70;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Concepto";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 93;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "CentrodeCosto";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 128;
+            // 
+            // Code
+            // 
+            this.Code.HeaderText = "Codigo";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            this.Code.Visible = false;
+            this.Code.Width = 77;
+            // 
+            // Asiento
+            // 
+            this.Asiento.HeaderText = "Asiento";
+            this.Asiento.Name = "Asiento";
+            this.Asiento.ReadOnly = true;
+            this.Asiento.Visible = false;
+            this.Asiento.Width = 81;
             // 
             // frmDetalledeModelos
             // 
@@ -626,6 +635,7 @@
         private System.Windows.Forms.DataGridView dgvAux;
         private System.Windows.Forms.DataGridView dgvDetDeMod1;
         private System.Windows.Forms.DataGridView dgvDetDeMod2;
+        private System.Windows.Forms.Label lblCantElementos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
@@ -634,6 +644,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asiento;
-        private System.Windows.Forms.Label lblCantElementos;
     }
 }

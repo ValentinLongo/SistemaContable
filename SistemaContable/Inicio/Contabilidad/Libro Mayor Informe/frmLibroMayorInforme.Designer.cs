@@ -200,6 +200,7 @@
             this.tbIdModelo.Size = new System.Drawing.Size(54, 13);
             this.tbIdModelo.TabIndex = 0;
             this.tbIdModelo.Tag = "10100";
+            this.tbIdModelo.TextChanged += new System.EventHandler(this.tbIdModelo_TextChanged);
             // 
             // label2
             // 
@@ -454,6 +455,7 @@
             this.dtpHasta.Size = new System.Drawing.Size(17, 20);
             this.dtpHasta.TabIndex = 188;
             this.dtpHasta.TabStop = false;
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpHasta_ValueChanged);
             // 
             // dtpDesde
             // 
@@ -462,6 +464,7 @@
             this.dtpDesde.Size = new System.Drawing.Size(17, 20);
             this.dtpDesde.TabIndex = 187;
             this.dtpDesde.TabStop = false;
+            this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
             // maskHasta
             // 

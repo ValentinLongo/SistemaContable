@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLibroDiario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.maskHasta = new System.Windows.Forms.MaskedTextBox();
             this.maskDesde = new System.Windows.Forms.MaskedTextBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -739,6 +741,7 @@
             this.dtpHasta.Size = new System.Drawing.Size(17, 20);
             this.dtpHasta.TabIndex = 175;
             this.dtpHasta.TabStop = false;
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpHasta_ValueChanged);
             // 
             // dtpDesde
             // 
@@ -747,6 +750,7 @@
             this.dtpDesde.Size = new System.Drawing.Size(17, 20);
             this.dtpDesde.TabIndex = 174;
             this.dtpDesde.TabStop = false;
+            this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
             // maskHasta
             // 
@@ -771,6 +775,11 @@
             this.maskDesde.Size = new System.Drawing.Size(63, 15);
             this.maskDesde.TabIndex = 3;
             this.maskDesde.Tag = "10000";
+            // 
+            // timer
+            // 
+            this.timer.Interval = 500;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // frmLibroDiario
             // 
@@ -859,5 +868,6 @@
         private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.MaskedTextBox maskHasta;
         private System.Windows.Forms.MaskedTextBox maskDesde;
+        private System.Windows.Forms.Timer timer;
     }
 }

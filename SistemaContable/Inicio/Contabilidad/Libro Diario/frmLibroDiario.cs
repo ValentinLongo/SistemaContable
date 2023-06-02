@@ -37,7 +37,6 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Diario
             maskDesde.Mask = "00-00-0000";
             maskHasta.Mask = "00-00-0000";
             maskHasta.Text = DateTime.Now.ToShortDateString();
-
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -529,6 +528,16 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Diario
 
         private void tbIdEjercicio_TextChanged(object sender, EventArgs e)
         {
+            if(tbIdEjercicio.Text != "")
+            {
+                timer.Start();
+            }          
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            timer.Stop();
+
             if (tbIdEjercicio.Text == "")
             {
                 maskDesde.Text = "";
@@ -565,6 +574,16 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Diario
                     maskHasta.Text = dr["eje_hasta"].ToString();
                 }
             }
+        }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            maskDesde.Text = dtpDesde.Value.ToString();
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            maskHasta.Text = dtpHasta.Value.ToString();
         }
 
         //BARRA DE CONTROL

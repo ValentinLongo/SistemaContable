@@ -36,7 +36,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
-            this.btnActualizar = new RJCodeAdvance.RJControls.RJButton();
             this.btnEliminar = new RJCodeAdvance.RJControls.RJButton();
             this.btnModificar = new RJCodeAdvance.RJControls.RJButton();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
@@ -164,28 +163,6 @@
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnActualizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnActualizar.BorderColor = System.Drawing.Color.White;
-            this.btnActualizar.BorderRadius = 0;
-            this.btnActualizar.BorderSize = 0;
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Dotum", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(651, 187);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(134, 30);
-            this.btnActualizar.TabIndex = 4;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.TextColor = System.Drawing.Color.White;
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -479,7 +456,6 @@
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.bunifuShapes1);
             this.Controls.Add(this.btnImprimir);
-            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -503,7 +479,6 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
-        private RJCodeAdvance.RJControls.RJButton btnActualizar;
         private RJCodeAdvance.RJControls.RJButton btnEliminar;
         private RJCodeAdvance.RJControls.RJButton btnModificar;
         private RJCodeAdvance.RJControls.RJButton btnAgregar;

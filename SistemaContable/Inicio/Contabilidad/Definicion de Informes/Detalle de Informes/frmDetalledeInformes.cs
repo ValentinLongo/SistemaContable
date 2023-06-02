@@ -35,8 +35,6 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             string query = $"SELECT bal_codigo AS Código, bal_descri AS Descripción FROM Balance {busqueda} ORDER BY bal_codigo";
             ds = AccesoBase.ListarDatos(query);
             dgvDetalleDeInformes1.DataSource = ds.Tables[0];
-
-            Negocio.FGenerales.CantElementos(lblCantElementos, dgvDetalledeInformes2);
         }
 
         private void dgvDetalleDeInformes_SelectionChanged(object sender, EventArgs e)
@@ -50,7 +48,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
                 codigo = "0";
             }
             DataSet ds = new DataSet();
-            Query = $"SELECT * FROM BalanceDet LEFT JOIN PCuenta ON pcu_cuenta = det_ctacont LEFT JOIN Balance on det_codigo = bal_codigo WHERE det_codigo = {codigo}";
+            Query = $"SELECT * FROM BalanceDet LEFT JOIN PCuenta ON pcu_cuenta = det_ctacont LEFT JOIN Balance on det_codigo = bal_codigo WHERE det_codigo = {codigo} ORDER BY det_orden ASC";
             ds = AccesoBase.ListarDatos(Query);
             dgvDetalledeInformes2.Rows.Clear();
             foreach (DataRow dr in ds.Tables[0].Rows)
@@ -69,6 +67,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
                 }
                 dgvDetalledeInformes2.Rows.Add(cuenta, descri, cc, orden);
             }
+
+            Negocio.FGenerales.CantElementos(lblCantElementos, dgvDetalledeInformes2);
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
@@ -83,22 +83,26 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
             int orden = 0;
             int seleccionado = 0;
 
+            int codigo = 0;
+
             try
             {
+                int seleccionadoDGV1 = dgvDetalleDeInformes1.CurrentCell.RowIndex;
+                codigo = Convert.ToInt32(dgvDetalleDeInformes1.Rows[seleccionadoDGV1].Cells[0].Value);
+
                 seleccionado = dgvDetalledeInformes2.CurrentCell.RowIndex;
                 if (seleccionado != -1)
                 {
-                    orden = Convert.ToInt32(dgvDetalledeInformes2.Rows[seleccionado].Cells[3].Value);
-                    orden = orden + 10;
+                    DataSet ds = new DataSet();
+                    ds = AccesoBase.ListarDatos($"SELECT MAX(det_orden) as Orden FROM BalanceDet WHERE det_codigo = {codigo}");
+
+                    orden = Convert.ToInt32(ds.Tables[0].Rows[0]["Orden"]) + 10;
                 }
             }
             catch (Exception)
             {
                 orden = 10;
             }
-
-            int seleccionadoDGV1 = dgvDetalleDeInformes1.CurrentCell.RowIndex;
-            int codigo = Convert.ToInt32(dgvDetalleDeInformes1.Rows[seleccionadoDGV1].Cells[0].Value);
 
             frmAggDetalledeInformes frmAggDetalledeInformes = new frmAggDetalledeInformes(0, orden, 0, codigo);
             frmAggDetalledeInformes.ShowDialog();

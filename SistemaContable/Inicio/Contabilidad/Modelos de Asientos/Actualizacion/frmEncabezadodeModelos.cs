@@ -42,6 +42,7 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
 
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvEncabezadodeModelos);
         }
+
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             string busqueda = "";
@@ -55,6 +56,7 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
             }
             CargarDGV(busqueda);
         }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAggModEncabdeMod.agg_o_mod = 0;
@@ -63,6 +65,7 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
             encabdemod.ShowDialog();
             CargarDGV("");
         }
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
             frmAggModEncabdeMod.agg_o_mod = 1;
@@ -71,6 +74,7 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
             encabdemod.ShowDialog();
             CargarDGV("");
         }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "¿Seguro que Desea Continuar?", true);
@@ -81,9 +85,16 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
                 CargarDGV("");
             }
         }
+
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             CargarDGV("");
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporte reporte = new frmReporte("ModeloEncab", query, "", "Informe de Encabezado de Modelos", "General", DateTime.Now.ToString("d"));
+            reporte.ShowDialog();
         }
 
         //BARRA DE CONTROL
@@ -95,12 +106,6 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-            frmReporte reporte = new frmReporte("ModeloEncab", query, "", "Informe de Encabezado de Modelos", "General", DateTime.Now.ToString("d"));
-            reporte.ShowDialog();
         }
     }
 }

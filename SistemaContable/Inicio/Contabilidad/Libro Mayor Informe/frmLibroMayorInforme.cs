@@ -60,7 +60,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
             }
 
             if (Convert.ToDateTime(maskDesde.Text) <= Convert.ToDateTime(maskHasta.Text))
-            { 
+            {
                 bool BanderaCC;
                 DataSet datos = new DataSet();
                 datos = AccesoBase.ListarDatos($"Select * from BalanceDet Left Join PCuenta on det_ctacont = pcu_cuenta Left Join CentroC on det_cc = cec_codigo WHERE det_codigo = {tbIdModelo.Text}");
@@ -151,6 +151,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
                     $"Left Join (CentroCxPCuenta Left Join CentroC on cxp_centroc = cec_codigo) on cxp_cuenta = mva_cuenta and cxp_centroc = mva_cc " +
                     $"Where det_codigo = {tbIdModelo.Text} and ast_ejercicio = {tbIdEjercicio.Text} and mva_cuenta = {pcuCuenta} and ast_fecha >= '{maskDesde.Text}' and ast_fecha <= '{maskHasta.Text}' " +
                     $"ORDER BY ast_tipo, ast_fecha, mva_asiento";
+
                     frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor - Por Informe", $"{maskDesde.Text}", $"{maskHasta.Text}", pcuDescri, "0", "0", $"{tbDescriEjercicio.Text}");
                     reporte.Show();
                 }
@@ -158,16 +159,24 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
             else
             {
                 MessageBox.Show("La fecha 'Desde' tiene que se menor que la fecha 'Hasta'");
-            }           
+            }
         }
 
         private void tbIdEjercicio_TextChanged(object sender, EventArgs e)
         {
-            if (tbIdEjercicio.Text != "")
+            if (tbIdEjercicio.Text == "")
             {
-                FLibroMayor fLibroMayor = new FLibroMayor();
-                string[] fechasydescri;
-                fechasydescri = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
+                tbDescriEjercicio.Text = "";
+                maskDesde.Text = "";
+                maskHasta.Text = "";
+                return;
+            }
+
+            FLibroMayor fLibroMayor = new FLibroMayor();
+            string[] fechasydescri;
+            fechasydescri = FLibroMayor.fechasDesdeHasta(Convert.ToInt32(tbIdEjercicio.Text));
+            if (fechasydescri[0] != null && fechasydescri[1] != null && fechasydescri[2] != null)
+            {
                 maskDesde.Text = fechasydescri[0].ToString();
                 maskHasta.Text = fechasydescri[1].ToString();
                 tbDescriEjercicio.Text = fechasydescri[2].ToString();
@@ -178,6 +187,43 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Informe
                 maskDesde.Text = "";
                 maskHasta.Text = "";
             }
+        }
+
+        private void tbIdModelo_TextChanged(object sender, EventArgs e)
+        {
+            if (tbIdModelo.Text == "")
+            {
+                tbDescriModelo.Text = "";
+                return;
+            }
+
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT * FROM Balance WHERE bal_codigo = {tbIdModelo.Text}");
+            if (ds.Tables[0].Rows.Count != 0)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    tbDescriModelo.Text = dr["bal_descri"].ToString();
+                }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Modelo de Balance no existe.", false);
+                MessageBox.ShowDialog();
+
+                tbIdModelo.Text = "";
+                tbDescriModelo.Text = "";
+            }
+        }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            maskDesde.Text = dtpDesde.Value.ToString();
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            maskHasta.Text = dtpHasta.Value.ToString();
         }
 
         //BARRA DE CONTROL

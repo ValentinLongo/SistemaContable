@@ -17,6 +17,7 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
     {
         public static int agg_o_mod; // 0 = agregar y 1 = modificar
         public static DataGridView DGV;
+
         public frmAggModEncabdeMod()
         {
             InitializeComponent();
@@ -36,31 +37,32 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
                 txtDescripcion.Text = DGV.Rows[seleccionado].Cells[1].Value.ToString();
             }
         }
+
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
-            {
-                if (agg_o_mod == 0)
-                {
-                    Negocio.Funciones.Contabilidad.FActualizacionMDA.Agregar(this, txtDescripcion.Text);
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
-                    MessageBox.ShowDialog();
-                }
-                else if (agg_o_mod == 1)
-                {
-                    int seleccionado = DGV.CurrentCell.RowIndex;
-                    txtmsg.Text = DGV.Rows[seleccionado].Cells[0].Value.ToString();
-                    Negocio.Funciones.Contabilidad.FActualizacionMDA.Modificar(this, txtmsg.Text, txtDescripcion.Text);
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
-                    MessageBox.ShowDialog();
-                }
-            }
-            else 
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
+                return;
+            }
+
+            if (agg_o_mod == 0)
+            {
+                Negocio.Funciones.Contabilidad.FActualizacionMDA.Agregar(this, txtDescripcion.Text);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
+                MessageBox.ShowDialog();
+            }
+            else if (agg_o_mod == 1)
+            {
+                int seleccionado = DGV.CurrentCell.RowIndex;
+                txtmsg.Text = DGV.Rows[seleccionado].Cells[0].Value.ToString();
+                Negocio.Funciones.Contabilidad.FActualizacionMDA.Modificar(this, txtmsg.Text, txtDescripcion.Text);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
+                MessageBox.ShowDialog();
             }
         }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

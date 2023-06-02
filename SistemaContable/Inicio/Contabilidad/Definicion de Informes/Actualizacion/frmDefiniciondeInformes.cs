@@ -86,11 +86,6 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizaci
             }
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            CargarDGV("");
-        }
-
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             frmReporte reporte = new frmReporte("ModBalance", Query, "", "Informe de Modelos de Balance", "General", DateTime.Now.ToString("d"));
