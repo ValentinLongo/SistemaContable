@@ -338,7 +338,7 @@
             this.txtConcepto.Name = "txtConcepto";
             this.txtConcepto.Size = new System.Drawing.Size(220, 19);
             this.txtConcepto.TabIndex = 5;
-            this.txtConcepto.Tag = "11010";
+            this.txtConcepto.Tag = "00000";
             // 
             // cbCentrodeCosto
             // 

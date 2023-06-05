@@ -75,17 +75,13 @@ namespace SistemaContable.Plan_de_Cuentas
         private void frmConControlBar()
         {
             ControlBar.Visible = true;
-            dgvCuentas.Size = new Size(973, 464);
-            dgvCuentas.Location = new Point(12, 92);
-            btnAgregar.Location = new Point(992, 92);
-            btnModificar.Location = new Point(992, 143);
-            btnEliminar.Location = new Point(992, 193);
-            btnImprimir.Location = new Point(992, 453);
-            ShapeBusqueda.Location = new Point(12, 38);
-            lblBusqueda.Location = new Point(21, 29);
-            txtDescri.Location = new Point(21, 57);
-            txtBusqueda.Location = new Point(212, 13);
-            panel2.Location = new Point(115, 72);
+            ShapeBusqueda.Size = new Size(874, 56);
+            ShapeBusqueda.Location = new Point(18, 27);
+            txtDescri.Location = new Point(59, 47);
+            txtBusqueda.Location = new Point(153, 47);
+            panel2.Location = new Point(153, 61);
+            CheckInicio.Location = new Point(819, 46);
+            label5.Location = new Point(842, 49);
             MostrarControlBar = false;
         }
 

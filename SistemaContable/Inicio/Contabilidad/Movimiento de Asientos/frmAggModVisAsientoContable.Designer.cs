@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblControlBar = new System.Windows.Forms.Label();
@@ -61,16 +61,17 @@
             this.btnPlandeCta = new RJCodeAdvance.RJControls.RJButton();
             this.btnModelo = new RJCodeAdvance.RJControls.RJButton();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
-            this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.dgvAddModVisASIENTO = new System.Windows.Forms.DataGridView();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCantElementos = new System.Windows.Forms.Label();
             this.footer = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDebe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnHaber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maskFecha = new System.Windows.Forms.MaskedTextBox();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddModVisASIENTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.footer)).BeginInit();
@@ -311,7 +312,7 @@
             this.txtComentario.Location = new System.Drawing.Point(94, 181);
             this.txtComentario.Name = "txtComentario";
             this.txtComentario.Size = new System.Drawing.Size(542, 19);
-            this.txtComentario.TabIndex = 3;
+            this.txtComentario.TabIndex = 4;
             this.txtComentario.Tag = "01010";
             // 
             // panel4
@@ -350,7 +351,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(665, 34);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(124, 41);
-            this.btnConfirmar.TabIndex = 4;
+            this.btnConfirmar.TabIndex = 5;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -380,7 +381,7 @@
             this.btnGenerar.Location = new System.Drawing.Point(665, 213);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(124, 41);
-            this.btnGenerar.TabIndex = 5;
+            this.btnGenerar.TabIndex = 6;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.TextColor = System.Drawing.Color.White;
             this.btnGenerar.UseVisualStyleBackColor = false;
@@ -402,7 +403,7 @@
             this.btnPlandeCta.Location = new System.Drawing.Point(665, 316);
             this.btnPlandeCta.Name = "btnPlandeCta";
             this.btnPlandeCta.Size = new System.Drawing.Size(124, 41);
-            this.btnPlandeCta.TabIndex = 7;
+            this.btnPlandeCta.TabIndex = 8;
             this.btnPlandeCta.Text = "Plan de Cta";
             this.btnPlandeCta.TextColor = System.Drawing.Color.White;
             this.btnPlandeCta.UseVisualStyleBackColor = false;
@@ -424,7 +425,7 @@
             this.btnModelo.Location = new System.Drawing.Point(665, 265);
             this.btnModelo.Name = "btnModelo";
             this.btnModelo.Size = new System.Drawing.Size(124, 41);
-            this.btnModelo.TabIndex = 6;
+            this.btnModelo.TabIndex = 7;
             this.btnModelo.Text = "Modelo";
             this.btnModelo.TextColor = System.Drawing.Color.White;
             this.btnModelo.UseVisualStyleBackColor = false;
@@ -446,21 +447,11 @@
             this.btnImprimir.Location = new System.Drawing.Point(664, 429);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(124, 41);
-            this.btnImprimir.TabIndex = 8;
+            this.btnImprimir.TabIndex = 9;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // dtFecha
-            // 
-            this.dtFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha.Location = new System.Drawing.Point(64, 152);
-            this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(97, 20);
-            this.dtFecha.TabIndex = 129;
-            this.dtFecha.TabStop = false;
             // 
             // dgvAddModVisASIENTO
             // 
@@ -483,10 +474,11 @@
             this.dgvAddModVisASIENTO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column8,
             this.Column9,
-            this.Column10,
-            this.Column11,
+            this.ColumnDebe,
+            this.ColumnHaber,
             this.Column12,
-            this.Column13});
+            this.Column13,
+            this.Codigo});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -514,52 +506,9 @@
             this.dgvAddModVisASIENTO.Size = new System.Drawing.Size(624, 256);
             this.dgvAddModVisASIENTO.TabIndex = 130;
             this.dgvAddModVisASIENTO.TabStop = false;
+            this.dgvAddModVisASIENTO.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAddModVisASIENTO_CellFormatting);
             this.dgvAddModVisASIENTO.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgvAddModVisASIENTO_Scroll);
             this.dgvAddModVisASIENTO.DoubleClick += new System.EventHandler(this.dgvAddModVisASIENTO_DoubleClick_1);
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Cuenta";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 70;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Descripción";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 225;
-            // 
-            // Column10
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column10.HeaderText = "Debe";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column11.HeaderText = "Haber";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Concepto";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 200;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "CentroDeCostos";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Width = 200;
             // 
             // lblCantElementos
             // 
@@ -623,16 +572,79 @@
             this.footer.TabIndex = 132;
             this.footer.TabStop = false;
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Cuenta";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 70;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Descripción";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 225;
+            // 
+            // ColumnDebe
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnDebe.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColumnDebe.HeaderText = "Debe";
+            this.ColumnDebe.Name = "ColumnDebe";
+            this.ColumnDebe.ReadOnly = true;
+            // 
+            // ColumnHaber
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnHaber.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColumnHaber.HeaderText = "Haber";
+            this.ColumnHaber.Name = "ColumnHaber";
+            this.ColumnHaber.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Concepto";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 200;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "CentroDeCostos";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 200;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Visible = false;
+            // 
+            // maskFecha
+            // 
+            this.maskFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.maskFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskFecha.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.maskFecha.Location = new System.Drawing.Point(64, 154);
+            this.maskFecha.Mask = "00/00/0000";
+            this.maskFecha.Name = "maskFecha";
+            this.maskFecha.Size = new System.Drawing.Size(100, 13);
+            this.maskFecha.TabIndex = 3;
+            this.maskFecha.Tag = "10100";
+            // 
             // frmAggModVisAsientoContable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(800, 492);
+            this.Controls.Add(this.maskFecha);
             this.Controls.Add(this.footer);
             this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvAddModVisASIENTO);
-            this.Controls.Add(this.dtFecha);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnModelo);
             this.Controls.Add(this.btnPlandeCta);
@@ -692,16 +704,17 @@
         private RJCodeAdvance.RJControls.RJButton btnPlandeCta;
         private RJCodeAdvance.RJControls.RJButton btnModelo;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
-        private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.DataGridView dgvAddModVisASIENTO;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.Label lblCantElementos;
         private System.Windows.Forms.DataGridView footer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDebe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnHaber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.MaskedTextBox maskFecha;
     }
 }

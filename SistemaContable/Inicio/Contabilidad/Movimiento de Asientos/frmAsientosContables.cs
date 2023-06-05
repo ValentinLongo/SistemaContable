@@ -72,34 +72,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             Cursor.Current = Cursors.Default;
         }
 
-        private void ActualizarFooter(string busqueda, string manuales, string modificados, string diferencia)
-        {
-            if (diferencia != "")
-            {
-                diferencia = "HAVING sum(case when mva_codigo = 1 then mva_importe else 0 end) <> sum(case when mva_codigo = 2 then mva_importe else 0 end)";
-            }
-
-            if (dgvAsientosContables.Rows.Count != 0)
-            {
-                DataSet ds = new DataSet();
-                ds = AccesoBase.ListarDatos($"SELECT sum(X.Debe) as Debe, Sum(X.Haber) as Haber FROM(SELECT ast_asiento, sum(case when mva_codigo = 1 then mva_importe else 0 end) as Debe, sum(case when mva_codigo = 2 then mva_importe else 0 end) as Haber FROM MovAsto left join Asiento on mva_asiento = ast_asiento left join Ejercicio on ast_ejercicio = eje_codigo left join TipAsto on ast_tipo = tas_codigo left join (select usu_codigo as UsuCod, usu_nombre as UsuModi1 FROM Usuario) as Z on ast_usumodi = Z.UsuCod WHERE ast_ejercicio = '{cbSeleccion.SelectedValue}' {busqueda} {manuales} {modificados} Group By ast_asiento {diferencia} ) as X");
-
-                footer.Columns[2].HeaderText = "Totales:";
-                footer.Columns[3].HeaderText = ds.Tables[0].Rows[0]["Debe"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["Debe"]), 2).ToString();
-                footer.Columns[4].HeaderText = ds.Tables[0].Rows[0]["Haber"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["Haber"]), 2).ToString();
-
-                footer.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                footer.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-
-                DataGridViewColumn columna = dgvAsientosContables.Columns["Debe"];
-                columna.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                columna.Width = footer.Columns[3].Width;
-                DataGridViewColumn columna2 = dgvAsientosContables.Columns["Haber"];
-                columna2.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                columna2.Width = footer.Columns[4].Width;
-            }
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (cbSeleccion.SelectedIndex > -1)
@@ -167,11 +139,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
         }
 
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
-        {
-            timerBusqueda.Start();
-        }
-
         private void cbBusqueda_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbBusqueda.Text == "Asiento")
@@ -227,6 +194,11 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             CargarDGV("", manuales, modificados, diferencia);
         }
 
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            timerBusqueda.Start();
+        }
+
         private void timerBusqueda_Tick(object sender, EventArgs e)
         {
             timerBusqueda.Stop();
@@ -274,6 +246,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 {
                     frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El asiento ha sido generado en forma automatica por el sistema. No podra ser anulado.", false);
                     MessageBox.ShowDialog();
+                    return;
                 }
 
                 int ID = FLogin.IdUsuario;
@@ -293,10 +266,11 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 {
                     frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: No tiene permisos para anular el asiento", false);
                     MessageBox.ShowDialog();
+                    return;
                 }
                 if (validado == 2)
                 {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error en los datos de la conexion", true);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Seguro que desea Anular el Asiento Contable?", true);
                     MessageBox.ShowDialog();
                     if (frmMessageBox.Acepto)
                     {
@@ -333,7 +307,34 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 footer.Columns.Add(col);
             }
         }
+        private void ActualizarFooter(string busqueda, string manuales, string modificados, string diferencia)
+        {
+            if (diferencia != "")
+            {
+                diferencia = "HAVING sum(case when mva_codigo = 1 then mva_importe else 0 end) <> sum(case when mva_codigo = 2 then mva_importe else 0 end)";
+            }
 
+            if (dgvAsientosContables.Rows.Count != 0)
+            {
+                DataSet ds = new DataSet();
+                ds = AccesoBase.ListarDatos($"SELECT sum(X.Debe) as Debe, Sum(X.Haber) as Haber FROM(SELECT ast_asiento, sum(case when mva_codigo = 1 then mva_importe else 0 end) as Debe, sum(case when mva_codigo = 2 then mva_importe else 0 end) as Haber FROM MovAsto left join Asiento on mva_asiento = ast_asiento left join Ejercicio on ast_ejercicio = eje_codigo left join TipAsto on ast_tipo = tas_codigo left join (select usu_codigo as UsuCod, usu_nombre as UsuModi1 FROM Usuario) as Z on ast_usumodi = Z.UsuCod WHERE ast_ejercicio = '{cbSeleccion.SelectedValue}' {busqueda} {manuales} {modificados} Group By ast_asiento {diferencia} ) as X");
+
+                footer.Columns[2].HeaderText = "Totales:";
+                footer.Columns[3].HeaderText = ds.Tables[0].Rows[0]["Debe"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["Debe"]), 2).ToString();
+                footer.Columns[4].HeaderText = ds.Tables[0].Rows[0]["Haber"] is DBNull ? "0" : Math.Round(Convert.ToDouble(ds.Tables[0].Rows[0]["Haber"]), 2).ToString();
+
+                footer.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                footer.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                DataGridViewColumn columna = dgvAsientosContables.Columns["Debe"];
+                columna.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                columna.Width = footer.Columns[3].Width;
+                DataGridViewColumn columna2 = dgvAsientosContables.Columns["Haber"];
+                columna2.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                columna2.Width = footer.Columns[4].Width;
+            }
+        }
+       
         private void dgvAsientosContables_Scroll(object sender, ScrollEventArgs e)
         {
             if (dgvAsientosContables.HorizontalScrollingOffset == e.NewValue)
@@ -358,6 +359,5 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
         }
         //
-
     }
 }
