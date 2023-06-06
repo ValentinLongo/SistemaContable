@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Negocio
 {
@@ -28,7 +27,7 @@ namespace Negocio
             string Tag4 = "";
             string Tag5 = "";
 
-            //Convierte todos los tb en mayuscula
+            //txt en mayuscula
             Tag2 = Tags(txt.Tag.ToString(), 2);
             if (Tag2 == "1")
             {
@@ -36,7 +35,7 @@ namespace Negocio
                 txt.KeyPress -= TextBox_KeyPress_numeros;
             }
 
-            //tb solo numeros
+            //txt solo numeros
             Tag3 = Tags(txt.Tag.ToString(), 3);
             if (Tag3 == "1") 
             {
@@ -44,7 +43,7 @@ namespace Negocio
                 txt.KeyPress -= TextBox_KeyPress_letras;
             }
 
-            //tb solo letras
+            //txt solo letras
             Tag4 = Tags(txt.Tag.ToString(), 4);
             if (Tag4 == "1") 
             {
@@ -52,7 +51,7 @@ namespace Negocio
                 txt.KeyPress -= TextBox_KeyPress_numeros;
             }
 
-            //tb numeros y coma
+            //txt numeros y coma
             Tag5 = Tags(txt.Tag.ToString(), 5);
             if (Tag5 == "1")
             {
@@ -64,7 +63,6 @@ namespace Negocio
                 if (e.KeyCode == Keys.Enter)
                 {
                     formulario.SelectNextControl((Control)txt, true, true, true, true);
-                    //SendKeys.Send("{TAB}");
                 }
             }
 
@@ -90,6 +88,7 @@ namespace Negocio
                 {
                     e.Handled = true;                    
                 }
+
                 // solo 1 coma decimal
                 //if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
                 //{

@@ -69,12 +69,12 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             CargarDGV();
         }
 
-        private void dgvEjercicios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvEjercicios_SelectionChanged(object sender, EventArgs e)
         {
-            int indice = e.RowIndex;
-            if (indice >= 0)
+            int RowIndex = dgvEjercicios.Rows.IndexOf(dgvEjercicios.SelectedRows[0]);
+            if (RowIndex >= 0)
             {
-                codigoEjercicio = Convert.ToInt32(dgvEjercicios.Rows[indice].Cells[0].Value.ToString());
+                codigoEjercicio = Convert.ToInt32(dgvEjercicios.Rows[RowIndex].Cells[0].Value.ToString());
                 DataSet ds = data.listaCoeficientes(codigoEjercicio);
                 dgvCoeficientes.DataSource = ds.Tables[0];
             }
@@ -89,23 +89,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             {
                 periodoModificar = dgvCoeficientes.Rows[indice].Cells[0].Value.ToString();
                 coeficienteModificar = dgvCoeficientes.Rows[indice].Cells[1].Value.ToString();
-            }
-        }
-
-        private void btnBuscar_Click_1(object sender, EventArgs e)
-        {
-            dgvCoeficientes.Rows.Clear();
-            dgvEjercicios.Rows.Clear();
-            List<MCoeficienteDeAjuste> mCoeficienteDeAjuste = new List<MCoeficienteDeAjuste>();
-            mCoeficienteDeAjuste = data.ejercicioParticular(check, txtBusqueda.Text);
-            foreach (var datos in mCoeficienteDeAjuste)
-            {
-                bool cerrado = false;
-                if (datos.eje_cerrado == 1)
-                {
-                    cerrado = true;
-                }
-                dgvEjercicios.Rows.Add(datos.eje_codigo, datos.eje_descri, datos.eje_desde, datos.eje_hasta, cerrado);
             }
         }
 
@@ -139,6 +122,28 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error", false);
                 MessageBox.ShowDialog();
+            }
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBusqueda.Text == "")
+            {
+                CargarDGV();
+                return;
+            }
+
+            dgvEjercicios.Rows.Clear();
+            List<MCoeficienteDeAjuste> mCoeficienteDeAjuste = new List<MCoeficienteDeAjuste>();
+            mCoeficienteDeAjuste = data.ejercicioParticular(check, txtBusqueda.Text);
+            foreach (var datos in mCoeficienteDeAjuste)
+            {
+                bool cerrado = false;
+                if (datos.eje_cerrado == 1)
+                {
+                    cerrado = true;
+                }
+                dgvEjercicios.Rows.Add(datos.eje_codigo, datos.eje_descri, datos.eje_desde, datos.eje_hasta, cerrado);
             }
         }
 

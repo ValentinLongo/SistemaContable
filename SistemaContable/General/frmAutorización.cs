@@ -58,7 +58,6 @@ namespace SistemaContable
 
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"select ter_pideAutCodBarra from terminal where ter_codigo = {terminal}");
-
             if ((ds.Tables[0].Rows[0]["ter_pideAutCodBarra"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["ter_pideAutCodBarra"])) == 1)
             {
                 frmCodigoBarra codigobarra = new frmCodigoBarra();
@@ -86,63 +85,61 @@ namespace SistemaContable
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
+                return;
             }
 
             usuario = txtUsuario.Text;
             contraseña = txtContraseña.Text;
 
             bool autorizado = Autoriza(PERFIL, CAMBIA, TIPO.ToString(), COD1.ToString(), COD2.ToString(), COD3, DESCRI1, DESCRI2, DESCRI3, OBSERVA, REFERENCIA);
-            if (autorizado)
+            if (autorizado == false)
             {
-                if (FRM != null)
+                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Autorización Denegada!", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            if (FRM == null)
+            {
+                this.Close();
+                frmAutorización.usuario = "";
+                frmAutorización.contraseña = "";
+            }
+
+            if (FRM is frmInicio)
+            {
+                this.Close();
+                frmAutorización.usuario = "";
+                frmAutorización.contraseña = "";
+
+                frmMessageBox MessageBox1 = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos del menu?", true);
+                MessageBox1.ShowDialog();
+                if (frmMessageBox.Acepto)
                 {
-                    if (FRM is frmInicio)
-                    {
-                        this.Close();
-                        frmAutorización.usuario = "";
-                        frmAutorización.contraseña = "";
-
-                        frmMessageBox MessageBox1 = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos del menu?", true);
-                        MessageBox1.ShowDialog();
-                        if (frmMessageBox.Acepto)
-                        {
-                            frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
-                            estandar.Show();
-                            Application.DoEvents();
-                            Negocio.Funciones.FRecalcularPermisos.RecalcularPermisos(frmInicio.m1, frmInicio.m2, frmInicio.m3, frmInicio.m4, frmInicio.m5, FRM);
-                            estandar.Close();
-                        }
-
-                        frmMessageBox MessageBox2 = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos especiales?", true);
-                        MessageBox2.ShowDialog();
-                        if (frmMessageBox.Acepto)
-                        {
-                            frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...");
-                            estandar.Show();
-                            Application.DoEvents();
-                            Negocio.Funciones.FRecalcularPermisos.RecalcularPermisosEspeciales();
-                            estandar.Close();
-                        }
-                    }
-                    else
-                    {
-                        FRM.Show();
-                        this.Close();
-                        frmAutorización.usuario = "";
-                        frmAutorización.contraseña = "";
-                    }
+                    frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
+                    estandar.Show();
+                    Application.DoEvents();
+                    Negocio.Funciones.FRecalcularPermisos.RecalcularPermisos(frmInicio.m1, frmInicio.m2, frmInicio.m3, frmInicio.m4, frmInicio.m5, FRM);
+                    estandar.Close();
                 }
-                else
+
+                frmMessageBox MessageBox2 = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos especiales?", true);
+                MessageBox2.ShowDialog();
+                if (frmMessageBox.Acepto)
                 {
-                    this.Close();
-                    frmAutorización.usuario = "";
-                    frmAutorización.contraseña = "";
+                    frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...");
+                    estandar.Show();
+                    Application.DoEvents();
+                    Negocio.Funciones.FRecalcularPermisos.RecalcularPermisosEspeciales();
+                    estandar.Close();
                 }
             }
             else
             {
-                frmMessageBox MessageBox = new frmMessageBox("Atención!", "Autorización Denegada!", false);
-                MessageBox.ShowDialog();
+                FRM.Show();
+                this.Close();
+                frmAutorización.usuario = "";
+                frmAutorización.contraseña = "";
             }
         }
 
@@ -150,14 +147,7 @@ namespace SistemaContable
         {
             PERFIL = perfil;
             CAMBIA = cambia;
-            if (tipo == null || tipo == "")
-            {
-                TIPO = 0;
-            }
-            else
-            {
-                TIPO = Convert.ToInt32(tipo);
-            }
+            TIPO = tipo == null || tipo == "" ? TIPO = 0 : TIPO = Convert.ToInt32(tipo);
             COD1 = Convert.ToInt32(cod1);
             COD2 = Convert.ToInt32(cod2);
             COD3 = cod3;
@@ -177,11 +167,10 @@ namespace SistemaContable
 
                 DataSet ds = new DataSet();
                 ds = AccesoBase.ListarDatos($"SELECT usu_perfil, usu_estado FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contraseña}'");
-                foreach (DataRow dr in ds.Tables[0].Rows)
+                if (ds.Tables[0].Rows.Count != 0)
                 {
-                    perfilautorizacion = Convert.ToInt32(dr["usu_perfil"]);
-                    estado = Convert.ToInt32(dr["usu_estado"]);
-
+                    perfilautorizacion = Convert.ToInt32(ds.Tables[0].Rows[0]["usu_perfil"]);
+                    estado = Convert.ToInt32(ds.Tables[0].Rows[0]["usu_estado"]);
                 }
 
                 int resultado = AccesoBase.ValidarDatos($"SELECT usu_login, usu_contraseña FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contraseña}'");
@@ -221,61 +210,60 @@ namespace SistemaContable
                 {
                     frmMessageBox MessageBox = new frmMessageBox("Atención!", "No se puede solicitar autorizacion remota en este caso.", false);
                     MessageBox.ShowDialog();
+                    return;
+                }
+
+                string hora = DateTime.Now.ToLongTimeString();
+                string fecha = DateTime.Now.ToShortDateString();
+                int terminal = frmLogin.NumeroTerminal;
+
+                codigo = Negocio.FGenerales.ultimoNumeroID("aut_codigo", "Autoriza");
+
+                if (timer1.Enabled == false)
+                {
+                    timer1.Enabled = true;
+                    txtUsuario.Enabled = false;
+                    txtContraseña.Enabled = false;
+                    btnAcceder.Enabled = false;
+                    label1.Text = "ESPERANDO AUTORIZACIÓN...";
+
+                    switch (TIPO)
+                    {
+                        case 1:
+                            AccesoBase.InsertUpdateDatos($"INSERT INTO Autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', {terminal}, {TIPO}, '{REFERENCIA}')");
+                            break;
+
+                        case 2:
+                            AccesoBase.InsertUpdateDatos($"INSERT INTO Autoriza (aut_codigo, aut_cod1, aut_descri1, aut_descri2, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{DESCRI2}', '{usuario}', '{fecha}', '{hora}', {terminal},{TIPO},'{REFERENCIA}')");
+                            break;
+
+                        case 3:
+                            AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_descri2, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_observa, aut_cod3, aut_descri3, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{DESCRI2}', '{usuario}', '{fecha}', '{hora}', {terminal}, {TIPO}, '{OBSERVA}', '{COD3}', '{DESCRI3}', '{REFERENCIA}')");
+                            break;
+
+                        case 4:
+                            AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', {terminal}, {TIPO}, '{REFERENCIA}')");
+                            break;
+
+                        case 5:
+                            AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', {terminal}, {TIPO}, '{REFERENCIA}')");
+                            break;
+
+                        case 6:
+                            AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', '{terminal}', {TIPO}, '{REFERENCIA}')");
+                            break;
+                    }
                 }
                 else
                 {
-                    string hora = DateTime.Now.ToLongTimeString();
-                    string fecha = DateTime.Now.ToShortDateString();
-                    int terminal = frmLogin.NumeroTerminal;
-
-                    codigo = Negocio.FGenerales.ultimoNumeroID("aut_codigo", "Autoriza");
-
-                    if (timer1.Enabled == false)
-                    {
-                        timer1.Enabled = true;
-                        txtUsuario.Enabled = false;
-                        txtContraseña.Enabled = false;
-                        btnAcceder.Enabled = false;
-                        label1.Text = "ESPERANDO AUTORIZACIÓN...";
-
-                        switch (TIPO)
-                        {
-                            case 1:
-                                AccesoBase.InsertUpdateDatos($"INSERT INTO Autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', {terminal}, {TIPO}, '{REFERENCIA}')");
-                                break;
-
-                            case 2:
-                                AccesoBase.InsertUpdateDatos($"INSERT INTO Autoriza (aut_codigo, aut_cod1, aut_descri1, aut_descri2, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{DESCRI2}', '{usuario}', '{fecha}', '{hora}', {terminal},{TIPO},'{REFERENCIA}')");
-                                break;
-
-                            case 3:
-                                AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_descri2, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_observa, aut_cod3, aut_descri3, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{DESCRI2}', '{usuario}', '{fecha}', '{hora}', {terminal}, {TIPO}, '{OBSERVA}', '{COD3}', '{DESCRI3}', '{REFERENCIA}')");
-                                break;
-
-                            case 4:
-                                AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', {terminal}, {TIPO}, '{REFERENCIA}')");
-                                break;
-
-                            case 5:
-                                AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', {terminal}, {TIPO}, '{REFERENCIA}')");
-                                break;
-
-                            case 6:
-                                AccesoBase.InsertUpdateDatos($"INSERT INTO autoriza (aut_codigo, aut_cod1, aut_descri1, aut_usuarioO, aut_fechaO, aut_horaO, aut_terminalO, aut_tipo, aut_referencia) VALUES ({codigo}, {COD1}, '{DESCRI1}', '{usuario}', '{fecha}', '{hora}', '{terminal}', {TIPO}, '{REFERENCIA}')");
-                                break;
-                        }
-                    }
-                    else
-                    {
-                        label1.Text = "Solicitud de Autorización";
-                        timer1.Enabled = false;
-                        txtUsuario.Enabled = true;
-                        txtContraseña.Enabled = true;
-                        btnAcceder.Enabled = true;
-                        txtUsuario.Text = "";
-                        txtContraseña.Text = "";
-                        AccesoBase.InsertUpdateDatos($"DELETE FROM autoriza where aut_codigo = {codigo}");
-                    }
+                    label1.Text = "Solicitud de Autorización";
+                    timer1.Enabled = false;
+                    txtUsuario.Enabled = true;
+                    txtContraseña.Enabled = true;
+                    btnAcceder.Enabled = true;
+                    txtUsuario.Text = "";
+                    txtContraseña.Text = "";
+                    AccesoBase.InsertUpdateDatos($"DELETE FROM autoriza where aut_codigo = {codigo}");
                 }
             }
         }
@@ -297,58 +285,53 @@ namespace SistemaContable
 
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Ocurrió un problema en la solicitud de Autorización, intentelo Nuevamente o Autorize en forma Local.", false, true);
                 MessageBox.ShowDialog();
+                return;
             }
-            else
+
+            int bandera = 0;
+            int usu_autorizo = 0;
+            string observacion = "";
+
+            foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                int bandera = 0;
-                int usu_autorizo = 0;
-                string observacion = "";
-
-                foreach (DataRow dr in ds.Tables[0].Rows)
+                if (dr["aut_bandera"] != null && dr["aut_usuauto"] != null)
                 {
-                    if (dr["aut_bandera"] != null && dr["aut_usuauto"] != null)
-                    {
-                        bandera = Convert.ToInt32(dr["aut_bandera"]);
-                        usu_autorizo = Convert.ToInt32(dr["aut_usuauto"]);
-                        observacion = dr["aut_observa"].ToString();
-                    }
-                }
-
-                if (bandera == 1)
-                {
-                    timer1.Enabled = false;
-                    txtUsuario.Enabled = true;
-                    txtContraseña.Enabled = true;
-                    btnAcceder.Enabled = true;
-                    label1.Text = "AUTORIZADO!!!";
-
-                    ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_codigo = {usu_autorizo} AND usu_estado = 1 ");
-                    foreach (DataRow dr in ds.Tables[0].Rows)
-                    {
-                        txtUsuario.Text = dr["usu_login"].ToString();
-                        txtContraseña.Text = dr["usu_contraseña"].ToString();
-                    }
-
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La operación ha sido Autorizada. Aclaración: " + observacion, false, true);
-                    MessageBox.ShowDialog();
-
-                    AccesoBase.InsertUpdateDatos($"DELETE FROM Autoriza WHERE aut_codigo = {codigo}");
-                }
-                else if (bandera == 2)
-                {
-                    timer1.Enabled = false;
-                    txtUsuario.Enabled = true;
-                    txtContraseña.Enabled = true;
-                    btnAcceder.Enabled = true;
-                    label1.Text = "RECHAZADO!!!";
-
-                    AccesoBase.InsertUpdateDatos($"DELETE FROM Autoriza WHERE aut_codigo = {codigo}");
-
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La operación ha sido Rechazada. Aclaración: " + observacion, false, true);
-                    MessageBox.ShowDialog();
+                    bandera = Convert.ToInt32(dr["aut_bandera"]);
+                    usu_autorizo = Convert.ToInt32(dr["aut_usuauto"]);
+                    observacion = dr["aut_observa"].ToString();
                 }
             }
 
+            if (bandera == 1)
+            {
+                timer1.Enabled = false;
+                txtUsuario.Enabled = true;
+                txtContraseña.Enabled = true;
+                btnAcceder.Enabled = true;
+                label1.Text = "AUTORIZADO!!!";
+
+                ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_codigo = {usu_autorizo} AND usu_estado = 1 ");
+                txtUsuario.Text = ds.Tables[0].Rows[0]["usu_login"].ToString();
+                txtContraseña.Text = ds.Tables[0].Rows[0]["usu_contraseña"].ToString();
+
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La operación ha sido Autorizada. Aclaración: " + observacion, false, true);
+                MessageBox.ShowDialog();
+
+                AccesoBase.InsertUpdateDatos($"DELETE FROM Autoriza WHERE aut_codigo = {codigo}");
+            }
+            else if (bandera == 2)
+            {
+                timer1.Enabled = false;
+                txtUsuario.Enabled = true;
+                txtContraseña.Enabled = true;
+                btnAcceder.Enabled = true;
+                label1.Text = "RECHAZADO!!!";
+
+                AccesoBase.InsertUpdateDatos($"DELETE FROM Autoriza WHERE aut_codigo = {codigo}");
+
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La operación ha sido Rechazada. Aclaración: " + observacion, false, true);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void pbOcultar_Click(object sender, EventArgs e)

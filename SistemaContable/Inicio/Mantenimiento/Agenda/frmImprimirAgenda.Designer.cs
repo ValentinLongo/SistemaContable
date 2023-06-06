@@ -47,7 +47,7 @@
             this.cbActividad.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActividad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbActividad.FormattingEnabled = true;
-            this.cbActividad.Location = new System.Drawing.Point(109, 67);
+            this.cbActividad.Location = new System.Drawing.Point(109, 39);
             this.cbActividad.Name = "cbActividad";
             this.cbActividad.Size = new System.Drawing.Size(258, 25);
             this.cbActividad.TabIndex = 118;
@@ -57,7 +57,7 @@
             this.lblAct.AutoSize = true;
             this.lblAct.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAct.Location = new System.Drawing.Point(41, 70);
+            this.lblAct.Location = new System.Drawing.Point(41, 42);
             this.lblAct.Name = "lblAct";
             this.lblAct.Size = new System.Drawing.Size(62, 17);
             this.lblAct.TabIndex = 117;
@@ -70,7 +70,7 @@
             this.cbLocalidad.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLocalidad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbLocalidad.FormattingEnabled = true;
-            this.cbLocalidad.Location = new System.Drawing.Point(109, 104);
+            this.cbLocalidad.Location = new System.Drawing.Point(109, 76);
             this.cbLocalidad.Name = "cbLocalidad";
             this.cbLocalidad.Size = new System.Drawing.Size(258, 25);
             this.cbLocalidad.TabIndex = 120;
@@ -80,7 +80,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(41, 107);
+            this.label1.Location = new System.Drawing.Point(41, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 119;
@@ -99,7 +99,7 @@
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmar.Location = new System.Drawing.Point(150, 166);
+            this.btnConfirmar.Location = new System.Drawing.Point(146, 120);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(153, 44);
             this.btnConfirmar.TabIndex = 121;
@@ -119,6 +119,7 @@
             this.panel7.Size = new System.Drawing.Size(444, 21);
             this.panel7.TabIndex = 122;
             this.panel7.Tag = "1";
+            this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             // 
             // lblControlBar
             // 
@@ -198,7 +199,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(444, 243);
+            this.ClientSize = new System.Drawing.Size(444, 181);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.cbLocalidad);

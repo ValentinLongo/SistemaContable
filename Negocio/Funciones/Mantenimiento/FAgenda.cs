@@ -56,12 +56,12 @@ namespace Negocio
                     age_fecnac = dr["age_fecnac"].ToString(),
                     age_actividad = dr["age_actividad"].ToString()
                 };
-                if(agenda.age_codpos1.ToString() != "")
+                if (agenda.age_codpos1.ToString() != "")
                 {
                     DataSet ds2 = AccesoBase.ListarDatos($"SELECT * FROM Localidad WHERE loc_cod1 = {agenda.age_codpos1} and loc_cod2 = {agenda.age_codpos2}");
-                    if(ds2.Tables[0].Rows.Count > 0)
+                    if (ds2.Tables[0].Rows.Count > 0)
                     {
-                        foreach(DataRow dr2 in ds2.Tables[0].Rows)
+                        foreach (DataRow dr2 in ds2.Tables[0].Rows)
                         {
                             agenda.localidad = dr2["loc_nombre"].ToString();
                         }
@@ -98,9 +98,10 @@ namespace Negocio
         {
             int id = 0;
             DataSet ds = AccesoBase.ListarDatos($"SELECT * FROM Actividad WHERE act_descri = '{descripcion}'");
-            foreach (DataRow dr in ds.Tables[0].Rows)
+            if (ds.Tables[0].Rows.Count != 0)
             {
-                id = Convert.ToInt32(dr["act_codigo"].ToString());
+                id = Convert.ToInt32(ds.Tables[0].Rows[0]["act_codigo"]);
+                return id;
             }
             return id;
         }

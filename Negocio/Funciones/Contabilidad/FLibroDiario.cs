@@ -12,7 +12,6 @@ namespace Negocio.Funciones.Contabilidad
 {
     public class FLibroDiario
     {
-
         public static double SaldoInicial(int NroEjer, string DESDE, int tipo) // tipo 1 = DEBE / tipo 2 = HABER
         {
             DataSet ds = new DataSet();
@@ -21,46 +20,33 @@ namespace Negocio.Funciones.Contabilidad
             {
                 return 0;
             }
-            else
+
+            string desde = ds.Tables[0].Rows[0]["eje_desde"].ToString();
+
+            if (Convert.ToDateTime(desde) == Convert.ToDateTime(DESDE))
             {
-                string desde = "";
+                return 0;
+            }
 
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    desde = dr["eje_desde"].ToString();
-                }
+            DataSet ds2 = new DataSet();
+            ds2 = AccesoBase.ListarDatos($"SELECT sum(case when mva_codigo = 1 then mva_importe else 0 end) as mva_debe, sum(case when mva_codigo = 2 then mva_importe = 0 end) as mva_haber FROM MovAsto LEFT JOIN PCuenta on mva_cuenta = pcu_cuenta LEFT JOIN asiento on ast_asiento = mva_asiento WHERE ast_ejercicio = {NroEjer} AND ast_fecha < '{Convert.ToDateTime(DESDE)}'");
+            if (ds2.Tables[0].Rows.Count == 0)
+            {
+                return 0;
+            }
 
-                if (Convert.ToDateTime(desde) == Convert.ToDateTime(DESDE))
-                {
-                    return 0;
-                }
-
-                DataSet ds2 = new DataSet();
-                ds2 = AccesoBase.ListarDatos($"SELECT sum(case when mva_codigo = 1 then mva_importe else 0 end) as mva_debe, sum(case when mva_codigo = 2 then mva_importe = 0 end) as mva_haber FROM MovAsto LEFT JOIN PCuenta on mva_cuenta = pcu_cuenta LEFT JOIN asiento on ast_asiento = mva_asiento WHERE ast_ejercicio = {NroEjer} AND ast_fecha < '{Convert.ToDateTime(DESDE)}'");
-                if (ds2.Tables[0].Rows.Count == 0)
-                {
-                    return 0;
-                }
-                else
-                {
-                    foreach (DataRow dr2 in ds2.Tables[0].Rows)
-                    {
-                        if (tipo == 1)
-                        {
-                            return (dr2["mva_debe"] is DBNull ? 0 : Convert.ToDouble(dr2["mva_debe"]));
-                        }
-                        else if (tipo == 2)
-                        {
-                            return (dr2["mva_haber"] is DBNull ? 0 : Convert.ToDouble(dr2["mva_haber"]));
-                        }
-                    }
-                }
+            if (tipo == 1)
+            {
+                return (ds2.Tables[0].Rows[0]["mva_debe"] is DBNull ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["mva_debe"]));
+            }
+            else if (tipo == 2)
+            {
+                return (ds2.Tables[0].Rows[0]["mva_haber"] is DBNull ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["mva_haber"]));
             }
             return 0;
         }
 
-        //PARA HACER RADIOBUTTONS LOS CHECKBOX (POR EL DISEÑO)
-        public static void RadioButton(int tipo, BunifuCheckBox check1, BunifuCheckBox check2, BunifuCheckBox check3)
+        public static void RadioButton(int tipo, BunifuCheckBox check1, BunifuCheckBox check2, BunifuCheckBox check3) //para hacer radiobuttons los checkbox (por el diseño)
         {
             switch (tipo)
             {
@@ -74,7 +60,7 @@ namespace Negocio.Funciones.Contabilidad
                         check2.Checked = false;
                         check3.Checked = false;
                     }
-                break;
+                    break;
 
                 case 2:
                     if (check1.Checked == false && check2.Checked == false && check3.Checked == false)

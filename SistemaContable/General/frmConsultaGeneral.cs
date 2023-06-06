@@ -26,6 +26,7 @@ namespace SistemaContable.General
         private static string prefijo;
         private static string columnaCod;
         private static string columnaDescri;
+
         public frmConsultaGeneral(string asterisco, string tabla, string where, string orden, string pref, string colCod, string colDescri)
         {
             InitializeComponent();

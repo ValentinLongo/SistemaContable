@@ -34,8 +34,8 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Diario
             CheckInfDet.Checked = true;
             CheckImpStandar.Checked = true;
 
-            maskDesde.Mask = "00-00-0000";
-            maskHasta.Mask = "00-00-0000";
+            maskDesde.Mask = "00/00/0000";
+            maskHasta.Mask = "00/00/0000";
             maskHasta.Text = DateTime.Now.ToShortDateString();
         }
 
@@ -44,6 +44,20 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Diario
             if (tbIdEjercicio.Text == "")
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debera Seleccionar un Ejercicio Contable.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            if (Negocio.FGenerales.ValidacionHoraFecha(2, maskDesde) == false)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Fecha Desde Invalida.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            if (Negocio.FGenerales.ValidacionHoraFecha(2, maskHasta) == false)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Fecha Hasta Invalida.", false);
                 MessageBox.ShowDialog();
                 return;
             }

@@ -28,19 +28,44 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            string fechadesde = maskDesde.Text.ToString().Substring(0, 10);
-            string fechahasta = maskHasta.Text.ToString().Substring(0, 10);
-
             if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
                 MessageBox.ShowDialog();
+                return;
             }
+
+            if (Negocio.FGenerales.ValidacionHoraFecha(2, maskDesde) == false)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Fecha Desde Invalida.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            if (Negocio.FGenerales.ValidacionHoraFecha(2, maskHasta) == false)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Fecha Hasta Invalida.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            string fechadesde = maskDesde.Text.ToString().Substring(0, 10);
+            string fechahasta = maskHasta.Text.ToString().Substring(0, 10);
 
             AccesoBase.InsertUpdateDatos($"INSERT INTO Ejercicio (eje_codigo, eje_descri, eje_desde, eje_hasta, eje_renumera, eje_asiento, eje_cerrado) VALUES ('{txtCodigo.Text}', '{txtDescri.Text}', '{fechadesde}', '{fechahasta}', '{txtRenumeracion.Text}', {txtAsiento.Text}, '0')");
             frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
             MessageBox2.ShowDialog();
             this.Close();
+        }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            maskDesde.Text = dtpDesde.Value.ToString();
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            maskHasta.Text = dtpHasta.Value.ToString();
         }
 
         //BARRA DE CONTROL
@@ -52,16 +77,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void dtpDesde_ValueChanged(object sender, EventArgs e)
-        {
-            maskDesde.Text = dtpDesde.Value.ToString();
-        }
-
-        private void dtpHasta_ValueChanged(object sender, EventArgs e)
-        {
-            maskHasta.Text = dtpHasta.Value.ToString();
         }
     }
 }

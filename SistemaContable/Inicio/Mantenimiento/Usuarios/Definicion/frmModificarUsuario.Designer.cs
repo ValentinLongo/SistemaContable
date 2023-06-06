@@ -32,7 +32,6 @@
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.cbPerfil = new System.Windows.Forms.ComboBox();
             this.tbLogin = new System.Windows.Forms.TextBox();
-            this.dtFechaNachimiento = new System.Windows.Forms.DateTimePicker();
             this.tbTelefono = new System.Windows.Forms.TextBox();
             this.tbDireccion = new System.Windows.Forms.TextBox();
             this.tbNombre = new System.Windows.Forms.TextBox();
@@ -63,6 +62,7 @@
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.Check = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dtFechaNachimiento = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +75,7 @@
             this.cbEstado.Items.AddRange(new object[] {
             "ACTIVO",
             "INACTIVO"});
-            this.cbEstado.Location = new System.Drawing.Point(151, 281);
+            this.cbEstado.Location = new System.Drawing.Point(151, 291);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(256, 21);
             this.cbEstado.TabIndex = 34;
@@ -87,7 +87,7 @@
             this.cbPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbPerfil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbPerfil.FormattingEnabled = true;
-            this.cbPerfil.Location = new System.Drawing.Point(151, 249);
+            this.cbPerfil.Location = new System.Drawing.Point(151, 259);
             this.cbPerfil.Name = "cbPerfil";
             this.cbPerfil.Size = new System.Drawing.Size(256, 21);
             this.cbPerfil.TabIndex = 33;
@@ -98,19 +98,11 @@
             this.tbLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbLogin.Location = new System.Drawing.Point(150, 221);
+            this.tbLogin.Location = new System.Drawing.Point(150, 231);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(231, 13);
             this.tbLogin.TabIndex = 4;
             this.tbLogin.Tag = "11000";
-            // 
-            // dtFechaNachimiento
-            // 
-            this.dtFechaNachimiento.Location = new System.Drawing.Point(151, 185);
-            this.dtFechaNachimiento.Name = "dtFechaNachimiento";
-            this.dtFechaNachimiento.Size = new System.Drawing.Size(257, 20);
-            this.dtFechaNachimiento.TabIndex = 31;
-            this.dtFechaNachimiento.TabStop = false;
             // 
             // tbTelefono
             // 
@@ -150,7 +142,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(93, 281);
+            this.label10.Location = new System.Drawing.Point(93, 291);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 16);
             this.label10.TabIndex = 27;
@@ -161,7 +153,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(101, 249);
+            this.label9.Location = new System.Drawing.Point(101, 259);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 16);
             this.label9.TabIndex = 26;
@@ -172,7 +164,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(99, 217);
+            this.label8.Location = new System.Drawing.Point(99, 227);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 16);
             this.label8.TabIndex = 25;
@@ -183,7 +175,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(0, 185);
+            this.label7.Location = new System.Drawing.Point(0, 193);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(146, 16);
             this.label7.TabIndex = 24;
@@ -291,7 +283,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(151, 233);
+            this.panel5.Location = new System.Drawing.Point(151, 243);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(229, 1);
             this.panel5.TabIndex = 41;
@@ -299,7 +291,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(150, 364);
+            this.panel6.Location = new System.Drawing.Point(150, 374);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(252, 1);
             this.panel6.TabIndex = 55;
@@ -309,7 +301,7 @@
             this.tbVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbVendedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbVendedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbVendedor.Location = new System.Drawing.Point(150, 352);
+            this.tbVendedor.Location = new System.Drawing.Point(150, 362);
             this.tbVendedor.Name = "tbVendedor";
             this.tbVendedor.Size = new System.Drawing.Size(252, 13);
             this.tbVendedor.TabIndex = 5;
@@ -320,7 +312,7 @@
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = global::SistemaContable.Properties.Resources.lupa;
-            this.btnBuscar.Location = new System.Drawing.Point(421, 342);
+            this.btnBuscar.Location = new System.Drawing.Point(421, 352);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(31, 27);
             this.btnBuscar.TabIndex = 6;
@@ -333,7 +325,7 @@
             this.cbSeccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbSeccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbSeccion.FormattingEnabled = true;
-            this.cbSeccion.Location = new System.Drawing.Point(151, 315);
+            this.cbSeccion.Location = new System.Drawing.Point(151, 325);
             this.cbSeccion.Name = "cbSeccion";
             this.cbSeccion.Size = new System.Drawing.Size(257, 21);
             this.cbSeccion.TabIndex = 52;
@@ -344,7 +336,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(84, 316);
+            this.label12.Location = new System.Drawing.Point(84, 326);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 16);
             this.label12.TabIndex = 51;
@@ -355,7 +347,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(74, 349);
+            this.label11.Location = new System.Drawing.Point(74, 359);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(72, 16);
             this.label11.TabIndex = 50;
@@ -488,7 +480,7 @@
             this.Check.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Check.Cursor = System.Windows.Forms.Cursors.Default;
             this.Check.CustomCheckmarkImage = null;
-            this.Check.Location = new System.Drawing.Point(148, 394);
+            this.Check.Location = new System.Drawing.Point(148, 401);
             this.Check.MinimumSize = new System.Drawing.Size(17, 17);
             this.Check.Name = "Check";
             this.Check.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -530,11 +522,37 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(171, 396);
+            this.label2.Location = new System.Drawing.Point(171, 403);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(255, 16);
             this.label2.TabIndex = 60;
             this.label2.Text = "El usuario no posee un vendedor definido";
+            // 
+            // dtFechaNachimiento
+            // 
+            this.dtFechaNachimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtFechaNachimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.dtFechaNachimiento.BorderColor = System.Drawing.Color.White;
+            this.dtFechaNachimiento.BorderRadius = 1;
+            this.dtFechaNachimiento.Color = System.Drawing.Color.White;
+            this.dtFechaNachimiento.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dtFechaNachimiento.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtFechaNachimiento.DisabledColor = System.Drawing.Color.Gray;
+            this.dtFechaNachimiento.DisplayWeekNumbers = false;
+            this.dtFechaNachimiento.DPHeight = 0;
+            this.dtFechaNachimiento.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtFechaNachimiento.FillDatePicker = false;
+            this.dtFechaNachimiento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtFechaNachimiento.ForeColor = System.Drawing.Color.White;
+            this.dtFechaNachimiento.Icon = ((System.Drawing.Image)(resources.GetObject("dtFechaNachimiento.Icon")));
+            this.dtFechaNachimiento.IconColor = System.Drawing.Color.White;
+            this.dtFechaNachimiento.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtFechaNachimiento.LeftTextMargin = 5;
+            this.dtFechaNachimiento.Location = new System.Drawing.Point(152, 185);
+            this.dtFechaNachimiento.MinimumSize = new System.Drawing.Size(4, 32);
+            this.dtFechaNachimiento.Name = "dtFechaNachimiento";
+            this.dtFechaNachimiento.Size = new System.Drawing.Size(252, 32);
+            this.dtFechaNachimiento.TabIndex = 70;
             // 
             // frmModificarUsuario
             // 
@@ -542,6 +560,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(505, 505);
+            this.Controls.Add(this.dtFechaNachimiento);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Check);
             this.Controls.Add(this.panel7);
@@ -561,7 +580,6 @@
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.cbPerfil);
             this.Controls.Add(this.tbLogin);
-            this.Controls.Add(this.dtFechaNachimiento);
             this.Controls.Add(this.tbTelefono);
             this.Controls.Add(this.tbDireccion);
             this.Controls.Add(this.tbNombre);
@@ -590,7 +608,6 @@
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.ComboBox cbPerfil;
         private System.Windows.Forms.TextBox tbLogin;
-        private System.Windows.Forms.DateTimePicker dtFechaNachimiento;
         private System.Windows.Forms.TextBox tbTelefono;
         private System.Windows.Forms.TextBox tbDireccion;
         private System.Windows.Forms.TextBox tbNombre;
@@ -621,5 +638,6 @@
         private Bunifu.UI.WinForms.BunifuCheckBox Check;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label13;
+        private Bunifu.UI.WinForms.BunifuDatePicker dtFechaNachimiento;
     }
 }

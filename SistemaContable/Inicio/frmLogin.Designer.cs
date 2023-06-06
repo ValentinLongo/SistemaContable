@@ -43,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.lblMayus = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -225,7 +224,6 @@
             this.txtConstrasenia.Size = new System.Drawing.Size(194, 19);
             this.txtConstrasenia.TabIndex = 1;
             this.txtConstrasenia.Tag = "00000";
-            this.txtConstrasenia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConstrasenia_KeyDown);
             // 
             // panel4
             // 
@@ -246,7 +244,6 @@
             this.txtUsuario.Size = new System.Drawing.Size(194, 19);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.Tag = "10000";
-            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
             // 
             // panel3
             // 
@@ -281,7 +278,6 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.panel6.Controls.Add(this.lblMayus);
             this.panel6.Controls.Add(this.panel18);
             this.panel6.Controls.Add(this.panel17);
             this.panel6.Controls.Add(this.panel14);
@@ -310,18 +306,6 @@
             this.panel6.Size = new System.Drawing.Size(366, 309);
             this.panel6.TabIndex = 0;
             this.panel6.Tag = "2";
-            // 
-            // lblMayus
-            // 
-            this.lblMayus.AutoSize = true;
-            this.lblMayus.Font = new System.Drawing.Font("Dotum", 8.25F);
-            this.lblMayus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMayus.Location = new System.Drawing.Point(134, 233);
-            this.lblMayus.Name = "lblMayus";
-            this.lblMayus.Size = new System.Drawing.Size(109, 11);
-            this.lblMayus.TabIndex = 52;
-            this.lblMayus.Text = "Bloq Mayus Activo";
-            this.lblMayus.Visible = false;
             // 
             // panel18
             // 
@@ -530,7 +514,6 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes2;
-        private System.Windows.Forms.Label lblMayus;
     }
 }
 

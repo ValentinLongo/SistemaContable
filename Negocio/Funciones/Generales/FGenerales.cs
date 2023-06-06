@@ -253,11 +253,38 @@ namespace Negocio
             return dia;
         }
 
-        public static void CantElementos(Label lbl,DataGridView dgv) //para mostrar en un lbl la cantidad de elementos que tiene un dgv
+        //para mostrar en un lbl la cantidad de elementos que tiene un dgv
+        public static void CantElementos(Label lbl,DataGridView dgv)
         {
             lbl.Text = "Elementos: " + dgv.RowCount;
             lbl.BringToFront();
         }
 
+        //para verificar que la hora ingresada se encuentre entre los valores correspondientes
+        public static bool ValidacionHoraFecha(int proceso,MaskedTextBox mask) //proceso 1 = Validacion Hora y proceso 2 = Validacion Fecha
+        {
+            if (proceso == 1)
+            {
+                if (DateTime.TryParseExact(mask.Text, "HH:mm:ss", null, System.Globalization.DateTimeStyles.None, out DateTime result))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if (DateTime.TryParseExact(mask.Text, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime result))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

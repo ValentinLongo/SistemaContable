@@ -39,6 +39,7 @@ namespace Negocio.Funciones.Mantenimiento
             }
             return mCoeficienteDeAjuste;
         }
+
         public List<MCoeficienteDeAjuste> ejercicioParticular(int ejercicio, string descripcion)
         {
             List<MCoeficienteDeAjuste> mCoeficienteDeAjuste = new List<MCoeficienteDeAjuste>();

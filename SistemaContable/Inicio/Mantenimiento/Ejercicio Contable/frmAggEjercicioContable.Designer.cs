@@ -266,7 +266,7 @@
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(208, 19);
             this.txtDescri.TabIndex = 1;
-            this.txtDescri.Tag = "11010";
+            this.txtDescri.Tag = "11000";
             // 
             // panel4
             // 

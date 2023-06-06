@@ -169,6 +169,5 @@ namespace SistemaContable.General
             // Actualiza el informe de Crystal Reports para que muestre los datos del conjunto de datos asignado
             crystalReportViewer1.ReportSource = report;
         }
-
     }
 }

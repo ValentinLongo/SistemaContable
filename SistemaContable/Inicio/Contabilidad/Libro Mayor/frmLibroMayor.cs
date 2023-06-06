@@ -31,8 +31,8 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
 
         private void cargarDatos()
         {
-            maskDesde.Mask = "00-00-0000";
-            maskHasta.Mask = "00-00-0000";
+            maskDesde.Mask = "00/00/0000";
+            maskHasta.Mask = "00/00/0000";
             maskHasta.Text = DateTime.Now.ToShortDateString();
 
             DataSet ds = new DataSet();
@@ -72,6 +72,20 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
             if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            if (Negocio.FGenerales.ValidacionHoraFecha(2, maskDesde) == false)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Fecha Desde Invalida.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            if (Negocio.FGenerales.ValidacionHoraFecha(2, maskHasta) == false)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Fecha Hasta Invalida.", false);
                 MessageBox.ShowDialog();
                 return;
             }

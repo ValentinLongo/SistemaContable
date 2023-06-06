@@ -15,7 +15,7 @@ namespace Negocio.Funciones.Generales
 
         public static void Procesos(int proceso, [Optional] Control Mensaje, [Optional] int terminal, [Optional] DateTime desde, [Optional] DateTime hasta)
         {
-            if (proceso == 2) // Auditoria Interna
+            if (proceso == 2) //Auditoria Interna
             {
                 AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_AuditInt WHERE aux_terminal = {terminal}");
 

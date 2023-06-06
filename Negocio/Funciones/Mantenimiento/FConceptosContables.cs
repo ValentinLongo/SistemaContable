@@ -12,6 +12,7 @@ namespace Negocio.Funciones.Mantenimiento
     public class FConceptosContables
     {
         public static string query;
+
         public DataSet listaConceptosContables(string Descri)
         {
             DataSet ds = new DataSet();
@@ -86,10 +87,12 @@ namespace Negocio.Funciones.Mantenimiento
             AccesoBase.InsertUpdateDatos($"INSERT INTO ConceptoCont(coc_codigo, coc_descri, coc_vta, coc_cpa, coc_caja, coc_banco, coc_ctacont, coc_contrap, coc_vigencia, coc_cccta, coc_cccontrap) " +
             $"VALUES({mConceptoContable.coc_codigo},'{mConceptoContable.coc_descri}',{mConceptoContable.coc_vta},{mConceptoContable.coc_cpa},{mConceptoContable.coc_caja},{mConceptoContable.coc_banco},{mConceptoContable.coc_ctacont},{mConceptoContable.coc_contrap},1,{mConceptoContable.coc_cccta},{mConceptoContable.coc_cccontrap})");
         }
+
         public void modificarConceptoCont(MConceptoContable mConceptoContable)
         {
             AccesoBase.InsertUpdateDatos($"UPDATE ConceptoCont SET coc_descri = '{mConceptoContable.coc_descri}', coc_vta = {mConceptoContable.coc_vta}, coc_cpa = {mConceptoContable.coc_cpa}, coc_caja = {mConceptoContable.coc_caja}, coc_banco = {mConceptoContable.coc_banco}, coc_ctacont = {mConceptoContable.coc_ctacont}, coc_contrap = {mConceptoContable.coc_contrap}, coc_cccta = {mConceptoContable.coc_cccta}, coc_cccontrap = {mConceptoContable.coc_cccontrap} WHERE coc_codigo = {mConceptoContable.coc_codigo}");
         }
+
         public void eliminarConceptoCont(int cocCodigo)
         {
             AccesoBase.InsertUpdateDatos($"DELETE FROM ConceptoCont WHERE coc_codigo = {cocCodigo}");

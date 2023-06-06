@@ -46,8 +46,7 @@ namespace Negocio.Funciones.Contabilidad
 
         public static int AgregarAux_MovAsto(Form frm, string asiento, string cuenta, string debe, string haber, string concepto, string cc, string codigo, string terminal, string descri) 
         {
-            //autoincremental
-            int codigoAI = FGenerales.ultimoNumeroID("mva_cod", "Aux_MovAsto");
+            int codigoAI = FGenerales.ultimoNumeroID("mva_cod", "Aux_MovAsto"); //autoincremental
             asiento = FGenerales.ultimoNumeroID("ast_asiento", "Asiento").ToString();
 
             if (cc == "NINGUNO")

@@ -151,17 +151,17 @@ namespace Negocio
 
                 if (Ctrl is Panel)
                 {
-                    if (Ctrl.Tag == "1")
+                    if (Ctrl.Tag.ToString() == "1")
                     {
                         Ctrl.BackColor = Color.FromArgb(RGB(RGBbackPanel1, 1), RGB(RGBbackPanel1, 2), RGB(RGBbackPanel1, 3));
                     }
 
-                    if (Ctrl.Tag == "2")
+                    if (Ctrl.Tag.ToString() == "2")
                     {
                         Ctrl.BackColor = Color.FromArgb(RGB(RGBbackPanel2, 1), RGB(RGBbackPanel2, 2), RGB(RGBbackPanel2, 3));
                     }
 
-                    if (Ctrl.Tag == "3")
+                    if (Ctrl.Tag.ToString() == "3")
                     {
                         Ctrl.BackColor = Color.FromArgb(RGB(RGBbackPanel3, 1), RGB(RGBbackPanel3, 2), RGB(RGBbackPanel3, 3));
                     }
@@ -169,17 +169,17 @@ namespace Negocio
                     //controles dentro de contenedor
                     foreach (Control Ctrl1 in Ctrl.Controls)
                     {
-                        if (Ctrl1.Tag == "1")
+                        if (Ctrl1.Tag.ToString() == "1")
                         {
                             Ctrl1.BackColor = Color.FromArgb(RGB(RGBbackPanel1, 1), RGB(RGBbackPanel1, 2), RGB(RGBbackPanel1, 3));
                         }
 
-                        if (Ctrl1.Tag == "2")
+                        if (Ctrl1.Tag.ToString() == "2")
                         {
                             Ctrl1.BackColor = Color.FromArgb(RGB(RGBbackPanel2, 1), RGB(RGBbackPanel2, 2), RGB(RGBbackPanel2, 3));
                         }
 
-                        if (Ctrl1.Tag == "3")
+                        if (Ctrl1.Tag.ToString() == "3")
                         {
                             Ctrl1.BackColor = Color.FromArgb(RGB(RGBbackPanel3, 1), RGB(RGBbackPanel3, 2), RGB(RGBbackPanel3, 3));
                         }
@@ -242,6 +242,7 @@ namespace Negocio
             }
 
         }
+
         public static void FondoMDI(Form Formulario, Panel borde1, Panel borde2, Panel borde3, Panel borde4, PictureBox logo)
         {
             BuscarFormato();
@@ -252,6 +253,7 @@ namespace Negocio
                     RGBbackFormulariomdi = MFormato.fmt_rgbBack.ToString();                 
                 }
             }
+
             MdiClient oMDI;
             foreach (Control ctl in Formulario.Controls)
             {
@@ -265,7 +267,7 @@ namespace Negocio
                     borde4.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
                     logo.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
                 }
-                catch (InvalidCastException exc)
+                catch (Exception)
                 {
                 }
             }

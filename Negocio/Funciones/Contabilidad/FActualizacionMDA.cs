@@ -16,7 +16,7 @@ namespace Negocio.Funciones.Contabilidad
         {
             int ultimoID = Negocio.FGenerales.ultimoNumeroID("mod_codigo", "ModeloEncab");
 
-            AccesoBase.InsertUpdateDatos($"INSERT INTO ModeloEncab(mod_codigo,mod_descri) VALUES ( '{ultimoID}', '{txt}' )");
+            AccesoBase.InsertUpdateDatos($"INSERT INTO ModeloEncab(mod_codigo,mod_descri) VALUES ('{ultimoID}', '{txt}')");
             frm.Close();
         }
 
@@ -36,6 +36,5 @@ namespace Negocio.Funciones.Contabilidad
                 Datos.AccesoBase.InsertUpdateDatos($"DELETE FROM ModeloEncab WHERE mod_codigo = '{codigo}'");
             }
         }
-
     }
 }

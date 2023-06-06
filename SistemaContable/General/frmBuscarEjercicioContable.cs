@@ -20,6 +20,7 @@ namespace SistemaContable.General
 
         private int idEjercicio;
         private string descriEjercicio;
+
         public frmBuscarEjercicioContable()
         {
             InitializeComponent();
@@ -35,20 +36,16 @@ namespace SistemaContable.General
         private void CargarDatos(string txt)
         {
             DataSet ds = new DataSet();
-
             ds = AccesoBase.ListarDatos($"SELECT eje_codigo as codigo, eje_descri as Descripción ,eje_desde as Desde, eje_hasta as Hasta, eje_cerrado as Cerrado FROM Ejercicio {txt} ORDER BY eje_codigo");
-
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                bool estado = false;
                 string codigo = dr[0].ToString();
                 string descri = dr[1].ToString();
-                string desde = dr[2].ToString();
-                desde = desde.Substring(0, 10);
-                string hasta = dr[3].ToString();
-                hasta = hasta.Substring(0, 10);
+                string desde = dr[2].ToString().Substring(0,10);
+                string hasta = dr[3].ToString().Substring(0,10);
                 int cerrado = Convert.ToInt32(dr[4]);
 
+                bool estado = false;
                 if (cerrado == 1)
                 {
                     estado = true;

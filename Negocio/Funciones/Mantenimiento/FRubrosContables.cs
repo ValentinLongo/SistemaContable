@@ -32,5 +32,6 @@ namespace Negocio.Funciones
         {
             AccesoBase.InsertUpdateDatos($"DELETE FROM RubroCont WHERE ruc_codigo = {codigo}");
         }
+
     }
 }

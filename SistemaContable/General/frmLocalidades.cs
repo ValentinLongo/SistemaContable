@@ -17,6 +17,7 @@ namespace SistemaContable.General
         public static int CodigoLocalidad;
         public static int SubCodigoLocalidad;
         public static string NombreLocalidad;
+
         public frmLocalidades()
         {
             InitializeComponent();

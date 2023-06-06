@@ -23,6 +23,7 @@ namespace SistemaContable
     public partial class frmLogin : Form
     {
         public static int NumeroTerminal;
+
         public frmLogin()
         {
             InitializeComponent();
@@ -51,7 +52,7 @@ namespace SistemaContable
             }
             catch
             {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error en los datos de la conexion",false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error en los datos de la conexion", false);
                 MessageBox.ShowDialog();
                 this.Close();
             }
@@ -82,63 +83,30 @@ namespace SistemaContable
         }
 
         private void btnAcceder_Click(object sender, EventArgs e)
-        {
-            
-            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
-            {
-                txtUsuario.Text = txtUsuario.Text.ToUpper();
-                txtConstrasenia.Text = txtConstrasenia.Text.ToUpper();
-                Negocio.FLogin.BuscarIdUsuario(txtUsuario.Text, txtConstrasenia.Text);
-                int resultado = Negocio.FLogin.buscarUsuario(txtUsuario.Text, txtConstrasenia.Text);
-                if (resultado == 1)
-                {
-                    Negocio.FLogin.buscarNombreEmpresa();
-                    frmCarga PantallaCarga = new frmCarga();
-                    PantallaCarga.lblUsuario.Text = Negocio.FLogin.NombreUsuario;
-                    this.Visible = false;
-                    PantallaCarga.ShowDialog();
-                }
-                else
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Datos Incorrectos", false);
-                    MessageBox.ShowDialog();
-                }
-            }
-            else
+        {          
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
+                return;
             }
-        }
 
-        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.CapsLock)
-            {
-                if (lblMayus.Visible)
-                {
-                    lblMayus.Visible = false;
-                }
-                else
-                {
-                    lblMayus.Visible = true;
-                }
-            }
-        }
+            txtUsuario.Text = txtUsuario.Text.ToUpper();
+            txtConstrasenia.Text = txtConstrasenia.Text.ToUpper();
 
-        private void txtConstrasenia_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.CapsLock)
+            int resultado = Negocio.FLogin.buscarUsuario(txtUsuario.Text, txtConstrasenia.Text);
+            if (resultado == 0)
             {
-                if (lblMayus.Visible)
-                {
-                    lblMayus.Visible = false;
-                }
-                else
-                {
-                    lblMayus.Visible = true;
-                }
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Datos Incorrectos", false);
+                MessageBox.ShowDialog();
+                return;
             }
+
+            Negocio.FLogin.buscarNombreEmpresa();
+            frmCarga PantallaCarga = new frmCarga();
+            PantallaCarga.lblUsuario.Text = Negocio.FLogin.NombreUsuario;
+            this.Visible = false;
+            PantallaCarga.ShowDialog();
         }
 
         //BARRA DE CONTROL

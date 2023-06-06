@@ -26,36 +26,32 @@ namespace SistemaContable.General
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
-            {
-                string usuario = txtUsuario.Text.ToUpper();
-                string contraseña = txtContraseña.Text.ToUpper();
-
-                DataSet ds = new DataSet();
-                ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}'");
-                if (ds.Tables[0].Rows.Count != 0)
-                {
-                    foreach (DataRow dr in ds.Tables[0].Rows)
-                    {
-                        Negocio.FLogin.IdUsuario = Convert.ToInt32(dr["usu_codigo"]);
-                        Negocio.FLogin.NombreUsuario = dr["usu_nombre"].ToString();
-                        Negocio.FLogin.ContraUsuario = dr["usu_contraseña"].ToString();
-                    }
-                    autorizado = true;
-                    this.Close();
-                }
-                else
-                {
-                    autorizado = false;
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Usuario Incorrecto!", false);
-                    MessageBox.ShowDialog();
-                }
-            }
-            else
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
+                return;
             }
+
+            string usuario = txtUsuario.Text.ToUpper();
+            string contraseña = txtContraseña.Text.ToUpper();
+
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}'");
+            if (ds.Tables[0].Rows.Count == 0)
+            {
+                autorizado = false;
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Usuario Incorrecto!", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            Negocio.FLogin.IdUsuario = Convert.ToInt32(ds.Tables[0].Rows[0]["usu_codigo"]);
+            Negocio.FLogin.NombreUsuario = ds.Tables[0].Rows[0]["usu_nombre"].ToString();
+            Negocio.FLogin.ContraUsuario = ds.Tables[0].Rows[0]["usu_contraseña"].ToString();
+
+            autorizado = true;
+            this.Close();
         }
 
         private void pbVisibilidad_Click(object sender, EventArgs e)

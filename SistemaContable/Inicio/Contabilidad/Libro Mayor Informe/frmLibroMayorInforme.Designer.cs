@@ -239,7 +239,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(52, 188);
+            this.label9.Location = new System.Drawing.Point(52, 192);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(222, 16);
             this.label9.TabIndex = 162;
@@ -263,7 +263,7 @@
             this.bunifuCheckBox4.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.bunifuCheckBox4.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox4.CustomCheckmarkImage = null;
-            this.bunifuCheckBox4.Location = new System.Drawing.Point(32, 186);
+            this.bunifuCheckBox4.Location = new System.Drawing.Point(32, 190);
             this.bunifuCheckBox4.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox4.Name = "bunifuCheckBox4";
             this.bunifuCheckBox4.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -388,7 +388,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(52, 208);
+            this.label10.Location = new System.Drawing.Point(52, 212);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(315, 16);
             this.label10.TabIndex = 180;
@@ -412,7 +412,7 @@
             this.ChSumSalEjAnt.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.ChSumSalEjAnt.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChSumSalEjAnt.CustomCheckmarkImage = null;
-            this.ChSumSalEjAnt.Location = new System.Drawing.Point(32, 207);
+            this.ChSumSalEjAnt.Location = new System.Drawing.Point(32, 211);
             this.ChSumSalEjAnt.MinimumSize = new System.Drawing.Size(17, 17);
             this.ChSumSalEjAnt.Name = "ChSumSalEjAnt";
             this.ChSumSalEjAnt.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));

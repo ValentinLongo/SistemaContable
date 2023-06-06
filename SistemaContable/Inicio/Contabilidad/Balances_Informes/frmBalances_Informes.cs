@@ -36,8 +36,8 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
         private void Seteo(int proceso) // Seteo porque hay 3 frm en 1
         {
-            maskDesde.Mask = "00-00-0000";
-            maskHasta.Mask = "00-00-0000";
+            maskDesde.Mask = "00/00/0000";
+            maskHasta.Mask = "00/00/0000";
             maskHasta.Text = DateTime.Now.ToShortDateString();
 
             if (proceso == 1) //Balance de Sumas y Saldos
@@ -149,6 +149,20 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
                     MessageBox.ShowDialog();
                 }
 
+                return;
+            }
+
+            if (Negocio.FGenerales.ValidacionHoraFecha(2, maskDesde) == false) //validacion
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Fecha Desde Invalida.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            if (Negocio.FGenerales.ValidacionHoraFecha(2, maskHasta) == false) //validacion
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Fecha Hasta Invalida.", false);
+                MessageBox.ShowDialog();
                 return;
             }
 
@@ -341,22 +355,22 @@ namespace SistemaContable.Inicio.Contabilidad.Balance_de_Sumas_y_Saldos
 
                                     case "1":
                                         AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_col1 = {"*"} WHERE bal_terminal = {terminal} AND bal_cuenta = {dr5["pcu_cuenta"]}", dr5["bal_saldo"].ToString());
-                                        AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col1D = UCase(left{dr5["ruc_descri"]}, 1) LCase(right {dr5["ruc_descri"]}, Len({dr5["ruc_descri"]} - 1) WHERE bal_terminal = {terminal}");
+                                        AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col1D = UPPER(LEFT('ACTIVO', 1)) + LOWER(RIGHT('ACTIVO', LEN('ACTIVO') - 1)) WHERE bal_terminal = {terminal}");
                                         break;
 
                                     case "2":
                                         AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_col2 = {"*"} WHERE bal_terminal = {terminal} AND bal_cuenta = {dr5["pcu_cuenta"]}", dr5["bal_saldo"].ToString());
-                                        AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col2D = UCase(left{dr5["ruc_descri"]}, 1) LCase(right {dr5["ruc_descri"]}, Len({dr5["ruc_descri"]} - 1) WHERE bal_terminal = {terminal}");
+                                        AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col2D = UPPER(LEFT('PASIVO', 1)) + LOWER(RIGHT('PASIVO', LEN('PASIVO') - 1)) WHERE bal_terminal = {terminal}");
                                         break;
 
                                     case "3":
                                         AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_col3 = {"*"} WHERE bal_terminal = {terminal} AND bal_cuenta = {dr5["pcu_cuenta"]}", dr5["bal_saldo"].ToString());
-                                        AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col3D = UCase(left{dr5["ruc_descri"]}, 1) LCase(right {dr5["ruc_descri"]}, Len({dr5["ruc_descri"]} - 1) WHERE bal_terminal = {terminal}");
+                                        AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col3D = UPPER(LEFT('PERDIDA', 1)) + LOWER(RIGHT('PERDIDA', LEN('PERDIDA') - 1)) WHERE bal_terminal = {terminal}");
                                         break;
 
                                     case "4":
                                         AccesoBase.InsertUpdateDatosMoney($"UPDATE Aux_BalanceGral SET bal_col4 = {"*"} WHERE bal_terminal = {terminal} AND bal_cuenta = {dr5["pcu_cuenta"]}", dr5["bal_saldo"].ToString());
-                                        AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col4D = UCase(left{dr5["ruc_descri"]}, 1) LCase(right {dr5["ruc_descri"]}, Len({dr5["ruc_descri"]} - 1) WHERE bal_terminal = {terminal}");
+                                        AccesoBase.InsertUpdateDatos($"UPDATE Aux_BalanceGral SET bal_col4D = UPPER(LEFT('GANANCIA', 1)) + LOWER(RIGHT('GANANCIA', LEN('GANANCIA') - 1)) WHERE bal_terminal = {terminal}");
                                         break;
 
                                     default:

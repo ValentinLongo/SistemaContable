@@ -49,24 +49,31 @@ namespace SistemaContable.Inicio.Ver.Calendario
         {
             if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
+                if (Negocio.FGenerales.ValidacionHoraFecha(1, maskHora) == false)
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Hora ingresada Invalida.", false);
+                    MessageBox.ShowDialog();
+                    return;
+                }
+
                 if (proceso == 1)
                 {
                     Negocio.Funciones.Ver.FCalendario.Agregar(txtFecha.Text, maskHora.Text, txtComentario.Text);
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente.", false);
                     MessageBox.ShowDialog();
                     this.Close();
                 }
                 else if (proceso == 2)
                 {
                     Negocio.Funciones.Ver.FCalendario.Modificar(txtFecha.Text, maskHora.Text, txtComentario.Text, horavieja, comentarioviejo);
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente.", false);
                     MessageBox.ShowDialog();
                     this.Close();
                 }
             }
             else
             {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos.", false);
                 MessageBox.ShowDialog();
             }
         }

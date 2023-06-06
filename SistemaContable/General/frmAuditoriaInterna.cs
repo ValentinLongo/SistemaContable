@@ -105,6 +105,20 @@ namespace SistemaContable.General
                 return;
             }
 
+            if (Negocio.FGenerales.ValidacionHoraFecha(2, maskDesde) == false)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Fecha Desde Invalida.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            if (Negocio.FGenerales.ValidacionHoraFecha(2, maskHasta) == false)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Fecha Hasta Invalida.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             if (maskDesde.MaskFull == false)
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Deberá indicar una Fecha Inferior.", false);
@@ -938,7 +952,7 @@ namespace SistemaContable.General
                 if (Convert.ToInt32(ds.Tables[0].Rows[0]["tra_tipo"]) == 1) // transferencia de valores
                 {
                     Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, ds.Tables[0].Rows[0]["moc_fecpro"].ToString(), CtaCajaD, 1, (Convert.ToDouble(ds.Tables[0].Rows[0]["moc_total"]) * cotizacion).ToString(), "", 1);
-                    
+
                     Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, ds.Tables[0].Rows[0]["moc_fecpro"].ToString(), CtaCajaO, 2, (Convert.ToDouble(ds.Tables[0].Rows[0]["moc_total"]) * cotizacion).ToString(), "", 2);
 
                     Negocio.Funciones.Generales.FAuditoriaInternaMenu.Update(terminal);
@@ -957,7 +971,7 @@ namespace SistemaContable.General
                 else //transferencia de efectivo
                 {
                     Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, ds.Tables[0].Rows[0]["moc_fecpro"].ToString(), CtaCajaD, 1, (Convert.ToDouble(ds.Tables[0].Rows[0]["moc_total"]) * cotizacion).ToString(), "", 1);
-                   
+
                     Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, ds.Tables[0].Rows[0]["moc_fecpro"].ToString(), CtaCajaD, 2, (Convert.ToDouble(ds.Tables[0].Rows[0]["moc_total"]) * cotizacion).ToString(), "", 2);
 
                     Negocio.Funciones.Generales.FAuditoriaInternaMenu.Update(terminal);
@@ -2874,7 +2888,7 @@ namespace SistemaContable.General
 
                 if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
                 {
-                    MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");                 
+                    MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
                 AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, ds.Tables[0].Rows[0]["vta_fecpro"].ToString(), "REG. VTA." + "Abreviado" + ds.Tables[0].Rows[0]["vta_cpbte"].ToString() + "-" + ds.Tables[0].Rows[0]["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(ds.Tables[0].Rows[0]["vta_tipmov"]), ds.Tables[0].Rows[0]["vta_cpbte"].ToString(), 0);
@@ -3662,7 +3676,7 @@ namespace SistemaContable.General
 
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Update(terminal);
 
-                double dif = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Diferencia(terminal,d,h);
+                double dif = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Diferencia(terminal, d, h);
 
                 if (dif != 0)
                 {
@@ -4254,22 +4268,21 @@ namespace SistemaContable.General
 
         private void txtNroCuenta_TextChanged(object sender, EventArgs e) //para actualizar los txt cuando se ingresa/cambia un nro de cuenta.
         {
-            if (txtNroCuenta.Text != "")
-            {
-                DataSet ds = new DataSet();
-                ds = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE pcu_cuenta = {txtNroCuenta.Text}");
-                if (ds.Tables[0].Rows.Count != 0)
-                {
-                    foreach (DataRow dr in ds.Tables[0].Rows)
-                    {
-                        txtDescriCuenta.Text = dr["pcu_descri"].ToString();
-                    }
-                }
-            }
-            else
+            if (txtNroCuenta.Text == "")
             {
                 txtNroCuenta.Text = "";
                 txtDescriCuenta.Text = "";
+                return;
+            }
+
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE pcu_cuenta = {txtNroCuenta.Text}");
+            if (ds.Tables[0].Rows.Count != 0)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    txtDescriCuenta.Text = dr["pcu_descri"].ToString();
+                }
             }
         }
 

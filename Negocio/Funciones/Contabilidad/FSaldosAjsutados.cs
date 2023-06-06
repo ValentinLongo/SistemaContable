@@ -50,7 +50,7 @@ namespace Negocio.Funciones.Contabilidad
             return retorno;
         }
 
-        // setea propiedades y limpia DGVs
+        //setea propiedades y limpia DGVs
         public static bool LimpiarDGVs(Form frm,[Optional] DataGridView dgv1, [Optional] DataGridView dgv2, [Optional] DataGridView footer) 
         {
             if (dgv1.DataSource != null)
@@ -76,9 +76,7 @@ namespace Negocio.Funciones.Contabilidad
                 dgv1.Columns[i].Width = 125;
                 dgv1.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             }
-
             return false;
         }
-
     }
 }
