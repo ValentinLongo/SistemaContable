@@ -107,7 +107,14 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
         private void txtCuenta_TextChanged(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT cec_codigo, cec_descri FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{txtCuenta.Text}' AND cec_codigo is not null");
+            ds = AccesoBase.ListarDatos($"SELECT * FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{txtCuenta.Text}' AND cec_codigo is not null");
+            if (Convert.ToInt32(ds.Tables[0].Rows[0]["pcu_hija"]) != 0)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La cuenta contable No puede recibir movimientos.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             if (ds.Tables[0].Rows.Count != 0)
             {
                 foreach (DataRow dr in ds.Tables[0].Rows)

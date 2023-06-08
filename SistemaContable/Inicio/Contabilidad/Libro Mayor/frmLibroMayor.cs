@@ -320,10 +320,21 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
             }
 
             DataSet ds = new DataSet();
-            ds = Negocio.FPlanDeCuentas.BusquedaCuentaPorCuenta(tbIdCuenta.Text);
-            foreach (DataRow dr in ds.Tables[0].Rows)
+            if (frmBuscarCuenta.ValidacionMovimientos(Convert.ToInt32(tbIdCuenta.Text)))
             {
-                tbDescriCuenta.Text = dr["pcu_descri"].ToString();
+                ds = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE pcu_cuenta = {tbIdCuenta.Text}");
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        tbDescriCuenta.Text = dr["pcu_descri"].ToString();
+                    }
+                }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La cuenta contable No puede recibir movimientos.", false);
+                MessageBox.ShowDialog();
             }
             cbCentroCosto.SelectedIndex = 2;
         }

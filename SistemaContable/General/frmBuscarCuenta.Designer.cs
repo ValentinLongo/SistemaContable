@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarCuenta));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
@@ -46,6 +46,8 @@
             this.checkActivas = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.dgvCuentas = new System.Windows.Forms.DataGridView();
             this.lblCantElementos = new System.Windows.Forms.Label();
+            this.CheckMovimiento = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             this.SuspendLayout();
@@ -353,38 +355,38 @@
             this.dgvCuentas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgvCuentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCuentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCuentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCuentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCuentas.ColumnHeadersHeight = 25;
             this.dgvCuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCuentas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCuentas.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCuentas.EnableHeadersVisualStyles = false;
             this.dgvCuentas.GridColor = System.Drawing.Color.White;
             this.dgvCuentas.Location = new System.Drawing.Point(12, 53);
             this.dgvCuentas.Name = "dgvCuentas";
             this.dgvCuentas.ReadOnly = true;
             this.dgvCuentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCuentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCuentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCuentas.RowHeadersVisible = false;
             this.dgvCuentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCuentas.Size = new System.Drawing.Size(671, 369);
@@ -404,12 +406,80 @@
             this.lblCantElementos.TabIndex = 96;
             this.lblCantElementos.Text = "Elementos";
             // 
+            // CheckMovimiento
+            // 
+            this.CheckMovimiento.AllowBindingControlAnimation = true;
+            this.CheckMovimiento.AllowBindingControlColorChanges = false;
+            this.CheckMovimiento.AllowBindingControlLocation = true;
+            this.CheckMovimiento.AllowCheckBoxAnimation = false;
+            this.CheckMovimiento.AllowCheckmarkAnimation = true;
+            this.CheckMovimiento.AllowOnHoverStates = true;
+            this.CheckMovimiento.AutoCheck = true;
+            this.CheckMovimiento.BackColor = System.Drawing.Color.Transparent;
+            this.CheckMovimiento.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckMovimiento.BackgroundImage")));
+            this.CheckMovimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CheckMovimiento.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.CheckMovimiento.BorderRadius = 12;
+            this.CheckMovimiento.Checked = false;
+            this.CheckMovimiento.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.CheckMovimiento.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CheckMovimiento.CustomCheckmarkImage = null;
+            this.CheckMovimiento.Location = new System.Drawing.Point(381, 28);
+            this.CheckMovimiento.MinimumSize = new System.Drawing.Size(17, 17);
+            this.CheckMovimiento.Name = "CheckMovimiento";
+            this.CheckMovimiento.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckMovimiento.OnCheck.BorderRadius = 12;
+            this.CheckMovimiento.OnCheck.BorderThickness = 2;
+            this.CheckMovimiento.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.CheckMovimiento.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckMovimiento.OnCheck.CheckmarkThickness = 2;
+            this.CheckMovimiento.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.CheckMovimiento.OnDisable.BorderRadius = 12;
+            this.CheckMovimiento.OnDisable.BorderThickness = 2;
+            this.CheckMovimiento.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckMovimiento.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.CheckMovimiento.OnDisable.CheckmarkThickness = 2;
+            this.CheckMovimiento.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckMovimiento.OnHoverChecked.BorderRadius = 12;
+            this.CheckMovimiento.OnHoverChecked.BorderThickness = 2;
+            this.CheckMovimiento.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckMovimiento.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.CheckMovimiento.OnHoverChecked.CheckmarkThickness = 2;
+            this.CheckMovimiento.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.CheckMovimiento.OnHoverUnchecked.BorderRadius = 12;
+            this.CheckMovimiento.OnHoverUnchecked.BorderThickness = 1;
+            this.CheckMovimiento.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckMovimiento.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.CheckMovimiento.OnUncheck.BorderRadius = 12;
+            this.CheckMovimiento.OnUncheck.BorderThickness = 1;
+            this.CheckMovimiento.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CheckMovimiento.Size = new System.Drawing.Size(17, 17);
+            this.CheckMovimiento.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.CheckMovimiento.TabIndex = 98;
+            this.CheckMovimiento.TabStop = false;
+            this.CheckMovimiento.ThreeState = false;
+            this.CheckMovimiento.ToolTipText = null;
+            this.CheckMovimiento.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.CheckMovimiento_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(403, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(285, 16);
+            this.label2.TabIndex = 97;
+            this.label2.Text = "Visualizar Unicamente Cuentas De Movimiento";
+            // 
             // frmBuscarCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(844, 505);
+            this.Controls.Add(this.CheckMovimiento);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvCuentas);
             this.Controls.Add(this.checkActivas);
@@ -449,5 +519,7 @@
         private Bunifu.UI.WinForms.BunifuCheckBox checkActivas;
         private System.Windows.Forms.DataGridView dgvCuentas;
         private System.Windows.Forms.Label lblCantElementos;
+        private Bunifu.UI.WinForms.BunifuCheckBox CheckMovimiento;
+        private System.Windows.Forms.Label label2;
     }
 }

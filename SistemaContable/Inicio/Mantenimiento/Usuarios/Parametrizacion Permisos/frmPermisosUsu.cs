@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Datos.Modelos;
+using Negocio;
 using SistemaContable.General;
 using System;
 using System.Collections;
@@ -17,6 +18,8 @@ namespace SistemaContable.Parametrizacion_Permisos
 {
     public partial class frmPermisosUsu : Form
     {
+        private static int terminal = frmLogin.NumeroTerminal;
+
         public static List<MPermisoUsuario> lista = new List<MPermisoUsuario>();
         public static string NroUsu;
         public static string DescriUsu;
@@ -198,6 +201,39 @@ namespace SistemaContable.Parametrizacion_Permisos
             ArmarArbol(txtNroUsuario.Text);
         }
 
+        private void btnRestabPerfil_Click(object sender, EventArgs e)
+        {
+            if (txtNroUsuario.Text != "" && txtDescriUsuario.Text != "")
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Al Aceptar provocará que los permisos asignados al usuario indicado sean restablecidos. ¿Desea Continuar?", true, true);
+                MessageBox.ShowDialog();
+                if (frmMessageBox.Acepto)
+                {
+                    frmConsultaGeneral consultageneral = new frmConsultaGeneral("per_codigo as Codigo, per_descri as Descripcion", "Perfil", "", "ORDER BY per_codigo", "per", "codigo", "descri");
+                    consultageneral.ShowDialog();
+
+                    string cod = frmConsultaGeneral.codigoCG;
+                    string descri = frmConsultaGeneral.descripcionCG;
+
+                    if (cod != null && descri != null)
+                    {
+                        DataSet ds = new DataSet();
+                        ds = AccesoBase.ListarDatos($"SELECT * FROM MenuxPerfil WHERE mxp_perfil = {cod} AND mxp_sistema = 'CO'");
+                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        {
+                            AccesoBase.InsertUpdateDatos($"UPDATE MenuxUsu SET mxu_activo = {dr["mxp_activo"]} WHERE mxu_usuario = {txtNroUsuario.Text} AND mxu_codigo = {dr["mxp_codigo"]} AND mxu_sistema = 'CO'");
+                        }
+                        ArmarArbol(txtNroUsuario.Text);
+                    }
+                }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debera indicar un usuario.", false);
+                MessageBox.ShowDialog();
+            }
+        }
+
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             if (txtNroUsuario.Text != "")
@@ -212,11 +248,6 @@ namespace SistemaContable.Parametrizacion_Permisos
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe Seleccionar un Usuario.", false);
                 MessageBox.ShowDialog();
             }
-        }
-
-        private void btnRestabPerfil_Click(object sender, EventArgs e)
-        {
-
         }
 
         //BARRA DE CONTROL

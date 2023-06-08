@@ -116,22 +116,22 @@ namespace SistemaContable
                 MessageBox1.ShowDialog();
                 if (frmMessageBox.Acepto)
                 {
-                    frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
-                    estandar.Show();
+                    frmEstandar frm = new frmEstandar(1, "Se estan Revisando los Permisos de Menu asignados para los Usuarios. Porfavor espere...");
+                    frm.Show();
                     Application.DoEvents();
                     Negocio.Funciones.FRecalcularPermisos.RecalcularPermisos(frmInicio.m1, frmInicio.m2, frmInicio.m3, frmInicio.m4, frmInicio.m5, FRM);
-                    estandar.Close();
+                    frm.Close();
                 }
 
                 frmMessageBox MessageBox2 = new frmMessageBox("Atención!", "Atención: ¿desea recalcular los permisos especiales?", true);
                 MessageBox2.ShowDialog();
                 if (frmMessageBox.Acepto)
                 {
-                    frmEstandar estandar = new frmEstandar(1, "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...");
-                    estandar.Show();
+                    frmEstandar frm = new frmEstandar(1, "Se estan Revisando los Permisos para los Usuarios. Porfavor espere...");
+                    frm.Show();
                     Application.DoEvents();
                     Negocio.Funciones.FRecalcularPermisos.RecalcularPermisosEspeciales();
-                    estandar.Close();
+                    frm.Close();
                 }
             }
             else
@@ -166,7 +166,7 @@ namespace SistemaContable
                 int estado = 0;
 
                 DataSet ds = new DataSet();
-                ds = AccesoBase.ListarDatos($"SELECT usu_perfil, usu_estado FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contraseña}'");
+                ds = AccesoBase.ListarDatos($"SELECT * FROM Usuario WHERE usu_login = '{usuario}' and usu_contraseña = '{contraseña}'");
                 if (ds.Tables[0].Rows.Count != 0)
                 {
                     perfilautorizacion = Convert.ToInt32(ds.Tables[0].Rows[0]["usu_perfil"]);
@@ -177,6 +177,7 @@ namespace SistemaContable
 
                 if (cambia)
                 {
+                    Negocio.FLogin.IdUsuario = Convert.ToInt32(ds.Tables[0].Rows[0]["usu_codigo"]);
                     Negocio.FLogin.NombreUsuario = usuario;
                     Negocio.FLogin.ContraUsuario = contraseña;
                 }

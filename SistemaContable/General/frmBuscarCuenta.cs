@@ -43,9 +43,9 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             btnSeleccionar.Enabled = false;
             DataSet ds = new DataSet();
 
-            if (checkActivas.Checked == true)
+            if (checkActivas.Checked || CheckMovimiento.Checked)
             {
-                ds = data.listaCuentasActivas(txt2);
+                ds = data.listaCuentasActivasMovimiento(txt2,checkActivas,CheckMovimiento);
                 dgvCuentas.DataSource = ds.Tables[0];
             }
             else
@@ -61,7 +61,16 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         {
             if (IdCuenta > -1)
             {
-                this.Close();
+                if (ValidacionMovimientos(IdCuenta))
+                {
+                    this.Close();
+                }
+                else
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La cuenta contable No puede recibir movimientos.", false);
+                    MessageBox.ShowDialog();
+                    return;
+                }
             }
             else
             {
@@ -71,6 +80,11 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         }
 
         private void checkActivas_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            cargarDGV();
+        }
+
+        private void CheckMovimiento_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
             cargarDGV();
         }
@@ -126,6 +140,20 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
                 txt2 = "";
             }
             cargarDGV();
+        }
+
+        public static bool ValidacionMovimientos(int NroCuenta) 
+        {
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"SELECT pcu_hija FROM PCuenta WHERE pcu_cuenta = {NroCuenta}");
+            if (Convert.ToInt32(ds.Tables[0].Rows[0]["pcu_hija"]) == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private void bunifuFormControlBox1_CloseClicked(object sender, EventArgs e)

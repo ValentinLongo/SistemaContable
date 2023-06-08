@@ -1,4 +1,5 @@
-﻿using Datos.Modelos;
+﻿using Datos;
+using Datos.Modelos;
 using Negocio;
 using Negocio.Funciones.Mantenimiento;
 using SistemaContable.General;
@@ -163,6 +164,34 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             else
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                MessageBox.ShowDialog();
+            }
+        }
+
+        private void tbNroCuenta_TextChanged(object sender, EventArgs e)
+        {
+            if (tbNroCuenta.Text == "")
+            {
+                tbNroCuenta.Text = "";
+                tbDescriCuenta.Text = "";
+                return;
+            }
+
+            DataSet ds = new DataSet();
+            if (frmBuscarCuenta.ValidacionMovimientos(Convert.ToInt32(tbNroCuenta.Text)))
+            {
+                ds = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE pcu_cuenta = {tbNroCuenta.Text}");
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        tbDescriCuenta.Text = dr["pcu_descri"].ToString();
+                    }
+                }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La cuenta contable No puede recibir movimientos.", false);
                 MessageBox.ShowDialog();
             }
         }
