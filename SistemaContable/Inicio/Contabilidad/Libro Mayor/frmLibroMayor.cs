@@ -158,7 +158,7 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
                     Debe = Debe + debeSaldo;
                 }
                 DataSet ds6 = new DataSet();
-                ds6 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 2 and mva_cuenta = {tbIdCuenta.Text} and ast_fecha < '{maskHasta.Text}' {centroC}");
+                ds6 = AccesoBase.ListarDatos($"SELECT SUM(mva_importe) as Haber FROM MovAsto LEFT JOIN Asiento on mva_asiento = ast_asiento WHERE ast_ejercicio = {tbIdEjercicio.Text} and mva_codigo = 2 and mva_cuenta = {tbIdCuenta.Text} and ast_fecha < '{maskDesde.Text}' {centroC}");
                 foreach (DataRow dr in ds6.Tables[0].Rows)
                 {
                     double haberSaldo;
@@ -263,7 +263,7 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
 
         private void cbCentroCosto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbCentroCosto.SelectedIndex != 4)
+            if (cbCentroCosto.Text == "NINGUNO")
             {
                 ChAsiMan.Enabled = true;
                 ChInCentroCosto.Enabled = false;
