@@ -206,7 +206,6 @@ namespace SistemaContable
         {
             if (e.KeyCode == Keys.F12)
             {
-
                 if (TIPO == 0)
                 {
                     frmMessageBox MessageBox = new frmMessageBox("Atención!", "No se puede solicitar autorizacion remota en este caso.", false);
@@ -226,7 +225,7 @@ namespace SistemaContable
                     txtUsuario.Enabled = false;
                     txtContraseña.Enabled = false;
                     btnAcceder.Enabled = false;
-                    label1.Text = "ESPERANDO AUTORIZACIÓN...";
+                    lblcontrolbox.Text = "ESPERANDO AUTORIZACIÓN...";
 
                     switch (TIPO)
                     {
@@ -257,7 +256,7 @@ namespace SistemaContable
                 }
                 else
                 {
-                    label1.Text = "Solicitud de Autorización";
+                    lblcontrolbox.Text = "Solicitud de Autorización";
                     timer1.Enabled = false;
                     txtUsuario.Enabled = true;
                     txtContraseña.Enabled = true;
@@ -295,7 +294,7 @@ namespace SistemaContable
 
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                if (dr["aut_bandera"] != null && dr["aut_usuauto"] != null)
+                if (dr["aut_bandera"].ToString() != "" && dr["aut_usuauto"].ToString() != "")
                 {
                     bandera = Convert.ToInt32(dr["aut_bandera"]);
                     usu_autorizo = Convert.ToInt32(dr["aut_usuauto"]);

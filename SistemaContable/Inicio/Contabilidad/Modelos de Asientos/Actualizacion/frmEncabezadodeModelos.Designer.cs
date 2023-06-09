@@ -221,7 +221,7 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(650, 350);
+            this.btnImprimir.Location = new System.Drawing.Point(650, 349);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(136, 30);
             this.btnImprimir.TabIndex = 4;

@@ -114,7 +114,7 @@ namespace Negocio.Funciones
                     {
                         if (Ctrl2.Tag == null)
                         {
-                            break;
+                            continue;
                         }
                         if (Ctrl2.Tag.ToString() == "10" || Ctrl2.Tag.ToString() == "20" || Ctrl2.Tag.ToString() == "30" || Ctrl2.Tag.ToString() == "40" || Ctrl2.Tag.ToString() == "50")
                         {

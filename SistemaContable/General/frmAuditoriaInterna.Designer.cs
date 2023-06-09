@@ -929,9 +929,9 @@
             this.btnCtaCont.FlatAppearance.BorderSize = 0;
             this.btnCtaCont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCtaCont.Image = ((System.Drawing.Image)(resources.GetObject("btnCtaCont.Image")));
-            this.btnCtaCont.Location = new System.Drawing.Point(338, 94);
+            this.btnCtaCont.Location = new System.Drawing.Point(336, 93);
             this.btnCtaCont.Name = "btnCtaCont";
-            this.btnCtaCont.Size = new System.Drawing.Size(31, 21);
+            this.btnCtaCont.Size = new System.Drawing.Size(23, 23);
             this.btnCtaCont.TabIndex = 4;
             this.btnCtaCont.UseVisualStyleBackColor = false;
             this.btnCtaCont.Click += new System.EventHandler(this.btnCtaCont_Click);
@@ -1012,7 +1012,7 @@
             this.btnProcesar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcesar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcesar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProcesar.Location = new System.Drawing.Point(108, 441);
+            this.btnProcesar.Location = new System.Drawing.Point(109, 441);
             this.btnProcesar.Name = "btnProcesar";
             this.btnProcesar.Size = new System.Drawing.Size(175, 44);
             this.btnProcesar.TabIndex = 183;

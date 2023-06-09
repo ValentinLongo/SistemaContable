@@ -97,11 +97,11 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                 return;
             }
 
-            int ContraP = Convert.ToInt32(ds.Tables[0].Rows[0]["par_ctaAjusteInf"]);
+            int ContraP = ds.Tables[0].Rows[0]["par_ctaAjusteInf"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["par_ctaAjusteInf"]);
             string ContraPDescri = ds.Tables[0].Rows[0]["pcu_descri"].ToString();
             string descri = ds.Tables[0].Rows[0]["pcu_descri"].ToString();
-            int hija = Convert.ToInt32(ds.Tables[0].Rows[0]["pcu_hija"]);
-            int estado = Convert.ToInt32(ds.Tables[0].Rows[0]["pcu_estado"]);
+            int hija = ds.Tables[0].Rows[0]["pcu_hija"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["pcu_hija"]);
+            int estado = ds.Tables[0].Rows[0]["pcu_estado"] is DBNull ? 0 : Convert.ToInt32(ds.Tables[0].Rows[0]["pcu_estado"]);
 
             if (descri == "") //Validación
             {
@@ -373,7 +373,7 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                     ds4 = AccesoBase.ListarDatos($"SELECT * FROM DetAjusteInf WHERE aji_ejercicio = {Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje")} AND aji_periodo = '{dgv1.Columns[n].HeaderText}'");
                     if (ds4.Tables[0].Rows.Count == 0)
                     {
-                        return;
+                        goto fin;
                     }
 
                     coeficiente = Convert.ToDouble(ds4.Tables[0].Rows[0]["aji_coef"]);
@@ -402,6 +402,8 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
                     X = X + 1;
                 }
             }
+
+            fin:
 
             if (Ctrl)
             {

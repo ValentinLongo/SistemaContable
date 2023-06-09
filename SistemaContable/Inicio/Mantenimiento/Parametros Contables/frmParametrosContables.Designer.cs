@@ -591,7 +591,7 @@
             this.par_ctaIVA212.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA212.Image")));
             this.par_ctaIVA212.Location = new System.Drawing.Point(600, 32);
             this.par_ctaIVA212.Name = "par_ctaIVA212";
-            this.par_ctaIVA212.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaIVA212.Size = new System.Drawing.Size(23, 23);
             this.par_ctaIVA212.TabIndex = 38;
             this.par_ctaIVA212.UseVisualStyleBackColor = false;
             this.par_ctaIVA212.Click += new System.EventHandler(this.AbrirCuentas);
@@ -602,9 +602,9 @@
             this.par_ctaIVA102.FlatAppearance.BorderSize = 0;
             this.par_ctaIVA102.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaIVA102.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA102.Image")));
-            this.par_ctaIVA102.Location = new System.Drawing.Point(600, 59);
+            this.par_ctaIVA102.Location = new System.Drawing.Point(600, 58);
             this.par_ctaIVA102.Name = "par_ctaIVA102";
-            this.par_ctaIVA102.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaIVA102.Size = new System.Drawing.Size(23, 23);
             this.par_ctaIVA102.TabIndex = 43;
             this.par_ctaIVA102.UseVisualStyleBackColor = false;
             this.par_ctaIVA102.Click += new System.EventHandler(this.AbrirCuentas);
@@ -639,7 +639,7 @@
             this.par_ctaIVA272.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA272.Image")));
             this.par_ctaIVA272.Location = new System.Drawing.Point(600, 84);
             this.par_ctaIVA272.Name = "par_ctaIVA272";
-            this.par_ctaIVA272.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaIVA272.Size = new System.Drawing.Size(23, 23);
             this.par_ctaIVA272.TabIndex = 48;
             this.par_ctaIVA272.UseVisualStyleBackColor = false;
             this.par_ctaIVA272.Click += new System.EventHandler(this.AbrirCuentas);
@@ -674,7 +674,7 @@
             this.par_ctaRetIIBB2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIIBB2.Image")));
             this.par_ctaRetIIBB2.Location = new System.Drawing.Point(600, 167);
             this.par_ctaRetIIBB2.Name = "par_ctaRetIIBB2";
-            this.par_ctaRetIIBB2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRetIIBB2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRetIIBB2.TabIndex = 63;
             this.par_ctaRetIIBB2.UseVisualStyleBackColor = false;
             this.par_ctaRetIIBB2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -707,9 +707,9 @@
             this.par_ctaRetIVA2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetIVA2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetIVA2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIVA2.Image")));
-            this.par_ctaRetIVA2.Location = new System.Drawing.Point(600, 141);
+            this.par_ctaRetIVA2.Location = new System.Drawing.Point(600, 140);
             this.par_ctaRetIVA2.Name = "par_ctaRetIVA2";
-            this.par_ctaRetIVA2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRetIVA2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRetIVA2.TabIndex = 58;
             this.par_ctaRetIVA2.UseVisualStyleBackColor = false;
             this.par_ctaRetIVA2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -744,7 +744,7 @@
             this.par_ctaImpInt2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaImpInt2.Image")));
             this.par_ctaImpInt2.Location = new System.Drawing.Point(600, 112);
             this.par_ctaImpInt2.Name = "par_ctaImpInt2";
-            this.par_ctaImpInt2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaImpInt2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaImpInt2.TabIndex = 53;
             this.par_ctaImpInt2.UseVisualStyleBackColor = false;
             this.par_ctaImpInt2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -779,7 +779,7 @@
             this.par_ctaOtrosImp2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaOtrosImp2.Image")));
             this.par_ctaOtrosImp2.Location = new System.Drawing.Point(600, 328);
             this.par_ctaOtrosImp2.Name = "par_ctaOtrosImp2";
-            this.par_ctaOtrosImp2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaOtrosImp2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaOtrosImp2.TabIndex = 93;
             this.par_ctaOtrosImp2.UseVisualStyleBackColor = false;
             this.par_ctaOtrosImp2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -812,9 +812,9 @@
             this.par_ctaPerGan2.FlatAppearance.BorderSize = 0;
             this.par_ctaPerGan2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaPerGan2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaPerGan2.Image")));
-            this.par_ctaPerGan2.Location = new System.Drawing.Point(600, 302);
+            this.par_ctaPerGan2.Location = new System.Drawing.Point(600, 301);
             this.par_ctaPerGan2.Name = "par_ctaPerGan2";
-            this.par_ctaPerGan2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaPerGan2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaPerGan2.TabIndex = 88;
             this.par_ctaPerGan2.UseVisualStyleBackColor = false;
             this.par_ctaPerGan2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -849,7 +849,7 @@
             this.par_ctaPerIIBB2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaPerIIBB2.Image")));
             this.par_ctaPerIIBB2.Location = new System.Drawing.Point(600, 273);
             this.par_ctaPerIIBB2.Name = "par_ctaPerIIBB2";
-            this.par_ctaPerIIBB2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaPerIIBB2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaPerIIBB2.TabIndex = 83;
             this.par_ctaPerIIBB2.UseVisualStyleBackColor = false;
             this.par_ctaPerIIBB2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -884,7 +884,7 @@
             this.par_ctaPerIVA2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaPerIVA2.Image")));
             this.par_ctaPerIVA2.Location = new System.Drawing.Point(600, 246);
             this.par_ctaPerIVA2.Name = "par_ctaPerIVA2";
-            this.par_ctaPerIVA2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaPerIVA2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaPerIVA2.TabIndex = 78;
             this.par_ctaPerIVA2.UseVisualStyleBackColor = false;
             this.par_ctaPerIVA2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -917,9 +917,9 @@
             this.par_ctaRetSUSS2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetSUSS2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetSUSS2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetSUSS2.Image")));
-            this.par_ctaRetSUSS2.Location = new System.Drawing.Point(600, 220);
+            this.par_ctaRetSUSS2.Location = new System.Drawing.Point(600, 219);
             this.par_ctaRetSUSS2.Name = "par_ctaRetSUSS2";
-            this.par_ctaRetSUSS2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRetSUSS2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRetSUSS2.TabIndex = 73;
             this.par_ctaRetSUSS2.UseVisualStyleBackColor = false;
             this.par_ctaRetSUSS2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -954,7 +954,7 @@
             this.par_ctaRetGan2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetGan2.Image")));
             this.par_ctaRetGan2.Location = new System.Drawing.Point(600, 193);
             this.par_ctaRetGan2.Name = "par_ctaRetGan2";
-            this.par_ctaRetGan2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRetGan2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRetGan2.TabIndex = 68;
             this.par_ctaRetGan2.UseVisualStyleBackColor = false;
             this.par_ctaRetGan2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -989,7 +989,7 @@
             this.par_ctaDescuento2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaDescuento2.Image")));
             this.par_ctaDescuento2.Location = new System.Drawing.Point(600, 652);
             this.par_ctaDescuento2.Name = "par_ctaDescuento2";
-            this.par_ctaDescuento2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaDescuento2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaDescuento2.TabIndex = 153;
             this.par_ctaDescuento2.UseVisualStyleBackColor = false;
             this.par_ctaDescuento2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1022,9 +1022,9 @@
             this.par_ctaRetSUSSP2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetSUSSP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetSUSSP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetSUSSP2.Image")));
-            this.par_ctaRetSUSSP2.Location = new System.Drawing.Point(600, 627);
+            this.par_ctaRetSUSSP2.Location = new System.Drawing.Point(600, 626);
             this.par_ctaRetSUSSP2.Name = "par_ctaRetSUSSP2";
-            this.par_ctaRetSUSSP2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRetSUSSP2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRetSUSSP2.TabIndex = 148;
             this.par_ctaRetSUSSP2.UseVisualStyleBackColor = false;
             this.par_ctaRetSUSSP2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1059,7 +1059,7 @@
             this.par_ctaRetGanP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetGanP2.Image")));
             this.par_ctaRetGanP2.Location = new System.Drawing.Point(600, 598);
             this.par_ctaRetGanP2.Name = "par_ctaRetGanP2";
-            this.par_ctaRetGanP2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRetGanP2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRetGanP2.TabIndex = 143;
             this.par_ctaRetGanP2.UseVisualStyleBackColor = false;
             this.par_ctaRetGanP2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1092,9 +1092,9 @@
             this.par_ctaRetIIBBP2.FlatAppearance.BorderSize = 0;
             this.par_ctaRetIIBBP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaRetIIBBP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIIBBP2.Image")));
-            this.par_ctaRetIIBBP2.Location = new System.Drawing.Point(600, 570);
+            this.par_ctaRetIIBBP2.Location = new System.Drawing.Point(600, 571);
             this.par_ctaRetIIBBP2.Name = "par_ctaRetIIBBP2";
-            this.par_ctaRetIIBBP2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRetIIBBP2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRetIIBBP2.TabIndex = 138;
             this.par_ctaRetIIBBP2.UseVisualStyleBackColor = false;
             this.par_ctaRetIIBBP2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1129,7 +1129,7 @@
             this.par_ctaRetIVAP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetIVAP2.Image")));
             this.par_ctaRetIVAP2.Location = new System.Drawing.Point(600, 545);
             this.par_ctaRetIVAP2.Name = "par_ctaRetIVAP2";
-            this.par_ctaRetIVAP2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRetIVAP2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRetIVAP2.TabIndex = 133;
             this.par_ctaRetIVAP2.UseVisualStyleBackColor = false;
             this.par_ctaRetIVAP2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1164,7 +1164,7 @@
             this.par_ctaIVA27D2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA27D2.Image")));
             this.par_ctaIVA27D2.Location = new System.Drawing.Point(600, 518);
             this.par_ctaIVA27D2.Name = "par_ctaIVA27D2";
-            this.par_ctaIVA27D2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaIVA27D2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaIVA27D2.TabIndex = 128;
             this.par_ctaIVA27D2.UseVisualStyleBackColor = false;
             this.par_ctaIVA27D2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1197,9 +1197,9 @@
             this.par_ctaIVA10D2.FlatAppearance.BorderSize = 0;
             this.par_ctaIVA10D2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaIVA10D2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA10D2.Image")));
-            this.par_ctaIVA10D2.Location = new System.Drawing.Point(600, 492);
+            this.par_ctaIVA10D2.Location = new System.Drawing.Point(600, 491);
             this.par_ctaIVA10D2.Name = "par_ctaIVA10D2";
-            this.par_ctaIVA10D2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaIVA10D2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaIVA10D2.TabIndex = 123;
             this.par_ctaIVA10D2.UseVisualStyleBackColor = false;
             this.par_ctaIVA10D2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1232,9 +1232,9 @@
             this.par_ctaIVA21D2.FlatAppearance.BorderSize = 0;
             this.par_ctaIVA21D2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaIVA21D2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaIVA21D2.Image")));
-            this.par_ctaIVA21D2.Location = new System.Drawing.Point(600, 467);
+            this.par_ctaIVA21D2.Location = new System.Drawing.Point(600, 465);
             this.par_ctaIVA21D2.Name = "par_ctaIVA21D2";
-            this.par_ctaIVA21D2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaIVA21D2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaIVA21D2.TabIndex = 118;
             this.par_ctaIVA21D2.UseVisualStyleBackColor = false;
             this.par_ctaIVA21D2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1269,7 +1269,7 @@
             this.par_ctaDeud2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaDeud2.Image")));
             this.par_ctaDeud2.Location = new System.Drawing.Point(600, 437);
             this.par_ctaDeud2.Name = "par_ctaDeud2";
-            this.par_ctaDeud2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaDeud2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaDeud2.TabIndex = 113;
             this.par_ctaDeud2.UseVisualStyleBackColor = false;
             this.par_ctaDeud2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1304,7 +1304,7 @@
             this.par_NetoVtaArti2.Image = ((System.Drawing.Image)(resources.GetObject("par_NetoVtaArti2.Image")));
             this.par_NetoVtaArti2.Location = new System.Drawing.Point(600, 409);
             this.par_NetoVtaArti2.Name = "par_NetoVtaArti2";
-            this.par_NetoVtaArti2.Size = new System.Drawing.Size(22, 21);
+            this.par_NetoVtaArti2.Size = new System.Drawing.Size(23, 23);
             this.par_NetoVtaArti2.TabIndex = 108;
             this.par_NetoVtaArti2.UseVisualStyleBackColor = false;
             this.par_NetoVtaArti2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1339,7 +1339,7 @@
             this.par_ctaProvGral2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaProvGral2.Image")));
             this.par_ctaProvGral2.Location = new System.Drawing.Point(600, 384);
             this.par_ctaProvGral2.Name = "par_ctaProvGral2";
-            this.par_ctaProvGral2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaProvGral2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaProvGral2.TabIndex = 103;
             this.par_ctaProvGral2.UseVisualStyleBackColor = false;
             this.par_ctaProvGral2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1374,7 +1374,7 @@
             this.par_ctaProv2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaProv2.Image")));
             this.par_ctaProv2.Location = new System.Drawing.Point(600, 355);
             this.par_ctaProv2.Name = "par_ctaProv2";
-            this.par_ctaProv2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaProv2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaProv2.TabIndex = 98;
             this.par_ctaProv2.UseVisualStyleBackColor = false;
             this.par_ctaProv2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1409,7 +1409,7 @@
             this.par_ctaDifCambioVta2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaDifCambioVta2.Image")));
             this.par_ctaDifCambioVta2.Location = new System.Drawing.Point(600, 869);
             this.par_ctaDifCambioVta2.Name = "par_ctaDifCambioVta2";
-            this.par_ctaDifCambioVta2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaDifCambioVta2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaDifCambioVta2.TabIndex = 193;
             this.par_ctaDifCambioVta2.UseVisualStyleBackColor = false;
             this.par_ctaDifCambioVta2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1444,7 +1444,7 @@
             this.par_ctaRetBFP2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetBFP2.Image")));
             this.par_ctaRetBFP2.Location = new System.Drawing.Point(600, 844);
             this.par_ctaRetBFP2.Name = "par_ctaRetBFP2";
-            this.par_ctaRetBFP2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRetBFP2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRetBFP2.TabIndex = 188;
             this.par_ctaRetBFP2.UseVisualStyleBackColor = false;
             this.par_ctaRetBFP2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1479,7 +1479,7 @@
             this.par_ctaRetBF2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRetBF2.Image")));
             this.par_ctaRetBF2.Location = new System.Drawing.Point(600, 815);
             this.par_ctaRetBF2.Name = "par_ctaRetBF2";
-            this.par_ctaRetBF2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRetBF2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRetBF2.TabIndex = 183;
             this.par_ctaRetBF2.UseVisualStyleBackColor = false;
             this.par_ctaRetBF2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1514,7 +1514,7 @@
             this.par_ctaRedondeo2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRedondeo2.Image")));
             this.par_ctaRedondeo2.Location = new System.Drawing.Point(600, 787);
             this.par_ctaRedondeo2.Name = "par_ctaRedondeo2";
-            this.par_ctaRedondeo2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRedondeo2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRedondeo2.TabIndex = 178;
             this.par_ctaRedondeo2.UseVisualStyleBackColor = false;
             this.par_ctaRedondeo2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1547,9 +1547,9 @@
             this.par_NetoVtaServ2.FlatAppearance.BorderSize = 0;
             this.par_NetoVtaServ2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_NetoVtaServ2.Image = ((System.Drawing.Image)(resources.GetObject("par_NetoVtaServ2.Image")));
-            this.par_NetoVtaServ2.Location = new System.Drawing.Point(600, 762);
+            this.par_NetoVtaServ2.Location = new System.Drawing.Point(600, 761);
             this.par_NetoVtaServ2.Name = "par_NetoVtaServ2";
-            this.par_NetoVtaServ2.Size = new System.Drawing.Size(22, 21);
+            this.par_NetoVtaServ2.Size = new System.Drawing.Size(23, 23);
             this.par_NetoVtaServ2.TabIndex = 173;
             this.par_NetoVtaServ2.UseVisualStyleBackColor = false;
             this.par_NetoVtaServ2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1584,7 +1584,7 @@
             this.par_ctaAnticipoCpa2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaAnticipoCpa2.Image")));
             this.par_ctaAnticipoCpa2.Location = new System.Drawing.Point(600, 733);
             this.par_ctaAnticipoCpa2.Name = "par_ctaAnticipoCpa2";
-            this.par_ctaAnticipoCpa2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaAnticipoCpa2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaAnticipoCpa2.TabIndex = 168;
             this.par_ctaAnticipoCpa2.UseVisualStyleBackColor = false;
             this.par_ctaAnticipoCpa2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1619,7 +1619,7 @@
             this.par_ctaAnticipoVta2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaAnticipoVta2.Image")));
             this.par_ctaAnticipoVta2.Location = new System.Drawing.Point(600, 707);
             this.par_ctaAnticipoVta2.Name = "par_ctaAnticipoVta2";
-            this.par_ctaAnticipoVta2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaAnticipoVta2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaAnticipoVta2.TabIndex = 163;
             this.par_ctaAnticipoVta2.UseVisualStyleBackColor = false;
             this.par_ctaAnticipoVta2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1654,7 +1654,7 @@
             this.par_ctaRecargo2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaRecargo2.Image")));
             this.par_ctaRecargo2.Location = new System.Drawing.Point(600, 682);
             this.par_ctaRecargo2.Name = "par_ctaRecargo2";
-            this.par_ctaRecargo2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaRecargo2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaRecargo2.TabIndex = 158;
             this.par_ctaRecargo2.UseVisualStyleBackColor = false;
             this.par_ctaRecargo2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1687,9 +1687,9 @@
             this.par_ctaAjusteInf2.FlatAppearance.BorderSize = 0;
             this.par_ctaAjusteInf2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaAjusteInf2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaAjusteInf2.Image")));
-            this.par_ctaAjusteInf2.Location = new System.Drawing.Point(600, 949);
+            this.par_ctaAjusteInf2.Location = new System.Drawing.Point(600, 948);
             this.par_ctaAjusteInf2.Name = "par_ctaAjusteInf2";
-            this.par_ctaAjusteInf2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaAjusteInf2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaAjusteInf2.TabIndex = 208;
             this.par_ctaAjusteInf2.UseVisualStyleBackColor = false;
             this.par_ctaAjusteInf2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1722,9 +1722,9 @@
             this.par_ctaCIIVA2.FlatAppearance.BorderSize = 0;
             this.par_ctaCIIVA2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.par_ctaCIIVA2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaCIIVA2.Image")));
-            this.par_ctaCIIVA2.Location = new System.Drawing.Point(600, 924);
+            this.par_ctaCIIVA2.Location = new System.Drawing.Point(600, 922);
             this.par_ctaCIIVA2.Name = "par_ctaCIIVA2";
-            this.par_ctaCIIVA2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaCIIVA2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaCIIVA2.TabIndex = 203;
             this.par_ctaCIIVA2.UseVisualStyleBackColor = false;
             this.par_ctaCIIVA2.Click += new System.EventHandler(this.AbrirCuentas);
@@ -1759,7 +1759,7 @@
             this.par_ctaCINeto2.Image = ((System.Drawing.Image)(resources.GetObject("par_ctaCINeto2.Image")));
             this.par_ctaCINeto2.Location = new System.Drawing.Point(600, 895);
             this.par_ctaCINeto2.Name = "par_ctaCINeto2";
-            this.par_ctaCINeto2.Size = new System.Drawing.Size(22, 21);
+            this.par_ctaCINeto2.Size = new System.Drawing.Size(23, 23);
             this.par_ctaCINeto2.TabIndex = 198;
             this.par_ctaCINeto2.UseVisualStyleBackColor = false;
             this.par_ctaCINeto2.Click += new System.EventHandler(this.AbrirCuentas);

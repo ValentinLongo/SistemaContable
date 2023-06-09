@@ -294,6 +294,8 @@ namespace SistemaContable.General
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+                        Application.DoEvents();
+
                         ProgressBar.Value = i;
 
                         lblConteo.Text = "Comprobante de Liquidación de Tarjeta " + i + " de " + ds.Tables[0].Rows.Count;
@@ -317,6 +319,8 @@ namespace SistemaContable.General
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+                        Application.DoEvents();
+
                         ProgressBar.Value = i;
 
                         lblConteo.Text = "Movimiento de Caja " + i + " de " + ds.Tables[0].Rows.Count;
@@ -351,6 +355,8 @@ namespace SistemaContable.General
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+                        Application.DoEvents();
+
                         ProgressBar.Value = i;
 
                         lblConteo.Text = "Movimiento de Caja " + i + " de " + ds.Tables[0].Rows.Count;
@@ -374,6 +380,8 @@ namespace SistemaContable.General
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+                        Application.DoEvents();
+
                         ProgressBar.Value = i;
 
                         lblConteo.Text = "Depósito Bancario " + i + " de " + ds.Tables[0].Rows.Count;
@@ -397,6 +405,8 @@ namespace SistemaContable.General
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+                        Application.DoEvents();
+
                         ProgressBar.Value = i;
 
                         lblConteo.Text = "Movimiento Bancario " + i + " de " + ds.Tables[0].Rows.Count;
@@ -441,6 +451,8 @@ namespace SistemaContable.General
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+                        Application.DoEvents();
+
                         ProgressBar.Value = i;
 
                         lblConteo.Text = "Extracción Bancaria " + i + " de " + ds.Tables[0].Rows.Count;
@@ -465,6 +477,8 @@ namespace SistemaContable.General
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+                        Application.DoEvents();
+
                         ProgressBar.Value = i;
 
                         lblConteo.Text = "Depósito en Caución  " + i + " de " + ds.Tables[0].Rows.Count;
@@ -488,6 +502,8 @@ namespace SistemaContable.General
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+                        Application.DoEvents();
+
                         ProgressBar.Value = i;
 
                         lblConteo.Text = "Depósito en Caución  " + i + " de " + ds.Tables[0].Rows.Count;
@@ -533,6 +549,8 @@ namespace SistemaContable.General
                 int i = 0;
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
+                    Application.DoEvents();
+
                     ProgressBar.Value = i;
 
                     lblConteo.Text = "Transferencia Bancaria " + i + " de " + ds.Tables[0].Rows.Count;

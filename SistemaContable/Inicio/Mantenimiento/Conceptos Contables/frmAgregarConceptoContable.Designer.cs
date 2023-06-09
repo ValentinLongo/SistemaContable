@@ -51,8 +51,6 @@
             this.tbNumContrapartida = new System.Windows.Forms.TextBox();
             this.cbCentroCostos2 = new System.Windows.Forms.ComboBox();
             this.cbCentroCostos1 = new System.Windows.Forms.ComboBox();
-            this.btnBuscar2 = new System.Windows.Forms.Button();
-            this.btnBuscar1 = new System.Windows.Forms.Button();
             this.checkVentas = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.checkCompras = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.checkTesoreria = new Bunifu.UI.WinForms.BunifuCheckBox();
@@ -64,6 +62,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.btnBuscar2 = new System.Windows.Forms.Button();
+            this.btnBuscar1 = new System.Windows.Forms.Button();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -302,32 +302,6 @@
             this.cbCentroCostos1.Size = new System.Drawing.Size(339, 25);
             this.cbCentroCostos1.TabIndex = 118;
             this.cbCentroCostos1.TabStop = false;
-            // 
-            // btnBuscar2
-            // 
-            this.btnBuscar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnBuscar2.FlatAppearance.BorderSize = 0;
-            this.btnBuscar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar2.Image = global::SistemaContable.Properties.Resources.lupa;
-            this.btnBuscar2.Location = new System.Drawing.Point(407, 169);
-            this.btnBuscar2.Name = "btnBuscar2";
-            this.btnBuscar2.Size = new System.Drawing.Size(32, 31);
-            this.btnBuscar2.TabIndex = 7;
-            this.btnBuscar2.UseVisualStyleBackColor = false;
-            this.btnBuscar2.Click += new System.EventHandler(this.btnBuscar2_Click);
-            // 
-            // btnBuscar1
-            // 
-            this.btnBuscar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnBuscar1.FlatAppearance.BorderSize = 0;
-            this.btnBuscar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar1.Image = global::SistemaContable.Properties.Resources.lupa;
-            this.btnBuscar1.Location = new System.Drawing.Point(408, 88);
-            this.btnBuscar1.Name = "btnBuscar1";
-            this.btnBuscar1.Size = new System.Drawing.Size(32, 31);
-            this.btnBuscar1.TabIndex = 4;
-            this.btnBuscar1.UseVisualStyleBackColor = false;
-            this.btnBuscar1.Click += new System.EventHandler(this.btnBuscar1_Click);
             // 
             // checkVentas
             // 
@@ -676,12 +650,40 @@
             this.bunifuFormControlBox1.TabIndex = 29;
             this.bunifuFormControlBox1.TabStop = false;
             // 
+            // btnBuscar2
+            // 
+            this.btnBuscar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscar2.FlatAppearance.BorderSize = 0;
+            this.btnBuscar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar2.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar2.Image")));
+            this.btnBuscar2.Location = new System.Drawing.Point(406, 169);
+            this.btnBuscar2.Name = "btnBuscar2";
+            this.btnBuscar2.Size = new System.Drawing.Size(23, 23);
+            this.btnBuscar2.TabIndex = 130;
+            this.btnBuscar2.UseVisualStyleBackColor = false;
+            this.btnBuscar2.Click += new System.EventHandler(this.btnBuscar2_Click);
+            // 
+            // btnBuscar1
+            // 
+            this.btnBuscar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscar1.FlatAppearance.BorderSize = 0;
+            this.btnBuscar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar1.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar1.Image")));
+            this.btnBuscar1.Location = new System.Drawing.Point(406, 90);
+            this.btnBuscar1.Name = "btnBuscar1";
+            this.btnBuscar1.Size = new System.Drawing.Size(23, 23);
+            this.btnBuscar1.TabIndex = 131;
+            this.btnBuscar1.UseVisualStyleBackColor = false;
+            this.btnBuscar1.Click += new System.EventHandler(this.btnBuscar1_Click);
+            // 
             // frmAgregarConceptoContable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(469, 423);
+            this.Controls.Add(this.btnBuscar1);
+            this.Controls.Add(this.btnBuscar2);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -691,8 +693,6 @@
             this.Controls.Add(this.checkTesoreria);
             this.Controls.Add(this.checkCompras);
             this.Controls.Add(this.checkVentas);
-            this.Controls.Add(this.btnBuscar1);
-            this.Controls.Add(this.btnBuscar2);
             this.Controls.Add(this.cbCentroCostos1);
             this.Controls.Add(this.cbCentroCostos2);
             this.Controls.Add(this.panel6);
@@ -750,8 +750,6 @@
         private System.Windows.Forms.TextBox tbNumContrapartida;
         private System.Windows.Forms.ComboBox cbCentroCostos2;
         private System.Windows.Forms.ComboBox cbCentroCostos1;
-        private System.Windows.Forms.Button btnBuscar2;
-        private System.Windows.Forms.Button btnBuscar1;
         private Bunifu.UI.WinForms.BunifuCheckBox checkVentas;
         private Bunifu.UI.WinForms.BunifuCheckBox checkCompras;
         private Bunifu.UI.WinForms.BunifuCheckBox checkTesoreria;
@@ -763,5 +761,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label lblControlBar;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
+        private System.Windows.Forms.Button btnBuscar2;
+        private System.Windows.Forms.Button btnBuscar1;
     }
 }

@@ -54,7 +54,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tbVendedor = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAceptar = new RJCodeAdvance.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
@@ -62,6 +61,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.CambioCheck = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.dtFechaNachimiento = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -328,18 +328,6 @@
             this.tbVendedor.TabIndex = 4;
             this.tbVendedor.Tag = "01000";
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Image = global::SistemaContable.Properties.Resources.lupa;
-            this.btnBuscar.Location = new System.Drawing.Point(423, 352);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(31, 27);
-            this.btnBuscar.TabIndex = 5;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // btnAceptar
             // 
             this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -353,9 +341,9 @@
             this.btnAceptar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(191, 435);
+            this.btnAceptar.Location = new System.Drawing.Point(191, 430);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(150, 31);
+            this.btnAceptar.Size = new System.Drawing.Size(150, 42);
             this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
@@ -541,12 +529,26 @@
             this.dtFechaNachimiento.Size = new System.Drawing.Size(252, 32);
             this.dtFechaNachimiento.TabIndex = 69;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(414, 357);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(23, 23);
+            this.btnBuscar.TabIndex = 70;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(530, 489);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dtFechaNachimiento);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.CambioCheck);
@@ -554,7 +556,6 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.tbVendedor);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cbSeccion);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -615,7 +616,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbSeccion;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox tbVendedor;
         private RJCodeAdvance.RJControls.RJButton btnAceptar;
@@ -625,5 +625,6 @@
         private Bunifu.UI.WinForms.BunifuCheckBox CambioCheck;
         private System.Windows.Forms.Label label14;
         private Bunifu.UI.WinForms.BunifuDatePicker dtFechaNachimiento;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

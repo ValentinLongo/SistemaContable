@@ -233,7 +233,7 @@
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnImprimir.Location = new System.Drawing.Point(406, 467);
+            this.btnImprimir.Location = new System.Drawing.Point(406, 466);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(120, 26);
             this.btnImprimir.TabIndex = 8;
@@ -278,11 +278,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(19, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 16);
+            this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 26;
             this.label1.Text = "Usuario";
             // 
@@ -358,9 +358,9 @@
             this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsulta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConsulta.Image = global::SistemaContable.Properties.Resources.binocular2;
-            this.btnConsulta.Location = new System.Drawing.Point(362, 57);
+            this.btnConsulta.Location = new System.Drawing.Point(362, 58);
             this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(23, 26);
+            this.btnConsulta.Size = new System.Drawing.Size(23, 23);
             this.btnConsulta.TabIndex = 2;
             this.btnConsulta.UseVisualStyleBackColor = false;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);

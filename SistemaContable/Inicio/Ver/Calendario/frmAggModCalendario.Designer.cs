@@ -217,7 +217,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(136, 147);
+            this.btnConfirmar.Location = new System.Drawing.Point(135, 147);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(162, 38);
             this.btnConfirmar.TabIndex = 2;

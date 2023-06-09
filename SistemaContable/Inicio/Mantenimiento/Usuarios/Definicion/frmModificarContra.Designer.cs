@@ -202,7 +202,7 @@
             this.btnConfirmar.BorderSize = 0;
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17F);
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfirmar.Location = new System.Drawing.Point(134, 258);

@@ -257,7 +257,7 @@
             this.btnEjercicio.Image = ((System.Drawing.Image)(resources.GetObject("btnEjercicio.Image")));
             this.btnEjercicio.Location = new System.Drawing.Point(360, 37);
             this.btnEjercicio.Name = "btnEjercicio";
-            this.btnEjercicio.Size = new System.Drawing.Size(22, 21);
+            this.btnEjercicio.Size = new System.Drawing.Size(23, 23);
             this.btnEjercicio.TabIndex = 2;
             this.btnEjercicio.UseVisualStyleBackColor = false;
             this.btnEjercicio.Click += new System.EventHandler(this.btnEjercicio_Click);

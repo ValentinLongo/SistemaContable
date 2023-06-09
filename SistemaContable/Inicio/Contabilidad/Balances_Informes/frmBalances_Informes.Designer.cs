@@ -418,9 +418,9 @@
             this.btnEjercicio.FlatAppearance.BorderSize = 0;
             this.btnEjercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEjercicio.Image = ((System.Drawing.Image)(resources.GetObject("btnEjercicio.Image")));
-            this.btnEjercicio.Location = new System.Drawing.Point(387, 39);
+            this.btnEjercicio.Location = new System.Drawing.Point(385, 37);
             this.btnEjercicio.Name = "btnEjercicio";
-            this.btnEjercicio.Size = new System.Drawing.Size(31, 21);
+            this.btnEjercicio.Size = new System.Drawing.Size(23, 23);
             this.btnEjercicio.TabIndex = 2;
             this.btnEjercicio.UseVisualStyleBackColor = false;
             this.btnEjercicio.Click += new System.EventHandler(this.btnEjercicio_Click);
@@ -443,9 +443,9 @@
             this.btnModelo.FlatAppearance.BorderSize = 0;
             this.btnModelo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModelo.Image = ((System.Drawing.Image)(resources.GetObject("btnModelo.Image")));
-            this.btnModelo.Location = new System.Drawing.Point(382, 135);
+            this.btnModelo.Location = new System.Drawing.Point(380, 134);
             this.btnModelo.Name = "btnModelo";
-            this.btnModelo.Size = new System.Drawing.Size(31, 21);
+            this.btnModelo.Size = new System.Drawing.Size(23, 23);
             this.btnModelo.TabIndex = 7;
             this.btnModelo.UseVisualStyleBackColor = false;
             this.btnModelo.Visible = false;

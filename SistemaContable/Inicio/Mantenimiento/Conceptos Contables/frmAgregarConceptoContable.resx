@@ -230,4 +230,32 @@
         9vF/bLpBAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnBuscar2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAd5JREFUSEvtlMsuJGEcxTuxZeEaJIJYCUtWsxGvYCRiwX6EiBAriQcgZlYjHoAX
+        kHFvEpFZicnsbVz3ZsRd+52qU4Wqbi3WTvJL9/+c8/XXXf1VZT71YeVyuX44gxtYhgpHyirtKTuFPkfv
+        Ewtq4Qp+ww/QB313rDzy9KqOurWOi4vyBEiz0A67kHWsPGtPmTrShOO3RfErXAZLQj2A5m1X1Nm2pyyS
+        5h5X8otCHfyHDWiCKpgHKbmB9BPUaYZN0No619IinAJ9qwZb8krgBA5h0uj9MZS4pl4DaO2UrbQI92HP
+        Yyy8HUhqx3EsvD3Y9/haBI3wCOO2YuHpkiQvUTxHwosOR5OtZ2EOh1luAEZhDL44K7iBOqCu1mitNBwU
+        XwpzK8xS0pH8C8kNAg/yadPVUBgVcAf/QL+k3oyAToaU3EAq1L+FcteDBdFPS51jvN4wyrvBW/0BW4G5
+        BGceUyI7h+QxLdZf9BgYK3DgMSWyP5BUsf6Kx8CYAz28qm3FwqsBXdNpW/JmoFh/1lZgtsE96BFcalt+
+        GfwCPS1bbMtvhWso1NeBabUdCmMIdKMdwYLR40C3//MfZuENOsvX/+baaxF0wzpcgI7gKnQ4TomsE9bc
+        1Rq973L8qfcok3kCVj9qpnleABkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnBuscar1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAd5JREFUSEvtlMsuJGEcxTuxZeEaJIJYCUtWsxGvYCRiwX6EiBAriQcgZlYjHoAX
+        kHFvEpFZicnsbVz3ZsRd+52qU4Wqbi3WTvJL9/+c8/XXXf1VZT71YeVyuX44gxtYhgpHyirtKTuFPkfv
+        Ewtq4Qp+ww/QB313rDzy9KqOurWOi4vyBEiz0A67kHWsPGtPmTrShOO3RfErXAZLQj2A5m1X1Nm2pyyS
+        5h5X8otCHfyHDWiCKpgHKbmB9BPUaYZN0No619IinAJ9qwZb8krgBA5h0uj9MZS4pl4DaO2UrbQI92HP
+        Yyy8HUhqx3EsvD3Y9/haBI3wCOO2YuHpkiQvUTxHwosOR5OtZ2EOh1luAEZhDL44K7iBOqCu1mitNBwU
+        XwpzK8xS0pH8C8kNAg/yadPVUBgVcAf/QL+k3oyAToaU3EAq1L+FcteDBdFPS51jvN4wyrvBW/0BW4G5
+        BGceUyI7h+QxLdZf9BgYK3DgMSWyP5BUsf6Kx8CYAz28qm3FwqsBXdNpW/JmoFh/1lZgtsE96BFcalt+
+        GfwCPS1bbMtvhWso1NeBabUdCmMIdKMdwYLR40C3//MfZuENOsvX/+baaxF0wzpcgI7gKnQ4TomsE9bc
+        1Rq973L8qfcok3kCVj9qpnleABkAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

@@ -182,7 +182,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(287, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(147, 1);
+            this.panel3.Size = new System.Drawing.Size(361, 1);
             this.panel3.TabIndex = 40;
             // 
             // txtDescriUsuario
@@ -195,7 +195,7 @@
             this.txtDescriUsuario.Location = new System.Drawing.Point(287, 54);
             this.txtDescriUsuario.Name = "txtDescriUsuario";
             this.txtDescriUsuario.ReadOnly = true;
-            this.txtDescriUsuario.Size = new System.Drawing.Size(147, 19);
+            this.txtDescriUsuario.Size = new System.Drawing.Size(361, 19);
             this.txtDescriUsuario.TabIndex = 1;
             this.txtDescriUsuario.Tag = "00000";
             // 

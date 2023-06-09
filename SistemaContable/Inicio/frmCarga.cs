@@ -15,8 +15,13 @@ namespace SistemaContable
         public frmCarga()
         {
             InitializeComponent();
+
             //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
             //Negocio.FFormatoSistema.SetearFormato(this);
+
+            CircleProgress.Value = 0;
+            this.Opacity = 0.0;
+            tAparece.Start();
         }
 
         private void tAparece_Tick(object sender, EventArgs e)
@@ -43,13 +48,6 @@ namespace SistemaContable
                 Inicio.Show();
                 this.Close();
             }
-        }
-
-        private void frmCarga_Load(object sender, EventArgs e)
-        {
-            CircleProgress.Value = 0;
-            this.Opacity = 0.0;
-            tAparece.Start();
         }
     }
 }

@@ -52,7 +52,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tbVendedor = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.cbSeccion = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.Check = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtFechaNachimiento = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,11 +175,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(0, 193);
+            this.label7.Location = new System.Drawing.Point(63, 193);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(146, 16);
+            this.label7.Size = new System.Drawing.Size(83, 16);
             this.label7.TabIndex = 24;
-            this.label7.Text = "Fecha de Nacimiento:";
+            this.label7.Text = "Nacimiento:";
             // 
             // label6
             // 
@@ -291,7 +291,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(150, 374);
+            this.panel6.Location = new System.Drawing.Point(150, 376);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(252, 1);
             this.panel6.TabIndex = 55;
@@ -301,23 +301,11 @@
             this.tbVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbVendedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbVendedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbVendedor.Location = new System.Drawing.Point(150, 362);
+            this.tbVendedor.Location = new System.Drawing.Point(150, 364);
             this.tbVendedor.Name = "tbVendedor";
             this.tbVendedor.Size = new System.Drawing.Size(252, 13);
             this.tbVendedor.TabIndex = 5;
             this.tbVendedor.Tag = "01000";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Image = global::SistemaContable.Properties.Resources.lupa;
-            this.btnBuscar.Location = new System.Drawing.Point(421, 352);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(31, 27);
-            this.btnBuscar.TabIndex = 6;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // cbSeccion
             // 
@@ -347,7 +335,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(74, 359);
+            this.label11.Location = new System.Drawing.Point(74, 361);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(72, 16);
             this.label11.TabIndex = 50;
@@ -363,10 +351,10 @@
             this.btnAceptar.BorderSize = 0;
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Font = new System.Drawing.Font("Dotum", 17F);
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(182, 441);
+            this.btnAceptar.Location = new System.Drawing.Point(173, 445);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(158, 40);
             this.btnAceptar.TabIndex = 7;
@@ -480,7 +468,7 @@
             this.Check.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Check.Cursor = System.Windows.Forms.Cursors.Default;
             this.Check.CustomCheckmarkImage = null;
-            this.Check.Location = new System.Drawing.Point(148, 401);
+            this.Check.Location = new System.Drawing.Point(115, 403);
             this.Check.MinimumSize = new System.Drawing.Size(17, 17);
             this.Check.Name = "Check";
             this.Check.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -522,7 +510,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(171, 403);
+            this.label2.Location = new System.Drawing.Point(138, 405);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(255, 16);
             this.label2.TabIndex = 60;
@@ -554,12 +542,26 @@
             this.dtFechaNachimiento.Size = new System.Drawing.Size(252, 32);
             this.dtFechaNachimiento.TabIndex = 70;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(408, 355);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(23, 23);
+            this.btnBuscar.TabIndex = 71;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmModificarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(505, 505);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dtFechaNachimiento);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Check);
@@ -567,7 +569,6 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.tbVendedor);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cbSeccion);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -628,7 +629,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox tbVendedor;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ComboBox cbSeccion;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -639,5 +639,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuDatePicker dtFechaNachimiento;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

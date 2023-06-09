@@ -425,7 +425,10 @@ namespace SistemaContable
             if (Application.OpenForms.Count > 2)
             {
                 Form frmHijoAcivo = this.ActiveMdiChild;
-                frmHijoAcivo.Close();
+                if (frmHijoAcivo != null)
+                {
+                    frmHijoAcivo.Close();
+                }
                 if (Application.OpenForms.Count == 2)
                 {
                     pbLogo.BringToFront();

@@ -360,9 +360,9 @@
             this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsulta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConsulta.Image = global::SistemaContable.Properties.Resources.binocular2;
-            this.btnConsulta.Location = new System.Drawing.Point(192, 34);
+            this.btnConsulta.Location = new System.Drawing.Point(192, 37);
             this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(23, 26);
+            this.btnConsulta.Size = new System.Drawing.Size(23, 23);
             this.btnConsulta.TabIndex = 1;
             this.btnConsulta.UseVisualStyleBackColor = false;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
