@@ -107,7 +107,35 @@ namespace SistemaContable.Parametrizacion_Permisos
 
         private void btnRestabPerfil_Click(object sender, EventArgs e)
         {
+            if (txtNroUsuario.Text != "" && txtDescriUsuario.Text != "")
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Al Aceptar provocará que los permisos asignados al usuario indicado sean restablecidos. ¿Desea Continuar?", true, true);
+                MessageBox.ShowDialog();
+                if (frmMessageBox.Acepto)
+                {
+                    frmConsultaGeneral consultageneral = new frmConsultaGeneral("per_codigo as Codigo, per_descri as Descripcion", "Perfil", "", "ORDER BY per_codigo", "per", "codigo", "descri");
+                    consultageneral.ShowDialog();
 
+                    string cod = frmConsultaGeneral.codigoCG;
+                    string descri = frmConsultaGeneral.descripcionCG;
+
+                    if (cod != null && descri != null)
+                    {
+                        DataSet ds = new DataSet();
+                        ds = AccesoBase.ListarDatos($"SELECT * FROM PermisosxPerfil WHERE pxp_perfil = {cod} and pxp_sistema = 'CO'");
+                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        {
+                            AccesoBase.InsertUpdateDatos($"UPDATE PermisosxUsu SET pxu_activo = {dr["pxp_activo"]} WHERE pxu_usuario = {txtNroUsuario.Text} AND pxu_codigo = {dr["pxp_codigo"]} AND pxu_sistema = 'CO'");
+                        }
+                        cargarDGV("","","");
+                    }
+                }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debera indicar un usuario.", false);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void dgvPEspeciales_CellContentClick(object sender, DataGridViewCellEventArgs e)

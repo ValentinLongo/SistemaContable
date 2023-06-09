@@ -43,23 +43,23 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
 
         private void btnBuscarCuenta_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral consultaGeneral = new frmConsultaGeneral("pcu_codigo as Codigo, pcu_descri as Descripcion", "PCuenta", "", "", "pcu", "codigo", "descri");
-            consultaGeneral.ShowDialog();
-            if (frmConsultaGeneral.codigoCG != null)
+            frmBuscarCuenta buscarCuenta = new frmBuscarCuenta("Cuenta");
+            buscarCuenta.ShowDialog();
+            if (frmBuscarCuenta.IdCuenta > 0)
             {
-                tbIdCuenta.Text = frmConsultaGeneral.codigoCG.ToString();
-                tbDescriCuenta.Text = frmConsultaGeneral.descripcionCG;
+                tbIdCuenta.Text = frmBuscarCuenta.IdCuenta.ToString();
+                tbDescriCuenta.Text = frmBuscarCuenta.DescriCuenta;
             }
         }
 
         private void btnBuscarCuenta2_Click(object sender, EventArgs e)
         {
-            frmConsultaGeneral consultaGeneral = new frmConsultaGeneral("pcu_codigo as Codigo, pcu_descri as Descripcion", "PCuenta", "", "", "pcu", "codigo", "descri");
-            consultaGeneral.ShowDialog();
-            if (frmConsultaGeneral.codigoCG != null)
+            frmBuscarCuenta buscarCuenta = new frmBuscarCuenta("Cuenta");
+            buscarCuenta.ShowDialog();
+            if (frmBuscarCuenta.IdCuenta > 0)
             {
-                tbIdCuenta2.Text = frmConsultaGeneral.codigoCG.ToString();
-                tbDescriCuenta2.Text = frmConsultaGeneral.descripcionCG;
+                tbIdCuenta2.Text = frmBuscarCuenta.IdCuenta.ToString();
+                tbDescriCuenta2.Text = frmBuscarCuenta.DescriCuenta;
             }
         }
 

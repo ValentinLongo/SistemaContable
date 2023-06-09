@@ -218,6 +218,7 @@
             this.tbNroCuenta.Size = new System.Drawing.Size(68, 13);
             this.tbNroCuenta.TabIndex = 2;
             this.tbNroCuenta.Tag = "10100";
+            this.tbNroCuenta.TextChanged += new System.EventHandler(this.tbNroCuenta_TextChanged);
             // 
             // panel5
             // 

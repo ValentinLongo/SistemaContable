@@ -3,6 +3,7 @@ using Datos;
 using Datos.Modelos;
 using Negocio;
 using Negocio.Funciones.Generales;
+using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables;
 using SistemaContable.Usuarios;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Caching;
 using System.Windows.Forms;
+using System.Windows.Interop;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
@@ -4260,10 +4262,13 @@ namespace SistemaContable.General
 
         private void btnCtaCont_Click(object sender, EventArgs e) //para traer el nº de cuenta con su descripción.
         {
-            frmConsultaGeneral frm = new frmConsultaGeneral("pcu_cuenta as Cuenta, pcu_descri as Descripción", "PCuenta", "", "", "pcu", "cuenta", "descri");
-            frm.ShowDialog();
-            txtNroCuenta.Text = frmConsultaGeneral.codigoCG;
-            txtDescriCuenta.Text = frmConsultaGeneral.descripcionCG;
+            frmBuscarCuenta buscarCuenta = new frmBuscarCuenta("Cuenta");
+            buscarCuenta.ShowDialog();
+            if (frmBuscarCuenta.IdCuenta > 0)
+            {
+                txtNroCuenta.Text = frmBuscarCuenta.IdCuenta.ToString();
+                txtDescriCuenta.Text = frmBuscarCuenta.DescriCuenta;
+            }
         }
 
         private void txtNroCuenta_TextChanged(object sender, EventArgs e) //para actualizar los txt cuando se ingresa/cambia un nro de cuenta.
@@ -4276,13 +4281,21 @@ namespace SistemaContable.General
             }
 
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE pcu_cuenta = {txtNroCuenta.Text}");
-            if (ds.Tables[0].Rows.Count != 0)
+            if (frmBuscarCuenta.ValidacionMovimientos(Convert.ToInt32(txtNroCuenta.Text)))
             {
-                foreach (DataRow dr in ds.Tables[0].Rows)
+                ds = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE pcu_cuenta = {txtNroCuenta.Text}");
+                if (ds.Tables[0].Rows.Count != 0)
                 {
-                    txtDescriCuenta.Text = dr["pcu_descri"].ToString();
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        txtDescriCuenta.Text = dr["pcu_descri"].ToString();
+                    }
                 }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La cuenta contable No puede recibir movimientos.", false);
+                MessageBox.ShowDialog();
             }
         }
 

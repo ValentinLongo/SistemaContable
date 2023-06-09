@@ -1,4 +1,5 @@
-﻿using Datos;
+﻿using Bunifu.UI.WinForms;
+using Datos;
 using Datos.Modelos;
 using System;
 using System.Collections.Generic;
@@ -29,10 +30,21 @@ namespace Negocio.Funciones.Mantenimiento
             return ds;
         }
 
-        public DataSet listaCuentasActivas(string txtbusqueda)
+        public DataSet listaCuentasActivasMovimiento(string txtbusqueda, BunifuCheckBox checkActivas, BunifuCheckBox checkMovimiento)
         {
             DataSet ds = new DataSet();
-            ds = AccesoBase.ListarDatos($"SELECT pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri as Descripción FROM PCuenta WHERE pcu_estado = 1 { txtbusqueda }");
+            if (checkActivas.Checked && checkMovimiento.Checked == false)
+            {
+                ds = AccesoBase.ListarDatos($"SELECT pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri as Descripción FROM PCuenta WHERE pcu_estado = 1 {txtbusqueda}");
+            }
+            else if (checkMovimiento.Checked && checkActivas.Checked == false)
+            {
+                ds = AccesoBase.ListarDatos($"SELECT pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri as Descripción FROM PCuenta WHERE pcu_hija = 0 {txtbusqueda}");
+            }
+            else
+            {
+                ds = AccesoBase.ListarDatos($"SELECT pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri as Descripción FROM PCuenta WHERE pcu_estado = 1 AND pcu_hija = 0 {txtbusqueda}");
+            }
             return ds;
         }
 
