@@ -61,7 +61,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.controlbarMinimizar = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.HoraFecha = new System.Windows.Forms.Timer(this.components);
             this.borde2 = new System.Windows.Forms.Panel();
             this.borde1 = new System.Windows.Forms.Panel();
             this.lblnuevomensaje = new System.Windows.Forms.Label();
@@ -70,7 +69,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.borde3 = new System.Windows.Forms.Panel();
             this.borde4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblUsu = new System.Windows.Forms.Label();
             this.btnAyuda2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnMantenimiento2 = new RJCodeAdvance.RJControls.RJButton();
@@ -78,6 +76,7 @@
             this.btnVer2 = new RJCodeAdvance.RJControls.RJButton();
             this.btnArchivos2 = new RJCodeAdvance.RJControls.RJButton();
             this.PanelMenu = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSesion = new RJCodeAdvance.RJControls.RJButton();
             this.pArchivos2 = new System.Windows.Forms.Panel();
             this.btnAyuda = new RJCodeAdvance.RJControls.RJButton();
@@ -103,8 +102,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.pbLogoPanel = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.Menu_Archivos = new Negocio.MenuDropDown(this.components);
@@ -158,7 +155,6 @@
             this.panel5.SuspendLayout();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoPanel)).BeginInit();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.Menu_Archivos.SuspendLayout();
             this.Menu_Ver.SuspendLayout();
@@ -487,11 +483,6 @@
             this.controlbarMinimizar.TabStop = false;
             this.controlbarMinimizar.Tag = "12345";
             // 
-            // HoraFecha
-            // 
-            this.HoraFecha.Enabled = true;
-            this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
-            // 
             // borde2
             // 
             this.borde2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
@@ -541,12 +532,6 @@
             resources.ApplyResources(this.borde4, "borde4");
             this.borde4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
             this.borde4.Name = "borde4";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
             // 
             // lblUsu
             // 
@@ -649,6 +634,7 @@
             this.PanelMenu.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.PanelMenu, "PanelMenu");
             this.PanelMenu.BorderRadius = 0;
+            this.PanelMenu.Controls.Add(this.label1);
             this.PanelMenu.Controls.Add(this.btnSesion);
             this.PanelMenu.Controls.Add(this.pArchivos2);
             this.PanelMenu.Controls.Add(this.btnAyuda);
@@ -672,18 +658,22 @@
             this.PanelMenu.Controls.Add(this.pVer);
             this.PanelMenu.Controls.Add(this.pArchivos);
             this.PanelMenu.Controls.Add(this.panel7);
-            this.PanelMenu.Controls.Add(this.pbLogoPanel);
             this.PanelMenu.Controls.Add(this.lblUsu);
             this.PanelMenu.Controls.Add(this.panel4);
-            this.PanelMenu.Controls.Add(this.lblFecha);
-            this.PanelMenu.Controls.Add(this.lblHora);
             this.PanelMenu.Controls.Add(this.bunifuShapes1);
+            this.PanelMenu.Controls.Add(this.pbLogoPanel);
             this.PanelMenu.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.PanelMenu.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.PanelMenu.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.PanelMenu.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Quality = 10;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
             // 
             // btnSesion
             // 
@@ -937,22 +927,9 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel4.Controls.Add(this.label1);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             this.panel4.Tag = "1";
-            // 
-            // lblFecha
-            // 
-            resources.ApplyResources(this.lblFecha, "lblFecha");
-            this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Name = "lblFecha";
-            // 
-            // lblHora
-            // 
-            resources.ApplyResources(this.lblHora, "lblHora");
-            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.lblHora.Name = "lblHora";
             // 
             // bunifuShapes1
             // 
@@ -1384,11 +1361,9 @@
             this.Controls.Add(this.btnContabilidad2);
             this.Controls.Add(this.btnMantenimiento2);
             this.Controls.Add(this.btnAyuda2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "frmInicio";
             this.Tag = "x";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.MdiChildActivate += new System.EventHandler(this.frmInicio_MdiChildActivate);
             this.Resize += new System.EventHandler(this.frmInicio_Resize);
@@ -1399,8 +1374,6 @@
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoPanel)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.Menu_Archivos.ResumeLayout(false);
             this.Menu_Ver.ResumeLayout(false);
@@ -1445,13 +1418,9 @@
         private RJCodeAdvance.RJControls.RJButton btnMantenimiento;
         private RJCodeAdvance.RJControls.RJButton btnContabilidad;
         private RJCodeAdvance.RJControls.RJButton btnVer;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.Timer HoraFecha;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.Label label1;
         private RJCodeAdvance.RJControls.RJButton btnArchivos2;
         private RJCodeAdvance.RJControls.RJButton btnVer2;
         private RJCodeAdvance.RJControls.RJButton btnContabilidad2;
@@ -1537,5 +1506,6 @@
         private System.Windows.Forms.Panel borde3;
         private System.Windows.Forms.Panel borde4;
         private RJCodeAdvance.RJControls.RJButton btnSesion;
+        private System.Windows.Forms.Label label1;
     }
 }

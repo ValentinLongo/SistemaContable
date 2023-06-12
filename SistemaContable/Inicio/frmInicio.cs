@@ -140,6 +140,20 @@ namespace SistemaContable
         //VARIOS
         private void frmInicio_Load(object sender, EventArgs e)
         {
+            //WindowState = FormWindowState.Maximized;
+            //Size = SystemInformation.PrimaryMonitorMaximizedWindowSize;
+
+            //int ancho = Screen.PrimaryScreen.WorkingArea.Width;
+            //int alto = Screen.PrimaryScreen.WorkingArea.Height;
+            //this.MaximumSize = new System.Drawing.Size(ancho, alto);
+
+            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+
+            Size = SystemInformation.PrimaryMonitorMaximizedWindowSize;
+            FormBorderStyle = FormBorderStyle.None;
+            Bounds = Screen.PrimaryScreen.WorkingArea;
+
             DisparadorInicio(sender, e);
         }
 
@@ -155,6 +169,11 @@ namespace SistemaContable
 
         private void frmInicio_MdiChildActivate(object sender, EventArgs e)
         {
+            if (this.ActiveMdiChild != null && this.ActiveMdiChild.Visible == false)
+            {
+                this.ActiveMdiChild.Show();
+            }
+
             Negocio.FFormatoSistema.ColorBorde(borde1);
             Negocio.FFormatoSistema.ColorBorde(borde2);
             Negocio.FFormatoSistema.ColorBorde(borde3);
@@ -180,12 +199,6 @@ namespace SistemaContable
         private void tsbMensajesInternos_MouseLeave(object sender, EventArgs e)
         {
             lblnuevomensaje.BackColor = Color.FromArgb(255, 40, 40, 40);
-        }
-
-        private void HoraFecha_Tick(object sender, EventArgs e)
-        {
-            lblHora.Text = DateTime.Now.ToLongTimeString();
-            lblFecha.Text = DateTime.Now.ToShortDateString();
         }
 
         private int UltimoUsuarioAnterior = Negocio.FGenerales.ultimoNumeroID("usu_codigo", "Usuario");

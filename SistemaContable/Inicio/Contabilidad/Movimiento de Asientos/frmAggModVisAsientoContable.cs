@@ -737,6 +737,11 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (dgvAddModVisASIENTO.Rows.Count == 0)
+            {
+                return;
+            }
+
             string NroAsiento = txtNroAsiento.Text;
 
             if (NroAsiento == "ALTA EN CONCEPTO")

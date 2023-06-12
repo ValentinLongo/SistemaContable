@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +52,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.lblCantElementos = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.controlbarMinimizar = new Bunifu.UI.WinForms.BunifuFormControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvUsuarios
@@ -64,14 +68,14 @@
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUsuarios.ColumnHeadersHeight = 25;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -80,31 +84,31 @@
             this.Login,
             this.Perfil,
             this.Telefono});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvUsuarios.EnableHeadersVisualStyles = false;
             this.dgvUsuarios.GridColor = System.Drawing.Color.White;
-            this.dgvUsuarios.Location = new System.Drawing.Point(18, 89);
+            this.dgvUsuarios.Location = new System.Drawing.Point(18, 108);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvUsuarios.RowHeadersVisible = false;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(874, 540);
+            this.dgvUsuarios.Size = new System.Drawing.Size(874, 512);
             this.dgvUsuarios.TabIndex = 7;
             this.dgvUsuarios.TabStop = false;
             this.dgvUsuarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Click);
@@ -152,9 +156,9 @@
             this.btnAgregar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(898, 89);
+            this.btnAgregar.Location = new System.Drawing.Point(898, 108);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(150, 46);
+            this.btnAgregar.Size = new System.Drawing.Size(150, 40);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
@@ -174,9 +178,9 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(899, 585);
+            this.btnImprimir.Location = new System.Drawing.Point(899, 580);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(149, 44);
+            this.btnImprimir.Size = new System.Drawing.Size(149, 40);
             this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
@@ -196,9 +200,9 @@
             this.btnDefinirCajas.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDefinirCajas.ForeColor = System.Drawing.Color.White;
             this.btnDefinirCajas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDefinirCajas.Location = new System.Drawing.Point(899, 235);
+            this.btnDefinirCajas.Location = new System.Drawing.Point(899, 249);
             this.btnDefinirCajas.Name = "btnDefinirCajas";
-            this.btnDefinirCajas.Size = new System.Drawing.Size(149, 44);
+            this.btnDefinirCajas.Size = new System.Drawing.Size(149, 40);
             this.btnDefinirCajas.TabIndex = 3;
             this.btnDefinirCajas.Text = "Definir Cajas";
             this.btnDefinirCajas.TextColor = System.Drawing.Color.White;
@@ -218,9 +222,9 @@
             this.btnModificar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(899, 161);
+            this.btnModificar.Location = new System.Drawing.Point(899, 178);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(149, 44);
+            this.btnModificar.Size = new System.Drawing.Size(149, 40);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
@@ -233,7 +237,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(25, 3);
+            this.label4.Location = new System.Drawing.Point(25, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 18);
             this.label4.TabIndex = 53;
@@ -245,7 +249,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(719, 43);
+            this.label5.Location = new System.Drawing.Point(719, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 16);
             this.label5.TabIndex = 62;
@@ -270,7 +274,7 @@
             this.CheckUsuario.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckUsuario.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckUsuario.CustomCheckmarkImage = null;
-            this.CheckUsuario.Location = new System.Drawing.Point(699, 42);
+            this.CheckUsuario.Location = new System.Drawing.Point(699, 66);
             this.CheckUsuario.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckUsuario.Name = "CheckUsuario";
             this.CheckUsuario.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -318,7 +322,7 @@
             this.cbBusqueda.Items.AddRange(new object[] {
             "Codigo",
             "Nombre"});
-            this.cbBusqueda.Location = new System.Drawing.Point(56, 39);
+            this.cbBusqueda.Location = new System.Drawing.Point(56, 62);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(169, 25);
             this.cbBusqueda.TabIndex = 63;
@@ -329,7 +333,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(236, 63);
+            this.panel2.Location = new System.Drawing.Point(236, 85);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(228, 1);
             this.panel2.TabIndex = 65;
@@ -341,7 +345,7 @@
             this.txtbusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtbusqueda.Location = new System.Drawing.Point(236, 46);
+            this.txtbusqueda.Location = new System.Drawing.Point(236, 68);
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(228, 15);
             this.txtbusqueda.TabIndex = 0;
@@ -367,7 +371,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(471, 44);
+            this.CheckInicio.Location = new System.Drawing.Point(471, 68);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -409,7 +413,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(491, 45);
+            this.label1.Location = new System.Drawing.Point(491, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 67;
@@ -424,11 +428,11 @@
             this.ShapeBusqueda.BorderThickness = 1;
             this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.FillShape = true;
-            this.ShapeBusqueda.Location = new System.Drawing.Point(18, 14);
+            this.ShapeBusqueda.Location = new System.Drawing.Point(18, 45);
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
-            this.ShapeBusqueda.Size = new System.Drawing.Size(874, 69);
+            this.ShapeBusqueda.Size = new System.Drawing.Size(874, 59);
             this.ShapeBusqueda.TabIndex = 68;
             this.ShapeBusqueda.TabStop = false;
             this.ShapeBusqueda.Text = "bunifuShapes1";
@@ -439,11 +443,98 @@
             this.lblCantElementos.AutoSize = true;
             this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCantElementos.Location = new System.Drawing.Point(15, 633);
+            this.lblCantElementos.Location = new System.Drawing.Point(15, 623);
             this.lblCantElementos.Name = "lblCantElementos";
             this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
             this.lblCantElementos.TabIndex = 69;
             this.lblCantElementos.Text = "Elementos";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.controlbarMinimizar);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1060, 20);
+            this.panel5.TabIndex = 70;
+            this.panel5.Tag = "1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gadugi", 11.25F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(3, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 19);
+            this.label2.TabIndex = 58;
+            // 
+            // controlbarMinimizar
+            // 
+            this.controlbarMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controlbarMinimizar.BunifuFormDrag = null;
+            this.controlbarMinimizar.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlbarMinimizar.CloseBoxOptions.BorderRadius = 0;
+            this.controlbarMinimizar.CloseBoxOptions.Enabled = true;
+            this.controlbarMinimizar.CloseBoxOptions.EnableDefaultAction = true;
+            this.controlbarMinimizar.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.controlbarMinimizar.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.CloseBoxOptions.Icon")));
+            this.controlbarMinimizar.CloseBoxOptions.IconAlt = null;
+            this.controlbarMinimizar.CloseBoxOptions.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.controlbarMinimizar.CloseBoxOptions.IconHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.controlbarMinimizar.CloseBoxOptions.IconPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.controlbarMinimizar.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
+            this.controlbarMinimizar.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.controlbarMinimizar.HelpBox = false;
+            this.controlbarMinimizar.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlbarMinimizar.HelpBoxOptions.BorderRadius = 0;
+            this.controlbarMinimizar.HelpBoxOptions.Enabled = true;
+            this.controlbarMinimizar.HelpBoxOptions.EnableDefaultAction = true;
+            this.controlbarMinimizar.HelpBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.controlbarMinimizar.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.HelpBoxOptions.Icon")));
+            this.controlbarMinimizar.HelpBoxOptions.IconAlt = null;
+            this.controlbarMinimizar.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
+            this.controlbarMinimizar.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.controlbarMinimizar.Location = new System.Drawing.Point(984, 2);
+            this.controlbarMinimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.controlbarMinimizar.MaximizeBox = false;
+            this.controlbarMinimizar.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlbarMinimizar.MaximizeBoxOptions.BorderRadius = 0;
+            this.controlbarMinimizar.MaximizeBoxOptions.Enabled = true;
+            this.controlbarMinimizar.MaximizeBoxOptions.EnableDefaultAction = true;
+            this.controlbarMinimizar.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.controlbarMinimizar.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.MaximizeBoxOptions.Icon")));
+            this.controlbarMinimizar.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.MaximizeBoxOptions.IconAlt")));
+            this.controlbarMinimizar.MaximizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.controlbarMinimizar.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
+            this.controlbarMinimizar.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.controlbarMinimizar.MinimizeBox = true;
+            this.controlbarMinimizar.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.controlbarMinimizar.MinimizeBoxOptions.BorderRadius = 0;
+            this.controlbarMinimizar.MinimizeBoxOptions.Enabled = true;
+            this.controlbarMinimizar.MinimizeBoxOptions.EnableDefaultAction = true;
+            this.controlbarMinimizar.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.controlbarMinimizar.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.MinimizeBoxOptions.Icon")));
+            this.controlbarMinimizar.MinimizeBoxOptions.IconAlt = null;
+            this.controlbarMinimizar.MinimizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.controlbarMinimizar.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.controlbarMinimizar.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
+            this.controlbarMinimizar.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.controlbarMinimizar.Name = "controlbarMinimizar";
+            this.controlbarMinimizar.ShowDesignBorders = false;
+            this.controlbarMinimizar.Size = new System.Drawing.Size(76, 17);
+            this.controlbarMinimizar.TabIndex = 33;
+            this.controlbarMinimizar.TabStop = false;
+            this.controlbarMinimizar.Tag = "12345";
             // 
             // frmUsuarios
             // 
@@ -451,6 +542,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1060, 650);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CheckInicio);
@@ -471,7 +563,10 @@
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
+            this.Resize += new System.EventHandler(this.frmUsuarios_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -499,5 +594,8 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
         private System.Windows.Forms.Label lblCantElementos;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.UI.WinForms.BunifuFormControlBox controlbarMinimizar;
     }
 }

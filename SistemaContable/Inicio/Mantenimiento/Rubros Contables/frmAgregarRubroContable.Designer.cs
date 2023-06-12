@@ -231,7 +231,6 @@
             this.tbNombre.ForeColor = System.Drawing.SystemColors.Window;
             this.tbNombre.Location = new System.Drawing.Point(93, 89);
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.ReadOnly = true;
             this.tbNombre.Size = new System.Drawing.Size(219, 19);
             this.tbNombre.TabIndex = 1;
             this.tbNombre.Tag = "11010";

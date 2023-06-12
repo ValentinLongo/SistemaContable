@@ -92,6 +92,11 @@ namespace SistemaContable.Empresa
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (dgvSucursales.Rows.Count == 0)
+            {
+                return;
+            }
+
             frmReporte reporte = new frmReporte("Sucursal", FEmpresa.querySucursales, "", "Sucursales", "Todas", DateTime.Now.ToString("d"));
             reporte.ShowDialog();
         }

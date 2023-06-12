@@ -19,6 +19,7 @@ namespace SistemaContable.Plan_de_Cuentas
     {
         public static string idCuenta;
         public static bool MostrarControlBar = false;
+
         public frmPlanDeCuentas()
         {
             InitializeComponent();
@@ -39,35 +40,22 @@ namespace SistemaContable.Plan_de_Cuentas
         private void CargarDGV(string descri)
         {
             dgvCuentas.Rows.Clear();
-            string codigo = "";
-            int cuenta = 0;
-            string descripcion = "";
-            string superior = "";
-            int hija = 0;
-            int tabulador = 0;
-            bool ajusta = false;
+
             DataSet ds = new DataSet();
             ds = Negocio.FPlanDeCuentas.BusquedaCuenta(descri);
-            foreach (DataRow dr in ds.Tables[0].Rows)
-            {
-                codigo = dr["pcu_codigo"].ToString();
-                cuenta = Convert.ToInt32(dr["pcu_cuenta"].ToString());
-                descripcion = dr["pcu_descri"].ToString();
-                superior = dr["pcu_superior"].ToString();
-                hija = Convert.ToInt32(dr["pcu_hija"].ToString());
-                tabulador = Convert.ToInt32(dr["pcu_tabulador"].ToString());
-                try
-                {
-                    if (Convert.ToInt32(dr["pcu_ajustainf"].ToString()) == 1)
-                    {
-                        ajusta = true;
-                    }
-                }
-                catch
-                {
-                }
-                dgvCuentas.Rows.Add(codigo, cuenta, descripcion, superior, hija, tabulador, ajusta);
-            }
+            dgvCuentas.DataSource = ds.Tables[0];
+            DataGridViewColumn columna = dgvCuentas.Columns["AjustaInf"];
+
+            //Asigno a la columnaCheckBox los valores de la columna que se carga con el datasouce
+            DataGridViewCheckBoxColumn columnaCheckBox = new DataGridViewCheckBoxColumn();
+            columnaCheckBox.HeaderText = columna.HeaderText;
+            columnaCheckBox.Name = columna.Name;
+            columnaCheckBox.DataPropertyName = columna.DataPropertyName;
+
+            // Reemplaza la columna existente con la columnaCheckBox
+            int indiceColumna = columna.Index;
+            dgvCuentas.Columns.RemoveAt(indiceColumna);
+            dgvCuentas.Columns.Insert(indiceColumna, columnaCheckBox);
 
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvCuentas);
         }
@@ -135,26 +123,31 @@ namespace SistemaContable.Plan_de_Cuentas
             }
         }
 
-        private void panel7_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            frmReporte freporte = new frmReporte("PCuenta", $"{FPlanDeCuentas.query}","", "Plan de Cuentas", "General", DateTime.Now.ToString("d"));
+            if (dgvCuentas.Rows.Count == 0)
+            {
+                return;
+            }
+
+            frmReporte freporte = new frmReporte("PCuenta", $"{FPlanDeCuentas.query}", "", "Plan de Cuentas", "General", DateTime.Now.ToString("d"));
             freporte.ShowDialog();
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             CargarDGV(txtBusqueda.Text);
+        }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel7_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

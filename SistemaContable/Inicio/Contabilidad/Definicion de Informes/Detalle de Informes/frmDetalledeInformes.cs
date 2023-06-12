@@ -152,6 +152,11 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.DetalledeIn
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (dgvDetalledeInformes2.Rows.Count == 0)
+            {
+                return;
+            }
+
             frmReporte reporte = new frmReporte("ModBalanceDet", Query, "", "Informe de Modelos de Balance","General",DateTime.Now.ToString("d"));
             reporte.ShowDialog();
         }

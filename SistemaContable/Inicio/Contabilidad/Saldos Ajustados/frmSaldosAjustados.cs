@@ -508,6 +508,11 @@ namespace SistemaContable.Inicio.Contabilidad.Saldos_Ajustados
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (dgv1.Rows.Count == 0)
+            {
+                return;
+            }
+
             string reporte = "";
             string query = "";
 

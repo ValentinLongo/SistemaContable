@@ -163,6 +163,11 @@ namespace SistemaContable.Inicio.Ver.Calendario
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (dgvCalendario.Rows.Count == 0)
+            {
+                return;
+            }
+
             frmReporte freporte = new frmReporte("Calendario", $"{query}", "", "Calendario", DateTime.Now.ToShortDateString(), FLogin.NombreUsuario);
             freporte.ShowDialog();
         }
