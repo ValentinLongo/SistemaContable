@@ -235,7 +235,7 @@ namespace SistemaContable.Parametrizacion_Permisos
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
-        {
+        {   
             if (txtNroUsuario.Text != "")
             {
                 string query = "Select LEFT((REPLICATE(' ', len(mxu_codigo)) + RTRIM(LTRIM(mnu_descri))) + REPLICATE('.',100),65) as Descri, mxu_activo, * From MenuxUsu Left Join Menu on mxu_codigo = mnu_codigo WHERE mxu_usuario = " + txtNroUsuario.Text + " AND mxu_sistema = 'CO' AND mnu_sistema = 'CO' Order By mxu_codigo";

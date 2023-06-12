@@ -121,6 +121,11 @@ namespace SistemaContable.Inicio.Mantenimiento
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (dgvCentrodeCosto.Rows.Count == 0)
+            {
+                return;
+            }
+
             frmReporte reporte = new frmReporte("CentroC", query, "", "Centro de Costos", "Todos", DateTime.Now.ToString(""));
             reporte.ShowDialog();
         }

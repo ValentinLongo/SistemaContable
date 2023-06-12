@@ -88,6 +88,11 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Actualizaci
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (dgvDefiniciondeInformes.Rows.Count == 0)
+            {
+                return;
+            }
+
             frmReporte reporte = new frmReporte("ModBalance", Query, "", "Informe de Modelos de Balance", "General", DateTime.Now.ToString("d"));
             reporte.ShowDialog();
         }

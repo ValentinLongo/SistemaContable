@@ -102,6 +102,11 @@ namespace SistemaContable.Usuarios
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (dgvUsuarios.Rows.Count == 0)
+            {
+                return;
+            }
+
             frmReporte freporte = new frmReporte("Usuarios", $"{query}", "","Usuarios del Sistema", "Activos", DateTime.Now.ToString("d"));
             freporte.ShowDialog();
         }
@@ -124,6 +129,26 @@ namespace SistemaContable.Usuarios
                 busqueda = Negocio.FGenerales.Busqueda(dgvUsuarios, txtbusqueda.Text, CheckInicio, 1, "usu_nombre");
             }
             llenarDGV(busqueda);
+        }
+
+        private void frmUsuarios_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                if (IsMdiChild)
+                {
+                    this.MdiParent = null;  // Desvincula el formulario secundario del formulario principal MDI
+                    this.ControlBox = true; // Muestra la barra de título y los botones de control
+                }
+            }
+            else
+            {
+                if (!IsMdiChild)
+                {
+                    this.MdiParent = this.Owner; // Vincula el formulario secundario nuevamente al formulario principal MDI
+                    this.ControlBox = false;     // Oculta la barra de título y los botones de control
+                }
+            }
         }
     }
 }

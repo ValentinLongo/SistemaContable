@@ -72,6 +72,11 @@ namespace SistemaContable.Agenda
 
         private void btnImprimir_Click_1(object sender, EventArgs e)
         {
+            if (dgvAgenda.Rows.Count == 0)
+            {
+                return;
+            }
+
             frmImprimirAgenda imprimirAgenda = new frmImprimirAgenda();
             imprimirAgenda.ShowDialog();
         }

@@ -16,11 +16,20 @@ namespace Negocio
 
         public static DataSet BusquedaCuenta(string Descripcion)
         {
+            //add.rows
+            //DataSet ds = new DataSet();
+            //string Query = $"select * from PCuenta where pcu_descri LIKE'%{Descripcion}%'";
+            //query = Query;
+            //ds = AccesoBase.ListarDatos(Query);
+            //return ds;
+
+            //datasource
             DataSet ds = new DataSet();
-            string Query = $"select * from PCuenta where pcu_descri LIKE'%{Descripcion}%'";
+            string Query = $"select pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri Descripción, pcu_superior as Superior, pcu_hija as Hija, pcu_tabulador as Tabulador, pcu_ajustainf as AjustaInf from PCuenta where pcu_descri LIKE'%{Descripcion}%'";
             query = Query;
             ds = AccesoBase.ListarDatos(Query);
             return ds;
+
         }
 
         public static DataSet BusquedaCuentaPorCuenta(string codigo)

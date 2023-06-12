@@ -92,6 +92,11 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
 
         private void Imprimir(object sender, EventArgs e)
         {
+            if (dgvEjercicioContable.Rows.Count == 0)
+            {
+                return;
+            }
+
             if (txtbusqueda == null)
             {
                 frmReporte reporte = new frmReporte("Ejercicio", "select * from Ejercicio ORDER BY eje_codigo", "", "Informe de Ejercicios Contables", "General", DateTime.Now.ToString("d"));

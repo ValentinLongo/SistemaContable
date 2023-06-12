@@ -282,6 +282,11 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (dgvAsientosContables.Rows.Count == 0)
+            {
+                return;
+            }
+
             int NroEjercicio = Negocio.Funciones.Contabilidad.FSaldosAjsutados.Busca_Clave(cbSeleccion.Text, "Ejercicio", "eje");
 
             string[] fechas = Negocio.Funciones.Contabilidad.FLibroMayor.fechasDesdeHasta(NroEjercicio);

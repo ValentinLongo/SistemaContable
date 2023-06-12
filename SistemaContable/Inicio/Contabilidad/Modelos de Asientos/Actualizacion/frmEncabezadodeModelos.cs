@@ -93,6 +93,11 @@ namespace SistemaContable.Inicio.Contabilidad.Modelos_de_Asientos.Actualizacion
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (dgvEncabezadodeModelos.Rows.Count == 0)
+            {
+                return;
+            }
+
             frmReporte reporte = new frmReporte("ModeloEncab", query, "", "Informe de Encabezado de Modelos", "General", DateTime.Now.ToString("d"));
             reporte.ShowDialog();
         }
