@@ -22,6 +22,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         private string Accion;
         public static int IdCuenta;
         public static string DescriCuenta;
+        public static string CodigoCuenta;
         public static int IdContrapartida;
         public static string txt = "";
         public static string txt2 = "";
@@ -96,6 +97,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             {
                 IdCuenta = (int)dgvCuentas.Rows[e.RowIndex].Cells[1].Value;
                 DescriCuenta = dgvCuentas.Rows[e.RowIndex].Cells[2].Value.ToString();
+                CodigoCuenta = dgvCuentas.Rows[e.RowIndex].Cells[0].Value.ToString();
             }
             else if (Accion == "Contrapartida")
             {
