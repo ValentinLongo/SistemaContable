@@ -92,5 +92,10 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             frmReporte freporte = new frmReporte("ConceptoCont", $"", $"{FConceptosContables.query}", "Lista de Conceptos Contables", "General", DateTime.Now.ToString("d"));
             freporte.ShowDialog();
         }
+
+        private void frmConceptosContables_Resize(object sender, EventArgs e)
+        {
+            Negocio.FGenerales.MinimizarMDIchild(this);
+        }
     }
 }

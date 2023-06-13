@@ -33,8 +33,6 @@ namespace SistemaContable.Usuarios
         {
             dgvUsuarios.Rows.Clear();
 
-            DataSet data = new DataSet();
-            //query = "SELECT usu_codigo as Codigo, usu_nombre as Nombre, usu_login as Login, Perfil.per_descri as Perfil, usu_telefono as Telefono FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo ORDER BY usu_codigo";
             if (CheckUsuario.Checked)
             {
                 if (busqueda == "")
@@ -51,8 +49,8 @@ namespace SistemaContable.Usuarios
                 query = "SELECT * FROM Usuario INNER JOIN Perfil on usu_perfil = per_codigo " + busqueda;
             }
 
+            DataSet data = new DataSet();
             data = Datos.AccesoBase.ListarDatos($"{query + " ORDER BY usu_codigo"}");
-
             foreach (DataRow dr in data.Tables[0].Rows)
             {
                 string codigo = dr["usu_codigo"].ToString();
@@ -133,22 +131,7 @@ namespace SistemaContable.Usuarios
 
         private void frmUsuarios_Resize(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Minimized)
-            {
-                if (IsMdiChild)
-                {
-                    this.MdiParent = null;  // Desvincula el formulario secundario del formulario principal MDI
-                    this.ControlBox = true; // Muestra la barra de título y los botones de control
-                }
-            }
-            else
-            {
-                if (!IsMdiChild)
-                {
-                    this.MdiParent = this.Owner; // Vincula el formulario secundario nuevamente al formulario principal MDI
-                    this.ControlBox = false;     // Oculta la barra de título y los botones de control
-                }
-            }
+            Negocio.FGenerales.MinimizarMDIchild(this);
         }
     }
 }

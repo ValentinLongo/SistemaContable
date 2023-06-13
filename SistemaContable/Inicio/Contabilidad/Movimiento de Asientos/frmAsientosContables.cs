@@ -49,23 +49,24 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             if (cbSeleccion.SelectedIndex > -1)
             {
                 DataSet ds = new DataSet();
-                //consulta jp
-                ds = AccesoBase.ListarDatos($"Select X.ast_asiento as Asiento, X.ast_fecha as Fecha,X.ast_comenta as Comentario,Sum(X.Debe) as Debe,Sum(X.Haber) as Haber,X.usu_nombre as Creó,X.ast_fecalta as FechaCreó,X.ast_hora as HoraCreó, X.UsuModi as Modificó, X.ast_fecmodi as FechaModi, X.ast_horamodi as HoraModi " +
-                    $"From (Select *, Z.UsuModi1 as UsuModi, Case When mva_codigo = 1 Then mva_importe Else 0 End as Debe, Case When mva_codigo = 2 Then mva_importe Else 0 End as Haber From MovAsto " +
-                    $"Left Join Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta Left Join Usuario on ast_user = Usuario.usu_codigo " +
-                    $"Left Join Ejercicio on ast_ejercicio = eje_codigo Left Join TipAsto on ast_tipo = tas_codigo Left Join (Select usu_codigo as UsuCod, usu_nombre as UsuModi1 From Usuario) as Z on ast_usumodi = Z.UsuCod Where ast_ejercicio = '{cbSeleccion.SelectedValue}' {busqueda} {manuales} {modificados} ) as X " +
-                    $"Group By X.ast_asiento, X.ast_renumera, X.ast_fecha, X.ast_ctapro, X.ast_comenta, X.ast_tipocbte, X.ast_cbte, X.ast_ejercicio, X.eje_descri, X.ast_user, X.usu_nombre, X.ast_hora, X.ast_fecalta, X.UsuModi, X.ast_fecmodi, X.ast_horamodi, X.ast_tipo, X.tas_descri {diferencia} Order By X.ast_fecha, X.ast_asiento");
-                //consulta vale
-                //ds = AccesoBase.ListarDatosPaginado($"SELECT ast_asiento as Asiento, ast_fecha as Fecha, ast_comenta as Comentario, Debe as Debe, Debe as Haber, usu_nombre as 'Creó', ast_fecalta as Fecha, ast_hora as Hora, ast_usumodi as 'Modificó', ast_fecmodi as Fecha, ast_horamodi as Hora FROM Asiento as A LEFT JOIN Usuario ON A.ast_user = Usuario.usu_codigo Left Join (SELECT mva_asiento, SUM(mva_importe) / 2 as Debe FROM MovAsto group by mva_asiento) as B on A.ast_asiento = B.mva_asiento where ast_ejercicio = '{cbSeleccion.SelectedValue}' group by ast_asiento, ast_fecha, ast_comenta, ast_user, Debe, usu_nombre,ast_fecalta,ast_hora,ast_usumodi,ast_fecmodi,ast_horamodi order by ast_fecha", ValorData);
+                ds = AccesoBase.ListarDatos($"Select X.ast_asiento as Asiento, X.ast_fecha as Fecha,X.ast_comenta as Comentario,Sum(X.Debe) as Debe,Sum(X.Haber) as Haber,X.usu_nombre as Creó,X.ast_fecalta as FechaCreó,X.ast_hora as HoraCreó, X.UsuModi as Modificó, X.ast_fecmodi as FechaModi, X.ast_horamodi as HoraModi From (Select *, Z.UsuModi1 as UsuModi, Case When mva_codigo = 1 Then mva_importe Else 0 End as Debe, Case When mva_codigo = 2 Then mva_importe Else 0 End as Haber From MovAsto Left Join Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta Left Join Usuario on ast_user = Usuario.usu_codigo Left Join Ejercicio on ast_ejercicio = eje_codigo Left Join TipAsto on ast_tipo = tas_codigo Left Join (Select usu_codigo as UsuCod, usu_nombre as UsuModi1 From Usuario) as Z on ast_usumodi = Z.UsuCod Where ast_ejercicio = '{cbSeleccion.SelectedValue}' {busqueda} {manuales} {modificados} ) as X Group By X.ast_asiento, X.ast_renumera, X.ast_fecha, X.ast_ctapro, X.ast_comenta, X.ast_tipocbte, X.ast_cbte, X.ast_ejercicio, X.eje_descri, X.ast_user, X.usu_nombre, X.ast_hora, X.ast_fecalta, X.UsuModi, X.ast_fecmodi, X.ast_horamodi, X.ast_tipo, X.tas_descri {diferencia} Order By X.ast_fecha, X.ast_asiento");
                 dgvAsientosContables.DataSource = ds.Tables[0];
 
                 //propiedades por codigo porque no se asignaban de otra forma
                 dgvAsientosContables.DefaultCellStyle.ForeColor = Color.White;
-                //DataGridViewColumn columna = dgvAsientosContables.Columns["Debe"];
-                //columna.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                //DataGridViewColumn columna2 = dgvAsientosContables.Columns["Haber"];
-                //columna2.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            }       
+
+                DataGridViewColumn columnaComentario = dgvAsientosContables.Columns["Comentario"];
+                columnaComentario.Width = 280;
+
+                DataGridViewColumn columnaCreo = dgvAsientosContables.Columns["Creó"];
+                columnaCreo.Width = 150;
+
+                DataGridViewColumn columnaDebe = dgvAsientosContables.Columns["Debe"];
+                columnaDebe.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+                DataGridViewColumn columnaHaber = dgvAsientosContables.Columns["Haber"];
+                columnaHaber.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            }
             SeteoFooter(dgvAsientosContables, footer);
             ActualizarFooter(busqueda, manuales, modificados,   diferencia);
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvAsientosContables);
@@ -310,6 +311,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 DataGridViewColumn col = new DataGridViewColumn();
                 col.Width = Columna.Width;
                 footer.Columns.Add(col);
+
+                Columna.Resizable = DataGridViewTriState.False; //para que el usuario no pueda modificar el ancho de las columnas
             }
         }
         private void ActualizarFooter(string busqueda, string manuales, string modificados, string diferencia)
@@ -338,8 +341,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 columna2.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
                 columna2.Width = footer.Columns[4].Width;
             }
-        }
-       
+        }    
         private void dgvAsientosContables_Scroll(object sender, ScrollEventArgs e)
         {
             if (dgvAsientosContables.HorizontalScrollingOffset == e.NewValue)
@@ -354,15 +356,20 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 {
                     if (Negocio.FGenerales.SincronizarFooter(dgvAsientosContables))
                     {
-                        footer.Location = new Point(29, 95);
+                        footer.Location = new Point(29, 84);
                     }
                     else
                     {
-                        footer.Location = new Point(29, 525);
+                        footer.Location = new Point(29, 514);
                     }
                 }
             }
         }
         //
+
+        private void frmAsientosContables_Resize(object sender, EventArgs e)
+        {
+            Negocio.FGenerales.MinimizarMDIchild(this);
+        }
     }
 }

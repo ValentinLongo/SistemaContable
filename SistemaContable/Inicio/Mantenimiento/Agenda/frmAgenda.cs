@@ -101,5 +101,10 @@ namespace SistemaContable.Agenda
         {
             cargarDGV(tbDescipcion.Text);
         }
+
+        private void frmAgenda_Resize(object sender, EventArgs e)
+        {
+            Negocio.FGenerales.MinimizarMDIchild(this);
+        }
     }
 }

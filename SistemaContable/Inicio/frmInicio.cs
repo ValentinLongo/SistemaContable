@@ -123,7 +123,7 @@ namespace SistemaContable
             }
         }
 
-        private void btnAudInt_Click(object sender, EventArgs e)
+        private void btnAudInt_Click(object sender, EventArgs e) //AUDITORIA INTERNA MENU
         {
             if (Negocio.FInicio.ValidacionSupervisor())
             {
@@ -140,16 +140,6 @@ namespace SistemaContable
         //VARIOS
         private void frmInicio_Load(object sender, EventArgs e)
         {
-            //WindowState = FormWindowState.Maximized;
-            //Size = SystemInformation.PrimaryMonitorMaximizedWindowSize;
-
-            //int ancho = Screen.PrimaryScreen.WorkingArea.Width;
-            //int alto = Screen.PrimaryScreen.WorkingArea.Height;
-            //this.MaximumSize = new System.Drawing.Size(ancho, alto);
-
-            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-
             Size = SystemInformation.PrimaryMonitorMaximizedWindowSize;
             FormBorderStyle = FormBorderStyle.None;
             Bounds = Screen.PrimaryScreen.WorkingArea;
@@ -169,22 +159,25 @@ namespace SistemaContable
 
         private void frmInicio_MdiChildActivate(object sender, EventArgs e)
         {
-            if (this.ActiveMdiChild != null && this.ActiveMdiChild.Visible == false)
+            if (this.ActiveMdiChild != null)
             {
                 this.ActiveMdiChild.Show();
+                Negocio.FFormatoSistema.ColorBordes(borde1, borde2, borde3, borde4, "formulario");
+                pbLogo.SendToBack();
             }
-
-            Negocio.FFormatoSistema.ColorBorde(borde1);
-            Negocio.FFormatoSistema.ColorBorde(borde2);
-            Negocio.FFormatoSistema.ColorBorde(borde3);
-            Negocio.FFormatoSistema.ColorBorde(borde4);
+            else
+            {
+                Negocio.FFormatoSistema.ColorBordes(borde1, borde2, borde3, borde4, "formulariomdi");
+                pbLogo.BringToFront();
+            }
         }
 
         private void frmInicio_Resize(object sender, EventArgs e) //PARA QUE SEA RESPONSIVO EN CUALQUIER RESOLUCION
         {
             toolStripADs.Size = new Size(this.Width, toolStripADs.Height);
-            panel3.Size = new Size(this.Width, panel3.Height);
-            panel5.Size = new Size(this.Width, panel5.Height);
+            panelLineaControlBox.Size = new Size(this.Width, panelLineaControlBox.Height);
+            panelControlBox.Size = new Size(this.Width, panelControlBox.Height);
+
             borde1.Size = new Size(this.Width, borde1.Height);
             borde2.Size = new Size(borde2.Width, this.Height);
             borde3.Size = new Size(this.Width, borde3.Height);
@@ -430,22 +423,6 @@ namespace SistemaContable
             {
                 frmMessageBox MessageBox = new frmMessageBox("Atención!", "Acceso Denegado.", false);
                 MessageBox.ShowDialog();
-            }
-        }
-
-        private void tsbCerrarFrmHijo_Click(object sender, EventArgs e)
-        {
-            if (Application.OpenForms.Count > 2)
-            {
-                Form frmHijoAcivo = this.ActiveMdiChild;
-                if (frmHijoAcivo != null)
-                {
-                    frmHijoAcivo.Close();
-                }
-                if (Application.OpenForms.Count == 2)
-                {
-                    pbLogo.BringToFront();
-                }
             }
         }
         //

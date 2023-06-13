@@ -59,7 +59,8 @@ namespace Negocio
             return tiempo;
         }
 
-        public static void Sesion(Form Inicio, ToolStrip tsAccesosDirectos, int proceso, [Optional] Control Excepcion) //PARA ABRIR/CERRAR SESIÓN
+        //PARA ABRIR/CERRAR SESIÓN
+        public static void Sesion(Form Inicio, ToolStrip tsAccesosDirectos, int proceso, [Optional] Control Excepcion)
         {
             if (proceso == 1) //ABRE
             {
@@ -166,6 +167,7 @@ namespace Negocio
             lblperfil.Text = "Perfil: " + perfil;
         }
 
+        //PARA VALIDAR SI EL USUARIO ES UN SUPERVISOR
         public static bool ValidacionSupervisor()
         {
             int resultado = AccesoBase.ValidarDatos($"SELECT * FROM Usuario WHERE usu_codigo = {FLogin.IdUsuario} AND usu_perfil = 1");
@@ -179,6 +181,7 @@ namespace Negocio
             }
         }
 
+        //CIERRA TODAS LAS PESTAÑAS MENOS LOS QUE TENGAN TAG = x
         public static void CerrarPestañas()
         {
             List<Form> formlist = new List<Form>();
@@ -200,6 +203,7 @@ namespace Negocio
             }
         }
 
+        //CIERRA TODOS LOS MDIchilds
         public static void CerrarMDIhijos(Form FRM)
         {
             foreach (Form frmHijo in FRM.MdiChildren)
@@ -208,6 +212,7 @@ namespace Negocio
             }
         }
 
+        //PARA VALIDAR SI EL FORMULARIO YA SE ENCUENTRA ACTIVO
         public static bool FormActivo(string NombreForm)
         {
             foreach (Form frm in Application.OpenForms)
@@ -220,13 +225,33 @@ namespace Negocio
             return false;
         }
 
+        //PARA MOSTRAR EL FRM SI YA SE ENCUENTRA ACTIVO
         public static void MostrarForm(string NombreForm)
         {
             foreach (Form frm in Application.OpenForms)
             {
                 if (frm.Name == NombreForm)
                 {
-                    frm.BringToFront();
+                    if (frm.WindowState == FormWindowState.Minimized) //si esta minimizado
+                    {
+                        if (!frm.IsMdiChild) //si no es mdiChild, lo hace y muestra dentro del mdiFather
+                        {
+                            Form frmPadre = Application.OpenForms.OfType<Form>().FirstOrDefault(f => f.IsMdiContainer);
+
+                            if (frmPadre != null)
+                            {
+                                frm.MdiParent = frmPadre;
+                                frm.TopLevel = false;
+                                frm.Dock = DockStyle.Fill;
+                                frm.WindowState = FormWindowState.Normal;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        frm.BringToFront();
+                    }
+                    return;
                 }
             }
         }

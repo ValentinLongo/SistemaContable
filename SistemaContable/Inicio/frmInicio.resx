@@ -277,31 +277,10 @@
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 75</value>
   </data>
-  <data name="tsbConfigImpresora.AutoSize" type="System.Boolean, mscorlib">
+  <data name="tsb1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="tsbConfigImpresora.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVEhL7Y5bCoMwEEXz5aJK99d2WxWX0u4hIYmdwQMp
-        DcGJWPDDA4OZx71Xd7KZuRNkdtCZQWYH3aqQswMEyM2QUnp479+LpJ8Qwks+d6kB2wKLXZAfvWFbIH3O
-        OV8YdSPyq3qoF6OCLhTaLmKMk9Sob2xqH+ZbA0app76x2TfgG2zWA2jNIDtAwC+sm3BWwbrAvIJ1E84q
-        WLfhzhxAawfd/wOsILODzgyyk16c+wATMM4pLeQgVgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="tsbConfigImpresora.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="tsbConfigImpresora.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="tsbConfigImpresora.Text" xml:space="preserve">
-    <value>Configurar Impresora</value>
-  </data>
-  <data name="toolStripButton10.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripButton10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsb1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
@@ -316,19 +295,19 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="toolStripButton10.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="tsb1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolStripButton10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tsb1.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 47</value>
   </data>
-  <data name="toolStripButton10.Text" xml:space="preserve">
+  <data name="tsb1.Text" xml:space="preserve">
     <value>toolStripButton10</value>
   </data>
-  <data name="toolStripButton11.AutoSize" type="System.Boolean, mscorlib">
+  <data name="tsb2.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripButton11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsb2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
@@ -343,19 +322,19 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="toolStripButton11.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="tsb2.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolStripButton11.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tsb2.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 47</value>
   </data>
-  <data name="toolStripButton11.Text" xml:space="preserve">
+  <data name="tsb2.Text" xml:space="preserve">
     <value>toolStripButton11</value>
   </data>
-  <data name="toolStripButton12.AutoSize" type="System.Boolean, mscorlib">
+  <data name="tsb3.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripButton12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsb3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
@@ -370,13 +349,40 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="toolStripButton12.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="tsb3.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolStripButton12.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tsb3.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 47</value>
   </data>
-  <data name="toolStripButton12.Text" xml:space="preserve">
+  <data name="tsb3.Text" xml:space="preserve">
+    <value>toolStripButton12</value>
+  </data>
+  <data name="tsb4.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tsb4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
+        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
+        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
+        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
+        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
+        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
+        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
+        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
+        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tsb4.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tsb4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 47</value>
+  </data>
+  <data name="tsb4.Text" xml:space="preserve">
     <value>toolStripButton12</value>
   </data>
   <data name="toolStripSeparator3.AutoSize" type="System.Boolean, mscorlib">
@@ -385,10 +391,10 @@
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 75</value>
   </data>
-  <data name="toolStripButton13.AutoSize" type="System.Boolean, mscorlib">
+  <data name="tsb5.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripButton13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsb5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
@@ -403,19 +409,19 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="toolStripButton13.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="tsb5.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolStripButton13.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tsb5.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 47</value>
   </data>
-  <data name="toolStripButton13.Text" xml:space="preserve">
+  <data name="tsb5.Text" xml:space="preserve">
     <value>toolStripButton13</value>
   </data>
-  <data name="toolStripButton14.AutoSize" type="System.Boolean, mscorlib">
+  <data name="tsb6.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripButton14.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsb6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
@@ -430,19 +436,19 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="toolStripButton14.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="tsb6.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolStripButton14.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tsb6.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 47</value>
   </data>
-  <data name="toolStripButton14.Text" xml:space="preserve">
+  <data name="tsb6.Text" xml:space="preserve">
     <value>toolStripButton14</value>
   </data>
-  <data name="toolStripButton9.AutoSize" type="System.Boolean, mscorlib">
+  <data name="tsb7.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripButton9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsb7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
@@ -457,19 +463,19 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="toolStripButton9.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="tsb7.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolStripButton9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tsb7.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 47</value>
   </data>
-  <data name="toolStripButton9.Text" xml:space="preserve">
+  <data name="tsb7.Text" xml:space="preserve">
     <value>toolStripButton9</value>
   </data>
-  <data name="toolStripButton15.AutoSize" type="System.Boolean, mscorlib">
+  <data name="tsb8.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripButton15.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsb8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
@@ -484,13 +490,13 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="toolStripButton15.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="tsb8.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolStripButton15.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tsb8.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 47</value>
   </data>
-  <data name="toolStripButton15.Text" xml:space="preserve">
+  <data name="tsb8.Text" xml:space="preserve">
     <value>toolStripButton15</value>
   </data>
   <data name="toolStripSeparator4.AutoSize" type="System.Boolean, mscorlib">
@@ -583,17 +589,26 @@
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 75</value>
   </data>
-  <data name="tsbCerrarFrmHijo.AutoSize" type="System.Boolean, mscorlib">
+  <data name="tsbConfigImpresora.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="tsbCerrarFrmHijo.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="tsbConfigImpresora.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVEhL7Y5bCoMwEEXz5aJK99d2WxWX0u4hIYmdwQMp
+        DcGJWPDDA4OZx71Xd7KZuRNkdtCZQWYH3aqQswMEyM2QUnp479+LpJ8Qwks+d6kB2wKLXZAfvWFbIH3O
+        OV8YdSPyq3qoF6OCLhTaLmKMk9Sob2xqH+ZbA0app76x2TfgG2zWA2jNIDtAwC+sm3BWwbrAvIJ1E84q
+        WLfhzhxAawfd/wOsILODzgyyk16c+wATMM4pLeQgVgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tsbConfigImpresora.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="tsbCerrarFrmHijo.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tsbConfigImpresora.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 47</value>
   </data>
-  <data name="tsbCerrarFrmHijo.Text" xml:space="preserve">
-    <value>CerrarFormulario</value>
+  <data name="tsbConfigImpresora.Text" xml:space="preserve">
+    <value>Configurar Impresora</value>
   </data>
   <data name="toolStripADs.Location" type="System.Drawing.Point, System.Drawing">
     <value>269, 25</value>
@@ -623,66 +638,6 @@
   <data name="&gt;&gt;toolStripADs.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.Name" xml:space="preserve">
-    <value>btnCerrar</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;controlbarMinimizar.Name" xml:space="preserve">
-    <value>controlbarMinimizar</value>
-  </data>
-  <data name="&gt;&gt;controlbarMinimizar.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuFormControlBox, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;controlbarMinimizar.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;controlbarMinimizar.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 0</value>
-  </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1095, 25</value>
-  </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -708,7 +663,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panel5</value>
+    <value>panelControlBox</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -744,7 +699,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnCerrar.Parent" xml:space="preserve">
-    <value>panel5</value>
+    <value>panelControlBox</value>
   </data>
   <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -839,10 +794,34 @@
     <value>Bunifu.UI.WinForms.BunifuFormControlBox, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
   <data name="&gt;&gt;controlbarMinimizar.Parent" xml:space="preserve">
-    <value>panel5</value>
+    <value>panelControlBox</value>
   </data>
   <data name="&gt;&gt;controlbarMinimizar.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="panelControlBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelControlBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 0</value>
+  </data>
+  <data name="panelControlBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1095, 25</value>
+  </data>
+  <data name="panelControlBox.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;panelControlBox.Name" xml:space="preserve">
+    <value>panelControlBox</value>
+  </data>
+  <data name="&gt;&gt;panelControlBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelControlBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelControlBox.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="borde2.Location" type="System.Drawing.Point, System.Drawing">
     <value>269, 99</value>
@@ -896,7 +875,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblnuevomensaje.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1178, 57</value>
+    <value>1178, 43</value>
   </data>
   <data name="lblnuevomensaje.Size" type="System.Drawing.Size, System.Drawing">
     <value>10, 16</value>
@@ -991,25 +970,25 @@
   <data name="&gt;&gt;Disparador.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelLineaControlBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>267, 25</value>
   </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelLineaControlBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>1101, 1</value>
   </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelLineaControlBox.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;panelLineaControlBox.Name" xml:space="preserve">
+    <value>panelLineaControlBox</value>
   </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelLineaControlBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelLineaControlBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelLineaControlBox.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="borde3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -2147,15 +2126,6 @@
   <data name="Menu_Archivos.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gadugi, 11.25pt</value>
   </data>
-  <data name="Menu_Archivos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 76</value>
-  </data>
-  <data name="&gt;&gt;Menu_Archivos.Name" xml:space="preserve">
-    <value>Menu_Archivos</value>
-  </data>
-  <data name="&gt;&gt;Menu_Archivos.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="respaldoDeInformación.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 24</value>
   </data>
@@ -2174,20 +2144,20 @@
   <data name="salir.Text" xml:space="preserve">
     <value>Salir</value>
   </data>
+  <data name="Menu_Archivos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 76</value>
+  </data>
+  <data name="&gt;&gt;Menu_Archivos.Name" xml:space="preserve">
+    <value>Menu_Archivos</value>
+  </data>
+  <data name="&gt;&gt;Menu_Archivos.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <metadata name="Menu_Ver.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>256, 17</value>
   </metadata>
   <data name="Menu_Ver.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gadugi, 11.25pt</value>
-  </data>
-  <data name="Menu_Ver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 100</value>
-  </data>
-  <data name="&gt;&gt;Menu_Ver.Name" xml:space="preserve">
-    <value>Menu_Ver</value>
-  </data>
-  <data name="&gt;&gt;Menu_Ver.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="calculadora.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 24</value>
@@ -2213,11 +2183,26 @@
   <data name="calendario.Text" xml:space="preserve">
     <value>Calendario</value>
   </data>
+  <data name="Menu_Ver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 100</value>
+  </data>
+  <data name="&gt;&gt;Menu_Ver.Name" xml:space="preserve">
+    <value>Menu_Ver</value>
+  </data>
+  <data name="&gt;&gt;Menu_Ver.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <metadata name="Menu_Ayuda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>663, 17</value>
   </metadata>
   <data name="Menu_Ayuda.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="soporteInteractivoDeContable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 24</value>
+  </data>
+  <data name="soporteInteractivoDeContable.Text" xml:space="preserve">
+    <value>Soporte</value>
   </data>
   <data name="Menu_Ayuda.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 28</value>
@@ -2228,38 +2213,17 @@
   <data name="&gt;&gt;Menu_Ayuda.Type" xml:space="preserve">
     <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="soporteInteractivoDeContable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 24</value>
-  </data>
-  <data name="soporteInteractivoDeContable.Text" xml:space="preserve">
-    <value>Soporte</value>
-  </data>
   <metadata name="Menu_Contabilidad.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>351, 17</value>
   </metadata>
   <data name="Menu_Contabilidad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gadugi, 11.25pt</value>
   </data>
-  <data name="Menu_Contabilidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 292</value>
-  </data>
-  <data name="&gt;&gt;Menu_Contabilidad.Name" xml:space="preserve">
-    <value>Menu_Contabilidad</value>
-  </data>
-  <data name="&gt;&gt;Menu_Contabilidad.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="movimientoDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 24</value>
   </data>
   <data name="movimientoDeAsientos.Text" xml:space="preserve">
     <value>Movimiento de Asientos</value>
-  </data>
-  <data name="modelosDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="modelosDeAsientos.Text" xml:space="preserve">
-    <value>Modelos de Asientos</value>
   </data>
   <data name="actualizaciónMA.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 24</value>
@@ -2272,6 +2236,12 @@
   </data>
   <data name="detalleDeModelos.Text" xml:space="preserve">
     <value>Detalle de Modelos</value>
+  </data>
+  <data name="modelosDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="modelosDeAsientos.Text" xml:space="preserve">
+    <value>Modelos de Asientos</value>
   </data>
   <data name="renumeraciónDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 24</value>
@@ -2321,12 +2291,6 @@
   <data name="balanceGeneral.Text" xml:space="preserve">
     <value>Balance General</value>
   </data>
-  <data name="definiciónDeInformes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="definiciónDeInformes.Text" xml:space="preserve">
-    <value>Definición de Informes</value>
-  </data>
   <data name="actualizaciónDI.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 24</value>
   </data>
@@ -2345,11 +2309,26 @@
   <data name="informe.Text" xml:space="preserve">
     <value>Informe</value>
   </data>
+  <data name="definiciónDeInformes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="definiciónDeInformes.Text" xml:space="preserve">
+    <value>Definición de Informes</value>
+  </data>
   <data name="auditoriaInterna.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 24</value>
   </data>
   <data name="auditoriaInterna.Text" xml:space="preserve">
     <value>Auditoria Interna</value>
+  </data>
+  <data name="Menu_Contabilidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 292</value>
+  </data>
+  <data name="&gt;&gt;Menu_Contabilidad.Name" xml:space="preserve">
+    <value>Menu_Contabilidad</value>
+  </data>
+  <data name="&gt;&gt;Menu_Contabilidad.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <metadata name="Menu_Mantenimiento.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>501, 17</value>
@@ -2357,26 +2336,11 @@
   <data name="Menu_Mantenimiento.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gadugi, 11.25pt</value>
   </data>
-  <data name="Menu_Mantenimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 292</value>
-  </data>
-  <data name="&gt;&gt;Menu_Mantenimiento.Name" xml:space="preserve">
-    <value>Menu_Mantenimiento</value>
-  </data>
-  <data name="&gt;&gt;Menu_Mantenimiento.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="empresa.Size" type="System.Drawing.Size, System.Drawing">
     <value>253, 24</value>
   </data>
   <data name="empresa.Text" xml:space="preserve">
     <value>Empresa</value>
-  </data>
-  <data name="usuarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="usuarios.Text" xml:space="preserve">
-    <value>Usuarios</value>
   </data>
   <data name="definición.Size" type="System.Drawing.Size, System.Drawing">
     <value>339, 24</value>
@@ -2407,6 +2371,12 @@
   </data>
   <data name="recalcularPermisos.Text" xml:space="preserve">
     <value>Recalcular Permisos</value>
+  </data>
+  <data name="usuarios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="usuarios.Text" xml:space="preserve">
+    <value>Usuarios</value>
   </data>
   <data name="ejercicioContable.Size" type="System.Drawing.Size, System.Drawing">
     <value>253, 24</value>
@@ -2467,6 +2437,15 @@
   </data>
   <data name="configurarImpresora.Text" xml:space="preserve">
     <value>Configurar Impresoras</value>
+  </data>
+  <data name="Menu_Mantenimiento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 292</value>
+  </data>
+  <data name="&gt;&gt;Menu_Mantenimiento.Name" xml:space="preserve">
+    <value>Menu_Mantenimiento</value>
+  </data>
+  <data name="&gt;&gt;Menu_Mantenimiento.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -4403,22 +4382,22 @@
   <data name="&gt;&gt;tsbConfigImpresora.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripButton10.Name" xml:space="preserve">
-    <value>toolStripButton10</value>
+  <data name="&gt;&gt;tsb1.Name" xml:space="preserve">
+    <value>tsb1</value>
   </data>
-  <data name="&gt;&gt;toolStripButton10.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsb1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripButton11.Name" xml:space="preserve">
-    <value>toolStripButton11</value>
+  <data name="&gt;&gt;tsb2.Name" xml:space="preserve">
+    <value>tsb2</value>
   </data>
-  <data name="&gt;&gt;toolStripButton11.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsb2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripButton12.Name" xml:space="preserve">
-    <value>toolStripButton12</value>
+  <data name="&gt;&gt;tsb4.Name" xml:space="preserve">
+    <value>tsb4</value>
   </data>
-  <data name="&gt;&gt;toolStripButton12.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsb4.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
@@ -4427,28 +4406,28 @@
   <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripButton13.Name" xml:space="preserve">
-    <value>toolStripButton13</value>
+  <data name="&gt;&gt;tsb5.Name" xml:space="preserve">
+    <value>tsb5</value>
   </data>
-  <data name="&gt;&gt;toolStripButton13.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsb5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripButton14.Name" xml:space="preserve">
-    <value>toolStripButton14</value>
+  <data name="&gt;&gt;tsb6.Name" xml:space="preserve">
+    <value>tsb6</value>
   </data>
-  <data name="&gt;&gt;toolStripButton14.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsb6.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripButton9.Name" xml:space="preserve">
-    <value>toolStripButton9</value>
+  <data name="&gt;&gt;tsb7.Name" xml:space="preserve">
+    <value>tsb7</value>
   </data>
-  <data name="&gt;&gt;toolStripButton9.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsb7.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripButton15.Name" xml:space="preserve">
-    <value>toolStripButton15</value>
+  <data name="&gt;&gt;tsb8.Name" xml:space="preserve">
+    <value>tsb8</value>
   </data>
-  <data name="&gt;&gt;toolStripButton15.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsb8.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
@@ -4486,12 +4465,6 @@
   </data>
   <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbCerrarFrmHijo.Name" xml:space="preserve">
-    <value>tsbCerrarFrmHijo</value>
-  </data>
-  <data name="&gt;&gt;tsbCerrarFrmHijo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;respaldoDeInformación.Name" xml:space="preserve">
     <value>respaldoDeInformación</value>
@@ -4744,6 +4717,12 @@
   </data>
   <data name="&gt;&gt;configurarImpresora.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb3.Name" xml:space="preserve">
+    <value>tsb3</value>
+  </data>
+  <data name="&gt;&gt;tsb3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmInicio</value>

@@ -232,7 +232,6 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         private void btnPlandeCta_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            frmPlanDeCuentas.MostrarControlBar = true;
             frmPlanDeCuentas frm = new frmPlanDeCuentas();
             frm.ShowDialog();
             Cursor = Cursors.Default;

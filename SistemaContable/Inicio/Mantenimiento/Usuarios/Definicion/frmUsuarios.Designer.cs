@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,11 +52,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
             this.lblCantElementos = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.ControlBar = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.controlbarMinimizar = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.ControlBox = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.lblControlBar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.ControlBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvUsuarios
@@ -68,14 +69,14 @@
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvUsuarios.ColumnHeadersHeight = 25;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -84,28 +85,28 @@
             this.Login,
             this.Perfil,
             this.Telefono});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvUsuarios.EnableHeadersVisualStyles = false;
             this.dgvUsuarios.GridColor = System.Drawing.Color.White;
             this.dgvUsuarios.Location = new System.Drawing.Point(18, 108);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvUsuarios.RowHeadersVisible = false;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(874, 512);
@@ -235,11 +236,11 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(25, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 18);
+            this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 53;
             this.label4.Text = "Busqueda";
             // 
@@ -449,17 +450,18 @@
             this.lblCantElementos.TabIndex = 69;
             this.lblCantElementos.Text = "Elementos";
             // 
-            // panel5
+            // ControlBar
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.controlbarMinimizar);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1060, 20);
-            this.panel5.TabIndex = 70;
-            this.panel5.Tag = "1";
+            this.ControlBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.ControlBar.Controls.Add(this.lblControlBar);
+            this.ControlBar.Controls.Add(this.label2);
+            this.ControlBar.Controls.Add(this.ControlBox);
+            this.ControlBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ControlBar.Location = new System.Drawing.Point(0, 0);
+            this.ControlBar.Name = "ControlBar";
+            this.ControlBar.Size = new System.Drawing.Size(1060, 20);
+            this.ControlBar.TabIndex = 70;
+            this.ControlBar.Tag = "1";
             // 
             // label2
             // 
@@ -472,69 +474,80 @@
             this.label2.Size = new System.Drawing.Size(0, 19);
             this.label2.TabIndex = 58;
             // 
-            // controlbarMinimizar
+            // ControlBox
             // 
-            this.controlbarMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.controlbarMinimizar.BunifuFormDrag = null;
-            this.controlbarMinimizar.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlbarMinimizar.CloseBoxOptions.BorderRadius = 0;
-            this.controlbarMinimizar.CloseBoxOptions.Enabled = true;
-            this.controlbarMinimizar.CloseBoxOptions.EnableDefaultAction = true;
-            this.controlbarMinimizar.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.controlbarMinimizar.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.CloseBoxOptions.Icon")));
-            this.controlbarMinimizar.CloseBoxOptions.IconAlt = null;
-            this.controlbarMinimizar.CloseBoxOptions.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.controlbarMinimizar.CloseBoxOptions.IconHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.controlbarMinimizar.CloseBoxOptions.IconPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.controlbarMinimizar.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
-            this.controlbarMinimizar.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.controlbarMinimizar.HelpBox = false;
-            this.controlbarMinimizar.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlbarMinimizar.HelpBoxOptions.BorderRadius = 0;
-            this.controlbarMinimizar.HelpBoxOptions.Enabled = true;
-            this.controlbarMinimizar.HelpBoxOptions.EnableDefaultAction = true;
-            this.controlbarMinimizar.HelpBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.controlbarMinimizar.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.HelpBoxOptions.Icon")));
-            this.controlbarMinimizar.HelpBoxOptions.IconAlt = null;
-            this.controlbarMinimizar.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
-            this.controlbarMinimizar.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.controlbarMinimizar.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.controlbarMinimizar.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
-            this.controlbarMinimizar.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.controlbarMinimizar.Location = new System.Drawing.Point(984, 2);
-            this.controlbarMinimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.controlbarMinimizar.MaximizeBox = false;
-            this.controlbarMinimizar.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlbarMinimizar.MaximizeBoxOptions.BorderRadius = 0;
-            this.controlbarMinimizar.MaximizeBoxOptions.Enabled = true;
-            this.controlbarMinimizar.MaximizeBoxOptions.EnableDefaultAction = true;
-            this.controlbarMinimizar.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.controlbarMinimizar.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.MaximizeBoxOptions.Icon")));
-            this.controlbarMinimizar.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.MaximizeBoxOptions.IconAlt")));
-            this.controlbarMinimizar.MaximizeBoxOptions.IconColor = System.Drawing.Color.White;
-            this.controlbarMinimizar.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.controlbarMinimizar.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.controlbarMinimizar.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
-            this.controlbarMinimizar.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.controlbarMinimizar.MinimizeBox = true;
-            this.controlbarMinimizar.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.controlbarMinimizar.MinimizeBoxOptions.BorderRadius = 0;
-            this.controlbarMinimizar.MinimizeBoxOptions.Enabled = true;
-            this.controlbarMinimizar.MinimizeBoxOptions.EnableDefaultAction = true;
-            this.controlbarMinimizar.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.controlbarMinimizar.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("controlbarMinimizar.MinimizeBoxOptions.Icon")));
-            this.controlbarMinimizar.MinimizeBoxOptions.IconAlt = null;
-            this.controlbarMinimizar.MinimizeBoxOptions.IconColor = System.Drawing.Color.White;
-            this.controlbarMinimizar.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.controlbarMinimizar.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.controlbarMinimizar.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
-            this.controlbarMinimizar.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.controlbarMinimizar.Name = "controlbarMinimizar";
-            this.controlbarMinimizar.ShowDesignBorders = false;
-            this.controlbarMinimizar.Size = new System.Drawing.Size(76, 17);
-            this.controlbarMinimizar.TabIndex = 33;
-            this.controlbarMinimizar.TabStop = false;
-            this.controlbarMinimizar.Tag = "12345";
+            this.ControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ControlBox.BunifuFormDrag = null;
+            this.ControlBox.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.ControlBox.CloseBoxOptions.BorderRadius = 0;
+            this.ControlBox.CloseBoxOptions.Enabled = true;
+            this.ControlBox.CloseBoxOptions.EnableDefaultAction = true;
+            this.ControlBox.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.ControlBox.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("ControlBox.CloseBoxOptions.Icon")));
+            this.ControlBox.CloseBoxOptions.IconAlt = null;
+            this.ControlBox.CloseBoxOptions.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.ControlBox.CloseBoxOptions.IconHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.ControlBox.CloseBoxOptions.IconPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.ControlBox.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
+            this.ControlBox.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.ControlBox.HelpBox = false;
+            this.ControlBox.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.ControlBox.HelpBoxOptions.BorderRadius = 0;
+            this.ControlBox.HelpBoxOptions.Enabled = true;
+            this.ControlBox.HelpBoxOptions.EnableDefaultAction = true;
+            this.ControlBox.HelpBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.ControlBox.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("ControlBox.HelpBoxOptions.Icon")));
+            this.ControlBox.HelpBoxOptions.IconAlt = null;
+            this.ControlBox.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
+            this.ControlBox.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.ControlBox.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.ControlBox.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
+            this.ControlBox.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.ControlBox.Location = new System.Drawing.Point(984, 0);
+            this.ControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ControlBox.MaximizeBox = false;
+            this.ControlBox.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.ControlBox.MaximizeBoxOptions.BorderRadius = 0;
+            this.ControlBox.MaximizeBoxOptions.Enabled = true;
+            this.ControlBox.MaximizeBoxOptions.EnableDefaultAction = true;
+            this.ControlBox.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.ControlBox.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("ControlBox.MaximizeBoxOptions.Icon")));
+            this.ControlBox.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("ControlBox.MaximizeBoxOptions.IconAlt")));
+            this.ControlBox.MaximizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.ControlBox.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.ControlBox.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.ControlBox.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
+            this.ControlBox.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.ControlBox.MinimizeBox = true;
+            this.ControlBox.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.ControlBox.MinimizeBoxOptions.BorderRadius = 0;
+            this.ControlBox.MinimizeBoxOptions.Enabled = true;
+            this.ControlBox.MinimizeBoxOptions.EnableDefaultAction = true;
+            this.ControlBox.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.ControlBox.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("ControlBox.MinimizeBoxOptions.Icon")));
+            this.ControlBox.MinimizeBoxOptions.IconAlt = null;
+            this.ControlBox.MinimizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.ControlBox.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.ControlBox.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.ControlBox.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
+            this.ControlBox.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.ControlBox.Name = "ControlBox";
+            this.ControlBox.ShowDesignBorders = false;
+            this.ControlBox.Size = new System.Drawing.Size(76, 21);
+            this.ControlBox.TabIndex = 33;
+            this.ControlBox.TabStop = false;
+            this.ControlBox.Tag = "12345";
+            // 
+            // lblControlBar
+            // 
+            this.lblControlBar.AutoSize = true;
+            this.lblControlBar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
+            this.lblControlBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblControlBar.Location = new System.Drawing.Point(3, 1);
+            this.lblControlBar.Name = "lblControlBar";
+            this.lblControlBar.Size = new System.Drawing.Size(56, 17);
+            this.lblControlBar.TabIndex = 59;
+            this.lblControlBar.Text = "Usuarios";
             // 
             // frmUsuarios
             // 
@@ -542,7 +555,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1060, 650);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.ControlBar);
             this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CheckInicio);
@@ -565,8 +578,8 @@
             this.Text = "Usuarios";
             this.Resize += new System.EventHandler(this.frmUsuarios_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.ControlBar.ResumeLayout(false);
+            this.ControlBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -594,8 +607,9 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
         private System.Windows.Forms.Label lblCantElementos;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel ControlBar;
         private System.Windows.Forms.Label label2;
-        private Bunifu.UI.WinForms.BunifuFormControlBox controlbarMinimizar;
+        private Bunifu.UI.WinForms.BunifuFormControlBox ControlBox;
+        private System.Windows.Forms.Label lblControlBar;
     }
 }

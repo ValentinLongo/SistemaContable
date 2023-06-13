@@ -179,5 +179,10 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
             lblDesde.Text = "Desde: " + frmRangoFechas.Desde.ToString().Substring(0, 10);
             lblHasta.Text = "Hasta: " + frmRangoFechas.Hasta.ToString().Substring(0, 10);
         }
+
+        private void frmComunicacionInterna_Resize(object sender, EventArgs e)
+        {
+            Negocio.FGenerales.MinimizarMDIchild(this);
+        }
     }
 }

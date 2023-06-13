@@ -171,5 +171,10 @@ namespace SistemaContable.Inicio.Ver.Calendario
             frmReporte freporte = new frmReporte("Calendario", $"{query}", "", "Calendario", DateTime.Now.ToShortDateString(), FLogin.NombreUsuario);
             freporte.ShowDialog();
         }
+
+        private void frmCalendario_Resize(object sender, EventArgs e)
+        {
+            Negocio.FGenerales.MinimizarMDIchild(this);
+        }
     }
 }

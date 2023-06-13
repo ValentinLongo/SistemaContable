@@ -43,11 +43,12 @@
             this.btnEliminar = new RJCodeAdvance.RJControls.RJButton();
             this.ControlBar = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
-            this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
+            this.ControlBox = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.dgvCuentas = new System.Windows.Forms.DataGridView();
             this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblCantElementos = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.ControlBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             this.SuspendLayout();
@@ -65,9 +66,9 @@
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(902, 584);
+            this.btnImprimir.Location = new System.Drawing.Point(899, 580);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(149, 44);
+            this.btnImprimir.Size = new System.Drawing.Size(150, 40);
             this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextColor = System.Drawing.Color.White;
@@ -87,9 +88,9 @@
             this.btnModificar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(902, 179);
+            this.btnModificar.Location = new System.Drawing.Point(899, 178);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(149, 44);
+            this.btnModificar.Size = new System.Drawing.Size(150, 40);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
@@ -109,9 +110,9 @@
             this.btnAgregar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(902, 104);
+            this.btnAgregar.Location = new System.Drawing.Point(898, 108);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(149, 44);
+            this.btnAgregar.Size = new System.Drawing.Size(150, 40);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
@@ -122,7 +123,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(153, 55);
+            this.panel2.Location = new System.Drawing.Point(150, 81);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(647, 1);
             this.panel2.TabIndex = 46;
@@ -133,7 +134,7 @@
             this.txtBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtBusqueda.Location = new System.Drawing.Point(153, 41);
+            this.txtBusqueda.Location = new System.Drawing.Point(150, 67);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(647, 13);
             this.txtBusqueda.TabIndex = 0;
@@ -146,7 +147,7 @@
             this.txtDescri.AutoSize = true;
             this.txtDescri.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescri.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtDescri.Location = new System.Drawing.Point(59, 39);
+            this.txtDescri.Location = new System.Drawing.Point(59, 67);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(87, 17);
             this.txtDescri.TabIndex = 44;
@@ -161,11 +162,11 @@
             this.ShapeBusqueda.BorderThickness = 1;
             this.ShapeBusqueda.FillColor = System.Drawing.Color.Transparent;
             this.ShapeBusqueda.FillShape = true;
-            this.ShapeBusqueda.Location = new System.Drawing.Point(18, 14);
+            this.ShapeBusqueda.Location = new System.Drawing.Point(18, 45);
             this.ShapeBusqueda.Name = "ShapeBusqueda";
             this.ShapeBusqueda.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.ShapeBusqueda.Sides = 5;
-            this.ShapeBusqueda.Size = new System.Drawing.Size(874, 69);
+            this.ShapeBusqueda.Size = new System.Drawing.Size(874, 59);
             this.ShapeBusqueda.TabIndex = 55;
             this.ShapeBusqueda.TabStop = false;
             this.ShapeBusqueda.Text = "bunifuShapes1";
@@ -195,9 +196,9 @@
             this.btnEliminar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(902, 255);
+            this.btnEliminar.Location = new System.Drawing.Point(899, 249);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 44);
+            this.btnEliminar.Size = new System.Drawing.Size(150, 40);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
@@ -208,14 +209,13 @@
             // 
             this.ControlBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.ControlBar.Controls.Add(this.lblControlBar);
-            this.ControlBar.Controls.Add(this.bunifuFormControlBox1);
+            this.ControlBar.Controls.Add(this.ControlBox);
             this.ControlBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.ControlBar.Location = new System.Drawing.Point(0, 0);
             this.ControlBar.Name = "ControlBar";
             this.ControlBar.Size = new System.Drawing.Size(1060, 21);
             this.ControlBar.TabIndex = 96;
             this.ControlBar.Tag = "1";
-            this.ControlBar.Visible = false;
             this.ControlBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             // 
             // lblControlBar
@@ -229,68 +229,68 @@
             this.lblControlBar.TabIndex = 31;
             this.lblControlBar.Text = "Plan de Cuentas";
             // 
-            // bunifuFormControlBox1
+            // ControlBox
             // 
-            this.bunifuFormControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuFormControlBox1.BunifuFormDrag = null;
-            this.bunifuFormControlBox1.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFormControlBox1.CloseBoxOptions.BorderRadius = 0;
-            this.bunifuFormControlBox1.CloseBoxOptions.Enabled = true;
-            this.bunifuFormControlBox1.CloseBoxOptions.EnableDefaultAction = true;
-            this.bunifuFormControlBox1.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.bunifuFormControlBox1.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.CloseBoxOptions.Icon")));
-            this.bunifuFormControlBox1.CloseBoxOptions.IconAlt = null;
-            this.bunifuFormControlBox1.CloseBoxOptions.IconColor = System.Drawing.Color.White;
-            this.bunifuFormControlBox1.CloseBoxOptions.IconHoverColor = System.Drawing.Color.White;
-            this.bunifuFormControlBox1.CloseBoxOptions.IconPressedColor = System.Drawing.Color.White;
-            this.bunifuFormControlBox1.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
-            this.bunifuFormControlBox1.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.bunifuFormControlBox1.HelpBox = false;
-            this.bunifuFormControlBox1.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFormControlBox1.HelpBoxOptions.BorderRadius = 0;
-            this.bunifuFormControlBox1.HelpBoxOptions.Enabled = true;
-            this.bunifuFormControlBox1.HelpBoxOptions.EnableDefaultAction = true;
-            this.bunifuFormControlBox1.HelpBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.bunifuFormControlBox1.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.HelpBoxOptions.Icon")));
-            this.bunifuFormControlBox1.HelpBoxOptions.IconAlt = null;
-            this.bunifuFormControlBox1.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
-            this.bunifuFormControlBox1.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
-            this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(992, 0);
-            this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bunifuFormControlBox1.MaximizeBox = false;
-            this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFormControlBox1.MaximizeBoxOptions.BorderRadius = 0;
-            this.bunifuFormControlBox1.MaximizeBoxOptions.Enabled = true;
-            this.bunifuFormControlBox1.MaximizeBoxOptions.EnableDefaultAction = true;
-            this.bunifuFormControlBox1.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.bunifuFormControlBox1.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.MaximizeBoxOptions.Icon")));
-            this.bunifuFormControlBox1.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.MaximizeBoxOptions.IconAlt")));
-            this.bunifuFormControlBox1.MaximizeBoxOptions.IconColor = System.Drawing.Color.White;
-            this.bunifuFormControlBox1.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.bunifuFormControlBox1.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.bunifuFormControlBox1.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
-            this.bunifuFormControlBox1.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.MinimizeBox = true;
-            this.bunifuFormControlBox1.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFormControlBox1.MinimizeBoxOptions.BorderRadius = 0;
-            this.bunifuFormControlBox1.MinimizeBoxOptions.Enabled = true;
-            this.bunifuFormControlBox1.MinimizeBoxOptions.EnableDefaultAction = true;
-            this.bunifuFormControlBox1.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
-            this.bunifuFormControlBox1.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.MinimizeBoxOptions.Icon")));
-            this.bunifuFormControlBox1.MinimizeBoxOptions.IconAlt = null;
-            this.bunifuFormControlBox1.MinimizeBoxOptions.IconColor = System.Drawing.Color.White;
-            this.bunifuFormControlBox1.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
-            this.bunifuFormControlBox1.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
-            this.bunifuFormControlBox1.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
-            this.bunifuFormControlBox1.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Name = "bunifuFormControlBox1";
-            this.bunifuFormControlBox1.ShowDesignBorders = false;
-            this.bunifuFormControlBox1.Size = new System.Drawing.Size(68, 21);
-            this.bunifuFormControlBox1.TabIndex = 29;
-            this.bunifuFormControlBox1.TabStop = false;
+            this.ControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ControlBox.BunifuFormDrag = null;
+            this.ControlBox.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.ControlBox.CloseBoxOptions.BorderRadius = 0;
+            this.ControlBox.CloseBoxOptions.Enabled = true;
+            this.ControlBox.CloseBoxOptions.EnableDefaultAction = true;
+            this.ControlBox.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.ControlBox.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("ControlBox.CloseBoxOptions.Icon")));
+            this.ControlBox.CloseBoxOptions.IconAlt = null;
+            this.ControlBox.CloseBoxOptions.IconColor = System.Drawing.Color.White;
+            this.ControlBox.CloseBoxOptions.IconHoverColor = System.Drawing.Color.White;
+            this.ControlBox.CloseBoxOptions.IconPressedColor = System.Drawing.Color.White;
+            this.ControlBox.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
+            this.ControlBox.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.ControlBox.HelpBox = false;
+            this.ControlBox.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.ControlBox.HelpBoxOptions.BorderRadius = 0;
+            this.ControlBox.HelpBoxOptions.Enabled = true;
+            this.ControlBox.HelpBoxOptions.EnableDefaultAction = true;
+            this.ControlBox.HelpBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.ControlBox.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("ControlBox.HelpBoxOptions.Icon")));
+            this.ControlBox.HelpBoxOptions.IconAlt = null;
+            this.ControlBox.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
+            this.ControlBox.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.ControlBox.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.ControlBox.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
+            this.ControlBox.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.ControlBox.Location = new System.Drawing.Point(984, 0);
+            this.ControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ControlBox.MaximizeBox = false;
+            this.ControlBox.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.ControlBox.MaximizeBoxOptions.BorderRadius = 0;
+            this.ControlBox.MaximizeBoxOptions.Enabled = true;
+            this.ControlBox.MaximizeBoxOptions.EnableDefaultAction = true;
+            this.ControlBox.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.ControlBox.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("ControlBox.MaximizeBoxOptions.Icon")));
+            this.ControlBox.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("ControlBox.MaximizeBoxOptions.IconAlt")));
+            this.ControlBox.MaximizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.ControlBox.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.ControlBox.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.ControlBox.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
+            this.ControlBox.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.ControlBox.MinimizeBox = true;
+            this.ControlBox.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.ControlBox.MinimizeBoxOptions.BorderRadius = 0;
+            this.ControlBox.MinimizeBoxOptions.Enabled = true;
+            this.ControlBox.MinimizeBoxOptions.EnableDefaultAction = true;
+            this.ControlBox.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.ControlBox.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("ControlBox.MinimizeBoxOptions.Icon")));
+            this.ControlBox.MinimizeBoxOptions.IconAlt = null;
+            this.ControlBox.MinimizeBoxOptions.IconColor = System.Drawing.Color.White;
+            this.ControlBox.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.ControlBox.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.ControlBox.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
+            this.ControlBox.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.ControlBox.Name = "ControlBox";
+            this.ControlBox.ShowDesignBorders = false;
+            this.ControlBox.Size = new System.Drawing.Size(76, 21);
+            this.ControlBox.TabIndex = 29;
+            this.ControlBox.TabStop = false;
             // 
             // dgvCuentas
             // 
@@ -321,7 +321,7 @@
             this.dgvCuentas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCuentas.EnableHeadersVisualStyles = false;
             this.dgvCuentas.GridColor = System.Drawing.Color.White;
-            this.dgvCuentas.Location = new System.Drawing.Point(18, 89);
+            this.dgvCuentas.Location = new System.Drawing.Point(18, 108);
             this.dgvCuentas.Name = "dgvCuentas";
             this.dgvCuentas.ReadOnly = true;
             this.dgvCuentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -335,7 +335,7 @@
             this.dgvCuentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCuentas.RowHeadersVisible = false;
             this.dgvCuentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCuentas.Size = new System.Drawing.Size(874, 539);
+            this.dgvCuentas.Size = new System.Drawing.Size(874, 512);
             this.dgvCuentas.TabIndex = 97;
             this.dgvCuentas.TabStop = false;
             this.dgvCuentas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCuentas_CellMouseClick);
@@ -359,7 +359,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(819, 37);
+            this.CheckInicio.Location = new System.Drawing.Point(818, 66);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -400,7 +400,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(842, 39);
+            this.label5.Location = new System.Drawing.Point(840, 68);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 99;
@@ -412,11 +412,23 @@
             this.lblCantElementos.AutoSize = true;
             this.lblCantElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCantElementos.Location = new System.Drawing.Point(15, 631);
+            this.lblCantElementos.Location = new System.Drawing.Point(15, 623);
             this.lblCantElementos.Name = "lblCantElementos";
             this.lblCantElementos.Size = new System.Drawing.Size(58, 15);
             this.lblCantElementos.TabIndex = 148;
             this.lblCantElementos.Text = "Elementos";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(25, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 16);
+            this.label4.TabIndex = 149;
+            this.label4.Text = "Busqueda";
             // 
             // frmPlanDeCuentas
             // 
@@ -425,6 +437,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1060, 650);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CheckInicio);
@@ -442,6 +455,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPlanDeCuentas";
             this.Text = " ";
+            this.Resize += new System.EventHandler(this.frmPlanDeCuentas_Resize);
             this.ControlBar.ResumeLayout(false);
             this.ControlBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).EndInit();
@@ -462,10 +476,11 @@
         private RJCodeAdvance.RJControls.RJButton btnEliminar;
         private System.Windows.Forms.Panel ControlBar;
         private System.Windows.Forms.Label lblControlBar;
-        private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
+        private Bunifu.UI.WinForms.BunifuFormControlBox ControlBox;
         private System.Windows.Forms.DataGridView dgvCuentas;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblCantElementos;
+        private System.Windows.Forms.Label label4;
     }
 }

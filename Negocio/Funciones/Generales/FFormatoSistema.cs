@@ -286,17 +286,30 @@ namespace Negocio
             ctrl.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
         }
 
-        public static void ColorBorde(Control ctrl) 
+        public static void ColorBordes(Panel borde1, Panel borde2, Panel borde3, Panel borde4, string Ctrl)
         {
             BuscarFormato();
             foreach (MFormatoSistema MFormato in lista)
             {
-                if (MFormato.fmt_control == "formulario")
+                if (MFormato.fmt_control == Ctrl)
                 {
                     RGBbackFormulario = MFormato.fmt_rgbBack.ToString();
                 }
             }
-            ctrl.BackColor = Color.FromArgb(RGB(RGBbackFormulario, 1), RGB(RGBbackFormulario, 2), RGB(RGBbackFormulario, 3));
+
+            if (Ctrl == "formulariomdi")
+            {
+                ColorMDI(borde1);
+                ColorMDI(borde2);
+                ColorMDI(borde3);
+                ColorMDI(borde4);
+                return;
+            }
+
+            borde1.BackColor = Color.FromArgb(RGB(RGBbackFormulario, 1), RGB(RGBbackFormulario, 2), RGB(RGBbackFormulario, 3));
+            borde2.BackColor = Color.FromArgb(RGB(RGBbackFormulario, 1), RGB(RGBbackFormulario, 2), RGB(RGBbackFormulario, 3));
+            borde3.BackColor = Color.FromArgb(RGB(RGBbackFormulario, 1), RGB(RGBbackFormulario, 2), RGB(RGBbackFormulario, 3));
+            borde4.BackColor = Color.FromArgb(RGB(RGBbackFormulario, 1), RGB(RGBbackFormulario, 2), RGB(RGBbackFormulario, 3));
         }
     }
 }
