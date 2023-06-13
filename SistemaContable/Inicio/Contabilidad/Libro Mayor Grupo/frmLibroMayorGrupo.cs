@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI;
@@ -18,6 +19,8 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
 {
     public partial class frmLibroMayorGrupo : Form
     {
+        public static string CodigoCuenta1;
+        public static string CodigoCuenta2;
         public frmLibroMayorGrupo()
         {
             InitializeComponent();
@@ -28,6 +31,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
             maskDesde.Mask = "00/00/0000";
             maskHasta.Mask = "00/00/0000";
             maskHasta.Text = DateTime.Now.ToShortDateString();
+
         }
 
         private void btnBuscarEjercicio_Click(object sender, EventArgs e)
@@ -49,6 +53,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
             {
                 tbIdCuenta.Text = frmBuscarCuenta.IdCuenta.ToString();
                 tbDescriCuenta.Text = frmBuscarCuenta.DescriCuenta;
+                CodigoCuenta1 = frmBuscarCuenta.CodigoCuenta;
             }
         }
 
@@ -60,6 +65,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
             {
                 tbIdCuenta2.Text = frmBuscarCuenta.IdCuenta.ToString();
                 tbDescriCuenta2.Text = frmBuscarCuenta.DescriCuenta;
+                CodigoCuenta2 = frmBuscarCuenta.CodigoCuenta;
             }
         }
 
@@ -89,7 +95,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
             if (Convert.ToDateTime(maskDesde.Text) <= Convert.ToDateTime(maskHasta.Text))
             {
                 DataSet datos = new DataSet();
-                datos = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE (pcu_codigo >= '{tbIdCuenta.Text}' and pcu_codigo <= '{tbIdCuenta2.Text}')");
+                datos = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE (pcu_codigo >= '{CodigoCuenta1}' and pcu_codigo <= '{CodigoCuenta2}')");
                 foreach (DataRow dataRow in datos.Tables[0].Rows)
                 {
                     string pcuCodigo = dataRow["pcu_codigo"].ToString();

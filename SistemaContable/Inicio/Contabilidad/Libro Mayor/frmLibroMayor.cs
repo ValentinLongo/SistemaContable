@@ -180,7 +180,7 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
                     string UnicamenteComprobante = "ast_comenta";
                     if (ChUnicComp.Checked)
                     {
-                        UnicamenteComprobante = "Case When len(ISNULL(as_cbte,'')) = 0 Then as_comenta Else (Case When ast_tipocbte = 1 Then (Case When len(ISNULL(ast_cbte,''))< 14 Then tba_abrev Else tmo_abrev End) Else tmo_abrev End + '' + ast_cbte) End as ast_comenta";
+                        UnicamenteComprobante = "Case When len(ISNULL(ast_cbte,'')) = 0 Then ast_comenta Else (Case When ast_tipocbte = 1 Then (Case When len(ISNULL(ast_cbte,''))< 14 Then tba_abrev Else tmo_abrev End) Else tmo_abrev End + '' + ast_cbte) End as ast_comenta";
                     }
                     string ArticulosManuales = "";
                     if (ChAsiMan.Checked)
@@ -220,7 +220,7 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
                     string UnicamenteComprobante = "ast_comenta";
                     if (ChUnicComp.Checked)
                     {
-                        UnicamenteComprobante = "Case When len(ISNULL(as_cbte,'')) = 0 Then as_comenta Else (Case When ast_tipocbte = 1 Then (Case When len(ISNULL(ast_cbte,''))< 14 Then tba_abrev Else tmo_abrev End) Else tmo_abrev End + '' + ast_cbte) End as ast_comenta";
+                        UnicamenteComprobante = "Case When len(ISNULL(ast_cbte,'')) = 0 Then ast_comenta Else (Case When ast_tipocbte = 1 Then (Case When len(ISNULL(ast_cbte,''))< 14 Then tba_abrev Else tmo_abrev End) Else tmo_abrev End + '' + ast_cbte) End as ast_comenta";
                     }
                     string ArticulosManuales = "";
                     if (ChAsiMan.Checked)
