@@ -286,5 +286,34 @@ namespace Negocio
                 }
             }
         }
+
+        //para minimizar en la barra de herramientas de windows un frmMDIchild
+        public static void MinimizarMDIchild(Form frm)
+        {
+            if (frm.WindowState == FormWindowState.Minimized)
+            {
+                if (frm.IsMdiChild)
+                {
+                    frm.MdiParent = null;  // Desvincula el formulario secundario del formulario principal MDI
+                }
+            }
+            else
+            {
+                if (!frm.IsMdiChild)
+                {
+                    Form formularioPadre = Application.OpenForms.OfType<Form>().FirstOrDefault(f => f.IsMdiContainer);
+
+                    if (formularioPadre != null)
+                    {
+                        frm.MdiParent = formularioPadre; // Vincula el formulario secundario nuevamente al formulario principal MDI
+                        frm.TopLevel = false;
+                        frm.Dock = DockStyle.Fill;
+                        frm.BringToFront();
+                        frm.Show();
+                    }
+                }
+            }
+        }
+
     }
 }

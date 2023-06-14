@@ -42,22 +42,21 @@
             this.tsbBalanceDeSumasySaldos = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbConfigImpresora = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.tsb1 = new System.Windows.Forms.ToolStripButton();
+            this.tsb2 = new System.Windows.Forms.ToolStripButton();
+            this.tsb4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
+            this.tsb5 = new System.Windows.Forms.ToolStripButton();
+            this.tsb6 = new System.Windows.Forms.ToolStripButton();
+            this.tsb7 = new System.Windows.Forms.ToolStripButton();
+            this.tsb8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbBlockdeNotas = new System.Windows.Forms.ToolStripButton();
             this.tsbMensajesInternos = new System.Windows.Forms.ToolStripButton();
             this.tsbCalculadora = new System.Windows.Forms.ToolStripButton();
             this.tsbNotas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbCerrarFrmHijo = new System.Windows.Forms.ToolStripButton();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelControlBox = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.controlbarMinimizar = new Bunifu.UI.WinForms.BunifuFormControlBox();
@@ -66,7 +65,7 @@
             this.lblnuevomensaje = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Disparador = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelLineaControlBox = new System.Windows.Forms.Panel();
             this.borde3 = new System.Windows.Forms.Panel();
             this.borde4 = new System.Windows.Forms.Panel();
             this.lblUsu = new System.Windows.Forms.Label();
@@ -100,9 +99,9 @@
             this.pVer = new System.Windows.Forms.Panel();
             this.pArchivos = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pbLogoPanel = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
+            this.pbLogoPanel = new System.Windows.Forms.PictureBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.Menu_Archivos = new Negocio.MenuDropDown(this.components);
             this.respaldoDeInformación = new System.Windows.Forms.ToolStripMenuItem();
@@ -151,8 +150,9 @@
             this.agenda = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrosContables = new System.Windows.Forms.ToolStripMenuItem();
             this.configurarImpresora = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsb3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripADs.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panelControlBox.SuspendLayout();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -180,22 +180,22 @@
             this.tsbLibroMayor,
             this.tsbBalanceDeSumasySaldos,
             this.toolStripSeparator2,
-            this.tsbConfigImpresora,
-            this.toolStripButton10,
-            this.toolStripButton11,
-            this.toolStripButton12,
+            this.tsb1,
+            this.tsb2,
+            this.tsb3,
+            this.tsb4,
             this.toolStripSeparator3,
-            this.toolStripButton13,
-            this.toolStripButton14,
-            this.toolStripButton9,
-            this.toolStripButton15,
+            this.tsb5,
+            this.tsb6,
+            this.tsb7,
+            this.tsb8,
             this.toolStripSeparator4,
             this.tsbBlockdeNotas,
             this.tsbMensajesInternos,
             this.tsbCalculadora,
             this.tsbNotas,
             this.toolStripSeparator5,
-            this.tsbCerrarFrmHijo});
+            this.tsbConfigImpresora});
             this.toolStripADs.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStripADs.Name = "toolStripADs";
             // 
@@ -286,59 +286,59 @@
             this.tsbConfigImpresora.Tag = "0";
             this.tsbConfigImpresora.Click += new System.EventHandler(this.tsbConfigImpresora_Click);
             // 
-            // toolStripButton10
+            // tsb1
             // 
-            resources.ApplyResources(this.toolStripButton10, "toolStripButton10");
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Tag = "0";
+            resources.ApplyResources(this.tsb1, "tsb1");
+            this.tsb1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb1.Name = "tsb1";
+            this.tsb1.Tag = "0";
             // 
-            // toolStripButton11
+            // tsb2
             // 
-            resources.ApplyResources(this.toolStripButton11, "toolStripButton11");
-            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Tag = "0";
+            resources.ApplyResources(this.tsb2, "tsb2");
+            this.tsb2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb2.Name = "tsb2";
+            this.tsb2.Tag = "0";
             // 
-            // toolStripButton12
+            // tsb4
             // 
-            resources.ApplyResources(this.toolStripButton12, "toolStripButton12");
-            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Tag = "0";
+            resources.ApplyResources(this.tsb4, "tsb4");
+            this.tsb4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb4.Name = "tsb4";
+            this.tsb4.Tag = "0";
             // 
             // toolStripSeparator3
             // 
             resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             // 
-            // toolStripButton13
+            // tsb5
             // 
-            resources.ApplyResources(this.toolStripButton13, "toolStripButton13");
-            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Tag = "0";
+            resources.ApplyResources(this.tsb5, "tsb5");
+            this.tsb5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb5.Name = "tsb5";
+            this.tsb5.Tag = "0";
             // 
-            // toolStripButton14
+            // tsb6
             // 
-            resources.ApplyResources(this.toolStripButton14, "toolStripButton14");
-            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Tag = "0";
+            resources.ApplyResources(this.tsb6, "tsb6");
+            this.tsb6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb6.Name = "tsb6";
+            this.tsb6.Tag = "0";
             // 
-            // toolStripButton9
+            // tsb7
             // 
-            resources.ApplyResources(this.toolStripButton9, "toolStripButton9");
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Tag = "0";
+            resources.ApplyResources(this.tsb7, "tsb7");
+            this.tsb7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb7.Name = "tsb7";
+            this.tsb7.Tag = "0";
             // 
-            // toolStripButton15
+            // tsb8
             // 
-            resources.ApplyResources(this.toolStripButton15, "toolStripButton15");
-            this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton15.Name = "toolStripButton15";
-            this.toolStripButton15.Tag = "0";
+            resources.ApplyResources(this.tsb8, "tsb8");
+            this.tsb8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb8.Name = "tsb8";
+            this.tsb8.Tag = "0";
             // 
             // toolStripSeparator4
             // 
@@ -385,25 +385,15 @@
             resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             // 
-            // tsbCerrarFrmHijo
+            // panelControlBox
             // 
-            resources.ApplyResources(this.tsbCerrarFrmHijo, "tsbCerrarFrmHijo");
-            this.tsbCerrarFrmHijo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbCerrarFrmHijo.ForeColor = System.Drawing.Color.White;
-            this.tsbCerrarFrmHijo.Image = global::SistemaContable.Properties.Resources.reiniciar;
-            this.tsbCerrarFrmHijo.Name = "tsbCerrarFrmHijo";
-            this.tsbCerrarFrmHijo.Tag = "0";
-            this.tsbCerrarFrmHijo.Click += new System.EventHandler(this.tsbCerrarFrmHijo_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.btnCerrar);
-            this.panel5.Controls.Add(this.controlbarMinimizar);
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
-            this.panel5.Tag = "1";
+            this.panelControlBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.panelControlBox.Controls.Add(this.label2);
+            this.panelControlBox.Controls.Add(this.btnCerrar);
+            this.panelControlBox.Controls.Add(this.controlbarMinimizar);
+            resources.ApplyResources(this.panelControlBox, "panelControlBox");
+            this.panelControlBox.Name = "panelControlBox";
+            this.panelControlBox.Tag = "1";
             // 
             // label2
             // 
@@ -515,11 +505,11 @@
             this.Disparador.Name = "Disparador";
             this.Disparador.TextChanged += new System.EventHandler(this.DisparadorInicio);
             // 
-            // panel3
+            // panelLineaControlBox
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
+            this.panelLineaControlBox.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panelLineaControlBox, "panelLineaControlBox");
+            this.panelLineaControlBox.Name = "panelLineaControlBox";
             // 
             // borde3
             // 
@@ -916,14 +906,6 @@
             resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
-            // pbLogoPanel
-            // 
-            this.pbLogoPanel.BackColor = System.Drawing.Color.Transparent;
-            this.pbLogoPanel.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
-            resources.ApplyResources(this.pbLogoPanel, "pbLogoPanel");
-            this.pbLogoPanel.Name = "pbLogoPanel";
-            this.pbLogoPanel.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -943,6 +925,14 @@
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.bunifuShapes1.Sides = 5;
+            // 
+            // pbLogoPanel
+            // 
+            this.pbLogoPanel.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogoPanel.Image = global::SistemaContable.Properties.Resources.LogoMakr_9CmnoW;
+            resources.ApplyResources(this.pbLogoPanel, "pbLogoPanel");
+            this.pbLogoPanel.Name = "pbLogoPanel";
+            this.pbLogoPanel.TabStop = false;
             // 
             // pbLogo
             // 
@@ -1339,6 +1329,13 @@
             this.configurarImpresora.Tag = "4014";
             this.configurarImpresora.Click += new System.EventHandler(this.configurarImpresora_Click);
             // 
+            // tsb3
+            // 
+            resources.ApplyResources(this.tsb3, "tsb3");
+            this.tsb3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb3.Name = "tsb3";
+            this.tsb3.Tag = "0";
+            // 
             // frmInicio
             // 
             resources.ApplyResources(this, "$this");
@@ -1346,14 +1343,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.Controls.Add(this.borde4);
             this.Controls.Add(this.borde3);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelLineaControlBox);
             this.Controls.Add(this.Disparador);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblnuevomensaje);
             this.Controls.Add(this.borde1);
             this.Controls.Add(this.borde2);
             this.Controls.Add(this.toolStripADs);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panelControlBox);
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.btnArchivos2);
@@ -1369,8 +1366,8 @@
             this.Resize += new System.EventHandler(this.frmInicio_Resize);
             this.toolStripADs.ResumeLayout(false);
             this.toolStripADs.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panelControlBox.ResumeLayout(false);
+            this.panelControlBox.PerformLayout();
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoPanel)).EndInit();
@@ -1397,15 +1394,14 @@
         private System.Windows.Forms.ToolStripButton tsbLibroMayor;
         private System.Windows.Forms.ToolStripButton tsbBalanceDeSumasySaldos;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton9;
-        private System.Windows.Forms.ToolStripButton toolStripButton10;
-        private System.Windows.Forms.ToolStripButton toolStripButton11;
-        private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.ToolStripButton tsb7;
+        private System.Windows.Forms.ToolStripButton tsb1;
+        private System.Windows.Forms.ToolStripButton tsb2;
+        private System.Windows.Forms.ToolStripButton tsb4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton13;
-        private System.Windows.Forms.ToolStripButton toolStripButton14;
-        private System.Windows.Forms.ToolStripButton toolStripButton15;
-        private System.Windows.Forms.ToolStripButton tsbCerrarFrmHijo;
+        private System.Windows.Forms.ToolStripButton tsb5;
+        private System.Windows.Forms.ToolStripButton tsb6;
+        private System.Windows.Forms.ToolStripButton tsb8;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton tsbBlockdeNotas;
         private System.Windows.Forms.ToolStripButton tsbMensajesInternos;
@@ -1418,7 +1414,7 @@
         private RJCodeAdvance.RJControls.RJButton btnMantenimiento;
         private RJCodeAdvance.RJControls.RJButton btnContabilidad;
         private RJCodeAdvance.RJControls.RJButton btnVer;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panelControlBox;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pbLogo;
         private RJCodeAdvance.RJControls.RJButton btnArchivos2;
@@ -1499,7 +1495,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Disparador;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelLineaControlBox;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         private RJCodeAdvance.RJControls.RJButton btnAudInt;
@@ -1507,5 +1503,6 @@
         private System.Windows.Forms.Panel borde4;
         private RJCodeAdvance.RJControls.RJButton btnSesion;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripButton tsb3;
     }
 }

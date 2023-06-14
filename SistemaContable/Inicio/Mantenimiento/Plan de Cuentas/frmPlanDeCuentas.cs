@@ -18,7 +18,6 @@ namespace SistemaContable.Plan_de_Cuentas
     public partial class frmPlanDeCuentas : Form
     {
         public static string idCuenta;
-        public static bool MostrarControlBar = false;
 
         public frmPlanDeCuentas()
         {
@@ -30,10 +29,6 @@ namespace SistemaContable.Plan_de_Cuentas
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
 
-            if (MostrarControlBar)
-            {
-                frmConControlBar();
-            }
             CargarDGV("");
         }
 
@@ -58,27 +53,6 @@ namespace SistemaContable.Plan_de_Cuentas
             dgvCuentas.Columns.Insert(indiceColumna, columnaCheckBox);
 
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvCuentas);
-        }
-
-        private void frmConControlBar()
-        {
-            ControlBar.Visible = true;
-            ShapeBusqueda.Size = new Size(874, 56);
-            ShapeBusqueda.Location = new Point(18, 27);
-            txtDescri.Location = new Point(59, 47);
-            txtBusqueda.Location = new Point(153, 47);
-            panel2.Location = new Point(153, 61);
-            CheckInicio.Location = new Point(819, 46);
-            label5.Location = new Point(842, 49);
-            MostrarControlBar = false;
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
-
-            CargarDGV(txtBusqueda.Text);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -111,7 +85,6 @@ namespace SistemaContable.Plan_de_Cuentas
             CargarDGV("");
         }
 
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Desea Eliminar la Cuenta?", true);
@@ -137,6 +110,11 @@ namespace SistemaContable.Plan_de_Cuentas
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             CargarDGV(txtBusqueda.Text);
+        }
+
+        private void frmPlanDeCuentas_Resize(object sender, EventArgs e)
+        {
+            Negocio.FGenerales.MinimizarMDIchild(this);
         }
 
         //BARRA DE CONTROL
