@@ -41,9 +41,9 @@
             this.tsbLibroMayor = new System.Windows.Forms.ToolStripButton();
             this.tsbBalanceDeSumasySaldos = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbConfigImpresora = new System.Windows.Forms.ToolStripButton();
             this.tsb1 = new System.Windows.Forms.ToolStripButton();
             this.tsb2 = new System.Windows.Forms.ToolStripButton();
+            this.tsb3 = new System.Windows.Forms.ToolStripButton();
             this.tsb4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsb5 = new System.Windows.Forms.ToolStripButton();
@@ -56,6 +56,7 @@
             this.tsbCalculadora = new System.Windows.Forms.ToolStripButton();
             this.tsbNotas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbConfigImpresora = new System.Windows.Forms.ToolStripButton();
             this.panelControlBox = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -150,7 +151,6 @@
             this.agenda = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrosContables = new System.Windows.Forms.ToolStripMenuItem();
             this.configurarImpresora = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsb3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripADs.SuspendLayout();
             this.panelControlBox.SuspendLayout();
             this.PanelMenu.SuspendLayout();
@@ -278,14 +278,6 @@
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             // 
-            // tsbConfigImpresora
-            // 
-            resources.ApplyResources(this.tsbConfigImpresora, "tsbConfigImpresora");
-            this.tsbConfigImpresora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbConfigImpresora.Name = "tsbConfigImpresora";
-            this.tsbConfigImpresora.Tag = "0";
-            this.tsbConfigImpresora.Click += new System.EventHandler(this.tsbConfigImpresora_Click);
-            // 
             // tsb1
             // 
             resources.ApplyResources(this.tsb1, "tsb1");
@@ -299,6 +291,13 @@
             this.tsb2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsb2.Name = "tsb2";
             this.tsb2.Tag = "0";
+            // 
+            // tsb3
+            // 
+            resources.ApplyResources(this.tsb3, "tsb3");
+            this.tsb3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb3.Name = "tsb3";
+            this.tsb3.Tag = "0";
             // 
             // tsb4
             // 
@@ -384,6 +383,14 @@
             // 
             resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
             this.toolStripSeparator5.Name = "toolStripSeparator5";
+            // 
+            // tsbConfigImpresora
+            // 
+            resources.ApplyResources(this.tsbConfigImpresora, "tsbConfigImpresora");
+            this.tsbConfigImpresora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbConfigImpresora.Name = "tsbConfigImpresora";
+            this.tsbConfigImpresora.Tag = "0";
+            this.tsbConfigImpresora.Click += new System.EventHandler(this.tsbConfigImpresora_Click);
             // 
             // panelControlBox
             // 
@@ -1328,13 +1335,6 @@
             resources.ApplyResources(this.configurarImpresora, "configurarImpresora");
             this.configurarImpresora.Tag = "4014";
             this.configurarImpresora.Click += new System.EventHandler(this.configurarImpresora_Click);
-            // 
-            // tsb3
-            // 
-            resources.ApplyResources(this.tsb3, "tsb3");
-            this.tsb3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsb3.Name = "tsb3";
-            this.tsb3.Tag = "0";
             // 
             // frmInicio
             // 

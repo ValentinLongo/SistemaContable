@@ -1019,7 +1019,7 @@
     <value>Top, Right</value>
   </data>
   <data name="borde4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1362, 116</value>
+    <value>1362, 99</value>
   </data>
   <data name="borde4.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 700</value>
@@ -4376,12 +4376,6 @@
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tsbConfigImpresora.Name" xml:space="preserve">
-    <value>tsbConfigImpresora</value>
-  </data>
-  <data name="&gt;&gt;tsbConfigImpresora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;tsb1.Name" xml:space="preserve">
     <value>tsb1</value>
   </data>
@@ -4392,6 +4386,12 @@
     <value>tsb2</value>
   </data>
   <data name="&gt;&gt;tsb2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb3.Name" xml:space="preserve">
+    <value>tsb3</value>
+  </data>
+  <data name="&gt;&gt;tsb3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tsb4.Name" xml:space="preserve">
@@ -4465,6 +4465,12 @@
   </data>
   <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbConfigImpresora.Name" xml:space="preserve">
+    <value>tsbConfigImpresora</value>
+  </data>
+  <data name="&gt;&gt;tsbConfigImpresora.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;respaldoDeInformación.Name" xml:space="preserve">
     <value>respaldoDeInformación</value>
@@ -4717,12 +4723,6 @@
   </data>
   <data name="&gt;&gt;configurarImpresora.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsb3.Name" xml:space="preserve">
-    <value>tsb3</value>
-  </data>
-  <data name="&gt;&gt;tsb3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmInicio</value>
