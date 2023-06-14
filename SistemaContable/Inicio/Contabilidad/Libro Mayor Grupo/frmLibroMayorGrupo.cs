@@ -188,8 +188,11 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
                     $"Where ast_ejercicio = {tbIdEjercicio.Text} and pcu_codigo = '{pcuCodigo}' and ast_fecha >= '{maskDesde.Text}' and ast_fecha <= '{maskHasta.Text}' " +
                     $"ORDER BY ast_tipo, ast_fecha, mva_asiento";
 
-                    frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor - Por Grupo", $"{maskDesde.Text}", $"{maskHasta.Text}", pcuDescri, "0", "0", $"{tbDescriEjercicio.Text}");
+
+                    frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor - Por Grupo", $"{maskDesde.Text}", $"{maskHasta.Text}", pcuDescri, $"{Debe}", $"{Haber}", $"{tbDescriEjercicio.Text}");
                     reporte.Show();
+
+
                 }
             }
             else
