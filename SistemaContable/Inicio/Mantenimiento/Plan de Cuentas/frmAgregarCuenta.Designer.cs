@@ -93,6 +93,7 @@
             // 
             this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbEstado.ForeColor = System.Drawing.Color.White;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
             "ACTIVO",
@@ -107,6 +108,7 @@
             // 
             this.cbRubro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.cbRubro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbRubro.ForeColor = System.Drawing.Color.White;
             this.cbRubro.FormattingEnabled = true;
             this.cbRubro.Location = new System.Drawing.Point(104, 196);
             this.cbRubro.Name = "cbRubro";

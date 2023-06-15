@@ -50,6 +50,7 @@ namespace SistemaContable.General
                 AccesoBase.InsertUpdateDatos($"Delete From Aux_AuditInt Where aux_terminal = {terminal}");
 
                 this.Close();
+
             }
         }
 

@@ -2,6 +2,7 @@
 using Datos;
 using Negocio;
 using SistemaContable.General;
+using SistemaContable.Plan_de_Cuentas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

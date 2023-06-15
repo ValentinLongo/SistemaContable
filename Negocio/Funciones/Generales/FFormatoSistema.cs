@@ -74,9 +74,9 @@ namespace Negocio
         public static string FuentenameTextbox;
 
         //Fuentesize
-        public static int FuentesizeLabel;
-        public static int FuentesizeButtom;
-        public static int FuentesizeTextbox;
+        public static double FuentesizeLabel;
+        public static double FuentesizeButtom;
+        public static double FuentesizeTextbox;
 
         public static void SetearFormato(Form Formulario)
         {
@@ -112,7 +112,7 @@ namespace Negocio
                     RGBbackLabel = MFormato.fmt_rgbBack.ToString();
                     RGBforeLabel = MFormato.fmt_rgbFore.ToString();
                     FuentenameLabel = MFormato.fmt_fuenteName.ToString();
-                    FuentesizeLabel = Convert.ToInt32(MFormato.fmt_fuenteSize);
+                    FuentesizeLabel = Convert.ToDouble(MFormato.fmt_fuenteSize);
                 }
 
                 //Buttom
@@ -121,7 +121,7 @@ namespace Negocio
                     RGBbackButtom = MFormato.fmt_rgbBack.ToString();
                     RGBforeButtom = MFormato.fmt_rgbFore.ToString();
                     FuentenameButtom = MFormato.fmt_fuenteName.ToString();
-                    FuentesizeButtom = Convert.ToInt32(MFormato.fmt_fuenteSize);
+                    FuentesizeButtom = Convert.ToDouble(MFormato.fmt_fuenteSize);
                 }
 
                 //TextBox
@@ -130,7 +130,7 @@ namespace Negocio
                     RGBbackTextbox = MFormato.fmt_rgbBack.ToString();
                     RGBforeTextbox = MFormato.fmt_rgbFore.ToString();
                     FuentenameTextbox = MFormato.fmt_fuenteName.ToString();
-                    FuentesizeTextbox =Convert.ToInt32(MFormato.fmt_fuenteSize);
+                    FuentesizeTextbox =Convert.ToDouble(MFormato.fmt_fuenteSize);
                 }
 
                 //Toolstrip
@@ -189,21 +189,21 @@ namespace Negocio
                         {
                             Ctrl1.BackColor = Color.FromArgb(RGB(RGBbackLabel, 1), RGB(RGBbackLabel, 2), RGB(RGBbackLabel, 3));
                             Ctrl1.ForeColor = Color.FromArgb(RGB(RGBforeLabel, 1), RGB(RGBforeLabel, 2), RGB(RGBforeLabel, 3));
-                            Ctrl1.Font = new Font(FuentenameLabel,FuentesizeLabel);
+                            Ctrl1.Font = new Font(FuentenameLabel, Convert.ToInt32(FuentesizeLabel));
                         }
 
                         if (Ctrl1 is Button)
                         {
                             Ctrl1.BackColor = Color.FromArgb(RGB(RGBbackButtom, 1), RGB(RGBbackButtom, 2), RGB(RGBbackButtom, 3));
                             Ctrl1.ForeColor = Color.FromArgb(RGB(RGBforeButtom, 1), RGB(RGBforeButtom, 2), RGB(RGBforeButtom, 3));
-                            Ctrl1.Font = new Font(FuentenameButtom, FuentesizeButtom);
+                            Ctrl1.Font = new Font(FuentenameButtom, Convert.ToInt32(FuentesizeButtom));
                         }
 
                         if (Ctrl1 is TextBox)
                         {
                             Ctrl1.BackColor = Color.FromArgb(RGB(RGBbackTextbox, 1), RGB(RGBbackTextbox, 2), RGB(RGBbackTextbox, 3));
                             Ctrl1.ForeColor = Color.FromArgb(RGB(RGBforeTextbox, 1), RGB(RGBforeTextbox, 2), RGB(RGBforeTextbox, 3));
-                            Ctrl1.Font = new Font(FuentenameTextbox, FuentesizeTextbox);
+                            Ctrl1.Font = new Font(FuentenameTextbox, Convert.ToInt32(FuentesizeTextbox));
                         }
 
                         if (Ctrl1 is ToolStrip)
@@ -218,21 +218,21 @@ namespace Negocio
                 {
                     Ctrl.BackColor = Color.FromArgb(RGB(RGBbackLabel, 1), RGB(RGBbackLabel, 2), RGB(RGBbackLabel, 3));
                     Ctrl.ForeColor = Color.FromArgb(RGB(RGBforeLabel, 1), RGB(RGBforeLabel, 2), RGB(RGBforeLabel, 3));
-                    Ctrl.Font = new Font(FuentenameLabel, FuentesizeLabel);
+                    Ctrl.Font = new Font(FuentenameLabel, Convert.ToInt32(FuentesizeLabel));
                 }
 
                 if (Ctrl is Button)
                 {
                     Ctrl.BackColor = Color.FromArgb(RGB(RGBbackButtom, 1), RGB(RGBbackButtom, 2), RGB(RGBbackButtom, 3));
                     Ctrl.ForeColor = Color.FromArgb(RGB(RGBforeButtom, 1), RGB(RGBforeButtom, 2), RGB(RGBforeButtom, 3));
-                    Ctrl.Font = new Font(FuentenameButtom, FuentesizeButtom);
+                    Ctrl.Font = new Font(FuentenameButtom, Convert.ToInt32(FuentesizeButtom));
                 }
 
                 if (Ctrl is TextBox)
                 {
                     Ctrl.BackColor = Color.FromArgb(RGB(RGBbackTextbox, 1), RGB(RGBbackTextbox, 2), RGB(RGBbackTextbox, 3));
                     Ctrl.ForeColor = Color.FromArgb(RGB(RGBforeTextbox, 1), RGB(RGBforeTextbox, 2), RGB(RGBforeTextbox, 3));
-                    Ctrl.Font = new Font(FuentenameTextbox, FuentesizeTextbox);
+                    Ctrl.Font = new Font(FuentenameTextbox, Convert.ToInt32(FuentesizeTextbox));
                 }
 
                 if (Ctrl is ToolStrip)

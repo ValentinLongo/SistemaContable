@@ -5,6 +5,7 @@ using Negocio;
 using SistemaContable.General;
 using SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_Modelos;
 using SistemaContable.Plan_de_Cuentas;
+using SistemaContable.Usuarios;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -231,10 +232,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnPlandeCta_Click(object sender, EventArgs e)
         {
-            Cursor = Cursors.WaitCursor;
             frmPlanDeCuentas frm = new frmPlanDeCuentas();
             frm.ShowDialog();
-            Cursor = Cursors.Default;
         }
 
         private void dgvAddModVisASIENTO_DoubleClick_1(object sender, EventArgs e)
@@ -661,7 +660,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     if (frmMessageBox.Acepto)
                     {
                         AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
-                      
+
                         codautonum = 0;
 
                         DataSet ds4 = new DataSet();
