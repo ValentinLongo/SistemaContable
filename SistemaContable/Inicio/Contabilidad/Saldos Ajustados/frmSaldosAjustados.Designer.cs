@@ -831,7 +831,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSaldosAjustados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSaldosAjustados";
+            this.Text = "Saldos Ajustados";
             this.Load += new System.EventHandler(this.frmSaldosAjustados_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

@@ -54,7 +54,6 @@
             this.dgvAux = new System.Windows.Forms.DataGridView();
             this.dgvDetDeMod1 = new System.Windows.Forms.DataGridView();
             this.dgvDetDeMod2 = new System.Windows.Forms.DataGridView();
-            this.lblCantElementos = new System.Windows.Forms.Label();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +62,7 @@
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCantElementos = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetDeMod1)).BeginInit();
@@ -507,18 +507,6 @@
             this.dgvDetDeMod2.TabStop = false;
             this.dgvDetDeMod2.SelectionChanged += new System.EventHandler(this.dgvDetDeMod2_SelectionChanged_1);
             // 
-            // lblCantElementos
-            // 
-            this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCantElementos.AutoSize = true;
-            this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCantElementos.Location = new System.Drawing.Point(9, 518);
-            this.lblCantElementos.Name = "lblCantElementos";
-            this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
-            this.lblCantElementos.TabIndex = 97;
-            this.lblCantElementos.Text = "Elementos";
-            // 
             // Column9
             // 
             this.Column9.HeaderText = "Cuenta";
@@ -571,7 +559,7 @@
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
             this.Code.Visible = false;
-            this.Code.Width = 77;
+            this.Code.Width = 78;
             // 
             // Asiento
             // 
@@ -579,7 +567,19 @@
             this.Asiento.Name = "Asiento";
             this.Asiento.ReadOnly = true;
             this.Asiento.Visible = false;
-            this.Asiento.Width = 81;
+            this.Asiento.Width = 82;
+            // 
+            // lblCantElementos
+            // 
+            this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCantElementos.AutoSize = true;
+            this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantElementos.Location = new System.Drawing.Point(9, 518);
+            this.lblCantElementos.Name = "lblCantElementos";
+            this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
+            this.lblCantElementos.TabIndex = 97;
+            this.lblCantElementos.Text = "Elementos";
             // 
             // frmDetalledeModelos
             // 
@@ -606,7 +606,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDetalledeModelos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDetalledeModelos";
+            this.Text = "Detalle de Modelos";
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).EndInit();

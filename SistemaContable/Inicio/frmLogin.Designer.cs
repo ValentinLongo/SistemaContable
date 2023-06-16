@@ -300,7 +300,6 @@
             this.panel6.Controls.Add(this.ShapeContra);
             this.panel6.Controls.Add(this.ShapeUsuario);
             this.panel6.Controls.Add(this.bunifuShapes2);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 172);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(366, 309);

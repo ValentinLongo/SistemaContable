@@ -55,8 +55,8 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAgregarCuenta frmAgregarCuenta = new frmAgregarCuenta();
-            frmAgregarCuenta.ShowDialog();
+            frmAggModCuenta frmAgregar = new frmAggModCuenta(1);
+            frmAgregar.ShowDialog();
             CargarDGV("");
         }
 
@@ -78,8 +78,8 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            frmModificarCuenta formModificarCuenta = new frmModificarCuenta();
-            formModificarCuenta.ShowDialog();
+            frmAggModCuenta frmModificar = new frmAggModCuenta(2);
+            frmModificar.ShowDialog();
             CargarDGV("");
         }
 
@@ -112,6 +112,10 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void frmPlanDeCuentas_Resize(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmAggModVisAsientoContable")) //porque al abrir el frmPlanDeCuenta desde frmAggModVisAsientoContable, el metodo " MinimizarMDIchild " provocaba: Error al crear identificador de ventana.
+            {
+                return;
+            }
             Negocio.FGenerales.MinimizarMDIchild(this);
         }
     }

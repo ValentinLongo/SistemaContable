@@ -576,17 +576,11 @@
     <Compile Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosEspecialesPerfil.Designer.cs">
       <DependentUpon>frmPermisosEspecialesPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmAgregarCuenta.cs">
+    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmAggModCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmAgregarCuenta.Designer.cs">
-      <DependentUpon>frmAgregarCuenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmModificarCuenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmModificarCuenta.Designer.cs">
-      <DependentUpon>frmModificarCuenta.cs</DependentUpon>
+    <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmAggModCuenta.Designer.cs">
+      <DependentUpon>frmAggModCuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.cs">
       <SubType>Form</SubType>
@@ -830,11 +824,8 @@
     <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Parametrizacion Permisos\frmPermisosEspecialesUsu.resx">
       <DependentUpon>frmPermisosEspecialesUsu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Mantenimiento\Plan de Cuentas\frmAgregarCuenta.resx">
-      <DependentUpon>frmAgregarCuenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Mantenimiento\Plan de Cuentas\frmModificarCuenta.resx">
-      <DependentUpon>frmModificarCuenta.cs</DependentUpon>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Plan de Cuentas\frmAggModCuenta.resx">
+      <DependentUpon>frmAggModCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Plan de Cuentas\frmPlanDeCuentas.resx">
       <DependentUpon>frmPlanDeCuentas.cs</DependentUpon>
@@ -996,9 +987,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\papel2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reiniciar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

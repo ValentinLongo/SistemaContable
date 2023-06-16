@@ -151,6 +151,11 @@ namespace Negocio
 
                 if (Ctrl is Panel)
                 {
+                    if (Ctrl.Tag.ToString() == "")
+                    {
+                        continue;
+                    }
+
                     if (Ctrl.Tag.ToString() == "1")
                     {
                         Ctrl.BackColor = Color.FromArgb(RGB(RGBbackPanel1, 1), RGB(RGBbackPanel1, 2), RGB(RGBbackPanel1, 3));
@@ -169,6 +174,11 @@ namespace Negocio
                     //controles dentro de contenedor
                     foreach (Control Ctrl1 in Ctrl.Controls)
                     {
+                        if (Ctrl1.Tag == null)
+                        {
+                            continue;
+                        }
+
                         if (Ctrl1.Tag.ToString() == "1")
                         {
                             Ctrl1.BackColor = Color.FromArgb(RGB(RGBbackPanel1, 1), RGB(RGBbackPanel1, 2), RGB(RGBbackPanel1, 3));
@@ -240,7 +250,6 @@ namespace Negocio
                     Ctrl.BackColor = Color.FromArgb(RGB(RGBbackToolstrip, 1), RGB(RGBbackToolstrip, 2), RGB(RGBbackToolstrip, 3));
                 }
             }
-
         }
 
         public static void FondoMDI(Form Formulario, Panel borde1, Panel borde2, Panel borde3, Panel borde4, PictureBox logo)

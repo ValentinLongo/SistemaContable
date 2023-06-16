@@ -313,16 +313,6 @@ namespace SistemaContable.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap reiniciar {
-            get {
-                object obj = ResourceManager.GetObject("reiniciar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap sobre {
             get {
                 object obj = ResourceManager.GetObject("sobre", resourceCulture);

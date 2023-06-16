@@ -388,9 +388,10 @@
             this.CircleProgress.SuperScriptMargin = new System.Windows.Forms.Padding(5, 50, 0, 0);
             this.CircleProgress.SuperScriptText = "%";
             this.CircleProgress.TabIndex = 16;
-            this.CircleProgress.Text = "0";
+            this.CircleProgress.Text = "30";
             this.CircleProgress.TextMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.CircleProgress.ValueByTransition = 0;
+            this.CircleProgress.Value = 30;
+            this.CircleProgress.ValueByTransition = 30;
             this.CircleProgress.ValueMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             // 
             // tAparece
@@ -414,7 +415,7 @@
             this.Name = "frmCarga";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCarga";
+            this.Text = "Pantalla de Carga";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

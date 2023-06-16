@@ -226,7 +226,7 @@ namespace Negocio
         }
 
         //PARA MOSTRAR EL FRM SI YA SE ENCUENTRA ACTIVO
-        public static void MostrarForm(string NombreForm)
+        public static void MostrarForm(string NombreForm,[Optional] bool flag)
         {
             foreach (Form frm in Application.OpenForms)
             {
@@ -246,6 +246,11 @@ namespace Negocio
                                 frm.WindowState = FormWindowState.Normal;
                             }
                         }
+                    }
+                    else if (frm.WindowState == FormWindowState.Normal && flag)
+                    {
+                        frm.MdiParent = null;
+                        frm.BringToFront();
                     }
                     else
                     {

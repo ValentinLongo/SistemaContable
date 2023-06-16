@@ -1,6 +1,7 @@
 ﻿using Datos;
 using RJCodeAdvance.RJControls;
 using SistemaContable.Inicio.Ver.Comunicacion_Interna;
+using SistemaContable.Plan_de_Cuentas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -464,7 +464,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmComunicacionInterna";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmComunicacionInterna";
+            this.Text = "Comunicacion Interna";
             this.Resize += new System.EventHandler(this.frmComunicacionInterna_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMensajes)).EndInit();
             this.ControlBar.ResumeLayout(false);

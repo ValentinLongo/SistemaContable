@@ -298,7 +298,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAutorización";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCambiarUsuario";
+            this.Text = "Autorizacion";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.F12);
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVisibilidad)).EndInit();

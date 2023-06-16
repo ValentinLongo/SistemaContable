@@ -14,41 +14,81 @@ using System.Windows.Forms;
 
 namespace SistemaContable.Plan_de_Cuentas
 {
-    public partial class frmAgregarCuenta : Form
+    public partial class frmAggModCuenta : Form
     {
-        public frmAgregarCuenta()
+        int PROCESO;
+
+        public frmAggModCuenta(int proceso) // proceso 1 = Agregar y proceso 2 = Modificar
         {
             InitializeComponent();
+
+            PROCESO = proceso;
 
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
-            CargarDatos();
+            CargarDatos(proceso);
         }
 
-        private void CargarDatos()
+        private void CargarDatos(int proceso)
         {
             DataSet ds = new DataSet();
-            ds = Negocio.FPlanDeCuentas.Rubros();
-            cbRubro.DataSource = ds.Tables[0];
-            cbRubro.DisplayMember = "ruc_descri";
-            cbRubro.ValueMember = "ruc_codigo";
 
-            tbCodigo.Mask = "00.00.00.00.00.00";
+            if (proceso == 1)
+            {
+                ds = Negocio.FPlanDeCuentas.Rubros();
+                cbRubro.DataSource = ds.Tables[0];
+                cbRubro.DisplayMember = "ruc_descri";
+                cbRubro.ValueMember = "ruc_codigo";
 
-            tbCuenta.Text = Convert.ToString(Negocio.FPlanDeCuentas.UltimoNumeroCuenta());
+                tbCodigo.Mask = "00.00.00.00.00.00";
+
+                tbCuenta.Text = Convert.ToString(Negocio.FPlanDeCuentas.UltimoNumeroCuenta());
+            }
+            else if (proceso == 2)
+            {
+                ds = Negocio.FPlanDeCuentas.Rubros();
+                cbRubro.DataSource = ds.Tables[0];
+                cbRubro.DisplayMember = "ruc_descri";
+                cbRubro.ValueMember = "ruc_codigo";
+
+                DataSet ds2 = new DataSet();
+                ds2 = Negocio.FPlanDeCuentas.BusquedaCuentaPorCuenta(frmPlanDeCuentas.idCuenta);
+                foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                {
+                    tbCodigo.Text = dr2["pcu_codigo"].ToString();
+                    tbCuenta.Text = dr2["pcu_cuenta"].ToString();
+                    tbDescripcion.Text = dr2["pcu_descri"].ToString();
+                    try
+                    {
+                        string rubrocont = dr2["pcu_rubrocont"].ToString();
+                        cbRubro.SelectedValue = Convert.ToInt32(rubrocont);
+                    }
+                    catch
+                    {
+                        cbRubro.Text = "";
+                    }
+
+                    if (dr2["pcu_ajustainf"].ToString() != "" && dr2["pcu_ajustainf"].ToString() != "0")
+                    {
+                        CheckAjuste.Checked = true;
+                    }
+                    int estado = Convert.ToInt32(dr2["pcu_estado"].ToString());
+                    cbEstado.SelectedIndex = estado - 1;
+                }
+            }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            int validado = Negocio.FValidacionesEventos.ValidacionVacio(this);
-
-            if (tbCodigo == null )
+            if (Negocio.FValidacionesEventos.ValidacionVacio(this) != 0 || tbCodigo == null)
             {
-                validado = 0; 
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
+                MessageBox.ShowDialog();
+                return;
             }
 
-            if (validado == 0)
+            if (PROCESO == 1)
             {
                 try
                 {
@@ -58,6 +98,7 @@ namespace SistemaContable.Plan_de_Cuentas
                     {
                         ajusta = 1;
                     }
+
                     //Datos
                     MPlanDeCuentas mPlanDeCuentas = new MPlanDeCuentas()
                     {
@@ -71,6 +112,7 @@ namespace SistemaContable.Plan_de_Cuentas
                         pcu_rubrocont = Convert.ToInt32(cbRubro.SelectedValue),
                         pcu_ajustainf = ajusta
                     };
+
                     //Validacion codigo
                     string code = codigoCuenta();
                     if (code != "00.00.00.00.00.00")
@@ -80,7 +122,7 @@ namespace SistemaContable.Plan_de_Cuentas
 
                         //Establezco los hijos de la cuenta superior
                         Negocio.FPlanDeCuentas.cantidadHijos(mPlanDeCuentas.pcu_superior);
-                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cargado Correctamente", false);
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cargado Correctamente!", false);
                         MessageBox.ShowDialog();
                         this.Close();
                     }
@@ -96,11 +138,34 @@ namespace SistemaContable.Plan_de_Cuentas
                     MessageBox.ShowDialog();
                 }
             }
-            else
+            else if (PROCESO == 2)
             {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Falta completar campos.", false);
-                MessageBox.ShowDialog();
-            }
+                try
+                {
+                    int check = 0;
+                    if (CheckAjuste.Checked)
+                    {
+                        check = 1;
+                    }
+                    MPlanDeCuentas mPlanDeCuentas = new MPlanDeCuentas()
+                    {
+                        pcu_codigo = tbCodigo.Text,
+                        pcu_descri = tbDescripcion.Text,
+                        pcu_estado = Convert.ToInt32(cbEstado.SelectedIndex + 1),
+                        pcu_rubrocont = Convert.ToInt32(cbRubro.SelectedValue),
+                        pcu_ajustainf = check
+                    };
+                    Negocio.FPlanDeCuentas.modificarPlanDeCuentas(mPlanDeCuentas);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Cuenta Modificada!", false);
+                    MessageBox.ShowDialog();
+                    this.Close();
+                }
+                catch
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Ocurrio un error", false);
+                    MessageBox.ShowDialog();
+                }
+            }           
         }
 
         public string codigoCuenta()
@@ -205,7 +270,6 @@ namespace SistemaContable.Plan_de_Cuentas
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void panel7_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

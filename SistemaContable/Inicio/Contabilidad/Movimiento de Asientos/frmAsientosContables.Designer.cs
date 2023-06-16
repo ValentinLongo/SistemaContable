@@ -855,7 +855,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAsientosContables";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAsientosContables";
+            this.Text = "Asientos Contables";
             this.Resize += new System.EventHandler(this.frmAsientosContables_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAux)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsientosContables)).EndInit();

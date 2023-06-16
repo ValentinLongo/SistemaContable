@@ -525,7 +525,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRubricacionDeSubDiarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmRubricacionDeSubDiarios";
+            this.Text = "Rubricacion De SubDiarios";
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.MenuArchivo.ResumeLayout(false);

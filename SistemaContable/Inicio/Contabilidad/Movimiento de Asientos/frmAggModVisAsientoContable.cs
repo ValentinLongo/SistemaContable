@@ -37,6 +37,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         public static bool flag = true; //para repetir la carga de detalles y que se valla actualizando el dgv
 
+        public static bool MODELO = false; //para poder imprimir el modelo
+
         //addmodvis = proceso que realiza el frm
         public frmAggModVisAsientoContable(int addmodvis, [Optional] ComboBox cbSeleccion, [Optional] string asiento, [Optional] string fecha, [Optional] string comentario, [Optional] MAsiento modelo)
         {
@@ -49,6 +51,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
             if (modelo != null)
             {
+                MODELO = true;
                 Setear(addmodvis, "", "", "", "", "", modelo);
             }
             else
@@ -59,7 +62,10 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void Setear(int addmodvis, string codejercicio, string descriejercicio, string asiento, string fecha, string comentario, [Optional] MAsiento modelo)
         {
-            AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto WHERE mva_terminal = {terminal}");
+            if (modelo == null)
+            {
+                AccesoBase.InsertUpdateDatos($"DELETE Aux_MovAsto WHERE mva_terminal = {terminal}");
+            }
 
             txtCodEjercicio.Text = codejercicio;
             txtDescriEjercicio.Text = descriejercicio;
@@ -232,10 +238,14 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnPlandeCta_Click(object sender, EventArgs e)
         {
+            if (Negocio.FInicio.FormActivo("frmPlanDeCuentas"))
+            {
+                Negocio.FInicio.MostrarForm("frmPlanDeCuentas", true);
+                return;
+            }
             frmPlanDeCuentas frm = new frmPlanDeCuentas();
             frm.ShowDialog();
         }
-
         private void dgvAddModVisASIENTO_DoubleClick_1(object sender, EventArgs e)
         {
             flag = true;
@@ -745,7 +755,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             if (NroAsiento == "ALTA EN CONCEPTO")
             {
                 NroAsiento = (Negocio.FGenerales.ultimoNumeroID("mva_asiento", "Aux_movAsto") - 1).ToString();
-                if (NroAsiento == "0")
+                if (NroAsiento == "0" && MODELO == false)
                 {
                     return;
                 }

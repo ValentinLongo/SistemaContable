@@ -505,7 +505,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCalendario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCalendario";
+            this.Text = "Calendario";
             this.Resize += new System.EventHandler(this.frmCalendario_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalendario)).EndInit();
             this.ControlBar.ResumeLayout(false);
