@@ -338,11 +338,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(28, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 17);
+            this.label2.Size = new System.Drawing.Size(249, 16);
             this.label2.TabIndex = 109;
             this.label2.Text = "Visualizar Únicamente Saldos sin Ajuste.";
             // 
@@ -350,11 +350,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(28, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 17);
+            this.label1.Size = new System.Drawing.Size(254, 16);
             this.label1.TabIndex = 108;
             this.label1.Text = "Visualizar Únicamente Saldos con Ajuste.";
             // 
@@ -362,11 +362,11 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label13.Location = new System.Drawing.Point(29, 35);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(232, 17);
+            this.label13.Size = new System.Drawing.Size(252, 16);
             this.label13.TabIndex = 107;
             this.label13.Text = "Visualizar Únicamente Valores de Ajuste.";
             // 
@@ -374,11 +374,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(479, 38);
+            this.label3.Location = new System.Drawing.Point(478, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 21);
+            this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 114;
             this.label3.Text = "Selección:";
             // 
@@ -401,11 +401,11 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(437, 77);
+            this.label4.Location = new System.Drawing.Point(432, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 21);
+            this.label4.Size = new System.Drawing.Size(129, 20);
             this.label4.TabIndex = 116;
             this.label4.Text = "Centro de Costo:";
             // 

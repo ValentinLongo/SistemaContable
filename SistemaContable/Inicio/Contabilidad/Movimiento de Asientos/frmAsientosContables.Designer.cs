@@ -99,11 +99,11 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(725, 47);
+            this.label13.Location = new System.Drawing.Point(714, 45);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(166, 17);
+            this.label13.Size = new System.Drawing.Size(179, 16);
             this.label13.TabIndex = 97;
             this.label13.Text = "Sólo Asientos con Diferencia";
             // 
@@ -111,11 +111,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(541, 47);
+            this.label1.Location = new System.Drawing.Point(530, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 17);
+            this.label1.Size = new System.Drawing.Size(152, 16);
             this.label1.TabIndex = 98;
             this.label1.Text = "Sólo Asientos Manuales";
             // 
@@ -123,11 +123,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(339, 47);
+            this.label2.Location = new System.Drawing.Point(328, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 17);
+            this.label2.Size = new System.Drawing.Size(167, 16);
             this.label2.TabIndex = 99;
             this.label2.Text = "Sólo Asientos Modificados";
             // 
@@ -139,7 +139,7 @@
             this.cbSeleccion.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSeleccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cbSeleccion.FormattingEnabled = true;
-            this.cbSeleccion.Location = new System.Drawing.Point(96, 43);
+            this.cbSeleccion.Location = new System.Drawing.Point(98, 40);
             this.cbSeleccion.Name = "cbSeleccion";
             this.cbSeleccion.Size = new System.Drawing.Size(190, 25);
             this.cbSeleccion.TabIndex = 103;
@@ -151,11 +151,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(11, 46);
+            this.label3.Location = new System.Drawing.Point(11, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 17);
+            this.label3.Size = new System.Drawing.Size(85, 16);
             this.label3.TabIndex = 104;
             this.label3.Text = "SELECCIÓN:";
             // 
@@ -237,7 +237,7 @@
             "Asiento",
             "Descripción",
             "Fecha"});
-            this.cbBusqueda.Location = new System.Drawing.Point(40, 580);
+            this.cbBusqueda.Location = new System.Drawing.Point(40, 581);
             this.cbBusqueda.Name = "cbBusqueda";
             this.cbBusqueda.Size = new System.Drawing.Size(154, 25);
             this.cbBusqueda.TabIndex = 113;
@@ -271,7 +271,7 @@
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBusqueda.Location = new System.Drawing.Point(203, 584);
+            this.txtBusqueda.Location = new System.Drawing.Point(203, 583);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(598, 19);
             this.txtBusqueda.TabIndex = 0;
@@ -391,7 +391,7 @@
             this.CheckModificados.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckModificados.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckModificados.CustomCheckmarkImage = null;
-            this.CheckModificados.Location = new System.Drawing.Point(319, 46);
+            this.CheckModificados.Location = new System.Drawing.Point(308, 44);
             this.CheckModificados.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckModificados.Name = "CheckModificados";
             this.CheckModificados.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -447,7 +447,7 @@
             this.CheckManuales.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckManuales.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckManuales.CustomCheckmarkImage = null;
-            this.CheckManuales.Location = new System.Drawing.Point(521, 46);
+            this.CheckManuales.Location = new System.Drawing.Point(510, 44);
             this.CheckManuales.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckManuales.Name = "CheckManuales";
             this.CheckManuales.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -503,7 +503,7 @@
             this.CheckDiferencia.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckDiferencia.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckDiferencia.CustomCheckmarkImage = null;
-            this.CheckDiferencia.Location = new System.Drawing.Point(705, 46);
+            this.CheckDiferencia.Location = new System.Drawing.Point(694, 44);
             this.CheckDiferencia.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckDiferencia.Name = "CheckDiferencia";
             this.CheckDiferencia.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -565,11 +565,11 @@
             // 
             this.lblDesde.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesde.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDesde.Location = new System.Drawing.Point(200, 584);
+            this.lblDesde.Location = new System.Drawing.Point(200, 585);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(47, 17);
+            this.lblDesde.Size = new System.Drawing.Size(51, 16);
             this.lblDesde.TabIndex = 118;
             this.lblDesde.Text = "Desde:";
             this.lblDesde.Visible = false;
@@ -604,7 +604,7 @@
             this.maskFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskFecha.ForeColor = System.Drawing.Color.White;
-            this.maskFecha.Location = new System.Drawing.Point(270, 585);
+            this.maskFecha.Location = new System.Drawing.Point(256, 586);
             this.maskFecha.Name = "maskFecha";
             this.maskFecha.Size = new System.Drawing.Size(63, 15);
             this.maskFecha.TabIndex = 34;

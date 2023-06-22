@@ -10,19 +10,33 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace SistemaContable.Usuarios
 {
-    public partial class frmModificarUsuario : Form
+    public partial class frmAggModUsuario : Form
     {
-        public frmModificarUsuario()
+
+        private int PROCESO;
+
+        public frmAggModUsuario(int proceso) // proceso 1 = agregar / proceso 2 = modificar
         {
             InitializeComponent();
+
+            PROCESO = proceso;
+
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
             LlenarCB();
-            traerDatos();
+
+            if (proceso == 2)
+            {
+                lblControlBar.Text = "Modificar Usuario";
+                tbCodigo.Text = "";
+                tbCodigo.Tag = "10100";
+                traerDatos();
+            }
         }
 
         private void traerDatos()
@@ -39,9 +53,9 @@ namespace SistemaContable.Usuarios
             cbPerfil.SelectedValue = oUsuario.usu_perfil;
             cbEstado.SelectedValue = oUsuario.usu_estado;
             cbSeccion.SelectedValue = oUsuario.usu_seccion;
-            if(oUsuario.usu_vendedor == 0)
+            if (oUsuario.usu_vendedor == 0)
             {
-                Check.Checked = true;
+                CambioCheck.Checked = true;
             }
             else
             {
@@ -68,6 +82,8 @@ namespace SistemaContable.Usuarios
             cbSeccion.DataSource = ds3.Tables[0];
             cbSeccion.DisplayMember = "sec_descri";
             cbSeccion.ValueMember = "sec_codigo";
+
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -80,9 +96,9 @@ namespace SistemaContable.Usuarios
             }
         }
 
-        private void Check_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        private void CambioCheck_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
-            if (Check.Checked == true)
+            if (CambioCheck.Checked == true)
             {
                 tbVendedor.Enabled = false;
                 btnBuscar.Enabled = false;
@@ -90,7 +106,7 @@ namespace SistemaContable.Usuarios
                 SistemaContable.Usuarios.frmSeleccionVendedores.CodigoVendedor = 0;
                 tbVendedor.Text = "";
             }
-            else if (Check.Checked == false)
+            else if (CambioCheck.Checked == false)
             {
                 tbVendedor.Enabled = true;
                 btnBuscar.Enabled = true;
@@ -101,30 +117,53 @@ namespace SistemaContable.Usuarios
         {
             if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-                int seccion = 0;
-                if (cbSeccion.SelectedValue != null)
+                if (PROCESO == 1)
                 {
-                    seccion = Convert.ToInt32(cbSeccion.SelectedValue);
+                    MUsuario mUsuario = new MUsuario
+                    {
+                        usu_nombre = tbNombre.Text,
+                        usu_login = tbLogin.Text,
+                        usu_direccion = tbDireccion.Text,
+                        usu_telefono = tbTelefono.Text,
+                        usu_fecnac = Convert.ToDateTime(dtFechaNachimiento.Text),
+                        usu_perfil = Convert.ToInt32(cbPerfil.SelectedValue.ToString()),
+                        usu_estado = Convert.ToInt32(cbEstado.SelectedValue.ToString()),
+                        usu_seccion = Convert.ToInt32(cbSeccion.SelectedValue.ToString()),
+                        usu_vendedor = SistemaContable.Usuarios.frmSeleccionVendedores.CodigoVendedor
+                    };
+                    Negocio.FUsuarios.AgregarUsuario(mUsuario);
+
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Usuario agregado correctamente", false);
+                    MessageBox.ShowDialog();
+                    this.Close();
                 }
-                MUsuario mUsuario = new MUsuario
+                else if (PROCESO == 2)
                 {
-                    usu_codigo = Convert.ToInt32(tbCodigo.Text),
-                    usu_nombre = tbNombre.Text,
-                    usu_login = tbLogin.Text,
-                    usu_direccion = tbDireccion.Text,
-                    usu_telefono = tbTelefono.Text,
-                    usu_fecnac = Convert.ToDateTime(dtFechaNachimiento.Text),
-                    usu_perfil = Convert.ToInt32(cbPerfil.SelectedValue.ToString()),
-                    usu_estado = Convert.ToInt32(cbEstado.SelectedValue.ToString()),
-                    usu_seccion = seccion,
-                    usu_vendedor = SistemaContable.Usuarios.frmSeleccionVendedores.CodigoVendedor
-                };
+                    int seccion = 0;
+                    if (cbSeccion.SelectedValue != null)
+                    {
+                        seccion = Convert.ToInt32(cbSeccion.SelectedValue);
+                    }
+                    MUsuario mUsuario = new MUsuario
+                    {
+                        usu_codigo = Convert.ToInt32(tbCodigo.Text),
+                        usu_nombre = tbNombre.Text,
+                        usu_login = tbLogin.Text,
+                        usu_direccion = tbDireccion.Text,
+                        usu_telefono = tbTelefono.Text,
+                        usu_fecnac = Convert.ToDateTime(dtFechaNachimiento.Text),
+                        usu_perfil = Convert.ToInt32(cbPerfil.SelectedValue.ToString()),
+                        usu_estado = Convert.ToInt32(cbEstado.SelectedValue.ToString()),
+                        usu_seccion = seccion,
+                        usu_vendedor = SistemaContable.Usuarios.frmSeleccionVendedores.CodigoVendedor
+                    };
 
-                Negocio.FUsuarios.ModificarUsuario(mUsuario);
+                    Negocio.FUsuarios.ModificarUsuario(mUsuario);
 
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Usuario modificado correctamente", false);
-                MessageBox.ShowDialog();
-                this.Close();
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Usuario modificado correctamente", false);
+                    MessageBox.ShowDialog();
+                    this.Close();
+                }
             }
             else
             {

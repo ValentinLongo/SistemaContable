@@ -46,6 +46,13 @@ namespace SistemaContable.General
                 else
                 {
                     lblMSG2.Text = msg2;
+
+                    //para que el msg comun se centre sin importar su longitud
+                    int a = this.Width - lblMSG2.Width;
+                    a = a / 2;
+                    lblMSG2.Location = new Point(a, 54);
+                    //
+
                     txtMsgLargo.Visible = false;
                     lblMSG2.Visible = true;
                 }
@@ -66,6 +73,11 @@ namespace SistemaContable.General
                 else
                 {
                     lblMSG2.Text = msg2;
+
+                    int a = this.Width - lblMSG2.Width;
+                    a = a / 2;
+                    lblMSG2.Location = new Point(a, 54);
+
                     txtMsgLargo.Visible = false;
                     lblMSG2.Visible = true;
                 }

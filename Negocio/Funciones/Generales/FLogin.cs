@@ -22,6 +22,7 @@ namespace Negocio
         public static string BaseDeDatos;
 
         public static string NombreEmpresa;
+
         //BUSCO SI EXISTE USUARIO
         public static int buscarUsuario(string usuario, string contrasenia)
         {

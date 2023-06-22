@@ -159,33 +159,33 @@
             // Mensaje
             // 
             this.Mensaje.AutoSize = true;
-            this.Mensaje.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.Mensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Mensaje.Location = new System.Drawing.Point(59, 41);
+            this.Mensaje.Location = new System.Drawing.Point(52, 40);
             this.Mensaje.Name = "Mensaje";
-            this.Mensaje.Size = new System.Drawing.Size(57, 17);
+            this.Mensaje.Size = new System.Drawing.Size(62, 16);
             this.Mensaje.TabIndex = 18;
             this.Mensaje.Text = "Ejercicio:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(69, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 19;
             this.label2.Text = "Desde:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(73, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 17);
+            this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 20;
             this.label3.Text = "Hasta:";
             // 
@@ -588,22 +588,22 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(44, 269);
+            this.label9.Location = new System.Drawing.Point(36, 268);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 17);
+            this.label9.Size = new System.Drawing.Size(77, 16);
             this.label9.TabIndex = 112;
             this.label9.Text = "Folio Inicial:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(63, 237);
+            this.label10.Location = new System.Drawing.Point(55, 236);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 17);
+            this.label10.Size = new System.Drawing.Size(58, 16);
             this.label10.TabIndex = 111;
             this.label10.Text = "Libro Nº:";
             // 

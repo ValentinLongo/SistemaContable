@@ -369,7 +369,7 @@
             this.CircleProgress.IsPercentage = true;
             this.CircleProgress.LineProgressThickness = 10;
             this.CircleProgress.LineThickness = 10;
-            this.CircleProgress.Location = new System.Drawing.Point(319, 9);
+            this.CircleProgress.Location = new System.Drawing.Point(319, 3);
             this.CircleProgress.Name = "CircleProgress";
             this.CircleProgress.ProgressAnimationSpeed = 200;
             this.CircleProgress.ProgressBackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -413,7 +413,6 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCarga";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla de Carga";
             this.panel1.ResumeLayout(false);

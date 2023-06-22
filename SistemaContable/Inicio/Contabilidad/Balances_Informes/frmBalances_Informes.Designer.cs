@@ -196,33 +196,33 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(14, 42);
+            this.label3.Location = new System.Drawing.Point(12, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 17);
+            this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 115;
             this.label3.Text = "Ejercicio:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(24, 78);
+            this.label1.Location = new System.Drawing.Point(22, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 120;
             this.label1.Text = "Desde:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(27, 111);
+            this.label2.Location = new System.Drawing.Point(25, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 17);
+            this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 121;
             this.label2.Text = "Hasta:";
             // 
@@ -239,9 +239,9 @@
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmar.Location = new System.Drawing.Point(434, 96);
+            this.btnConfirmar.Location = new System.Drawing.Point(434, 85);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(111, 31);
+            this.btnConfirmar.Size = new System.Drawing.Size(111, 49);
             this.btnConfirmar.TabIndex = 8;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;
@@ -283,22 +283,22 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lbl1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl1.Location = new System.Drawing.Point(62, 160);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(229, 17);
+            this.lbl1.Size = new System.Drawing.Size(245, 16);
             this.lbl1.TabIndex = 128;
             this.lbl1.Text = "Visualizar Informe Con Centro de Costos";
             // 
             // lbl2
             // 
             this.lbl2.AutoSize = true;
-            this.lbl2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lbl2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl2.Location = new System.Drawing.Point(62, 181);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(251, 17);
+            this.lbl2.Size = new System.Drawing.Size(272, 16);
             this.lbl2.TabIndex = 132;
             this.lbl2.Text = "Visualizar Informes Según Rubros Contables";
             // 
@@ -428,11 +428,11 @@
             // lblModelo
             // 
             this.lblModelo.AutoSize = true;
-            this.lblModelo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblModelo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblModelo.Location = new System.Drawing.Point(14, 140);
+            this.lblModelo.Location = new System.Drawing.Point(12, 140);
             this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(52, 17);
+            this.lblModelo.Size = new System.Drawing.Size(56, 16);
             this.lblModelo.TabIndex = 133;
             this.lblModelo.Text = "Modelo:";
             this.lblModelo.Visible = false;
@@ -554,11 +554,11 @@
             // lbl3
             // 
             this.lbl3.AutoSize = true;
-            this.lbl3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lbl3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl3.Location = new System.Drawing.Point(62, 166);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(231, 17);
+            this.lbl3.Size = new System.Drawing.Size(243, 16);
             this.lbl3.TabIndex = 140;
             this.lbl3.Text = "Imprimir el Informe Sin Centro de Costos";
             this.lbl3.Visible = false;
@@ -566,11 +566,11 @@
             // lbl4
             // 
             this.lbl4.AutoSize = true;
-            this.lbl4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lbl4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl4.Location = new System.Drawing.Point(62, 139);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(289, 17);
+            this.lbl4.Size = new System.Drawing.Size(315, 16);
             this.lbl4.TabIndex = 142;
             this.lbl4.Text = "Sumar al Saldo inicial el Saldo del Ejercicio Anterior";
             // 

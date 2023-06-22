@@ -182,6 +182,8 @@ namespace SistemaContable
             borde2.Size = new Size(borde2.Width, this.Height);
             borde3.Size = new Size(this.Width, borde3.Height);
             borde4.Size = new Size(borde4.Width, this.Height);
+
+            panel1.Size = new Size(panel1.Width, this.Height);
         }
 
         private void tsbMensajesInternos_MouseEnter(object sender, EventArgs e)

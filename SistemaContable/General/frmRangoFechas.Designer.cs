@@ -134,22 +134,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(20, 48);
+            this.label2.Location = new System.Drawing.Point(26, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 21);
+            this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 116;
             this.label2.Text = "Desde:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(23, 95);
+            this.label3.Location = new System.Drawing.Point(29, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 21);
+            this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 117;
             this.label3.Text = "Hasta:";
             // 
@@ -239,7 +239,7 @@
             this.btnConfirmar.BorderSize = 0;
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnConfirmar.Location = new System.Drawing.Point(27, 156);
             this.btnConfirmar.Name = "btnConfirmar";
@@ -311,11 +311,11 @@
             // 
             this.lblInformeDetallado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblInformeDetallado.AutoSize = true;
-            this.lblInformeDetallado.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformeDetallado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblInformeDetallado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblInformeDetallado.Location = new System.Drawing.Point(121, 126);
             this.lblInformeDetallado.Name = "lblInformeDetallado";
-            this.lblInformeDetallado.Size = new System.Drawing.Size(155, 17);
+            this.lblInformeDetallado.Size = new System.Drawing.Size(161, 16);
             this.lblInformeDetallado.TabIndex = 123;
             this.lblInformeDetallado.Text = "Imprimir informe detallado";
             this.lblInformeDetallado.Visible = false;

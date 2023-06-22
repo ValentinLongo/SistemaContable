@@ -80,14 +80,14 @@ namespace SistemaContable.Usuarios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAgregarUsuario frmAgregarUsuario = new frmAgregarUsuario();
+            frmAggModUsuario frmAgregarUsuario = new frmAggModUsuario(1);
             frmAgregarUsuario.ShowDialog();
             llenarDGV("");
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            frmModificarUsuario formModificarUsuario = new frmModificarUsuario();
+            frmAggModUsuario formModificarUsuario = new frmAggModUsuario(2);
             formModificarUsuario.ShowDialog();
             llenarDGV("");
         }

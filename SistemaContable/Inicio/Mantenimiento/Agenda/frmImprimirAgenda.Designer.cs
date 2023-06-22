@@ -55,11 +55,11 @@
             // lblAct
             // 
             this.lblAct.AutoSize = true;
-            this.lblAct.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblAct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAct.Location = new System.Drawing.Point(41, 42);
+            this.lblAct.Location = new System.Drawing.Point(40, 42);
             this.lblAct.Name = "lblAct";
-            this.lblAct.Size = new System.Drawing.Size(62, 17);
+            this.lblAct.Size = new System.Drawing.Size(66, 16);
             this.lblAct.TabIndex = 117;
             this.lblAct.Text = "Actividad:";
             // 
@@ -78,11 +78,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(41, 79);
+            this.label1.Location = new System.Drawing.Point(37, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 119;
             this.label1.Text = "Localidad:";
             // 

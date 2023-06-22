@@ -251,7 +251,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(566, 404);
+            this.label13.Location = new System.Drawing.Point(566, 401);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(38, 16);
             this.label13.TabIndex = 84;
@@ -275,7 +275,7 @@
             this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(545, 403);
+            this.CheckInicio.Location = new System.Drawing.Point(545, 400);
             this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckInicio.Name = "CheckInicio";
             this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));

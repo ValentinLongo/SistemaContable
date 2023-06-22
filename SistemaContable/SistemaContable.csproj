@@ -632,11 +632,11 @@
     <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAgregarCaja.Designer.cs">
       <DependentUpon>frmAgregarCaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAgregarUsuario.cs">
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAggModUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAgregarUsuario.Designer.cs">
-      <DependentUpon>frmAgregarUsuario.cs</DependentUpon>
+    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAggModUsuario.Designer.cs">
+      <DependentUpon>frmAggModUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmDefinirCajas.cs">
       <SubType>Form</SubType>
@@ -649,12 +649,6 @@
     </Compile>
     <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmModificarContra.Designer.cs">
       <DependentUpon>frmModificarContra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmModificarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmModificarUsuario.Designer.cs">
-      <DependentUpon>frmModificarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Mantenimiento\Usuarios\Definicion\frmSeleccionVendedores.cs">
       <SubType>Form</SubType>
@@ -857,17 +851,14 @@
     <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAgregarCaja.resx">
       <DependentUpon>frmAgregarCaja.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAgregarUsuario.resx">
-      <DependentUpon>frmAgregarUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmAggModUsuario.resx">
+      <DependentUpon>frmAggModUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmDefinirCajas.resx">
       <DependentUpon>frmDefinirCajas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmModificarContra.resx">
       <DependentUpon>frmModificarContra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmModificarUsuario.resx">
-      <DependentUpon>frmModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Usuarios\Definicion\frmSeleccionVendedores.resx">
       <DependentUpon>frmSeleccionVendedores.cs</DependentUpon>

@@ -47,6 +47,8 @@ namespace SistemaContable.Plan_de_Cuentas
             }
             else if (proceso == 2)
             {
+                lblControlBar.Text = "Modificar Cuenta";
+
                 ds = Negocio.FPlanDeCuentas.Rubros();
                 cbRubro.DataSource = ds.Tables[0];
                 cbRubro.DisplayMember = "ruc_descri";

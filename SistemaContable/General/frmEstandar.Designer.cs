@@ -142,11 +142,11 @@
             // Mensaje
             // 
             this.Mensaje.AutoSize = true;
-            this.Mensaje.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.Mensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Mensaje.Location = new System.Drawing.Point(21, 56);
             this.Mensaje.Name = "Mensaje";
-            this.Mensaje.Size = new System.Drawing.Size(103, 17);
+            this.Mensaje.Size = new System.Drawing.Size(111, 16);
             this.Mensaje.TabIndex = 17;
             this.Mensaje.Text = "MensajePrincipal";
             // 

@@ -57,7 +57,7 @@
             this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSeleccionar.Location = new System.Drawing.Point(645, 34);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(143, 41);
+            this.btnSeleccionar.Size = new System.Drawing.Size(143, 40);
             this.btnSeleccionar.TabIndex = 0;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.TextColor = System.Drawing.Color.White;
@@ -204,7 +204,7 @@
             this.lblCantElementos.AutoSize = true;
             this.lblCantElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCantElementos.Location = new System.Drawing.Point(10, 430);
+            this.lblCantElementos.Location = new System.Drawing.Point(10, 429);
             this.lblCantElementos.Name = "lblCantElementos";
             this.lblCantElementos.Size = new System.Drawing.Size(58, 15);
             this.lblCantElementos.TabIndex = 148;

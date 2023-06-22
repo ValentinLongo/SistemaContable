@@ -74,7 +74,7 @@ namespace SistemaContable.Inicio.Contabilidad.Renumeración_de_Asientos
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
-            try //Validación
+            try
             {
                 if (txtNroEjercicio.Text == "") //Validación
                 {
@@ -83,7 +83,7 @@ namespace SistemaContable.Inicio.Contabilidad.Renumeración_de_Asientos
                     return;
                 }
 
-                if (Negocio.FGenerales.EstadoEjercicio(Convert.ToInt32(txtNroEjercicio.Text), 1))
+                if (Negocio.FGenerales.EstadoEjercicio(Convert.ToInt32(txtNroEjercicio.Text), 1)) //Validación
                 {
                     frmMessageBox MessageBox2 = new frmMessageBox("Mensaje", "Atención: El Ejercicio Contable se encuentra cerrado.", false);
                     MessageBox2.ShowDialog();
@@ -91,6 +91,7 @@ namespace SistemaContable.Inicio.Contabilidad.Renumeración_de_Asientos
                 }
 
                 btnProcesar.Enabled = false;
+                ControlBox.Enabled = false;
 
                 AccesoBase.InsertUpdateDatos($"UPDATE Caja SET caj_estado = 1");
 

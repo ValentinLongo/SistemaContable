@@ -171,11 +171,11 @@
             // Mensaje
             // 
             this.Mensaje.AutoSize = true;
-            this.Mensaje.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.Mensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Mensaje.Location = new System.Drawing.Point(28, 76);
+            this.Mensaje.Location = new System.Drawing.Point(27, 76);
             this.Mensaje.Name = "Mensaje";
-            this.Mensaje.Size = new System.Drawing.Size(57, 17);
+            this.Mensaje.Size = new System.Drawing.Size(62, 16);
             this.Mensaje.TabIndex = 138;
             this.Mensaje.Text = "Ejercicio:";
             // 
@@ -205,11 +205,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(33, 43);
+            this.label2.Location = new System.Drawing.Point(32, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 17);
+            this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 142;
             this.label2.Text = "Modelo:";
             // 
@@ -224,7 +224,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(125, 249);
+            this.btnConfirmar.Location = new System.Drawing.Point(125, 250);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(142, 47);
             this.btnConfirmar.TabIndex = 8;
@@ -302,22 +302,22 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(41, 150);
+            this.label6.Location = new System.Drawing.Point(40, 150);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 17);
+            this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 158;
             this.label6.Text = "Hasta:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(37, 117);
+            this.label7.Location = new System.Drawing.Point(36, 117);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 17);
+            this.label7.Size = new System.Drawing.Size(51, 16);
             this.label7.TabIndex = 157;
             this.label7.Text = "Desde:";
             // 
@@ -388,7 +388,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(52, 212);
+            this.label10.Location = new System.Drawing.Point(52, 215);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(315, 16);
             this.label10.TabIndex = 180;
@@ -412,7 +412,7 @@
             this.ChSumSalEjAnt.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.ChSumSalEjAnt.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChSumSalEjAnt.CustomCheckmarkImage = null;
-            this.ChSumSalEjAnt.Location = new System.Drawing.Point(32, 211);
+            this.ChSumSalEjAnt.Location = new System.Drawing.Point(32, 214);
             this.ChSumSalEjAnt.MinimumSize = new System.Drawing.Size(17, 17);
             this.ChSumSalEjAnt.Name = "ChSumSalEjAnt";
             this.ChSumSalEjAnt.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));

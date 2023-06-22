@@ -41,10 +41,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.tbCodigo = new System.Windows.Forms.MaskedTextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblControlBar = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CheckAjuste = new Bunifu.UI.WinForms.BunifuCheckBox();
@@ -64,7 +63,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(110, 329);
+            this.btnAceptar.Location = new System.Drawing.Point(109, 274);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(161, 39);
             this.btnAceptar.TabIndex = 3;
@@ -76,7 +75,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(104, 175);
+            this.panel2.Location = new System.Drawing.Point(104, 135);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(252, 1);
             this.panel2.TabIndex = 71;
@@ -84,7 +83,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(104, 139);
+            this.panel1.Location = new System.Drawing.Point(104, 96);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 1);
             this.panel1.TabIndex = 70;
@@ -98,7 +97,7 @@
             this.cbEstado.Items.AddRange(new object[] {
             "ACTIVO",
             "INACTIVO"});
-            this.cbEstado.Location = new System.Drawing.Point(104, 228);
+            this.cbEstado.Location = new System.Drawing.Point(104, 194);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(252, 21);
             this.cbEstado.TabIndex = 68;
@@ -110,7 +109,7 @@
             this.cbRubro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbRubro.ForeColor = System.Drawing.Color.White;
             this.cbRubro.FormattingEnabled = true;
-            this.cbRubro.Location = new System.Drawing.Point(104, 196);
+            this.cbRubro.Location = new System.Drawing.Point(104, 159);
             this.cbRubro.Name = "cbRubro";
             this.cbRubro.Size = new System.Drawing.Size(252, 21);
             this.cbRubro.TabIndex = 67;
@@ -121,7 +120,7 @@
             this.tbDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbDescripcion.Location = new System.Drawing.Point(104, 163);
+            this.tbDescripcion.Location = new System.Drawing.Point(104, 123);
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(252, 13);
             this.tbDescripcion.TabIndex = 2;
@@ -132,7 +131,7 @@
             this.tbCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCuenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCuenta.Location = new System.Drawing.Point(104, 126);
+            this.tbCuenta.Location = new System.Drawing.Point(104, 83);
             this.tbCuenta.Name = "tbCuenta";
             this.tbCuenta.Size = new System.Drawing.Size(252, 13);
             this.tbCuenta.TabIndex = 1;
@@ -141,9 +140,9 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(45, 228);
+            this.label10.Location = new System.Drawing.Point(45, 194);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 16);
             this.label10.TabIndex = 61;
@@ -152,64 +151,53 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(49, 196);
+            this.label9.Location = new System.Drawing.Point(49, 159);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 16);
+            this.label9.Size = new System.Drawing.Size(47, 16);
             this.label9.TabIndex = 60;
             this.label9.Text = "Rubro:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(13, 160);
+            this.label6.Location = new System.Drawing.Point(14, 120);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 16);
+            this.label6.Size = new System.Drawing.Size(82, 16);
             this.label6.TabIndex = 57;
             this.label6.Text = "Descripcion:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(42, 124);
+            this.label5.Location = new System.Drawing.Point(43, 81);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 56;
             this.label5.Text = "Cuenta:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(42, 88);
+            this.label4.Location = new System.Drawing.Point(42, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
+            this.label4.Size = new System.Drawing.Size(54, 16);
             this.label4.TabIndex = 55;
             this.label4.Text = "Codigo:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(89, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 24);
-            this.label3.TabIndex = 54;
-            this.label3.Text = "AGREGAR CUENTA";
             // 
             // tbCodigo
             // 
             this.tbCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbCodigo.Location = new System.Drawing.Point(104, 91);
+            this.tbCodigo.Location = new System.Drawing.Point(104, 45);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(252, 13);
             this.tbCodigo.TabIndex = 0;
@@ -218,7 +206,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.panel7.Controls.Add(this.label1);
+            this.panel7.Controls.Add(this.lblControlBar);
             this.panel7.Controls.Add(this.bunifuFormControlBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
@@ -228,16 +216,16 @@
             this.panel7.Tag = "1";
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             // 
-            // label1
+            // lblControlBar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(3, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Agregar Cuenta";
+            this.lblControlBar.AutoSize = true;
+            this.lblControlBar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F);
+            this.lblControlBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblControlBar.Location = new System.Drawing.Point(3, 2);
+            this.lblControlBar.Name = "lblControlBar";
+            this.lblControlBar.Size = new System.Drawing.Size(95, 17);
+            this.lblControlBar.TabIndex = 31;
+            this.lblControlBar.Text = "Agregar Cuenta";
             // 
             // bunifuFormControlBox1
             // 
@@ -307,7 +295,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(166, 281);
+            this.label13.Location = new System.Drawing.Point(162, 239);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 16);
             this.label13.TabIndex = 103;
@@ -331,7 +319,7 @@
             this.CheckAjuste.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.CheckAjuste.Cursor = System.Windows.Forms.Cursors.Default;
             this.CheckAjuste.CustomCheckmarkImage = null;
-            this.CheckAjuste.Location = new System.Drawing.Point(146, 280);
+            this.CheckAjuste.Location = new System.Drawing.Point(142, 238);
             this.CheckAjuste.MinimumSize = new System.Drawing.Size(17, 17);
             this.CheckAjuste.Name = "CheckAjuste";
             this.CheckAjuste.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
@@ -367,12 +355,12 @@
             this.CheckAjuste.ThreeState = false;
             this.CheckAjuste.ToolTipText = null;
             // 
-            // frmAgregarCuenta
+            // frmAggModCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(379, 393);
+            this.ClientSize = new System.Drawing.Size(379, 332);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.CheckAjuste);
             this.Controls.Add(this.panel7);
@@ -389,9 +377,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmAgregarCuenta";
+            this.Name = "frmAggModCuenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Cuenta";
             this.panel7.ResumeLayout(false);
@@ -415,12 +402,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox tbCodigo;
         private System.Windows.Forms.Panel panel7;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckAjuste;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblControlBar;
     }
 }
