@@ -190,7 +190,7 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
 
 
                     frmReporte reporte = new frmReporte("LibroMayorCC", query, "", "Libro Mayor - Por Grupo", $"{maskDesde.Text}", $"{maskHasta.Text}", pcuDescri, $"{Debe}", $"{Haber}", $"{tbDescriEjercicio.Text}");
-                    reporte.Show();
+                    reporte.ShowDialog();
 
 
                 }
