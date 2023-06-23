@@ -180,6 +180,14 @@ namespace SistemaContable.Inicio.Mantenimiento.Parametros_Contables
 
                     }
                 }
+                //if(Ctrl is BunifuCheckBox)
+                //{
+                //    BunifuCheckBox che = (BunifuCheckBox)Ctrl;
+                //    if (che.Checked)
+                //    {
+                //        string nombre = Ctrl.Name;
+                //    }
+                //}
             }
             frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
             MessageBox.ShowDialog();
