@@ -185,6 +185,11 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             {
                 DataSet ds = new DataSet();
                 ds = AccesoBase.ListarDatos($"SELECT pcu_hija, pcu_descri FROM PCuenta WHERE pcu_cuenta = {txtCuenta.Text}");
+                if (ds.Tables[0].Rows.Count == 0)
+                {
+                    txtDescri.Text = "";
+                    return;
+                }
 
                 if (Convert.ToInt32(ds.Tables[0].Rows[0]["pcu_hija"]) != 0)
                 {

@@ -192,6 +192,8 @@ namespace SistemaContable.General
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+                        Application.DoEvents();
+
                         ProgressBar.Value = i;
 
                         lblConteo.Text = "Comprobante de Venta " + i + " de " + ds.Tables[0].Rows.Count;
@@ -245,6 +247,8 @@ namespace SistemaContable.General
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+                        Application.DoEvents();
+
                         ProgressBar.Value = i;
 
                         lblConteo.Text = "Comprobante de Compra " + i + " de " + ds.Tables[0].Rows.Count;
@@ -2034,7 +2038,7 @@ namespace SistemaContable.General
                         cc = dr6["coc_cccta"] is DBNull ? 0 : Convert.ToInt32(dr6["coc_cccta"]);
                         if ((ds.Tables[0].Rows[0]["vta_moneda2"] is DBNull ? 1 : Convert.ToDouble(ds.Tables[0].Rows[0]["vta_moneda2"])) == 1)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds6.Tables[0].Rows[0]["pcu_cuenta"]), 2, (ds6.Tables[0].Rows[0]["pago"] is DBNull ? 0 : Convert.ToDouble(ds6.Tables[0].Rows[0]["cta_total"])).ToString(), "", n, cc);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds6.Tables[0].Rows[0]["pcu_cuenta"]), 2, (ds6.Tables[0].Rows[0]["pago"] is DBNull ? 0 : Convert.ToDouble(ds6.Tables[0].Rows[0]["pago"])).ToString(), "", n, cc);
                             Anticipo = ds6.Tables[0].Rows[0]["cta_total"] is DBNull ? 0 : Convert.ToDouble(ds6.Tables[0].Rows[0]["cta_total"]);
                         }
                         else

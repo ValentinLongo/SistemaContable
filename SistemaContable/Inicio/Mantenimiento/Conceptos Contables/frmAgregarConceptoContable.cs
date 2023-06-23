@@ -24,6 +24,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         {
             InitializeComponent();
 
+            checkVentas.Checked = true;
+
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
@@ -82,7 +84,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
                 {
                     checkBancos.Checked = true;
                 }
-                
+
             }
         }
 
@@ -205,6 +207,46 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void checkVentas_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if (checkVentas.Checked)
+            {
+                checkCompras.Checked = false;
+                checkTesoreria.Checked = false;
+                checkBancos.Checked = false;
+            }
+        }
+
+        private void checkCompras_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if (checkCompras.Checked)
+            {
+                checkVentas.Checked = false;
+                checkTesoreria.Checked = false;
+                checkBancos.Checked = false;
+            }
+        }
+
+        private void checkTesoreria_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if (checkTesoreria.Checked)
+            {
+                checkVentas.Checked = false;
+                checkCompras.Checked = false;
+                checkBancos.Checked = false;
+            }
+        }
+
+        private void checkBancos_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if (checkBancos.Checked)
+            {
+                checkVentas.Checked = false;
+                checkCompras.Checked = false;
+                checkTesoreria.Checked = false;
+            }
         }
     }
 }

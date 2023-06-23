@@ -114,6 +114,8 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            flag = true;
+
             while (flag)
             {
                 frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos(0, "", "", "", "", "", "");
@@ -128,6 +130,11 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (dgvDetDeMod2.Rows.Count == 0)
+            {
+                return;
+            }
+
             frmAddModDetdeModelos frmAddModDetdeModelos = new frmAddModDetdeModelos(1, cuenta, descri, debe, haber, concepto, centrodecosto);
 
             frmAddModDetdeModelos.DGV1 = dgvDetDeMod1;

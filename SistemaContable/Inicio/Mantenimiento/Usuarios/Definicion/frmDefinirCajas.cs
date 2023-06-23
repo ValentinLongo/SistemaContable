@@ -14,9 +14,14 @@ namespace SistemaContable.Usuarios
 {
     public partial class frmDefinirCajas : Form
     {
-        public frmDefinirCajas()
+
+        private int CodUsu;
+
+        public frmDefinirCajas(int CodigoUsuario)
         {
             InitializeComponent();
+
+            CodUsu = CodigoUsuario;
 
             //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
             //Negocio.FFormatoSistema.SetearFormato(this);
@@ -27,7 +32,7 @@ namespace SistemaContable.Usuarios
         private void CargarDGV()
         {
             DataSet data = new DataSet();
-            data = Datos.AccesoBase.ListarDatos($"select caj_codigo as Caja, caj_descri as Descripcion, Moneda.mon_descri as Moneda, CajaxUsuario.cxu_predef as Predef from CajaxUsuario INNER JOIN Caja on CajaxUsuario.cxu_caja = Caja.caj_codigo INNER JOIN Usuario on CajaxUsuario.cxu_usuario = Usuario.usu_codigo INNER JOIN Moneda on Caja.caj_moneda = Moneda.mon_codigo WHERE CajaxUsuario.cxu_usuario = {Negocio.FLogin.IdUsuario} Order by caj_codigo");
+            data = Datos.AccesoBase.ListarDatos($"select caj_codigo as Caja, caj_descri as Descripcion, Moneda.mon_descri as Moneda, CajaxUsuario.cxu_predef as Predef from CajaxUsuario INNER JOIN Caja on CajaxUsuario.cxu_caja = Caja.caj_codigo INNER JOIN Usuario on CajaxUsuario.cxu_usuario = Usuario.usu_codigo INNER JOIN Moneda on Caja.caj_moneda = Moneda.mon_codigo WHERE CajaxUsuario.cxu_usuario = {CodUsu} Order by caj_codigo");
             foreach(DataRow dr in data.Tables[0].Rows)
             { 
                 string caja = dr[0].ToString();

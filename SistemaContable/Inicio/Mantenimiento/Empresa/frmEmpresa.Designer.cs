@@ -42,12 +42,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnImprimirSucursal = new System.Windows.Forms.Button();
             this.dgvSucursales = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCantElementos = new System.Windows.Forms.Label();
             this.dgvEmpresa = new System.Windows.Forms.DataGridView();
+            this.btnImprimirEmpresa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSucursales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
@@ -195,20 +196,20 @@
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(68, 21);
             this.bunifuFormControlBox1.TabIndex = 29;
             // 
-            // btnImprimir
+            // btnImprimirSucursal
             // 
-            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.btnImprimir.FlatAppearance.BorderSize = 0;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Font = new System.Drawing.Font("Dotum", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnImprimir.Location = new System.Drawing.Point(680, 498);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(124, 30);
-            this.btnImprimir.TabIndex = 46;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = false;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            this.btnImprimirSucursal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnImprimirSucursal.FlatAppearance.BorderSize = 0;
+            this.btnImprimirSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimirSucursal.Font = new System.Drawing.Font("Dotum", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimirSucursal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnImprimirSucursal.Location = new System.Drawing.Point(680, 498);
+            this.btnImprimirSucursal.Name = "btnImprimirSucursal";
+            this.btnImprimirSucursal.Size = new System.Drawing.Size(124, 30);
+            this.btnImprimirSucursal.TabIndex = 46;
+            this.btnImprimirSucursal.Text = "Imprimir";
+            this.btnImprimirSucursal.UseVisualStyleBackColor = false;
+            this.btnImprimirSucursal.Click += new System.EventHandler(this.btnImprimirSucursal_Click);
             // 
             // dgvSucursales
             // 
@@ -327,9 +328,24 @@
             this.dgvEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEmpresa.RowHeadersVisible = false;
             this.dgvEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpresa.Size = new System.Drawing.Size(789, 115);
+            this.dgvEmpresa.Size = new System.Drawing.Size(656, 115);
             this.dgvEmpresa.TabIndex = 149;
             this.dgvEmpresa.TabStop = false;
+            // 
+            // btnImprimirEmpresa
+            // 
+            this.btnImprimirEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnImprimirEmpresa.FlatAppearance.BorderSize = 0;
+            this.btnImprimirEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimirEmpresa.Font = new System.Drawing.Font("Dotum", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimirEmpresa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnImprimirEmpresa.Location = new System.Drawing.Point(680, 77);
+            this.btnImprimirEmpresa.Name = "btnImprimirEmpresa";
+            this.btnImprimirEmpresa.Size = new System.Drawing.Size(124, 30);
+            this.btnImprimirEmpresa.TabIndex = 150;
+            this.btnImprimirEmpresa.Text = "Imprimir";
+            this.btnImprimirEmpresa.UseVisualStyleBackColor = false;
+            this.btnImprimirEmpresa.Click += new System.EventHandler(this.btnImprimirEmpresa_Click);
             // 
             // frmEmpresa
             // 
@@ -337,10 +353,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(813, 552);
+            this.Controls.Add(this.btnImprimirEmpresa);
             this.Controls.Add(this.dgvEmpresa);
             this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvSucursales);
-            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnImprimirSucursal);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEliminar);
@@ -367,11 +384,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
-        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnImprimirSucursal;
         private System.Windows.Forms.DataGridView dgvSucursales;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Label lblCantElementos;
         private System.Windows.Forms.DataGridView dgvEmpresa;
+        private System.Windows.Forms.Button btnImprimirEmpresa;
     }
 }

@@ -106,6 +106,13 @@ namespace SistemaContable.General
             }
         }
 
+        private void btnCerrar_CloseClicked(object sender, EventArgs e)
+        {
+            Desde = Convert.ToDateTime("26/12/2003");
+            Hasta = Convert.ToDateTime("31/12/9999");
+            this.Close();
+        }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

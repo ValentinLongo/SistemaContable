@@ -94,7 +94,9 @@ namespace SistemaContable.Usuarios
 
         private void btnDefinirCajas_Click(object sender, EventArgs e)
         {
-            frmDefinirCajas definirCajas = new frmDefinirCajas();
+            int CodUsu = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value);
+
+            frmDefinirCajas definirCajas = new frmDefinirCajas(CodUsu);
             definirCajas.Show();
         }
 

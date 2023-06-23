@@ -366,7 +366,7 @@
             // pbOcultar
             // 
             this.pbOcultar.Image = global::SistemaContable.Properties.Resources.ocultar;
-            this.pbOcultar.Location = new System.Drawing.Point(295, 177);
+            this.pbOcultar.Location = new System.Drawing.Point(293, 177);
             this.pbOcultar.Name = "pbOcultar";
             this.pbOcultar.Size = new System.Drawing.Size(27, 30);
             this.pbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -388,7 +388,7 @@
             // pbVisibilidad
             // 
             this.pbVisibilidad.Image = global::SistemaContable.Properties.Resources.visible;
-            this.pbVisibilidad.Location = new System.Drawing.Point(296, 177);
+            this.pbVisibilidad.Location = new System.Drawing.Point(294, 177);
             this.pbVisibilidad.Name = "pbVisibilidad";
             this.pbVisibilidad.Size = new System.Drawing.Size(27, 30);
             this.pbVisibilidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

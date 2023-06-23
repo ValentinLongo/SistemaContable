@@ -1,6 +1,7 @@
 ﻿using CrystalDecisions.ReportAppServer;
 using Datos;
 using Negocio;
+using OpenQA.Selenium.Internal;
 using SistemaContable.General;
 using SistemaContable.Plan_de_Cuentas;
 using System;
@@ -248,52 +249,60 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
-            int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
-            if (seleccionado != -1)
+            if (cbSeleccion.SelectedIndex > -1)
             {
-                int validado = 0;
-                int asiento = Convert.ToInt32(dgvAsientosContables.Rows[seleccionado].Cells[0].Value);
+                int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
+                if (seleccionado != -1)
+                {
+                    int validado = 0;
+                    int asiento = Convert.ToInt32(dgvAsientosContables.Rows[seleccionado].Cells[0].Value);
 
-                int resultado = AccesoBase.ValidarDatos($"SELECT ast_cbte FROM Asiento WHERE ast_asiento = {asiento}");
-                if (resultado == 1)
-                {
-                    validado++;
-                }
-                else
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El asiento ha sido generado en forma automatica por el sistema. No podra ser anulado.", false);
-                    MessageBox.ShowDialog();
-                    return;
-                }
-
-                int ID = FLogin.IdUsuario;
-                int activo = 0;
-
-                DataSet ds = new DataSet();
-                ds = AccesoBase.ListarDatos($"SELECT pxu_activo FROM PermisosxUsu WHERE pxu_usuario = {ID} AND pxu_codigo = 3 AND pxu_sistema = 'CO'");
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    activo = Convert.ToInt32(dr["pxu_activo"]);
-                }
-                if (activo == 1)
-                {
-                    validado++;
-                }
-                else
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: No tiene permisos para anular el asiento", false);
-                    MessageBox.ShowDialog();
-                    return;
-                }
-                if (validado == 2)
-                {
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Seguro que desea Anular el Asiento Contable?", true);
-                    MessageBox.ShowDialog();
-                    if (frmMessageBox.Acepto)
+                    int resultado = AccesoBase.ValidarDatos($"SELECT ast_cbte FROM Asiento WHERE ast_asiento = {asiento}");
+                    if (resultado == 1)
                     {
-                        AccesoBase.InsertUpdateDatos($"DELETE Asiento WHERE ast_asiento = {asiento}");
+                        validado++;
+                    }
+                    else
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El asiento ha sido generado en forma automatica por el sistema. No podra ser anulado.", false);
+                        MessageBox.ShowDialog();
+                        return;
+                    }
+
+                    int ID = FLogin.IdUsuario;
+                    int activo = 0;
+
+                    DataSet ds = new DataSet();
+                    ds = AccesoBase.ListarDatos($"SELECT pxu_activo FROM PermisosxUsu WHERE pxu_usuario = {ID} AND pxu_codigo = 3 AND pxu_sistema = 'CO'");
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        activo = Convert.ToInt32(dr["pxu_activo"]);
+                    }
+                    if (activo == 1)
+                    {
+                        validado++;
+                    }
+                    else
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: No tiene permisos para anular el asiento", false);
+                        MessageBox.ShowDialog();
+                        return;
+                    }
+                    if (validado == 2)
+                    {
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Seguro que desea Anular el Asiento Contable?", true);
+                        MessageBox.ShowDialog();
+                        if (frmMessageBox.Acepto)
+                        {
+                            AccesoBase.InsertUpdateDatos($"DELETE Asiento WHERE ast_asiento = {asiento}");
+                        }
                     }
                 }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe seleccionar un Ejercicio!", false);
+                MessageBox.ShowDialog();
             }
         }
 
@@ -310,6 +319,11 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
             frmRangoFechas frm = new frmRangoFechas(3, Convert.ToDateTime(fechas[0]), DateTime.Now);
             frm.ShowDialog();
+
+            if (frmRangoFechas.Desde == Convert.ToDateTime("26/12/2003") && frmRangoFechas.Hasta == Convert.ToDateTime("31/12/9999"))
+            {
+                return;
+            }
 
             string query = $"Select X.ast_asiento, X.ast_renumera, X.ast_fecha, X.ast_ctapro, X.ast_comenta, X.ast_tipocbte, X.ast_cbte, X.ast_ejercicio, X.eje_descri, X.ast_user, X.usu_nombre, X.UsuModi as UsuModi, X.ast_hora, X.ast_fecalta, X.ast_fecmodi, X.ast_horamodi, X.ast_tipo, X.tas_descri, Sum(X.Debe) as mva_debe, Sum(X.Haber) as mva_haber From (Select *, Z.UsuModi1 as UsuModi, Case When mva_codigo = 1 Then mva_importe Else 0 End as Debe, Case When mva_codigo = 2 Then mva_importe Else 0 End as Haber From MovAsto Left Join Asiento on mva_asiento = ast_asiento Left Join PCuenta on mva_cuenta = pcu_cuenta Left Join Usuario on ast_user = Usuario.usu_codigo Left Join Ejercicio on ast_ejercicio = eje_codigo Left Join TipAsto on ast_tipo = tas_codigo Left Join (Select usu_codigo as UsuCod, usu_nombre as UsuModi1 From Usuario) as Z on ast_usumodi = Z.UsuCod ) as X " +
             $"WHERE ast_ejercicio = {NroEjercicio} AND (ast_fecha >= '{frmRangoFechas.Desde}') AND (ast_fecha <= '{frmRangoFechas.Hasta}') Group By X.ast_asiento, X.ast_renumera, X.ast_fecha, X.ast_ctapro, X.ast_comenta, X.ast_tipocbte, X.ast_cbte, X.ast_ejercicio, X.eje_descri, X.ast_user, X.usu_nombre, X.ast_hora, X.ast_fecalta, X.UsuModi, X.ast_fecmodi, X.ast_horamodi, X.ast_tipo, X.tas_descri Order By X.ast_tipo, X.ast_fecha, X.ast_asiento, X.ast_renumera";

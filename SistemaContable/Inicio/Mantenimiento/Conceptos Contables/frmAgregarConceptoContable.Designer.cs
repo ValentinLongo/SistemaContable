@@ -356,6 +356,7 @@
             this.checkVentas.TabStop = false;
             this.checkVentas.ThreeState = false;
             this.checkVentas.ToolTipText = null;
+            this.checkVentas.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkVentas_CheckedChanged);
             // 
             // checkCompras
             // 
@@ -410,6 +411,7 @@
             this.checkCompras.TabStop = false;
             this.checkCompras.ThreeState = false;
             this.checkCompras.ToolTipText = null;
+            this.checkCompras.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkCompras_CheckedChanged);
             // 
             // checkTesoreria
             // 
@@ -464,6 +466,7 @@
             this.checkTesoreria.TabStop = false;
             this.checkTesoreria.ThreeState = false;
             this.checkTesoreria.ToolTipText = null;
+            this.checkTesoreria.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkTesoreria_CheckedChanged);
             // 
             // checkBancos
             // 
@@ -518,6 +521,7 @@
             this.checkBancos.TabStop = false;
             this.checkBancos.ThreeState = false;
             this.checkBancos.ToolTipText = null;
+            this.checkBancos.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkBancos_CheckedChanged);
             // 
             // label7
             // 

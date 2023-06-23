@@ -137,7 +137,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 btnModelo.Enabled = false;
 
                 //dgv
-                dgvAddModVisASIENTO.Enabled = false;
+                dgvAddModVisASIENTO.ReadOnly = true;
             }
 
             if (addmodvis == 2 || addmodvis == 3)
@@ -248,6 +248,11 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         }
         private void dgvAddModVisASIENTO_DoubleClick_1(object sender, EventArgs e)
         {
+            if (add_mod_vis == 3)
+            {
+                return;
+            }
+
             flag = true;
 
             try

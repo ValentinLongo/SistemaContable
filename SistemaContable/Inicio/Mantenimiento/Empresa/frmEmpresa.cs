@@ -90,7 +90,7 @@ namespace SistemaContable.Empresa
             }
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
+        private void btnImprimirSucursal_Click(object sender, EventArgs e)
         {
             if (dgvSucursales.Rows.Count == 0)
             {
@@ -101,12 +101,22 @@ namespace SistemaContable.Empresa
             reporte.ShowDialog();
         }
 
+        private void btnImprimirEmpresa_Click(object sender, EventArgs e)
+        {
+            if (dgvEmpresa.Rows.Count == 0)
+            {
+                return;
+            }
+
+            frmReporte reporte = new frmReporte("Empresa", FEmpresa.queryEmpresa, "", "Empresa", FLogin.NombreEmpresa, null, null);
+            reporte.ShowDialog();
+        }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

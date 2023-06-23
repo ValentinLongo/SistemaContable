@@ -130,6 +130,7 @@
             this.btnCerrar.Size = new System.Drawing.Size(68, 21);
             this.btnCerrar.TabIndex = 29;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.CloseClicked += new System.EventHandler(this.btnCerrar_CloseClicked);
             // 
             // label2
             // 

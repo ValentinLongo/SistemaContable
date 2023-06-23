@@ -41,6 +41,8 @@ namespace SistemaContable.Plan_de_Cuentas
                 cbRubro.DisplayMember = "ruc_descri";
                 cbRubro.ValueMember = "ruc_codigo";
 
+                cbEstado.SelectedIndex = 0;
+
                 tbCodigo.Mask = "00.00.00.00.00.00";
 
                 tbCuenta.Text = Convert.ToString(Negocio.FPlanDeCuentas.UltimoNumeroCuenta());
