@@ -62,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(446, 21);
+            this.panel1.Size = new System.Drawing.Size(358, 21);
             this.panel1.TabIndex = 48;
             this.panel1.Tag = "1";
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -107,7 +107,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(378, 0);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(290, 0);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = false;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -152,7 +152,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(147, 246);
+            this.btnConfirmar.Location = new System.Drawing.Point(101, 246);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(156, 35);
             this.btnConfirmar.TabIndex = 4;
@@ -165,73 +165,73 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(61, 35);
+            this.label2.Location = new System.Drawing.Point(60, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 17);
+            this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 58;
             this.label2.Text = "Codigo:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(36, 67);
+            this.label1.Location = new System.Drawing.Point(33, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.Size = new System.Drawing.Size(82, 16);
             this.label1.TabIndex = 59;
             this.label1.Text = "Descripción:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(71, 104);
+            this.label3.Location = new System.Drawing.Point(64, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.Size = new System.Drawing.Size(51, 16);
             this.label3.TabIndex = 60;
             this.label3.Text = "Desde:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(75, 138);
+            this.label4.Location = new System.Drawing.Point(69, 136);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 17);
+            this.label4.Size = new System.Drawing.Size(46, 16);
             this.label4.TabIndex = 61;
             this.label4.Text = "Hasta:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(17, 171);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 17);
+            this.label6.Size = new System.Drawing.Size(98, 16);
             this.label6.TabIndex = 62;
             this.label6.Text = "Renumeración:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(64, 205);
+            this.label7.Location = new System.Drawing.Point(60, 205);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 17);
+            this.label7.Size = new System.Drawing.Size(55, 16);
             this.label7.TabIndex = 63;
             this.label7.Text = "Asiento:";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(129, 50);
+            this.panel3.Location = new System.Drawing.Point(120, 50);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(61, 1);
             this.panel3.TabIndex = 66;
@@ -242,7 +242,7 @@
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtCodigo.Location = new System.Drawing.Point(129, 32);
+            this.txtCodigo.Location = new System.Drawing.Point(120, 32);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(61, 19);
             this.txtCodigo.TabIndex = 0;
@@ -251,7 +251,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(129, 82);
+            this.panel2.Location = new System.Drawing.Point(120, 82);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(208, 1);
             this.panel2.TabIndex = 68;
@@ -262,7 +262,7 @@
             this.txtDescri.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescri.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescri.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtDescri.Location = new System.Drawing.Point(129, 64);
+            this.txtDescri.Location = new System.Drawing.Point(120, 64);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(208, 19);
             this.txtDescri.TabIndex = 1;
@@ -271,7 +271,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(129, 186);
+            this.panel4.Location = new System.Drawing.Point(120, 186);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(129, 1);
             this.panel4.TabIndex = 70;
@@ -282,7 +282,7 @@
             this.txtRenumeracion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRenumeracion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRenumeracion.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtRenumeracion.Location = new System.Drawing.Point(129, 168);
+            this.txtRenumeracion.Location = new System.Drawing.Point(120, 168);
             this.txtRenumeracion.Name = "txtRenumeracion";
             this.txtRenumeracion.Size = new System.Drawing.Size(129, 19);
             this.txtRenumeracion.TabIndex = 2;
@@ -291,7 +291,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(129, 220);
+            this.panel5.Location = new System.Drawing.Point(120, 220);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(129, 1);
             this.panel5.TabIndex = 72;
@@ -302,7 +302,7 @@
             this.txtAsiento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAsiento.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAsiento.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtAsiento.Location = new System.Drawing.Point(129, 202);
+            this.txtAsiento.Location = new System.Drawing.Point(120, 202);
             this.txtAsiento.Name = "txtAsiento";
             this.txtAsiento.Size = new System.Drawing.Size(129, 19);
             this.txtAsiento.TabIndex = 3;
@@ -310,7 +310,7 @@
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(198, 136);
+            this.dtpHasta.Location = new System.Drawing.Point(189, 135);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(17, 20);
             this.dtpHasta.TabIndex = 179;
@@ -319,7 +319,7 @@
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(198, 103);
+            this.dtpDesde.Location = new System.Drawing.Point(189, 103);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(17, 20);
             this.dtpDesde.TabIndex = 178;
@@ -332,7 +332,7 @@
             this.maskHasta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskHasta.ForeColor = System.Drawing.Color.White;
-            this.maskHasta.Location = new System.Drawing.Point(128, 139);
+            this.maskHasta.Location = new System.Drawing.Point(119, 139);
             this.maskHasta.Name = "maskHasta";
             this.maskHasta.Size = new System.Drawing.Size(63, 15);
             this.maskHasta.TabIndex = 177;
@@ -344,7 +344,7 @@
             this.maskDesde.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskDesde.ForeColor = System.Drawing.Color.White;
-            this.maskDesde.Location = new System.Drawing.Point(129, 106);
+            this.maskDesde.Location = new System.Drawing.Point(120, 106);
             this.maskDesde.Name = "maskDesde";
             this.maskDesde.Size = new System.Drawing.Size(63, 15);
             this.maskDesde.TabIndex = 176;
@@ -355,7 +355,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(446, 301);
+            this.ClientSize = new System.Drawing.Size(358, 301);
             this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.dtpDesde);
             this.Controls.Add(this.maskHasta);

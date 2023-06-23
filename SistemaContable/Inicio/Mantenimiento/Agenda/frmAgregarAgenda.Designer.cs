@@ -76,99 +76,99 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCodigo.Location = new System.Drawing.Point(106, 33);
+            this.lblCodigo.Location = new System.Drawing.Point(102, 33);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(50, 17);
+            this.lblCodigo.Size = new System.Drawing.Size(54, 16);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNombre.Location = new System.Drawing.Point(101, 72);
+            this.lblNombre.Location = new System.Drawing.Point(97, 72);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(55, 17);
+            this.lblNombre.Size = new System.Drawing.Size(59, 16);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblDireccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDireccion.Location = new System.Drawing.Point(95, 112);
+            this.lblDireccion.Location = new System.Drawing.Point(91, 112);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(63, 17);
+            this.lblDireccion.Size = new System.Drawing.Size(67, 16);
             this.lblDireccion.TabIndex = 2;
             this.lblDireccion.Text = "Dirección:";
             // 
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblLocalidad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblLocalidad.Location = new System.Drawing.Point(93, 154);
+            this.lblLocalidad.Location = new System.Drawing.Point(89, 154);
             this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(64, 17);
+            this.lblLocalidad.Size = new System.Drawing.Size(70, 16);
             this.lblLocalidad.TabIndex = 3;
             this.lblLocalidad.Text = "Localidad:";
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblTelefono.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTelefono.Location = new System.Drawing.Point(95, 188);
+            this.lblTelefono.Location = new System.Drawing.Point(91, 188);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(59, 17);
+            this.lblTelefono.Size = new System.Drawing.Size(64, 16);
             this.lblTelefono.TabIndex = 4;
             this.lblTelefono.Text = "Teléfono:";
             // 
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
-            this.lblCelular.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblCelular.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCelular.Location = new System.Drawing.Point(104, 229);
+            this.lblCelular.Location = new System.Drawing.Point(100, 229);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(50, 17);
+            this.lblCelular.Size = new System.Drawing.Size(52, 16);
             this.lblCelular.TabIndex = 5;
             this.lblCelular.Text = "Celular:";
             // 
             // lblMail
             // 
             this.lblMail.AutoSize = true;
-            this.lblMail.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblMail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMail.Location = new System.Drawing.Point(110, 269);
+            this.lblMail.Location = new System.Drawing.Point(106, 269);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(44, 17);
+            this.lblMail.Size = new System.Drawing.Size(48, 16);
             this.lblMail.TabIndex = 6;
             this.lblMail.Text = "E-Mail:";
             // 
             // lblWeb
             // 
             this.lblWeb.AutoSize = true;
-            this.lblWeb.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblWeb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblWeb.Location = new System.Drawing.Point(117, 307);
             this.lblWeb.Name = "lblWeb";
-            this.lblWeb.Size = new System.Drawing.Size(36, 17);
+            this.lblWeb.Size = new System.Drawing.Size(39, 16);
             this.lblWeb.TabIndex = 7;
             this.lblWeb.Text = "Web:";
             // 
             // lblObservaciones
             // 
             this.lblObservaciones.AutoSize = true;
-            this.lblObservaciones.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblObservaciones.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblObservaciones.Location = new System.Drawing.Point(62, 346);
+            this.lblObservaciones.Location = new System.Drawing.Point(58, 346);
             this.lblObservaciones.Name = "lblObservaciones";
-            this.lblObservaciones.Size = new System.Drawing.Size(92, 17);
+            this.lblObservaciones.Size = new System.Drawing.Size(102, 16);
             this.lblObservaciones.TabIndex = 8;
             this.lblObservaciones.Text = "Observaciones:";
             // 
@@ -211,22 +211,22 @@
             // lblAct
             // 
             this.lblAct.AutoSize = true;
-            this.lblAct.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblAct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAct.Location = new System.Drawing.Point(105, 441);
+            this.lblAct.Location = new System.Drawing.Point(101, 441);
             this.lblAct.Name = "lblAct";
-            this.lblAct.Size = new System.Drawing.Size(62, 17);
+            this.lblAct.Size = new System.Drawing.Size(66, 16);
             this.lblAct.TabIndex = 22;
             this.lblAct.Text = "Actividad:";
             // 
             // lblFecNac
             // 
             this.lblFecNac.AutoSize = true;
-            this.lblFecNac.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblFecNac.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblFecNac.Location = new System.Drawing.Point(56, 397);
+            this.lblFecNac.Location = new System.Drawing.Point(48, 397);
             this.lblFecNac.Name = "lblFecNac";
-            this.lblFecNac.Size = new System.Drawing.Size(111, 17);
+            this.lblFecNac.Size = new System.Drawing.Size(119, 16);
             this.lblFecNac.TabIndex = 21;
             this.lblFecNac.Text = "Fecha Nacimiento:";
             // 
@@ -243,7 +243,7 @@
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmar.Location = new System.Drawing.Point(161, 487);
+            this.btnConfirmar.Location = new System.Drawing.Point(162, 487);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(153, 44);
             this.btnConfirmar.TabIndex = 12;

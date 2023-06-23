@@ -123,11 +123,12 @@
             // 
             // lblMSG2
             // 
+            this.lblMSG2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMSG2.AutoSize = true;
             this.lblMSG2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.lblMSG2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMSG2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMSG2.Location = new System.Drawing.Point(21, 54);
+            this.lblMSG2.Location = new System.Drawing.Point(24, 54);
             this.lblMSG2.Name = "lblMSG2";
             this.lblMSG2.Size = new System.Drawing.Size(67, 16);
             this.lblMSG2.TabIndex = 52;
@@ -138,7 +139,7 @@
             this.txtMsgLargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.txtMsgLargo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMsgLargo.ForeColor = System.Drawing.Color.White;
-            this.txtMsgLargo.Location = new System.Drawing.Point(24, 38);
+            this.txtMsgLargo.Location = new System.Drawing.Point(27, 42);
             this.txtMsgLargo.Multiline = true;
             this.txtMsgLargo.Name = "txtMsgLargo";
             this.txtMsgLargo.ReadOnly = true;

@@ -205,44 +205,44 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(72, 67);
+            this.label2.Location = new System.Drawing.Point(71, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 17);
+            this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 148;
             this.label2.Text = "Hasta:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(69, 34);
+            this.label1.Location = new System.Drawing.Point(68, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 147;
             this.label1.Text = "Desde:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(12, 98);
+            this.label3.Location = new System.Drawing.Point(11, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 17);
+            this.label3.Size = new System.Drawing.Size(109, 16);
             this.label3.TabIndex = 151;
             this.label3.Text = "Cuenta Contable:";
             // 
             // lblConteo
             // 
             this.lblConteo.AutoSize = true;
-            this.lblConteo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConteo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblConteo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblConteo.Location = new System.Drawing.Point(130, 379);
+            this.lblConteo.Location = new System.Drawing.Point(123, 379);
             this.lblConteo.Name = "lblConteo";
-            this.lblConteo.Size = new System.Drawing.Size(150, 17);
+            this.lblConteo.Size = new System.Drawing.Size(161, 16);
             this.lblConteo.TabIndex = 153;
             this.lblConteo.Text = "Conteo de Comprobantes";
             // 
@@ -816,110 +816,110 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(119, 162);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 17);
+            this.label6.Size = new System.Drawing.Size(113, 16);
             this.label6.TabIndex = 165;
             this.label6.Text = "Módulo Compras.";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(119, 139);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 17);
+            this.label7.Size = new System.Drawing.Size(100, 16);
             this.label7.TabIndex = 166;
             this.label7.Text = "Módulo Ventas.";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(119, 185);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(145, 17);
+            this.label8.Size = new System.Drawing.Size(159, 16);
             this.label8.TabIndex = 167;
             this.label8.Text = "Liquidaciones de Tarjeta.";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(119, 231);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 17);
+            this.label9.Size = new System.Drawing.Size(150, 16);
             this.label9.TabIndex = 168;
             this.label9.Text = "Transferencias de Caja.";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label10.Location = new System.Drawing.Point(119, 208);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(164, 17);
+            this.label10.Size = new System.Drawing.Size(178, 16);
             this.label10.TabIndex = 169;
             this.label10.Text = "Movimientos Varios de Caja.";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label11.Location = new System.Drawing.Point(119, 254);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 17);
+            this.label11.Size = new System.Drawing.Size(136, 16);
             this.label11.TabIndex = 170;
             this.label11.Text = "Depósitos Bancarios.";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label12.Location = new System.Drawing.Point(119, 277);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(164, 17);
+            this.label12.Size = new System.Drawing.Size(175, 16);
             this.label12.TabIndex = 171;
             this.label12.Text = "Débitos/Créditos Bancarios.";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label13.Location = new System.Drawing.Point(119, 300);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(138, 17);
+            this.label13.Size = new System.Drawing.Size(151, 16);
             this.label13.TabIndex = 172;
             this.label13.Text = "Extracciones Bancarias.";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label14.Location = new System.Drawing.Point(119, 323);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(132, 17);
+            this.label14.Size = new System.Drawing.Size(142, 16);
             this.label14.TabIndex = 173;
             this.label14.Text = "Depósitos en Caución.";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label15.Location = new System.Drawing.Point(116, 346);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(150, 17);
+            this.label15.Size = new System.Drawing.Size(164, 16);
             this.label15.TabIndex = 174;
             this.label15.Text = "Transferencias Bancarias.";
             // 

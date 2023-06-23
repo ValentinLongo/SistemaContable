@@ -160,11 +160,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(21, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 21);
+            this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 128;
             this.label1.Text = "Seleccionar:";
             // 
@@ -306,11 +306,11 @@
             // 
             this.lblDesde.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblDesde.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblDesde.Location = new System.Drawing.Point(615, 64);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(41, 16);
+            this.lblDesde.Size = new System.Drawing.Size(51, 16);
             this.lblDesde.TabIndex = 147;
             this.lblDesde.Text = "Desde:";
             // 
@@ -318,11 +318,11 @@
             // 
             this.lblHasta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblHasta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblHasta.Location = new System.Drawing.Point(763, 64);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(39, 16);
+            this.lblHasta.Size = new System.Drawing.Size(46, 16);
             this.lblHasta.TabIndex = 148;
             this.lblHasta.Text = "Hasta:";
             // 
