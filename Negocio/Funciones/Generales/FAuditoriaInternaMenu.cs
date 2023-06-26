@@ -47,7 +47,7 @@ namespace Negocio.Funciones.Generales
             }
         }
 
-        public static long Insert(int terminal, string fecha, string comenta, int codigo, int nro, int tipocbte, string cpbte, int ctapro) // Insert Asiento y MovAsto, tambien retorna el asiento final (porque se repite mucho).
+        public static long Insert(int terminal, string fecha, string comenta, int codigo, int nro, int tipocbte, string cpbte, int ctapro, DataSet DS) // Insert Asiento y MovAsto, tambien retorna el asiento final (porque se repite mucho).
         {
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"Select Max(ast_asiento) as maximo From Asiento");
@@ -55,7 +55,7 @@ namespace Negocio.Funciones.Generales
 
             try
             {
-                ds = AccesoBase.ListarDatos($"Select * From TipMov Where tmo_codigo = 16");
+                ds = AccesoBase.ListarDatos($"Select * From TipMov Where tmo_codigo = {DS.Tables[0].Rows[0]["vta_tipmov"]}");
                 string Abreviado = ds.Tables[0].Rows[0]["tmo_abrev"].ToString();
                 comenta = comenta.Replace("Abreviado", Abreviado.ToUpper() + " ");
             }
@@ -93,13 +93,13 @@ namespace Negocio.Funciones.Generales
             ds = AccesoBase.ListarDatos($"Select Sum(aux_importe) as A From Aux_Asiento Where aux_codigo = 1 And aux_terminal = {terminal}");
             if (ds.Tables[0].Rows.Count != 0)
             {
-                A = Convert.ToDouble(ds.Tables[0].Rows[0]["A"]);
+                A = ds.Tables[0].Rows[0]["A"] is DBNull ? 0 : Convert.ToDouble(ds.Tables[0].Rows[0]["A"]);
             }
 
             ds = AccesoBase.ListarDatos($"Select Sum(aux_importe) as B From Aux_Asiento Where aux_codigo = 2 And aux_terminal = {terminal}");
             if (ds.Tables[0].Rows.Count != 0)
             {
-                B = Convert.ToDouble(ds.Tables[0].Rows[0]["B"]);
+                B = ds.Tables[0].Rows[0]["B"] is DBNull ? 0 : Convert.ToDouble(ds.Tables[0].Rows[0]["B"]);
             }
 
             return A != B ? true : false;

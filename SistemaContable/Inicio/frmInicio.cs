@@ -125,6 +125,12 @@ namespace SistemaContable
 
         private void btnAudInt_Click(object sender, EventArgs e) //AUDITORIA INTERNA MENU
         {
+            if (Negocio.FInicio.FormActivo("frmAuditoriaInterna"))
+            {
+                Negocio.FInicio.MostrarForm("frmAuditoriaInterna");
+                return;
+            }
+
             if (Negocio.FInicio.ValidacionSupervisor())
             {
                 frmAuditoriaInterna frm = new frmAuditoriaInterna();
