@@ -13,15 +13,15 @@ namespace Negocio.Funciones.Generales
     public class FAuditoriaInternaMenu
     {
       
-        public static double Cotizacion(DataSet ds, string col) // obtiene la cotizacion.
+        public static double Cotizacion(DataRow dr, string col) // obtiene la cotizacion.
         {
-            if (ds.Tables[0].Rows[0][col] is DBNull)
+            if (dr[col] is DBNull)
             {
                 return 1;
             }
             else
             {
-                return Convert.ToDouble(ds.Tables[0].Rows[0][col]);
+                return Convert.ToDouble(dr[col]);
             }
         }
 
@@ -47,7 +47,7 @@ namespace Negocio.Funciones.Generales
             }
         }
 
-        public static long Insert(int terminal, string fecha, string comenta, int codigo, int nro, int tipocbte, string cpbte, int ctapro, DataSet DS) // Insert Asiento y MovAsto, tambien retorna el asiento final (porque se repite mucho).
+        public static long Insert(int terminal, string fecha, string comenta, int codigo, int nro, int tipocbte, string cpbte, int ctapro, DataRow dr) // Insert Asiento y MovAsto, tambien retorna el asiento final (porque se repite mucho).
         {
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"Select Max(ast_asiento) as maximo From Asiento");
@@ -55,7 +55,7 @@ namespace Negocio.Funciones.Generales
 
             try
             {
-                ds = AccesoBase.ListarDatos($"Select * From TipMov Where tmo_codigo = {DS.Tables[0].Rows[0]["vta_tipmov"]}");
+                ds = AccesoBase.ListarDatos($"Select * From TipMov Where tmo_codigo = {dr["vta_tipmov"]}");
                 string Abreviado = ds.Tables[0].Rows[0]["tmo_abrev"].ToString();
                 comenta = comenta.Replace("Abreviado", Abreviado.ToUpper() + " ");
             }
