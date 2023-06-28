@@ -101,8 +101,8 @@ namespace SistemaContable.Plan_de_Cuentas
                 return;
             }
 
-            frmReporte freporte = new frmReporte("PCuenta", $"{FPlanDeCuentas.query}", "", "Plan de Cuentas", "General", DateTime.Now.ToString("d"));
-            freporte.ShowDialog();
+            frmReporte freporte = new frmReporte("PCuenta", $"select * from PCuenta {FPlanDeCuentas.wherePCuenta}", "", "Plan de Cuentas", "General", DateTime.Now.ToString("d"));
+            freporte.Show();
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)

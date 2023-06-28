@@ -13,7 +13,7 @@ namespace Negocio
     public class FPlanDeCuentas
     {
         public static string query;
-
+        public static string wherePCuenta;
         public static DataSet BusquedaCuenta(string Descripcion)
         {
             //add.rows
@@ -25,7 +25,8 @@ namespace Negocio
 
             //datasource
             DataSet ds = new DataSet();
-            string Query = $"select pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri Descripción, pcu_superior as Superior, pcu_hija as Hija, pcu_tabulador as Tabulador, pcu_ajustainf as AjustaInf from PCuenta where pcu_descri LIKE'%{Descripcion}%'";
+            string Query = $"select pcu_codigo as Código, pcu_cuenta as Cuenta, pcu_descri as Descripción, pcu_superior as Superior, pcu_hija as Hija, pcu_tabulador as Tabulador, pcu_ajustainf as AjustaInf from PCuenta where pcu_descri LIKE'%{Descripcion}%'";
+            wherePCuenta = $"where pcu_descri LIKE'%{Descripcion}%'";
             query = Query;
             ds = AccesoBase.ListarDatos(Query);
             return ds;
