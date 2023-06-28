@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -47,7 +48,7 @@ namespace Negocio.Funciones.Generales
             }
         }
 
-        public static long Insert(int terminal, string fecha, string comenta, int codigo, int nro, int tipocbte, string cpbte, int ctapro, DataRow dr) // Insert Asiento y MovAsto, tambien retorna el asiento final (porque se repite mucho).
+        public static long Insert(int terminal, string fecha, string comenta, int codigo, int nro, int tipocbte, string cpbte, int ctapro, DataRow dr, string col) // Insert Asiento y MovAsto, tambien retorna el asiento final (porque se repite mucho).
         {
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"Select Max(ast_asiento) as maximo From Asiento");
@@ -55,7 +56,7 @@ namespace Negocio.Funciones.Generales
 
             try
             {
-                ds = AccesoBase.ListarDatos($"Select * From TipMov Where tmo_codigo = {dr["vta_tipmov"]}");
+                ds = AccesoBase.ListarDatos($"Select * From TipMov Where tmo_codigo = {dr[col]}");
                 string Abreviado = ds.Tables[0].Rows[0]["tmo_abrev"].ToString();
                 comenta = comenta.Replace("Abreviado", Abreviado.ToUpper() + " ");
             }
@@ -64,7 +65,7 @@ namespace Negocio.Funciones.Generales
                 comenta = "";
             }           
 
-            AccesoBase.InsertUpdateDatos($"Insert Into Asiento (ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_codigo, ast_numero, ast_tipocbte, ast_cbte, ast_ctapro, ast_user, ast_hora, ast_fecalta, ast_tipo) Values ({Asiento}, {Asiento}, '{fecha}', '{comenta}', {codigo}, {nro}, {tipocbte}, '{cpbte}', {ctapro}, {FLogin.IdUsuario}, '{DateTime.Now.ToString().Substring(DateTime.Now.ToString().Length - 8)}', '{DateTime.Now.ToString().Substring(0, 10)}', 2)");
+            AccesoBase.InsertUpdateDatos($"Insert Into Asiento (ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_codigo, ast_numero, ast_tipocbte, ast_cbte, ast_ctapro, ast_user, ast_hora, ast_fecalta, ast_tipo) Values ({Asiento}, {Asiento}, '{fecha}', '{comenta}', {codigo}, {nro}, {tipocbte}, '{cpbte}', {ctapro}, {FLogin.IdUsuario}, '{DateTime.Now.ToString("HH:mm:ss")}', '{DateTime.Now.ToString().Substring(0, 10)}', 2)");
             AccesoBase.InsertUpdateDatos($"Insert Into MovAsto (mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta) Select {Asiento} as Asto, '{fecha}' as Fec, aux_cuenta, aux_codigo, aux_importe, aux_comenta From Aux_Asiento Where aux_terminal = {terminal}");
             AccesoBase.InsertUpdateDatos($"Delete From Aux_Asiento Where aux_terminal = {terminal}");
 

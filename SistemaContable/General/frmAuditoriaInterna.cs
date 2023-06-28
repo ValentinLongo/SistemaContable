@@ -233,8 +233,8 @@ namespace SistemaContable.General
                 }
             }
 
-            ds = AccesoBase.ListarDatos($"Select * From MovVta Left Join TipMov on vta_tipmov = tmo_codigo Left Join Asiento on vta_tipmov = ast_tipocbte And vta_cpbte = ast_cbte Left Join ConceptoCont on vta_conceptocont = coc_codigo Where LEFT(vta_cliente,7) <> 'ANULADO' And ast_asiento is NULL And (vta_fecpro >= '{maskDesde.Text}' And vta_fecpro <= '{maskHasta.Text}')");
-            MessageBox.Show(ds.Tables[0].Rows.Count.ToString());
+            AccesoBase.InsertUpdateDatos($"Update Asiento Set ast_ejercicio = eje_codigo From Asiento Left Join Ejercicio on eje_desde <= ast_fecha And eje_hasta >= ast_fecha ");
+            AccesoBase.InsertUpdateDatos($"Delete From MovAsto Where mva_importe = 0");
 
             ProgressBar.Value = 0;
 
@@ -253,7 +253,7 @@ namespace SistemaContable.General
 
                         lblConteo.Text = "Comprobante de Compra " + ds.Tables[0].Rows.IndexOf(dr) + " de " + ds.Tables[0].Rows.Count;
 
-                        switch (Convert.ToInt32(dr["cpa_tipmov"])) // 47
+                        switch (Convert.ToInt32(dr["cpa_tipmov"]))
                         {
                             case 11: // 1 = factura
                             case 12: // 2 = Nota de Credito
@@ -285,9 +285,6 @@ namespace SistemaContable.General
                 }
             }
 
-            ds = AccesoBase.ListarDatos($"Select * From MovCpa Left Join Asiento on cpa_tipmov = ast_tipocbte And cpa_nrocomp = ast_cbte And ast_ctapro = cpa_ctapro Where cpa_tipmov <> 16 And LEFT(cpa_nombre,7) <> 'ANULADO' And ast_asiento is NULL And (cpa_feccont >= '{maskDesde.Text}' And cpa_feccont <= '{maskHasta.Text}')");
-            MessageBox.Show(ds.Tables[0].Rows.Count.ToString());
-
             ProgressBar.Value = 0;
 
             if (checkLiqTC.Checked)
@@ -309,9 +306,6 @@ namespace SistemaContable.General
                     }
                 }
             }
-
-            ds = AccesoBase.ListarDatos($"Select * From MovVtaTC Left Join Tarjeta on tcc_tarjeta = tar_codigo Left Join Asiento on ast_tipocbte = 16 And tcc_cpbte = ast_cbte And ast_ctapro = tar_ctapro Left Join MovCpa on tcc_cpbte = cpa_nrocomp And cpa_tipmov = 16 And cpa_ctapro = tar_ctapro Where tcc_tipmov = 2 And ast_asiento is NULL And (tcc_fecha >= '{maskDesde.Text}' And tcc_fecha <= '{maskHasta.Text}')");
-            MessageBox.Show(ds.Tables[0].Rows.Count.ToString());
 
             ProgressBar.Value = 0;
 
@@ -347,9 +341,6 @@ namespace SistemaContable.General
                 }
             }
 
-            ds = AccesoBase.ListarDatos($"Select * From MovimientoCaja Left Join Asiento on (Case When moc_tipmov = 6 Then 42 Else 43 End) = ast_tipocbte And moc_cpbte = ast_cbte Where (moc_tipmov = 54 or moc_tipmov = 6) And moc_total <> 0 And moc_cont = 1 And ast_asiento is NULL And (moc_fecpro >= '{maskDesde.Text}' And moc_fecpro <= '{maskHasta.Text}')");
-            MessageBox.Show(ds.Tables[0].Rows.Count.ToString());
-
             ProgressBar.Value = 0;
 
             if (checkTrans.Checked)
@@ -367,13 +358,10 @@ namespace SistemaContable.General
 
                         lblConteo.Text = "Movimiento de Caja " + ds.Tables[0].Rows.IndexOf(dr) + " de " + ds.Tables[0].Rows.Count;
 
-                        Proc_Transf(dr); //todo
+                        Proc_Transf(dr);
                     }
                 }
             }
-
-            ds = AccesoBase.ListarDatos($"Select tra_cajaO, tra_cajaD, tra_tipo, moc_total, moc_caja, moc_tipmov, moc_fecpro, moc_cpbte, moc_cotizacion From TransfCajaV Left Join MovimientoCaja on tra_codigo = moc_codigo And moc_tipmov = 57 Left Join Asiento on ast_tipocbte = moc_tipmov And ast_cbte = moc_cpbte Where ast_asiento is NULL And (moc_fecpro >= '{maskDesde.Text}' And moc_fecpro <= '{maskHasta.Text}') Group By tra_cajaO, tra_cajaD, tra_tipo, moc_total, moc_caja, moc_tipmov, moc_fecpro, moc_cpbte, moc_cotizacion");
-            MessageBox.Show(ds.Tables[0].Rows.Count.ToString());
 
             ProgressBar.Value = 0;
 
@@ -392,13 +380,10 @@ namespace SistemaContable.General
 
                         lblConteo.Text = "Depósito Bancario " + ds.Tables[0].Rows.IndexOf(dr) + " de " + ds.Tables[0].Rows.Count;
 
-                        Proc_Dep(dr); //todo
+                        Proc_Dep(dr);
                     }
                 }
             }
-
-            ds = AccesoBase.ListarDatos($"Select * From (Select mba_codigo, mba_tipmov, mba_cpbte, mba_fecemi, mba_fecven, mba_comentario, mba_importe, mba_tilde, mba_referencia, mba_banco, mba_sucursal, mba_tipcta, mba_nrocta, mba_caja, mba_turno, mba_chet, mba_efectivo, mba_usuario1, mba_fecha, mba_hora, mba_ctatit, mba_nomtit, mba_cotizacion From MovBan Where mba_tipmov = 1 And mba_referencia = '' And (mba_fecemi >= '{maskDesde.Text}' And mba_fecemi <= '{maskHasta.Text}') UNION Select mba_codigo, mba_tipmov, mba_cpbte, mba_fecemi, mba_fecven, mba_comentario, mba_importe, mba_tilde, mba_referencia, mba_banco, mba_sucursal, mba_tipcta, mba_nrocta, mba_caja, mba_turno, mba_chet, mba_efectivo, mba_usuario1, mba_fecha, mba_hora, mba_ctatit, mba_nomtit, mba_cotizacion From MovBanHisto Where mba_tipmov = 1 And mba_referencia = '' And (mba_fecemi >= '{maskDesde.Text}' And mba_fecemi <= '{maskHasta.Text}') ) as X Left Join Asiento on mba_tipmov = ast_tipocbte And RIGHT(('00000000' + mba_cpbte),8) = ast_cbte Where ast_asiento is NULL And mba_importe <> 0");
-            MessageBox.Show(ds.Tables[0].Rows.Count.ToString());
 
             ProgressBar.Value = 0;
 
@@ -421,9 +406,6 @@ namespace SistemaContable.General
                     }
                 }
             }
-
-            ds = AccesoBase.ListarDatos($"Select *, Case When dcb_tipo = 1 Then 47 Else 48 End as dcb_tipmov From DebCredBan Left Join Asiento on (Case When dcb_tipo = 1 Then 47 Else 48 End) = ast_tipocbte And dcb_cpbte = ast_cbte Where ast_asiento is NULL ");
-            MessageBox.Show(ds.Tables[0].Rows.Count.ToString());
 
             ProgressBar.Value = 0;
 
@@ -469,9 +451,6 @@ namespace SistemaContable.General
             }
         salto:
 
-            ds = AccesoBase.ListarDatos($"Select * From (Select mba_codigo, mba_tipmov, mba_cpbte, mba_fecemi, mba_fecven, mba_comentario, mba_importe, mba_tilde, mba_referencia, mba_banco, mba_sucursal, mba_tipcta, mba_nrocta, mba_caja, mba_turno, mba_chet, mba_efectivo, mba_usuario1, mba_fecha, mba_hora, mba_ctatit, mba_nomtit, mba_cotizacion From MovBan Where mba_tipmov = {CodOpe} And (mba_fecemi >= '{maskDesde.Text}' And mba_fecemi <= '{maskHasta.Text}') UNION Select mba_codigo, mba_tipmov, mba_cpbte, mba_fecemi, mba_fecven, mba_comentario, mba_importe, mba_tilde, mba_referencia, mba_banco, mba_sucursal, mba_tipcta, mba_nrocta, mba_caja, mba_turno, mba_chet, mba_efectivo, mba_usuario1, mba_fecha, mba_hora, mba_ctatit, mba_nomtit, mba_cotizacion From MovBanHisto Where mba_tipmov = {CodOpe} And (mba_fecemi >= '{maskDesde.Text}' And mba_fecemi <= '{maskHasta.Text}') ) as X Left Join Asiento on mba_tipmov = ast_tipocbte And mba_cpbte = ast_cbte Where ast_asiento is NULL and mba_importe <> 0");
-            MessageBox.Show(ds.Tables[0].Rows.Count.ToString());
-
             ProgressBar.Value = 0;
 
             if (checkCaucion.Checked)
@@ -493,9 +472,6 @@ namespace SistemaContable.General
                     }
                 }
             }
-
-            ds = AccesoBase.ListarDatos($"Select * From (Select mba_codigo, mba_tipmov, mba_cpbte, mba_fecemi, mba_fecven, mba_comentario, mba_importe, mba_tilde, mba_referencia, mba_banco, mba_sucursal, mba_tipcta, mba_nrocta, mba_caja, mba_turno, mba_chet, mba_efectivo, mba_usuario1, mba_fecha, mba_hora, mba_ctatit, mba_nomtit, mba_cotizacion From MovBan Where mba_tipmov = 19 And (mba_fecemi >= '{maskDesde.Text}' And mba_fecemi <= '{maskHasta.Text}') UNION Select mba_codigo, mba_tipmov, mba_cpbte, mba_fecemi, mba_fecven, mba_comentario, mba_importe, mba_tilde, mba_referencia, mba_banco, mba_sucursal, mba_tipcta, mba_nrocta, mba_caja, mba_turno, mba_chet, mba_efectivo, mba_usuario1, mba_fecha, mba_hora, mba_ctatit, mba_nomtit, mba_cotizacion From MovBanHisto Where mba_tipmov = 19 And (mba_fecemi >= '{maskDesde.Text}' And mba_fecemi <= '{maskHasta.Text}') ) as X Left Join Asiento on mba_tipmov = ast_tipocbte And RIGHT(('00000000' + mba_cpbte),8) = RIGHT(('00000000' + ast_cbte),8) Where ast_asiento is NULL And mba_importe <> 0");
-            MessageBox.Show(ds.Tables[0].Rows.Count.ToString());
 
             ProgressBar.Value = 0;
 
@@ -540,9 +516,6 @@ namespace SistemaContable.General
                 }
             }
         salto2:
-
-            ds = AccesoBase.ListarDatos($"Select * From (Select mba_codigo, mba_tipmov, mba_cpbte, mba_fecemi, mba_fecven, mba_comentario, mba_importe, mba_tilde, mba_referencia, mba_banco, mba_sucursal, mba_tipcta, mba_nrocta, mba_caja, mba_turno, mba_chet, mba_efectivo, mba_usuario1, mba_fecha, mba_hora, mba_ctatit, mba_nomtit, mba_cotizacion From MovBan Where mba_tipmov = {CodOpe} And mba_referencia = '' And (mba_fecemi >= '{maskDesde.Text}' And mba_fecemi <= '{maskHasta.Text}') UNION Select mba_codigo, mba_tipmov, mba_cpbte, mba_fecemi, mba_fecven, mba_comentario, mba_importe, mba_tilde, mba_referencia, mba_banco, mba_sucursal, mba_tipcta, mba_nrocta, mba_caja, mba_turno, mba_chet, mba_efectivo, mba_usuario1, mba_fecha, mba_hora, mba_ctatit, mba_nomtit, mba_cotizacion From MovBanHisto Where mba_tipmov = {CodOpe} And mba_referencia = '' And (mba_fecemi >= '{maskDesde.Text}' And mba_fecemi <= '{maskHasta.Text}') ) as X Left Join Asiento on mba_tipmov = ast_tipocbte And mba_cpbte = ast_cbte Where ast_asiento is NULL And mba_importe <> 0");
-            MessageBox.Show(ds.Tables[0].Rows.Count.ToString());
 
             ProgressBar.Value = 0;
 
@@ -773,7 +746,7 @@ namespace SistemaContable.General
                     return;
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "COBRANZA DE TARJETAS " + "Abreviado" + dr["tcc_cpbte"].ToString(), 0, 0, 16, dr["tcc_cpbte"].ToString(), Convert.ToInt32(dr["tar_ctapro"]), dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "COBRANZA DE TARJETAS " + "Abreviado" + dr["tcc_cpbte"].ToString(), 0, 0, 16, dr["tcc_cpbte"].ToString(), Convert.ToInt32(dr["tar_ctapro"]), dr, "vta_tipmov");
             }
             catch (Exception ex)
             {
@@ -828,7 +801,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "DEPOSITO BANCARIO(CAUCION)" + dr["mba_cpbte"].ToString(), 0, 0, Convert.ToInt32(dr["mba_tipmov"]), dr["mba_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "DEPOSITO BANCARIO(CAUCION)" + dr["mba_cpbte"].ToString(), 0, 0, Convert.ToInt32(dr["mba_tipmov"]), dr["mba_cpbte"].ToString(), 0, dr, "mba_tipmov");
             }
             catch (Exception ex)
             {
@@ -872,7 +845,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "EXT. BANCARIA" + dr["mba_cpbte"].ToString(), 0, 0, Convert.ToInt32(dr["mba_tipmov"]), dr["mba_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "EXT. BANCARIA" + dr["mba_cpbte"].ToString(), 0, 0, Convert.ToInt32(dr["mba_tipmov"]), dr["mba_cpbte"].ToString(), 0, dr, "mba_tipmov");
             }
             catch (Exception ex)
             {
@@ -922,7 +895,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["dcb_feccont"].ToString(), (Convert.ToInt32(dr["dcb_tipo"]) == 1 ? "DEBITO BANCARIO" : "CREDITO BANCARIO") + dr["dcb_cpbte"].ToString(), 0, 0, Convert.ToInt32(dr["mba_tipmov"]), dr["mba_cpbte"].ToString(), Convert.ToInt32(CtaPro), dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["dcb_feccont"].ToString(), (Convert.ToInt32(dr["dcb_tipo"]) == 1 ? "DEBITO BANCARIO" : "CREDITO BANCARIO") + dr["dcb_cpbte"].ToString(), 0, 0, Convert.ToInt32(dr["mba_tipmov"]), dr["mba_cpbte"].ToString(), Convert.ToInt32(CtaPro), dr, "mva_tipmov");
             }
             catch (Exception ex)
             {
@@ -975,7 +948,7 @@ namespace SistemaContable.General
                     ds2 = AccesoBase.ListarDatos("Select Max(ast_asiento) as maximo From Asiento");
                     Asiento = ds2.Tables[0].Rows[0]["maximo"] is DBNull ? 1 : Convert.ToInt64(ds2.Tables[0].Rows[0]["maximo"]) + 1;
 
-                    AccesoBase.InsertUpdateDatos($"Insert Into Asiento (ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_codigo, ast_numero, ast_tipocbte, ast_cbte, ast_ctapro, ast_user, ast_hora, ast_fecalta, ast_tipo) Values ({Asiento}, {Asiento}, '{dr["moc_fecpro"]}', 'TRANSF VALORES {dr["moc_cpbte"]}', 0, 0, 57, '{dr["moc_cpbte"]}', 0, '{FLogin.NombreUsuario}', '{DateTime.Now.ToString().Substring(DateTime.Now.ToString().Length - 8)}', '{DateTime.Now.ToString().Substring(0, 10)}', 2)");
+                    AccesoBase.InsertUpdateDatos($"Insert Into Asiento (ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_codigo, ast_numero, ast_tipocbte, ast_cbte, ast_ctapro, ast_user, ast_hora, ast_fecalta, ast_tipo) Values ({Asiento}, {Asiento}, '{dr["moc_fecpro"]}', 'TRANSF VALORES {dr["moc_cpbte"]}', 0, 0, 57, '{dr["moc_cpbte"]}', 0, {FLogin.IdUsuario}, '{DateTime.Now.ToString().Substring(DateTime.Now.ToString().Length - 8)}', '{DateTime.Now.ToString().Substring(0, 10)}', 2)");
                     AccesoBase.InsertUpdateDatos($"Insert Into MovAsto (mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta) Select {Asiento} as Asiento, '{dr["moc_fecpro"]}' as Fecha, aux_cuenta, aux_codigo, aux_importe, aux_comenta From Aux_Asiento Where aux_terminal = {terminal}");
                 }
                 else //transferencia de efectivo
@@ -995,7 +968,7 @@ namespace SistemaContable.General
                     ds2 = AccesoBase.ListarDatos("Select Max(ast_asiento) as maximo From Asiento");
                     Asiento = ds2.Tables[0].Rows[0]["maximo"] is DBNull ? 1 : Convert.ToInt64(ds2.Tables[0].Rows[0]["maximo"]) + 1;
 
-                    AccesoBase.InsertUpdateDatos($"Insert Into Asiento (ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_codigo, ast_numero, ast_tipocbte, ast_cbte, ast_ctapro, ast_user, ast_hora, ast_fecalta, ast_tipo) Values ({Asiento}, {Asiento}, '{dr["moc_fecpro"]}', 'TRANSF EFECTIVO {dr["moc_cpbte"]}', 0, 0, 57, '{dr["moc_cpbte"]}', 0, '{FLogin.NombreUsuario}', '{DateTime.Now.ToString().Substring(DateTime.Now.ToString().Length - 8)}', '{DateTime.Now.ToString().Substring(0, 10)}', 2)");
+                    AccesoBase.InsertUpdateDatos($"Insert Into Asiento (ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_codigo, ast_numero, ast_tipocbte, ast_cbte, ast_ctapro, ast_user, ast_hora, ast_fecalta, ast_tipo) Values ({Asiento}, {Asiento}, '{dr["moc_fecpro"]}', 'TRANSF EFECTIVO {dr["moc_cpbte"]}', 0, 0, 57, '{dr["moc_cpbte"]}', 0, {FLogin.IdUsuario}, '{DateTime.Now.ToString().Substring(DateTime.Now.ToString().Length - 8)}', '{DateTime.Now.ToString().Substring(0, 10)}', 2)");
                     AccesoBase.InsertUpdateDatos($"Insert Into MovAsto (mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta) Select {Asiento} as Asiento, '{dr["moc_fecpro"]}' as Fecha, aux_cuenta, aux_codigo, aux_importe, aux_comenta From Aux_Asiento Where aux_terminal = {terminal}");
                 }
 
@@ -1048,7 +1021,7 @@ namespace SistemaContable.General
 
                 string fecha = dr["cpa_feccont"].ToString();
 
-                if (dr["cpa_ctaneto"].ToString().Trim() != "" || (dr["cpa_ctaneto"] is DBNull) == false) //neto
+                if (dr["cpa_ctaneto"].ToString().Trim() != "" && (dr["cpa_ctaneto"] is DBNull) == false) //neto
                 {
                     if (CtrlDetTot(1, d, fecha, 1, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1056,7 +1029,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaexento"].ToString().Trim() != "" || (dr["cpa_ctaexento"] is DBNull) == false) //exento
+                if (dr["cpa_ctaexento"].ToString().Trim() != "" && (dr["cpa_ctaexento"] is DBNull) == false) //exento
                 {
                     if (CtrlDetTot(2, d, fecha, 2, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1064,7 +1037,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaiva21"].ToString().Trim() != "" || (dr["cpa_ctaiva21"] is DBNull) == false) //iva21
+                if (dr["cpa_ctaiva21"].ToString().Trim() != "" && (dr["cpa_ctaiva21"] is DBNull) == false) //iva21
                 {
                     if (CtrlDetTot(3, d, fecha, 3, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1072,7 +1045,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaiva27"].ToString().Trim() != "" || (dr["cpa_ctaiva27"] is DBNull) == false) //iva27
+                if (dr["cpa_ctaiva27"].ToString().Trim() != "" && (dr["cpa_ctaiva27"] is DBNull) == false) //iva27
                 {
                     if (CtrlDetTot(4, d, fecha, 4, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1080,7 +1053,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaiva10"].ToString().Trim() != "" || (dr["cpa_ctaiva10"] is DBNull) == false) //iva10
+                if (dr["cpa_ctaiva10"].ToString().Trim() != "" && (dr["cpa_ctaiva10"] is DBNull) == false) //iva10
                 {
                     if (CtrlDetTot(5, d, fecha, 5, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1088,7 +1061,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaimpint"].ToString().Trim() != "" || (dr["cpa_ctaimpint"] is DBNull) == false) //impint
+                if (dr["cpa_ctaimpint"].ToString().Trim() != "" && (dr["cpa_ctaimpint"] is DBNull) == false) //impint
                 {
                     if (CtrlDetTot(14, d, fecha, 8, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1096,7 +1069,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaretiva"].ToString().Trim() != "" || (dr["cpa_ctaretiva"] is DBNull) == false) //retiva
+                if (dr["cpa_ctaretiva"].ToString().Trim() != "" && (dr["cpa_ctaretiva"] is DBNull) == false) //retiva
                 {
                     if (CtrlDetTot(7, d, fecha, 9, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1104,7 +1077,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaretiibb"].ToString().Trim() != "" || (dr["cpa_ctaretiibb"] is DBNull) == false) //retiibb
+                if (dr["cpa_ctaretiibb"].ToString().Trim() != "" && (dr["cpa_ctaretiibb"] is DBNull) == false) //retiibb
                 {
                     if (CtrlDetTot(8, d, fecha, 10, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1112,7 +1085,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaretgan"].ToString().Trim() != "" || (dr["cpa_ctaretgan"] is DBNull) == false) //retgan
+                if (dr["cpa_ctaretgan"].ToString().Trim() != "" && (dr["cpa_ctaretgan"] is DBNull) == false) //retgan
                 {
                     if (CtrlDetTot(9, d, fecha, 11, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1120,7 +1093,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaperiva"].ToString().Trim() != "" || (dr["cpa_ctaperiva"] is DBNull) == false) //periva
+                if (dr["cpa_ctaperiva"].ToString().Trim() != "" && (dr["cpa_ctaperiva"] is DBNull) == false) //periva
                 {
                     if (CtrlDetTot(10, d, fecha, 12, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1128,7 +1101,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaperiibb"].ToString().Trim() != "" || (dr["cpa_ctaperiibb"] is DBNull) == false) //periibb
+                if (dr["cpa_ctaperiibb"].ToString().Trim() != "" && (dr["cpa_ctaperiibb"] is DBNull) == false) //periibb
                 {
                     if (CtrlDetTot(11, d, fecha, 13, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1136,7 +1109,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctapergan"].ToString().Trim() != "" || (dr["cpa_ctapergan"] is DBNull) == false) //pergan
+                if (dr["cpa_ctapergan"].ToString().Trim() != "" && (dr["cpa_ctapergan"] is DBNull) == false) //pergan
                 {
                     if (CtrlDetTot(12, d, fecha, 14, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1144,7 +1117,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctamonotributo"].ToString().Trim() != "" || (dr["cpa_ctamonotributo"] is DBNull) == false) //monotributo
+                if (dr["cpa_ctamonotributo"].ToString().Trim() != "" && (dr["cpa_ctamonotributo"] is DBNull) == false) //monotributo
                 {
                     if (CtrlDetTot(13, d, fecha, 15, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1152,7 +1125,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaotros"].ToString().Trim() != "" || (dr["cpa_ctaotros"] is DBNull) == false) //otros
+                if (dr["cpa_ctaotros"].ToString().Trim() != "" && (dr["cpa_ctaotros"] is DBNull) == false) //otros
                 {
                     if (CtrlDetTot(15, d, fecha, 16, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1160,7 +1133,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaimportacion"].ToString().Trim() != "" || (dr["cpa_ctaimportacion"] is DBNull) == false) //importacion
+                if (dr["cpa_ctaimportacion"].ToString().Trim() != "" && (dr["cpa_ctaimportacion"] is DBNull) == false) //importacion
                 {
                     if (CtrlDetTot(6, d, fecha, 17, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -1178,7 +1151,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. CPA." + "Abreviado" + dr["cpa_nrocomp"] + "-" + dr["cpa_nombre"].ToString(), 0, 0, Convert.ToInt32(dr["mba_tipmov"]), dr["cpa_nrocomp"].ToString(), Convert.ToInt32(dr["cpa_ctapro"]), dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. CPA." + "Abreviado" + dr["cpa_nrocomp"] + "-" + dr["cpa_nombre"].ToString(), 0, 0, Convert.ToInt32(dr["cpa_tipmov"]), dr["cpa_nrocomp"].ToString(), Convert.ToInt32(dr["cpa_ctapro"]), dr, "cpa_tipmov");
             }
             catch (Exception)
             {
@@ -1319,7 +1292,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "TRANF. BANCARIA" + dr["mba_cpbte"].ToString(), 0, 0, 100, dr["mba_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "TRANF. BANCARIA" + dr["mba_cpbte"].ToString(), 0, 0, 100, dr["mba_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception ex)
             {
@@ -1372,7 +1345,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "DEPOSITO BANCARIO" + dr["mba_cpbte"].ToString(), 0, 0, 1, dr["mba_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "DEPOSITO BANCARIO" + dr["mba_cpbte"].ToString(), 0, 0, 1, dr["mba_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception ex)
             {
@@ -1595,7 +1568,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["moc_feccont"].ToString(), "ING. VAR." + dr["moc_cpbte"].ToString() + "-" + dr["moc_descri"].ToString(), 0, 0, 42, dr["moc_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["moc_feccont"].ToString(), "ING. VAR." + dr["moc_cpbte"].ToString() + "-" + dr["moc_descri"].ToString(), 0, 0, 42, dr["moc_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception ex)
             {
@@ -1729,7 +1702,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["moc_feccont"].ToString(), "EGR. VAR." + dr["moc_cpbte"].ToString() + "-" + dr["moc_descri"].ToString(), 0, 0, 43, dr["moc_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["moc_feccont"].ToString(), "EGR. VAR." + dr["moc_cpbte"].ToString() + "-" + dr["moc_descri"].ToString(), 0, 0, 43, dr["moc_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception ex)
             {
@@ -1755,7 +1728,7 @@ namespace SistemaContable.General
                 }
 
                 DataSet ds2 = new DataSet();
-                ds2 = AccesoBase.ListarDatos($"Select * From Asiento Where ast_tipocbte = '{dr["vta_tipmov"]}' And ast_cbte = '{dr["vta_cpbte"]}'");
+                ds2 = AccesoBase.ListarDatos($"Select * From Asiento Where ast_tipocbte = {dr["vta_tipmov"]} And ast_cbte = '{dr["vta_cpbte"]}'");
                 if (ds2.Tables[0].Rows.Count != 0)
                 {
                     return;
@@ -1813,7 +1786,7 @@ namespace SistemaContable.General
 
                 if (!(dr["vta_valores"] is DBNull) && Convert.ToDouble(dr["vta_valores"]) != 0)
                 {
-                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaChet, 1, (Convert.ToDouble(dr["vta_valores"]) * cotizacion).ToString(), "", 1);
+                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaChet, 1, ((Convert.ToDouble(dr["vta_valores"])) * cotizacion).ToString(), "", 1);
                 }
 
                 if (!(dr["vta_tc"] is DBNull) && Convert.ToDouble(dr["vta_tc"]) != 0)
@@ -1821,24 +1794,24 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select tcc_tarjeta, pcu_cuenta, tcc_importe as total From MovVtaTC Left Join (Tarjeta Left Join PCuenta on tar_ctacont = pcu_cuenta) on tcc_tarjeta = tar_codigo Where tcc_tipmov = 31 And tcc_cpbte = '{dr["vta_cpbte"]}'");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 1, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "TARJETA DE CREDITO", 2);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 1, ((Convert.ToDouble(ds3.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "TARJETA DE CREDITO", 2);
                     }
                 }
 
                 if (!(dr["vta_gasto"] is DBNull) && Convert.ToDouble(dr["vta_gasto"]) != 0)
                 {
-                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaCaja, 1, (Convert.ToDouble(dr["vta_gasto"]) * cotizacion).ToString(), "", 3);
+                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaCaja, 1, ((Convert.ToDouble(dr["vta_gasto"])) * cotizacion).ToString(), "", 3);
                 }
 
                 if (!(dr["vta_efectivo"] is DBNull) && Convert.ToDouble(dr["vta_efectivo"]) != 0)
                 {
-                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaCaja, 1, (Convert.ToDouble(dr["vta_efectivo"]) * cotizacion).ToString(), "", 4);
+                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaCaja, 1, ((Convert.ToDouble(dr["vta_efectivo"])) * cotizacion).ToString(), "", 4);
                 }
 
                 DataSet ds5 = new DataSet();
                 if (!(dr["vta_retiibb"] is DBNull) && Convert.ToInt32(dr["vta_retiibb"]) != 0)
                 {
-                    ds5 = AccesoBase.ListarDatos($"Select ret_ctacont, ret_total as total From Retencion Where ret_recibo = '{dr["vta_cpbte"]}' And ret_tipmov = {dr["vta_tipmov"]} And ret_tipret = 2 Group By ret_ctacont");
+                    ds5 = AccesoBase.ListarDatos($"Select ret_ctacont, ret_total as total From Retencion Where ret_recibo = '{dr["vta_cpbte"]}' And ret_tipmov = {dr["vta_tipmov"]} And ret_tipret = 2");
 
                     if (ds5.Tables[0].Rows.Count != 0)
                     {
@@ -1846,17 +1819,17 @@ namespace SistemaContable.General
                         {
                             if (!(ds5.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "RETENCION DE IIBB", 6);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "RETENCION DE IIBB", 6);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIIBB, 1, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "RETENCION DE IIBB", 6);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIIBB, 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "RETENCION DE IIBB", 6);
                             }
                         }
                     }
                     else
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIIBB, 1, (Convert.ToDouble(dr["vta_retiibb"]) * cotizacion).ToString(), "RETENCION DE IIBB", 6);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIIBB, 1, ((Convert.ToDouble(dr["vta_retiibb"]) * cotizacion)).ToString(), "RETENCION DE IIBB", 6);
                     }
                 }
 
@@ -1870,17 +1843,17 @@ namespace SistemaContable.General
                         {
                             if (!(ds5.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "RETENCION DE IVA", 7);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "RETENCION DE IVA", 7);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIVA, 1, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "RETENCION DE IVA", 7);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIVA, 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "RETENCION DE IVA", 7);
                             }
                         }
                     }
                     else
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIVA, 1, (Convert.ToDouble(dr["vta_retiva"]) * cotizacion).ToString(), "RETENCION DE IVA", 7);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIVA, 1, ((Convert.ToDouble(dr["vta_retiva"])) * cotizacion).ToString(), "RETENCION DE IVA", 7);
                     }
                 }
 
@@ -1894,17 +1867,17 @@ namespace SistemaContable.General
                         {
                             if (!(ds5.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "RETENCION DE GANANCIAS", 22);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "RETENCION DE GANANCIAS", 22);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetGan, 1, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "RETENCION DE GANANCIAS", 22);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetGan, 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "RETENCION DE GANANCIAS", 22);
                             }
                         }
                     }
                     else
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetGan, 1, (Convert.ToDouble(dr["vta_retgan"]) * cotizacion).ToString(), "RETENCION DE GANANCIAS", 22);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetGan, 1, ((Convert.ToDouble(dr["vta_retgan"]) * cotizacion)).ToString(), "RETENCION DE GANANCIAS", 22);
                     }
                 }
 
@@ -1918,17 +1891,17 @@ namespace SistemaContable.General
                         {
                             if (!(ds5.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "RETENCION SUSS", 8);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "RETENCION SUSS", 8);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetSuss, 1, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "RETENCION SUSS", 8);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetSuss, 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "RETENCION SUSS", 8);
                             }
                         }
                     }
                     else
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetSuss, 1, (Convert.ToDouble(dr["vta_retsuss"]) * cotizacion).ToString(), "RETENCION SUSS", 8);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetSuss, 1, ((Convert.ToDouble(dr["vta_retsuss"])) * cotizacion).ToString(), "RETENCION SUSS", 8);
                     }
                 }
 
@@ -1942,23 +1915,23 @@ namespace SistemaContable.General
                         {
                             if (!(ds5.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "BONO FISCAL", 9);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "BONO FISCAL", 9);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetBF, 1, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "BONO FISCAL", 9);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetBF, 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "BONO FISCAL", 9);
                             }
                         }
                     }
                     else
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetBF, 1, (Convert.ToDouble(dr["vta_retBF"]) * cotizacion).ToString(), "BONO FISCAL", 9);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetBF, 1, ((Convert.ToDouble(dr["vta_retBF"]) * cotizacion)).ToString(), "BONO FISCAL", 9);
                     }
                 }
 
                 if (!(dr["vta_ticket"] is DBNull) && Convert.ToDouble(dr["vta_ticket"]) != 0)
                 {
-                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaCaja, 1, (Convert.ToDouble(dr["vta_ticket"]) * cotizacion).ToString(), "", 18);
+                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaCaja, 1, ((Convert.ToDouble(dr["vta_ticket"])) * cotizacion).ToString(), "", 10);
                 }
 
                 if (!(dr["vta_dep"] is DBNull) && Convert.ToDouble(dr["vta_dep"]) != 0)
@@ -1966,29 +1939,29 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovBan Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov = 1 And mba_referencia = '{dr["vta_cpbte"]}' And mba_tipmovref = 31 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 1, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 11);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 1, ((Convert.ToDouble(ds3.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "", 11);
                     }
 
                     ds3 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovBanHisto Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov = 1 And mba_referencia = '{dr["vta_cpbte"]}' And mba_tipmovref = 31 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 1, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 11);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 1, ((Convert.ToDouble(ds3.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "", 11);
                     }
                 }
 
-                if (!(dr["vta_vlte"] is DBNull) && Convert.ToDouble(dr["vta_vlte"]) != 0 || !(dr["vta_vltc"] is DBNull) && Convert.ToDouble(dr["vta_vltc"]) != 0)
+                if (!(dr["vta_vlte"] is DBNull && Convert.ToDouble(dr["vta_vlte"]) != 0) || !(dr["vta_vltc"] is DBNull && Convert.ToDouble(dr["vta_vltc"]) != 0))
                 {
                     double Vuelto = 0;
 
                     ds3 = AccesoBase.ListarDatos($"Select chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta, Sum(chp_importe) as total From ChequePropio Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on chp_nroban = cta_banco And chp_tipcta = cta_tipcta And chp_sucursal = cta_sucursal And chp_nrocta = cta_nrocta Where (chp_tipo <> 'T' or chp_tipo is null or chp_tipo = '') And chp_ordpag = '{dr["vta_cpbte"]}' And chp_tipmov = 31 Group By chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 12);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 2, ((Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "", 12);
                         Vuelto += (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion);
                     }
 
                     double suma = (dr["vta_vltc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_vltc"])) + (dr["vta_vlte"] is DBNull ? 0 : Convert.ToDouble(dr["vta_vlte"]));
-                    suma += (-Vuelto);
+                    suma = suma - Vuelto;
 
                     Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaCaja, 2, (suma * cotizacion).ToString(), "", 13);
                 }
@@ -2034,11 +2007,11 @@ namespace SistemaContable.General
                         cc = dr6["coc_cccta"] is DBNull ? 0 : Convert.ToInt32(dr6["coc_cccta"]);
                         if ((dr["vta_moneda2"] is DBNull ? 1 : Convert.ToDouble(dr["vta_moneda2"])) == 1)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds6.Tables[0].Rows[0]["pcu_cuenta"]), 2, (ds6.Tables[0].Rows[0]["pago"] is DBNull ? 0 : Convert.ToDouble(ds6.Tables[0].Rows[0]["pago"])).ToString(), "", n, cc);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr6["pcu_cuenta"]), 2, (dr6["pago"] is DBNull ? 0 : Convert.ToDouble(dr6["pago"])).ToString(), "", n, cc);
                         }
                         else
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds6.Tables[0].Rows[0]["pcu_cuenta"]), 2, (ds6.Tables[0].Rows[0]["pago"] is DBNull ? 0 : Convert.ToDouble(ds6.Tables[0].Rows[0]["pago"]) * cotizacion).ToString(), "", n, cc);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr6["pcu_cuenta"]), 2, (dr6["pago"] is DBNull ? 0 : Convert.ToDouble(dr6["pago"]) * cotizacion).ToString(), "", n, cc);
                         }
                         n += 1;
                     }
@@ -2077,7 +2050,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "s/RE" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "s/RE" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception)
             {
@@ -2259,7 +2232,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "s/OP" + dr["cpa_nrocomp"].ToString() + "-" + dr["cpa_nombre"].ToString(), 0, 0, Convert.ToInt32(dr["cpa_tipmov"]), dr["cpa_nrocomp"].ToString(), Convert.ToInt32(dr["cpa_ctapro"]), dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "s/OP" + dr["cpa_nrocomp"].ToString() + "-" + dr["cpa_nombre"].ToString(), 0, 0, Convert.ToInt32(dr["cpa_tipmov"]), dr["cpa_nrocomp"].ToString(), Convert.ToInt32(dr["cpa_ctapro"]), dr, "cpa_tipmov");
             }
             catch (Exception)
             {
@@ -2425,7 +2398,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception)
             {
@@ -2508,7 +2481,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["vta_fecemi"].ToString(), "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["vta_fecemi"].ToString(), "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception)
             {
@@ -2629,7 +2602,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception)
             {
@@ -2792,7 +2765,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception)
             {
@@ -2905,7 +2878,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["vta_fecpro"].ToString(), "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["vta_fecpro"].ToString(), "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception)
             {
@@ -3287,7 +3260,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception)
             {
@@ -3702,7 +3675,7 @@ namespace SistemaContable.General
                     MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["vta_fecemi"].ToString(), "REG. VTA. INT." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["vta_fecemi"].ToString(), "REG. VTA. INT." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr, "vta_tipmov");
             }
             catch (Exception)
             {
@@ -3762,7 +3735,7 @@ namespace SistemaContable.General
                 {
                     if (Convert.ToDateTime(dr["cpa_periodo"]) != Convert.ToDateTime(dr["cpa_feccont"].ToString().Substring(0, 7)))
                     {
-                        fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(dr["cpa_periodo"].ToString().Length - 4)));
+                        fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(dr["cpa_periodo"].ToString().Length - 4))) + "/" + dr["cpa_periodo"].ToString();
                     }
                     else
                     {
@@ -3939,7 +3912,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. CPA." + dr["cpa_nrocomp"].ToString() + "-" + dr["cpa_nombre"].ToString(), 0, 0, Convert.ToInt32(dr["cpa_tipmov"]), dr["cpa_nrocomp"].ToString(), Convert.ToInt32(dr["cpa_ctapro"]), dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. CPA." + dr["cpa_nrocomp"].ToString() + "-" + dr["cpa_nombre"].ToString(), 0, 0, Convert.ToInt32(dr["cpa_tipmov"]), dr["cpa_nrocomp"].ToString(), Convert.ToInt32(dr["cpa_ctapro"]), dr, "cpa_tipmov");
             }
             catch (Exception)
             {
@@ -3969,7 +3942,7 @@ namespace SistemaContable.General
                 {
                     if (Convert.ToDateTime(dr["cpa_periodo"]) != Convert.ToDateTime(dr["cpa_feccont"].ToString().Substring(0, 7)))
                     {
-                        fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(dr["cpa_periodo"].ToString().Length - 4) + "/" + dr["cpa_periodo"]));
+                        fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(dr["cpa_periodo"].ToString().Length - 4))) + "/" + dr["cpa_periodo"].ToString();
                     }
                     else
                     {
@@ -3983,7 +3956,7 @@ namespace SistemaContable.General
 
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
 
-                if (dr["cpa_ctaneto"].ToString().Trim() != "" || (dr["cpa_ctaneto"] is DBNull) == false) //neto
+                if (dr["cpa_ctaneto"].ToString().Trim() != "" && (dr["cpa_ctaneto"] is DBNull) == false) //neto
                 {
                     if (CtrlDetTot(1, d, fecha, 1, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -3991,7 +3964,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaexento"].ToString().Trim() != "" || (dr["cpa_ctaexento"] is DBNull) == false) //exento
+                if (dr["cpa_ctaexento"].ToString().Trim() != "" && (dr["cpa_ctaexento"] is DBNull) == false) //exento
                 {
                     if (CtrlDetTot(2, d, fecha, 2, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -3999,7 +3972,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaiva21"].ToString().Trim() != "" || (dr["cpa_ctaiva21"] is DBNull) == false) //iva21
+                if (dr["cpa_ctaiva21"].ToString().Trim() != "" && (dr["cpa_ctaiva21"] is DBNull) == false) //iva21
                 {
                     if (CtrlDetTot(3, d, fecha, 3, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4007,7 +3980,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaiva27"].ToString().Trim() != "" || (dr["cpa_ctaiva27"] is DBNull) == false) //iva27
+                if (dr["cpa_ctaiva27"].ToString().Trim() != "" && (dr["cpa_ctaiva27"] is DBNull) == false) //iva27
                 {
                     if (CtrlDetTot(4, d, fecha, 4, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4015,7 +3988,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaiva10"].ToString().Trim() != "" || (dr["cpa_ctaiva10"] is DBNull) == false) //iva10
+                if (dr["cpa_ctaiva10"].ToString().Trim() != "" && (dr["cpa_ctaiva10"] is DBNull) == false) //iva10
                 {
                     if (CtrlDetTot(5, d, fecha, 5, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4023,7 +3996,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaimpint"].ToString().Trim() != "" || (dr["cpa_ctaimpint"] is DBNull) == false) //impint
+                if (dr["cpa_ctaimpint"].ToString().Trim() != "" && (dr["cpa_ctaimpint"] is DBNull) == false) //impint
                 {
                     if (CtrlDetTot(14, d, fecha, 6, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4031,7 +4004,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaretiva"].ToString().Trim() != "" || (dr["cpa_ctaretiva"] is DBNull) == false) //retiva
+                if (dr["cpa_ctaretiva"].ToString().Trim() != "" && (dr["cpa_ctaretiva"] is DBNull) == false) //retiva
                 {
                     if (CtrlDetTot(7, d, fecha, 7, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4039,7 +4012,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaretiibb"].ToString().Trim() != "" || (dr["cpa_ctaretiibb"] is DBNull) == false) //retiibb
+                if (dr["cpa_ctaretiibb"].ToString().Trim() != "" && (dr["cpa_ctaretiibb"] is DBNull) == false) //retiibb
                 {
                     if (CtrlDetTot(8, d, fecha, 8, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4047,7 +4020,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaretgan"].ToString().Trim() != "" || (dr["cpa_ctaretgan"] is DBNull) == false) //retgan
+                if (dr["cpa_ctaretgan"].ToString().Trim() != "" && (dr["cpa_ctaretgan"] is DBNull) == false) //retgan
                 {
                     if (CtrlDetTot(9, d, fecha, 9, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4055,7 +4028,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaperiva"].ToString().Trim() != "" || (dr["cpa_ctaperiva"] is DBNull) == false) //periva
+                if (dr["cpa_ctaperiva"].ToString().Trim() != "" && (dr["cpa_ctaperiva"] is DBNull) == false) //periva
                 {
                     if (CtrlDetTot(10, d, fecha, 10, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4063,7 +4036,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaperiibb"].ToString().Trim() != "" || (dr["cpa_ctaperiibb"] is DBNull) == false) //periibb
+                if (dr["cpa_ctaperiibb"].ToString().Trim() != "" && (dr["cpa_ctaperiibb"] is DBNull) == false) //periibb
                 {
                     if (CtrlDetTot(11, d, fecha, 11, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4071,7 +4044,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctapergan"].ToString().Trim() != "" || (dr["cpa_ctapergan"] is DBNull) == false) //pergan
+                if (dr["cpa_ctapergan"].ToString().Trim() != "" && (dr["cpa_ctapergan"] is DBNull) == false) //pergan
                 {
                     if (CtrlDetTot(12, d, fecha, 12, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4079,7 +4052,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctamonotributo"].ToString().Trim() != "" || (dr["cpa_ctamonotributo"] is DBNull) == false) //monotributo
+                if (dr["cpa_ctamonotributo"].ToString().Trim() != "" && (dr["cpa_ctamonotributo"] is DBNull) == false) //monotributo
                 {
                     if (CtrlDetTot(13, d, fecha, 13, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4087,7 +4060,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaotros"].ToString().Trim() != "" || (dr["cpa_ctaotros"] is DBNull) == false) //otros
+                if (dr["cpa_ctaotros"].ToString().Trim() != "" && (dr["cpa_ctaotros"] is DBNull) == false) //otros
                 {
                     if (CtrlDetTot(15, d, fecha, 14, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4095,7 +4068,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (dr["cpa_ctaimportacion"].ToString().Trim() != "" || (dr["cpa_ctaimportacion"] is DBNull) == false) //importacion
+                if (dr["cpa_ctaimportacion"].ToString().Trim() != "" && (dr["cpa_ctaimportacion"] is DBNull) == false) //importacion
                 {
                     if (CtrlDetTot(6, d, fecha, 15, Convert.ToInt64(dr["cpa_codigo"]), cotizacion) == false)
                     {
@@ -4130,7 +4103,7 @@ namespace SistemaContable.General
                     MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. CPA." + dr["cpa_nrocomp"].ToString() + "-" + dr["cpa_nombre"].ToString(), 0, 0, Convert.ToInt32(dr["mba_tipmov"]), dr["cpa_nrocomp"].ToString(), Convert.ToInt32(dr["cpa_ctapro"]), dr);
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. CPA." + dr["cpa_nrocomp"].ToString() + "-" + dr["cpa_nombre"].ToString(), 0, 0, Convert.ToInt32(dr["cpa_tipmov"]), dr["cpa_nrocomp"].ToString(), Convert.ToInt32(dr["cpa_ctapro"]), dr, "cpa_tipmov");
             }
             catch (Exception)
             {
@@ -4162,7 +4135,7 @@ namespace SistemaContable.General
 
                 if (Convert.ToDateTime(dr["cpa_periodo"]) != Convert.ToDateTime(dr["cpa_feccont"].ToString().Substring(0, 7)))
                 {
-                    fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(dr["cpa_periodo"].ToString().Length - 4)));
+                    fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(dr["cpa_periodo"].ToString().Length - 4))) + "/" + dr["cpa_periodo"].ToString();
                 }
                 else
                 {
