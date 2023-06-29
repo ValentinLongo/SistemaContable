@@ -233,9 +233,6 @@ namespace SistemaContable.General
                 }
             }
 
-            AccesoBase.InsertUpdateDatos($"Update Asiento Set ast_ejercicio = eje_codigo From Asiento Left Join Ejercicio on eje_desde <= ast_fecha And eje_hasta >= ast_fecha ");
-            AccesoBase.InsertUpdateDatos($"Delete From MovAsto Where mva_importe = 0");
-
             ProgressBar.Value = 0;
 
             if (checkCpa.Checked)
@@ -327,11 +324,11 @@ namespace SistemaContable.General
                         switch (Convert.ToInt32(dr["moc_tipmov"]))
                         {
                             case 6: //ING
-                                Proc_IngVar(dr);
+                                Proc_IngVar(dr); //mal
                                 break;
 
                             case 54: //EGR
-                                Proc_EgrVar(dr);
+                                Proc_EgrVar(dr); //mal
                                 break;
 
                             default:
@@ -528,6 +525,8 @@ namespace SistemaContable.General
             lblConteo.Text = "Conteo de Comprobantes";
 
             MensajeError("Atención: El Proceso finalizó con Exito. Se Generaron los Asientos correspondientes a la numeración desde " + AsientoInicial + " hasta " + AsientoFinal);
+
+            this.Close();
         }//
 
         private void Proc_LIQTC(DataRow dr)
@@ -582,13 +581,13 @@ namespace SistemaContable.General
                         ds5 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovBan Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov = 1 And mba_referencia = '{dr["cpa_nrocomp"]}' And mba_tipmovref = 16 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                         foreach (DataRow dr5 in ds5.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["pcu_cuenta"]), d, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 20);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr5["pcu_cuenta"]), d, (Convert.ToDouble(dr5["total"]) * cotizacion).ToString(), "", 20);
                         }
 
                         ds5 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovBanHisto Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov = 1 And mba_referencia = '{dr["cpa_nrocomp"]}' And mba_tipmovref = 16 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                         foreach (DataRow dr5 in ds5.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["pcu_cuenta"]), d, (Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 21);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr5["pcu_cuenta"]), d, (Convert.ToDouble(dr5["total"]) * cotizacion).ToString(), "", 21);
                         }
                     }
                 }
@@ -1345,7 +1344,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "DEPOSITO BANCARIO" + dr["mba_cpbte"].ToString(), 0, 0, 1, dr["mba_cpbte"].ToString(), 0, dr, "vta_tipmov");
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "DEPOSITO BANCARIO" + dr["mba_cpbte"].ToString(), 0, 0, 1, dr["mba_cpbte"].ToString(), 0, dr, "mba_tipmov");
             }
             catch (Exception ex)
             {
@@ -1396,7 +1395,7 @@ namespace SistemaContable.General
 
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 1, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 2);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr3["pcu_cuenta"]), 1, (Convert.ToDouble(dr3["total"]) * cotizacion).ToString(), "", 2);
                     }
 
                 }
@@ -1420,9 +1419,9 @@ namespace SistemaContable.General
                     {
                         foreach (DataRow dr4 in ds4.Tables[0].Rows)
                         {
-                            if (!(ds4.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
+                            if (!(dr4["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds4.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(ds4.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 5);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr4["ret_ctacont"]), 1, (Convert.ToDouble(dr4["total"]) * cotizacion).ToString(), "", 5);
                             }
                             else
                             {
@@ -1444,13 +1443,13 @@ namespace SistemaContable.General
                     {
                         foreach (DataRow dr4 in ds4.Tables[0].Rows)
                         {
-                            if (!(ds4.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
+                            if (!(dr4["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds4.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(ds4.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 6);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr4["ret_ctacont"]), 1, (Convert.ToDouble(dr4["total"]) * cotizacion).ToString(), "", 6);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaRetIIBB, 1, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 6);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaRetIIBB, 1, (Convert.ToDouble(dr4["total"]) * cotizacion).ToString(), "", 6);
                             }
                         }
                     }
@@ -1468,13 +1467,13 @@ namespace SistemaContable.General
                     {
                         foreach (DataRow dr4 in ds4.Tables[0].Rows)
                         {
-                            if (!(ds4.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
+                            if (!(dr4["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds4.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(ds4.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 7);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr4["ret_ctacont"]), 1, (Convert.ToDouble(dr4["total"]) * cotizacion).ToString(), "", 7);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaRetIVA, 1, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 7);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaRetIVA, 1, (Convert.ToDouble(dr4["total"]) * cotizacion).ToString(), "", 7);
                             }
                         }
                     }
@@ -1492,13 +1491,13 @@ namespace SistemaContable.General
                     {
                         foreach (DataRow dr4 in ds4.Tables[0].Rows)
                         {
-                            if (!(ds4.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
+                            if (!(dr4["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds4.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(ds4.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 8);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr4["ret_ctacont"]), 1, (Convert.ToDouble(dr4["total"]) * cotizacion).ToString(), "", 8);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaRetSuss, 1, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 8);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaRetSuss, 1, (Convert.ToDouble(dr4["total"]) * cotizacion).ToString(), "", 8);
                             }
                         }
                     }
@@ -1516,13 +1515,13 @@ namespace SistemaContable.General
                     {
                         foreach (DataRow dr4 in ds4.Tables[0].Rows)
                         {
-                            if (!(ds4.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
+                            if (!(dr4["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds4.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(ds4.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 9);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr4["ret_ctacont"]), 1, (Convert.ToDouble(dr4["total"]) * cotizacion).ToString(), "", 9);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaRetBF, 1, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 9);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaRetBF, 1, (Convert.ToDouble(dr4["total"]) * cotizacion).ToString(), "", 9);
                             }
                         }
                     }
@@ -1542,13 +1541,13 @@ namespace SistemaContable.General
                     ds4 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovBan Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov = 1 And mba_referencia = '{dr["moc_cpbte"]}' And mba_tipmovref = 42 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                     foreach (DataRow dr4 in ds4.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds4.Tables[0].Rows[0]["pcu_cuenta"]), 1, (Convert.ToDouble(ds4.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 11);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr4["pcu_cuenta"]), 1, (Convert.ToDouble(dr4["total"]) * cotizacion).ToString(), "", 11);
                     }
 
                     ds4 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovbanHisto Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov = 1 And mba_referencia = '{dr["moc_cpbte"]}' And mba_tipmovref = 42 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                     foreach (DataRow dr4 in ds4.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds4.Tables[0].Rows[0]["pcu_cuenta"]), 1, (Convert.ToDouble(ds4.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 11);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr4["pcu_cuenta"]), 1, (Convert.ToDouble(dr4["total"]) * cotizacion).ToString(), "", 11);
                     }
                 }
 
@@ -1559,7 +1558,7 @@ namespace SistemaContable.General
                     Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaCaja, 2, (suma * cotizacion).ToString(), "", 12);
                 }
 
-                AccesoBase.InsertUpdateDatosMoney($"Insert Into Aux_Asiento (aux_terminal, aux_asiento, aux_fecha, aux_cuenta, aux_codigo, aux_importe, aux_comenta, aux_orden, aux_CC) SELECT {terminal}, 1, '{dr["moc_feccont"]}', va1_cta, 2, va1_importe * {"*"}, va1_comentario, 12, va1_cc From MovVario Where va1_tipmov = 42 And va1_cpbte = '{dr["moc_cpbte"]}' ", cotizacion.ToString());
+                AccesoBase.InsertUpdateDatosMoney($"Insert Into Aux_Asiento (aux_terminal, aux_asiento, aux_fecha, aux_cuenta, aux_codigo, aux_importe, aux_comenta, aux_orden, aux_CC) SELECT {terminal}, 1, '{dr["moc_feccont"]}', va1_cta, 2, va1_importe * {"#"}, va1_comentario, 12, va1_cc From MovVario Where va1_tipmov = 42 And va1_cpbte = '{dr["moc_cpbte"]}' ", cotizacion.ToString(), true);
 
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Update(terminal);
 
@@ -1622,7 +1621,7 @@ namespace SistemaContable.General
 
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 2);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr3["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 2);
                         }
                     }                   
                 }
@@ -1639,7 +1638,7 @@ namespace SistemaContable.General
                 {
                     if (Convert.ToDouble(dr["moc_retgan"]) != 0)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaCaja, 2, (Convert.ToDouble(dr["moc_retgan"]) * cotizacion).ToString(), "", 4);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaRetGan, 2, (Convert.ToDouble(dr["moc_retgan"]) * cotizacion).ToString(), "", 4);
                     }
                 }
 
@@ -1650,14 +1649,14 @@ namespace SistemaContable.General
                         ds3 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From Movban Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov <> 2 And mba_referencia = '{dr["moc_cpbte"]}' And mba_tipmovref = 43 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 5);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr3["pcu_cuenta"]), 2, (Convert.ToDouble(dr3["total"]) * cotizacion).ToString(), "", 5);
 
                         }
 
                         ds3 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovbanHisto Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov <> 2 And mba_referencia = '{dr["moc_cpbte"]}' And mba_tipmovref = 43 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 5);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr3["pcu_cuenta"]), 2, (Convert.ToDouble(dr3["total"]) * cotizacion).ToString(), "", 5);
                         }
                     }
                 }
@@ -1676,9 +1675,13 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (((dr["moc_vlte"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vlte"])) + (dr["moc_vlte"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vlte"]))) != 0)
+                if (((dr["moc_vlte"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vlte"])) + (dr["moc_vltc"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vltc"]))) != 0)
                 {
-                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaCaja, 2, ((dr["moc_vltc"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vltc"])) + (dr["moc_vlte"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vlte"]) * cotizacion)).ToString(), "", 6);
+                    //Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaCaja, 2, ((dr["moc_vltc"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vltc"])) + (dr["moc_vlte"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vlte"]) * cotizacion)).ToString(), "", 6);
+                }
+                else
+                {
+                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaCaja, 1, ((dr["moc_vltc"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vltc"])) + (dr["moc_vlte"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vlte"])) * cotizacion).ToString(), "", 6);
                 }
 
                 if (!(dr["moc_tc"] is DBNull))
@@ -1688,12 +1691,12 @@ namespace SistemaContable.General
                         ds3 = AccesoBase.ListarDatos($"Select tap_nombre, pcu_cuenta, Sum(txo_importe) as total From TarjetaxOP Left Join (TarjetaP Left Join PCuenta on tap_ctacont = pcu_cuenta) on tap_codigo = txo_marca Where txo_ctapro = 0 And txo_nrocomp = '{dr["moc_cpbte"]}' And txo_tipmov = 43 Group By tap_nombre, pcu_cuenta");
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 7);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), Convert.ToInt32(dr3["pcu_cuenta"]), 2, (Convert.ToDouble(dr3["total"]) * cotizacion).ToString(), "", 7);
                         }
                     }
                 }
 
-                AccesoBase.InsertUpdateDatosMoney($"Insert Into Aux_Asiento (aux_terminal, aux_asiento, aux_fecha, aux_cuenta, aux_codigo, aux_importe, aux_comenta, aux_orden, aux_cc) SELECT {terminal}, 1, '{dr["moc_feccont"]}', va1_cta, 1, va1_imrpote * {"*"}, va1_comentario, 7, va1_cc From MovVario Where va1_tipmov = 43 And va1_cpbte = '{dr["moc_cpbte"]}' ", cotizacion.ToString());
+                AccesoBase.InsertUpdateDatosMoney($"Insert Into Aux_Asiento (aux_terminal, aux_asiento, aux_fecha, aux_cuenta, aux_codigo, aux_importe, aux_comenta, aux_orden, aux_cc) SELECT {terminal}, 1, '{dr["moc_feccont"]}', va1_cta, 1, va1_importe * {"#"}, va1_comentario, 7, va1_cc From MovVario Where va1_tipmov = 43 And va1_cpbte = '{dr["moc_cpbte"]}' ", cotizacion.ToString(), true);
 
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Update(terminal);
 
@@ -1702,7 +1705,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["moc_feccont"].ToString(), "EGR. VAR." + dr["moc_cpbte"].ToString() + "-" + dr["moc_descri"].ToString(), 0, 0, 43, dr["moc_cpbte"].ToString(), 0, dr, "vta_tipmov");
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["moc_feccont"].ToString(), "EGR. VAR." + dr["moc_cpbte"].ToString() + "-" + dr["moc_descri"].ToString(), 0, 0, 43, dr["moc_cpbte"].ToString(), 0, dr, "moc_tipmov");
             }
             catch (Exception ex)
             {
@@ -1794,7 +1797,7 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select tcc_tarjeta, pcu_cuenta, tcc_importe as total From MovVtaTC Left Join (Tarjeta Left Join PCuenta on tar_ctacont = pcu_cuenta) on tcc_tarjeta = tar_codigo Where tcc_tipmov = 31 And tcc_cpbte = '{dr["vta_cpbte"]}'");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 1, ((Convert.ToDouble(ds3.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "TARJETA DE CREDITO", 2);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["pcu_cuenta"]), 1, ((Convert.ToDouble(dr3["total"])) * cotizacion).ToString(), "TARJETA DE CREDITO", 2);
                     }
                 }
 
@@ -1819,11 +1822,11 @@ namespace SistemaContable.General
                         {
                             if (!(ds5.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "RETENCION DE IIBB", 6);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr5["ret_ctacont"]), 1, ((Convert.ToDouble(dr5["total"])) * cotizacion).ToString(), "RETENCION DE IIBB", 6);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIIBB, 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "RETENCION DE IIBB", 6);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIIBB, 1, ((Convert.ToDouble(dr5["total"])) * cotizacion).ToString(), "RETENCION DE IIBB", 6);
                             }
                         }
                     }
@@ -1843,11 +1846,11 @@ namespace SistemaContable.General
                         {
                             if (!(ds5.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "RETENCION DE IVA", 7);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr5["ret_ctacont"]), 1, ((Convert.ToDouble(dr5["total"])) * cotizacion).ToString(), "RETENCION DE IVA", 7);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIVA, 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "RETENCION DE IVA", 7);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetIVA, 1, ((Convert.ToDouble(dr5["total"]) * cotizacion)).ToString(), "RETENCION DE IVA", 7);
                             }
                         }
                     }
@@ -1891,11 +1894,11 @@ namespace SistemaContable.General
                         {
                             if (!(ds5.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "RETENCION SUSS", 8);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr5["ret_ctacont"]), 1, ((Convert.ToDouble(dr5["total"]) * cotizacion)).ToString(), "RETENCION SUSS", 8);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetSuss, 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "RETENCION SUSS", 8);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetSuss, 1, ((Convert.ToDouble(dr5["total"]) * cotizacion)).ToString(), "RETENCION SUSS", 8);
                             }
                         }
                     }
@@ -1915,11 +1918,11 @@ namespace SistemaContable.General
                         {
                             if (!(ds5.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds5.Tables[0].Rows[0]["ret_ctacont"]), 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "BONO FISCAL", 9);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr5["ret_ctacont"]), 1, ((Convert.ToDouble(dr5["total"]) * cotizacion)).ToString(), "BONO FISCAL", 9);
                             }
                             else
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetBF, 1, ((Convert.ToDouble(ds5.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "BONO FISCAL", 9);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaRetBF, 1, ((Convert.ToDouble(dr5["total"]) * cotizacion)).ToString(), "BONO FISCAL", 9);
                             }
                         }
                     }
@@ -1939,13 +1942,13 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovBan Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov = 1 And mba_referencia = '{dr["vta_cpbte"]}' And mba_tipmovref = 31 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 1, ((Convert.ToDouble(ds3.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "", 11);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["pcu_cuenta"]), 1, ((Convert.ToDouble(dr3["total"])) * cotizacion).ToString(), "", 11);
                     }
 
                     ds3 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovBanHisto Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov = 1 And mba_referencia = '{dr["vta_cpbte"]}' And mba_tipmovref = 31 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 1, ((Convert.ToDouble(ds3.Tables[0].Rows[0]["total"])) * cotizacion).ToString(), "", 11);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["pcu_cuenta"]), 1, ((Convert.ToDouble(dr3["total"])) * cotizacion).ToString(), "", 11);
                     }
                 }
 
@@ -1956,8 +1959,8 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta, Sum(chp_importe) as total From ChequePropio Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on chp_nroban = cta_banco And chp_tipcta = cta_tipcta And chp_sucursal = cta_sucursal And chp_nrocta = cta_nrocta Where (chp_tipo <> 'T' or chp_tipo is null or chp_tipo = '') And chp_ordpag = '{dr["vta_cpbte"]}' And chp_tipmov = 31 Group By chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 2, ((Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion)).ToString(), "", 12);
-                        Vuelto += (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["pcu_cuenta"]), 2, ((Convert.ToDouble(dr3["total"]) * cotizacion)).ToString(), "", 12);
+                        Vuelto += (Convert.ToDouble(dr3["total"]) * cotizacion);
                     }
 
                     double suma = (dr["vta_vltc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_vltc"])) + (dr["vta_vlte"] is DBNull ? 0 : Convert.ToDouble(dr["vta_vlte"]));
@@ -1992,8 +1995,8 @@ namespace SistemaContable.General
                     ds6 = AccesoBase.ListarDatos($"Select (Case When IsNUll(vta_contrap,0) = 0 Then IsNUll(sec_ctaDeud,0) Else IsNUll(vta_contrap,0) End) as rbo_contrap, Sum(cta_total) as pago From MovCtaCteVta Left Join (MovVta Left Join Seccion on vta_seccion = sec_codigo) on (CONVERT(VARCHAR,vta_tipmov) + vta_cpbte) = left(cta_referencia,14) And cta_ctacli = vta_ctacli Where Not (cta_referencia is null or cta_referencia = '' or cta_referencia = 'A CUENTA') And cta_tipmov = {dr["vta_tipmov"]} And cta_cpbte = '{dr["vta_cpbte"]}' Group By (Case When IsNUll(vta_contrap,0) = 0 Then IsNUll(sec_ctaDeud,0) Else IsNUll(vta_contrap,0) End)");
                     foreach (DataRow dr6 in ds6.Tables[0].Rows)
                     {
-                        long contrap = Convert.ToInt64(ds6.Tables[0].Rows[0]["rbo_contrap"]) == 0 ? CtaDeud : Convert.ToInt64(ds6.Tables[0].Rows[0]["rbo_contrap"]);
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, contrap, 2, (ds6.Tables[0].Rows[0]["pago"] is DBNull ? 0 : Convert.ToDouble(ds6.Tables[0].Rows[0]["pago"])).ToString(), "", n);
+                        long contrap = Convert.ToInt64(dr6["rbo_contrap"]) == 0 ? CtaDeud : Convert.ToInt64(dr6["rbo_contrap"]);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, contrap, 2, (dr6["pago"] is DBNull ? 0 : Convert.ToDouble(dr6["pago"])).ToString(), "", n);
                         n += 1;
                     }
                 }
@@ -2028,16 +2031,16 @@ namespace SistemaContable.General
                         }
                         else
                         {
-                            CtaAUsar = ds6.Tables[0].Rows[0]["pcu_cuenta"] is DBNull ? CtaAnticipo : Convert.ToInt64(ds6.Tables[0].Rows[0]["pcu_cuenta"]);
+                            CtaAUsar = dr6["pcu_cuenta"] is DBNull ? CtaAnticipo : Convert.ToInt64(dr6["pcu_cuenta"]);
                         }
 
                         if ((dr["vta_moneda2"] is DBNull ? 1 : Convert.ToDouble(dr["vta_moneda2"])) == 1)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaAUsar, 2, (ds6.Tables[0].Rows[0]["pago"] is DBNull ? 0 : Convert.ToDouble(ds6.Tables[0].Rows[0]["pago"])).ToString(), "", n, cc);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaAUsar, 2, (dr6["pago"] is DBNull ? 0 : Convert.ToDouble(dr6["pago"])).ToString(), "", n, cc);
                         }
                         else
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaAUsar, 2, (ds6.Tables[0].Rows[0]["pago"] is DBNull ? 0 : Convert.ToDouble(ds6.Tables[0].Rows[0]["pago"]) * cotizacion).ToString(), "", n, cc);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaAUsar, 2, (dr6["pago"] is DBNull ? 0 : Convert.ToDouble(dr6["pago"]) * cotizacion).ToString(), "", n, cc);
                         }
                         n += 1;
                     }
@@ -2113,7 +2116,7 @@ namespace SistemaContable.General
                         ds3 = AccesoBase.ListarDatos($"Select tap_nombre, pcu_cuenta, Sum(txo_importe) as total From TarjetaxOP Left Join (TarjetaP Left Join PCuenta on tap_ctacont = pcu_cuenta) on tap_codigo = txo_marca Where txo_ctapro = {dr["cpa_ctapro"]} And txo_nrocomp = '{dr["cpa_nrocomp"]}' And txo_tipmov = 21 ");
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 2, ds3.Tables[0].Rows[0]["total"].ToString(), "", 20);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["pcu_cuenta"]), 2, dr3["total"].ToString(), "", 20);
                         }
                     }
                 }
@@ -2125,7 +2128,7 @@ namespace SistemaContable.General
                         ds3 = AccesoBase.ListarDatos($"Select chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta, Sum(chp_importe) as total From ChequePropio Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on chp_nroban = cta_banco And chp_tipcta = cta_tipcta And chp_sucursal = cta_sucursal And chp_nrocta = cta_nrocta Where (chp_tipo <> 'T' or chp_tipo is null or chp_tipo = '') And chp_ordpag = '{dr["cpa_nrocomp"]}' And chp_tipmov = 21 Group By chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta");
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 2);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["pcu_cuenta"]), 2, (Convert.ToDouble(dr3["total"]) * cotizacion).ToString(), "", 2);
                         }
                     }
                 }
@@ -2161,13 +2164,13 @@ namespace SistemaContable.General
                         ds3 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From Movban Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_referencia = '{dr["cpa_nrocomp"]}' And mba_tipmovref = 21 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 5);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["pcu_cuenta"]), 2, (Convert.ToDouble(dr3["total"]) * cotizacion).ToString(), "", 5);
                         }
 
                         ds3 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovbanHisto Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_referencia = '{dr["cpa_nrocomp"]}' And mba_tipmovref = 21 Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 5);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["pcu_cuenta"]), 2, (Convert.ToDouble(dr3["total"]) * cotizacion).ToString(), "", 5);
                         }
                     }
                 }
@@ -2206,23 +2209,23 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select cpa_ctacpbte, Sum(cta_total) as total From MovCtaCte Left Join MovCpa on cpa_ctapro = cta_ctapro And CONVERT(VARCHAR,cpa_tipmov) = left(cta_referencia,2) And cpa_nrocomp = SUBSTRING(cta_referencia,3,14) Where cta_ctapro = {dr["cpa_ctapro"]} And cta_tipmov = 21 And cta_nrocomp = '{dr["cpa_nrocomp"]}' And not (IsNull(cta_referencia,'') = '' or IsNull(cta_referencia,'') = 'A CUENTA') Group By cpa_ctacpbte");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        if ((ds3.Tables[0].Rows[0]["cpa_ctacpbte"] is DBNull ? "" : ds3.Tables[0].Rows[0]["cpa_ctacpbte"].ToString()) == "")
+                        if ((dr3["cpa_ctacpbte"] is DBNull ? "" : dr3["cpa_ctacpbte"].ToString()) == "")
                         {
                             CtaAux = CtaProv;
                         }
                         else
                         {
-                            if (Convert.ToDouble(ds3.Tables[0].Rows[0]["cpa_ctacpbte"]) == 0)
+                            if (Convert.ToDouble(dr3["cpa_ctacpbte"]) == 0)
                             {
                                 CtaAux = CtaProv;
                             }
                             else
                             {
-                                CtaAux = Convert.ToInt64(ds3.Tables[0].Rows[0]["cpa_ctacpbte"]);
+                                CtaAux = Convert.ToInt64(dr3["cpa_ctacpbte"]);
                             }
                         }
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaAux, 1, (Convert.ToDouble(dr3["total"]) * cotizacion).ToString(), "", 6);
                     }
-                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaAux, 1, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 6);
                 }
 
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Update(terminal);
@@ -2457,7 +2460,7 @@ namespace SistemaContable.General
                 ds3 = AccesoBase.ListarDatos($"Select cli_codigo, con_ctacont, Sum(hin_calculo) as total From SE_HistoNovedad Left Join Cliente on hin_ctacli = cli_codigo Left Join SE_ConceptoF on hin_concepto = con_codigo And con_servicio = hin_servicio Left Join SE_Servicio on hin_servicio = ser_codigo Where hin_tipmov = {dr["vta_tipmov"]} And hin_ctacli = {dr["vta_ctacli"]} And hin_cpbte = '{dr["vta_cpbte"]}' Group By cli_codigo, con_ctacont");
                 foreach (DataRow dr3 in ds3.Tables[0].Rows)
                 {
-                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecemi"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["con_ctacont"]), h, (Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) * cotizacion).ToString(), "", 2);
+                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecemi"].ToString(), Convert.ToInt32(dr3["con_ctacont"]), h, (Convert.ToDouble(dr3["total"]) * cotizacion).ToString(), "", 2);
                 }
 
                 DataSet ds4 = new DataSet();
@@ -2682,9 +2685,9 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select his_ctacont, Sum(his_total) As total From MovArticLP Where his_codigo = {dr["vta_codigo"]} Group by his_ctacont");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        dto = Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]), 2) * (dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"]) / 100), 2);
-                        neto1 = Convert.ToDouble(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]), 2).ToString("N2"));
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["his_ctacont"]) == 0 ? CtaNetoVta : Convert.ToInt32(ds3.Tables[0].Rows[0]["his_ctacont"]), h, Math.Round((neto1 * cotizacion), 2).ToString(), "", n);
+                        dto = Math.Round(Math.Round(Convert.ToDouble(dr3["total"]), 2) * (dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"]) / 100), 2);
+                        neto1 = Convert.ToDouble(Math.Round(Convert.ToDouble(dr3["total"]), 2).ToString("N2"));
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["his_ctacont"]) == 0 ? CtaNetoVta : Convert.ToInt32(dr3["his_ctacont"]), h, Math.Round((neto1 * cotizacion), 2).ToString(), "", n);
                         n += 1;
                     }
                 }
@@ -2693,9 +2696,9 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select his_ctacont, Sum(his_total / (1 + (his_aliva / 100.0))) As total From MovArticLP Where his_codigo = {dr["vta_codigo"]} Group by his_ctacont");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        dto = Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]), 2) * (dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"]) / 100), 2);
-                        neto1 = Convert.ToDouble(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]), 2).ToString("N2"));
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["his_ctacont"]) == 0 ? CtaNetoVta : Convert.ToInt32(ds3.Tables[0].Rows[0]["his_ctacont"]), h, Math.Round((neto1 * cotizacion), 2).ToString(), "", n);
+                        dto = Math.Round(Math.Round(Convert.ToDouble(dr3["total"]), 2) * (dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"]) / 100), 2);
+                        neto1 = Convert.ToDouble(Math.Round(Convert.ToDouble(dr3["total"]), 2).ToString("N2"));
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["his_ctacont"]) == 0 ? CtaNetoVta : Convert.ToInt32(dr3["his_ctacont"]), h, Math.Round((neto1 * cotizacion), 2).ToString(), "", n);
                         n += 1;
                     }
                 }
@@ -2716,9 +2719,9 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select his_aliva, ali_ctacont, Sum(his_total) As Total From MovArticLP Left Join AliIva on ali_porc = his_aliva Where his_aliva <> 0 And his_codigo = {dr["vta_codigo"]} Group by his_aliva, ali_ctacont");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        dto = Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]), 2) * (dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"]) / 100), 2);
-                        iva1 = Convert.ToDouble(Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) - dto, 2) * (Convert.ToDouble(ds3.Tables[0].Rows[0]["his_aliva"]) / 100), 2).ToString("N2"));
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["ali_ctacont"]), h, Math.Round((iva1 * cotizacion), 2).ToString(), "", n);
+                        dto = Math.Round(Math.Round(Convert.ToDouble(dr3["total"]), 2) * (dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"]) / 100), 2);
+                        iva1 = Convert.ToDouble(Math.Round(Math.Round(Convert.ToDouble(dr3["total"]) - dto, 2) * (Convert.ToDouble(dr3["his_aliva"]) / 100), 2).ToString("N2"));
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["ali_ctacont"]), h, Math.Round((iva1 * cotizacion), 2).ToString(), "", n);
                         n += 1;
                     }
                 }
@@ -2727,9 +2730,9 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select his_ctacont, Sum(his_total / (1 + (his_aliva / 100.0))) As total From MovArticLP Where his_codigo = {dr["vta_codigo"]} Group by his_ctacont");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        dto = Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]), 2) * (dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"]) / 100), 2);
-                        iva1 = Convert.ToDouble(Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) - dto, 2) * (Convert.ToDouble(ds3.Tables[0].Rows[0]["his_aliva"]) / 100), 2).ToString("N2"));
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["ali_ctacont"]), h, Math.Round((iva1 * cotizacion), 2).ToString(), "", n);
+                        dto = Math.Round(Math.Round(Convert.ToDouble(dr3["total"]), 2) * (dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"]) / 100), 2);
+                        iva1 = Convert.ToDouble(Math.Round(Math.Round(Convert.ToDouble(dr3["total"]) - dto, 2) * (Convert.ToDouble(dr3["his_aliva"]) / 100), 2).ToString("N2"));
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["ali_ctacont"]), h, Math.Round((iva1 * cotizacion), 2).ToString(), "", n);
                         n += 1;
                     }
                 }
@@ -2853,7 +2856,7 @@ namespace SistemaContable.General
                 ds3 = AccesoBase.ListarDatos($"Select cel_aliva as Aliva, ali_ctacont, Sum(cel_iva) as iva From SE_Celular Left Join CondIva on iva_codigo = cel_condiva Left Join AliIva on cel_aliva = ali_porc Where cel_LP = '{dr["vta_cpbte"]}' Group By cel_aliva, ali_ctacont ");
                 foreach (DataRow dr3 in ds3.Tables[0].Rows) //se calcula los importes de iva debito
                 {
-                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr["ali_ctacont"]), h, Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["iva"]), 2).ToString(), "", n);
+                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr["ali_ctacont"]), h, Math.Round(Convert.ToDouble(dr3["iva"]), 2).ToString(), "", n);
                     n += 1;
                 }
 
@@ -3108,9 +3111,9 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select his_ctacont, Sum(his_total) As total From MovArtic Where his_codigo = {dr["vta_codigo"]} Group by his_ctacont");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        dto = Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]), 2) * ((dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"])) / 100), 2);
-                        neto1 = Convert.ToDouble(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) - dto, 2).ToString("N2"));
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["his_ctacont"]) == 0 ? CtaNetoVta : Convert.ToInt32(ds3.Tables[0].Rows[0]["his_ctacont"]), h, Math.Round((neto1 * cotizacion), 2).ToString(), "", n);
+                        dto = Math.Round(Math.Round(Convert.ToDouble(dr3["total"]), 2) * ((dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"])) / 100), 2);
+                        neto1 = Convert.ToDouble(Math.Round(Convert.ToDouble(dr3["total"]) - dto, 2).ToString("N2"));
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["his_ctacont"]) == 0 ? CtaNetoVta : Convert.ToInt32(dr3["his_ctacont"]), h, Math.Round((neto1 * cotizacion), 2).ToString(), "", n);
                         n += 1;
                     }
                 }
@@ -3119,9 +3122,9 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select his_ctacont, Sum(his_total / (1 + (his_aliva / 100.0))) As total From MovArtic Where his_codigo = {dr["vta_codigo"]} Group by his_ctacont");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        dto = Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]), 2) * ((dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"])) / 100), 2);
-                        neto1 = Convert.ToDouble(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) - dto, 2).ToString("N2"));
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["his_ctacont"]) == 0 ? CtaNetoVta : Convert.ToInt32(ds3.Tables[0].Rows[0]["his_ctacont"]), h, Math.Round((neto1 * cotizacion), 2).ToString(), "", n);
+                        dto = Math.Round(Math.Round(Convert.ToDouble(dr3["total"]), 2) * ((dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"])) / 100), 2);
+                        neto1 = Convert.ToDouble(Math.Round(Convert.ToDouble(dr3["total"]) - dto, 2).ToString("N2"));
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["his_ctacont"]) == 0 ? CtaNetoVta : Convert.ToInt32(dr3["his_ctacont"]), h, Math.Round((neto1 * cotizacion), 2).ToString(), "", n);
                         n += 1;
                     }
                 }
@@ -3142,9 +3145,9 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select his_aliva, ali_ctacont, Sum(his_total) As total From MovArtic Left Join AliIva on ali_porc = his_aliva Where his_aliva <> 0 And his_codigo = {dr["vta_codigo"]} Group by his_aliva, ali_ctacont");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        dto = Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]), 2) * ((dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"])) / 100), 2);
-                        iva1 = Convert.ToDouble(Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) - dto, 2) * (Convert.ToDouble(ds3.Tables[0].Rows[0]["his_aliva"]) / 100), 2).ToString("N2"));
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaIvaD(Convert.ToDouble(ds3.Tables[0].Rows[0]["his_aliva"]), Convert.ToInt64(ds3.Tables[0].Rows[0]["ali_ctacont"]), Convert.ToInt32(dr["vta_seccion"])), h, Math.Round((iva1 * cotizacion), 2).ToString(), "", n);
+                        dto = Math.Round(Math.Round(Convert.ToDouble(dr3["total"]), 2) * ((dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"])) / 100), 2);
+                        iva1 = Convert.ToDouble(Math.Round(Math.Round(Convert.ToDouble(dr3["total"]) - dto, 2) * (Convert.ToDouble(dr3["his_aliva"]) / 100), 2).ToString("N2"));
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaIvaD(Convert.ToDouble(dr3["his_aliva"]), Convert.ToInt64(dr3["ali_ctacont"]), Convert.ToInt32(dr["vta_seccion"])), h, Math.Round((iva1 * cotizacion), 2).ToString(), "", n);
                         n += 1;
                     }
                 }
@@ -3153,9 +3156,9 @@ namespace SistemaContable.General
                     ds3 = AccesoBase.ListarDatos($"Select his_aliva, ali_ctacont, Sum(his_total) As Total From MovArtic Left Join AliIva on ali_porc = his_aliva Where his_aliva <> 0 And his_codigo = {dr["vta_codigo"]} Group by his_aliva, ali_ctacont");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
-                        dto = Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]), 2) * (dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"]) / 100), 2);
-                        iva1 = Convert.ToDouble(Math.Round(Math.Round(Convert.ToDouble(ds3.Tables[0].Rows[0]["total"]) - dto, 2) * (Convert.ToDouble(ds3.Tables[0].Rows[0]["his_aliva"]) / 100), 2).ToString("N2"));
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaIvaD(Convert.ToDouble(ds3.Tables[0].Rows[0]["his_aliva"]), Convert.ToInt64(ds3.Tables[0].Rows[0]["ali_ctacont"]), Convert.ToInt32(dr["vta_seccion"])), h, Math.Round((iva1 * cotizacion), 2).ToString(), "", n);
+                        dto = Math.Round(Math.Round(Convert.ToDouble(dr3["total"]), 2) * (dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"]) / 100), 2);
+                        iva1 = Convert.ToDouble(Math.Round(Math.Round(Convert.ToDouble(dr3["total"]) - dto, 2) * (Convert.ToDouble(dr3["his_aliva"]) / 100), 2).ToString("N2"));
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaIvaD(Convert.ToDouble(dr3["his_aliva"]), Convert.ToInt64(dr3["ali_ctacont"]), Convert.ToInt32(dr["vta_seccion"])), h, Math.Round((iva1 * cotizacion), 2).ToString(), "", n);
                         n += 1;
                     }
                 }
@@ -3174,7 +3177,7 @@ namespace SistemaContable.General
                 ds3 = AccesoBase.ListarDatos($"Select otr_ctacont, otr_descri, Sum(otr_importe) as total From HistoOtrosTributosVta Where otr_importe <> 0 and otr_codigo = {dr["vta_codigo"]} Group By otr_ctacont, otr_descri");
                 foreach (DataRow dr3 in ds3.Tables[0].Rows)
                 {
-                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds3.Tables[0].Rows[0]["otr_ctacont"]), h, (ds3.Tables[0].Rows[0]["total"] is DBNull ? 0 : Convert.ToDouble(ds3.Tables[0].Rows[0]["total"])).ToString(), ds3.Tables[0].Rows[0]["otr_descri"] is DBNull ? "" : ds3.Tables[0].Rows[0]["otr_descri"].ToString().Substring(0, 80), n);
+                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr3["otr_ctacont"]), h, (dr3["total"] is DBNull ? 0 : Convert.ToDouble(dr3["total"])).ToString(), dr3["otr_descri"] is DBNull ? "" : dr3["otr_descri"].ToString().Substring(0, 80), n);
                     n += 1;
                 }
 
@@ -3206,7 +3209,7 @@ namespace SistemaContable.General
                             ds6 = AccesoBase.ListarDatos($"Select (Case When IsNUll(vta_contrap,0) = 0 Then IsNUll(sec_ctaDeud,0) Else IsNUll(vta_contrap,0) End) as rbo_contrap, Sum(cta_total) as pago From MovCtaCteVta Left Join (MovVta Left Join Seccion on vta_seccion = sec_codigo) on (CONVERT(VARCHAR,vta_tipmov) + vta_cpbte) = left(cta_referencia,14) And cta_ctacli = vta_ctacli Where Not (cta_referencia is null or cta_referencia = '' or cta_referencia = 'A CUENTA') And cta_tipmov = {dr["vta_tipmov"]} And cta_cpbte = '{dr["vta_cpbte"]}' Group By (Case When IsNUll(vta_contrap,0) = 0 Then IsNUll(sec_ctaDeud,0) Else IsNUll(vta_contrap,0) End)");
                             foreach (DataRow dr6 in ds6.Tables[0].Rows)
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, (Convert.ToInt64(ds6.Tables[0].Rows[0]["rbo_contrap"]) == 0 ? CtaDeuda : Convert.ToInt64(ds6.Tables[0].Rows[0]["rbo_contrap"])), d, (ds6.Tables[0].Rows[0]["pago"] is DBNull ? 0 : Convert.ToDouble(ds6.Tables[0].Rows[0]["pago"])).ToString(), "", n);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, (Convert.ToInt64(dr6["rbo_contrap"]) == 0 ? CtaDeuda : Convert.ToInt64(dr6["rbo_contrap"])), d, (dr6["pago"] is DBNull ? 0 : Convert.ToDouble(dr6["pago"])).ToString(), "", n);
                                 n += 1;
                             }
                         }
@@ -3215,7 +3218,7 @@ namespace SistemaContable.General
                             ds6 = AccesoBase.ListarDatos($"Select pcu_cuenta, coc_cccta, Sum(cta_total) as Pago From MovCtaCteVta Left Join MovVta on LEFT(cta_referencia,1) = vta_tipmov And SUBSTRING(cta_referencia,2,14) = vta_cpbte And cta_ctacli = vta_ctacli Left Join (ConceptoCont Left Join PCuenta on coc_contrap = pcu_cuenta) on vta_conceptocont = coc_codigo Where cta_tipmov = {dr["vta_tipmov"]} And cta_cpbte = '{dr["vta_cpbte"]}' And not (cta_referencia = '' or cta_referencia is null or cta_referencia = 'A CUENTA') Group By pcu_cuenta, coc_cccta");
                             foreach (DataRow dr6 in ds6.Tables[0].Rows)
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds6.Tables[0].Rows[0]["pcu_cuenta"]), d, ((ds6.Tables[0].Rows[0]["pago"] is DBNull ? 0 : Convert.ToDouble(ds6.Tables[0].Rows[0]["pago"])) * cotizacion).ToString(), "", n, (ds6.Tables[0].Rows[0]["coc_cccta"] is DBNull ? 0 : Convert.ToInt32(ds6.Tables[0].Rows[0]["coc_cccta"])));
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr6["pcu_cuenta"]), d, ((dr6["pago"] is DBNull ? 0 : Convert.ToDouble(dr6["pago"])) * cotizacion).ToString(), "", n, (dr6["coc_cccta"] is DBNull ? 0 : Convert.ToInt32(dr6["coc_cccta"])));
                                 n += 1;
                             }
 
@@ -3230,15 +3233,13 @@ namespace SistemaContable.General
                                 }
                                 else
                                 {
-                                    CtaAUsar = ds6.Tables[0].Rows[0]["pcu_cuenta"] is DBNull ? CtaAnticipo : Convert.ToInt64(ds6.Tables[0].Rows[0]["pcu_cuenta"]);
+                                    CtaAUsar = dr6["pcu_cuenta"] is DBNull ? CtaAnticipo : Convert.ToInt64(dr6["pcu_cuenta"]);
                                 }
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaAUsar, d, ((ds6.Tables[0].Rows[0]["pago"] is DBNull ? 0 : Convert.ToDouble(ds6.Tables[0].Rows[0]["pago"])) * cotizacion).ToString(), "", n, (ds6.Tables[0].Rows[0]["coc_cccta"] is DBNull ? 0 : Convert.ToInt32(ds6.Tables[0].Rows[0]["coc_cccta"])));
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaAUsar, d, ((dr6["pago"] is DBNull ? 0 : Convert.ToDouble(dr6["pago"])) * cotizacion).ToString(), "", n, (dr6["coc_cccta"] is DBNull ? 0 : Convert.ToInt32(dr6["coc_cccta"])));
                                 n += 1;
                             }
                         }
-
                         AccesoBase.InsertUpdateDatosMoney($"Update Aux_Asiento Set aux_importe = Round(aux_importe * {"*"},2) Where aux_terminal = {terminal}", cotizacion.ToString());
-
                     }
                 }
                 else
@@ -3299,7 +3300,7 @@ namespace SistemaContable.General
                     ds2 = AccesoBase.ListarDatos($"Select tcc_tarjeta, pcu_cuenta, Sum(tcc_importe) as total From MovVtaTC Left Join (Tarjeta Left Join PCuenta on tar_ctacont = pcu_cuenta) on tcc_tarjeta = tar_codigo Where tcc_tipmov = {dr["vta_tipmov"]} And tcc_cpbte = '{dr["vta_cpbte"]}' Group By tcc_tarjeta, pcu_cuenta");
                     foreach (DataRow dr2 in ds2.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds2.Tables[0].Rows[0]["pcu_cuenta"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 2);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr2["pcu_cuenta"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 2);
                     }
                 }
 
@@ -3321,9 +3322,9 @@ namespace SistemaContable.General
                     {
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            if (!(ds3.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
+                            if (!(dr3["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 5);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr3["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 5);
                             }
                             else
                             {
@@ -3346,9 +3347,9 @@ namespace SistemaContable.General
                         {
                             foreach (DataRow dr3 in ds3.Tables[0].Rows)
                             {
-                                if (!(ds3.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
+                                if (!(dr3["ret_ctacont"] is DBNull))
                                 {
-                                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 6);
+                                    Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr3["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 6);
                                 }
                                 else
                                 {
@@ -3370,9 +3371,9 @@ namespace SistemaContable.General
                     {
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            if (!(ds3.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
+                            if (!(dr3["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 7);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr3["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 7);
                             }
                             else
                             {
@@ -3393,9 +3394,9 @@ namespace SistemaContable.General
                     {
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            if (!(ds3.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
+                            if (!(dr3["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 8);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr3["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 8);
                             }
                             else
                             {
@@ -3416,9 +3417,9 @@ namespace SistemaContable.General
                     {
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            if (!(ds3.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
+                            if (!(dr3["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 9);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr3["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 9);
                             }
                             else
                             {
@@ -3439,9 +3440,9 @@ namespace SistemaContable.General
                     {
                         foreach (DataRow dr3 in ds3.Tables[0].Rows)
                         {
-                            if (!(ds3.Tables[0].Rows[0]["ret_ctacont"] is DBNull))
+                            if (!(dr3["ret_ctacont"] is DBNull))
                             {
-                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 10);
+                                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr3["ret_ctacont"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 10);
                             }
                             else
                             {
@@ -3465,13 +3466,13 @@ namespace SistemaContable.General
                     ds2 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovBan Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov = 1 And mba_referencia = '{dr["vta_cpbte"]}' And mba_tipmovref = {dr["vta_tipmov"]} Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                     foreach (DataRow dr2 in ds2.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds2.Tables[0].Rows[0]["pcu_cuenta"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 12);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr2["pcu_cuenta"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 12);
                     }
 
                     ds2 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovBanHisto Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_tipmov = 1 And mba_referencia = '{dr["vta_cpbte"]}' And mba_tipmovref = {dr["vta_tipmov"]} Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                     foreach (DataRow dr2 in ds2.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds2.Tables[0].Rows[0]["pcu_cuenta"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 12);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr2["pcu_cuenta"]), 1, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 12);
                     }
                 }
 
@@ -3518,7 +3519,7 @@ namespace SistemaContable.General
                     ds2 = AccesoBase.ListarDatos($"Select chp_nroban, chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta, Sum(chp_importe) as total From ChequePropio Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on chp_nroban = cta_banco And chp_tipcta = cta_tipcta And chp_sucursal = cta_sucursal And chp_nrocta = cta_nrocta Where (chp_tipo <> 'T' or chp_tipo is null or chp_tipo = '') And chp_tipmov = {dr["vta_tipmov"]} And chp_ordpag = '{dr["vta_cpbte"]}' Group By chp_nroban, chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta");
                     foreach (DataRow dr2 in ds2.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds2.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 2);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr2["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 2);
                     }
                 }
 
@@ -3532,13 +3533,13 @@ namespace SistemaContable.General
                     ds2 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as Tot From MovBan Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_referencia = '{dr["vta_cpbte"]}' And mba_tipmovref = {dr["vta_tipmov"]} Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                     foreach (DataRow dr2 in ds2.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds2.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 5);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr2["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 5);
                     }
 
                     ds2 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as Tot From MovBanHisto Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_referencia = '{dr["vta_cpbte"]}' And mba_tipmovref = {dr["vta_tipmov"]} Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                     foreach (DataRow dr2 in ds2.Tables[0].Rows)
                     {
-                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(ds2.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 5);
+                        Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecpro"].ToString(), Convert.ToInt32(dr2["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 5);
                     }
                 }
 
@@ -3690,7 +3691,7 @@ namespace SistemaContable.General
             ds = AccesoBase.ListarDatos($"Select * From DetTotCpa Where dcp_tipo = {tipo} And dcp_codigo = {codigo}");
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds.Tables[0].Rows[0]["dcp_ctacont"]), debe, (Convert.ToDouble(ds.Tables[0].Rows[0]["dcp_descri"]) * cotD).ToString(), ds.Tables[0].Rows[0]["dcp_descri"].ToString(), orden);
+                Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr["dcp_ctacont"]), debe, (Convert.ToDouble(dr["dcp_descri"]) * cotD).ToString(), dr["dcp_descri"].ToString(), orden);
             }
 
             if (ds.Tables[0].Rows.Count > 0)
@@ -4157,7 +4158,7 @@ namespace SistemaContable.General
                         ds2 = AccesoBase.ListarDatos($"Select chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta, Sum(chp_importe) as total From ChequePropio Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on chp_nroban = cta_banco And chp_tipcta = cta_tipcta And chp_sucursal = cta_sucursal And chp_nrocta = cta_nrocta Where (chp_tipo <> 'T' or chp_tipo is null or chp_tipo = '') And chp_ordpag = '{dr["cpa_nrocomp"]}' And chp_tipmov = {dr["cpa_tipmov"]}");
                         foreach (DataRow dr2 in ds2.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds2.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 2);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr2["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 2);
                         }
                     }
                 }
@@ -4188,13 +4189,13 @@ namespace SistemaContable.General
                         ds2 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From Movban Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_referencia = '{dr["cpa_tipmov"]}{dr["cpa_tipmov"]}' Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                         foreach (DataRow dr2 in ds2.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds2.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 5);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr2["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 5);
                         }
 
                         ds2 = AccesoBase.ListarDatos($"Select mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta, Sum(mba_importe) as total From MovbanHisto Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on mba_banco = cta_banco And mba_tipcta = cta_tipcta And mba_sucursal = cta_sucursal And mba_nrocta = cta_nrocta Where mba_referencia = '{dr["cpa_tipmov"]}{dr["cpa_tipmov"]}' Group By mba_banco, mba_tipcta, mba_sucursal, mba_nrocta, pcu_cuenta");
                         foreach (DataRow dr2 in ds2.Tables[0].Rows)
                         {
-                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(ds2.Tables[0].Rows[0]["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 5);
+                            Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr2["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 5);
                         }
                     }
                 }

@@ -35,23 +35,9 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
         private void cargarDatos()
         {
-            DataSet ds = new DataSet();
-            ds = data.listaCentroC();
-            if (ds.Tables.Count > 0)
-            {
-                cbCentroCostos1.DataSource = ds.Tables[0];
-                cbCentroCostos1.DisplayMember = "cec_descri";
-                cbCentroCostos1.ValueMember = "cec_codigo";
+            cbCentroCostos1.Text = "NINGUNO";
+            cbCentroCostos2.Text = "NINGUNO";
 
-                cbCentroCostos2.DataSource = ds.Tables[0];
-                cbCentroCostos2.DisplayMember = "cec_descri";
-                cbCentroCostos2.ValueMember = "cec_codigo";
-            }
-            else
-            {
-                cbCentroCostos1.Text = "NINGUNO";
-                cbCentroCostos2.Text = "NINGUNO";
-            }
             MConceptoContable mConceptoContable = new MConceptoContable();
             if (Accion == "Agregar")
             {
@@ -176,6 +162,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             {
                 tbNroCuenta.Text = "";
                 tbDescriCuenta.Text = "";
+                cbCentroCostos1.DataSource = null;
+                cbCentroCostos1.Text = "NINGUNO";               
                 return;
             }
 
@@ -195,6 +183,80 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La cuenta contable No puede recibir movimientos.", false);
                 MessageBox.ShowDialog();
+                return;
+            }
+
+            DataSet ds2 = new DataSet();
+            ds2 = AccesoBase.ListarDatos($"SELECT * FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{tbNroCuenta.Text}' AND cec_codigo is not null");
+            if (ds2.Tables[0].Rows.Count != 0)
+            {
+                foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                {
+                    cbCentroCostos1.DataSource = ds2.Tables[0];
+                    cbCentroCostos1.ValueMember = "cec_codigo";
+                    cbCentroCostos1.DisplayMember = "cec_descri";
+                }
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                dt.Columns.Add("NINGUNO");
+                dt.Rows.Add("NINGUNO");
+                cbCentroCostos1.DataSource = dt;
+                cbCentroCostos1.ValueMember = "NINGUNO";
+                cbCentroCostos1.DisplayMember = "NINGUNO";
+            }
+        }
+
+        private void tbNumContrapartida_TextChanged(object sender, EventArgs e)
+        {
+            if (tbNumContrapartida.Text == "")
+            {
+                tbNumContrapartida.Text = "";
+                tbDescriContrapartida.Text = "";
+                cbCentroCostos2.DataSource = null;
+                cbCentroCostos2.Text = "NINGUNO";
+                return;
+            }
+
+            DataSet ds = new DataSet();
+            if (frmBuscarCuenta.ValidacionMovimientos(Convert.ToInt32(tbNumContrapartida.Text)))
+            {
+                ds = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE pcu_cuenta = {tbNumContrapartida.Text}");
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        tbDescriContrapartida.Text = dr["pcu_descri"].ToString();
+                    }
+                }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La cuenta contable No puede recibir movimientos.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            DataSet ds2 = new DataSet();
+            ds2 = AccesoBase.ListarDatos($"SELECT * FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{tbNumContrapartida.Text}' AND cec_codigo is not null");
+            if (ds2.Tables[0].Rows.Count != 0)
+            {
+                foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                {
+                    cbCentroCostos2.DataSource = ds2.Tables[0];
+                    cbCentroCostos2.ValueMember = "cec_codigo";
+                    cbCentroCostos2.DisplayMember = "cec_descri";
+                }
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                dt.Columns.Add("NINGUNO");
+                dt.Rows.Add("NINGUNO");
+                cbCentroCostos2.DataSource = dt;
+                cbCentroCostos2.ValueMember = "NINGUNO";
+                cbCentroCostos2.DisplayMember = "NINGUNO";
             }
         }
 

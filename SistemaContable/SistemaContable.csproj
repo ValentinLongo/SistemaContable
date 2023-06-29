@@ -282,6 +282,12 @@
     <Compile Include="General\frmBuscarEjercicioContable.Designer.cs">
       <DependentUpon>frmBuscarEjercicioContable.cs</DependentUpon>
     </Compile>
+    <Compile Include="General\frmIntereses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmIntereses.Designer.cs">
+      <DependentUpon>frmIntereses.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\frmLocalidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -667,6 +673,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmBuscarEjercicioContable.resx">
       <DependentUpon>frmBuscarEjercicioContable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\frmIntereses.resx">
+      <DependentUpon>frmIntereses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmLocalidades.resx">
       <DependentUpon>frmLocalidades.cs</DependentUpon>

@@ -69,6 +69,12 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             }
         }
 
+        private void btnIntereses_Click(object sender, EventArgs e)
+        {
+            frmIntereses frm = new frmIntereses(Codigo); //no es el codigo correcto por el evento del dgv (terminar)
+            frm.ShowDialog();
+        }
+
         private void dgvConceptosContables_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnModificar.Enabled = true;

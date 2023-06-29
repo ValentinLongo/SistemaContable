@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConceptosContables));
             this.label1 = new System.Windows.Forms.Label();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
@@ -49,6 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ControlBox = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnIntereses = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConceptosContables)).BeginInit();
             this.ControlBar.SuspendLayout();
             this.SuspendLayout();
@@ -201,47 +202,48 @@
             this.dgvConceptosContables.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.dgvConceptosContables.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConceptosContables.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConceptosContables.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConceptosContables.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConceptosContables.ColumnHeadersHeight = 25;
             this.dgvConceptosContables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvConceptosContables.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConceptosContables.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConceptosContables.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvConceptosContables.EnableHeadersVisualStyles = false;
             this.dgvConceptosContables.GridColor = System.Drawing.Color.White;
             this.dgvConceptosContables.Location = new System.Drawing.Point(18, 108);
             this.dgvConceptosContables.Name = "dgvConceptosContables";
             this.dgvConceptosContables.ReadOnly = true;
             this.dgvConceptosContables.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConceptosContables.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConceptosContables.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvConceptosContables.RowHeadersVisible = false;
             this.dgvConceptosContables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConceptosContables.Size = new System.Drawing.Size(874, 512);
             this.dgvConceptosContables.TabIndex = 56;
             this.dgvConceptosContables.TabStop = false;
             this.dgvConceptosContables.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvConceptosContables_CellMouseClick);
+            this.dgvConceptosContables.SelectionChanged += new System.EventHandler(this.dgvConceptosContables_SelectionChanged);
             // 
             // Column1
             // 
@@ -378,12 +380,35 @@
             this.label4.TabIndex = 150;
             this.label4.Text = "Busqueda";
             // 
+            // btnIntereses
+            // 
+            this.btnIntereses.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnIntereses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnIntereses.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnIntereses.BorderColor = System.Drawing.Color.White;
+            this.btnIntereses.BorderRadius = 0;
+            this.btnIntereses.BorderSize = 0;
+            this.btnIntereses.FlatAppearance.BorderSize = 0;
+            this.btnIntereses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIntereses.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIntereses.ForeColor = System.Drawing.Color.White;
+            this.btnIntereses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIntereses.Location = new System.Drawing.Point(899, 320);
+            this.btnIntereses.Name = "btnIntereses";
+            this.btnIntereses.Size = new System.Drawing.Size(150, 40);
+            this.btnIntereses.TabIndex = 151;
+            this.btnIntereses.Text = "Intereses";
+            this.btnIntereses.TextColor = System.Drawing.Color.White;
+            this.btnIntereses.UseVisualStyleBackColor = false;
+            this.btnIntereses.Click += new System.EventHandler(this.btnIntereses_Click);
+            // 
             // frmConceptosContables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1060, 650);
+            this.Controls.Add(this.btnIntereses);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ControlBar);
             this.Controls.Add(this.lblCantElementos);
@@ -427,5 +452,6 @@
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuFormControlBox ControlBox;
         private System.Windows.Forms.Label label4;
+        private RJCodeAdvance.RJControls.RJButton btnIntereses;
     }
 }

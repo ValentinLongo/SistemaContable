@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 
 namespace Datos
 {
@@ -120,7 +121,7 @@ namespace Datos
         }
 
         //INSERT UPDATE PARA DATOS CON MONEY
-        public static int InsertUpdateDatosMoney(string queryString, string money)
+        public static int InsertUpdateDatosMoney(string queryString, string money, [Optional] bool flag) //flag = cuando en la consulta se una el * para una multiplicacion.
         {
             SqlCommand command = null;
             try
@@ -129,7 +130,15 @@ namespace Datos
                 if (queryString.Contains("*"))
                 {
                     money = money.Replace(",", ".");
-                    queryString = queryString.Replace("*", money);
+                    if (flag)
+                    {
+                        queryString = queryString.Replace("#", money);
+                    }
+                    else
+                    {
+                        queryString = queryString.Replace("*", money);
+
+                    }
                 }
                 command = new SqlCommand(queryString, sqlConec);
                 return command.ExecuteNonQuery();

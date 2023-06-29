@@ -276,6 +276,7 @@
             this.tbNumContrapartida.Size = new System.Drawing.Size(68, 13);
             this.tbNumContrapartida.TabIndex = 5;
             this.tbNumContrapartida.Tag = "10100";
+            this.tbNumContrapartida.TextChanged += new System.EventHandler(this.tbNumContrapartida_TextChanged);
             // 
             // cbCentroCostos2
             // 
