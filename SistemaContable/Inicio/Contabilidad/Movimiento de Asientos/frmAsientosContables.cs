@@ -386,11 +386,11 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 {
                     if (Negocio.FGenerales.SincronizarFooter(dgvAsientosContables))
                     {
-                        footer.Location = new Point(29, 84);
+                        footer.Location = new Point(26, 84);
                     }
                     else
                     {
-                        footer.Location = new Point(29, 514);
+                        footer.Location = new Point(26, 514);
                     }
                 }
             }

@@ -17,6 +17,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
     {
         public static int Codigo;
         FConceptosContables data = new FConceptosContables();
+
         public frmConceptosContables()
         {
             InitializeComponent();
@@ -30,8 +31,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         private void CargarDGV(string Descri)
         {
             dgvConceptosContables.Rows.Clear();
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
 
             DataSet ds = new DataSet();
             ds = data.listaConceptosContables(Descri);
@@ -77,10 +76,23 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
         private void dgvConceptosContables_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            btnModificar.Enabled = true;
-            btnEliminar.Enabled = true;
-            int indice = e.RowIndex;
-            Codigo = Convert.ToInt32(dgvConceptosContables.Rows[indice].Cells[0].Value.ToString());
+            //btnModificar.Enabled = true;
+            //btnEliminar.Enabled = true;
+            //int indice = e.RowIndex;
+            //Codigo = Convert.ToInt32(dgvConceptosContables.Rows[indice].Cells[0].Value.ToString());
+        }
+
+        private void dgvConceptosContables_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvConceptosContables.SelectedCells.Count > 0)
+            {
+                DataGridViewCell selectedCell = dgvConceptosContables.SelectedCells[0];
+
+                if (selectedCell.Value != null)
+                {
+                    Codigo = Convert.ToInt32(selectedCell.Value);
+                }
+            }
         }
 
         private void tbDescripcion_TextChanged(object sender, EventArgs e)

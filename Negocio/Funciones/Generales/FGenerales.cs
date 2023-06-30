@@ -23,9 +23,14 @@ namespace Negocio
     {
         public static int ultimoNumeroID(string campo, string tabla)
         {
+            int UltimoID = 0;
+
             DataSet ds = new DataSet();
             ds = Datos.AccesoBase.ListarDatos($"SELECT TOP 1 {campo} FROM {tabla} ORDER BY {campo} DESC");
-            int UltimoID = 0;
+            if (ds.Tables[0].Rows.Count == 0)
+            {
+                return 1;
+            }
 
             foreach (DataRow dr in ds.Tables[0].Rows)
             {

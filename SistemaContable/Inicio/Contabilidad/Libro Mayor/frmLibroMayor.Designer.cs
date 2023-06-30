@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLibroMayor));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,6 +66,7 @@
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.maskHasta = new System.Windows.Forms.MaskedTextBox();
             this.maskDesde = new System.Windows.Forms.MaskedTextBox();
+            this.timerCuenta = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -789,6 +791,11 @@
             this.maskDesde.TabIndex = 6;
             this.maskDesde.Tag = "10000";
             // 
+            // timerCuenta
+            // 
+            this.timerCuenta.Interval = 1000;
+            this.timerCuenta.Tick += new System.EventHandler(this.timerCuenta_Tick);
+            // 
             // frmLibroMayor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -878,5 +885,6 @@
         private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.MaskedTextBox maskHasta;
         private System.Windows.Forms.MaskedTextBox maskDesde;
+        private System.Windows.Forms.Timer timerCuenta;
     }
 }

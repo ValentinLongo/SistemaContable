@@ -30,25 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIntereses));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.dgvIntereses = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCantElementos = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.CheckInicio = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.btnAgregar = new RJCodeAdvance.RJControls.RJButton();
             this.btnModificar = new RJCodeAdvance.RJControls.RJButton();
             this.btnEliminar = new RJCodeAdvance.RJControls.RJButton();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIntereses)).BeginInit();
             this.SuspendLayout();
@@ -162,33 +157,49 @@
             this.dgvIntereses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvIntereses.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvIntereses.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvIntereses.EnableHeadersVisualStyles = false;
             this.dgvIntereses.GridColor = System.Drawing.Color.White;
             this.dgvIntereses.Location = new System.Drawing.Point(11, 32);
             this.dgvIntereses.Name = "dgvIntereses";
             this.dgvIntereses.ReadOnly = true;
             this.dgvIntereses.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIntereses.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIntereses.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvIntereses.RowHeadersVisible = false;
             this.dgvIntereses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvIntereses.Size = new System.Drawing.Size(671, 343);
+            this.dgvIntereses.Size = new System.Drawing.Size(671, 390);
             this.dgvIntereses.TabIndex = 96;
             this.dgvIntereses.TabStop = false;
+            this.dgvIntereses.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvIntereses_CellFormatting);
+            this.dgvIntereses.SelectionChanged += new System.EventHandler(this.dgvIntereses_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Período";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column2.HeaderText = "Coef. Ajuste";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // lblCantElementos
             // 
@@ -196,114 +207,11 @@
             this.lblCantElementos.AutoSize = true;
             this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCantElementos.Location = new System.Drawing.Point(9, 428);
+            this.lblCantElementos.Location = new System.Drawing.Point(9, 426);
             this.lblCantElementos.Name = "lblCantElementos";
             this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
             this.lblCantElementos.TabIndex = 103;
             this.lblCantElementos.Text = "Elementos";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(627, 394);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(38, 16);
-            this.label13.TabIndex = 101;
-            this.label13.Text = "Inicio";
-            // 
-            // CheckInicio
-            // 
-            this.CheckInicio.AllowBindingControlAnimation = true;
-            this.CheckInicio.AllowBindingControlColorChanges = false;
-            this.CheckInicio.AllowBindingControlLocation = true;
-            this.CheckInicio.AllowCheckBoxAnimation = false;
-            this.CheckInicio.AllowCheckmarkAnimation = true;
-            this.CheckInicio.AllowOnHoverStates = true;
-            this.CheckInicio.AutoCheck = true;
-            this.CheckInicio.BackColor = System.Drawing.Color.Transparent;
-            this.CheckInicio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckInicio.BackgroundImage")));
-            this.CheckInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CheckInicio.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.CheckInicio.BorderRadius = 12;
-            this.CheckInicio.Checked = false;
-            this.CheckInicio.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.CheckInicio.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CheckInicio.CustomCheckmarkImage = null;
-            this.CheckInicio.Location = new System.Drawing.Point(606, 393);
-            this.CheckInicio.MinimumSize = new System.Drawing.Size(17, 17);
-            this.CheckInicio.Name = "CheckInicio";
-            this.CheckInicio.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.CheckInicio.OnCheck.BorderRadius = 12;
-            this.CheckInicio.OnCheck.BorderThickness = 2;
-            this.CheckInicio.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
-            this.CheckInicio.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.CheckInicio.OnCheck.CheckmarkThickness = 2;
-            this.CheckInicio.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.CheckInicio.OnDisable.BorderRadius = 12;
-            this.CheckInicio.OnDisable.BorderThickness = 2;
-            this.CheckInicio.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckInicio.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.CheckInicio.OnDisable.CheckmarkThickness = 2;
-            this.CheckInicio.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckInicio.OnHoverChecked.BorderRadius = 12;
-            this.CheckInicio.OnHoverChecked.BorderThickness = 2;
-            this.CheckInicio.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckInicio.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.CheckInicio.OnHoverChecked.CheckmarkThickness = 2;
-            this.CheckInicio.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CheckInicio.OnHoverUnchecked.BorderRadius = 12;
-            this.CheckInicio.OnHoverUnchecked.BorderThickness = 1;
-            this.CheckInicio.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckInicio.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.CheckInicio.OnUncheck.BorderRadius = 12;
-            this.CheckInicio.OnUncheck.BorderThickness = 1;
-            this.CheckInicio.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.CheckInicio.Size = new System.Drawing.Size(17, 17);
-            this.CheckInicio.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.CheckInicio.TabIndex = 100;
-            this.CheckInicio.TabStop = false;
-            this.CheckInicio.ThreeState = false;
-            this.CheckInicio.ToolTipText = null;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(109, 411);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(484, 1);
-            this.panel3.TabIndex = 99;
-            // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBusqueda.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBusqueda.Location = new System.Drawing.Point(109, 392);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(484, 19);
-            this.txtBusqueda.TabIndex = 97;
-            this.txtBusqueda.Tag = "01000";
-            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
-            // 
-            // bunifuShapes1
-            // 
-            this.bunifuShapes1.Angle = 0F;
-            this.bunifuShapes1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.BorderColor = System.Drawing.Color.White;
-            this.bunifuShapes1.BorderThickness = 1;
-            this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
-            this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(12, 381);
-            this.bunifuShapes1.Name = "bunifuShapes1";
-            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
-            this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(671, 45);
-            this.bunifuShapes1.TabIndex = 98;
-            this.bunifuShapes1.TabStop = false;
-            this.bunifuShapes1.Text = "bunifuShapes1";
             // 
             // btnAgregar
             // 
@@ -379,7 +287,7 @@
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImprimir.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnImprimir.Location = new System.Drawing.Point(688, 340);
+            this.btnImprimir.Location = new System.Drawing.Point(688, 387);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(142, 35);
             this.btnImprimir.TabIndex = 107;
@@ -389,47 +297,17 @@
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(21, 394);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 16);
-            this.label1.TabIndex = 108;
-            this.label1.Text = "Descripción:";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Período";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Coef. Ajuste";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
             // frmIntereses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(838, 444);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblCantElementos);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.CheckInicio);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.txtBusqueda);
-            this.Controls.Add(this.bunifuShapes1);
             this.Controls.Add(this.dgvIntereses);
             this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -451,16 +329,10 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.DataGridView dgvIntereses;
         private System.Windows.Forms.Label lblCantElementos;
-        private System.Windows.Forms.Label label13;
-        private Bunifu.UI.WinForms.BunifuCheckBox CheckInicio;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtBusqueda;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private RJCodeAdvance.RJControls.RJButton btnAgregar;
         private RJCodeAdvance.RJControls.RJButton btnModificar;
         private RJCodeAdvance.RJControls.RJButton btnEliminar;
         private RJCodeAdvance.RJControls.RJButton btnImprimir;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }

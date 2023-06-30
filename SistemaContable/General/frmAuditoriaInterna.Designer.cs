@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAuditoriaInterna));
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnProcesar = new RJCodeAdvance.RJControls.RJButton();
+            this.timerCuenta = new System.Windows.Forms.Timer(this.components);
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -229,11 +231,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(11, 98);
+            this.label3.Location = new System.Drawing.Point(65, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 16);
+            this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 151;
-            this.label3.Text = "Cuenta Contable:";
+            this.label3.Text = "Cuenta:";
             // 
             // lblConteo
             // 
@@ -1022,6 +1024,10 @@
             this.btnProcesar.UseVisualStyleBackColor = false;
             this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
             // 
+            // timerCuenta
+            // 
+            this.timerCuenta.Tick += new System.EventHandler(this.timerCuenta_Tick);
+            // 
             // frmAuditoriaInterna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1121,5 +1127,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private RJCodeAdvance.RJControls.RJButton btnProcesar;
+        private System.Windows.Forms.Timer timerCuenta;
     }
 }

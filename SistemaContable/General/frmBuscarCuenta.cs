@@ -148,6 +148,11 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
         {
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"SELECT pcu_hija FROM PCuenta WHERE pcu_cuenta = {NroCuenta}");
+            if (ds.Tables[0].Rows.Count == 0)
+            {
+                return false;
+            }
+
             if (Convert.ToInt32(ds.Tables[0].Rows[0]["pcu_hija"]) == 0)
             {
                 return true;

@@ -136,7 +136,7 @@ namespace Negocio
 
                     if (resultado == 0)
                     {
-                        AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu (mxu_usuario,mxu_codigo,mxu_activo,mxu_sistema) VALUES ( {codigo}, '{i.mnu_codigo}', {permiso}, 'CO' )");
+                        AccesoBase.InsertUpdateDatos($"INSERT INTO MenuxUsu (mxu_usuario,mxu_codigo,mxu_activo,mxu_sistema) VALUES ( {codigo}, '{i.mnu_codigo}', {permiso}, 'CO')");
                     }
                 }
             }

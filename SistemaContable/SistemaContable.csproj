@@ -282,10 +282,16 @@
     <Compile Include="General\frmBuscarEjercicioContable.Designer.cs">
       <DependentUpon>frmBuscarEjercicioContable.cs</DependentUpon>
     </Compile>
-    <Compile Include="General\frmIntereses.cs">
+    <Compile Include="Inicio\Mantenimiento\Conceptos Contables\Intereses\frmAggModInteres.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="General\frmIntereses.Designer.cs">
+    <Compile Include="Inicio\Mantenimiento\Conceptos Contables\Intereses\frmAggModInteres.Designer.cs">
+      <DependentUpon>frmAggModInteres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Conceptos Contables\Intereses\frmIntereses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Mantenimiento\Conceptos Contables\Intereses\frmIntereses.Designer.cs">
       <DependentUpon>frmIntereses.cs</DependentUpon>
     </Compile>
     <Compile Include="General\frmLocalidades.cs">
@@ -674,7 +680,10 @@
     <EmbeddedResource Include="General\frmBuscarEjercicioContable.resx">
       <DependentUpon>frmBuscarEjercicioContable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="General\frmIntereses.resx">
+    <EmbeddedResource Include="Inicio\Mantenimiento\Conceptos Contables\Intereses\frmAggModInteres.resx">
+      <DependentUpon>frmAggModInteres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Mantenimiento\Conceptos Contables\Intereses\frmIntereses.resx">
       <DependentUpon>frmIntereses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="General\frmLocalidades.resx">

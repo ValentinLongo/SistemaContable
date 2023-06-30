@@ -114,8 +114,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
                     pcu_descriCuenta = tbDescriCuenta.Text,
                     coc_contrap = Convert.ToInt32(tbNumContrapartida.Text),
                     pcu_descriContrap = tbDescriContrapartida.Text,
-                    coc_cccontrap = Convert.ToInt32(cbCentroCostos2.SelectedValue),
-                    coc_cccta = Convert.ToInt32(cbCentroCostos1.SelectedValue),
+                    coc_cccontrap = Convert.ToInt32(cbCentroCostos2.SelectedValue.ToString() == "NINGUNO" ? 0 : cbCentroCostos2.SelectedValue),
+                    coc_cccta = Convert.ToInt32(cbCentroCostos1.SelectedValue.ToString() == "NINGUNO" ? 0 : cbCentroCostos1.SelectedValue),
                 };
                 if (checkVentas.Checked)
                 {
@@ -136,7 +136,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
                 if (Accion == "Agregar")
                 {
                     data.agregarConceptoCont(mConceptoContable);
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente", false);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
                     MessageBox.ShowDialog();
                     this.Close();
                 }
@@ -144,26 +144,34 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
                 {
                     mConceptoContable.coc_codigo = Convert.ToInt32(tbCodigo.Text);
                     data.modificarConceptoCont(mConceptoContable);
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente", false);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Modificado Correctamente!", false);
                     MessageBox.ShowDialog();
                     this.Close();
                 }
             }
             else
             {
-                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos.", false);
                 MessageBox.ShowDialog();
             }
         }
 
         private void tbNroCuenta_TextChanged(object sender, EventArgs e)
         {
+            timerCuenta.Start();
+        }
+
+        private void timerCuenta_Tick(object sender, EventArgs e)
+        {
+            timerCuenta.Stop();
+
             if (tbNroCuenta.Text == "")
             {
                 tbNroCuenta.Text = "";
                 tbDescriCuenta.Text = "";
                 cbCentroCostos1.DataSource = null;
-                cbCentroCostos1.Text = "NINGUNO";               
+                cbCentroCostos1.Text = "NINGUNO";
+                cbCentroCostos1.ValueMember = "NINGUNO";
                 return;
             }
 
@@ -210,12 +218,20 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
         private void tbNumContrapartida_TextChanged(object sender, EventArgs e)
         {
+            timerContrapartida.Start();
+        }
+
+        private void timerContrapartida_Tick(object sender, EventArgs e)
+        {
+            timerContrapartida.Stop();
+
             if (tbNumContrapartida.Text == "")
             {
                 tbNumContrapartida.Text = "";
                 tbDescriContrapartida.Text = "";
                 cbCentroCostos2.DataSource = null;
                 cbCentroCostos2.Text = "NINGUNO";
+                cbCentroCostos2.ValueMember = "NINGUNO";
                 return;
             }
 
@@ -260,17 +276,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             }
         }
 
-        //BARRA DE CONTROL
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void panel8_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void checkVentas_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
             if (checkVentas.Checked)
@@ -309,6 +314,17 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
                 checkCompras.Checked = false;
                 checkTesoreria.Checked = false;
             }
+        }
+
+        //BARRA DE CONTROL
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel8_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

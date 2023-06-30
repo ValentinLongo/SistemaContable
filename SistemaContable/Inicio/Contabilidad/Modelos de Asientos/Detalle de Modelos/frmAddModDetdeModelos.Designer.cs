@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddModDetdeModelos));
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             this.txtConcepto = new System.Windows.Forms.TextBox();
             this.cbCentrodeCosto = new System.Windows.Forms.ComboBox();
             this.btnConsulta = new System.Windows.Forms.Button();
+            this.timerCuenta = new System.Windows.Forms.Timer(this.components);
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -367,6 +369,11 @@
             this.btnConsulta.UseVisualStyleBackColor = false;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
+            // timerCuenta
+            // 
+            this.timerCuenta.Interval = 1000;
+            this.timerCuenta.Tick += new System.EventHandler(this.timerCuenta_Tick);
+            // 
             // frmAddModDetdeModelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,5 +435,6 @@
         private System.Windows.Forms.TextBox txtConcepto;
         private System.Windows.Forms.ComboBox cbCentrodeCosto;
         private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.Timer timerCuenta;
     }
 }

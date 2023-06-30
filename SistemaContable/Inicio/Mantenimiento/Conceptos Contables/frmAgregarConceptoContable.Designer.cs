@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarConceptoContable));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,6 +65,8 @@
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.btnBuscar2 = new System.Windows.Forms.Button();
             this.btnBuscar1 = new System.Windows.Forms.Button();
+            this.timerCuenta = new System.Windows.Forms.Timer(this.components);
+            this.timerContrapartida = new System.Windows.Forms.Timer(this.components);
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -681,6 +684,16 @@
             this.btnBuscar1.UseVisualStyleBackColor = false;
             this.btnBuscar1.Click += new System.EventHandler(this.btnBuscar1_Click);
             // 
+            // timerCuenta
+            // 
+            this.timerCuenta.Interval = 1000;
+            this.timerCuenta.Tick += new System.EventHandler(this.timerCuenta_Tick);
+            // 
+            // timerContrapartida
+            // 
+            this.timerContrapartida.Interval = 1000;
+            this.timerContrapartida.Tick += new System.EventHandler(this.timerContrapartida_Tick);
+            // 
             // frmAgregarConceptoContable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -768,5 +781,7 @@
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private System.Windows.Forms.Button btnBuscar2;
         private System.Windows.Forms.Button btnBuscar1;
+        private System.Windows.Forms.Timer timerCuenta;
+        private System.Windows.Forms.Timer timerContrapartida;
     }
 }

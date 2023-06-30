@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAggDetalledeInformes));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             this.txtDescri = new System.Windows.Forms.TextBox();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.cbCentroCostos = new System.Windows.Forms.ComboBox();
+            this.timerCuenta = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -292,6 +294,11 @@
             this.cbCentroCostos.TabIndex = 98;
             this.cbCentroCostos.TabStop = false;
             // 
+            // timerCuenta
+            // 
+            this.timerCuenta.Interval = 1000;
+            this.timerCuenta.Tick += new System.EventHandler(this.timerCuenta_Tick);
+            // 
             // frmAggDetalledeInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,5 +348,6 @@
         private System.Windows.Forms.TextBox txtDescri;
         private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.ComboBox cbCentroCostos;
+        private System.Windows.Forms.Timer timerCuenta;
     }
 }

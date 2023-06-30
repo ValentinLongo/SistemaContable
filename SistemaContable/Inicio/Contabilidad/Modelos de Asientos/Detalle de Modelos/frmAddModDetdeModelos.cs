@@ -181,6 +181,13 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
 
         private void txtCuenta_TextChanged(object sender, EventArgs e)
         {
+            timerCuenta.Start();
+        }
+
+        private void timerCuenta_Tick(object sender, EventArgs e)
+        {
+            timerCuenta.Stop();
+
             if (txtCuenta.Text != "")
             {
                 DataSet ds = new DataSet();

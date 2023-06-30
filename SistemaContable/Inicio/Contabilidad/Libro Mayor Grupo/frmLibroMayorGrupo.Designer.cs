@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLibroMayorGrupo));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,6 +62,8 @@
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.maskHasta = new System.Windows.Forms.MaskedTextBox();
             this.maskDesde = new System.Windows.Forms.MaskedTextBox();
+            this.timerCuenta1 = new System.Windows.Forms.Timer(this.components);
+            this.timerCuenta2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,6 +188,7 @@
             this.tbIdCuenta.Size = new System.Drawing.Size(98, 13);
             this.tbIdCuenta.TabIndex = 3;
             this.tbIdCuenta.Tag = "10100";
+            this.tbIdCuenta.TextChanged += new System.EventHandler(this.tbIdCuenta_TextChanged);
             // 
             // label2
             // 
@@ -278,6 +282,7 @@
             this.tbIdCuenta2.Size = new System.Drawing.Size(98, 13);
             this.tbIdCuenta2.TabIndex = 6;
             this.tbIdCuenta2.Tag = "10100";
+            this.tbIdCuenta2.TextChanged += new System.EventHandler(this.tbIdCuenta2_TextChanged);
             // 
             // label3
             // 
@@ -559,6 +564,16 @@
             this.maskDesde.TabIndex = 9;
             this.maskDesde.Tag = "10000";
             // 
+            // timerCuenta1
+            // 
+            this.timerCuenta1.Interval = 1000;
+            this.timerCuenta1.Tick += new System.EventHandler(this.timerCuenta1_Tick);
+            // 
+            // timerCuenta2
+            // 
+            this.timerCuenta2.Interval = 1000;
+            this.timerCuenta2.Tick += new System.EventHandler(this.timerCuenta2_Tick);
+            // 
             // frmLibroMayorGrupo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -640,5 +655,7 @@
         private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.MaskedTextBox maskHasta;
         private System.Windows.Forms.MaskedTextBox maskDesde;
+        private System.Windows.Forms.Timer timerCuenta1;
+        private System.Windows.Forms.Timer timerCuenta2;
     }
 }

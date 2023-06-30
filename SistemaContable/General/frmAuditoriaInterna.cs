@@ -4258,6 +4258,23 @@ namespace SistemaContable.General
 
         private void txtNroCuenta_TextChanged(object sender, EventArgs e) //para actualizar los txt cuando se ingresa/cambia un nro de cuenta.
         {
+            timerCuenta.Start();
+        }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            maskDesde.Text = dtpDesde.Value.ToString();
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            maskHasta.Text = dtpHasta.Value.ToString();
+        }
+
+        private void timerCuenta_Tick(object sender, EventArgs e)
+        {
+            timerCuenta.Stop();
+
             if (txtNroCuenta.Text == "")
             {
                 txtNroCuenta.Text = "";
@@ -4282,16 +4299,6 @@ namespace SistemaContable.General
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La cuenta contable No puede recibir movimientos.", false);
                 MessageBox.ShowDialog();
             }
-        }
-
-        private void dtpDesde_ValueChanged(object sender, EventArgs e)
-        {
-            maskDesde.Text = dtpDesde.Value.ToString();
-        }
-
-        private void dtpHasta_ValueChanged(object sender, EventArgs e)
-        {
-            maskHasta.Text = dtpHasta.Value.ToString();
         }
 
         //BARRA DE CONTROL

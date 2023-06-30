@@ -238,6 +238,78 @@ namespace SistemaContable.Inicio.Contabilidad.Libro_Mayor_Grupo
             maskHasta.Text = dtpHasta.Value.ToString();
         }
 
+        private void tbIdCuenta_TextChanged(object sender, EventArgs e)
+        {
+            timerCuenta1.Start();
+        }
+
+        private void tbIdCuenta2_TextChanged(object sender, EventArgs e)
+        {
+            timerCuenta2.Start();
+        }
+
+        private void timerCuenta1_Tick(object sender, EventArgs e)
+        {
+            timerCuenta1.Stop();
+
+            if (tbIdCuenta.Text == "")
+            {
+                tbIdCuenta.Text = "";
+                tbDescriCuenta.Text = "";
+                return;
+            }
+
+            DataSet ds = new DataSet();
+            if (frmBuscarCuenta.ValidacionMovimientos(Convert.ToInt32(tbIdCuenta.Text)))
+            {
+                ds = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE pcu_cuenta = {tbIdCuenta.Text}");
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        tbDescriCuenta.Text = dr["pcu_descri"].ToString();
+                    }
+                }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La cuenta contable No puede recibir movimientos.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+        }
+
+        private void timerCuenta2_Tick(object sender, EventArgs e)
+        {
+            timerCuenta2.Stop();
+
+            if (tbIdCuenta2.Text == "")
+            {
+                tbIdCuenta2.Text = "";
+                tbDescriCuenta2.Text = "";
+                return;
+            }
+
+            DataSet ds = new DataSet();
+            if (frmBuscarCuenta.ValidacionMovimientos(Convert.ToInt32(tbIdCuenta2.Text)))
+            {
+                ds = AccesoBase.ListarDatos($"SELECT * FROM PCuenta WHERE pcu_cuenta = {tbIdCuenta2.Text}");
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        tbDescriCuenta2.Text = dr["pcu_descri"].ToString();
+                    }
+                }
+            }
+            else
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La cuenta contable No puede recibir movimientos.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+        }
+
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

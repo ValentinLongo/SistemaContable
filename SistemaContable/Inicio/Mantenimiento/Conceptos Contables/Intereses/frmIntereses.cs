@@ -1,4 +1,6 @@
-﻿using Datos;
+﻿using Bunifu.UI.WinForms.Helpers.Transitions;
+using Datos;
+using SistemaContable.Inicio.Mantenimiento.Conceptos_Contables.Intereses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +16,10 @@ namespace SistemaContable.General
 {
     public partial class frmIntereses : Form
     {
+        public static string Periodo;
+        public static string Coef;
+        public static int CCC; //CodigoConceptoContable
+
         public frmIntereses(int CodConceptoContable)
         {
             InitializeComponent();
@@ -21,8 +27,9 @@ namespace SistemaContable.General
             //Negocio.FValidacionesEventos.EventosFormulario(this); (NO se usa en este frm)
             //Negocio.FFormatoSistema.SetearFormato(this);
 
-            CargarDGV(CodConceptoContable);
+            CCC = CodConceptoContable;
 
+            CargarDGV(CodConceptoContable);
         }
 
         private void CargarDGV(int CodConceptoContable)
@@ -42,27 +49,61 @@ namespace SistemaContable.General
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            frmAggModInteres frm = new frmAggModInteres(1);
+            frm.ShowDialog();
+            CargarDGV(CCC);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            frmAggModInteres frm = new frmAggModInteres(2);
+            frm.ShowDialog();
+            CargarDGV(CCC);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Desea Continuar?", true);
+            MessageBox.ShowDialog();
+            if (frmMessageBox.Acepto)
+            {
+                string Coef = frmIntereses.Coef.Replace(",", ".");
+                AccesoBase.InsertUpdateDatos($"DELETE FROM Intereses WHERE int_conceptocont = {CCC} AND int_periodo = '{Periodo}' AND int_coef = '{Coef}'");
+            }
+            CargarDGV(CCC);
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-
+            //falta
         }
 
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        private void dgvIntereses_SelectionChanged(object sender, EventArgs e)
         {
+            if (dgvIntereses.SelectedCells.Count > 0)
+            {
+                DataGridViewCell periodo = dgvIntereses.SelectedCells[0];
+                DataGridViewCell coef = dgvIntereses.SelectedCells[1];
 
+                if (periodo.Value != null && coef.Value != null)
+                {
+                    Periodo = periodo.Value.ToString();
+                    Coef = coef.Value.ToString();
+                }
+            }
+        }
+
+        private void dgvIntereses_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                if (e.Value != null && double.TryParse(e.Value.ToString(), out double valor))
+                {
+                    string formato = "0.00000000000";
+                    e.Value = valor.ToString(formato);
+                    e.FormattingApplied = true;
+                }
+            }
         }
 
         //BARRA DE CONTROL

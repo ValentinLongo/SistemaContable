@@ -312,10 +312,20 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
 
         private void tbIdCuenta_TextChanged(object sender, EventArgs e)
         {
+            timerCuenta.Start();
+        }
+
+        private void timerCuenta_Tick(object sender, EventArgs e)
+        {
+            timerCuenta.Stop();
+
             if (tbIdCuenta.Text == "")
             {
+                tbIdCuenta.Text = "";
                 tbDescriCuenta.Text = "";
-                cbCentroCosto.SelectedIndex = 0;
+                cbCentroCosto.DataSource = null;
+                cbCentroCosto.Text = "NINGUNO";
+                cbCentroCosto.ValueMember = "NINGUNO";
                 return;
             }
 
@@ -335,8 +345,29 @@ namespace SistemaContable.Inicio.Contabilidad.LibroMayor
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: La cuenta contable No puede recibir movimientos.", false);
                 MessageBox.ShowDialog();
+                return;
             }
-            cbCentroCosto.SelectedIndex = 2;
+
+            DataSet ds2 = new DataSet();
+            ds2 = AccesoBase.ListarDatos($"SELECT * FROM PCuenta LEFT JOIN CentroCxPCuenta on pcu_cuenta = cxp_cuenta LEFT JOIN CentroC on cxp_centroc = cec_codigo WHERE pcu_cuenta = '{tbIdCuenta.Text}' AND cec_codigo is not null");
+            if (ds2.Tables[0].Rows.Count != 0)
+            {
+                foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                {
+                    cbCentroCosto.DataSource = ds2.Tables[0];
+                    cbCentroCosto.ValueMember = "cec_codigo";
+                    cbCentroCosto.DisplayMember = "cec_descri";
+                }
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                dt.Columns.Add("NINGUNO");
+                dt.Rows.Add("NINGUNO");
+                cbCentroCosto.DataSource = dt;
+                cbCentroCosto.ValueMember = "NINGUNO";
+                cbCentroCosto.DisplayMember = "NINGUNO";
+            }
         }
 
         private void dtpDesde_ValueChanged(object sender, EventArgs e)
