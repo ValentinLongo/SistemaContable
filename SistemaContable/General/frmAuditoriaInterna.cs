@@ -197,6 +197,11 @@ namespace SistemaContable.General
 
                         lblConteo.Text = "Comprobante de Venta " + ds.Tables[0].Rows.IndexOf(dr) + " de " + ds.Tables[0].Rows.Count;
 
+                        if (dr["vta_hora1"].ToString() == "12:13:01")
+                        {
+                            MessageBox.Show("asd");
+                        }
+
                         switch (Convert.ToInt32(dr["vta_tipmov"]))
                         {
                             case 1: // 1 = factura
@@ -324,11 +329,11 @@ namespace SistemaContable.General
                         switch (Convert.ToInt32(dr["moc_tipmov"]))
                         {
                             case 6: //ING
-                                Proc_IngVar(dr); //mal
+                                Proc_IngVar(dr);
                                 break;
 
                             case 54: //EGR
-                                Proc_EgrVar(dr); //mal
+                                Proc_EgrVar(dr);
                                 break;
 
                             default:
@@ -1318,7 +1323,7 @@ namespace SistemaContable.General
                 DataSet ds3 = new DataSet();
                 ds3 = AccesoBase.ListarDatos($"Select * From Caja Where caj_codigo = {dr["mba_caja"]}");
                 long CtaCaja = Convert.ToInt64(ds3.Tables[0].Rows[0]["caj_ctacont"]);
-                long CtaChet = ds3.Tables[0].Rows[0]["caj_ctacont"] is DBNull ? Convert.ToInt64(ds3.Tables[0].Rows[0]["caj_ctacont"]) : Convert.ToInt64(ds3.Tables[0].Rows[0]["caj_ctaCheT"]);
+                long CtaChet = ds3.Tables[0].Rows[0]["caj_ctaCheT"] is DBNull ? Convert.ToInt64(ds3.Tables[0].Rows[0]["caj_ctacont"]) : Convert.ToInt64(ds3.Tables[0].Rows[0]["caj_ctaCheT"]);
 
                 ds3 = AccesoBase.ListarDatos($"Select * From CtaBan Where cta_banco = {dr["mba_banco"]} And cta_sucursal = {dr["mba_sucursal"]} And cta_tipcta = {dr["mba_tipcta"]} And cta_nrocta = '{dr["mba_nrocta"]}'");
                 long CtaBan = Convert.ToInt64(ds3.Tables[0].Rows[0]["cta_ctacont"]);
@@ -1675,7 +1680,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (((dr["moc_vlte"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vlte"])) + (dr["moc_vltc"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vltc"]))) != 0)
+                if (((dr["moc_vlte"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vlte"])) + (dr["moc_vltc"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vltc"]))) == 0)
                 {
                     //Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["moc_feccont"].ToString(), CtaCaja, 2, ((dr["moc_vltc"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vltc"])) + (dr["moc_vlte"] is DBNull ? 0 : Convert.ToDouble(dr["moc_vlte"]) * cotizacion)).ToString(), "", 6);
                 }
@@ -1952,7 +1957,7 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (!(dr["vta_vlte"] is DBNull && Convert.ToDouble(dr["vta_vlte"]) != 0) || !(dr["vta_vltc"] is DBNull && Convert.ToDouble(dr["vta_vltc"]) != 0))
+                if ((!(dr["vta_vlte"] is DBNull) && Convert.ToDouble(dr["vta_vlte"]) != 0) || (!(dr["vta_vltc"] is DBNull) && Convert.ToDouble(dr["vta_vltc"]) != 0))
                 {
                     double Vuelto = 0;
 
@@ -3036,7 +3041,7 @@ namespace SistemaContable.General
                         }
                         else
                         {
-                            CtaDeuda = dr["vta_contrap"] is DBNull ? Convert.ToInt64(ds4.Tables[0].Rows[0]["par_ctaDeud"]) : dr["vta_contrap"].ToString() == "0" ? Convert.ToInt64(ds4.Tables[0].Rows[0]["par_ctaDeud"]) : Convert.ToInt64(dr["vta_contrap"]);
+                            CtaDeuda = dr["vta_contrap"] is DBNull ? Convert.ToInt64(ds4.Tables[0].Rows[0]["sec_ctaDeud"]) : dr["vta_contrap"].ToString() == "0" ? Convert.ToInt64(ds4.Tables[0].Rows[0]["sec_ctaDeud"]) : Convert.ToInt64(dr["vta_contrap"]);
                         }
                     }
 

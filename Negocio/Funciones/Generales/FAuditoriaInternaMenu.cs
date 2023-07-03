@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Negocio.Funciones.Generales
 {
@@ -66,6 +67,12 @@ namespace Negocio.Funciones.Generales
             }           
 
             AccesoBase.InsertUpdateDatos($"Insert Into Asiento (ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_codigo, ast_numero, ast_tipocbte, ast_cbte, ast_ctapro, ast_user, ast_hora, ast_fecalta, ast_tipo) Values ({Asiento}, {Asiento}, '{fecha}', '{comenta}', {codigo}, {nro}, {tipocbte}, '{cpbte}', {ctapro}, {FLogin.IdUsuario}, '{DateTime.Now.ToString("HH:mm:ss")}', '{DateTime.Now.ToString().Substring(0, 10)}', 2)");
+            //DataSet ds2 = new DataSet();
+            //ds2 = AccesoBase.ListarDatos($"select * from aux_asiento where aux_cuenta = 309");
+            //if (ds2.Tables[0].Rows.Count != 0)
+            //{
+            //    MessageBox.Show(ds2.Tables[0].Rows[0]["aux_importe"].ToString());
+            //}
             AccesoBase.InsertUpdateDatos($"Insert Into MovAsto (mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta) Select {Asiento} as Asto, '{fecha}' as Fec, aux_cuenta, aux_codigo, aux_importe, aux_comenta From Aux_Asiento Where aux_terminal = {terminal}");
             AccesoBase.InsertUpdateDatos($"Delete From Aux_Asiento Where aux_terminal = {terminal}");
 
