@@ -541,7 +541,7 @@ namespace SistemaContable.General
                 DataSet ds3 = new DataSet();
                 ds3 = AccesoBase.ListarDatos($"Select * From MovVtaTC Left Join Tarjeta on tcc_tarjeta = tar_codigo Left Join Caja on tcc_caja = caj_codigo Where tcc_tipmov = 2 And tcc_cpbte = '{dr["tcc_cpbte"]}' And tar_ctapro = {dr["tar_ctapro"]}");
 
-                if (ds2.Tables[0].Rows.Count == 0 && ds3.Tables[0].Rows.Count == 0)
+                if (ds2.Tables[0].Rows.Count != 0 && ds3.Tables[0].Rows.Count == 0)
                 {
                     return;
                 }
@@ -565,7 +565,7 @@ namespace SistemaContable.General
 
                 if (Convert.ToInt32(ds3.Tables[0].Rows[0]["tcc_formpag"]) == 1) //caja
                 {
-                    if ((ds3.Tables[0].Rows[0]["tcc_efectivo"] is DBNull ? 0 : Convert.ToInt32(ds3.Tables[0].Rows[0]["tcc_dto"])) != 0)
+                    if ((ds3.Tables[0].Rows[0]["tcc_efectivo"] is DBNull ? 0 : Convert.ToInt32(ds3.Tables[0].Rows[0]["tcc_efectivo"])) != 0)
                     {
                         Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, CtaCaja, d, ds3.Tables[0].Rows[0]["tcc_efectivo"] is DBNull ? "0" : ds3.Tables[0].Rows[0]["tcc_efectivo"].ToString(), "", 18);
                     }
@@ -754,7 +754,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente la Liquidacion de TC " + dr["cpa_nrocomp"].ToString() + ".");
             }
-        } //
+        }
 
         private void Proc_Caucion(DataRow dr)
         {
@@ -771,12 +771,10 @@ namespace SistemaContable.General
 
                 DataSet ds3 = new DataSet();
                 ds3 = AccesoBase.ListarDatos($"Select * From Caja Where caj_codigo = {dr["mba_caja"]}");
-
                 long CtaCaja = Convert.ToInt64(ds3.Tables[0].Rows[0]["caj_ctacont"]);
                 long CtaChet = ds3.Tables[0].Rows[0]["caj_ctaCheT"] is DBNull ? Convert.ToInt64(ds3.Tables[0].Rows[0]["caj_ctacont"]) : Convert.ToInt64(ds3.Tables[0].Rows[0]["caj_ctaCheT"]);
 
                 ds3 = AccesoBase.ListarDatos($"Select * From CtaBan Where cta_banco = {dr["mba_banco"]} And cta_sucursal = {dr["mba_sucursal"]} And cta_tipcta = {dr["mba_tipcta"]} And cta_nrocta = '{dr["mba_nrocta"]}'");
-
                 long CtaBan = Convert.ToInt64(ds3.Tables[0].Rows[0]["cta_ctacont"]);
 
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
@@ -809,7 +807,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["cpa_nrocomp"] + ".");
             }
-        }//
+        }
 
         private void Proc_Extraccion(DataRow dr)
         {
@@ -853,7 +851,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["cpa_nrocomp"] + ".");
             }
-        }//
+        }
 
         private void Proc_DCBan(DataRow dr)
         {
@@ -894,7 +892,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["dcb_feccont"].ToString(), (Convert.ToInt32(dr["dcb_tipo"]) == 1 ? "DEBITO BANCARIO" : "CREDITO BANCARIO") + dr["dcb_cpbte"].ToString(), 0, 0, Convert.ToInt32(dr["mba_tipmov"]), dr["mba_cpbte"].ToString(), Convert.ToInt32(CtaPro), dr, "mva_tipmov");
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["dcb_feccont"].ToString(), (Convert.ToInt32(dr["dcb_tipo"]) == 1 ? "DEBITO BANCARIO" : "CREDITO BANCARIO") + dr["dcb_cpbte"].ToString(), 0, 0, Convert.ToInt32(dr["dcb_tipmov"]), dr["dcb_cpbte"].ToString(), Convert.ToInt32(CtaPro), dr, "dcb_tipmov");
             }
             catch (Exception ex)
             {
@@ -903,7 +901,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["dcb_cpbte"].ToString() + ".");
             }
-        }//
+        }
 
         private void Proc_Transf(DataRow dr)
         {
@@ -980,7 +978,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["cpa_nrocomp"] + ".");
             }
-        }//
+        }
 
         private void Proc_MovIntCpa(DataRow dr)
         {
@@ -1155,7 +1153,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["cpa_nrocomp"] + ".");
             }
-        }//
+        }
 
         //private void Proc_MovIntCpaBCKP(DataSet ds)
         //{
@@ -1289,7 +1287,7 @@ namespace SistemaContable.General
                     //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
-                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "TRANF. BANCARIA" + dr["mba_cpbte"].ToString(), 0, 0, 100, dr["mba_cpbte"].ToString(), 0, dr, "vta_tipmov");
+                AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "TRANF. BANCARIA" + dr["mba_cpbte"].ToString(), 0, 0, 100, dr["mba_cpbte"].ToString(), 0, dr, "mba_tipmov");
             }
             catch (Exception ex)
             {
@@ -1298,7 +1296,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["mba_cpbte"] + ".");
             }
-        }//
+        }
 
         private void Proc_Dep(DataRow dr)
         {
@@ -1351,7 +1349,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Depòsito " + dr["mba_cpbte"] + ".");
             }
-        }//
+        }
 
         private void Proc_IngVar(DataRow dr)
         {
@@ -1574,7 +1572,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Ingreso Vario " + dr["moc_cpbte"] + ".");
             }
-        }//
+        }
 
         private void Proc_EgrVar(DataRow dr)
         {
@@ -1712,7 +1710,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Egreso Vario " + dr["moc_cpbte"] + ".");
             }
-        }//
+        }
 
         private void Proc_Recibo(DataRow dr)
         {
@@ -2058,7 +2056,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Recibo " + dr["vta_cpbte"].ToString() + ".");
             }
-        }//
+        }
 
         private void Proc_OP(DataRow dr)
         {
@@ -2240,7 +2238,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente a la Orden de Pago " + dr["cpa_nrocomp"] + ".");
             }
-        }//
+        }
 
         private void Proc_liquiVta(DataRow dr)
         {
@@ -2406,7 +2404,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente el Comprobante de Venta " + dr["vta_cpbte"] + ".");
             }
-        }//
+        }
 
         private void Proc_CpbteVtaServ(DataRow dr)
         {
@@ -2489,7 +2487,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente el Comprobante de Servicios " + dr["vta_cpbte"].ToString() + ".");
             }
-        }//
+        }
 
         private void Proc_CpbteTKVta(DataRow dr)
         {
@@ -2610,7 +2608,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente el Comprobante de Venta" + dr["vta_cpbte"].ToString() + ".");
             }
-        }//
+        }
 
         private void Proc_LiquiPAdm(DataRow dr)
         {
@@ -2619,7 +2617,7 @@ namespace SistemaContable.General
                 double cotizacion = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Cotizacion(dr, "vta_cotizacion");
 
                 DataSet ds2 = new DataSet();
-                ds2 = AccesoBase.ListarDatos($"Select * From Asiento Where ast_tipocbte = '{dr["vta_tipmov"]}' And ast_cbte = '{dr["vta_cpbte"]}'");
+                ds2 = AccesoBase.ListarDatos($"Select * From Asiento Where ast_tipocbte = {dr["vta_tipmov"]} And ast_cbte = '{dr["vta_cpbte"]}'");
                 if (ds2.Tables[0].Rows.Count != 0)
                 {
                     return;
@@ -2759,7 +2757,14 @@ namespace SistemaContable.General
                     }
                 }
 
-                AccesoBase.InsertUpdateDatosMoney($"Update Aux_Asiento Set aux_importe = Round(aux_importe * {"*"},2) Where aux_terminal = {terminal}", cotizacion.ToString());
+                Negocio.Funciones.Generales.FAuditoriaInternaMenu.Update(terminal);
+
+                double dif = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Diferencia(terminal, d, h);
+
+                if (dif != 0)
+                {
+                    AccesoBase.InsertUpdateDatosMoney($"Update Aux_Asiento Set aux_importe = aux_importe + {"*"} where aux_terminal = {terminal} and aux_orden = 1 and aux_codigo = {h}", dif.ToString());
+                }
 
                 if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
                 {
@@ -2773,7 +2778,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente Liquido Producto " + dr["vta_cpbte"].ToString() + ".");
             }
-        }//
+        }
 
         private void Proc_LiquiP(DataRow dr)
         {
@@ -2886,7 +2891,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente el Comprobante de Venta " + dr["vta_cpbte"].ToString() + ".");
             }
-        }//
+        }
 
         private long CtaIvaD(double Alicuota, long Cuenta, int seccion)
         {
@@ -2946,7 +2951,7 @@ namespace SistemaContable.General
                 }
             }
             return Cuenta;
-        }//
+        }
 
         private void Proc_CpbteVta(DataRow dr)
         {
@@ -3151,7 +3156,8 @@ namespace SistemaContable.General
                 }
                 else
                 {
-                    ds3 = AccesoBase.ListarDatos($"Select his_aliva, ali_ctacont, Sum(his_total) As Total From MovArtic Left Join AliIva on ali_porc = his_aliva Where his_aliva <> 0 And his_codigo = {dr["vta_codigo"]} Group by his_aliva, ali_ctacont");
+                    ds3 = AccesoBase.ListarDatos($"Select his_aliva, ali_ctacont, Round(Sum(his_total / (1 + (his_aliva / 100.0))),2) As Total From MovArtic Left Join AliIva on ali_porc = his_aliva Where his_aliva <> 0 And his_codigo = {dr["vta_codigo"]} Group by his_aliva, ali_ctacont");
+                    //ds3 = AccesoBase.ListarDatos($"Select his_aliva, ali_ctacont, Round(Sum(his_total / (1 + (his_aliva / 100.0))),2) As Total From MovArtic Left Join AliIva on ali_porc = his_aliva Where his_aliva <> 0 And his_codigo = {dr["vta_codigo"]} Group by his_aliva, ali_ctacont");
                     foreach (DataRow dr3 in ds3.Tables[0].Rows)
                     {
                         dto = Math.Round(Math.Round(Convert.ToDouble(dr3["total"]), 2) * (dr["vta_dtoporc"] is DBNull ? 0 : Convert.ToDouble(dr["vta_dtoporc"]) / 100), 2);
@@ -3266,7 +3272,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente el Comprobante de Venta " + dr["vta_cpbte"].ToString() + ".");
             }
-        }//
+        }
 
         private void FormPagVta1(DataRow dr)
         {
@@ -3486,7 +3492,7 @@ namespace SistemaContable.General
             {
                 MensajeError("Atención: Ha Ocurrido un Error!");
             }
-        }//
+        }
 
         private void FormPagVta2(DataRow dr)
         {
@@ -3569,7 +3575,7 @@ namespace SistemaContable.General
             {
                 MensajeError("Atención: Ha Ocurrido un Error!");
             }
-        }//
+        }
 
         private void Proc_MovIntVta(DataRow dr)
         {
@@ -3681,7 +3687,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente el Comprobante de Venta " + dr["vta_cpbte"] + ".");
             }
-        }//
+        }
 
         private bool CtrlDetTot(int tipo, int debe, string fecha, int orden, long codigo, double cotD)
         {
@@ -3700,7 +3706,7 @@ namespace SistemaContable.General
             {
                 return false;
             }
-        }//
+        }
 
         private void Proc_CPBTECpa(DataRow dr)
         {
@@ -3918,7 +3924,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["cpa_nrocomp"].ToString() + ".");
             }
-        }//
+        }
 
         private void Proc_LiquiCpa(DataRow dr)
         {
@@ -4109,7 +4115,7 @@ namespace SistemaContable.General
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["cpa_nrocomp"] + ".");
             }
-        }//
+        }
 
         private void FormPagCpa(DataRow dr)
         {
@@ -4149,9 +4155,9 @@ namespace SistemaContable.General
                     }
                 }
 
-                if (!(dr["cpa_tottercero"] is DBNull))
+                if (!(dr["cpa_totpropio"] is DBNull))
                 {
-                    if (Convert.ToDouble(dr["cpa_tottercero"]) != 0)
+                    if (Convert.ToDouble(dr["cpa_totpropio"]) != 0)
                     {
                         ds2 = AccesoBase.ListarDatos($"Select chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta, Sum(chp_importe) as total From ChequePropio Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on chp_nroban = cta_banco And chp_tipcta = cta_tipcta And chp_sucursal = cta_sucursal And chp_nrocta = cta_nrocta Where (chp_tipo <> 'T' or chp_tipo is null or chp_tipo = '') And chp_ordpag = '{dr["cpa_nrocomp"]}' And chp_tipmov = {dr["cpa_tipmov"]}");
                         foreach (DataRow dr2 in ds2.Tables[0].Rows)
@@ -4223,7 +4229,7 @@ namespace SistemaContable.General
             {
                 MensajeError("Atención: Ha Ocurrido un Error!");
             }
-        }//
+        }
 
         private bool Ctrl()
         {
@@ -4235,7 +4241,7 @@ namespace SistemaContable.General
                 return false;
             }
             return true;
-        }//
+        }
 
         private void MensajeError(string msg)
         {
