@@ -32,8 +32,6 @@ namespace SistemaContable.Empresa
         {
             dgvSucursales.Rows.Clear();
 
-            btnModificar.Enabled = false;
-
             DataSet ds = new DataSet();
             ds = Negocio.FEmpresa.listaEmpresa();
             dgvEmpresa.DataSource = ds.Tables[0];
@@ -63,19 +61,19 @@ namespace SistemaContable.Empresa
             CargarDGV();
         }
 
-        private void dgvSucursales_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvSucursales_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            if (dgvSucursales.Rows.Count == 0)
             {
-                btnModificar.Enabled = true;
-                int indice = e.RowIndex;
-                codigoSucursal = Convert.ToInt32(dgvSucursales.Rows[indice].Cells[0].Value.ToString());
-                descripcionSucursal = dgvSucursales.Rows[indice].Cells[1].Value.ToString();
+                return;
             }
-            catch
+            if (dgvSucursales.SelectedCells.Count > 0)
             {
-                btnModificar.Enabled = false;
-                btnEliminar.Enabled = false;
+                DataGridViewCell Celda = dgvSucursales.SelectedCells[0];
+                codigoSucursal = Convert.ToInt32(Celda.Value);
+
+                DataGridViewCell Celda2 = dgvSucursales.SelectedCells[1];
+                descripcionSucursal = Celda2.Value.ToString();
             }
         }
 

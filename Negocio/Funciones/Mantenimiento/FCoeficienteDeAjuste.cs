@@ -1,6 +1,7 @@
 ﻿using Datos;
 using Datos.Modelos;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace Negocio.Funciones.Mantenimiento
 {
     public class FCoeficienteDeAjuste
     {
+        public static string query;
+
         public List<MCoeficienteDeAjuste> listaEjercicios(int ejercicio)
         {
             List<MCoeficienteDeAjuste> mCoeficienteDeAjuste = new List<MCoeficienteDeAjuste>();
@@ -71,7 +74,8 @@ namespace Negocio.Funciones.Mantenimiento
 
         public DataSet listaCoeficientes(int idEjercicio) 
         {
-            DataSet ds = AccesoBase.ListarDatos($"SELECT aji_periodo as Periodo, aji_coef as 'Coeficiente de Ajuste', usu_nombre as Creó, aji_fecalta as Fecha, aji_horaalta as Hora, aji_usumodi as Modificó, aji_fecmodi as FechaModi, aji_horamodi as HoraModi FROM DetAjusteInf LEFT JOIN Usuario on aji_usualta = usu_codigo WHERE aji_ejercicio = {idEjercicio}");
+            query = $"SELECT aji_periodo as Periodo, aji_coef as 'Coeficiente de Ajuste', usu_nombre as Creó, aji_fecalta as Fecha, aji_horaalta as Hora, aji_usumodi as Modificó, aji_fecmodi as FechaModi, aji_horamodi as HoraModi FROM DetAjusteInf LEFT JOIN Usuario on aji_usualta = usu_codigo WHERE aji_ejercicio = {idEjercicio}";
+            DataSet ds = AccesoBase.ListarDatos(query);
             return ds;
         }
 
@@ -79,5 +83,16 @@ namespace Negocio.Funciones.Mantenimiento
         {
             AccesoBase.InsertUpdateDatos($"DELETE FROM DetAjusteInf WHERE aji_periodo = '{Periodo}'");
         }
+
+        public static bool ValidacionAsientoAjusteInf(int NroEjercicio)
+        {
+            int resultado = AccesoBase.ValidarDatos($"select * from Asiento where ast_tipo = 3");
+            if (resultado == 1)
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }

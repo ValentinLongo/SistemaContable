@@ -28,8 +28,6 @@ namespace SistemaContable.Agenda
 
         private void cargarDGV(string Nombre)
         {
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
             DataSet ds = new DataSet();
             ds = Negocio.FAgenda.listaAgenda(Nombre);
             dgvAgenda.DataSource = ds.Tables[0];
@@ -81,19 +79,16 @@ namespace SistemaContable.Agenda
             imprimirAgenda.ShowDialog();
         }
 
-        private void dgvAgenda_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvAgenda_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            if (dgvAgenda.Rows.Count == 0)
             {
-                btnModificar.Enabled = true;
-                btnEliminar.Enabled = true;
-                int indice = e.RowIndex;
-                IdModificar = Convert.ToInt32(dgvAgenda.Rows[indice].Cells[0].Value.ToString());
+                return;
             }
-            catch
+            if (dgvAgenda.SelectedCells.Count > 0)
             {
-                btnModificar.Enabled = false;
-                btnEliminar.Enabled = false;
+                DataGridViewCell Celda = dgvAgenda.SelectedCells[0];
+                IdModificar = Convert.ToInt32(Celda.Value);               
             }
         }
 

@@ -26,7 +26,6 @@ namespace SistemaContable.Usuarios
 
             cbBusqueda.SelectedIndex = 0;
             llenarDGV("");
-            btnModificar.Enabled = false;
         }
 
         public void llenarDGV(string busqueda)
@@ -64,17 +63,16 @@ namespace SistemaContable.Usuarios
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvUsuarios);
         }
 
-        private void Click(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvUsuarios_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            if (dgvUsuarios.Rows.Count == 0)
             {
-                btnModificar.Enabled = true;
-                int indice = e.RowIndex;
-                codigoUsuario = Convert.ToInt32(dgvUsuarios.Rows[indice].Cells[0].Value.ToString());
+                return;
             }
-            catch
+            if (dgvUsuarios.SelectedCells.Count > 0)
             {
-                btnModificar.Enabled = false;
+                DataGridViewCell Celda = dgvUsuarios.SelectedCells[0];
+                codigoUsuario = Convert.ToInt32(Celda.Value);
             }
         }
 
@@ -100,17 +98,6 @@ namespace SistemaContable.Usuarios
             definirCajas.Show();
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-            if (dgvUsuarios.Rows.Count == 0)
-            {
-                return;
-            }
-
-            frmReporte freporte = new frmReporte("Usuarios", $"{query}", "","Usuarios del Sistema", "Activos", DateTime.Now.ToString("d"));
-            freporte.ShowDialog();
-        }
-
         private void CheckUsuario_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
             dgvUsuarios.Rows.Clear();
@@ -129,6 +116,17 @@ namespace SistemaContable.Usuarios
                 busqueda = Negocio.FGenerales.Busqueda(dgvUsuarios, txtbusqueda.Text, CheckInicio, 1, "usu_nombre");
             }
             llenarDGV(busqueda);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            if (dgvUsuarios.Rows.Count == 0)
+            {
+                return;
+            }
+
+            frmReporte freporte = new frmReporte("Usuarios", $"{query}", "", "Usuarios del Sistema", "Activos", DateTime.Now.ToString("d"));
+            freporte.ShowDialog();
         }
 
         private void frmUsuarios_Resize(object sender, EventArgs e)

@@ -351,7 +351,7 @@
             this.dgvRubrosContables.Size = new System.Drawing.Size(646, 372);
             this.dgvRubrosContables.TabIndex = 71;
             this.dgvRubrosContables.TabStop = false;
-            this.dgvRubrosContables.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRubrosContables_CellMouseClick);
+            this.dgvRubrosContables.SelectionChanged += new System.EventHandler(this.dgvRubrosContables_SelectionChanged);
             // 
             // Column1
             // 

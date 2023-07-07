@@ -180,7 +180,7 @@
             this.tbCoeficiente.Name = "tbCoeficiente";
             this.tbCoeficiente.Size = new System.Drawing.Size(182, 13);
             this.tbCoeficiente.TabIndex = 1;
-            this.tbCoeficiente.Tag = "10100";
+            this.tbCoeficiente.Tag = "10000";
             // 
             // btnConfirmar
             // 

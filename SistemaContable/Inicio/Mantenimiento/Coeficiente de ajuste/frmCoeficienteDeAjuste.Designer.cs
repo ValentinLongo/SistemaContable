@@ -56,6 +56,7 @@
             this.dgvCoeficientes = new System.Windows.Forms.DataGridView();
             this.lblCantElementos = new System.Windows.Forms.Label();
             this.ShapeBusqueda = new Bunifu.UI.WinForms.BunifuShapes();
+            this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjercicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCoeficientes)).BeginInit();
@@ -205,7 +206,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(661, 209);
+            this.btnEliminar.Location = new System.Drawing.Point(661, 233);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(128, 38);
             this.btnEliminar.TabIndex = 4;
@@ -227,7 +228,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(661, 146);
+            this.btnModificar.Location = new System.Drawing.Point(661, 159);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(128, 38);
             this.btnModificar.TabIndex = 3;
@@ -454,7 +455,8 @@
             this.dgvCoeficientes.Size = new System.Drawing.Size(637, 248);
             this.dgvCoeficientes.TabIndex = 72;
             this.dgvCoeficientes.TabStop = false;
-            this.dgvCoeficientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCoeficientes_CellMouseClick);
+            this.dgvCoeficientes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCoeficientes_CellFormatting);
+            this.dgvCoeficientes.SelectionChanged += new System.EventHandler(this.dgvCoeficientes_SelectionChanged);
             // 
             // lblCantElementos
             // 
@@ -486,12 +488,35 @@
             this.ShapeBusqueda.TabStop = false;
             this.ShapeBusqueda.Text = "bunifuShapes1";
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnImprimir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.btnImprimir.BorderColor = System.Drawing.Color.White;
+            this.btnImprimir.BorderRadius = 0;
+            this.btnImprimir.BorderSize = 0;
+            this.btnImprimir.FlatAppearance.BorderSize = 0;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.Color.White;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(661, 503);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(128, 38);
+            this.btnImprimir.TabIndex = 75;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextColor = System.Drawing.Color.White;
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // frmCoeficienteDeAjuste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(800, 561);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.lblCantElementos);
             this.Controls.Add(this.dgvCoeficientes);
             this.Controls.Add(this.dgvEjercicios);
@@ -541,5 +566,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column5;
         private System.Windows.Forms.Label lblCantElementos;
         private Bunifu.UI.WinForms.BunifuShapes ShapeBusqueda;
+        private RJCodeAdvance.RJControls.RJButton btnImprimir;
     }
 }

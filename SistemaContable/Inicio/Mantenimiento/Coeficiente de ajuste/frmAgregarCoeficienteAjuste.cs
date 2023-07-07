@@ -43,7 +43,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
         {
             if (Negocio.FValidacionesEventos.ValidacionVacio(this) == 0)
             {
-                bool validaFecha = validarFecha();
+                bool validaFecha = validarPeriodo();
                 if (validaFecha && Evento == "Agregar")
                 {
                     try
@@ -82,16 +82,48 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             }
         }
 
-        public bool validarFecha()
+        public bool validarPeriodo()
         {
+            int mes = Convert.ToInt32(maskPeriodo.Text.Substring(0, 2));
+            int año = Convert.ToInt32(maskPeriodo.Text.Substring(3, 4));
+
             if (maskPeriodo.Text.Length == 7)
             {
-                return true;
+                if (mes >= 1 && mes <= 12)
+                {
+                    if (año == AñoEjercicio(frmCoeficienteDeAjuste.codigoEjercicio))
+                    {
+                        DataSet ds = new DataSet();
+                        int resultado = AccesoBase.ValidarDatos($"select aji_periodo from DetAjusteInf where aji_periodo = '{maskPeriodo.Text}'");
+                        if (resultado == 0)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            frmMessageBox Mensaje1 = new frmMessageBox("Mensaje", "Atención: El Coeficiente ya se ha definido para el ejercicio y periodo indicado.", false, true);
+                            Mensaje1.ShowDialog();
+                            return false;
+                        }
+                    }
+                }
+
+                frmMessageBox Mensaje2 = new frmMessageBox("Mensaje", "Atención: El Periodo Ingresado No se encuetra dentro de los parametros del Ejercicio.", false, true);
+                Mensaje2.ShowDialog();
+                return false;
             }
             else
             {
                 return false;
             }
+        }
+
+        private int AñoEjercicio(int NroEjercicio)
+        {
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"select eje_desde from Ejercicio where eje_codigo = {NroEjercicio}");
+            int año = Convert.ToInt32(ds.Tables[0].Rows[0]["eje_desde"].ToString().Substring(6, 4));
+            return año;
         }
 
         //BARRA DE CONTROL

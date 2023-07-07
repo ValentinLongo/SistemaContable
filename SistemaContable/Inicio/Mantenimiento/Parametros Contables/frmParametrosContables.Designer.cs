@@ -1804,6 +1804,7 @@
             this.par_ctaIVA213.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA213.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA213.CustomCheckmarkImage = null;
+            this.par_ctaIVA213.Enabled = false;
             this.par_ctaIVA213.Location = new System.Drawing.Point(628, 34);
             this.par_ctaIVA213.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA213.Name = "par_ctaIVA213";
@@ -1857,6 +1858,7 @@
             this.par_ctaIVA103.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA103.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA103.CustomCheckmarkImage = null;
+            this.par_ctaIVA103.Enabled = false;
             this.par_ctaIVA103.Location = new System.Drawing.Point(628, 60);
             this.par_ctaIVA103.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA103.Name = "par_ctaIVA103";
@@ -1910,6 +1912,7 @@
             this.par_ctaIVA273.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA273.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA273.CustomCheckmarkImage = null;
+            this.par_ctaIVA273.Enabled = false;
             this.par_ctaIVA273.Location = new System.Drawing.Point(628, 86);
             this.par_ctaIVA273.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA273.Name = "par_ctaIVA273";
@@ -1963,6 +1966,7 @@
             this.par_ctaImpInt3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaImpInt3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaImpInt3.CustomCheckmarkImage = null;
+            this.par_ctaImpInt3.Enabled = false;
             this.par_ctaImpInt3.Location = new System.Drawing.Point(628, 115);
             this.par_ctaImpInt3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaImpInt3.Name = "par_ctaImpInt3";
@@ -2016,6 +2020,7 @@
             this.par_ctaRetIVA3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetIVA3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetIVA3.CustomCheckmarkImage = null;
+            this.par_ctaRetIVA3.Enabled = false;
             this.par_ctaRetIVA3.Location = new System.Drawing.Point(628, 144);
             this.par_ctaRetIVA3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetIVA3.Name = "par_ctaRetIVA3";
@@ -2069,6 +2074,7 @@
             this.par_ctaRetIIBB3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetIIBB3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetIIBB3.CustomCheckmarkImage = null;
+            this.par_ctaRetIIBB3.Enabled = false;
             this.par_ctaRetIIBB3.Location = new System.Drawing.Point(628, 170);
             this.par_ctaRetIIBB3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetIIBB3.Name = "par_ctaRetIIBB3";
@@ -2122,6 +2128,7 @@
             this.par_ctaRetGan3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetGan3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetGan3.CustomCheckmarkImage = null;
+            this.par_ctaRetGan3.Enabled = false;
             this.par_ctaRetGan3.Location = new System.Drawing.Point(628, 196);
             this.par_ctaRetGan3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetGan3.Name = "par_ctaRetGan3";
@@ -2175,6 +2182,7 @@
             this.par_ctaRetSUSS3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetSUSS3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetSUSS3.CustomCheckmarkImage = null;
+            this.par_ctaRetSUSS3.Enabled = false;
             this.par_ctaRetSUSS3.Location = new System.Drawing.Point(628, 223);
             this.par_ctaRetSUSS3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetSUSS3.Name = "par_ctaRetSUSS3";
@@ -2228,6 +2236,7 @@
             this.par_ctaPerIVA3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaPerIVA3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaPerIVA3.CustomCheckmarkImage = null;
+            this.par_ctaPerIVA3.Enabled = false;
             this.par_ctaPerIVA3.Location = new System.Drawing.Point(628, 249);
             this.par_ctaPerIVA3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaPerIVA3.Name = "par_ctaPerIVA3";
@@ -2281,6 +2290,7 @@
             this.par_ctaPerIIBB3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaPerIIBB3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaPerIIBB3.CustomCheckmarkImage = null;
+            this.par_ctaPerIIBB3.Enabled = false;
             this.par_ctaPerIIBB3.Location = new System.Drawing.Point(628, 277);
             this.par_ctaPerIIBB3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaPerIIBB3.Name = "par_ctaPerIIBB3";
@@ -2334,6 +2344,7 @@
             this.par_ctaDeud3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaDeud3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaDeud3.CustomCheckmarkImage = null;
+            this.par_ctaDeud3.Enabled = false;
             this.par_ctaDeud3.Location = new System.Drawing.Point(628, 439);
             this.par_ctaDeud3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaDeud3.Name = "par_ctaDeud3";
@@ -2387,6 +2398,7 @@
             this.par_ctaPerGan3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaPerGan3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaPerGan3.CustomCheckmarkImage = null;
+            this.par_ctaPerGan3.Enabled = false;
             this.par_ctaPerGan3.Location = new System.Drawing.Point(628, 305);
             this.par_ctaPerGan3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaPerGan3.Name = "par_ctaPerGan3";
@@ -2440,6 +2452,7 @@
             this.par_ctaOtrosImp3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaOtrosImp3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaOtrosImp3.CustomCheckmarkImage = null;
+            this.par_ctaOtrosImp3.Enabled = false;
             this.par_ctaOtrosImp3.Location = new System.Drawing.Point(628, 331);
             this.par_ctaOtrosImp3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaOtrosImp3.Name = "par_ctaOtrosImp3";
@@ -2493,6 +2506,7 @@
             this.par_ctaProvGral3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaProvGral3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaProvGral3.CustomCheckmarkImage = null;
+            this.par_ctaProvGral3.Enabled = false;
             this.par_ctaProvGral3.Location = new System.Drawing.Point(628, 385);
             this.par_ctaProvGral3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaProvGral3.Name = "par_ctaProvGral3";
@@ -2546,6 +2560,7 @@
             this.par_ctaIVA21D3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA21D3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA21D3.CustomCheckmarkImage = null;
+            this.par_ctaIVA21D3.Enabled = false;
             this.par_ctaIVA21D3.Location = new System.Drawing.Point(628, 468);
             this.par_ctaIVA21D3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA21D3.Name = "par_ctaIVA21D3";
@@ -2599,6 +2614,7 @@
             this.par_NetoVtaArti3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_NetoVtaArti3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_NetoVtaArti3.CustomCheckmarkImage = null;
+            this.par_NetoVtaArti3.Enabled = false;
             this.par_NetoVtaArti3.Location = new System.Drawing.Point(628, 412);
             this.par_NetoVtaArti3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_NetoVtaArti3.Name = "par_NetoVtaArti3";
@@ -2652,6 +2668,7 @@
             this.par_ctaProv3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaProv3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaProv3.CustomCheckmarkImage = null;
+            this.par_ctaProv3.Enabled = false;
             this.par_ctaProv3.Location = new System.Drawing.Point(628, 358);
             this.par_ctaProv3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaProv3.Name = "par_ctaProv3";
@@ -2705,6 +2722,7 @@
             this.par_ctaIVA10D3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA10D3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA10D3.CustomCheckmarkImage = null;
+            this.par_ctaIVA10D3.Enabled = false;
             this.par_ctaIVA10D3.Location = new System.Drawing.Point(628, 494);
             this.par_ctaIVA10D3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA10D3.Name = "par_ctaIVA10D3";
@@ -2758,6 +2776,7 @@
             this.par_ctaIVA27D3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaIVA27D3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaIVA27D3.CustomCheckmarkImage = null;
+            this.par_ctaIVA27D3.Enabled = false;
             this.par_ctaIVA27D3.Location = new System.Drawing.Point(628, 521);
             this.par_ctaIVA27D3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaIVA27D3.Name = "par_ctaIVA27D3";
@@ -2811,6 +2830,7 @@
             this.par_ctaRetIIBBP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetIIBBP3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetIIBBP3.CustomCheckmarkImage = null;
+            this.par_ctaRetIIBBP3.Enabled = false;
             this.par_ctaRetIIBBP3.Location = new System.Drawing.Point(628, 573);
             this.par_ctaRetIIBBP3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetIIBBP3.Name = "par_ctaRetIIBBP3";
@@ -2864,6 +2884,7 @@
             this.par_ctaRetIVAP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetIVAP3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetIVAP3.CustomCheckmarkImage = null;
+            this.par_ctaRetIVAP3.Enabled = false;
             this.par_ctaRetIVAP3.Location = new System.Drawing.Point(628, 547);
             this.par_ctaRetIVAP3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetIVAP3.Name = "par_ctaRetIVAP3";
@@ -2917,6 +2938,7 @@
             this.par_ctaRetGanP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetGanP3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetGanP3.CustomCheckmarkImage = null;
+            this.par_ctaRetGanP3.Enabled = false;
             this.par_ctaRetGanP3.Location = new System.Drawing.Point(628, 601);
             this.par_ctaRetGanP3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetGanP3.Name = "par_ctaRetGanP3";
@@ -2970,6 +2992,7 @@
             this.par_ctaRetSUSSP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetSUSSP3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetSUSSP3.CustomCheckmarkImage = null;
+            this.par_ctaRetSUSSP3.Enabled = false;
             this.par_ctaRetSUSSP3.Location = new System.Drawing.Point(628, 627);
             this.par_ctaRetSUSSP3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetSUSSP3.Name = "par_ctaRetSUSSP3";
@@ -3023,6 +3046,7 @@
             this.par_ctaDescuento3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaDescuento3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaDescuento3.CustomCheckmarkImage = null;
+            this.par_ctaDescuento3.Enabled = false;
             this.par_ctaDescuento3.Location = new System.Drawing.Point(628, 653);
             this.par_ctaDescuento3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaDescuento3.Name = "par_ctaDescuento3";
@@ -3076,6 +3100,7 @@
             this.par_ctaRecargo3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRecargo3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRecargo3.CustomCheckmarkImage = null;
+            this.par_ctaRecargo3.Enabled = false;
             this.par_ctaRecargo3.Location = new System.Drawing.Point(628, 685);
             this.par_ctaRecargo3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRecargo3.Name = "par_ctaRecargo3";
@@ -3129,6 +3154,7 @@
             this.par_NetoVtaServ3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_NetoVtaServ3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_NetoVtaServ3.CustomCheckmarkImage = null;
+            this.par_NetoVtaServ3.Enabled = false;
             this.par_NetoVtaServ3.Location = new System.Drawing.Point(628, 764);
             this.par_NetoVtaServ3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_NetoVtaServ3.Name = "par_NetoVtaServ3";
@@ -3182,6 +3208,7 @@
             this.par_ctaAnticipoCpa3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaAnticipoCpa3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaAnticipoCpa3.CustomCheckmarkImage = null;
+            this.par_ctaAnticipoCpa3.Enabled = false;
             this.par_ctaAnticipoCpa3.Location = new System.Drawing.Point(628, 735);
             this.par_ctaAnticipoCpa3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaAnticipoCpa3.Name = "par_ctaAnticipoCpa3";
@@ -3235,6 +3262,7 @@
             this.par_ctaRetBF3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetBF3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetBF3.CustomCheckmarkImage = null;
+            this.par_ctaRetBF3.Enabled = false;
             this.par_ctaRetBF3.Location = new System.Drawing.Point(628, 818);
             this.par_ctaRetBF3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetBF3.Name = "par_ctaRetBF3";
@@ -3288,6 +3316,7 @@
             this.par_ctaRedondeo3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRedondeo3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRedondeo3.CustomCheckmarkImage = null;
+            this.par_ctaRedondeo3.Enabled = false;
             this.par_ctaRedondeo3.Location = new System.Drawing.Point(628, 790);
             this.par_ctaRedondeo3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRedondeo3.Name = "par_ctaRedondeo3";
@@ -3341,6 +3370,7 @@
             this.par_ctaRetBFP3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaRetBFP3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaRetBFP3.CustomCheckmarkImage = null;
+            this.par_ctaRetBFP3.Enabled = false;
             this.par_ctaRetBFP3.Location = new System.Drawing.Point(628, 846);
             this.par_ctaRetBFP3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaRetBFP3.Name = "par_ctaRetBFP3";
@@ -3394,6 +3424,7 @@
             this.par_ctaAnticipoVta3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaAnticipoVta3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaAnticipoVta3.CustomCheckmarkImage = null;
+            this.par_ctaAnticipoVta3.Enabled = false;
             this.par_ctaAnticipoVta3.Location = new System.Drawing.Point(628, 711);
             this.par_ctaAnticipoVta3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaAnticipoVta3.Name = "par_ctaAnticipoVta3";
@@ -3447,6 +3478,7 @@
             this.par_ctaDifCambioVta3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaDifCambioVta3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaDifCambioVta3.CustomCheckmarkImage = null;
+            this.par_ctaDifCambioVta3.Enabled = false;
             this.par_ctaDifCambioVta3.Location = new System.Drawing.Point(628, 872);
             this.par_ctaDifCambioVta3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaDifCambioVta3.Name = "par_ctaDifCambioVta3";
@@ -3500,6 +3532,7 @@
             this.par_ctaCINeto3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaCINeto3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaCINeto3.CustomCheckmarkImage = null;
+            this.par_ctaCINeto3.Enabled = false;
             this.par_ctaCINeto3.Location = new System.Drawing.Point(628, 896);
             this.par_ctaCINeto3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaCINeto3.Name = "par_ctaCINeto3";
@@ -3553,6 +3586,7 @@
             this.par_ctaCIIVA3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaCIIVA3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaCIIVA3.CustomCheckmarkImage = null;
+            this.par_ctaCIIVA3.Enabled = false;
             this.par_ctaCIIVA3.Location = new System.Drawing.Point(628, 925);
             this.par_ctaCIIVA3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaCIIVA3.Name = "par_ctaCIIVA3";
@@ -3606,6 +3640,7 @@
             this.par_ctaAjusteInf3.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.par_ctaAjusteInf3.Cursor = System.Windows.Forms.Cursors.Default;
             this.par_ctaAjusteInf3.CustomCheckmarkImage = null;
+            this.par_ctaAjusteInf3.Enabled = false;
             this.par_ctaAjusteInf3.Location = new System.Drawing.Point(628, 952);
             this.par_ctaAjusteInf3.MinimumSize = new System.Drawing.Size(17, 17);
             this.par_ctaAjusteInf3.Name = "par_ctaAjusteInf3";

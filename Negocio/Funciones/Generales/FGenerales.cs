@@ -320,5 +320,12 @@ namespace Negocio
             }
         }
 
+        public static string NombreEjercicio(int nroEjercicio)
+        {
+            DataSet ds = new DataSet();
+            ds = AccesoBase.ListarDatos($"select eje_descri from Ejercicio where eje_codigo = {nroEjercicio}");
+            return ds.Tables[0].Rows[0]["eje_descri"].ToString();
+        }
+
     }
 }

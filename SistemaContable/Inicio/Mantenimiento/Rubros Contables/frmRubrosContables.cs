@@ -33,8 +33,7 @@ namespace SistemaContable.Rubos_Contables
         private void CargarDGV(string busqueda)
         {
             dgvRubrosContables.Rows.Clear();
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
+
             DataSet data = new DataSet();
             data = Datos.AccesoBase.ListarDatos($"SELECT * FROM RubroCont " + busqueda + " ORDER BY ruc_codigo");
             foreach (DataRow dr in data.Tables[0].Rows)
@@ -84,19 +83,16 @@ namespace SistemaContable.Rubos_Contables
             CargarDGV(busqueda);
         }
 
-        private void dgvRubrosContables_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvRubrosContables_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            if (dgvRubrosContables.Rows.Count == 0)
             {
-                btnModificar.Enabled = true;
-                btnEliminar.Enabled = true;
-                int indice = e.RowIndex;
-                codigoRubro = Convert.ToInt32(dgvRubrosContables.Rows[indice].Cells[0].Value.ToString());
+                return;
             }
-            catch
+            if (dgvRubrosContables.SelectedCells.Count > 0)
             {
-                btnModificar.Enabled = false;
-                btnEliminar.Enabled = false;
+                DataGridViewCell Celda = dgvRubrosContables.SelectedCells[0];
+                codigoRubro = Convert.ToInt32(Celda.Value);
             }
         }
 

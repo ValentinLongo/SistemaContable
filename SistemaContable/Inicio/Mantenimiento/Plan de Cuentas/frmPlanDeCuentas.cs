@@ -26,9 +26,6 @@ namespace SistemaContable.Plan_de_Cuentas
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
 
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
-
             CargarDGV("");
         }
 
@@ -60,19 +57,16 @@ namespace SistemaContable.Plan_de_Cuentas
             CargarDGV("");
         }
 
-        private void dgvCuentas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvCuentas_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            if (dgvCuentas.Rows.Count == 0)
             {
-                btnModificar.Enabled = true;
-                btnEliminar.Enabled = true;
-                int indice = e.RowIndex;
-                idCuenta = dgvCuentas.Rows[indice].Cells[1].Value.ToString();
+                return;
             }
-            catch
+            if (dgvCuentas.SelectedCells.Count > 0)
             {
-                btnModificar.Enabled = false;
-                btnEliminar.Enabled = true;
+                DataGridViewCell Celda = dgvCuentas.SelectedCells[1];
+                idCuenta = Celda.Value.ToString();
             }
         }
 

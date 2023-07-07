@@ -2,6 +2,7 @@
 using Negocio.Funciones.Mantenimiento;
 using SistemaContable.General;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,9 +40,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
 
         private void CargarDGV()
         {
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
             dgvEjercicios.Rows.Clear();
+
             List<MCoeficienteDeAjuste> mCoeficienteDeAjuste = new List<MCoeficienteDeAjuste>();
             mCoeficienteDeAjuste = data.listaEjercicios(check);
             foreach (var datos in mCoeficienteDeAjuste)
@@ -71,29 +71,44 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
 
         private void dgvEjercicios_SelectionChanged(object sender, EventArgs e)
         {
-            int RowIndex = dgvEjercicios.Rows.IndexOf(dgvEjercicios.SelectedRows[0]);
-            if (RowIndex >= 0)
+            if (dgvEjercicios.Rows.Count == 0)
             {
-                codigoEjercicio = Convert.ToInt32(dgvEjercicios.Rows[RowIndex].Cells[0].Value.ToString());
+                return;
+            }
+            if (dgvEjercicios.SelectedCells.Count > 0)
+            {
+                DataGridViewCell Celda = dgvEjercicios.SelectedCells[0];
+                codigoEjercicio = Convert.ToInt32(Celda.Value);
                 DataSet ds = data.listaCoeficientes(codigoEjercicio);
                 dgvCoeficientes.DataSource = ds.Tables[0];
             }
         }
 
-        private void dgvCoeficientes_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvCoeficientes_SelectionChanged(object sender, EventArgs e)
         {
-            btnModificar.Enabled = true;
-            btnEliminar.Enabled = true;
-            int indice = e.RowIndex;
-            if (indice >= 0)
+            if (dgvCoeficientes.Rows.Count == 0)
             {
-                periodoModificar = dgvCoeficientes.Rows[indice].Cells[0].Value.ToString();
-                coeficienteModificar = dgvCoeficientes.Rows[indice].Cells[1].Value.ToString();
+                return;
+            }
+            if (dgvCoeficientes.SelectedCells.Count > 0)
+            {
+                DataGridViewCell Celda = dgvCoeficientes.SelectedCells[0];
+                periodoModificar = Celda.Value.ToString();
+
+                DataGridViewCell Celda2 = dgvCoeficientes.SelectedCells[1];
+                coeficienteModificar = Celda2.Value.ToString();
             }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (Negocio.Funciones.Mantenimiento.FCoeficienteDeAjuste.ValidacionAsientoAjusteInf(codigoEjercicio))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Ya se ha registrado por lo menos un Asiento de Ajuste por Inflacion en este Ejercicio. No podra realizar alteraciones en los Coeficientes.", false, true);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             frmAgregarCoeficienteAjuste agregarCoeficienteAjuste = new frmAgregarCoeficienteAjuste("Agregar");
             agregarCoeficienteAjuste.ShowDialog();
             CargarDGV();
@@ -101,6 +116,13 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (Negocio.Funciones.Mantenimiento.FCoeficienteDeAjuste.ValidacionAsientoAjusteInf(codigoEjercicio))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Ya se ha registrado por lo menos un Asiento de Ajuste por Inflacion en este Ejercicio. No podra realizar alteraciones en los Coeficientes.", false, true);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             frmAgregarCoeficienteAjuste agregarCoeficienteAjuste = new frmAgregarCoeficienteAjuste("Modificar");
             agregarCoeficienteAjuste.ShowDialog();
             CargarDGV();
@@ -108,6 +130,13 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (Negocio.Funciones.Mantenimiento.FCoeficienteDeAjuste.ValidacionAsientoAjusteInf(codigoEjercicio))
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Ya se ha registrado por lo menos un Asiento de Ajuste por Inflacion en este Ejercicio. No podra realizar alteraciones en los Coeficientes.", false, true);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             try
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Desea Continuar?", true);
@@ -145,6 +174,32 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
                 }
                 dgvEjercicios.Rows.Add(datos.eje_codigo, datos.eje_descri, datos.eje_desde, datos.eje_hasta, cerrado);
             }
+        }
+
+        private void dgvCoeficientes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                if (e.Value != null && double.TryParse(e.Value.ToString(), out double valor))
+                {
+                    string formato = "0.00000000000";
+                    e.Value = valor.ToString(formato);
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            if (dgvCoeficientes.Rows.Count == 0)
+            {
+                return;
+            }
+
+            string query = $"SELECT aji_periodo, aji_coef, usu_nombre as UsuAlta, aji_fecalta, aji_horaalta, aji_usumodi as UsuModi, aji_fecmodi, aji_horamodi FROM DetAjusteInf LEFT JOIN Usuario on aji_usualta = usu_codigo WHERE aji_ejercicio = {codigoEjercicio}";
+
+            frmReporte freporte = new frmReporte("DetAjusteInf",query, "", "Coeficientes de Ajuste", Negocio.FGenerales.NombreEjercicio(codigoEjercicio), DateTime.Now.ToShortDateString());
+            freporte.ShowDialog();
         }
 
         //BARRA DE CONTROL

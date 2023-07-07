@@ -238,7 +238,7 @@
             this.dgvAgenda.Size = new System.Drawing.Size(874, 512);
             this.dgvAgenda.TabIndex = 61;
             this.dgvAgenda.TabStop = false;
-            this.dgvAgenda.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAgenda_CellMouseClick);
+            this.dgvAgenda.SelectionChanged += new System.EventHandler(this.dgvAgenda_SelectionChanged);
             // 
             // lblCantElementos
             // 

@@ -260,7 +260,7 @@
             this.dgvSucursales.Size = new System.Drawing.Size(656, 350);
             this.dgvSucursales.TabIndex = 53;
             this.dgvSucursales.TabStop = false;
-            this.dgvSucursales.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSucursales_CellMouseClick);
+            this.dgvSucursales.SelectionChanged += new System.EventHandler(this.dgvSucursales_SelectionChanged);
             // 
             // Column1
             // 

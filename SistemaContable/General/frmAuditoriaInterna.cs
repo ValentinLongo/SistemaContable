@@ -1143,7 +1143,7 @@ namespace SistemaContable.General
 
                 if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
                 {
-                    //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
+                    MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
                 AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. CPA." + "Abreviado" + dr["cpa_nrocomp"] + "-" + dr["cpa_nombre"].ToString(), 0, 0, Convert.ToInt32(dr["cpa_tipmov"]), dr["cpa_nrocomp"].ToString(), Convert.ToInt32(dr["cpa_ctapro"]), dr, "cpa_tipmov");
@@ -1282,10 +1282,10 @@ namespace SistemaContable.General
 
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, ds2.Tables[0].Rows[0]["mba_fecemi"].ToString(), CtaCtaBan, 2, ds2.Tables[0].Rows[0]["mba_importe"].ToString(), "", 2);
 
-                if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
-                {
-                    //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
-                }
+                //if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
+                //{
+                //    MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
+                //}
 
                 AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["mba_fecemi"].ToString(), "TRANF. BANCARIA" + dr["mba_cpbte"].ToString(), 0, 0, 100, dr["mba_cpbte"].ToString(), 0, dr, "mba_tipmov");
             }
@@ -2394,7 +2394,7 @@ namespace SistemaContable.General
 
                 if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
                 {
-                    //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
+                    MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
                 AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr, "vta_tipmov");
@@ -2598,7 +2598,7 @@ namespace SistemaContable.General
 
                 if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
                 {
-                    //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
+                    MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
                 AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, fecha, "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr, "vta_tipmov");
@@ -2881,7 +2881,7 @@ namespace SistemaContable.General
 
                 if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
                 {
-                    //MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
+                    MensajeError("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
                 }
 
                 AsientoFinal = Negocio.Funciones.Generales.FAuditoriaInternaMenu.Insert(terminal, dr["vta_fecpro"].ToString(), "REG. VTA." + "Abreviado" + dr["vta_cpbte"].ToString() + "-" + dr["vta_cliente"].ToString(), 0, 0, Convert.ToInt32(dr["vta_tipmov"]), dr["vta_cpbte"].ToString(), 0, dr, "vta_tipmov");
@@ -3652,6 +3652,7 @@ namespace SistemaContable.General
                 }
                 else
                 {
+                    ds3 = AccesoBase.ListarDatos($"Select * From MovVta Left Join ConceptoCont on vta_conceptocont = coc_codigo Where vta_codigo = {dr["vta_codigo"]}");
                     Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, dr["vta_fecemi"].ToString(), Convert.ToInt32(ds3.Tables[0].Rows[0]["coc_ctacont"]), h, (Convert.ToDouble(dr["vta_total"]) * cotizacion).ToString(), "", n, ds3.Tables[0].Rows[0]["coc_cccta"] is DBNull ? 0 : Convert.ToInt32(ds3.Tables[0].Rows[0]["coc_cccta"]));
                 }
 
@@ -3672,7 +3673,7 @@ namespace SistemaContable.General
 
                 if (dif != 0)
                 {
-                    AccesoBase.InsertUpdateDatosMoney($"Update Aux_Asiento Set aux_importe = aux_importe + {"*"} Where aux_terminal = {terminal} And aux_orden = 1 And aux_codigo = {h}", dif.ToString());
+                    AccesoBase.InsertUpdateDatosMoney($"Update Aux_Asiento Set aux_importe = aux_importe + {" * "} Where aux_terminal = {terminal} And aux_orden = 1 And aux_codigo = {h}", dif.ToString());
                 }
 
                 if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
