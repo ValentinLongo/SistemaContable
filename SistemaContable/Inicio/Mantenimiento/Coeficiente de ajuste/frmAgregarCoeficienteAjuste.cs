@@ -82,7 +82,7 @@ namespace SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste
             }
         }
 
-        public bool validarPeriodo()
+        private bool validarPeriodo()
         {
             int mes = Convert.ToInt32(maskPeriodo.Text.Substring(0, 2));
             int año = Convert.ToInt32(maskPeriodo.Text.Substring(3, 4));

@@ -410,11 +410,11 @@
             // 
             this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCantElementos.AutoSize = true;
-            this.lblCantElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantElementos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCantElementos.Location = new System.Drawing.Point(15, 623);
+            this.lblCantElementos.Location = new System.Drawing.Point(15, 624);
             this.lblCantElementos.Name = "lblCantElementos";
-            this.lblCantElementos.Size = new System.Drawing.Size(58, 15);
+            this.lblCantElementos.Size = new System.Drawing.Size(56, 13);
             this.lblCantElementos.TabIndex = 148;
             this.lblCantElementos.Text = "Elementos";
             // 

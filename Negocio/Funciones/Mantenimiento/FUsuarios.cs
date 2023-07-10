@@ -87,10 +87,10 @@ namespace Negocio
             Datos.AccesoBase.InsertUpdateDatos($"UPDATE Usuario SET usu_nombre = '{mUsuario.usu_nombre}', usu_login = '{mUsuario.usu_login}', usu_direccion = '{mUsuario.usu_direccion}', usu_telefono = '{mUsuario.usu_telefono}', usu_perfil = {mUsuario.usu_perfil}, usu_fecnac = '{mUsuario.usu_fecnac}', usu_estado = {mUsuario.usu_estado}, usu_seccion = {mUsuario.usu_seccion}, usu_vendedor = {mUsuario.usu_vendedor} WHERE usu_codigo = {mUsuario.usu_codigo}");
         }
 
-        public static void ModificarCajaPredefinida(int idCaja)
+        public static void ModificarCajaPredefinida(int idCaja, int CodigoUsuario)
         {
-            Datos.AccesoBase.InsertUpdateDatos($"UPDATE CajaxUsuario SET cxu_predef = 0 where cxu_usuario = {Negocio.FLogin.IdUsuario}");
-            Datos.AccesoBase.InsertUpdateDatos($"UPDATE CajaxUsuario SET cxu_predef = 1 where cxu_usuario = {Negocio.FLogin.IdUsuario} and cxu_caja = {idCaja}");
+            Datos.AccesoBase.InsertUpdateDatos($"UPDATE CajaxUsuario SET cxu_predef = 0 where cxu_usuario = {CodigoUsuario}");
+            Datos.AccesoBase.InsertUpdateDatos($"UPDATE CajaxUsuario SET cxu_predef = 1 where cxu_usuario = {CodigoUsuario} and cxu_caja = {idCaja}");
         }
 
         public static void ModificarContra(string nuevaContra)
@@ -141,5 +141,19 @@ namespace Negocio
                 }
             }
         }
+
+        public static bool ValidarPermisoDefinirCaja()
+        {
+            int resultado = AccesoBase.ValidarDatos($"select * from PermisosxUsu where pxu_usuario = {FLogin.IdUsuario} and pxu_codigo = 10 and pxu_activo = '1' and pxu_sistema = 'CO'");
+            if (resultado == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

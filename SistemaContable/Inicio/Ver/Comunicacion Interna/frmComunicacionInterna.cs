@@ -49,11 +49,12 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
                 string horaL = dr["obs_horaL"].ToString();
                 string comentario = dr["obs_comentario"].ToString();
 
-                if (fechaL != "" && fecha != "")
+                if (fechaL != "")
                 {
                     fechaL = fechaL.Substring(0, 10);
-                    fecha = fecha.Substring(0, 10);
                 }
+                fecha = fecha.Substring(0, 10);
+
                 dgvMensajes.Rows.Add(fecha, hora, origen, destino, fechaL, horaL, comentario);
             }
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvMensajes);
@@ -69,16 +70,19 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
 
             if (cbSeleccionar.Text == "Bandeja de Entrada")
             {
-                where = $"WHERE obs_destino = {FLogin.IdUsuario} AND obs_fecha >= '{DateTime.Now.AddDays(-7)}' AND obs_fecha <= '{DateTime.Now}'";
+                where = $"WHERE obs_destino = {FLogin.IdUsuario}";
             }
             else if (cbSeleccionar.Text == "Bandeja de Salida")
             {
-                where = $"WHERE obs_codori = {FLogin.IdUsuario} AND obs_fecha >= '{DateTime.Now.AddDays(-7)}' AND obs_fecha <= '{DateTime.Now}'";
+                where = $"WHERE obs_codori = {FLogin.IdUsuario}";
             }
+
             CargarDGV(where);
 
-            lblDesde.Text = "Desde: " + DateTime.Now.AddDays(-7).ToString().Substring(0,10);
-            lblHasta.Text = "Hasta: " + DateTime.Now.ToString().Substring(0, 10);
+            if (cbSeleccionar.Text == "Bandeja de Entrada")
+            {
+                Negocio.Funciones.Ver.FComunicacionInterna.VerMSGs(dgvMensajes, nuevomsg);
+            }
         }
 
         private void dgvMensajes_SelectionChanged(object sender, EventArgs e)
@@ -92,14 +96,6 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
             else
             {
                 txtComentario.Text = "";
-            }
-        }
-
-        private void txtComentario_TextChanged(object sender, EventArgs e)
-        {
-            if (cbSeleccionar.Text == "Bandeja de Entrada")
-            {
-                Negocio.Funciones.Ver.FComunicacionInterna.VerMSGs(dgvMensajes, nuevomsg);
             }
         }
 
@@ -156,28 +152,6 @@ namespace SistemaContable.Inicio.Ver.Comunicacion_Interna
 
             frmReporte reporte = new frmReporte("Msg", Query, "", "Comunicación Interna", origen, destino, fecha);
             reporte.ShowDialog();
-        }
-
-        private void btnFiltrar_Click(object sender, EventArgs e) //para filtrar por fecha
-        {
-            frmRangoFechas frm = new frmRangoFechas(1, Convert.ToDateTime(lblDesde.Text.Substring(7,10)), Convert.ToDateTime(lblHasta.Text.Substring(7, 10)));
-            frm.ShowDialog();
-
-            dgvMensajes.Rows.Clear();
-
-            string where = "";
-            if (cbSeleccionar.Text == "Bandeja de Entrada")
-            {
-                where = $"WHERE obs_destino = {FLogin.IdUsuario} AND obs_fecha >= '{frmRangoFechas.Desde}' AND obs_fecha <= '{frmRangoFechas.Hasta}'";
-            }
-            else if (cbSeleccionar.Text == "Bandeja de Salida")
-            {
-                where = $"WHERE obs_codori = {FLogin.IdUsuario} AND obs_fecha >= '{frmRangoFechas.Desde}' AND obs_fecha <= '{frmRangoFechas.Hasta}'";
-            }
-            CargarDGV(where);
-
-            lblDesde.Text = "Desde: " + frmRangoFechas.Desde.ToString().Substring(0, 10);
-            lblHasta.Text = "Hasta: " + frmRangoFechas.Hasta.ToString().Substring(0, 10);
         }
 
         private void frmComunicacionInterna_Resize(object sender, EventArgs e)

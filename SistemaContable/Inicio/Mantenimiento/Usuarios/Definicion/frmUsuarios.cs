@@ -94,8 +94,15 @@ namespace SistemaContable.Usuarios
         {
             int CodUsu = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value);
 
-            frmDefinirCajas definirCajas = new frmDefinirCajas(CodUsu);
-            definirCajas.Show();
+            if (Negocio.FUsuarios.ValidarPermisoDefinirCaja())
+            {
+                frmDefinirCajas definirCajas = new frmDefinirCajas(CodUsu);
+                definirCajas.Show();
+            }
+            else
+            {
+                
+            }
         }
 
         private void CheckUsuario_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)

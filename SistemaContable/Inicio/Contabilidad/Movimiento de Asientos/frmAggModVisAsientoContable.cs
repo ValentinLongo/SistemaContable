@@ -329,7 +329,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 totalhaber = totalhaber + haber;
             }
 
-            if (totaldebe == totalhaber)
+            if (Math.Round(totaldebe) == Math.Round(totalhaber))
             {
                 validaciones++; //VALIDA QUE EL ASIENTO ESTE BALANCEADO.
             }
@@ -436,7 +436,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 else if (add_mod_vis == 2)
                 {
                     //MODIFICÁ TABLA MOVASTO
-                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error en los datos de la conexion", true);
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Seguro que Desea Continuar?", true);
                     MessageBox.ShowDialog();
                     if (frmMessageBox.Acepto)
                     {

@@ -1,4 +1,5 @@
-﻿using Negocio.Funciones.Mantenimiento;
+﻿using Datos;
+using Negocio.Funciones.Mantenimiento;
 using SistemaContable.General;
 using System;
 using System.Collections;
@@ -30,6 +31,8 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
         private void CargarDGV(string Descri)
         {
+            bool estado;
+
             dgvConceptosContables.Rows.Clear();
 
             DataSet ds = new DataSet();
@@ -38,7 +41,17 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             {
                 string codigo = dr["coc_codigo"].ToString();
                 string descripcion = dr["coc_descri"].ToString();
-                dgvConceptosContables.Rows.Add(codigo, descripcion);
+                int vigencia = Convert.ToInt32(dr["coc_vigencia"]);
+                if (vigencia == 1)
+                {
+                    estado = true;
+                }
+                else
+                {
+                    estado = false;
+                }
+
+                dgvConceptosContables.Rows.Add(codigo, descripcion, estado);
             }
             Negocio.FGenerales.CantElementos(lblCantElementos, dgvConceptosContables);
         }
@@ -74,14 +87,6 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
             frm.ShowDialog();
         }
 
-        private void dgvConceptosContables_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            //btnModificar.Enabled = true;
-            //btnEliminar.Enabled = true;
-            //int indice = e.RowIndex;
-            //Codigo = Convert.ToInt32(dgvConceptosContables.Rows[indice].Cells[0].Value.ToString());
-        }
-
         private void dgvConceptosContables_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvConceptosContables.SelectedCells.Count > 0)
@@ -109,6 +114,21 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
             frmReporte freporte = new frmReporte("ConceptoCont", $"", $"{FConceptosContables.query}", "Lista de Conceptos Contables", "General", DateTime.Now.ToString("d"));
             freporte.ShowDialog();
+        }
+
+        private void dgvConceptosContables_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string codigo = (string)dgvConceptosContables.Rows[e.RowIndex].Cells[0].Value; //codigo2 = pxu_usuario de la tabla permisosxusu
+            bool estado = (bool)dgvConceptosContables.Rows[e.RowIndex].Cells[2].Value;
+            if (estado)
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE ConceptoCont SET coc_vigencia = 0 WHERE coc_codigo = {codigo}");
+            }
+            else
+            {
+                AccesoBase.InsertUpdateDatos($"UPDATE ConceptoCont SET coc_vigencia = 1 WHERE coc_codigo = {codigo}");
+            }
+            CargarDGV("");
         }
 
         private void frmConceptosContables_Resize(object sender, EventArgs e)

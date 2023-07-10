@@ -15,12 +15,16 @@ namespace SistemaContable.Usuarios
 {
     public partial class frmAgregarCaja : Form
     {
-        public frmAgregarCaja()
+        private int CodUsu;
+
+        public frmAgregarCaja(int CodigoUsuario)
         {
             InitializeComponent();
 
             Negocio.FValidacionesEventos.EventosFormulario(this);
             //Negocio.FFormatoSistema.SetearFormato(this);
+
+            CodUsu = CodigoUsuario;
 
             cbBusqueda.SelectedIndex = 0;
             ShapeBusqueda.SendToBack();
@@ -56,7 +60,7 @@ namespace SistemaContable.Usuarios
                     predef = 1;
                 }
                 DataSet data2 = new DataSet();
-                data2 = Datos.AccesoBase.ListarDatos($"select * from CajaxUsuario where cxu_usuario = {Negocio.FLogin.IdUsuario} and cxu_caja = {idCaja}");
+                data2 = Datos.AccesoBase.ListarDatos($"select * from CajaxUsuario where cxu_usuario = {CodUsu} and cxu_caja = {idCaja}");
                 if (data2.Tables[0].Rows.Count > 0)
                 {
                     frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Caja ya habilitada para este usuario", false);
@@ -64,7 +68,7 @@ namespace SistemaContable.Usuarios
                 }
                 else
                 {
-                    Datos.AccesoBase.InsertUpdateDatos($"INSERT INTO CajaxUsuario(cxu_usuario,cxu_caja,cxu_predef) VALUES({Negocio.FLogin.IdUsuario},{idCaja},{predef})");
+                    Datos.AccesoBase.InsertUpdateDatos($"INSERT INTO CajaxUsuario(cxu_usuario,cxu_caja,cxu_predef) VALUES({CodUsu},{idCaja},{predef})");
                     frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Caja agregada correctamente", false);
                     MessageBox.ShowDialog();
                 }

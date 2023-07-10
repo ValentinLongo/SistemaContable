@@ -12,8 +12,6 @@ namespace Negocio.Funciones.Mantenimiento
 {
     public class FCoeficienteDeAjuste
     {
-        public static string query;
-
         public List<MCoeficienteDeAjuste> listaEjercicios(int ejercicio)
         {
             List<MCoeficienteDeAjuste> mCoeficienteDeAjuste = new List<MCoeficienteDeAjuste>();
@@ -74,7 +72,7 @@ namespace Negocio.Funciones.Mantenimiento
 
         public DataSet listaCoeficientes(int idEjercicio) 
         {
-            query = $"SELECT aji_periodo as Periodo, aji_coef as 'Coeficiente de Ajuste', usu_nombre as Creó, aji_fecalta as Fecha, aji_horaalta as Hora, aji_usumodi as Modificó, aji_fecmodi as FechaModi, aji_horamodi as HoraModi FROM DetAjusteInf LEFT JOIN Usuario on aji_usualta = usu_codigo WHERE aji_ejercicio = {idEjercicio}";
+            string query = $"SELECT aji_periodo as Periodo, aji_coef as 'Coeficiente de Ajuste', usu_nombre as Creó, aji_fecalta as Fecha, aji_horaalta as Hora, aji_usumodi as Modificó, aji_fecmodi as FechaModi, aji_horamodi as HoraModi FROM DetAjusteInf LEFT JOIN Usuario on aji_usualta = usu_codigo WHERE aji_ejercicio = {idEjercicio}";
             DataSet ds = AccesoBase.ListarDatos(query);
             return ds;
         }

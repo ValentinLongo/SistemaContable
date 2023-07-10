@@ -997,6 +997,9 @@
   <ItemGroup>
     <None Include="Resources\papel2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nada.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

@@ -1,5 +1,6 @@
 ﻿using Datos;
 using SistemaContable.General;
+using SistemaContable.Inicio.Mantenimiento.Coeficiente_de_ajuste;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,6 +55,13 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables.Intereses
                 return;
             }
 
+            if (validarPeriodo() == false)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Periodo Ingresado No es Valido.", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             if (Convert.ToDouble(maskCoef.Text) <= 0) //validación
             {
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Coeficiente no puede ser Cero(0)", false);
@@ -76,6 +84,25 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables.Intereses
                 MessageBox.ShowDialog();
             }
             this.Close();
+        }
+
+        private bool validarPeriodo()
+        {
+            int mes = Convert.ToInt32(maskPeriodo.Text.Substring(0, 2));
+            int año = Convert.ToInt32(maskPeriodo.Text.Substring(3, 4));
+
+            if (maskPeriodo.Text.Length == 7)
+            {
+                if (mes >= 1 && mes <= 12)
+                {
+                    return true;
+                }
+                return false;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         //BARRA DE CONTROL

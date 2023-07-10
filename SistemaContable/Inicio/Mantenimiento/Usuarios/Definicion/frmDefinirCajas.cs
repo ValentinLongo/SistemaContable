@@ -57,7 +57,7 @@ namespace SistemaContable.Usuarios
             if (seleccion > -1)
             {
                 idCaja = Convert.ToInt32(dgvCajas.Rows[seleccion].Cells[0].Value);
-                Negocio.FUsuarios.ModificarCajaPredefinida(idCaja);
+                Negocio.FUsuarios.ModificarCajaPredefinida(idCaja, CodUsu);
                 dgvCajas.Rows.Clear();
                 CargarDGV();
             }
@@ -65,7 +65,7 @@ namespace SistemaContable.Usuarios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAgregarCaja agregarCaja = new frmAgregarCaja();
+            frmAgregarCaja agregarCaja = new frmAgregarCaja(CodUsu);
             agregarCaja.ShowDialog();
             dgvCajas.Rows.Clear();
             CargarDGV();
@@ -82,7 +82,7 @@ namespace SistemaContable.Usuarios
                 if (seleccion > -1)
                 {
                     idCaja = Convert.ToInt32(dgvCajas.Rows[seleccion].Cells[0].Value);
-                    Datos.AccesoBase.InsertUpdateDatos($"delete from CajaxUsuario where cxu_usuario = {Negocio.FLogin.IdUsuario} and cxu_caja = {idCaja}");
+                    Datos.AccesoBase.InsertUpdateDatos($"delete from CajaxUsuario where cxu_usuario = {CodUsu} and cxu_caja = {idCaja}");
                     dgvCajas.Rows.Clear();
                     CargarDGV();
                 }

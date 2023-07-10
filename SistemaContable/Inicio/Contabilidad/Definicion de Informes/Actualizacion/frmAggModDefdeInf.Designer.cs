@@ -167,7 +167,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(229, 19);
             this.txtDescripcion.TabIndex = 0;
-            this.txtDescripcion.Tag = "11010";
+            this.txtDescripcion.Tag = "11000";
             // 
             // txtmsg
             // 

@@ -97,13 +97,15 @@ namespace Negocio
             return false;
         }
 
-        public static void Mostrarfrm(Form Formulario, string tag)
+        public static bool Mostrarfrm(Form Formulario, string tag)
         {
             bool permiso = Permiso(tag);
             if (permiso)
             {
                 Formulario.Show();
+                return false;
             }
+            return true;
         }
 
         //para realizar una busqueda en un datagridview

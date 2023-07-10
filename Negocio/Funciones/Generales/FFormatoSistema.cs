@@ -270,7 +270,7 @@ namespace Negocio
                 {
                     oMDI = (MdiClient)ctl;
                     oMDI.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
-                    borde1.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
+                    //borde1.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
                     borde2.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
                     borde3.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
                     borde4.BackColor = Color.FromArgb(RGB(RGBbackFormulariomdi, 1), RGB(RGBbackFormulariomdi, 2), RGB(RGBbackFormulariomdi, 3));
@@ -308,14 +308,14 @@ namespace Negocio
 
             if (Ctrl == "formulariomdi")
             {
-                ColorMDI(borde1);
+                //ColorMDI(borde1);
                 ColorMDI(borde2);
                 ColorMDI(borde3);
                 ColorMDI(borde4);
                 return;
             }
 
-            borde1.BackColor = Color.FromArgb(RGB(RGBbackFormulario, 1), RGB(RGBbackFormulario, 2), RGB(RGBbackFormulario, 3));
+            //borde1.BackColor = Color.FromArgb(RGB(RGBbackFormulario, 1), RGB(RGBbackFormulario, 2), RGB(RGBbackFormulario, 3));
             borde2.BackColor = Color.FromArgb(RGB(RGBbackFormulario, 1), RGB(RGBbackFormulario, 2), RGB(RGBbackFormulario, 3));
             borde3.BackColor = Color.FromArgb(RGB(RGBbackFormulario, 1), RGB(RGBbackFormulario, 2), RGB(RGBbackFormulario, 3));
             borde4.BackColor = Color.FromArgb(RGB(RGBbackFormulario, 1), RGB(RGBbackFormulario, 2), RGB(RGBbackFormulario, 3));

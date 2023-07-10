@@ -317,7 +317,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
             string[] fechas = Negocio.Funciones.Contabilidad.FLibroMayor.fechasDesdeHasta(NroEjercicio);
 
-            frmRangoFechas frm = new frmRangoFechas(3, Convert.ToDateTime(fechas[0]), DateTime.Now);
+            frmRangoFechas frm = new frmRangoFechas(3, Convert.ToDateTime(fechas[0]), Convert.ToDateTime(fechas[1]));
             frm.ShowDialog();
 
             if (frmRangoFechas.Desde == Convert.ToDateTime("26/12/2003") && frmRangoFechas.Hasta == Convert.ToDateTime("31/12/9999"))
@@ -386,11 +386,11 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 {
                     if (Negocio.FGenerales.SincronizarFooter(dgvAsientosContables))
                     {
-                        footer.Location = new Point(26, 84);
+                        footer.Location = new Point(28, 84);
                     }
                     else
                     {
-                        footer.Location = new Point(26, 514);
+                        footer.Location = new Point(28, 514);
                     }
                 }
             }
