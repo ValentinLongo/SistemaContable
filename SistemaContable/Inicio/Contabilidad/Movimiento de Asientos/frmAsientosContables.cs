@@ -264,7 +264,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     }
                     else
                     {
-                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El asiento ha sido generado en forma automatica por el sistema. No podra ser anulado.", false);
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El asiento ha sido generado en forma automatica por el sistema. No podra ser anulado.", false, true);
                         MessageBox.ShowDialog();
                         return;
                     }
@@ -295,6 +295,9 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                         if (frmMessageBox.Acepto)
                         {
                             AccesoBase.InsertUpdateDatos($"DELETE Asiento WHERE ast_asiento = {asiento}");
+
+                            frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "Asiento Anulado Correctamente!", false);
+                            MessageBox1.ShowDialog();
                         }
                     }
                 }
@@ -304,6 +307,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Debe seleccionar un Ejercicio!", false);
                 MessageBox.ShowDialog();
             }
+            CargarDGV("", "", "", "");
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)

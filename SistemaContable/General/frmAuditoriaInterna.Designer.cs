@@ -1017,7 +1017,7 @@
             this.btnProcesar.Location = new System.Drawing.Point(109, 441);
             this.btnProcesar.Name = "btnProcesar";
             this.btnProcesar.Size = new System.Drawing.Size(175, 44);
-            this.btnProcesar.TabIndex = 183;
+            this.btnProcesar.TabIndex = 5;
             this.btnProcesar.Tag = "";
             this.btnProcesar.Text = "Procesar";
             this.btnProcesar.TextColor = System.Drawing.SystemColors.ControlLightLight;

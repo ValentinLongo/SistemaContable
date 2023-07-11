@@ -600,7 +600,67 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStripADs.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panelControlBox</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnCerrar.Name" xml:space="preserve">
+    <value>btnCerrar</value>
+  </data>
+  <data name="&gt;&gt;btnCerrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCerrar.Parent" xml:space="preserve">
+    <value>panelControlBox</value>
+  </data>
+  <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;controlbarMinimizar.Name" xml:space="preserve">
+    <value>controlbarMinimizar</value>
+  </data>
+  <data name="&gt;&gt;controlbarMinimizar.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuFormControlBox, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;controlbarMinimizar.Parent" xml:space="preserve">
+    <value>panelControlBox</value>
+  </data>
+  <data name="&gt;&gt;controlbarMinimizar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelControlBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelControlBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 0</value>
+  </data>
+  <data name="panelControlBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1095, 25</value>
+  </data>
+  <data name="panelControlBox.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;panelControlBox.Name" xml:space="preserve">
+    <value>panelControlBox</value>
+  </data>
+  <data name="&gt;&gt;panelControlBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelControlBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelControlBox.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -763,30 +823,6 @@
   <data name="&gt;&gt;controlbarMinimizar.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="panelControlBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panelControlBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 0</value>
-  </data>
-  <data name="panelControlBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1095, 25</value>
-  </data>
-  <data name="panelControlBox.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;panelControlBox.Name" xml:space="preserve">
-    <value>panelControlBox</value>
-  </data>
-  <data name="&gt;&gt;panelControlBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelControlBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelControlBox.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
   <data name="borde2.Location" type="System.Drawing.Point, System.Drawing">
     <value>269, 99</value>
   </data>
@@ -806,7 +842,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;borde2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="borde1.Location" type="System.Drawing.Point, System.Drawing">
     <value>268, 99</value>
@@ -827,7 +863,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;borde1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblnuevomensaje.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -863,7 +899,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblnuevomensaje.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -896,7 +932,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="Disparador.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -932,7 +968,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Disparador.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="panelLineaControlBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>267, 25</value>
@@ -953,7 +989,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelLineaControlBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="borde3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -977,7 +1013,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;borde3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="borde4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1001,13 +1037,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;borde4.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <metadata name="Menu_Archivos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>129, 17</value>
   </metadata>
   <data name="Menu_Archivos.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="Menu_Archivos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 76</value>
+  </data>
+  <data name="&gt;&gt;Menu_Archivos.Name" xml:space="preserve">
+    <value>Menu_Archivos</value>
+  </data>
+  <data name="&gt;&gt;Menu_Archivos.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="respaldoDeInformación.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 24</value>
@@ -1027,20 +1072,20 @@
   <data name="salir.Text" xml:space="preserve">
     <value>Salir</value>
   </data>
-  <data name="Menu_Archivos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 76</value>
-  </data>
-  <data name="&gt;&gt;Menu_Archivos.Name" xml:space="preserve">
-    <value>Menu_Archivos</value>
-  </data>
-  <data name="&gt;&gt;Menu_Archivos.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <metadata name="Menu_Ver.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>256, 17</value>
   </metadata>
   <data name="Menu_Ver.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="Menu_Ver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 100</value>
+  </data>
+  <data name="&gt;&gt;Menu_Ver.Name" xml:space="preserve">
+    <value>Menu_Ver</value>
+  </data>
+  <data name="&gt;&gt;Menu_Ver.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="calculadora.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 24</value>
@@ -1066,26 +1111,11 @@
   <data name="calendario.Text" xml:space="preserve">
     <value>Calendario</value>
   </data>
-  <data name="Menu_Ver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 100</value>
-  </data>
-  <data name="&gt;&gt;Menu_Ver.Name" xml:space="preserve">
-    <value>Menu_Ver</value>
-  </data>
-  <data name="&gt;&gt;Menu_Ver.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <metadata name="Menu_Ayuda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>663, 17</value>
   </metadata>
   <data name="Menu_Ayuda.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gadugi, 11.25pt</value>
-  </data>
-  <data name="soporteInteractivoDeContable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 24</value>
-  </data>
-  <data name="soporteInteractivoDeContable.Text" xml:space="preserve">
-    <value>Soporte</value>
   </data>
   <data name="Menu_Ayuda.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 28</value>
@@ -1096,17 +1126,38 @@
   <data name="&gt;&gt;Menu_Ayuda.Type" xml:space="preserve">
     <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="soporteInteractivoDeContable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 24</value>
+  </data>
+  <data name="soporteInteractivoDeContable.Text" xml:space="preserve">
+    <value>Soporte</value>
+  </data>
   <metadata name="Menu_Contabilidad.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>351, 17</value>
   </metadata>
   <data name="Menu_Contabilidad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gadugi, 11.25pt</value>
   </data>
+  <data name="Menu_Contabilidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 292</value>
+  </data>
+  <data name="&gt;&gt;Menu_Contabilidad.Name" xml:space="preserve">
+    <value>Menu_Contabilidad</value>
+  </data>
+  <data name="&gt;&gt;Menu_Contabilidad.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="movimientoDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 24</value>
   </data>
   <data name="movimientoDeAsientos.Text" xml:space="preserve">
     <value>Movimiento de Asientos</value>
+  </data>
+  <data name="modelosDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="modelosDeAsientos.Text" xml:space="preserve">
+    <value>Modelos de Asientos</value>
   </data>
   <data name="actualizaciónMA.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 24</value>
@@ -1119,12 +1170,6 @@
   </data>
   <data name="detalleDeModelos.Text" xml:space="preserve">
     <value>Detalle de Modelos</value>
-  </data>
-  <data name="modelosDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="modelosDeAsientos.Text" xml:space="preserve">
-    <value>Modelos de Asientos</value>
   </data>
   <data name="renumeraciónDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 24</value>
@@ -1174,6 +1219,12 @@
   <data name="balanceGeneral.Text" xml:space="preserve">
     <value>Balance General</value>
   </data>
+  <data name="definiciónDeInformes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="definiciónDeInformes.Text" xml:space="preserve">
+    <value>Definición de Informes</value>
+  </data>
   <data name="actualizaciónDI.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 24</value>
   </data>
@@ -1192,26 +1243,11 @@
   <data name="informe.Text" xml:space="preserve">
     <value>Informe</value>
   </data>
-  <data name="definiciónDeInformes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="definiciónDeInformes.Text" xml:space="preserve">
-    <value>Definición de Informes</value>
-  </data>
   <data name="auditoriaInterna.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 24</value>
   </data>
   <data name="auditoriaInterna.Text" xml:space="preserve">
     <value>Auditoria Interna</value>
-  </data>
-  <data name="Menu_Contabilidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 292</value>
-  </data>
-  <data name="&gt;&gt;Menu_Contabilidad.Name" xml:space="preserve">
-    <value>Menu_Contabilidad</value>
-  </data>
-  <data name="&gt;&gt;Menu_Contabilidad.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <metadata name="Menu_Mantenimiento.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>501, 17</value>
@@ -1219,11 +1255,26 @@
   <data name="Menu_Mantenimiento.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gadugi, 11.25pt</value>
   </data>
+  <data name="Menu_Mantenimiento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 292</value>
+  </data>
+  <data name="&gt;&gt;Menu_Mantenimiento.Name" xml:space="preserve">
+    <value>Menu_Mantenimiento</value>
+  </data>
+  <data name="&gt;&gt;Menu_Mantenimiento.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="empresa.Size" type="System.Drawing.Size, System.Drawing">
     <value>253, 24</value>
   </data>
   <data name="empresa.Text" xml:space="preserve">
     <value>Empresa</value>
+  </data>
+  <data name="usuarios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="usuarios.Text" xml:space="preserve">
+    <value>Usuarios</value>
   </data>
   <data name="definición.Size" type="System.Drawing.Size, System.Drawing">
     <value>339, 24</value>
@@ -1254,12 +1305,6 @@
   </data>
   <data name="recalcularPermisos.Text" xml:space="preserve">
     <value>Recalcular Permisos</value>
-  </data>
-  <data name="usuarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="usuarios.Text" xml:space="preserve">
-    <value>Usuarios</value>
   </data>
   <data name="ejercicioContable.Size" type="System.Drawing.Size, System.Drawing">
     <value>253, 24</value>
@@ -1320,15 +1365,6 @@
   </data>
   <data name="configurarImpresora.Text" xml:space="preserve">
     <value>Configurar Impresoras</value>
-  </data>
-  <data name="Menu_Mantenimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 292</value>
-  </data>
-  <data name="&gt;&gt;Menu_Mantenimiento.Name" xml:space="preserve">
-    <value>Menu_Mantenimiento</value>
-  </data>
-  <data name="&gt;&gt;Menu_Mantenimiento.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="lblUsu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4322,11 +4358,59 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Inicio</value>
   </data>
+  <data name="&gt;&gt;tsbUsuario.Name" xml:space="preserve">
+    <value>tsbUsuario</value>
+  </data>
+  <data name="&gt;&gt;tsbUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbPlandeCuenta.Name" xml:space="preserve">
+    <value>tsbPlandeCuenta</value>
+  </data>
+  <data name="&gt;&gt;tsbPlandeCuenta.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbConceptoContable.Name" xml:space="preserve">
+    <value>tsbConceptoContable</value>
+  </data>
+  <data name="&gt;&gt;tsbConceptoContable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbAgenda.Name" xml:space="preserve">
+    <value>tsbAgenda</value>
+  </data>
+  <data name="&gt;&gt;tsbAgenda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbMovimientodeAsientos.Name" xml:space="preserve">
+    <value>tsbMovimientodeAsientos</value>
+  </data>
+  <data name="&gt;&gt;tsbMovimientodeAsientos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbLibroDiario.Name" xml:space="preserve">
+    <value>tsbLibroDiario</value>
+  </data>
+  <data name="&gt;&gt;tsbLibroDiario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbLibroMayor.Name" xml:space="preserve">
+    <value>tsbLibroMayor</value>
+  </data>
+  <data name="&gt;&gt;tsbLibroMayor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbBalanceDeSumasySaldos.Name" xml:space="preserve">
+    <value>tsbBalanceDeSumasySaldos</value>
+  </data>
+  <data name="&gt;&gt;tsbBalanceDeSumasySaldos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
     <value>toolStripSeparator2</value>
@@ -4334,11 +4418,59 @@
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;tsb1.Name" xml:space="preserve">
+    <value>tsb1</value>
+  </data>
+  <data name="&gt;&gt;tsb1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb2.Name" xml:space="preserve">
+    <value>tsb2</value>
+  </data>
+  <data name="&gt;&gt;tsb2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb3.Name" xml:space="preserve">
+    <value>tsb3</value>
+  </data>
+  <data name="&gt;&gt;tsb3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb4.Name" xml:space="preserve">
+    <value>tsb4</value>
+  </data>
+  <data name="&gt;&gt;tsb4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
     <value>toolStripSeparator3</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb5.Name" xml:space="preserve">
+    <value>tsb5</value>
+  </data>
+  <data name="&gt;&gt;tsb5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb6.Name" xml:space="preserve">
+    <value>tsb6</value>
+  </data>
+  <data name="&gt;&gt;tsb6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb7.Name" xml:space="preserve">
+    <value>tsb7</value>
+  </data>
+  <data name="&gt;&gt;tsb7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsb8.Name" xml:space="preserve">
+    <value>tsb8</value>
+  </data>
+  <data name="&gt;&gt;tsb8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
     <value>toolStripSeparator4</value>
@@ -4346,11 +4478,41 @@
   <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;tsbBlockdeNotas.Name" xml:space="preserve">
+    <value>tsbBlockdeNotas</value>
+  </data>
+  <data name="&gt;&gt;tsbBlockdeNotas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbMensajesInternos.Name" xml:space="preserve">
+    <value>tsbMensajesInternos</value>
+  </data>
+  <data name="&gt;&gt;tsbMensajesInternos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbCalculadora.Name" xml:space="preserve">
+    <value>tsbCalculadora</value>
+  </data>
+  <data name="&gt;&gt;tsbCalculadora.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbNotas.Name" xml:space="preserve">
+    <value>tsbNotas</value>
+  </data>
+  <data name="&gt;&gt;tsbNotas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
     <value>toolStripSeparator5</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbConfigImpresora.Name" xml:space="preserve">
+    <value>tsbConfigImpresora</value>
+  </data>
+  <data name="&gt;&gt;tsbConfigImpresora.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;respaldoDeInformación.Name" xml:space="preserve">
     <value>respaldoDeInformación</value>
@@ -4603,132 +4765,6 @@
   </data>
   <data name="&gt;&gt;configurarImpresora.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbUsuario.Name" xml:space="preserve">
-    <value>tsbUsuario</value>
-  </data>
-  <data name="&gt;&gt;tsbUsuario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbPlandeCuenta.Name" xml:space="preserve">
-    <value>tsbPlandeCuenta</value>
-  </data>
-  <data name="&gt;&gt;tsbPlandeCuenta.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbConceptoContable.Name" xml:space="preserve">
-    <value>tsbConceptoContable</value>
-  </data>
-  <data name="&gt;&gt;tsbConceptoContable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbAgenda.Name" xml:space="preserve">
-    <value>tsbAgenda</value>
-  </data>
-  <data name="&gt;&gt;tsbAgenda.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbMovimientodeAsientos.Name" xml:space="preserve">
-    <value>tsbMovimientodeAsientos</value>
-  </data>
-  <data name="&gt;&gt;tsbMovimientodeAsientos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbLibroDiario.Name" xml:space="preserve">
-    <value>tsbLibroDiario</value>
-  </data>
-  <data name="&gt;&gt;tsbLibroDiario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbLibroMayor.Name" xml:space="preserve">
-    <value>tsbLibroMayor</value>
-  </data>
-  <data name="&gt;&gt;tsbLibroMayor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbBalanceDeSumasySaldos.Name" xml:space="preserve">
-    <value>tsbBalanceDeSumasySaldos</value>
-  </data>
-  <data name="&gt;&gt;tsbBalanceDeSumasySaldos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsb1.Name" xml:space="preserve">
-    <value>tsb1</value>
-  </data>
-  <data name="&gt;&gt;tsb1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsb2.Name" xml:space="preserve">
-    <value>tsb2</value>
-  </data>
-  <data name="&gt;&gt;tsb2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsb3.Name" xml:space="preserve">
-    <value>tsb3</value>
-  </data>
-  <data name="&gt;&gt;tsb3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsb4.Name" xml:space="preserve">
-    <value>tsb4</value>
-  </data>
-  <data name="&gt;&gt;tsb4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsb5.Name" xml:space="preserve">
-    <value>tsb5</value>
-  </data>
-  <data name="&gt;&gt;tsb5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsb6.Name" xml:space="preserve">
-    <value>tsb6</value>
-  </data>
-  <data name="&gt;&gt;tsb6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsb7.Name" xml:space="preserve">
-    <value>tsb7</value>
-  </data>
-  <data name="&gt;&gt;tsb7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsb8.Name" xml:space="preserve">
-    <value>tsb8</value>
-  </data>
-  <data name="&gt;&gt;tsb8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbBlockdeNotas.Name" xml:space="preserve">
-    <value>tsbBlockdeNotas</value>
-  </data>
-  <data name="&gt;&gt;tsbBlockdeNotas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbMensajesInternos.Name" xml:space="preserve">
-    <value>tsbMensajesInternos</value>
-  </data>
-  <data name="&gt;&gt;tsbMensajesInternos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbCalculadora.Name" xml:space="preserve">
-    <value>tsbCalculadora</value>
-  </data>
-  <data name="&gt;&gt;tsbCalculadora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbNotas.Name" xml:space="preserve">
-    <value>tsbNotas</value>
-  </data>
-  <data name="&gt;&gt;tsbNotas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbConfigImpresora.Name" xml:space="preserve">
-    <value>tsbConfigImpresora</value>
-  </data>
-  <data name="&gt;&gt;tsbConfigImpresora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmInicio</value>

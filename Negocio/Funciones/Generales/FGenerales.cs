@@ -99,8 +99,7 @@ namespace Negocio
 
         public static bool Mostrarfrm(Form Formulario, string tag)
         {
-            bool permiso = Permiso(tag);
-            if (permiso)
+            if (Permiso(tag))
             {
                 Formulario.Show();
                 return false;

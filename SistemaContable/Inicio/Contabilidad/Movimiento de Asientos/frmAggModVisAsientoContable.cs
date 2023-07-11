@@ -739,8 +739,22 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Los datos que se encuentran en la grilla actualmente no se guardaran. ¿Desea Continuar?", true, true);
-            MessageBox.ShowDialog();
+            if (add_mod_vis == 1)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Los datos que se encuentran en la grilla actualmente no se guardaran. ¿Desea Continuar?", true, true);
+                MessageBox.ShowDialog();
+            }
+            else if (add_mod_vis == 2)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Las Modificaciones en la grilla no se guardaran. ¿Desea Continuar?", true, true);
+                MessageBox.ShowDialog();
+            }
+            else
+            {
+                AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
+                this.Close();
+            }
+
             if (frmMessageBox.Acepto)
             {
                 AccesoBase.InsertUpdateDatos($"DELETE FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
