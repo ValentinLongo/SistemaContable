@@ -298,7 +298,7 @@
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(450, 15);
             this.txtBusqueda.TabIndex = 0;
-            this.txtBusqueda.Tag = "01010";
+            this.txtBusqueda.Tag = "01000";
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // dgvRubrosContables

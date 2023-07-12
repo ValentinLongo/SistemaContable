@@ -52,6 +52,13 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (Negocio.FGenerales.PermisoEspecial(7)) // 7 = ALTA CUENTA CONTABLE
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Acceso Denegado!", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             frmAggModCuenta frmAgregar = new frmAggModCuenta(1);
             frmAgregar.ShowDialog();
             CargarDGV("");
@@ -72,6 +79,13 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (Negocio.FGenerales.PermisoEspecial(8)) // 8 = MODIFICAR CUENTA CONTABLE
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Acceso Denegado!", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             frmAggModCuenta frmModificar = new frmAggModCuenta(2);
             frmModificar.ShowDialog();
             CargarDGV("");
@@ -79,8 +93,15 @@ namespace SistemaContable.Plan_de_Cuentas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "¿Desea Eliminar la Cuenta?", true);
-            MessageBox.ShowDialog();
+            if (Negocio.FGenerales.PermisoEspecial(9)) // 9 = ELIMINAR CUENTA CONTABLE
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Acceso Denegado!", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
+            frmMessageBox MessageBox1 = new frmMessageBox("Mensaje", "¿Desea Eliminar la Cuenta?", true);
+            MessageBox1.ShowDialog();
             if (frmMessageBox.Acepto) 
             {
                 FPlanDeCuentas.eliminarCuenta(idCuenta);

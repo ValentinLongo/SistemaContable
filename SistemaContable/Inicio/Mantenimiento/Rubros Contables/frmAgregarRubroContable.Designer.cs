@@ -233,7 +233,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(219, 19);
             this.tbNombre.TabIndex = 1;
-            this.tbNombre.Tag = "11010";
+            this.tbNombre.Tag = "11000";
             // 
             // label2
             // 

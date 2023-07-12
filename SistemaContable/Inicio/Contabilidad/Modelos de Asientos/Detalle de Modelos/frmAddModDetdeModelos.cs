@@ -28,7 +28,9 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
         public static string asientofrm;
         public static string codigofrm;
 
-        public frmAddModDetdeModelos(int aggmod, [Optional] string cuenta, [Optional] string descri, [Optional] string debe, [Optional] string haber, [Optional] string concepto, [Optional] string centrodecosto)
+        private int TipoAsiento; //porque necesito el dato para validar el permiso especial (11)
+
+        public frmAddModDetdeModelos(int aggmod, [Optional] string cuenta, [Optional] string descri, [Optional] string debe, [Optional] string haber, [Optional] string concepto, [Optional] string centrodecosto, [Optional] int IndexCBTipoAsiento)
         {
             InitializeComponent();
 
@@ -36,6 +38,7 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
             //Negocio.FFormatoSistema.SetearFormato(this);
 
             agg_o_mod = aggmod;
+            TipoAsiento = IndexCBTipoAsiento;
 
             txtDebe.Text = "0,0000";
             txtHaber.Text = "0,0000";
@@ -65,6 +68,21 @@ namespace SistemaContable.Inicio.Contabilidad.Definicion_de_Informes.Detalle_de_
                 frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Debe completar todos los campos", false);
                 MessageBox.ShowDialog();
                 return;
+            }
+
+            if (TipoAsiento == 2)
+            {
+                if (Negocio.FGenerales.PermisoEspecial(11)) // 11 = PERMITIR LA UTILIZACION DE CUENTAS DE USO DEL SISTEMA
+                {
+                    if (Negocio.FPlanDeCuentas.Ctrl_Ctas(txtCuenta.Text, "", false) == false)
+                    {
+                        txtCuenta.Text = "";
+                        txtDescri.Text = "";
+                        frmMessageBox MessageBox = new frmMessageBox("Mensaje", Negocio.FPlanDeCuentas.msgRetorno, false, true);
+                        MessageBox.ShowDialog();
+                        return;
+                    }
+                }
             }
 
             string asiento;

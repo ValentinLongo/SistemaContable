@@ -255,7 +255,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
             flag = true;
 
-            try
+            try //modificar
             {
                 int seleccionado = dgvAddModVisASIENTO.CurrentCell.RowIndex;
                 if (seleccionado != -1)
@@ -271,19 +271,19 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     frmAddModDetdeModelos.desdeotrofrm = true;
                     frmAddModDetdeModelos.asientofrm = txtNroAsiento.Text;
                     frmAddModDetdeModelos.codigofrm = codigo;
-                    frmAddModDetdeModelos frm = new frmAddModDetdeModelos(1, cuenta, descri, debe, haber, concepto, cc);
+                    frmAddModDetdeModelos frm = new frmAddModDetdeModelos(1, cuenta, descri, debe, haber, concepto, cc, Convert.ToInt32(cbTipoAsiento.SelectedValue));
                     frm.ShowDialog();
                     CargarDGV(txtNroAsiento.Text);
                     autoincremental2 = 1;
                 }
             }
-            catch (NullReferenceException)
+            catch (NullReferenceException) //agregar
             {
                 while (flag)
                 {
                     frmAddModDetdeModelos.desdeotrofrm = true;
                     frmAddModDetdeModelos.asientofrm = txtNroAsiento.Text;
-                    frmAddModDetdeModelos frm = new frmAddModDetdeModelos(0);
+                    frmAddModDetdeModelos frm = new frmAddModDetdeModelos(0, null, null, null, null, null, null, Convert.ToInt32(cbTipoAsiento.SelectedValue));
                     frm.ShowDialog();
                     CargarDGV(nuevoasiento.ToString());
                 }
@@ -424,8 +424,50 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 if (add_mod_vis == 1)
                 {
                     string asiento_renumera = Negocio.FGenerales.ultimoNumeroID("ast_asiento", "Asiento").ToString();
-
+                   
                     AccesoBase.InsertUpdateDatos($"INSERT INTO Asiento(ast_asiento, ast_renumera, ast_fecha, ast_comenta, ast_user, ast_hora, ast_ejercicio, ast_fecalta, ast_tipo) VALUES('{asiento_renumera}','{asiento_renumera}','{Convert.ToDateTime(maskFecha.Text).ToString()}','{txtComentario.Text}','{FLogin.IdUsuario}','{hora}','{txtCodEjercicio.Text}','{fecha}','{cbTipoAsiento.SelectedValue}')");
+                    
+                    DataSet ds = new DataSet();
+                    ds = AccesoBase.ListarDatos($"SELECT * FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        int cuenta = Convert.ToInt32(dr["mva_cuenta"]);
+                        double debe = Convert.ToDouble(dr["mva_debe"]);
+                        double haber = Convert.ToDouble(dr["mva_haber"]);
+                        string concepto = dr["mva_concepto"].ToString();
+                        int asiento = Convert.ToInt32(dr["mva_Asiento"]);
+                        string cc = dr["mva_cc"].ToString();
+
+                        if (cc != "0")
+                        {
+                            Convert.ToInt32(cc);
+                        }
+
+                        string money = "";
+                        int codigo = 0;
+                        if (debe != 0)
+                        {
+                            money = debe.ToString();
+                            codigo = 1;
+                        }
+                        else if (haber != 0)
+                        {
+                            money = haber.ToString();
+                            codigo = 2;
+                        }
+
+                        string query;
+                        if (cc == "0")
+                        {
+                            query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{DateTime.Now.ToShortDateString()}',{cuenta},{codigo},{"*"},'{concepto}',null)";
+                        }
+                        else
+                        {
+                            query = $"INSERT INTO MovAsto(mva_asiento, mva_fecha, mva_cuenta, mva_codigo, mva_importe, mva_comenta, mva_cc) VALUES({asiento},'{DateTime.Now.ToShortDateString()}',{cuenta},{codigo},{"*"},'{concepto}',{cc})";
+                        }
+                        AccesoBase.InsertUpdateDatosMoney(query, money);
+                    }
+
                     frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Agregado Correctamente!", false);
                     MessageBox.ShowDialog();
 
@@ -441,7 +483,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     if (frmMessageBox.Acepto)
                     {
                         DataSet ds = new DataSet();
-                        ds = AccesoBase.ListarDatos($"SELECT mva_asiento, mva_cuenta, mva_debe, mva_haber, mva_concepto, mva_cc FROM Aux_MovAsto");
+                        ds = AccesoBase.ListarDatos($"SELECT mva_asiento, mva_cuenta, mva_debe, mva_haber, mva_concepto, mva_cc FROM Aux_MovAsto WHERE mva_terminal = {terminal}");
                         int asiento = Convert.ToInt32(ds.Tables[0].Rows[0]["mva_asiento"]);
 
                         AccesoBase.InsertUpdateDatos($"DELETE MovAsto WHERE mva_asiento = {asiento}");

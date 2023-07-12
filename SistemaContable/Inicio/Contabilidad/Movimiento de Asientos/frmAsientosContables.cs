@@ -77,6 +77,13 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (Negocio.FGenerales.PermisoEspecial(1)) // 1 = ALTA ASIENTOS
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Acceso Denegado!", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             if (cbSeleccion.SelectedIndex > -1)
             {
                 frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(1, cbSeleccion, "", "", "");
@@ -94,6 +101,25 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
+                if (Negocio.FGenerales.PermisoEspecial(13) == false) // 13 = PERMITIR LA MODIFICACIÓN MANUAL DE CUALQUIER TIPO DE ASIENTO
+                {
+                    goto ModifTotal;
+                }
+
+                if (Negocio.FGenerales.PermisoEspecial(2)) // 2 = MODIFICACION ASIENTOS
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Acceso Denegado!", false);
+                    MessageBox.ShowDialog();
+                    return;
+                }
+                else
+                {
+
+                }
+
+
+                ModifTotal:
+
                 int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
                 string asiento = dgvAsientosContables.Rows[seleccionado].Cells[0].Value.ToString();
                 string fecha = dgvAsientosContables.Rows[seleccionado].Cells[1].Value.ToString();
@@ -388,13 +414,17 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             {
                 if (dgvAsientosContables.Rows.Count != 0)
                 {
+                    int X = dgvAsientosContables.Location.X;
+                    int Y = dgvAsientosContables.Location.Y;
+                    int H = dgvAsientosContables.Height;
+
                     if (Negocio.FGenerales.SincronizarFooter(dgvAsientosContables))
                     {
-                        footer.Location = new Point(28, 84);
+                        footer.Location = new Point(X, Y + 25);
                     }
                     else
                     {
-                        footer.Location = new Point(28, 514);
+                        footer.Location = new Point(X,Y + H - 37);
                     }
                 }
             }

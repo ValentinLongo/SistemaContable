@@ -201,7 +201,7 @@
             this.tbDescripción.Name = "tbDescripción";
             this.tbDescripción.Size = new System.Drawing.Size(305, 13);
             this.tbDescripción.TabIndex = 1;
-            this.tbDescripción.Tag = "11010";
+            this.tbDescripción.Tag = "11000";
             // 
             // panel4
             // 

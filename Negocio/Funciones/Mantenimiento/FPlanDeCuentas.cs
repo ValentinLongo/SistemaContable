@@ -97,7 +97,7 @@ namespace Negocio
             DataSet ds = new DataSet();
             ds = Datos.AccesoBase.ListarDatos($"Select * from PCuenta where pcu_superior = '{codigo}'");
             int cantidad = 0;
-            if(ds.Tables[0].Rows.Count > 0)
+            if (ds.Tables[0].Rows.Count > 0)
             {
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
@@ -122,5 +122,174 @@ namespace Negocio
         {
             Datos.AccesoBase.InsertUpdateDatos($"DELETE PCuenta WHERE pcu_cuenta = {idCuenta}");
         }
+
+        public static string msgRetorno;
+        public static bool Ctrl_Ctas(string Cuenta, string Param, bool Traba)
+        {
+            if (Cuenta != "")
+            {
+                DataSet ds = new DataSet();
+
+                if (Param.IndexOf("CAJA") == -1)
+                {
+                    ds = AccesoBase.ListarDatos($"SELECT * FROM Caja WHERE caj_ctacont = '{Cuenta}'");
+                    if (ds.Tables[0].Rows.Count != 0)
+                    {
+                        if (Traba == false)
+                        {
+                            msgRetorno = "Atención: Se Recomienda la No utilización de la Cuenta Contable elegida ya que ha sido definida en las Cajas del Sistema.";
+                            return true;
+                        }
+                        else
+                        {
+                            msgRetorno = "Atención: No se podrá utilizar la Cuenta Contable elegida ya que ha sido definida en las Cajas del Sistema.";
+                            return false;
+                        }
+                    }
+                }
+
+                if (Param.IndexOf("CTABAN") == -1)
+                {
+                    ds = AccesoBase.ListarDatos($"SELECT * FROM CtaBan WHERE caj_ctacont = '{Cuenta}'");
+                    if (ds.Tables[0].Rows.Count != 0)
+                    {
+                        if (Traba == false)
+                        {
+                            msgRetorno = "Atención: Se Recomienda la No utilización de la Cuenta Contable elegida ya que ha sido definida en las Cuentas Bancarias del Sistema.";
+                            return true;
+                        }
+                        else
+                        {
+                            msgRetorno = "Atención: No se podrá utilizar la Cuenta Contable elegida ya que ha sido definida en las Cuentas Bancarias del Sistema.";
+                            return false;
+                        }
+                    }
+                }
+
+                if (Param.IndexOf("TARJETA") == -1)
+                {
+                    ds = AccesoBase.ListarDatos($"SELECT * FROM Tarjeta WHERE tar_ctacont = '{Cuenta}'");
+                    if (ds.Tables[0].Rows.Count != 0)
+                    {
+                        if (Traba == false)
+                        {
+                            msgRetorno = "Atención: Se Recomienda la No utilización de la Cuenta Contable elegida ya que ha sido definida en las Tarjetas de Crédito del Sistema.";
+                            return true;
+                        }
+                        else
+                        {
+                            msgRetorno = "Atención: No se podrá utilizar la Cuenta Contable elegida ya que ha sido definida en las Tarjetas de Crédito del Sistema.";
+                            return false;
+                        }
+                    }
+                }
+
+                if (Param.IndexOf("PARAMCONTAB") == -1)
+                {
+                    DataSet ds2 = new DataSet();
+                    ds2 = AccesoBase.ListarDatos($"Select * From ParamContabH");
+
+                    ds = AccesoBase.ListarDatos($"Select * From ParamContab");
+                    if (ds.Tables[0].Rows.Count == 0)
+                    {
+                        return true;
+                    }
+
+                    foreach (DataColumn dc in ds.Tables[0].Columns)
+                    {
+                        if (dc.ColumnName.Substring(0, 8) != "par_conc")
+                        {
+                            if (ds.Tables[0].Rows[0][dc.ColumnName].ToString() == Cuenta)
+                            {
+                                if (ds2.Tables[0].Rows.Count == 0)
+                                {
+                                    msgRetorno = "Atención: No se podrá utilizar la Cuenta Contable elegida ya que ha sido Parametrizada como de Uso Automático del Sistema.";
+                                    return false;
+                                }
+                                else
+                                {
+                                    if ((ds2.Tables[0].Rows[0][dc.ColumnName] is DBNull ? "0" : ds2.Tables[0].Rows[0][dc.ColumnName].ToString()) == "1")
+                                    {
+                                        msgRetorno = "Atención: Se Recomienda la No utilización de la Cuenta Contable elegida ya que ha sido Parametrizada como de Uso Automático del Sistema.";
+                                        return true;
+                                    }
+                                    else
+                                    {
+                                        msgRetorno = "Atención: No se podrá utilizar la Cuenta Contable elegida ya que ha sido Parametrizada como de Uso Automático del Sistema.";
+                                        return false;
+                                    }
+                                }
+                            }
+                        }
+                    }                   
+                }
+
+                if (Param.IndexOf("ARTICULO") == -1)
+                {
+                    ds = AccesoBase.ListarDatos($"SELECT * FROM Articulo WHERE art_ctacont = '{Cuenta}'");
+                    if (ds.Tables[0].Rows.Count != 0)
+                    {
+                        if (Traba == false)
+                        {
+                            msgRetorno = "Atención: Se Recomienda la No utilización de la Cuenta Contable elegida ya que ha sido asignada a un artículo";
+                            return true;
+                        }
+                        else
+                        {
+                            msgRetorno = "Atención: No se podrá utilizar la Cuenta Contable elegida ya que ha sido asignada a un artículo";
+                            return false;
+                        }
+                    }
+                }
+
+                if (Param.IndexOf("PROVEEDOR") == -1)
+                {
+                    ds = AccesoBase.ListarDatos($"SELECT * FROM Proveedor WHERE prv_impcont = '{Cuenta}'");
+                    if (ds.Tables[0].Rows.Count != 0)
+                    {
+                        if (Traba == false)
+                        {
+                            msgRetorno = "Atención: Se Recomienda la No utilización de la Cuenta Contable elegida ya que ha sido asignada a un Proveedor";
+                            return true;
+                        }
+                        else
+                        {
+                            msgRetorno = "Atención: No se podrá utilizar la Cuenta Contable elegida ya que ha sido asignada a un Proveedor";
+                            return false;
+                        }
+                    }
+                }
+
+                if (Param.IndexOf("MODELO") == -1)
+                {
+                    ds = AccesoBase.ListarDatos($"SELECT * FROM ModeloDet WHERE det_cuenta = '{Cuenta}'");
+                    if (ds.Tables[0].Rows.Count != 0)
+                    {
+                        msgRetorno = "Atención: Se Recomienda la No utilización de la Cuenta Contable elegida ya que ha sido asignada a un modelo de Asiento.";
+                        return true;
+                    }
+                }
+
+                if (Param.IndexOf("CONCEPTOCONT") == -1)
+                {
+                    ds = AccesoBase.ListarDatos($"SELECT * FROM ConceptoCont WHERE coc_ctacont = '{Cuenta}' or coc_contrap = '{Cuenta}' or coc_cccta = '{Cuenta}' or coc_cccontrap = '{Cuenta}'");
+                    if (ds.Tables[0].Rows.Count != 0)
+                    {
+                        if (Traba == false)
+                        {
+                            msgRetorno = "Atención: Se Recomienda la No utilización de la Cuenta Contable elegida ya que ha sido asignada a un Concepto Contable";
+                            return true;
+                        }
+                        else
+                        {
+                            msgRetorno = "Atención: No se podrá utilizar la Cuenta Contable elegida ya que ha sido asignada a un Concepto Contable";
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+
     }
 }

@@ -313,7 +313,7 @@
             this.txtDescriPerfil.ReadOnly = true;
             this.txtDescriPerfil.Size = new System.Drawing.Size(147, 19);
             this.txtDescriPerfil.TabIndex = 1;
-            this.txtDescriPerfil.Tag = "00000";
+            this.txtDescriPerfil.Tag = "11010";
             // 
             // panel4
             // 

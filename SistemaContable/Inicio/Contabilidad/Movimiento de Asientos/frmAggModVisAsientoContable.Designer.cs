@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblControlBar = new System.Windows.Forms.Label();
@@ -62,9 +62,6 @@
             this.btnModelo = new RJCodeAdvance.RJControls.RJButton();
             this.btnImprimir = new RJCodeAdvance.RJControls.RJButton();
             this.dgvAddModVisASIENTO = new System.Windows.Forms.DataGridView();
-            this.lblCantElementos = new System.Windows.Forms.Label();
-            this.footer = new System.Windows.Forms.DataGridView();
-            this.maskFecha = new System.Windows.Forms.MaskedTextBox();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDebe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +69,9 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCantElementos = new System.Windows.Forms.Label();
+            this.footer = new System.Windows.Forms.DataGridView();
+            this.maskFecha = new System.Windows.Forms.MaskedTextBox();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddModVisASIENTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.footer)).BeginInit();
@@ -313,7 +313,7 @@
             this.txtComentario.Name = "txtComentario";
             this.txtComentario.Size = new System.Drawing.Size(542, 19);
             this.txtComentario.TabIndex = 4;
-            this.txtComentario.Tag = "01010";
+            this.txtComentario.Tag = "01000";
             // 
             // panel4
             // 
@@ -510,6 +510,66 @@
             this.dgvAddModVisASIENTO.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgvAddModVisASIENTO_Scroll);
             this.dgvAddModVisASIENTO.DoubleClick += new System.EventHandler(this.dgvAddModVisASIENTO_DoubleClick_1);
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Cuenta";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column8.Width = 70;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Descripción";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column9.Width = 225;
+            // 
+            // ColumnDebe
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnDebe.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColumnDebe.HeaderText = "Debe";
+            this.ColumnDebe.Name = "ColumnDebe";
+            this.ColumnDebe.ReadOnly = true;
+            this.ColumnDebe.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnDebe.Width = 150;
+            // 
+            // ColumnHaber
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnHaber.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColumnHaber.HeaderText = "Haber";
+            this.ColumnHaber.Name = "ColumnHaber";
+            this.ColumnHaber.ReadOnly = true;
+            this.ColumnHaber.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnHaber.Width = 150;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Concepto";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column12.Width = 200;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "CentroDeCostos";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column13.Width = 200;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Codigo.Visible = false;
+            // 
             // lblCantElementos
             // 
             this.lblCantElementos.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -583,66 +643,6 @@
             this.maskFecha.Size = new System.Drawing.Size(100, 13);
             this.maskFecha.TabIndex = 3;
             this.maskFecha.Tag = "10100";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Cuenta";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column8.Width = 70;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Descripción";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column9.Width = 225;
-            // 
-            // ColumnDebe
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnDebe.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColumnDebe.HeaderText = "Debe";
-            this.ColumnDebe.Name = "ColumnDebe";
-            this.ColumnDebe.ReadOnly = true;
-            this.ColumnDebe.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnDebe.Width = 150;
-            // 
-            // ColumnHaber
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnHaber.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ColumnHaber.HeaderText = "Haber";
-            this.ColumnHaber.Name = "ColumnHaber";
-            this.ColumnHaber.ReadOnly = true;
-            this.ColumnHaber.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnHaber.Width = 150;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Concepto";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column12.Width = 200;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "CentroDeCostos";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column13.Width = 200;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Codigo.Visible = false;
             // 
             // frmAggModVisAsientoContable
             // 

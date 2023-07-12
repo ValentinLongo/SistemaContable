@@ -240,7 +240,7 @@
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(362, 19);
             this.txtBusqueda.TabIndex = 0;
-            this.txtBusqueda.Tag = "11000";
+            this.txtBusqueda.Tag = "01000";
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // label13

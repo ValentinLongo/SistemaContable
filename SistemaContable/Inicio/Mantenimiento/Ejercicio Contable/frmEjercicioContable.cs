@@ -111,6 +111,13 @@ namespace SistemaContable.Inicio.Mantenimiento.Ejercicio_Contable
 
         private void dgvEjercicioContable_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e) //PARA CAMBIAR EL ESTADO DEL EJERCICIO
         {
+            if (Negocio.FGenerales.PermisoEspecial(4)) // 4 = CERRAR EJERCICIO CONTABLE
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Acceso Denegado!", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             string codigo = (string)dgvEjercicioContable.Rows[e.RowIndex].Cells[0].Value;
             bool estado = (bool)dgvEjercicioContable.Rows[e.RowIndex].Cells[4].Value;
 

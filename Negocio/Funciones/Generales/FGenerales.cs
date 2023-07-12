@@ -321,11 +321,27 @@ namespace Negocio
             }
         }
 
+        //retorna el nombre del ejercicio por su codigo
         public static string NombreEjercicio(int nroEjercicio)
         {
             DataSet ds = new DataSet();
             ds = AccesoBase.ListarDatos($"select eje_descri from Ejercicio where eje_codigo = {nroEjercicio}");
             return ds.Tables[0].Rows[0]["eje_descri"].ToString();
+        }
+
+        //valida si el usuario tiene activo el permisos especial
+        public static bool PermisoEspecial(int NroPermiso)
+        {
+            DataSet ds = new DataSet();
+            int resultado = AccesoBase.ValidarDatos($"select * from PermisosxUsu where pxu_codigo = {NroPermiso} and pxu_sistema = 'CO' and pxu_usuario = {FLogin.IdUsuario} and pxu_activo = 1");
+            if (resultado == 1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
     }

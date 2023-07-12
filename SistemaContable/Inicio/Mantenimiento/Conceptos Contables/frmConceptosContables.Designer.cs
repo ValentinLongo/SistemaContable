@@ -41,6 +41,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.dgvConceptosContables = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lblCantElementos = new System.Windows.Forms.Label();
             this.ControlBar = new System.Windows.Forms.Panel();
             this.lblControlBar = new System.Windows.Forms.Label();
@@ -48,9 +51,6 @@
             this.ControlBox = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnIntereses = new RJCodeAdvance.RJControls.RJButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConceptosContables)).BeginInit();
             this.ControlBar.SuspendLayout();
             this.SuspendLayout();
@@ -192,7 +192,7 @@
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(759, 13);
             this.tbDescripcion.TabIndex = 0;
-            this.tbDescripcion.Tag = "01010";
+            this.tbDescripcion.Tag = "01000";
             this.tbDescripcion.TextChanged += new System.EventHandler(this.tbDescripcion_TextChanged);
             // 
             // dgvConceptosContables
@@ -247,6 +247,26 @@
             this.dgvConceptosContables.TabStop = false;
             this.dgvConceptosContables.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConceptosContables_CellContentDoubleClick);
             this.dgvConceptosContables.SelectionChanged += new System.EventHandler(this.dgvConceptosContables_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Código";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Vigencia";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // lblCantElementos
             // 
@@ -392,26 +412,6 @@
             this.btnIntereses.TextColor = System.Drawing.Color.White;
             this.btnIntereses.UseVisualStyleBackColor = false;
             this.btnIntereses.Click += new System.EventHandler(this.btnIntereses_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Código";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descripción";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Vigencia";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // frmConceptosContables
             // 

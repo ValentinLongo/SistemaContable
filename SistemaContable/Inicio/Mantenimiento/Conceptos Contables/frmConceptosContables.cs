@@ -58,6 +58,13 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (Negocio.FGenerales.PermisoEspecial(5)) // 5 = MODIFICAR CONCEPTO CONTABLE
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Acceso Denegado!", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             frmAgregarConceptoContable frm = new frmAgregarConceptoContable("Modificar");
             frm.ShowDialog();
             CargarDGV("");
@@ -65,6 +72,13 @@ namespace SistemaContable.Inicio.Mantenimiento.Conceptos_Contables
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (Negocio.FGenerales.PermisoEspecial(6)) // 6 = ALTA CONCEPTO CONTABLE
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: Acceso Denegado!", false);
+                MessageBox.ShowDialog();
+                return;
+            }
+
             frmAgregarConceptoContable frm = new frmAgregarConceptoContable("Agregar");
             frm.ShowDialog();
             CargarDGV("");

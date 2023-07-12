@@ -354,7 +354,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(451, 19);
             this.txtDescripcion.TabIndex = 2;
-            this.txtDescripcion.Tag = "11010";
+            this.txtDescripcion.Tag = "01010";
             this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // btnAgregarTodo
