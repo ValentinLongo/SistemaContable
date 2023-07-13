@@ -223,6 +223,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Funciones\Contabilidad\FAsientoContable.cs" />
     <Compile Include="Funciones\Contabilidad\FDetalledeModelos.cs" />
     <Compile Include="Funciones\Contabilidad\FActualizacionDDI.cs" />
     <Compile Include="Funciones\Contabilidad\FActualizacionMDA.cs" />

@@ -101,6 +101,14 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
         {
             if (cbSeleccion.SelectedIndex > -1)
             {
+                int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
+                string asiento = dgvAsientosContables.Rows[seleccionado].Cells[0].Value.ToString();
+                string fecha = dgvAsientosContables.Rows[seleccionado].Cells[1].Value.ToString();
+                string comentario = dgvAsientosContables.Rows[seleccionado].Cells[2].Value.ToString();
+
+                DataSet ds = new DataSet();
+                ds = AccesoBase.ListarDatos($"SELECT * FROM asiento WHERE ast_asiento = {asiento}");
+
                 if (Negocio.FGenerales.PermisoEspecial(13) == false) // 13 = PERMITIR LA MODIFICACIÓN MANUAL DE CUALQUIER TIPO DE ASIENTO
                 {
                     goto ModifTotal;
@@ -114,16 +122,40 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 }
                 else
                 {
+                    if (!(ds.Tables[0].Rows[0]["ast_cbte"] is DBNull)) //SI EL ASIENTO ES AUTOMATICO
+                    {
+                        if (Negocio.FGenerales.PermisoEspecial(12)) // 12 = PERMITIR MODIFICACION DE CUENTAS CONTABLES EN ASIENTOS AUTOMATICOS
+                        {
+                            frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Asiento ha sido generado en forma Automática por el Sistema. No podrá ser Modificado.", false);
+                            MessageBox.ShowDialog();
+                            return;
+                        }
+                        else //SI PUEDE MODIFICAR ASIENTOS AUTOMATICOS
+                        {
+                            if (ds.Tables[0].Rows[0]["ast_cbte"].ToString() != "")
+                            {
+                                switch (Convert.ToInt32(ds.Tables[0].Rows[0]["ast_tipocbte"]))
+                                {
+                                    case 11:
+                                    case 12:
+                                    case 13:
+                                        Negocio.Funciones.Contabilidad.FAsientoContable.Rearm_MovCpa(ds, frmLogin.NumeroTerminal); //CPBTE DE CPA
+                                        break;
 
+                                    case 42:
+                                    case 43:
+                                        Negocio.Funciones.Contabilidad.FAsientoContable.Rearm_MovVarioCaja(ds, frmLogin.NumeroTerminal); //ING EGR VARIO DE CAJA
+                                        break;
+
+                                    default:
+                                        break;
+                                }
+                            }
+                        }
+                    }
                 }
-
-
+                
                 ModifTotal:
-
-                int seleccionado = dgvAsientosContables.CurrentCell.RowIndex;
-                string asiento = dgvAsientosContables.Rows[seleccionado].Cells[0].Value.ToString();
-                string fecha = dgvAsientosContables.Rows[seleccionado].Cells[1].Value.ToString();
-                string comentario = dgvAsientosContables.Rows[seleccionado].Cells[2].Value.ToString();
 
                 frmAggModVisAsientoContable frm = new frmAggModVisAsientoContable(2, cbSeleccion, asiento, fecha, comentario);
                 frm.ShowDialog();

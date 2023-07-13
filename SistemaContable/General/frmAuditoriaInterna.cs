@@ -749,8 +749,6 @@ namespace SistemaContable.General
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace + ex.ToString());
-
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente la Liquidacion de TC " + dr["cpa_nrocomp"].ToString() + ".");
             }
@@ -802,8 +800,6 @@ namespace SistemaContable.General
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace + ex.ToString());
-
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["cpa_nrocomp"] + ".");
             }
@@ -846,8 +842,6 @@ namespace SistemaContable.General
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace + ex.ToString());
-
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["cpa_nrocomp"] + ".");
             }
@@ -896,8 +890,6 @@ namespace SistemaContable.General
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace + ex.ToString());
-
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["dcb_cpbte"].ToString() + ".");
             }
@@ -973,8 +965,6 @@ namespace SistemaContable.General
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace + ex.ToString());
-
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["cpa_nrocomp"] + ".");
             }
@@ -1291,8 +1281,6 @@ namespace SistemaContable.General
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace + ex.ToString());
-
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + dr["mba_cpbte"] + ".");
             }
@@ -1344,8 +1332,6 @@ namespace SistemaContable.General
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace + ex.ToString());
-
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Depòsito " + dr["mba_cpbte"] + ".");
             }
@@ -1567,8 +1553,6 @@ namespace SistemaContable.General
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace + ex.ToString());
-
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Ingreso Vario " + dr["moc_cpbte"] + ".");
             }
@@ -1705,8 +1689,6 @@ namespace SistemaContable.General
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace + ex.ToString());
-
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
                 MensajeError("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Egreso Vario " + dr["moc_cpbte"] + ".");
             }
@@ -3739,7 +3721,7 @@ namespace SistemaContable.General
                 string fecha = "";
                 if (Convert.ToInt32(dr["cpa_condcpa"]) == 2)
                 {
-                    if (Convert.ToDateTime(dr["cpa_periodo"]) != Convert.ToDateTime(dr["cpa_feccont"].ToString().Substring(0, 7)))
+                    if (Convert.ToDateTime(dr["cpa_periodo"]) != Convert.ToDateTime(dr["cpa_feccont"].ToString().Substring(dr["cpa_feccont"].ToString().Length, -7)))
                     {
                         fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(dr["cpa_periodo"].ToString().Length - 4))) + "/" + dr["cpa_periodo"].ToString();
                     }
@@ -4160,7 +4142,7 @@ namespace SistemaContable.General
                 {
                     if (Convert.ToDouble(dr["cpa_totpropio"]) != 0)
                     {
-                        ds2 = AccesoBase.ListarDatos($"Select chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta, Sum(chp_importe) as total From ChequePropio Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on chp_nroban = cta_banco And chp_tipcta = cta_tipcta And chp_sucursal = cta_sucursal And chp_nrocta = cta_nrocta Where (chp_tipo <> 'T' or chp_tipo is null or chp_tipo = '') And chp_ordpag = '{dr["cpa_nrocomp"]}' And chp_tipmov = {dr["cpa_tipmov"]}");
+                        ds2 = AccesoBase.ListarDatos($"Select chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta, Sum(chp_importe) as total From ChequePropio Left Join (CtaBan Left Join PCuenta on cta_ctacont = pcu_cuenta) on chp_nroban = cta_banco And chp_tipcta = cta_tipcta And chp_sucursal = cta_sucursal And chp_nrocta = cta_nrocta Where (chp_tipo <> 'T' or chp_tipo is null or chp_tipo = '') And chp_ordpag = '{dr["cpa_nrocomp"]}' And chp_tipmov = {dr["cpa_tipmov"]} Group By chp_banco, chp_tipcta, chp_sucursal, chp_nrocta, pcu_cuenta");
                         foreach (DataRow dr2 in ds2.Tables[0].Rows)
                         {
                             Negocio.Funciones.Generales.FAuditoriaInternaMenu.InsertAux(terminal, 1, fecha, Convert.ToInt32(dr2["pcu_cuenta"]), 2, (Convert.ToDouble(dr["total"]) * cotizacion).ToString(), "", 2);
