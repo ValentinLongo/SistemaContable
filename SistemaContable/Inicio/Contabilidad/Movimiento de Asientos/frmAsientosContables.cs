@@ -1,5 +1,6 @@
 ﻿using CrystalDecisions.ReportAppServer;
 using Datos;
+using Datos.Modelos;
 using Negocio;
 using OpenQA.Selenium.Internal;
 using SistemaContable.General;
@@ -10,6 +11,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
@@ -139,13 +141,13 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                                     case 11:
                                     case 12:
                                     case 13:
-                                        Negocio.Funciones.Contabilidad.FAsientoContable.Rearm_MovCpa(ds, frmLogin.NumeroTerminal); //CPBTE DE CPA
-                                        break;
+                                        Rearm_MovCpa(ds, frmLogin.NumeroTerminal); //CPBTE DE CPA
+                                        return;
 
                                     case 42:
                                     case 43:
-                                        Negocio.Funciones.Contabilidad.FAsientoContable.Rearm_MovVarioCaja(ds, frmLogin.NumeroTerminal); //ING EGR VARIO DE CAJA
-                                        break;
+                                        Rearm_MovVarioCaja(ds, frmLogin.NumeroTerminal); //ING EGR VARIO DE CAJA
+                                        return;
 
                                     default:
                                         break;
@@ -167,6 +169,127 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 MessageBox.ShowDialog();
             }
             CargarDGV("", "", "", "");
+        }
+
+        private void Rearm_MovVarioCaja(DataSet ds, int terminal)
+        {
+            try
+            {
+                int asiento = Convert.ToInt32(ds.Tables[0].Rows[0]["ast_asiento"]);
+
+                DataSet ds2 = new DataSet();
+                ds2 = AccesoBase.ListarDatos($"Select * From MovVario Left Join PCuenta on va1_cta = pcu_cuenta Where va1_tipmov = {ds.Tables[0].Rows[0]["ast_tipocbte"]} and va1_cpbte = '{ds.Tables[0].Rows[0]["ast_cbte"]}'");
+                if (ds2.Tables[0].Rows.Count == 0)
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Sistema No ha podido encontrar el Comprobante de Origen.", false, true);
+                    MessageBox.ShowDialog();
+                    return;
+                }
+
+                string TipoCaja = "";
+                string Tipo = "";
+                string Leyenda = "";
+
+                if (Convert.ToInt32(ds.Tables[0].Rows[0]["ast_tipocbte"]) == 42)
+                {
+                    TipoCaja = "6";
+                    Tipo = "1";
+                    Leyenda = "S.I.Gc. - Ingreso Vario";
+                }
+                else
+                {
+                    TipoCaja = "54";
+                    Tipo = "2";
+                    Leyenda = "S.I.Gc. - Egreso Vario";
+                }
+
+                DataSet ds3 = new DataSet();
+                ds3 = AccesoBase.ListarDatos($"Select * From MovimientoCaja Where moc_tipmov = {TipoCaja} And moc_cpbte = '{ds.Tables[0].Rows[0]["ast_cbte"]}'");
+                if (ds.Tables[0].Rows.Count == 0)
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Sistema No ha podido encontrar el Comprobante de Origen.", false, true);
+                    MessageBox.ShowDialog();
+                    return;
+                }
+
+                DataSet ds4 = new DataSet();
+                ds4 = AccesoBase.ListarDatos($"Select * From Aux_MovVarioCaja Where aux_terminal = {terminal}");
+                if (ds4.Tables[0].Rows.Count != 0)
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Sistema ha detectado que esta Terminal se encuentra trabajando actualmente con los Movimientos Varios de Caja en el Sistema Administrativo. No podrá continuar con este Proceso.", false, true);
+                    MessageBox.ShowDialog();
+                    return;
+                }
+
+                long orden;
+                AccesoBase.InsertUpdateDatos($"Delete From Aux_MovVarioCaja Where aux_terminal = {terminal}");
+
+                foreach (DataRow dr2 in ds2.Tables[0].Rows)
+                {
+                    ds4 = AccesoBase.ListarDatos($"Select Max(aux_orden) as Maximo From Aux_MovVarioCaja Where aux_terminal = {terminal}");
+                    orden = ds4.Tables[0].Rows[0]["Maximo"] is DBNull ? 1 : Convert.ToInt64(ds4.Tables[0].Rows[0]["Maximo"]) + 1;
+
+                    AccesoBase.InsertUpdateDatosMoney($"Insert Into Aux_MovVarioCaja (aux_terminal, aux_cta, aux_descri, aux_importe, aux_comentario, aux_orden) VALUES ({terminal}, {dr2["va1_cta"]}, '{dr2["pcu_descri"]}', {"*"}, '{dr2["va1_comentario"]}', {orden})", dr2["va1_importe"].ToString());
+                }
+
+                string cpbte = ds3.Tables[0].Rows[0]["moc_cpbte"].ToString();
+                string descri = ds3.Tables[0].Rows[0]["moc_comentario"] is DBNull ? "" : ds3.Tables[0].Rows[0]["moc_comentario"].ToString();
+                string comentario = ds3.Tables[0].Rows[0]["moc_descri"] is DBNull ? "" : ds3.Tables[0].Rows[0]["moc_descri"].ToString();
+                string fecha = ds3.Tables[0].Rows[0]["moc_fecpro"].ToString();
+
+                string tipmov = ds.Tables[0].Rows[0]["ast_tipocbte"].ToString();
+                string codigo = ds2.Tables[0].Rows[0]["va1_movim"].ToString();
+
+                frmMovVarioCajaR frm = new frmMovVarioCajaR(this, Leyenda, cpbte, descri, comentario, fecha, TipoCaja, tipmov, Tipo, codigo);
+                frm.ShowDialog();
+
+                if (frmMovVarioCajaR.confirmó == false) //si no confirmo que no continue con el codigo
+                {
+                    return;
+                }
+                frmMovVarioCajaR.confirmó = false;
+
+                if (Convert.ToInt32(ds.Tables[0].Rows[0]["ast_tipocbte"]) == 42)
+                {
+                    Negocio.Funciones.Contabilidad.FAsientoContable.Proc_IngVar(ds3, terminal, asiento);
+                }
+                else if (Convert.ToInt32(ds.Tables[0].Rows[0]["ast_tipocbte"]) == 43)
+                {
+                    Negocio.Funciones.Contabilidad.FAsientoContable.Proc_EgrVar(ds3, terminal, asiento);
+                }
+            }
+            catch (Exception)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error!", false, true);
+                MessageBox.ShowDialog();
+            }
+        }
+
+        public static void Rearm_MovCpa(DataSet ds, int terminal)
+        {
+            try
+            {
+                int asiento = Convert.ToInt32(ds.Tables[0].Rows[0]["ast_asiento"]);
+
+                DataSet ds2 = new DataSet();
+                ds2 = AccesoBase.ListarDatos($"Select * From MovCpa Left Join TipMov on cpa_tipmov = tmo_codigo Where cpa_ctapro = {ds.Tables[0].Rows[0]["ast_ctapro"]}  And cpa_tipmov = {ds.Tables[0].Rows[0]["ast_tipocbte"]} And cpa_nrocomp = '{ds.Tables[0].Rows[0]["ast_cpte"]}'");
+                if (ds2.Tables[0].Rows.Count == 0)
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Sistema No ha podido encontrar el Comprobante de Origen.", false, true);
+                    MessageBox.ShowDialog();
+                    return;
+                }
+
+                //falta
+
+                ds2 = AccesoBase.ListarDatos($"Select * From MovCpa Left Join TipMov on cpa_tipmov = tmo_codigo Where cpa_ctapro = {ds.Tables[0].Rows[0]["ast_ctapro"]}  And cpa_tipmov = {ds.Tables[0].Rows[0]["ast_tipocbte"]} And cpa_nrocomp = '{ds.Tables[0].Rows[0]["ast_cpte"]}'");
+                Negocio.Funciones.Contabilidad.FAsientoContable.Proc_CPBTECpa(ds2, terminal, asiento);
+            }
+            catch (Exception)
+            {
+                frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Error!", false, true);
+                MessageBox.ShowDialog();
+            }
         }
 
         private void btnVisualizar_Click(object sender, EventArgs e)

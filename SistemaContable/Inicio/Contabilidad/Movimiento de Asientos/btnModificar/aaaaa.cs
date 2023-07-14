@@ -11,12 +11,17 @@ using System.Windows.Forms;
 
 namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 {
-    public partial class bbbbb : Form
+    public partial class aaaaa : Form
     {
-        public bbbbb()
+        public aaaaa()
         {
             InitializeComponent();
+
         }
+
+
+
+
 
         //BARRA DE CONTROL
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

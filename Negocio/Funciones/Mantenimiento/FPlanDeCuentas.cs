@@ -150,7 +150,7 @@ namespace Negocio
 
                 if (Param.IndexOf("CTABAN") == -1)
                 {
-                    ds = AccesoBase.ListarDatos($"SELECT * FROM CtaBan WHERE caj_ctacont = '{Cuenta}'");
+                    ds = AccesoBase.ListarDatos($"SELECT * FROM CtaBan WHERE cta_ctacont = '{Cuenta}'");
                     if (ds.Tables[0].Rows.Count != 0)
                     {
                         if (Traba == false)

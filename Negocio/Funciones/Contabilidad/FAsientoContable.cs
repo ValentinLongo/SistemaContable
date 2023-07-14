@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,84 +13,7 @@ namespace Negocio.Funciones.Contabilidad
 {
     public class FAsientoContable
     {
-        private static int asiento;
-
-        public static void Rearm_MovVarioCaja(DataSet ds, int terminal)
-        {
-            try
-            {
-                asiento = Convert.ToInt32(ds.Tables[0].Rows[0]["ast_asiento"]);
-
-                DataSet ds2 = new DataSet();
-                ds2 = AccesoBase.ListarDatos($"Select * From MovVario Left Join PCuenta on va1_cta = pcu_cuenta Where va1_tipmov = {ds.Tables[0].Rows[0]["ast_tipocbte"]} and va1_cpbte = '{ds.Tables[0].Rows[0]["ast_cbte"]}'");
-                if (ds2.Tables[0].Rows.Count == 0)
-                {
-                    MessageBox.Show("Atención: El Sistema No ha podido encontrar el Comprobante de Origen.");
-                    return;
-                }
-
-                string TipoCaja = "";
-                string Tipo = "";
-                string Leyenda = "";
-
-                if (Convert.ToInt32(ds.Tables[0].Rows[0]["ast_tipocbte"]) == 42)
-                {
-                    TipoCaja = "6";
-                    Tipo = "1";
-                    Leyenda = "S.I.Gc. - Ingreso Vario";
-                }
-                else
-                {
-                    TipoCaja = "54";
-                    Tipo = "2";
-                    Leyenda = "S.I.Gc. - Egreso Vario";
-                }
-
-                DataSet ds3 = new DataSet();
-                ds3 = AccesoBase.ListarDatos($"Select * From MovimientoCaja Where moc_tipmov = {TipoCaja} And moc_cpbte = '{ds.Tables[0].Rows[0]["ast_cbte"]}'");
-                if (ds.Tables[0].Rows.Count == 0)
-                {
-                    MessageBox.Show("Atención: El Sistema No ha podido encontrar el Comprobante de Origen.");
-                    return;
-                }
-
-                DataSet ds4 = new DataSet();
-                ds4 = AccesoBase.ListarDatos($"Select * From Aux_MovVarioCaja Where aux_terminal = {terminal}");
-                if (ds.Tables[0].Rows.Count != 0)
-                {
-                    MessageBox.Show("Atención: El Sistema ha detectado que esta Terminal se encuentra trabajando actualmente con los Movimientos Varios de Caja en el Sistema Administrativo. No podrá continuar con este Proceso.");
-                    return;
-                }
-
-                long orden;
-                AccesoBase.InsertUpdateDatos($"Delete From Aux_MovVarioCaja Where aux_terminal = {terminal}");
-
-                foreach (DataRow dr2 in ds2.Tables[0].Rows)
-                {
-                    ds4 = AccesoBase.ListarDatos($"Select Max(aux_orden) as Maximo From Aux_MovVarioCaja Where aux_terminal = {terminal}");
-                    orden = ds4.Tables[0].Rows[0]["Maximo"] is DBNull ? 1 : Convert.ToInt64(ds4.Tables[0].Rows[0]["Maximo"]) + 1;
-
-                    AccesoBase.InsertUpdateDatosMoney($"Insert Into Aux_MovVarioCaja (aux_terminal, aux_cta, aux_descri, aux_importe, aux_comentario, aux_orden) VALUES ({terminal}, {dr2["va1_cta"]}, '{dr2["pcu_descri"]}', {"*"}, {dr2["va1_comentario"]}, {orden}", dr2["va1_importe"].ToString());
-                }
-
-                //falta un frm
-
-                if (Convert.ToInt32(ds.Tables[0].Rows[0]["ast_tipocbte"]) == 42)
-                {
-                    Proc_IngVar(ds3, terminal);
-                }
-                else if (Convert.ToInt32(ds.Tables[0].Rows[0]["ast_tipocbte"]) == 43)
-                {
-                    Proc_EgrVar(ds3, terminal);
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Atención: Error!");
-            }
-        }
-
-        private static void Proc_IngVar(DataSet ds, int terminal)
+        public static void Proc_IngVar(DataSet ds, int terminal, int asiento)
         {
             try
             {
@@ -202,7 +126,7 @@ namespace Negocio.Funciones.Contabilidad
             }
         }
 
-        private static void Proc_EgrVar(DataSet ds, int terminal)
+        public static void Proc_EgrVar(DataSet ds, int terminal, int asiento)
         {
             try
             {
@@ -298,32 +222,7 @@ namespace Negocio.Funciones.Contabilidad
             }
         }
 
-        public static void Rearm_MovCpa(DataSet ds, int terminal)
-        {
-            try
-            {
-                asiento = Convert.ToInt32(ds.Tables[0].Rows[0]["ast_asiento"]);
-
-                DataSet ds2 = new DataSet();
-                ds2 = AccesoBase.ListarDatos($"Select * From MovCpa Left Join TipMov on cpa_tipmov = tmo_codigo Where cpa_ctapro = {ds.Tables[0].Rows[0]["ast_ctapro"]}  And cpa_tipmov = {ds.Tables[0].Rows[0]["ast_tipocbte"]} And cpa_nrocomp = '{ds.Tables[0].Rows[0]["ast_cpte"]}'");
-                if (ds2.Tables[0].Rows.Count == 0)
-                {
-                    MessageBox.Show($"Atención: El Sistema No ha podido encontrar el Comprobante de Origen.");
-                    return;
-                }
-
-                //falta un frm
-
-                ds2 = AccesoBase.ListarDatos($"Select * From MovCpa Left Join TipMov on cpa_tipmov = tmo_codigo Where cpa_ctapro = {ds.Tables[0].Rows[0]["ast_ctapro"]}  And cpa_tipmov = {ds.Tables[0].Rows[0]["ast_tipocbte"]} And cpa_nrocomp = '{ds.Tables[0].Rows[0]["ast_cpte"]}'");
-                Proc_CPBTECpa(ds2, terminal);
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
-        private static void Proc_CPBTECpa(DataSet ds, int terminal)
+        public static void Proc_CPBTECpa(DataSet ds, int terminal, int asiento)
         {
             try
             {
@@ -463,7 +362,7 @@ namespace Negocio.Funciones.Contabilidad
             }
         }
 
-        private static void FormPagCpa(DataSet ds, int terminal)
+        public static void FormPagCpa(DataSet ds, int terminal)
         {
             try
             {
@@ -561,7 +460,7 @@ namespace Negocio.Funciones.Contabilidad
             }
             catch (Exception)
             {
-                MessageBox.Show("Atención: Ha Ocurrido un Error!");
+                MessageBox.Show("Atención: Error!");
             }
         }
     }

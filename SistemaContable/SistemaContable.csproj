@@ -282,17 +282,23 @@
     <Compile Include="General\frmBuscarEjercicioContable.Designer.cs">
       <DependentUpon>frmBuscarEjercicioContable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\aaaaa.cs">
+    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\btnModificar\aaaaa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\aaaaa.Designer.cs">
+    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\btnModificar\aaaaa.Designer.cs">
       <DependentUpon>aaaaa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\bbbbb.cs">
+    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\btnModificar\frmMovVarioCajaR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\bbbbb.Designer.cs">
-      <DependentUpon>bbbbb.cs</DependentUpon>
+    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\btnModificar\frmMovVarioCajaR.Designer.cs">
+      <DependentUpon>frmMovVarioCajaR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\btnModificar\frmDetMovVarioCajaR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Contabilidad\Movimiento de Asientos\btnModificar\frmDetMovVarioCajaR.Designer.cs">
+      <DependentUpon>frmDetMovVarioCajaR.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Mantenimiento\Conceptos Contables\Intereses\frmAggModInteres.cs">
       <SubType>Form</SubType>
@@ -692,11 +698,14 @@
     <EmbeddedResource Include="General\frmBuscarEjercicioContable.resx">
       <DependentUpon>frmBuscarEjercicioContable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Contabilidad\Movimiento de Asientos\aaaaa.resx">
+    <EmbeddedResource Include="Inicio\Contabilidad\Movimiento de Asientos\btnModificar\aaaaa.resx">
       <DependentUpon>aaaaa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\Contabilidad\Movimiento de Asientos\bbbbb.resx">
-      <DependentUpon>bbbbb.cs</DependentUpon>
+    <EmbeddedResource Include="Inicio\Contabilidad\Movimiento de Asientos\btnModificar\frmMovVarioCajaR.resx">
+      <DependentUpon>frmMovVarioCajaR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Contabilidad\Movimiento de Asientos\btnModificar\frmDetMovVarioCajaR.resx">
+      <DependentUpon>frmDetMovVarioCajaR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Mantenimiento\Conceptos Contables\Intereses\frmAggModInteres.resx">
       <DependentUpon>frmAggModInteres.cs</DependentUpon>
