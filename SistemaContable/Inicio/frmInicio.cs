@@ -206,6 +206,8 @@ namespace SistemaContable
 
         private void DisparadorInicio(object sender, EventArgs e) //EVENTO QUE SE DISPARA CON EL USO DEL MENU
         {
+            Negocio.FInicio.DatosUsuEmp(lblUsu, lblEmpresa, lblPerfil); //por si se cambia el usuario en la autorizacion
+
             int UltimoUsuarioNuevo = Negocio.FGenerales.ultimoNumeroID("usu_codigo", "Usuario");
 
             if (UltimoUsuarioAnterior != UltimoUsuarioNuevo)

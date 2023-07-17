@@ -257,6 +257,13 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 {
                     Negocio.Funciones.Contabilidad.FAsientoContable.Proc_EgrVar(ds3, terminal, asiento);
                 }
+
+                string msg = Negocio.Funciones.Contabilidad.FAsientoContable.msgRetorno;
+                if (msg != "")
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", msg, false, true);
+                    MessageBox.ShowDialog();
+                }
             }
             catch (Exception)
             {
@@ -272,7 +279,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 int asiento = Convert.ToInt32(ds.Tables[0].Rows[0]["ast_asiento"]);
 
                 DataSet ds2 = new DataSet();
-                ds2 = AccesoBase.ListarDatos($"Select * From MovCpa Left Join TipMov on cpa_tipmov = tmo_codigo Where cpa_ctapro = {ds.Tables[0].Rows[0]["ast_ctapro"]}  And cpa_tipmov = {ds.Tables[0].Rows[0]["ast_tipocbte"]} And cpa_nrocomp = '{ds.Tables[0].Rows[0]["ast_cpte"]}'");
+                ds2 = AccesoBase.ListarDatos($"Select * From MovCpa Left Join TipMov on cpa_tipmov = tmo_codigo Where cpa_ctapro = {ds.Tables[0].Rows[0]["ast_ctapro"]}  And cpa_tipmov = {ds.Tables[0].Rows[0]["ast_tipocbte"]} And cpa_nrocomp = '{ds.Tables[0].Rows[0]["ast_cbte"]}'");
                 if (ds2.Tables[0].Rows.Count == 0)
                 {
                     frmMessageBox MessageBox = new frmMessageBox("Mensaje", "Atención: El Sistema No ha podido encontrar el Comprobante de Origen.", false, true);
@@ -280,10 +287,62 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     return;
                 }
 
-                //falta
+                int[] cuentas = new int[15];
+                double[] importes = new double[15];
 
-                ds2 = AccesoBase.ListarDatos($"Select * From MovCpa Left Join TipMov on cpa_tipmov = tmo_codigo Where cpa_ctapro = {ds.Tables[0].Rows[0]["ast_ctapro"]}  And cpa_tipmov = {ds.Tables[0].Rows[0]["ast_tipocbte"]} And cpa_nrocomp = '{ds.Tables[0].Rows[0]["ast_cpte"]}'");
+                cuentas[0] = ds2.Tables[0].Rows[0]["cpa_ctaneto"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaneto"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaneto"]);
+                cuentas[1] = ds2.Tables[0].Rows[0]["cpa_ctaexento"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaexento"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaexento"]);
+                cuentas[2] = ds2.Tables[0].Rows[0]["cpa_ctaiva21"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaiva21"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaiva21"]);
+                cuentas[3] = ds2.Tables[0].Rows[0]["cpa_ctaiva27"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaiva27"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaiva27"]);
+                cuentas[4] = ds2.Tables[0].Rows[0]["cpa_ctaiva10"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaiva10"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaiva10"]);
+                cuentas[5] = ds2.Tables[0].Rows[0]["cpa_ctaimpint"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaimpint"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaimpint"]);
+                cuentas[6] = ds2.Tables[0].Rows[0]["cpa_ctaretiva"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaretiva"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaretiva"]);
+                cuentas[7] = ds2.Tables[0].Rows[0]["cpa_ctaretiibb"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaretiibb"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaretiibb"]);
+                cuentas[8] = ds2.Tables[0].Rows[0]["cpa_ctaretgan"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaretgan"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaretgan"]);
+                cuentas[9] = ds2.Tables[0].Rows[0]["cpa_ctaperiva"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaperiva"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaperiva"]);
+                cuentas[10] = ds2.Tables[0].Rows[0]["cpa_ctaperiibb"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaperiibb"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaperiibb"]);
+                cuentas[11] = ds2.Tables[0].Rows[0]["cpa_ctapergan"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctapergan"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctapergan"]);
+                cuentas[12] = ds2.Tables[0].Rows[0]["cpa_ctamonotributo"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctamonotributo"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctamonotributo"]);
+                cuentas[13] = ds2.Tables[0].Rows[0]["cpa_ctaotros"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctaotros"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctaotros"]);
+                cuentas[14] = ds2.Tables[0].Rows[0]["cpa_ctacpbte"] is DBNull || ds2.Tables[0].Rows[0]["cpa_ctacpbte"].ToString() == "" ? 0 : Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_ctacpbte"]);
+
+                importes[0] = ds2.Tables[0].Rows[0]["cpa_neto"] is DBNull || ds2.Tables[0].Rows[0]["cpa_neto"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_neto"]);
+                importes[1] = ds2.Tables[0].Rows[0]["cpa_exento"] is DBNull || ds2.Tables[0].Rows[0]["cpa_exento"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_exento"]);
+                importes[2] = ds2.Tables[0].Rows[0]["cpa_iva21"] is DBNull || ds2.Tables[0].Rows[0]["cpa_iva21"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_iva21"]);
+                importes[3] = ds2.Tables[0].Rows[0]["cpa_iva27"] is DBNull || ds2.Tables[0].Rows[0]["cpa_iva27"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_iva27"]);
+                importes[4] = ds2.Tables[0].Rows[0]["cpa_iva10"] is DBNull || ds2.Tables[0].Rows[0]["cpa_iva10"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_iva10"]);
+                importes[5] = ds2.Tables[0].Rows[0]["cpa_impint"] is DBNull || ds2.Tables[0].Rows[0]["cpa_impint"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_impint"]);
+                importes[6] = ds2.Tables[0].Rows[0]["cpa_retiva"] is DBNull || ds2.Tables[0].Rows[0]["cpa_retiva"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_retiva"]);
+                importes[7] = ds2.Tables[0].Rows[0]["cpa_retiibb"] is DBNull || ds2.Tables[0].Rows[0]["cpa_retiibb"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_retiibb"]);
+                importes[8] = ds2.Tables[0].Rows[0]["cpa_retgan"] is DBNull || ds2.Tables[0].Rows[0]["cpa_retgan"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_retgan"]);
+                importes[9] = ds2.Tables[0].Rows[0]["cpa_periva"] is DBNull || ds2.Tables[0].Rows[0]["cpa_periva"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_periva"]);
+                importes[10] = ds2.Tables[0].Rows[0]["cpa_periibb"] is DBNull || ds2.Tables[0].Rows[0]["cpa_periibb"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_periibb"]);
+                importes[11] = ds2.Tables[0].Rows[0]["cpa_pergan"] is DBNull || ds2.Tables[0].Rows[0]["cpa_pergan"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_pergan"]);
+                importes[12] = ds2.Tables[0].Rows[0]["cpa_monotributo"] is DBNull || ds2.Tables[0].Rows[0]["cpa_monotributo"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_monotributo"]);
+                importes[13] = ds2.Tables[0].Rows[0]["cpa_otros"] is DBNull || ds2.Tables[0].Rows[0]["cpa_otros"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_otros"]);
+                importes[14] = ds2.Tables[0].Rows[0]["cpa_total"] is DBNull || ds2.Tables[0].Rows[0]["cpa_total"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_total"]);
+
+                string msg = "S.I.Gc. - " + ds2.Tables[0].Rows[0]["tmo_abrev"].ToString() + ds2.Tables[0].Rows[0]["cpa_nrocomp"].ToString() + " - " + ds2.Tables[0].Rows[0]["cpa_nombre"].ToString();
+                int codigo = Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_codigo"]);
+
+                frmComprarR frm = new frmComprarR(msg, cuentas, importes, codigo);
+                frm.ShowDialog();
+
+                if (frmComprarR.confirmó == false) //si no confirmo que no continue con el codigo
+                {
+                    return;
+                }
+                frmComprarR.confirmó = false;
+
+                ds2 = AccesoBase.ListarDatos($"Select * From MovCpa Left Join TipMov on cpa_tipmov = tmo_codigo Where cpa_ctapro = {ds.Tables[0].Rows[0]["ast_ctapro"]}  And cpa_tipmov = {ds.Tables[0].Rows[0]["ast_tipocbte"]} And cpa_nrocomp = '{ds.Tables[0].Rows[0]["ast_cbte"]}'");
                 Negocio.Funciones.Contabilidad.FAsientoContable.Proc_CPBTECpa(ds2, terminal, asiento);
+
+                msg = Negocio.Funciones.Contabilidad.FAsientoContable.msgRetorno;
+                if (msg != "")
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Mensaje", msg, false, true);
+                    MessageBox.ShowDialog();
+                }
             }
             catch (Exception)
             {

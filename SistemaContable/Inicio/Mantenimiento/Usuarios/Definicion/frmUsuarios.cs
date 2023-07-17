@@ -1,4 +1,5 @@
-﻿using SistemaContable.General;
+﻿using Datos.Modelos;
+using SistemaContable.General;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -92,16 +93,30 @@ namespace SistemaContable.Usuarios
 
         private void btnDefinirCajas_Click(object sender, EventArgs e)
         {
-            int CodUsu = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value);
-
-            if (Negocio.FUsuarios.ValidarPermisoDefinirCaja())
+            if (Negocio.FGenerales.PermisoEspecial(10)) // 10 = VINCULAR CAJAS POR USUARIO
             {
-                frmDefinirCajas definirCajas = new frmDefinirCajas(CodUsu);
-                definirCajas.Show();
+                frmAutorización frmAutorizacion = new frmAutorización(this);
+                bool autorizado = frmAutorización.Autoriza(4, true);
+                frmAutorizacion.Show();
+                if (frmAutorización.visibilidad == true)
+                {
+                    frmAutorizacion.SendToBack();
+                }
+
+                if (autorizado)
+                {
+                    frmDefinirCajas definirCajas = new frmDefinirCajas(codigoUsuario);
+                    definirCajas.Show();
+
+                    frmAutorizacion.Close();
+                    frmAutorización.usuario = "";
+                    frmAutorización.contraseña = "";
+                }
             }
             else
             {
-                
+                frmDefinirCajas definirCajas = new frmDefinirCajas(codigoUsuario);
+                definirCajas.Show();
             }
         }
 

@@ -13,6 +13,9 @@ namespace Negocio.Funciones.Contabilidad
 {
     public class FAsientoContable
     {
+
+        public static string msgRetorno = "";
+
         public static void Proc_IngVar(DataSet ds, int terminal, int asiento)
         {
             try
@@ -107,7 +110,7 @@ namespace Negocio.Funciones.Contabilidad
 
                 if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
                 {
-                    MessageBox.Show($"Atención: El Asiento que se va a generar a través de este Comprobante: {ds.Tables[0].Rows[0]["moc_cpbte"]}, No se encuentra correctamente Balanceado.");
+                    msgRetorno = $"Atención: El Asiento que se va a generar a través de este Comprobante: {ds.Tables[0].Rows[0]["moc_cpbte"]}, No se encuentra correctamente Balanceado.";
                     return;
                 }
 
@@ -122,7 +125,7 @@ namespace Negocio.Funciones.Contabilidad
             catch (Exception)
             {
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
-                MessageBox.Show("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Ingreso Vario " + ds.Tables[0].Rows[0]["moc_cpbte"] + ".");
+                msgRetorno = "Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Ingreso Vario " + ds.Tables[0].Rows[0]["moc_cpbte"] + ".";
             }
         }
 
@@ -203,7 +206,7 @@ namespace Negocio.Funciones.Contabilidad
 
                 if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
                 {
-                    MessageBox.Show("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
+                    msgRetorno = "Atención: El Asiento que se va a generar a través del Comprobante " + ds.Tables[0].Rows[0]["moc_cpbte"] + ", No se encuentra correctamente Balanceado.";
                     return;
                 }
 
@@ -218,7 +221,7 @@ namespace Negocio.Funciones.Contabilidad
             catch (Exception)
             {
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
-                MessageBox.Show("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Egreso Vario " + ds.Tables[0].Rows[0]["moc_cpbte"] + ".");
+                msgRetorno = "Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Egreso Vario " + ds.Tables[0].Rows[0]["moc_cpbte"] + ".";
             }
         }
 
@@ -241,7 +244,7 @@ namespace Negocio.Funciones.Contabilidad
                 }
 
                 string fecha = "";
-                if (Convert.ToDateTime(ds.Tables[0].Rows[0]["cpa_periodo"]) != Convert.ToDateTime(ds.Tables[0].Rows[0]["cpa_feccont"].ToString().Substring(ds.Tables[0].Rows[0]["cpa_feccont"].ToString().Length, -7)))
+                if (Convert.ToDateTime(ds.Tables[0].Rows[0]["cpa_periodo"]) != Convert.ToDateTime(ds.Tables[0].Rows[0]["cpa_feccont"].ToString().Substring(3, 7)))
                 {
                     fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(ds.Tables[0].Rows[0]["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(ds.Tables[0].Rows[0]["cpa_periodo"].ToString().Substring(ds.Tables[0].Rows[0]["cpa_periodo"].ToString().Length - 4))) + "/" + ds.Tables[0].Rows[0]["cpa_periodo"].ToString();
                 }
@@ -344,7 +347,7 @@ namespace Negocio.Funciones.Contabilidad
 
                 if (Negocio.Funciones.Generales.FAuditoriaInternaMenu.Balanceado(terminal))
                 {
-                    MessageBox.Show("Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.");
+                    msgRetorno = "Atención: El Asiento que se va a generar a través de este Comprobante, No se encuentra correctamente Balanceado.";
                 }
 
                 AccesoBase.InsertUpdateDatos($"Update Asiento Set ast_usumodi = {FLogin.NombreUsuario}, ast_fecmodi = '{DateTime.Now.ToShortDateString()}', ast_horamodi = '{DateTime.Now.ToShortTimeString()}' Where ast_asiento = {asiento}");
@@ -358,7 +361,7 @@ namespace Negocio.Funciones.Contabilidad
             catch (Exception)
             {
                 Negocio.Funciones.Generales.FAuditoriaInternaMenu.Delete(terminal);
-                MessageBox.Show("Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + ds.Tables[0].Rows[0]["cpa_nrocomp"].ToString() + ".");
+                msgRetorno = "Atención: Ha Ocurrido un Problema al intentar generar el Asiento correspondiente al Comprobante de Compra " + ds.Tables[0].Rows[0]["cpa_nrocomp"].ToString() + ".";
             }
         }
 
@@ -379,7 +382,7 @@ namespace Negocio.Funciones.Contabilidad
 
                 string fecha = "";
 
-                if (Convert.ToDateTime(ds.Tables[0].Rows[0]["cpa_periodo"]) != Convert.ToDateTime(ds.Tables[0].Rows[0]["cpa_feccont"].ToString().Substring(ds.Tables[0].Rows[0]["cpa_feccont"].ToString().Length, -7)))
+                if (Convert.ToDateTime(ds.Tables[0].Rows[0]["cpa_periodo"]) != Convert.ToDateTime(ds.Tables[0].Rows[0]["cpa_feccont"].ToString().Substring(3, 7)))
                 {
                     fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(ds.Tables[0].Rows[0]["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(ds.Tables[0].Rows[0]["cpa_periodo"].ToString().Substring(ds.Tables[0].Rows[0]["cpa_periodo"].ToString().Length - 4))) + "/" + ds.Tables[0].Rows[0]["cpa_periodo"].ToString();
                 }
@@ -460,7 +463,7 @@ namespace Negocio.Funciones.Contabilidad
             }
             catch (Exception)
             {
-                MessageBox.Show("Atención: Error!");
+                msgRetorno = "Atención: Error!";
             }
         }
     }

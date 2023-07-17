@@ -3,6 +3,7 @@ using Datos.Modelos;
 using Negocio;
 using SistemaContable.General;
 using SistemaContable.Parametrizacion_Permisos;
+using SistemaContable.Usuarios;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -104,6 +105,25 @@ namespace SistemaContable
                 this.Close();
                 frmAutorización.usuario = "";
                 frmAutorización.contraseña = "";
+            }
+
+            if (FRM is frmUsuarios)
+            {
+                if (Negocio.FUsuarios.ValidarPermisoDefinirCaja())
+                {
+                    this.Close();
+                    frmAutorización.usuario = "";
+                    frmAutorización.contraseña = "";
+
+                    frmDefinirCajas definirCajas = new frmDefinirCajas(frmUsuarios.codigoUsuario);
+                    definirCajas.Show();
+                }
+                else
+                {
+                    frmMessageBox MessageBox = new frmMessageBox("Atención!", "Autorización Denegada!", false);
+                    MessageBox.ShowDialog();
+                    return;
+                }
             }
 
             if (FRM is frmInicio)
