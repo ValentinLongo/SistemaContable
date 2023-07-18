@@ -600,7 +600,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStripADs.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -660,7 +660,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelControlBox.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -842,10 +842,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;borde2.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>7</value>
   </data>
   <data name="borde1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 99</value>
+    <value>270, 99</value>
   </data>
   <data name="borde1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1099, 1</value>
@@ -863,7 +863,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;borde1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>0</value>
   </data>
   <data name="lblnuevomensaje.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -899,7 +899,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblnuevomensaje.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>6</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -932,7 +932,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>5</value>
   </data>
   <data name="Disparador.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -968,7 +968,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Disparador.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>4</value>
   </data>
   <data name="panelLineaControlBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>267, 25</value>
@@ -989,7 +989,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelLineaControlBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>3</value>
   </data>
   <data name="borde3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -1013,7 +1013,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;borde3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>2</value>
   </data>
   <data name="borde4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1037,334 +1037,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;borde4.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="Menu_Archivos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>129, 17</value>
-  </metadata>
-  <data name="Menu_Archivos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 11.25pt</value>
-  </data>
-  <data name="Menu_Archivos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 76</value>
-  </data>
-  <data name="&gt;&gt;Menu_Archivos.Name" xml:space="preserve">
-    <value>Menu_Archivos</value>
-  </data>
-  <data name="&gt;&gt;Menu_Archivos.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="respaldoDeInformación.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 24</value>
-  </data>
-  <data name="respaldoDeInformación.Text" xml:space="preserve">
-    <value>Respaldo de Información</value>
-  </data>
-  <data name="restauraciónDeInformación.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 24</value>
-  </data>
-  <data name="restauraciónDeInformación.Text" xml:space="preserve">
-    <value>Restauración de Información</value>
-  </data>
-  <data name="salir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 24</value>
-  </data>
-  <data name="salir.Text" xml:space="preserve">
-    <value>Salir</value>
-  </data>
-  <metadata name="Menu_Ver.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>256, 17</value>
-  </metadata>
-  <data name="Menu_Ver.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 11.25pt</value>
-  </data>
-  <data name="Menu_Ver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 100</value>
-  </data>
-  <data name="&gt;&gt;Menu_Ver.Name" xml:space="preserve">
-    <value>Menu_Ver</value>
-  </data>
-  <data name="&gt;&gt;Menu_Ver.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="calculadora.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 24</value>
-  </data>
-  <data name="calculadora.Text" xml:space="preserve">
-    <value>Calculadora</value>
-  </data>
-  <data name="comunicaciónInterna.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 24</value>
-  </data>
-  <data name="comunicaciónInterna.Text" xml:space="preserve">
-    <value>Comunicación Interna</value>
-  </data>
-  <data name="notasYObservaciones.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 24</value>
-  </data>
-  <data name="notasYObservaciones.Text" xml:space="preserve">
-    <value>Notas y Observaciones</value>
-  </data>
-  <data name="calendario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 24</value>
-  </data>
-  <data name="calendario.Text" xml:space="preserve">
-    <value>Calendario</value>
-  </data>
-  <metadata name="Menu_Ayuda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>663, 17</value>
-  </metadata>
-  <data name="Menu_Ayuda.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 11.25pt</value>
-  </data>
-  <data name="Menu_Ayuda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 28</value>
-  </data>
-  <data name="&gt;&gt;Menu_Ayuda.Name" xml:space="preserve">
-    <value>Menu_Ayuda</value>
-  </data>
-  <data name="&gt;&gt;Menu_Ayuda.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="soporteInteractivoDeContable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 24</value>
-  </data>
-  <data name="soporteInteractivoDeContable.Text" xml:space="preserve">
-    <value>Soporte</value>
-  </data>
-  <metadata name="Menu_Contabilidad.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>351, 17</value>
-  </metadata>
-  <data name="Menu_Contabilidad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 11.25pt</value>
-  </data>
-  <data name="Menu_Contabilidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 292</value>
-  </data>
-  <data name="&gt;&gt;Menu_Contabilidad.Name" xml:space="preserve">
-    <value>Menu_Contabilidad</value>
-  </data>
-  <data name="&gt;&gt;Menu_Contabilidad.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="movimientoDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="movimientoDeAsientos.Text" xml:space="preserve">
-    <value>Movimiento de Asientos</value>
-  </data>
-  <data name="modelosDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="modelosDeAsientos.Text" xml:space="preserve">
-    <value>Modelos de Asientos</value>
-  </data>
-  <data name="actualizaciónMA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 24</value>
-  </data>
-  <data name="actualizaciónMA.Text" xml:space="preserve">
-    <value>Actualización</value>
-  </data>
-  <data name="detalleDeModelos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 24</value>
-  </data>
-  <data name="detalleDeModelos.Text" xml:space="preserve">
-    <value>Detalle de Modelos</value>
-  </data>
-  <data name="renumeraciónDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="renumeraciónDeAsientos.Text" xml:space="preserve">
-    <value>Renumeración de Asientos</value>
-  </data>
-  <data name="libroDiario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="libroDiario.Text" xml:space="preserve">
-    <value>Libro Diario</value>
-  </data>
-  <data name="libroMayor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="libroMayor.Text" xml:space="preserve">
-    <value>Libro Mayor</value>
-  </data>
-  <data name="libroMayorGrupo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="libroMayorGrupo.Text" xml:space="preserve">
-    <value>Libro Mayor - Grupo</value>
-  </data>
-  <data name="libroMayorInforme.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="libroMayorInforme.Text" xml:space="preserve">
-    <value>Libro Mayor - Informe</value>
-  </data>
-  <data name="saldosYAjustados.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="saldosYAjustados.Text" xml:space="preserve">
-    <value>Saldos y Ajustados</value>
-  </data>
-  <data name="balanceDeSumasYSaldos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="balanceDeSumasYSaldos.Text" xml:space="preserve">
-    <value>Balance de Sumas y Saldos</value>
-  </data>
-  <data name="balanceGeneral.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="balanceGeneral.Text" xml:space="preserve">
-    <value>Balance General</value>
-  </data>
-  <data name="definiciónDeInformes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="definiciónDeInformes.Text" xml:space="preserve">
-    <value>Definición de Informes</value>
-  </data>
-  <data name="actualizaciónDI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 24</value>
-  </data>
-  <data name="actualizaciónDI.Text" xml:space="preserve">
-    <value>Actualización</value>
-  </data>
-  <data name="detalleInforme.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 24</value>
-  </data>
-  <data name="detalleInforme.Text" xml:space="preserve">
-    <value>Detalle Informe</value>
-  </data>
-  <data name="informe.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 24</value>
-  </data>
-  <data name="informe.Text" xml:space="preserve">
-    <value>Informe</value>
-  </data>
-  <data name="auditoriaInterna.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="auditoriaInterna.Text" xml:space="preserve">
-    <value>Auditoria Interna</value>
-  </data>
-  <metadata name="Menu_Mantenimiento.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>501, 17</value>
-  </metadata>
-  <data name="Menu_Mantenimiento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gadugi, 11.25pt</value>
-  </data>
-  <data name="Menu_Mantenimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 292</value>
-  </data>
-  <data name="&gt;&gt;Menu_Mantenimiento.Name" xml:space="preserve">
-    <value>Menu_Mantenimiento</value>
-  </data>
-  <data name="&gt;&gt;Menu_Mantenimiento.Type" xml:space="preserve">
-    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="empresa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="empresa.Text" xml:space="preserve">
-    <value>Empresa</value>
-  </data>
-  <data name="usuarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="usuarios.Text" xml:space="preserve">
-    <value>Usuarios</value>
-  </data>
-  <data name="definición.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 24</value>
-  </data>
-  <data name="definición.Text" xml:space="preserve">
-    <value>Definición</value>
-  </data>
-  <data name="modificaciónDeContraseña.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 24</value>
-  </data>
-  <data name="modificaciónDeContraseña.Text" xml:space="preserve">
-    <value>Modificación de Contraseña</value>
-  </data>
-  <data name="parametrizacionDePermisosPerfiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 24</value>
-  </data>
-  <data name="parametrizacionDePermisosPerfiles.Text" xml:space="preserve">
-    <value>Parametrizacion de Permisos - Perfiles</value>
-  </data>
-  <data name="parametrizacionDePermisosUsuarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 24</value>
-  </data>
-  <data name="parametrizacionDePermisosUsuarios.Text" xml:space="preserve">
-    <value>Parametrizacion de Permisos - Usuarios</value>
-  </data>
-  <data name="recalcularPermisos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 24</value>
-  </data>
-  <data name="recalcularPermisos.Text" xml:space="preserve">
-    <value>Recalcular Permisos</value>
-  </data>
-  <data name="ejercicioContable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="ejercicioContable.Text" xml:space="preserve">
-    <value>Ejercicio Contable</value>
-  </data>
-  <data name="planDeCuentas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="planDeCuentas.Text" xml:space="preserve">
-    <value>Plan de Cuentas</value>
-  </data>
-  <data name="conceptosContables.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="conceptosContables.Text" xml:space="preserve">
-    <value>Conceptos Contables</value>
-  </data>
-  <data name="rubrosContables.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="rubrosContables.Text" xml:space="preserve">
-    <value>Rubros Contables</value>
-  </data>
-  <data name="coeficienteDeAjuste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="coeficienteDeAjuste.Text" xml:space="preserve">
-    <value>Coeficiente de Ajuste</value>
-  </data>
-  <data name="centroDeCosto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="centroDeCosto.Text" xml:space="preserve">
-    <value>Centro de Costo</value>
-  </data>
-  <data name="rubricaciónDeSubDiarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="rubricaciónDeSubDiarios.Text" xml:space="preserve">
-    <value>Rubricación de SubDiarios</value>
-  </data>
-  <data name="agenda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="agenda.Text" xml:space="preserve">
-    <value>Agenda</value>
-  </data>
-  <data name="parametrosContables.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="parametrosContables.Text" xml:space="preserve">
-    <value>Parametros Contables</value>
-  </data>
-  <data name="configurarImpresora.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 24</value>
-  </data>
-  <data name="configurarImpresora.Text" xml:space="preserve">
-    <value>Configurar Impresoras</value>
+    <value>1</value>
   </data>
   <data name="lblUsu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1436,7 +1109,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAyuda2.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>20</value>
   </data>
   <data name="btnMantenimiento2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1475,7 +1148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnMantenimiento2.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>19</value>
   </data>
   <data name="btnContabilidad2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1514,7 +1187,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnContabilidad2.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>18</value>
   </data>
   <data name="btnVer2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1553,7 +1226,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnVer2.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>17</value>
   </data>
   <data name="btnArchivos2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1592,7 +1265,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnArchivos2.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <data name="PanelMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1639,6 +1312,381 @@
   </data>
   <data name="PanelMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnSesion.Name" xml:space="preserve">
+    <value>btnSesion</value>
+  </data>
+  <data name="&gt;&gt;btnSesion.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnSesion.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnSesion.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pArchivos2.Name" xml:space="preserve">
+    <value>pArchivos2</value>
+  </data>
+  <data name="&gt;&gt;pArchivos2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pArchivos2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pArchivos2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda.Name" xml:space="preserve">
+    <value>btnAyuda</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnAyuda.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento.Name" xml:space="preserve">
+    <value>btnMantenimiento</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnMantenimiento.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad.Name" xml:space="preserve">
+    <value>btnContabilidad</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnContabilidad.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btnVer.Name" xml:space="preserve">
+    <value>btnVer</value>
+  </data>
+  <data name="&gt;&gt;btnVer.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnVer.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnVer.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos.Name" xml:space="preserve">
+    <value>btnArchivos</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnArchivos.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btnAudInt.Name" xml:space="preserve">
+    <value>btnAudInt</value>
+  </data>
+  <data name="&gt;&gt;btnAudInt.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJButton, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnAudInt.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnAudInt.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;lblPerfil.Name" xml:space="preserve">
+    <value>lblPerfil</value>
+  </data>
+  <data name="&gt;&gt;lblPerfil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPerfil.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;lblPerfil.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.Name" xml:space="preserve">
+    <value>lblEmpresa</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad2.Name" xml:space="preserve">
+    <value>pContabilidad2</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad2.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;pVer2.Name" xml:space="preserve">
+    <value>pVer2</value>
+  </data>
+  <data name="&gt;&gt;pVer2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pVer2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pVer2.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;pAyuda2.Name" xml:space="preserve">
+    <value>pAyuda2</value>
+  </data>
+  <data name="&gt;&gt;pAyuda2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pAyuda2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pAyuda2.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento2.Name" xml:space="preserve">
+    <value>pMantenimiento2</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento2.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento2.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;pAyuda.Name" xml:space="preserve">
+    <value>pAyuda</value>
+  </data>
+  <data name="&gt;&gt;pAyuda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pAyuda.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pAyuda.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento.Name" xml:space="preserve">
+    <value>pMantenimiento</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pMantenimiento.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad.Name" xml:space="preserve">
+    <value>pContabilidad</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pContabilidad.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;pVer.Name" xml:space="preserve">
+    <value>pVer</value>
+  </data>
+  <data name="&gt;&gt;pVer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pVer.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pVer.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;pArchivos.Name" xml:space="preserve">
+    <value>pArchivos</value>
+  </data>
+  <data name="&gt;&gt;pArchivos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pArchivos.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pArchivos.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.Name" xml:space="preserve">
+    <value>bunifuShapes1</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuShapes, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;bunifuShapes1.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;pbLogoPanel.Name" xml:space="preserve">
+    <value>pbLogoPanel</value>
+  </data>
+  <data name="&gt;&gt;pbLogoPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbLogoPanel.Parent" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;pbLogoPanel.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="PanelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="PanelMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="PanelMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="PanelMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 749</value>
+  </data>
+  <data name="PanelMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;PanelMenu.Name" xml:space="preserve">
+    <value>PanelMenu</value>
+  </data>
+  <data name="&gt;&gt;PanelMenu.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuGradientPanel, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;PanelMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelMenu.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 153</value>
@@ -2432,33 +2480,6 @@
   <data name="&gt;&gt;pbLogoPanel.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
-  <data name="PanelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="PanelMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="PanelMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="PanelMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 749</value>
-  </data>
-  <data name="PanelMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;PanelMenu.Name" xml:space="preserve">
-    <value>PanelMenu</value>
-  </data>
-  <data name="&gt;&gt;PanelMenu.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuGradientPanel, Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;PanelMenu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PanelMenu.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
   <data name="pbLogo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -2487,7 +2508,334 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pbLogo.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
+  </data>
+  <metadata name="Menu_Archivos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>129, 17</value>
+  </metadata>
+  <data name="Menu_Archivos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="Menu_Archivos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 76</value>
+  </data>
+  <data name="&gt;&gt;Menu_Archivos.Name" xml:space="preserve">
+    <value>Menu_Archivos</value>
+  </data>
+  <data name="&gt;&gt;Menu_Archivos.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="respaldoDeInformación.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 24</value>
+  </data>
+  <data name="respaldoDeInformación.Text" xml:space="preserve">
+    <value>Respaldo de Información</value>
+  </data>
+  <data name="restauraciónDeInformación.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 24</value>
+  </data>
+  <data name="restauraciónDeInformación.Text" xml:space="preserve">
+    <value>Restauración de Información</value>
+  </data>
+  <data name="salir.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 24</value>
+  </data>
+  <data name="salir.Text" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <metadata name="Menu_Ver.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>256, 17</value>
+  </metadata>
+  <data name="Menu_Ver.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="Menu_Ver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 100</value>
+  </data>
+  <data name="&gt;&gt;Menu_Ver.Name" xml:space="preserve">
+    <value>Menu_Ver</value>
+  </data>
+  <data name="&gt;&gt;Menu_Ver.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="calculadora.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 24</value>
+  </data>
+  <data name="calculadora.Text" xml:space="preserve">
+    <value>Calculadora</value>
+  </data>
+  <data name="comunicaciónInterna.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 24</value>
+  </data>
+  <data name="comunicaciónInterna.Text" xml:space="preserve">
+    <value>Comunicación Interna</value>
+  </data>
+  <data name="notasYObservaciones.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 24</value>
+  </data>
+  <data name="notasYObservaciones.Text" xml:space="preserve">
+    <value>Notas y Observaciones</value>
+  </data>
+  <data name="calendario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 24</value>
+  </data>
+  <data name="calendario.Text" xml:space="preserve">
+    <value>Calendario</value>
+  </data>
+  <metadata name="Menu_Ayuda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>663, 17</value>
+  </metadata>
+  <data name="Menu_Ayuda.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="Menu_Ayuda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 28</value>
+  </data>
+  <data name="&gt;&gt;Menu_Ayuda.Name" xml:space="preserve">
+    <value>Menu_Ayuda</value>
+  </data>
+  <data name="&gt;&gt;Menu_Ayuda.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="soporteInteractivoDeContable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 24</value>
+  </data>
+  <data name="soporteInteractivoDeContable.Text" xml:space="preserve">
+    <value>Soporte</value>
+  </data>
+  <metadata name="Menu_Contabilidad.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>351, 17</value>
+  </metadata>
+  <data name="Menu_Contabilidad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="Menu_Contabilidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 292</value>
+  </data>
+  <data name="&gt;&gt;Menu_Contabilidad.Name" xml:space="preserve">
+    <value>Menu_Contabilidad</value>
+  </data>
+  <data name="&gt;&gt;Menu_Contabilidad.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="movimientoDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="movimientoDeAsientos.Text" xml:space="preserve">
+    <value>Movimiento de Asientos</value>
+  </data>
+  <data name="modelosDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="modelosDeAsientos.Text" xml:space="preserve">
+    <value>Modelos de Asientos</value>
+  </data>
+  <data name="actualizaciónMA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 24</value>
+  </data>
+  <data name="actualizaciónMA.Text" xml:space="preserve">
+    <value>Actualización</value>
+  </data>
+  <data name="detalleDeModelos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 24</value>
+  </data>
+  <data name="detalleDeModelos.Text" xml:space="preserve">
+    <value>Detalle de Modelos</value>
+  </data>
+  <data name="renumeraciónDeAsientos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="renumeraciónDeAsientos.Text" xml:space="preserve">
+    <value>Renumeración de Asientos</value>
+  </data>
+  <data name="libroDiario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="libroDiario.Text" xml:space="preserve">
+    <value>Libro Diario</value>
+  </data>
+  <data name="libroMayor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="libroMayor.Text" xml:space="preserve">
+    <value>Libro Mayor</value>
+  </data>
+  <data name="libroMayorGrupo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="libroMayorGrupo.Text" xml:space="preserve">
+    <value>Libro Mayor - Grupo</value>
+  </data>
+  <data name="libroMayorInforme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="libroMayorInforme.Text" xml:space="preserve">
+    <value>Libro Mayor - Informe</value>
+  </data>
+  <data name="saldosYAjustados.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="saldosYAjustados.Text" xml:space="preserve">
+    <value>Saldos y Ajustados</value>
+  </data>
+  <data name="balanceDeSumasYSaldos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="balanceDeSumasYSaldos.Text" xml:space="preserve">
+    <value>Balance de Sumas y Saldos</value>
+  </data>
+  <data name="balanceGeneral.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="balanceGeneral.Text" xml:space="preserve">
+    <value>Balance General</value>
+  </data>
+  <data name="definiciónDeInformes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="definiciónDeInformes.Text" xml:space="preserve">
+    <value>Definición de Informes</value>
+  </data>
+  <data name="actualizaciónDI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 24</value>
+  </data>
+  <data name="actualizaciónDI.Text" xml:space="preserve">
+    <value>Actualización</value>
+  </data>
+  <data name="detalleInforme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 24</value>
+  </data>
+  <data name="detalleInforme.Text" xml:space="preserve">
+    <value>Detalle Informe</value>
+  </data>
+  <data name="informe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 24</value>
+  </data>
+  <data name="informe.Text" xml:space="preserve">
+    <value>Informe</value>
+  </data>
+  <data name="auditoriaInterna.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 24</value>
+  </data>
+  <data name="auditoriaInterna.Text" xml:space="preserve">
+    <value>Auditoria Interna</value>
+  </data>
+  <metadata name="Menu_Mantenimiento.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>501, 17</value>
+  </metadata>
+  <data name="Menu_Mantenimiento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Gadugi, 11.25pt</value>
+  </data>
+  <data name="Menu_Mantenimiento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 292</value>
+  </data>
+  <data name="&gt;&gt;Menu_Mantenimiento.Name" xml:space="preserve">
+    <value>Menu_Mantenimiento</value>
+  </data>
+  <data name="&gt;&gt;Menu_Mantenimiento.Type" xml:space="preserve">
+    <value>Negocio.MenuDropDown, Negocio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="empresa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="empresa.Text" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="usuarios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="usuarios.Text" xml:space="preserve">
+    <value>Usuarios</value>
+  </data>
+  <data name="definición.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 24</value>
+  </data>
+  <data name="definición.Text" xml:space="preserve">
+    <value>Definición</value>
+  </data>
+  <data name="modificaciónDeContraseña.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 24</value>
+  </data>
+  <data name="modificaciónDeContraseña.Text" xml:space="preserve">
+    <value>Modificación de Contraseña</value>
+  </data>
+  <data name="parametrizacionDePermisosPerfiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 24</value>
+  </data>
+  <data name="parametrizacionDePermisosPerfiles.Text" xml:space="preserve">
+    <value>Parametrizacion de Permisos - Perfiles</value>
+  </data>
+  <data name="parametrizacionDePermisosUsuarios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 24</value>
+  </data>
+  <data name="parametrizacionDePermisosUsuarios.Text" xml:space="preserve">
+    <value>Parametrizacion de Permisos - Usuarios</value>
+  </data>
+  <data name="recalcularPermisos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 24</value>
+  </data>
+  <data name="recalcularPermisos.Text" xml:space="preserve">
+    <value>Recalcular Permisos</value>
+  </data>
+  <data name="ejercicioContable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="ejercicioContable.Text" xml:space="preserve">
+    <value>Ejercicio Contable</value>
+  </data>
+  <data name="planDeCuentas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="planDeCuentas.Text" xml:space="preserve">
+    <value>Plan de Cuentas</value>
+  </data>
+  <data name="conceptosContables.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="conceptosContables.Text" xml:space="preserve">
+    <value>Conceptos Contables</value>
+  </data>
+  <data name="rubrosContables.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="rubrosContables.Text" xml:space="preserve">
+    <value>Rubros Contables</value>
+  </data>
+  <data name="coeficienteDeAjuste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="coeficienteDeAjuste.Text" xml:space="preserve">
+    <value>Coeficiente de Ajuste</value>
+  </data>
+  <data name="centroDeCosto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="centroDeCosto.Text" xml:space="preserve">
+    <value>Centro de Costo</value>
+  </data>
+  <data name="rubricaciónDeSubDiarios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="rubricaciónDeSubDiarios.Text" xml:space="preserve">
+    <value>Rubricación de SubDiarios</value>
+  </data>
+  <data name="agenda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="agenda.Text" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+  <data name="parametrosContables.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="parametrosContables.Text" xml:space="preserve">
+    <value>Parametros Contables</value>
+  </data>
+  <data name="configurarImpresora.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="configurarImpresora.Text" xml:space="preserve">
+    <value>Configurar Impresoras</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -4354,6 +4702,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAA=
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Inicio</value>

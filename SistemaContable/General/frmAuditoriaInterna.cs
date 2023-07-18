@@ -81,7 +81,7 @@ namespace SistemaContable.General
                     chk.Checked = true;
                 }
             }
-        }//
+        }
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
@@ -527,7 +527,7 @@ namespace SistemaContable.General
             MensajeError("Atención: El Proceso finalizó con Exito. Se Generaron los Asientos correspondientes a la numeración desde " + AsientoInicial + " hasta " + AsientoFinal);
 
             this.Close();
-        }//
+        }
 
         private void Proc_LIQTC(DataRow dr)
         {
@@ -3721,7 +3721,7 @@ namespace SistemaContable.General
                 string fecha = "";
                 if (Convert.ToInt32(dr["cpa_condcpa"]) == 2)
                 {
-                    if (Convert.ToDateTime(dr["cpa_periodo"]) != Convert.ToDateTime(dr["cpa_feccont"].ToString().Substring(dr["cpa_feccont"].ToString().Length, -7)))
+                    if (Convert.ToDateTime(dr["cpa_periodo"]) != Convert.ToDateTime(dr["cpa_feccont"].ToString().Substring(3, 7)))
                     {
                         fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(dr["cpa_periodo"].ToString().Length - 4))) + "/" + dr["cpa_periodo"].ToString();
                     }
@@ -3928,7 +3928,7 @@ namespace SistemaContable.General
                 string fecha = "";
                 if (Convert.ToInt32(dr["cpa_condcpa"]) == 2)
                 {
-                    if (Convert.ToDateTime(dr["cpa_periodo"]) != Convert.ToDateTime(dr["cpa_feccont"].ToString().Substring(0, 7)))
+                    if (Convert.ToDateTime(dr["cpa_periodo"]) != Convert.ToDateTime(dr["cpa_feccont"].ToString().Substring(3, 7)))
                     {
                         fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(dr["cpa_periodo"].ToString().Length - 4))) + "/" + dr["cpa_periodo"].ToString();
                     }
@@ -4121,7 +4121,7 @@ namespace SistemaContable.General
 
                 string fecha = "";
 
-                if (Convert.ToDateTime(dr["cpa_periodo"]) != Convert.ToDateTime(dr["cpa_feccont"].ToString().Substring(0, 7)))
+                if (Convert.ToDateTime(dr["cpa_periodo"]) != Convert.ToDateTime(dr["cpa_feccont"].ToString().Substring(3, 7)))
                 {
                     fecha = Negocio.FGenerales.DiasDelMes(Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(0, 2)), Convert.ToInt32(dr["cpa_periodo"].ToString().Substring(dr["cpa_periodo"].ToString().Length - 4))) + "/" + dr["cpa_periodo"].ToString();
                 }

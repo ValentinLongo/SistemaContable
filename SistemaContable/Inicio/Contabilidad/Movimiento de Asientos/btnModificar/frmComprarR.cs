@@ -116,7 +116,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
         }
 
-        private void DescriCuenta(TextBox txt, string descri)
+        private void DescriCuenta(TextBox txt, string descri) //para asignarle la descri de la cuenta en el txt correspodiente
         {
             foreach (Control Ctrl in this.Controls)
             {
@@ -133,7 +133,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
             }
         }
 
-        private void BtnsBuscarCuenta(object sender, EventArgs e)
+        private void BtnsBuscarCuenta(object sender, EventArgs e) //para saber en cuales txt guardar la info de frmBuscarCuenta
         {
             Button btn = sender as Button;
 
