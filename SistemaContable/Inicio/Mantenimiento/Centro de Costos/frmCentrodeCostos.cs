@@ -38,7 +38,7 @@ namespace SistemaContable.Inicio.Mantenimiento
                 bool estado = false;
                 string codigo = dr[0].ToString();
                 string descri = dr[1].ToString();
-                int predef = Convert.ToInt32(dr[2]);
+                int predef = Convert.ToInt32(dr[2] is DBNull ? 0 : dr[2]);
                 if (predef == 1)
                 {
                     estado = true;

@@ -638,7 +638,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     }
                     else
                     {
-                        footer.Location = new Point(X,Y + H - 37);
+                        footer.Location = new Point(X, Y + H - 37);
                     }
                 }
             }

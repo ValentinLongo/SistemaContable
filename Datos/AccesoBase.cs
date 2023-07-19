@@ -48,6 +48,8 @@ namespace Datos
             }
         }
 
+        // ESTA FUNCION SE UTILIZA PARA LISTA DATOS PERO SOLO LA CANTIDAD ASIGNADA DE UNA BASE, LO CUAL VA A DEVOLVER UN DATASET
+        // PARA LUEGO INSERTARLO EN UNA GRILLA (DATAGRIDVIEW)
         public static DataSet ListarDatosPaginado(string strSQL,int scollVal)
         {
             try
