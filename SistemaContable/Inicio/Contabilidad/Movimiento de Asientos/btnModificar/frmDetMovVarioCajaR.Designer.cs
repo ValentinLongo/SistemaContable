@@ -48,6 +48,7 @@
             this.btnBuscarEjercicio = new System.Windows.Forms.Button();
             this.panel49 = new System.Windows.Forms.Panel();
             this.timerCuenta = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,7 +183,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(427, 54);
+            this.btnConfirmar.Location = new System.Drawing.Point(434, 54);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(125, 43);
             this.btnConfirmar.TabIndex = 4;
@@ -290,7 +291,7 @@
             // 
             this.panel49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel49.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel49.Location = new System.Drawing.Point(413, 21);
+            this.panel49.Location = new System.Drawing.Point(427, 21);
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(1, 110);
             this.panel49.TabIndex = 320;
@@ -300,12 +301,29 @@
             this.timerCuenta.Interval = 1000;
             this.timerCuenta.Tick += new System.EventHandler(this.timerCuenta_Tick);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(398, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 23);
+            this.button1.TabIndex = 321;
+            this.button1.TabStop = false;
+            this.button1.Tag = "txtCtaNeto";
+            this.button1.Text = "-";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // frmDetMovVarioCajaR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(565, 131);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel49);
             this.Controls.Add(this.btnBuscarEjercicio);
             this.Controls.Add(this.panel4);
@@ -352,5 +370,6 @@
         private System.Windows.Forms.Button btnBuscarEjercicio;
         private System.Windows.Forms.Panel panel49;
         private System.Windows.Forms.Timer timerCuenta;
+        private System.Windows.Forms.Button button1;
     }
 }

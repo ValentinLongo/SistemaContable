@@ -323,9 +323,8 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                 importes[14] = ds2.Tables[0].Rows[0]["cpa_total"] is DBNull || ds2.Tables[0].Rows[0]["cpa_total"].ToString() == "" ? 0 : Convert.ToDouble(ds2.Tables[0].Rows[0]["cpa_total"]);
 
                 string msg = "S.I.Gc. - " + ds2.Tables[0].Rows[0]["tmo_abrev"].ToString() + ds2.Tables[0].Rows[0]["cpa_nrocomp"].ToString() + " - " + ds2.Tables[0].Rows[0]["cpa_nombre"].ToString();
-                int codigo = Convert.ToInt32(ds2.Tables[0].Rows[0]["cpa_codigo"]);
 
-                frmComprarR frm = new frmComprarR(msg, cuentas, importes, codigo);
+                frmComprarR frm = new frmComprarR(msg, cuentas, importes, ds2); //codigo = cpa_codigo / codigo2 = cpa_ctapro
                 frm.ShowDialog();
 
                 if (frmComprarR.confirmó == false) //si no confirmo que no continue con el codigo

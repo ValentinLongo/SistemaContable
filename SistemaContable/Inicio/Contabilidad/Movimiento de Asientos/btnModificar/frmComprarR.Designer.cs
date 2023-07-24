@@ -155,6 +155,9 @@
             this.btnBuscarCuenta3 = new System.Windows.Forms.Button();
             this.btnBuscarCuenta2 = new System.Windows.Forms.Button();
             this.btnBuscarCuenta1 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -306,7 +309,7 @@
             this.panel3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(316, 52);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(273, 1);
+            this.panel3.Size = new System.Drawing.Size(259, 1);
             this.panel3.TabIndex = 176;
             // 
             // txtCtaNetoD
@@ -317,7 +320,7 @@
             this.txtCtaNetoD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaNetoD.Location = new System.Drawing.Point(316, 37);
             this.txtCtaNetoD.Name = "txtCtaNetoD";
-            this.txtCtaNetoD.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaNetoD.Size = new System.Drawing.Size(259, 13);
             this.txtCtaNetoD.TabIndex = 175;
             this.txtCtaNetoD.TabStop = false;
             this.txtCtaNetoD.Tag = "01000";
@@ -328,7 +331,7 @@
             this.panel4.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(316, 83);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(273, 1);
+            this.panel4.Size = new System.Drawing.Size(259, 1);
             this.panel4.TabIndex = 183;
             // 
             // txtCtaExentoD
@@ -339,7 +342,7 @@
             this.txtCtaExentoD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaExentoD.Location = new System.Drawing.Point(316, 68);
             this.txtCtaExentoD.Name = "txtCtaExentoD";
-            this.txtCtaExentoD.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaExentoD.Size = new System.Drawing.Size(259, 13);
             this.txtCtaExentoD.TabIndex = 182;
             this.txtCtaExentoD.TabStop = false;
             this.txtCtaExentoD.Tag = "01000";
@@ -405,7 +408,7 @@
             this.panel8.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel8.Location = new System.Drawing.Point(316, 116);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(273, 1);
+            this.panel8.Size = new System.Drawing.Size(259, 1);
             this.panel8.TabIndex = 190;
             // 
             // txtCtaIVA21D
@@ -416,7 +419,7 @@
             this.txtCtaIVA21D.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaIVA21D.Location = new System.Drawing.Point(316, 101);
             this.txtCtaIVA21D.Name = "txtCtaIVA21D";
-            this.txtCtaIVA21D.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaIVA21D.Size = new System.Drawing.Size(259, 13);
             this.txtCtaIVA21D.TabIndex = 189;
             this.txtCtaIVA21D.TabStop = false;
             this.txtCtaIVA21D.Tag = "01000";
@@ -482,7 +485,7 @@
             this.panel11.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel11.Location = new System.Drawing.Point(316, 148);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(273, 1);
+            this.panel11.Size = new System.Drawing.Size(259, 1);
             this.panel11.TabIndex = 197;
             // 
             // txtCtaIVA27D
@@ -493,7 +496,7 @@
             this.txtCtaIVA27D.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaIVA27D.Location = new System.Drawing.Point(316, 133);
             this.txtCtaIVA27D.Name = "txtCtaIVA27D";
-            this.txtCtaIVA27D.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaIVA27D.Size = new System.Drawing.Size(259, 13);
             this.txtCtaIVA27D.TabIndex = 196;
             this.txtCtaIVA27D.TabStop = false;
             this.txtCtaIVA27D.Tag = "01000";
@@ -559,7 +562,7 @@
             this.panel14.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel14.Location = new System.Drawing.Point(316, 179);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(273, 1);
+            this.panel14.Size = new System.Drawing.Size(259, 1);
             this.panel14.TabIndex = 204;
             // 
             // txtCtaIVA10D
@@ -570,7 +573,7 @@
             this.txtCtaIVA10D.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaIVA10D.Location = new System.Drawing.Point(316, 164);
             this.txtCtaIVA10D.Name = "txtCtaIVA10D";
-            this.txtCtaIVA10D.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaIVA10D.Size = new System.Drawing.Size(259, 13);
             this.txtCtaIVA10D.TabIndex = 203;
             this.txtCtaIVA10D.TabStop = false;
             this.txtCtaIVA10D.Tag = "01000";
@@ -636,7 +639,7 @@
             this.panel17.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel17.Location = new System.Drawing.Point(316, 212);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(273, 1);
+            this.panel17.Size = new System.Drawing.Size(259, 1);
             this.panel17.TabIndex = 211;
             // 
             // txtCtaImpIntD
@@ -647,7 +650,7 @@
             this.txtCtaImpIntD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaImpIntD.Location = new System.Drawing.Point(316, 197);
             this.txtCtaImpIntD.Name = "txtCtaImpIntD";
-            this.txtCtaImpIntD.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaImpIntD.Size = new System.Drawing.Size(259, 13);
             this.txtCtaImpIntD.TabIndex = 210;
             this.txtCtaImpIntD.TabStop = false;
             this.txtCtaImpIntD.Tag = "01000";
@@ -713,7 +716,7 @@
             this.panel20.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel20.Location = new System.Drawing.Point(316, 243);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(273, 1);
+            this.panel20.Size = new System.Drawing.Size(259, 1);
             this.panel20.TabIndex = 218;
             // 
             // txtCtaRetIVAD
@@ -724,7 +727,7 @@
             this.txtCtaRetIVAD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaRetIVAD.Location = new System.Drawing.Point(316, 228);
             this.txtCtaRetIVAD.Name = "txtCtaRetIVAD";
-            this.txtCtaRetIVAD.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaRetIVAD.Size = new System.Drawing.Size(259, 13);
             this.txtCtaRetIVAD.TabIndex = 217;
             this.txtCtaRetIVAD.TabStop = false;
             this.txtCtaRetIVAD.Tag = "01000";
@@ -790,7 +793,7 @@
             this.panel23.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel23.Location = new System.Drawing.Point(316, 274);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(273, 1);
+            this.panel23.Size = new System.Drawing.Size(259, 1);
             this.panel23.TabIndex = 225;
             // 
             // txtCtaRetIIBBD
@@ -801,7 +804,7 @@
             this.txtCtaRetIIBBD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaRetIIBBD.Location = new System.Drawing.Point(316, 259);
             this.txtCtaRetIIBBD.Name = "txtCtaRetIIBBD";
-            this.txtCtaRetIIBBD.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaRetIIBBD.Size = new System.Drawing.Size(259, 13);
             this.txtCtaRetIIBBD.TabIndex = 224;
             this.txtCtaRetIIBBD.TabStop = false;
             this.txtCtaRetIIBBD.Tag = "01000";
@@ -867,7 +870,7 @@
             this.panel26.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel26.Location = new System.Drawing.Point(316, 306);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(273, 1);
+            this.panel26.Size = new System.Drawing.Size(259, 1);
             this.panel26.TabIndex = 232;
             // 
             // txtCtaRetGanD
@@ -878,7 +881,7 @@
             this.txtCtaRetGanD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaRetGanD.Location = new System.Drawing.Point(316, 291);
             this.txtCtaRetGanD.Name = "txtCtaRetGanD";
-            this.txtCtaRetGanD.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaRetGanD.Size = new System.Drawing.Size(259, 13);
             this.txtCtaRetGanD.TabIndex = 231;
             this.txtCtaRetGanD.TabStop = false;
             this.txtCtaRetGanD.Tag = "01000";
@@ -944,7 +947,7 @@
             this.panel29.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel29.Location = new System.Drawing.Point(316, 337);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(273, 1);
+            this.panel29.Size = new System.Drawing.Size(259, 1);
             this.panel29.TabIndex = 239;
             // 
             // txtCtaPerIVAD
@@ -955,7 +958,7 @@
             this.txtCtaPerIVAD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaPerIVAD.Location = new System.Drawing.Point(316, 322);
             this.txtCtaPerIVAD.Name = "txtCtaPerIVAD";
-            this.txtCtaPerIVAD.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaPerIVAD.Size = new System.Drawing.Size(259, 13);
             this.txtCtaPerIVAD.TabIndex = 238;
             this.txtCtaPerIVAD.TabStop = false;
             this.txtCtaPerIVAD.Tag = "01000";
@@ -1021,7 +1024,7 @@
             this.panel32.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel32.Location = new System.Drawing.Point(316, 369);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(273, 1);
+            this.panel32.Size = new System.Drawing.Size(259, 1);
             this.panel32.TabIndex = 246;
             // 
             // txtCtaPerIIBBD
@@ -1032,7 +1035,7 @@
             this.txtCtaPerIIBBD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaPerIIBBD.Location = new System.Drawing.Point(316, 354);
             this.txtCtaPerIIBBD.Name = "txtCtaPerIIBBD";
-            this.txtCtaPerIIBBD.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaPerIIBBD.Size = new System.Drawing.Size(259, 13);
             this.txtCtaPerIIBBD.TabIndex = 245;
             this.txtCtaPerIIBBD.TabStop = false;
             this.txtCtaPerIIBBD.Tag = "01000";
@@ -1175,7 +1178,7 @@
             this.panel38.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel38.Location = new System.Drawing.Point(316, 460);
             this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(273, 1);
+            this.panel38.Size = new System.Drawing.Size(259, 1);
             this.panel38.TabIndex = 267;
             // 
             // txtCtaOtrosD
@@ -1186,7 +1189,7 @@
             this.txtCtaOtrosD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaOtrosD.Location = new System.Drawing.Point(316, 445);
             this.txtCtaOtrosD.Name = "txtCtaOtrosD";
-            this.txtCtaOtrosD.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaOtrosD.Size = new System.Drawing.Size(259, 13);
             this.txtCtaOtrosD.TabIndex = 266;
             this.txtCtaOtrosD.TabStop = false;
             this.txtCtaOtrosD.Tag = "01000";
@@ -1252,7 +1255,7 @@
             this.panel41.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel41.Location = new System.Drawing.Point(316, 429);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(273, 1);
+            this.panel41.Size = new System.Drawing.Size(259, 1);
             this.panel41.TabIndex = 260;
             // 
             // txtCtaMonotributistaD
@@ -1263,7 +1266,7 @@
             this.txtCtaMonotributistaD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaMonotributistaD.Location = new System.Drawing.Point(316, 414);
             this.txtCtaMonotributistaD.Name = "txtCtaMonotributistaD";
-            this.txtCtaMonotributistaD.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaMonotributistaD.Size = new System.Drawing.Size(259, 13);
             this.txtCtaMonotributistaD.TabIndex = 259;
             this.txtCtaMonotributistaD.TabStop = false;
             this.txtCtaMonotributistaD.Tag = "01000";
@@ -1329,7 +1332,7 @@
             this.panel44.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel44.Location = new System.Drawing.Point(316, 401);
             this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(273, 1);
+            this.panel44.Size = new System.Drawing.Size(259, 1);
             this.panel44.TabIndex = 253;
             // 
             // txtCtaPerGanD
@@ -1340,7 +1343,7 @@
             this.txtCtaPerGanD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCtaPerGanD.Location = new System.Drawing.Point(316, 386);
             this.txtCtaPerGanD.Name = "txtCtaPerGanD";
-            this.txtCtaPerGanD.Size = new System.Drawing.Size(273, 13);
+            this.txtCtaPerGanD.Size = new System.Drawing.Size(259, 13);
             this.txtCtaPerGanD.TabIndex = 252;
             this.txtCtaPerGanD.TabStop = false;
             this.txtCtaPerGanD.Tag = "01000";
@@ -1413,7 +1416,7 @@
             // 
             this.panel48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
             this.panel48.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel48.Location = new System.Drawing.Point(630, 21);
+            this.panel48.Location = new System.Drawing.Point(642, 21);
             this.panel48.Name = "panel48";
             this.panel48.Size = new System.Drawing.Size(1, 506);
             this.panel48.TabIndex = 276;
@@ -1429,9 +1432,9 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Dotum", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirmar.Location = new System.Drawing.Point(639, 29);
+            this.btnConfirmar.Location = new System.Drawing.Point(651, 29);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(147, 43);
+            this.btnConfirmar.Size = new System.Drawing.Size(135, 43);
             this.btnConfirmar.TabIndex = 15;
             this.btnConfirmar.Tag = "";
             this.btnConfirmar.Text = "Confirmar";
@@ -1460,7 +1463,7 @@
             this.btnBuscarCuenta14.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta14.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta14.Image")));
-            this.btnBuscarCuenta14.Location = new System.Drawing.Point(597, 438);
+            this.btnBuscarCuenta14.Location = new System.Drawing.Point(581, 438);
             this.btnBuscarCuenta14.Name = "btnBuscarCuenta14";
             this.btnBuscarCuenta14.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta14.TabIndex = 291;
@@ -1475,7 +1478,7 @@
             this.btnBuscarCuenta13.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta13.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta13.Image")));
-            this.btnBuscarCuenta13.Location = new System.Drawing.Point(597, 408);
+            this.btnBuscarCuenta13.Location = new System.Drawing.Point(581, 408);
             this.btnBuscarCuenta13.Name = "btnBuscarCuenta13";
             this.btnBuscarCuenta13.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta13.TabIndex = 290;
@@ -1490,7 +1493,7 @@
             this.btnBuscarCuenta12.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta12.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta12.Image")));
-            this.btnBuscarCuenta12.Location = new System.Drawing.Point(597, 379);
+            this.btnBuscarCuenta12.Location = new System.Drawing.Point(581, 379);
             this.btnBuscarCuenta12.Name = "btnBuscarCuenta12";
             this.btnBuscarCuenta12.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta12.TabIndex = 289;
@@ -1505,7 +1508,7 @@
             this.btnBuscarCuenta11.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta11.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta11.Image")));
-            this.btnBuscarCuenta11.Location = new System.Drawing.Point(597, 347);
+            this.btnBuscarCuenta11.Location = new System.Drawing.Point(581, 347);
             this.btnBuscarCuenta11.Name = "btnBuscarCuenta11";
             this.btnBuscarCuenta11.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta11.TabIndex = 288;
@@ -1520,7 +1523,7 @@
             this.btnBuscarCuenta10.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta10.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta10.Image")));
-            this.btnBuscarCuenta10.Location = new System.Drawing.Point(597, 315);
+            this.btnBuscarCuenta10.Location = new System.Drawing.Point(581, 315);
             this.btnBuscarCuenta10.Name = "btnBuscarCuenta10";
             this.btnBuscarCuenta10.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta10.TabIndex = 287;
@@ -1535,7 +1538,7 @@
             this.btnBuscarCuenta9.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta9.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta9.Image")));
-            this.btnBuscarCuenta9.Location = new System.Drawing.Point(597, 285);
+            this.btnBuscarCuenta9.Location = new System.Drawing.Point(581, 285);
             this.btnBuscarCuenta9.Name = "btnBuscarCuenta9";
             this.btnBuscarCuenta9.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta9.TabIndex = 286;
@@ -1550,7 +1553,7 @@
             this.btnBuscarCuenta8.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta8.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta8.Image")));
-            this.btnBuscarCuenta8.Location = new System.Drawing.Point(597, 252);
+            this.btnBuscarCuenta8.Location = new System.Drawing.Point(581, 252);
             this.btnBuscarCuenta8.Name = "btnBuscarCuenta8";
             this.btnBuscarCuenta8.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta8.TabIndex = 285;
@@ -1565,7 +1568,7 @@
             this.btnBuscarCuenta7.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta7.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta7.Image")));
-            this.btnBuscarCuenta7.Location = new System.Drawing.Point(597, 221);
+            this.btnBuscarCuenta7.Location = new System.Drawing.Point(581, 221);
             this.btnBuscarCuenta7.Name = "btnBuscarCuenta7";
             this.btnBuscarCuenta7.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta7.TabIndex = 284;
@@ -1580,7 +1583,7 @@
             this.btnBuscarCuenta6.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta6.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta6.Image")));
-            this.btnBuscarCuenta6.Location = new System.Drawing.Point(597, 190);
+            this.btnBuscarCuenta6.Location = new System.Drawing.Point(581, 190);
             this.btnBuscarCuenta6.Name = "btnBuscarCuenta6";
             this.btnBuscarCuenta6.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta6.TabIndex = 283;
@@ -1595,7 +1598,7 @@
             this.btnBuscarCuenta5.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta5.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta5.Image")));
-            this.btnBuscarCuenta5.Location = new System.Drawing.Point(597, 157);
+            this.btnBuscarCuenta5.Location = new System.Drawing.Point(581, 157);
             this.btnBuscarCuenta5.Name = "btnBuscarCuenta5";
             this.btnBuscarCuenta5.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta5.TabIndex = 282;
@@ -1610,7 +1613,7 @@
             this.btnBuscarCuenta4.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta4.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta4.Image")));
-            this.btnBuscarCuenta4.Location = new System.Drawing.Point(597, 126);
+            this.btnBuscarCuenta4.Location = new System.Drawing.Point(581, 126);
             this.btnBuscarCuenta4.Name = "btnBuscarCuenta4";
             this.btnBuscarCuenta4.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta4.TabIndex = 281;
@@ -1625,7 +1628,7 @@
             this.btnBuscarCuenta3.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta3.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta3.Image")));
-            this.btnBuscarCuenta3.Location = new System.Drawing.Point(597, 94);
+            this.btnBuscarCuenta3.Location = new System.Drawing.Point(581, 94);
             this.btnBuscarCuenta3.Name = "btnBuscarCuenta3";
             this.btnBuscarCuenta3.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta3.TabIndex = 280;
@@ -1640,7 +1643,7 @@
             this.btnBuscarCuenta2.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta2.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta2.Image")));
-            this.btnBuscarCuenta2.Location = new System.Drawing.Point(597, 61);
+            this.btnBuscarCuenta2.Location = new System.Drawing.Point(581, 61);
             this.btnBuscarCuenta2.Name = "btnBuscarCuenta2";
             this.btnBuscarCuenta2.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta2.TabIndex = 279;
@@ -1655,7 +1658,7 @@
             this.btnBuscarCuenta1.FlatAppearance.BorderSize = 0;
             this.btnBuscarCuenta1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCuenta1.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCuenta1.Image")));
-            this.btnBuscarCuenta1.Location = new System.Drawing.Point(597, 30);
+            this.btnBuscarCuenta1.Location = new System.Drawing.Point(581, 30);
             this.btnBuscarCuenta1.Name = "btnBuscarCuenta1";
             this.btnBuscarCuenta1.Size = new System.Drawing.Size(25, 23);
             this.btnBuscarCuenta1.TabIndex = 278;
@@ -1664,12 +1667,63 @@
             this.btnBuscarCuenta1.UseVisualStyleBackColor = false;
             this.btnBuscarCuenta1.Click += new System.EventHandler(this.BtnsBuscarCuenta);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(611, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 23);
+            this.button1.TabIndex = 293;
+            this.button1.TabStop = false;
+            this.button1.Tag = "txtCtaNeto";
+            this.button1.Text = "-";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(611, 61);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 23);
+            this.button2.TabIndex = 294;
+            this.button2.TabStop = false;
+            this.button2.Tag = "txtCtaNeto";
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(162)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(611, 408);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(25, 23);
+            this.button3.TabIndex = 295;
+            this.button3.TabStop = false;
+            this.button3.Tag = "txtCtaNeto";
+            this.button3.Text = "-";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // frmComprarR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(794, 527);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBuscarCuenta15);
             this.Controls.Add(this.btnBuscarCuenta14);
             this.Controls.Add(this.btnBuscarCuenta13);
@@ -1933,5 +1987,8 @@
         private System.Windows.Forms.Button btnBuscarCuenta14;
         private System.Windows.Forms.Button btnBuscarCuenta13;
         private System.Windows.Forms.Button btnBuscarCuenta15;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
