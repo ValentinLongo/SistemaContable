@@ -215,6 +215,7 @@ namespace Negocio
                                     }
                                     else
                                     {
+
                                         msgRetorno = "Atención: No se podrá utilizar la Cuenta Contable elegida ya que ha sido Parametrizada como de Uso Automático del Sistema.";
                                         return false;
                                     }
