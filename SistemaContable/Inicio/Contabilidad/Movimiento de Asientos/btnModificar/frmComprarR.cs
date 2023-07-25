@@ -143,7 +143,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
 
             salto:
 
-            foreach (Control Ctrl in this.Controls)
+            foreach (Control Ctrl in this.Controls) //para recorrer los txt
             {
                 string parametro = "";
 
@@ -152,7 +152,7 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                     continue;
                 }
 
-                if (Ctrl.Tag.ToString() == "00000")
+                if (Ctrl.Tag.ToString() == "00000") //si el txt es de los importes, por el nombre toma un parametro
                 {
                     switch (Ctrl.Name)
                     {
@@ -205,18 +205,18 @@ namespace SistemaContable.Inicio.Contabilidad.Movimiento_de_Asientos
                             break;
                     }
 
-                    if (Convert.ToDouble(Ctrl.Text) > 0)
+                    if (Convert.ToDouble(Ctrl.Text) > 0) //si el importe es mayor que 0
                     {
-                        TextBox txt = ObtenerTxtCta(Ctrl);
+                        TextBox txt = ObtenerTxtCta(Ctrl); 
 
                         if (txt.Text == "")
                         {
-                            if (Ctrl.Name == "txtNeto" || Ctrl.Name == "txtExento" || Ctrl.Name == "txtMonotributista")
+                            if (Ctrl.Name == "txtNeto" || Ctrl.Name == "txtExento" || Ctrl.Name == "txtMonotributista") //con estos 3 el CtaPro es si o si 0
                             {
                                 CtaPro = 0;
                             }
 
-                            if (Ctrl.Name == "txtTotal")
+                            if (Ctrl.Name == "txtTotal") //el total no hace nada
                             {
                                 continue;
                                 //if (cpa_condcpa == 2)
